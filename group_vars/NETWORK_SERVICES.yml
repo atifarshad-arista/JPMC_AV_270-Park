@@ -12,7 +12,7 @@ tenants:
               - node: amber-leaf1
                 ip_address: 10.10.111.1/24
             ip_helpers:
-              10.252.4.253:
+              - ip_helper: 10.252.4.253
 
           - id: 112
             name: VLAN112
@@ -22,7 +22,7 @@ tenants:
               - node: amber-leaf2
                 ip_address: 10.10.112.1/24
             ip_helpers:
-              10.252.4.253:
+              - ip_helper: 10.252.4.253
   - name: blue
     vrfs:
       - name: default
