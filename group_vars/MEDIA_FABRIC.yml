@@ -76,7 +76,8 @@ daemon_terminattr:
   ingestexclude: /Sysdb/cell/1/agent,/Sysdb/cell/2/agent
   taillogs:
 
-ptp:
+# Changed ptp to ptp_settings
+ptp_settings:
   enabled: true
 
 underlay_multicast: true
