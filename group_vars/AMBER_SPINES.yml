@@ -1,32 +1,15 @@
 ---
-type: media_leaf
+type: media_spine
 
-media_leaf:
+media_spine:
   defaults:
     platform: vEOS-lab
     loopback_ipv4_pool: 10.255.1.0/27
-    loopback_ipv4_offset: 1
-    uplink_switches: [ 'amber-spine1', 'amber-spine1' ]
-    max_parallel_uplinks: 2
-    uplink_ipv4_pool: 10.255.254.0/26
-    spanning_tree_priority: 4096
-    spanning_tree_mode: mstp
+    bgp_as: 65100
     filter:
       tenants: [ amber ]
-    ptp:
-      priority2: 1
 
   nodes:
-    - name: amber-leaf1
+    - name: amber-spine1
       id: 1
-      bgp_as: 65101
-      mgmt_ip: 172.16.1.111/24
-      filter:
-        tags: [ amber-leaf1 ]
-
-    - name: amber-leaf2
-      id: 2
-      bgp_as: 65102
-      mgmt_ip: 172.16.1.112/24
-      filter:
-        tags: [ amber-leaf2 ]
+      mgmt_ip: 172.16.1.11/24
