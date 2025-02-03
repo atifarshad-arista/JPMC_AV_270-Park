@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 64.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["ps_sku_l3ls"]
+
+[project]
+name = "ps_sku_l3ls"
+version = "0.0.0"
+description = "PS SKU L3LS"
+authors = [{ name = "Arista Networks", email = "ps-wg-avd@arista.com" }]
+readme = "README.md"
+dependencies = [
+    "pyavd-cli>=0.1.5",
+    "pre-commit~=3.7.1",
+    "pip-tools~=7.4.1",
+    "ansible-lint~=24.6.0 ; platform_system != 'Windows'",
+    "mkdocs~=1.5.3",
+    "mkdocs-material~=9.5.6",
+]
+requires-python = ">=3.10"

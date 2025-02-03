@@ -1,0 +1,3 @@
+collections:
+  - name: ansible.posix
+  - name: git+https://github.com/aristanetworks/avd#/ansible_collections/arista/avd/,devel

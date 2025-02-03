@@ -1,0 +1,28 @@
+---
+- name: Generate Arista EOS configs
+  hosts: FABRIC
+  tasks:
+    - name: Generate intended variables
+      tags: [build, generate]
+      ansible.builtin.import_role:
+        name: arista.avd.eos_designs
+
+    - name: Generate device intended config and documentation
+      tags: [build, generate]
+      ansible.builtin.import_role:
+        name: arista.avd.eos_cli_config_gen
+
+- name: Upload EOS configs in CVP and deploy
+  hosts: cvp
+  tasks:
+    - name: Upload cvp configlets
+      ansible.builtin.import_role:
+        name: arista.avd.cvp_configlet_upload
+      vars:
+        configlet_directory: 'configlets/'
+        file_extension: 'txt'
+        configlets_cvp_prefix: 'AVD'
+
+    - name: Deploy configuration via CVP
+      ansible.builtin.import_role:
+        name: arista.avd.eos_config_deploy_cvp

@@ -1,0 +1,134 @@
+fabric_name: FABRIC
+
+node_type_keys:
+  - key: ptp_leaf
+    type: ptp_leaf
+    default_overlay_routing_protocol: none
+    connected_endpoints: true
+    network_services:
+      l2: true
+      l3: true
+    default_ptp_priority1: 10
+  - key: media_spine
+    type: media_spine
+    default_overlay_routing_protocol: none
+    connected_endpoints: true
+    network_services:
+      l2: true
+      l3: true
+    default_ptp_priority1: 20
+  - key: media_leaf
+    type: media_leaf
+    default_overlay_routing_protocol: none
+    connected_endpoints: true
+    network_services:
+      l2: true
+      l3: true
+    default_ptp_priority1: 30
+
+local_users:
+  - name: ansible
+    privilege: 15
+    role: network-admin
+    sha512_password: $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920
+  - name: admin
+    privilege: 15
+    role: network-admin
+    no_password: true
+
+bgp_peer_groups:
+  ipv4_underlay_peers:
+    password: 7x4B4rnJhZB438m9+BrBfQ==
+
+p2p_uplinks_mtu: 1500
+
+default_interfaces:
+  - types:
+      - media_spine
+    platforms:
+      - default
+    uplink_interfaces:
+      - Ethernet1-2
+    downlink_interfaces:
+      - Ethernet1-8
+  - types:
+      - media_leaf
+    platforms:
+      - default
+    uplink_interfaces:
+      - Ethernet1-4
+  - types:
+      - ptp_leaf
+    platforms:
+      - default
+    uplink_interfaces:
+      - Ethernet1-2
+
+daemon_terminattr:
+  cvaddrs:
+    - 192.168.1.12:9910
+  cvauth:
+    method: token
+    token_file: /tmp/token
+  cvvrf: MGMT
+  disable_aaa: true
+  smashexcludes: ale,flexCounter,hardware,kni,pulse,strata
+  ingestexclude: /Sysdb/cell/1/agent,/Sysdb/cell/2/agent
+  taillogs:
+
+# Changed ptp to ptp_settings
+ptp_settings:
+  enabled: true
+
+underlay_multicast: true
+
+aaa_authentication:
+  login:
+    default: local
+aaa_authorization:
+  exec:
+    default: local
+
+mgmt_interface: Ethernet0
+mgmt_gateway: 172.16.1.1
+mgmt_destination_networks:
+  - 0.0.0.0/0
+
+name_servers:
+  - 192.168.1.1
+
+ntp:
+  local_interface:
+    name: Management1
+    vrf: MGMT
+  servers:
+    - name: 0.pool.ntp.org
+      vrf: MGMT
+
+core_interfaces:
+  p2p_links:
+    - id: 1
+      nodes: [ media-PTP-1, media-PTP-2 ]
+      interfaces: [ Ethernet3, Ethernet3 ]
+      ptp:
+        enabled: true
+      include_in_underlay_protocol: false
+    - id: 2
+      nodes: [ media-PTP-1, media-PTP-2 ]
+      interfaces: [ Ethernet4, Ethernet4 ]
+      ptp:
+        enabled: true
+      include_in_underlay_protocol: false
+
+
+eos_validate_state_validation_mode_loose: true
+root_dir: '{{ inventory_dir }}'
+eos_validate_state_name: 'reports'
+eos_validate_state_dir: '{{ root_dir }}/{{ eos_validate_state_name }}'
+eos_validate_state_md_report_path: '{{ eos_validate_state_dir }}/{{ fabric_name }}-state.md'
+eos_validate_state_csv_report_path: '{{ eos_validate_state_dir }}/{{ fabric_name }}-state.csv'
+validate_state_markdown_flavor: "default"
+accepted_xcvr_manufacturers: "{{ validation_role.xcvr_own_manufacturers | arista.avd.default(['Arastra, Inc.', 'Arista Networks']) }}"
+accepted_pwr_supply_states: "{{ validation_role.pwr_supply_states | arista.avd.default(['ok']) }}"
+accepted_fan_states: "{{ validation_role.fan_states | arista.avd.default(['ok']) }}"
+validation_report_md: "{{ validation_role.validation_report_md | arista.avd.default(true) }}"

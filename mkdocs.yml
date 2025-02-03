@@ -1,0 +1,9 @@
+site_name: control fabric
+docs_dir: documentation
+
+theme:
+  name: material
+  features:
+    - navigation.prune
+
+site_dir: public

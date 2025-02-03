@@ -1,0 +1,1 @@
+pyavd[ansible] @ git+https://github.com/aristanetworks/avd.git@devel#subdirectory=python-avd
