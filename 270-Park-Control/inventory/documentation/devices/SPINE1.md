@@ -10,7 +10,6 @@
 - [Authentication](#authentication)
   - [Local Users](#local-users)
   - [Enable Password](#enable-password)
-  - [AAA Authentication](#aaa-authentication)
   - [AAA Authorization](#aaa-authorization)
 - [MLAG](#mlag)
   - [MLAG Summary](#mlag-summary)
@@ -27,12 +26,15 @@
 - [Interfaces](#interfaces)
   - [Ethernet Interfaces](#ethernet-interfaces)
   - [Port-Channel Interfaces](#port-channel-interfaces)
+  - [Loopback Interfaces](#loopback-interfaces)
   - [VLAN Interfaces](#vlan-interfaces)
 - [Routing](#routing)
   - [Service Routing Protocols Model](#service-routing-protocols-model)
+  - [Virtual Router MAC Address](#virtual-router-mac-address)
   - [IP Routing](#ip-routing)
   - [IPv6 Routing](#ipv6-routing)
   - [Static Routes](#static-routes)
+  - [Router OSPF](#router-ospf)
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
 - [VRF Instances](#vrf-instances)
@@ -145,35 +147,17 @@ management api http-commands
 | User | Privilege | Role | Disabled | Shell |
 | ---- | --------- | ---- | -------- | ----- |
 | admin | 15 | network-admin | False | - |
-| arista | 15 | network-admin | False | - |
 
 #### Local Users Device Configuration
 
 ```eos
 !
 username admin privilege 15 role network-admin secret sha512 <removed>
-username arista privilege 15 role network-admin nopassword
 ```
 
 ### Enable Password
 
 Enable password has been disabled
-
-### AAA Authentication
-
-#### AAA Authentication Summary
-
-| Type | Sub-type | User Stores |
-| ---- | -------- | ---------- |
-
-Policy local allow-nopassword-remote-login has been enabled.
-
-#### AAA Authentication Device Configuration
-
-```eos
-aaa authentication policy local allow-nopassword-remote-login
-!
-```
 
 ### AAA Authorization
 
@@ -198,7 +182,7 @@ aaa authorization exec default local
 
 | Domain-id | Local-interface | Peer-address | Peer-link |
 | --------- | --------------- | ------------ | --------- |
-| SPINES | Vlan4094 | 192.168.0.1 | Port-Channel47 |
+| SPINES | Vlan4094 | 192.168.0.1 | Port-Channel551 |
 
 Dual primary detection is disabled.
 
@@ -210,7 +194,7 @@ mlag configuration
    domain-id SPINES
    local-interface Vlan4094
    peer-address 192.168.0.1
-   peer-link Port-Channel47
+   peer-link Port-Channel551
    reload-delay mlag 300
    reload-delay non-mlag 330
 ```
@@ -229,14 +213,14 @@ STP mode: **mstp**
 
 #### Global Spanning-Tree Settings
 
-- Spanning Tree disabled for VLANs: **4094**
+- Spanning Tree disabled for VLANs: **4093-4094**
 
 ### Spanning Tree Device Configuration
 
 ```eos
 !
 spanning-tree mode mstp
-no spanning-tree vlan-id 4094
+no spanning-tree vlan-id 4093-4094
 spanning-tree mst 0 priority 4096
 ```
 
@@ -261,9 +245,17 @@ vlan internal order ascending range 1006 1199
 
 | VLAN ID | Name | Trunk Groups |
 | ------- | ---- | ------------ |
-| 10 | BLUE-NET | - |
-| 20 | GREEN-NET | - |
-| 30 | ORANGE-NET | - |
+| 10 | INBAND_MGMT | - |
+| 110 | IDF1-Data | - |
+| 120 | IDF1-Voice | - |
+| 130 | IDF1-Guest | - |
+| 210 | IDF2-Data | - |
+| 220 | IDF2-Voice | - |
+| 230 | IDF2-Guest | - |
+| 310 | IDF3-Data | - |
+| 320 | IDF3-Voice | - |
+| 330 | IDF3-Guest | - |
+| 4093 | MLAG_L3 | MLAG |
 | 4094 | MLAG | MLAG |
 
 ### VLANs Device Configuration
@@ -271,13 +263,38 @@ vlan internal order ascending range 1006 1199
 ```eos
 !
 vlan 10
-   name BLUE-NET
+   name INBAND_MGMT
 !
-vlan 20
-   name GREEN-NET
+vlan 110
+   name IDF1-Data
 !
-vlan 30
-   name ORANGE-NET
+vlan 120
+   name IDF1-Voice
+!
+vlan 130
+   name IDF1-Guest
+!
+vlan 210
+   name IDF2-Data
+!
+vlan 220
+   name IDF2-Voice
+!
+vlan 230
+   name IDF2-Guest
+!
+vlan 310
+   name IDF3-Data
+!
+vlan 320
+   name IDF3-Voice
+!
+vlan 330
+   name IDF3-Guest
+!
+vlan 4093
+   name MLAG_L3
+   trunk group MLAG
 !
 vlan 4094
    name MLAG
@@ -294,54 +311,63 @@ vlan 4094
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
-| Ethernet1 | L2_LEAF1_Ethernet1 | *trunk | *10,20 | *- | *- | 1 |
-| Ethernet2 | L2_LEAF2_Ethernet1 | *trunk | *10,20 | *- | *- | 1 |
-| Ethernet3 | L2_LEAF3_Ethernet1 | *trunk | *10,30 | *- | *- | 3 |
-| Ethernet4 | L2_LEAF4_Ethernet1 | *trunk | *10,30 | *- | *- | 3 |
-| Ethernet5 | FIREWALL_FIREWALL_Eth1 | *trunk | *10,20,30 | *- | *- | 5 |
-| Ethernet47 | MLAG_SPINE2_Ethernet47 | *trunk | *- | *- | *MLAG | 47 |
-| Ethernet48 | MLAG_SPINE2_Ethernet48 | *trunk | *- | *- | *MLAG | 47 |
+| Ethernet1 | L2_LEAF1A_Ethernet51 | *trunk | *10,110,120,130 | *- | *- | 1 |
+| Ethernet49/1 | L2_LEAF2A_Ethernet1/1 | *trunk | *10,210,220,230 | *- | *- | 491 |
+| Ethernet50/1 | L2_LEAF3A_Ethernet97/1 | *trunk | *10,310,320,330 | *- | *- | 501 |
+| Ethernet51/1 | L2_LEAF3B_Ethernet97/1 | *trunk | *10,310,320,330 | *- | *- | 501 |
+| Ethernet55/1 | MLAG_SPINE2_Ethernet55/1 | *trunk | *- | *- | *MLAG | 551 |
+| Ethernet56/1 | MLAG_SPINE2_Ethernet56/1 | *trunk | *- | *- | *MLAG | 551 |
 
 *Inherited from Port-Channel Interface
+
+##### IPv4
+
+| Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
+| --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
+| Ethernet52/1 | P2P_WAN_Ethernet1/1 | - | 10.0.0.3/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
 ```eos
 !
 interface Ethernet1
-   description L2_LEAF1_Ethernet1
+   description L2_LEAF1A_Ethernet51
    no shutdown
    channel-group 1 mode active
 !
-interface Ethernet2
-   description L2_LEAF2_Ethernet1
+interface Ethernet49/1
+   description L2_LEAF2A_Ethernet1/1
    no shutdown
-   channel-group 1 mode active
+   channel-group 491 mode active
 !
-interface Ethernet3
-   description L2_LEAF3_Ethernet1
+interface Ethernet50/1
+   description L2_LEAF3A_Ethernet97/1
    no shutdown
-   channel-group 3 mode active
+   channel-group 501 mode active
 !
-interface Ethernet4
-   description L2_LEAF4_Ethernet1
+interface Ethernet51/1
+   description L2_LEAF3B_Ethernet97/1
    no shutdown
-   channel-group 3 mode active
+   channel-group 501 mode active
 !
-interface Ethernet5
-   description FIREWALL_FIREWALL_Eth1
+interface Ethernet52/1
+   description P2P_WAN_Ethernet1/1
    no shutdown
-   channel-group 5 mode active
+   mtu 1500
+   no switchport
+   ip address 10.0.0.3/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
 !
-interface Ethernet47
-   description MLAG_SPINE2_Ethernet47
+interface Ethernet55/1
+   description MLAG_SPINE2_Ethernet55/1
    no shutdown
-   channel-group 47 mode active
+   channel-group 551 mode active
 !
-interface Ethernet48
-   description MLAG_SPINE2_Ethernet48
+interface Ethernet56/1
+   description MLAG_SPINE2_Ethernet56/1
    no shutdown
-   channel-group 47 mode active
+   channel-group 551 mode active
 ```
 
 ### Port-Channel Interfaces
@@ -352,45 +378,72 @@ interface Ethernet48
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | LACP Fallback Timeout | LACP Fallback Mode | MLAG ID | EVPN ESI |
 | --------- | ----------- | ---- | ----- | ----------- | ------------| --------------------- | ------------------ | ------- | -------- |
-| Port-Channel1 | L2_RACK1_Port-Channel1 | trunk | 10,20 | - | - | - | - | 1 | - |
-| Port-Channel3 | L2_RACK2_Port-Channel1 | trunk | 10,30 | - | - | - | - | 3 | - |
-| Port-Channel5 | FIREWALL_FIREWALL | trunk | 10,20,30 | - | - | - | - | 5 | - |
-| Port-Channel47 | MLAG_SPINE2_Port-Channel47 | trunk | - | - | MLAG | - | - | - | - |
+| Port-Channel1 | L2_IDF1_Port-Channel51 | trunk | 10,110,120,130 | - | - | - | - | 1 | - |
+| Port-Channel491 | L2_LEAF2A_Port-Channel11 | trunk | 10,210,220,230 | - | - | - | - | 491 | - |
+| Port-Channel501 | L2_IDF3_AGG_Port-Channel971 | trunk | 10,310,320,330 | - | - | - | - | 501 | - |
+| Port-Channel551 | MLAG_SPINE2_Port-Channel551 | trunk | - | - | MLAG | - | - | - | - |
 
 #### Port-Channel Interfaces Device Configuration
 
 ```eos
 !
 interface Port-Channel1
-   description L2_RACK1_Port-Channel1
+   description L2_IDF1_Port-Channel51
    no shutdown
-   switchport trunk allowed vlan 10,20
+   switchport trunk allowed vlan 10,110,120,130
    switchport mode trunk
    switchport
    mlag 1
 !
-interface Port-Channel3
-   description L2_RACK2_Port-Channel1
+interface Port-Channel491
+   description L2_LEAF2A_Port-Channel11
    no shutdown
-   switchport trunk allowed vlan 10,30
+   switchport trunk allowed vlan 10,210,220,230
    switchport mode trunk
    switchport
-   mlag 3
+   mlag 491
 !
-interface Port-Channel5
-   description FIREWALL_FIREWALL
+interface Port-Channel501
+   description L2_IDF3_AGG_Port-Channel971
    no shutdown
-   switchport trunk allowed vlan 10,20,30
+   switchport trunk allowed vlan 10,310,320,330
    switchport mode trunk
    switchport
-   mlag 5
+   mlag 501
 !
-interface Port-Channel47
-   description MLAG_SPINE2_Port-Channel47
+interface Port-Channel551
+   description MLAG_SPINE2_Port-Channel551
    no shutdown
    switchport mode trunk
    switchport trunk group MLAG
    switchport
+```
+
+### Loopback Interfaces
+
+#### Loopback Interfaces Summary
+
+##### IPv4
+
+| Interface | Description | VRF | IP Address |
+| --------- | ----------- | --- | ---------- |
+| Loopback0 | ROUTER_ID | default | 172.16.1.1/32 |
+
+##### IPv6
+
+| Interface | Description | VRF | IPv6 Address |
+| --------- | ----------- | --- | ------------ |
+| Loopback0 | ROUTER_ID | default | - |
+
+#### Loopback Interfaces Device Configuration
+
+```eos
+!
+interface Loopback0
+   description ROUTER_ID
+   no shutdown
+   ip address 172.16.1.1/32
+   ip ospf area 0.0.0.0
 ```
 
 ### VLAN Interfaces
@@ -399,17 +452,109 @@ interface Port-Channel47
 
 | Interface | Description | VRF |  MTU | Shutdown |
 | --------- | ----------- | --- | ---- | -------- |
+| Vlan10 | Inband Management | default | 1500 | False |
+| Vlan110 | IDF1-Data | default | - | False |
+| Vlan120 | IDF1-Voice | default | - | False |
+| Vlan130 | IDF1-Guest | default | - | False |
+| Vlan210 | IDF2-Data | default | - | False |
+| Vlan220 | IDF2-Voice | default | - | False |
+| Vlan230 | IDF2-Guest | default | - | False |
+| Vlan310 | IDF3-Data | default | - | False |
+| Vlan320 | IDF3-Voice | default | - | False |
+| Vlan330 | IDF3-Guest | default | - | False |
+| Vlan4093 | MLAG_L3 | default | 1500 | False |
 | Vlan4094 | MLAG | default | 1500 | False |
 
 ##### IPv4
 
 | Interface | VRF | IP Address | IP Address Virtual | IP Router Virtual Address | ACL In | ACL Out |
 | --------- | --- | ---------- | ------------------ | ------------------------- | ------ | ------- |
+| Vlan10 |  default  |  10.10.10.2/24  |  -  |  10.10.10.1  |  -  |  -  |
+| Vlan110 |  default  |  10.1.10.2/23  |  -  |  10.1.10.1  |  -  |  -  |
+| Vlan120 |  default  |  10.1.20.2/23  |  -  |  10.1.20.1  |  -  |  -  |
+| Vlan130 |  default  |  10.1.30.2/23  |  -  |  10.1.30.1  |  -  |  -  |
+| Vlan210 |  default  |  10.2.10.2/23  |  -  |  10.2.10.1  |  -  |  -  |
+| Vlan220 |  default  |  10.2.20.2/23  |  -  |  10.2.20.1  |  -  |  -  |
+| Vlan230 |  default  |  10.2.30.2/23  |  -  |  10.2.30.1  |  -  |  -  |
+| Vlan310 |  default  |  10.3.10.2/23  |  -  |  10.3.10.1  |  -  |  -  |
+| Vlan320 |  default  |  10.3.20.2/23  |  -  |  10.3.20.1  |  -  |  -  |
+| Vlan330 |  default  |  10.3.30.2/23  |  -  |  10.3.30.1  |  -  |  -  |
+| Vlan4093 |  default  |  10.1.1.0/31  |  -  |  -  |  -  |  -  |
 | Vlan4094 |  default  |  192.168.0.0/31  |  -  |  -  |  -  |  -  |
 
 #### VLAN Interfaces Device Configuration
 
 ```eos
+!
+interface Vlan10
+   description Inband Management
+   no shutdown
+   mtu 1500
+   ip address 10.10.10.2/24
+   ip attached-host route export 19
+   ip virtual-router address 10.10.10.1
+!
+interface Vlan110
+   description IDF1-Data
+   no shutdown
+   ip address 10.1.10.2/23
+   ip virtual-router address 10.1.10.1
+!
+interface Vlan120
+   description IDF1-Voice
+   no shutdown
+   ip address 10.1.20.2/23
+   ip virtual-router address 10.1.20.1
+!
+interface Vlan130
+   description IDF1-Guest
+   no shutdown
+   ip address 10.1.30.2/23
+   ip virtual-router address 10.1.30.1
+!
+interface Vlan210
+   description IDF2-Data
+   no shutdown
+   ip address 10.2.10.2/23
+   ip virtual-router address 10.2.10.1
+!
+interface Vlan220
+   description IDF2-Voice
+   no shutdown
+   ip address 10.2.20.2/23
+   ip virtual-router address 10.2.20.1
+!
+interface Vlan230
+   description IDF2-Guest
+   no shutdown
+   ip address 10.2.30.2/23
+   ip virtual-router address 10.2.30.1
+!
+interface Vlan310
+   description IDF3-Data
+   no shutdown
+   ip address 10.3.10.2/23
+   ip virtual-router address 10.3.10.1
+!
+interface Vlan320
+   description IDF3-Voice
+   no shutdown
+   ip address 10.3.20.2/23
+   ip virtual-router address 10.3.20.1
+!
+interface Vlan330
+   description IDF3-Guest
+   no shutdown
+   ip address 10.3.30.2/23
+   ip virtual-router address 10.3.30.1
+!
+interface Vlan4093
+   description MLAG_L3
+   no shutdown
+   mtu 1500
+   ip address 10.1.1.0/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
 !
 interface Vlan4094
    description MLAG
@@ -430,18 +575,33 @@ Multi agent routing protocol model enabled
 service routing protocols model multi-agent
 ```
 
+### Virtual Router MAC Address
+
+#### Virtual Router MAC Address Summary
+
+Virtual Router MAC Address: 00:1c:73:00:dc:01
+
+#### Virtual Router MAC Address Device Configuration
+
+```eos
+!
+ip virtual-router mac-address 00:1c:73:00:dc:01
+```
+
 ### IP Routing
 
 #### IP Routing Summary
 
 | VRF | Routing Enabled |
 | --- | --------------- |
-| default | False |
+| default | True |
 | MGMT | False |
 
 #### IP Routing Device Configuration
 
 ```eos
+!
+ip routing
 no ip routing vrf MGMT
 ```
 
@@ -467,6 +627,41 @@ no ip routing vrf MGMT
 ```eos
 !
 ip route vrf MGMT 0.0.0.0/0 172.16.100.1
+```
+
+### Router OSPF
+
+#### Router OSPF Summary
+
+| Process ID | Router ID | Default Passive Interface | No Passive Interface | BFD | Max LSA | Default Information Originate | Log Adjacency Changes Detail | Auto Cost Reference Bandwidth | Maximum Paths | MPLS LDP Sync Default | Distribute List In |
+| ---------- | --------- | ------------------------- | -------------------- | --- | ------- | ----------------------------- | ---------------------------- | ----------------------------- | ------------- | --------------------- | ------------------ |
+| 100 | 172.16.1.1 | enabled | Vlan4093 <br> Ethernet52/1 <br> | disabled | 12000 | disabled | disabled | - | - | - | - |
+
+#### Router OSPF Router Redistribution
+
+| Process ID | Source Protocol | Include Leaked | Route Map |
+| ---------- | --------------- | -------------- | --------- |
+| 100 | connected | disabled | - |
+
+#### OSPF Interfaces
+
+| Interface | Area | Cost | Point To Point |
+| -------- | -------- | -------- | -------- |
+| Ethernet52/1 | 0.0.0.0 | - | True |
+| Vlan4093 | 0.0.0.0 | - | True |
+| Loopback0 | 0.0.0.0 | - | - |
+
+#### Router OSPF Device Configuration
+
+```eos
+!
+router ospf 100
+   router-id 172.16.1.1
+   passive-interface default
+   no passive-interface Ethernet52/1
+   no passive-interface Vlan4093
+   redistribute connected
+   max-lsa 12000
 ```
 
 ## Multicast
