@@ -127,7 +127,7 @@ l2leaf:
 p2p_uplinks_mtu: 1500
 
 # Underlay Routing Protocol
-underlay_routing_protocol: ebgp
+underlay_routing_protocol: ospf
 
 #### WAN/Core Edge Links ####
 core_interfaces:
@@ -136,7 +136,7 @@ core_interfaces:
       nodes: [ SPINE1, WAN ]
       interfaces: [ Ethernet52/1, Ethernet1/1 ]
       include_in_underlay_protocol: true
-      as: 
+      as:
     - ip: [ 10.0.0.5/31, 10.0.0.4/31 ]
       nodes: [ SPINE2, WAN ]
       interfaces: [ Ethernet52/1, Ethernet1/1 ]
