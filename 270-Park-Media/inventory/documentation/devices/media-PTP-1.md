@@ -788,7 +788,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65401 | 10.255.3.1 |
+| 65400 | 10.255.3.1 |
 
 | BGP Tuning |
 | ---------- |
@@ -816,7 +816,7 @@ ASN Notation: asplain
 
 ```eos
 !
-router bgp 65401
+router bgp 65400
    router-id 10.255.3.1
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
