@@ -38,6 +38,7 @@ local_users:
 
 bgp_peer_groups:
   ipv4_underlay_peers:
+    name: P2P-IPv4-eBGP-PEERS
     password: 7x4B4rnJhZB438m9+BrBfQ==
 
 p2p_uplinks_mtu: 1500

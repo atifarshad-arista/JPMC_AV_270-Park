@@ -450,7 +450,7 @@ ASN Notation: asplain
 
 #### Router BGP Peer Groups
 
-##### IPv4-UNDERLAY-PEERS
+##### P2P-IPv4-eBGP-PEERS
 
 | Settings | Value |
 | -------- | ----- |
@@ -462,12 +462,12 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 10.255.253.3 | 65400 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.253.7 | 65400 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.255.1 | 65201 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.255.3 | 65201 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.255.9 | 65202 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.255.11 | 65202 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
+| 10.255.253.3 | 65400 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.255.253.7 | 65400 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.255.255.1 | 65201 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.255.255.3 | 65201 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.255.255.9 | 65202 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.255.255.11 | 65202 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
@@ -477,32 +477,32 @@ router bgp 65200
    router-id 10.255.2.1
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
-   neighbor IPv4-UNDERLAY-PEERS peer group
-   neighbor IPv4-UNDERLAY-PEERS password 7 <removed>
-   neighbor IPv4-UNDERLAY-PEERS send-community
-   neighbor IPv4-UNDERLAY-PEERS maximum-routes 12000
-   neighbor 10.255.253.3 peer group IPv4-UNDERLAY-PEERS
+   neighbor P2P-IPv4-eBGP-PEERS peer group
+   neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
+   neighbor P2P-IPv4-eBGP-PEERS send-community
+   neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 10.255.253.3 peer group P2P-IPv4-eBGP-PEERS
    neighbor 10.255.253.3 remote-as 65400
    neighbor 10.255.253.3 description media-PTP-1_Ethernet2
-   neighbor 10.255.253.7 peer group IPv4-UNDERLAY-PEERS
+   neighbor 10.255.253.7 peer group P2P-IPv4-eBGP-PEERS
    neighbor 10.255.253.7 remote-as 65400
    neighbor 10.255.253.7 description media-PTP-2_Ethernet2
-   neighbor 10.255.255.1 peer group IPv4-UNDERLAY-PEERS
+   neighbor 10.255.255.1 peer group P2P-IPv4-eBGP-PEERS
    neighbor 10.255.255.1 remote-as 65201
    neighbor 10.255.255.1 description blue-leaf1_Ethernet1
-   neighbor 10.255.255.3 peer group IPv4-UNDERLAY-PEERS
+   neighbor 10.255.255.3 peer group P2P-IPv4-eBGP-PEERS
    neighbor 10.255.255.3 remote-as 65201
    neighbor 10.255.255.3 description blue-leaf1_Ethernet2
-   neighbor 10.255.255.9 peer group IPv4-UNDERLAY-PEERS
+   neighbor 10.255.255.9 peer group P2P-IPv4-eBGP-PEERS
    neighbor 10.255.255.9 remote-as 65202
    neighbor 10.255.255.9 description blue-leaf2_Ethernet1
-   neighbor 10.255.255.11 peer group IPv4-UNDERLAY-PEERS
+   neighbor 10.255.255.11 peer group P2P-IPv4-eBGP-PEERS
    neighbor 10.255.255.11 remote-as 65202
    neighbor 10.255.255.11 description blue-leaf2_Ethernet2
    redistribute connected
    !
    address-family ipv4
-      neighbor IPv4-UNDERLAY-PEERS activate
+      neighbor P2P-IPv4-eBGP-PEERS activate
 ```
 
 ## Multicast

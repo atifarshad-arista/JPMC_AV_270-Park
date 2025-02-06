@@ -797,7 +797,7 @@ ASN Notation: asplain
 
 #### Router BGP Peer Groups
 
-##### IPv4-UNDERLAY-PEERS
+##### P2P-IPv4-eBGP-PEERS
 
 | Settings | Value |
 | -------- | ----- |
@@ -809,8 +809,8 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 10.255.253.0 | 65100 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.253.2 | 65200 | default | - | Inherited from peer group IPv4-UNDERLAY-PEERS | Inherited from peer group IPv4-UNDERLAY-PEERS | - | - | - | - | - | - |
+| 10.255.253.0 | 65100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.255.253.2 | 65200 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
@@ -820,20 +820,20 @@ router bgp 65400
    router-id 10.255.3.1
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
-   neighbor IPv4-UNDERLAY-PEERS peer group
-   neighbor IPv4-UNDERLAY-PEERS password 7 <removed>
-   neighbor IPv4-UNDERLAY-PEERS send-community
-   neighbor IPv4-UNDERLAY-PEERS maximum-routes 12000
-   neighbor 10.255.253.0 peer group IPv4-UNDERLAY-PEERS
+   neighbor P2P-IPv4-eBGP-PEERS peer group
+   neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
+   neighbor P2P-IPv4-eBGP-PEERS send-community
+   neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 10.255.253.0 peer group P2P-IPv4-eBGP-PEERS
    neighbor 10.255.253.0 remote-as 65100
    neighbor 10.255.253.0 description amber-spine1_Ethernet5
-   neighbor 10.255.253.2 peer group IPv4-UNDERLAY-PEERS
+   neighbor 10.255.253.2 peer group P2P-IPv4-eBGP-PEERS
    neighbor 10.255.253.2 remote-as 65200
    neighbor 10.255.253.2 description blue-spine1_Ethernet5
    redistribute connected
    !
    address-family ipv4
-      neighbor IPv4-UNDERLAY-PEERS activate
+      neighbor P2P-IPv4-eBGP-PEERS activate
 ```
 
 ## Multicast
