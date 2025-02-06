@@ -1,4 +1,4 @@
-# amber-spine1
+# av-BL-1
 
 ## Table of Contents
 
@@ -15,6 +15,9 @@
   - [AAA Authorization](#aaa-authorization)
 - [Monitoring](#monitoring)
   - [TerminAttr Daemon](#terminattr-daemon)
+- [Spanning Tree](#spanning-tree)
+  - [Spanning Tree Summary](#spanning-tree-summary)
+  - [Spanning Tree Device Configuration](#spanning-tree-device-configuration)
 - [Internal VLAN Allocation Policy](#internal-vlan-allocation-policy)
   - [Internal VLAN Allocation Policy Summary](#internal-vlan-allocation-policy-summary)
   - [Internal VLAN Allocation Policy Device Configuration](#internal-vlan-allocation-policy-device-configuration)
@@ -45,7 +48,7 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Ethernet0 | OOB_MANAGEMENT | oob | MGMT | 172.16.1.11/24 | 172.16.1.1 |
+| Ethernet0 | OOB_MANAGEMENT | oob | MGMT | 172.16.3.101/24 | 172.16.1.1 |
 
 ##### IPv6
 
@@ -61,7 +64,7 @@ interface Ethernet0
    description OOB_MANAGEMENT
    no shutdown
    vrf MGMT
-   ip address 172.16.1.11/24
+   ip address 172.16.3.101/24
 ```
 
 ### IP Name Servers
@@ -107,17 +110,17 @@ ntp server vrf MGMT 0.pool.ntp.org
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| 00:1C:73:14:00:01 | - | 20 | 1 | - | 127 | boundary | - |
+| 00:1C:73:0a:00:03 | - | 10 | 3 | - | 127 | boundary | - |
 
 #### PTP Device Configuration
 
 ```eos
 !
-ptp clock-identity 00:1C:73:14:00:01
+ptp clock-identity 00:1C:73:0a:00:03
 ptp domain 127
 ptp mode boundary
-ptp priority1 20
-ptp priority2 1
+ptp priority1 10
+ptp priority2 3
 ptp monitor threshold offset-from-master 250
 ptp monitor threshold mean-path-delay 1500
 ptp monitor sequence-id
@@ -227,6 +230,26 @@ daemon TerminAttr
    no shutdown
 ```
 
+## Spanning Tree
+
+### Spanning Tree Summary
+
+STP mode: **mstp**
+
+#### MSTP Instance and Priority
+
+| Instance(s) | Priority |
+| -------- | -------- |
+| 0 | 4096 |
+
+### Spanning Tree Device Configuration
+
+```eos
+!
+spanning-tree mode mstp
+spanning-tree mst 0 priority 4096
+```
+
 ## Internal VLAN Allocation Policy
 
 ### Internal VLAN Allocation Policy Summary
@@ -259,25 +282,19 @@ vlan internal order ascending range 1006 1199
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet1 | P2P_amber-leaf1_Ethernet1 | - | 10.255.254.0/31 | default | 1500 | False | - | - |
-| Ethernet2 | P2P_amber-leaf1_Ethernet2 | - | 10.255.254.2/31 | default | 1500 | False | - | - |
-| Ethernet3 | P2P_amber-leaf2_Ethernet1 | - | 10.255.254.8/31 | default | 1500 | False | - | - |
-| Ethernet4 | P2P_amber-leaf2_Ethernet2 | - | 10.255.254.10/31 | default | 1500 | False | - | - |
-| Ethernet5 | P2P_media-PTP-1_Ethernet1 | - | 10.255.253.0/31 | default | 1500 | False | - | - |
-| Ethernet6 | P2P_media-PTP-2_Ethernet1 | - | 10.255.253.4/31 | default | 1500 | False | - | - |
-| Ethernet7 | P2P_av-bl-1_Ethernet1 | - | 10.255.249.8/31 | default | 1500 | False | - | - |
-| Ethernet8 | P2P_av-bl-2_Ethernet1 | - | 10.255.249.12/31 | default | 1500 | False | - | - |
+| Ethernet1 | P2P_amber-spine1_Ethernet7 | - | 10.255.249.9/31 | default | 1500 | False | - | - |
+| Ethernet2 | P2P_blue-spine1_Ethernet7 | - | 10.255.249.11/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
 ```eos
 !
 interface Ethernet1
-   description P2P_amber-leaf1_Ethernet1
+   description P2P_amber-spine1_Ethernet7
    no shutdown
    mtu 1500
    no switchport
-   ip address 10.255.254.0/31
+   ip address 10.255.249.9/31
    pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
@@ -287,95 +304,11 @@ interface Ethernet1
    ptp transport ipv4
 !
 interface Ethernet2
-   description P2P_amber-leaf1_Ethernet2
+   description P2P_blue-spine1_Ethernet7
    no shutdown
    mtu 1500
    no switchport
-   ip address 10.255.254.2/31
-   pim ipv4 sparse-mode
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet3
-   description P2P_amber-leaf2_Ethernet1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 10.255.254.8/31
-   pim ipv4 sparse-mode
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4
-   description P2P_amber-leaf2_Ethernet2
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 10.255.254.10/31
-   pim ipv4 sparse-mode
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet5
-   description P2P_media-PTP-1_Ethernet1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 10.255.253.0/31
-   pim ipv4 sparse-mode
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet6
-   description P2P_media-PTP-2_Ethernet1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 10.255.253.4/31
-   pim ipv4 sparse-mode
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet7
-   description P2P_av-bl-1_Ethernet1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 10.255.249.8/31
-   pim ipv4 sparse-mode
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet8
-   description P2P_av-bl-2_Ethernet1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 10.255.249.12/31
+   ip address 10.255.249.11/31
    pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
@@ -393,7 +326,7 @@ interface Ethernet8
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 10.255.1.1/32 |
+| Loopback0 | ROUTER_ID | default | 10.255.3.3/32 |
 
 ##### IPv6
 
@@ -408,7 +341,7 @@ interface Ethernet8
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 10.255.1.1/32
+   ip address 10.255.3.3/32
 ```
 
 ## Routing
@@ -471,7 +404,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65100 | 10.255.1.1 |
+| 65450 | 10.255.3.3 |
 
 | BGP Tuning |
 | ---------- |
@@ -492,51 +425,27 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 10.255.249.9 | 65450 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 10.255.249.13 | 65450 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 10.255.253.1 | 65400 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 10.255.253.5 | 65400 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 10.255.254.1 | 65101 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 10.255.254.3 | 65101 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 10.255.254.9 | 65102 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 10.255.254.11 | 65102 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.255.249.8 | 65100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.255.249.10 | 65200 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
 ```eos
 !
-router bgp 65100
-   router-id 10.255.1.1
+router bgp 65450
+   router-id 10.255.3.3
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
    neighbor P2P-IPv4-eBGP-PEERS peer group
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
-   neighbor 10.255.249.9 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.249.9 remote-as 65450
-   neighbor 10.255.249.9 description av-bl-1_Ethernet1
-   neighbor 10.255.249.13 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.249.13 remote-as 65450
-   neighbor 10.255.249.13 description av-bl-2_Ethernet1
-   neighbor 10.255.253.1 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.253.1 remote-as 65400
-   neighbor 10.255.253.1 description media-PTP-1_Ethernet1
-   neighbor 10.255.253.5 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.253.5 remote-as 65400
-   neighbor 10.255.253.5 description media-PTP-2_Ethernet1
-   neighbor 10.255.254.1 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.254.1 remote-as 65101
-   neighbor 10.255.254.1 description amber-leaf1_Ethernet1
-   neighbor 10.255.254.3 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.254.3 remote-as 65101
-   neighbor 10.255.254.3 description amber-leaf1_Ethernet2
-   neighbor 10.255.254.9 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.254.9 remote-as 65102
-   neighbor 10.255.254.9 description amber-leaf2_Ethernet1
-   neighbor 10.255.254.11 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.254.11 remote-as 65102
-   neighbor 10.255.254.11 description amber-leaf2_Ethernet2
+   neighbor 10.255.249.8 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 10.255.249.8 remote-as 65100
+   neighbor 10.255.249.8 description amber-spine1_Ethernet7
+   neighbor 10.255.249.10 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 10.255.249.10 remote-as 65200
+   neighbor 10.255.249.10 description blue-spine1_Ethernet7
    redistribute connected
    !
    address-family ipv4
@@ -581,12 +490,6 @@ router multicast
 | -------------- | -------- | ---------- | ------------- | ----------- | --------------- |
 | Ethernet1 | - | IPv4 | - | - | - |
 | Ethernet2 | - | IPv4 | - | - | - |
-| Ethernet3 | - | IPv4 | - | - | - |
-| Ethernet4 | - | IPv4 | - | - | - |
-| Ethernet5 | - | IPv4 | - | - | - |
-| Ethernet6 | - | IPv4 | - | - | - |
-| Ethernet7 | - | IPv4 | - | - | - |
-| Ethernet8 | - | IPv4 | - | - | - |
 
 ## VRF Instances
 

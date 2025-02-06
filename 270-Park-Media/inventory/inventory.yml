@@ -44,13 +44,21 @@ all:
               ansible_host: 172.16.1.131
             media-PTP-2:
               ansible_host: 172.16.1.132
+        BORDER_LEAVES:
+          hosts:
+            av-bl-1:
+              ansible_host: 172.16.1.231
+            av-bl-2:
+              ansible_host: 172.16.1.232
     NETWORK_SERVICES:
       children:
         AMBER_LEAVES:
         BLUE_LEAVES:
         PTP_LEAVES:
+        BORDER_LEAVES:
     CONNECTED_ENDPOINTS:
       children:
         AMBER_LEAVES:
         BLUE_LEAVES:
         PTP_LEAVES:
+        BORDER_LEAVES:

@@ -265,6 +265,8 @@ vlan internal order ascending range 1006 1199
 | Ethernet4 | P2P_blue-leaf2_Ethernet2 | - | 10.255.255.10/31 | default | 1500 | False | - | - |
 | Ethernet5 | P2P_media-PTP-1_Ethernet2 | - | 10.255.253.2/31 | default | 1500 | False | - | - |
 | Ethernet6 | P2P_media-PTP-2_Ethernet2 | - | 10.255.253.6/31 | default | 1500 | False | - | - |
+| Ethernet7 | P2P_av-bl-1_Ethernet2 | - | 10.255.249.10/31 | default | 1500 | False | - | - |
+| Ethernet8 | P2P_av-bl-2_Ethernet2 | - | 10.255.249.14/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
@@ -346,6 +348,34 @@ interface Ethernet6
    mtu 1500
    no switchport
    ip address 10.255.253.6/31
+   pim ipv4 sparse-mode
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet7
+   description P2P_av-bl-1_Ethernet2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 10.255.249.10/31
+   pim ipv4 sparse-mode
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8
+   description P2P_av-bl-2_Ethernet2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 10.255.249.14/31
    pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
@@ -462,6 +492,8 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
+| 10.255.249.11 | 65450 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.255.249.15 | 65450 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 10.255.253.3 | 65400 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 10.255.253.7 | 65400 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 10.255.255.1 | 65201 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
@@ -481,6 +513,12 @@ router bgp 65200
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 10.255.249.11 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 10.255.249.11 remote-as 65450
+   neighbor 10.255.249.11 description av-bl-1_Ethernet2
+   neighbor 10.255.249.15 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 10.255.249.15 remote-as 65450
+   neighbor 10.255.249.15 description av-bl-2_Ethernet2
    neighbor 10.255.253.3 peer group P2P-IPv4-eBGP-PEERS
    neighbor 10.255.253.3 remote-as 65400
    neighbor 10.255.253.3 description media-PTP-1_Ethernet2
@@ -547,6 +585,8 @@ router multicast
 | Ethernet4 | - | IPv4 | - | - | - |
 | Ethernet5 | - | IPv4 | - | - | - |
 | Ethernet6 | - | IPv4 | - | - | - |
+| Ethernet7 | - | IPv4 | - | - | - |
+| Ethernet8 | - | IPv4 | - | - | - |
 
 ## VRF Instances
 
