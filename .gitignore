@@ -2,6 +2,8 @@
 # inventory/intended
 270-Park-Media/inventory/intended/structured_configs/
 270-Park-Control/inventory/intended/structured_configs/
+270-Park-Media/inventory/intended/configs/
+270-Park-Control/inventory/intended/configs/
 # inventory/documentation/devices
 
 # uncomment in production environment if password file is used.
