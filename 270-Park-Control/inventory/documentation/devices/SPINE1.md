@@ -34,9 +34,11 @@
   - [IP Routing](#ip-routing)
   - [IPv6 Routing](#ipv6-routing)
   - [Static Routes](#static-routes)
-  - [Router OSPF](#router-ospf)
+  - [Router BGP](#router-bgp)
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
+- [Filters](#filters)
+  - [Route-maps](#route-maps)
 - [VRF Instances](#vrf-instances)
   - [VRF Instances Summary](#vrf-instances-summary)
   - [VRF Instances Device Configuration](#vrf-instances-device-configuration)
@@ -356,8 +358,6 @@ interface Ethernet52/1
    mtu 1500
    no switchport
    ip address 10.0.0.3/31
-   ip ospf network point-to-point
-   ip ospf area 0.0.0.0
 !
 interface Ethernet55/1
    description MLAG_SPINE2_Ethernet55/1
@@ -443,7 +443,6 @@ interface Loopback0
    description ROUTER_ID
    no shutdown
    ip address 172.16.1.1/32
-   ip ospf area 0.0.0.0
 ```
 
 ### VLAN Interfaces
@@ -553,8 +552,6 @@ interface Vlan4093
    no shutdown
    mtu 1500
    ip address 10.1.1.0/31
-   ip ospf network point-to-point
-   ip ospf area 0.0.0.0
 !
 interface Vlan4094
    description MLAG
@@ -629,39 +626,90 @@ no ip routing vrf MGMT
 ip route vrf MGMT 0.0.0.0/0 172.16.100.1
 ```
 
-### Router OSPF
+### Router BGP
 
-#### Router OSPF Summary
+ASN Notation: asplain
 
-| Process ID | Router ID | Default Passive Interface | No Passive Interface | BFD | Max LSA | Default Information Originate | Log Adjacency Changes Detail | Auto Cost Reference Bandwidth | Maximum Paths | MPLS LDP Sync Default | Distribute List In |
-| ---------- | --------- | ------------------------- | -------------------- | --- | ------- | ----------------------------- | ---------------------------- | ----------------------------- | ------------- | --------------------- | ------------------ |
-| 100 | 172.16.1.1 | enabled | Vlan4093 <br> Ethernet52/1 <br> | disabled | 12000 | disabled | disabled | - | - | - | - |
+#### Router BGP Summary
 
-#### Router OSPF Router Redistribution
+| BGP AS | Router ID |
+| ------ | --------- |
+| 65550 | 172.16.1.1 |
 
-| Process ID | Source Protocol | Include Leaked | Route Map |
-| ---------- | --------------- | -------------- | --------- |
-| 100 | connected | disabled | - |
+| BGP Tuning |
+| ---------- |
+| timers bgp 5 15 |
+| neighbor default send-community |
+| distance bgp 20 200 200 |
+| graceful-restart restart-time 300 |
+| graceful-restart |
+| maximum-paths 128 |
+| no bgp default ipv4-unicast |
+| maximum-paths 4 ecmp 4 |
 
-#### OSPF Interfaces
+#### Router BGP Peer Groups
 
-| Interface | Area | Cost | Point To Point |
-| -------- | -------- | -------- | -------- |
-| Ethernet52/1 | 0.0.0.0 | - | True |
-| Vlan4093 | 0.0.0.0 | - | True |
-| Loopback0 | 0.0.0.0 | - | - |
+##### MLAG-IPv4-UNDERLAY-PEER
 
-#### Router OSPF Device Configuration
+| Settings | Value |
+| -------- | ----- |
+| Address Family | ipv4 |
+| Remote AS | 65550 |
+| Next-hop self | True |
+| Send community | all |
+| Maximum routes | 12000 |
+
+##### P2P-IPv4-eBGP-PEERS
+
+| Settings | Value |
+| -------- | ----- |
+| Address Family | ipv4 |
+| Send community | all |
+| Maximum routes | 12000 |
+
+#### BGP Neighbors
+
+| Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
+| -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
+| 10.0.0.2 | 652001 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.1.1.1 | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | default | - | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | - | - | - | - | - | - |
+
+#### Router BGP Device Configuration
 
 ```eos
 !
-router ospf 100
+router bgp 65550
    router-id 172.16.1.1
-   passive-interface default
-   no passive-interface Ethernet52/1
-   no passive-interface Vlan4093
+   no bgp default ipv4-unicast
+   maximum-paths 4 ecmp 4
+   timers bgp 5 15
+   neighbor default send-community
+   distance bgp 20 200 200
+   graceful-restart restart-time 300
+   graceful-restart
+   maximum-paths 128
+   neighbor MLAG-IPv4-UNDERLAY-PEER peer group
+   neighbor MLAG-IPv4-UNDERLAY-PEER remote-as 65550
+   neighbor MLAG-IPv4-UNDERLAY-PEER next-hop-self
+   neighbor MLAG-IPv4-UNDERLAY-PEER description SPINE2
+   neighbor MLAG-IPv4-UNDERLAY-PEER route-map RM-MLAG-PEER-IN in
+   neighbor MLAG-IPv4-UNDERLAY-PEER send-community
+   neighbor MLAG-IPv4-UNDERLAY-PEER maximum-routes 12000
+   neighbor P2P-IPv4-eBGP-PEERS peer group
+   neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
+   neighbor P2P-IPv4-eBGP-PEERS send-community
+   neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 10.0.0.2 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 10.0.0.2 remote-as 652001
+   neighbor 10.0.0.2 description WAN
+   neighbor 10.1.1.1 peer group MLAG-IPv4-UNDERLAY-PEER
+   neighbor 10.1.1.1 description SPINE2_Vlan4093
    redistribute connected
-   max-lsa 12000
+   redistribute attached-host
+   !
+   address-family ipv4
+      neighbor MLAG-IPv4-UNDERLAY-PEER activate
+      neighbor P2P-IPv4-eBGP-PEERS activate
 ```
 
 ## Multicast
@@ -677,6 +725,27 @@ router ospf 100
 #### IP IGMP Snooping Device Configuration
 
 ```eos
+```
+
+## Filters
+
+### Route-maps
+
+#### Route-maps Summary
+
+##### RM-MLAG-PEER-IN
+
+| Sequence | Type | Match | Set | Sub-Route-Map | Continue |
+| -------- | ---- | ----- | --- | ------------- | -------- |
+| 10 | permit | - | origin incomplete | - | - |
+
+#### Route-maps Device Configuration
+
+```eos
+!
+route-map RM-MLAG-PEER-IN permit 10
+   description Make routes learned over MLAG Peer-link less preferred on spines to ensure optimal routing
+   set origin incomplete
 ```
 
 ## VRF Instances

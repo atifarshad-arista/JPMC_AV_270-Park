@@ -30,6 +30,16 @@ l3spine:
     mlag_peer_l3_ipv4_pool: 10.1.1.0/24
     virtual_router_mac_address: 00:1c:73:00:dc:01
     mlag_interfaces: [Ethernet55/1, Ethernet56/1]
+    bgp_as: 65550
+    bgp_defaults:
+     # Literal bgp commands <str>
+      - timers bgp 5 15
+      - neighbor default send-community
+      - distance bgp 20 200 200
+      - graceful-restart restart-time 300
+      - graceful-restart
+      - maximum-paths 128
+
   node_groups:
     - group: SPINES
       nodes:
@@ -39,7 +49,6 @@ l3spine:
         - name: SPINE2
           id: 2
           mgmt_ip: 172.16.100.102/24
-
 # IDF - Leaf Switches
 l2leaf:
   defaults:
@@ -127,7 +136,7 @@ l2leaf:
 p2p_uplinks_mtu: 1500
 
 # Underlay Routing Protocol
-underlay_routing_protocol: ospf
+underlay_routing_protocol: ebgp
 
 #### WAN/Core Edge Links ####
 core_interfaces:
@@ -136,8 +145,17 @@ core_interfaces:
       nodes: [ SPINE1, WAN ]
       interfaces: [ Ethernet52/1, Ethernet1/1 ]
       include_in_underlay_protocol: true
-      as:
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ 65550, 652001 ]
+      underlay_multicast: true
     - ip: [ 10.0.0.5/31, 10.0.0.4/31 ]
       nodes: [ SPINE2, WAN ]
       interfaces: [ Ethernet52/1, Ethernet1/1 ]
       include_in_underlay_protocol: true
+      as: [ 65550, 652001 ]
+
+bgp_peer_groups:
+  ipv4_underlay_peers:
+    name: P2P-IPv4-eBGP-PEERS
+    password: 7x4B4rnJhZB438m9+BrBfQ==
