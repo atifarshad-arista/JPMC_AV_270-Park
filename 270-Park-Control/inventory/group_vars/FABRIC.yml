@@ -148,7 +148,7 @@ core_interfaces:
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ 65550, 652001 ]
-      underlay_multicast: true
+     # underlay_multicast: true
     - ip: [ 10.0.0.5/31, 10.0.0.4/31 ]
       nodes: [ SPINE2, WAN ]
       interfaces: [ Ethernet52/1, Ethernet1/1 ]
