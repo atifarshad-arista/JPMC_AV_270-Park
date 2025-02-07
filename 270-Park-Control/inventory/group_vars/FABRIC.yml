@@ -142,18 +142,63 @@ underlay_routing_protocol: ebgp
 core_interfaces:
   p2p_links:
     - ip: [ 10.0.0.3/31, 10.0.0.2/31 ]
-      nodes: [ SPINE1, WAN ]
-      interfaces: [ Ethernet52/1, Ethernet1/1 ]
+      nodes: [ SPINE1, ptp-1 ]
+      interfaces: [ Ethernet11, Ethernet13 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ 65550, 652001 ]
-     # underlay_multicast: true
-    - ip: [ 10.0.0.5/31, 10.0.0.4/31 ]
-      nodes: [ SPINE2, WAN ]
-      interfaces: [ Ethernet52/1, Ethernet1/1 ]
+      as: [ 65550, 65580 ]
+
+    - ip: [ 10.0.0.7/31, 10.0.0.6/31 ]
+      nodes: [ SPINE1, ptp-2 ]
+      interfaces: [ Ethernet12, Ethernet13 ]
       include_in_underlay_protocol: true
-      as: [ 65550, 652001 ]
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ 65550, 65580 ]
+      #underlay_multicast: true
+
+    - ip: [ 10.0.0.11/31, 10.0.0.10/31 ]
+      nodes: [ SPINE1, av-bl-1 ]
+      interfaces: [ Ethernet13, Ethernet13 ]
+      include_in_underlay_protocol: true
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ 65550, 65595 ]
+      #underlay_multicast: true
+
+    - ip: [ 10.0.0.15/31, 10.0.0.14/31 ]
+      nodes: [ SPINE1, av-bl-2 ]
+      interfaces: [ Ethernet14, Ethernet13 ]
+      include_in_underlay_protocol: true
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ 65550, 65595 ]
+      #underlay_multicast: true
+
+    - ip: [ 10.0.0.5/31, 10.0.0.4/31 ]
+      nodes: [ SPINE2, ptp-1 ]
+      interfaces: [ Ethernet11, Ethernet14]
+      include_in_underlay_protocol: true
+      as: [ 65550, 65580 ]
+
+    - ip: [ 10.0.0.9/31, 10.0.0.8/31 ]
+      nodes: [ SPINE2, ptp-2 ]
+      interfaces: [ Ethernet12, Ethernet14 ]
+      include_in_underlay_protocol: true
+      as: [ 65550, 65580 ]
+
+    - ip: [ 10.0.0.13/31, 10.0.0.12/31 ]
+      nodes: [ SPINE2, av-bl-1 ]
+      interfaces: [ Ethernet13, Ethernet14 ]
+      include_in_underlay_protocol: true
+      as: [ 65550, 65595 ]
+
+    - ip: [ 10.0.0.17/31, 10.0.0.16/31 ]
+      nodes: [ SPINE2, av-bl-2 ]
+      interfaces: [ Ethernet14, Ethernet14 ]
+      include_in_underlay_protocol: true
+      as: [ 65550, 65595 ]
 
 bgp_peer_groups:
   ipv4_underlay_peers:

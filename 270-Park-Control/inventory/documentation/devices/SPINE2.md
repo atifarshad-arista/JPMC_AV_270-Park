@@ -326,7 +326,10 @@ vlan 4094
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet52/1 | P2P_WAN_Ethernet1/1 | - | 10.0.0.5/31 | default | 1500 | False | - | - |
+| Ethernet11 | P2P_ptp-1_Ethernet14 | - | 10.0.0.5/31 | default | 1500 | False | - | - |
+| Ethernet12 | P2P_ptp-2_Ethernet14 | - | 10.0.0.9/31 | default | 1500 | False | - | - |
+| Ethernet13 | P2P_av-bl-1_Ethernet14 | - | 10.0.0.13/31 | default | 1500 | False | - | - |
+| Ethernet14 | P2P_av-bl-2_Ethernet14 | - | 10.0.0.17/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
@@ -336,6 +339,34 @@ interface Ethernet1
    description L2_LEAF1B_Ethernet51
    no shutdown
    channel-group 1 mode active
+!
+interface Ethernet11
+   description P2P_ptp-1_Ethernet14
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 10.0.0.5/31
+!
+interface Ethernet12
+   description P2P_ptp-2_Ethernet14
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 10.0.0.9/31
+!
+interface Ethernet13
+   description P2P_av-bl-1_Ethernet14
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 10.0.0.13/31
+!
+interface Ethernet14
+   description P2P_av-bl-2_Ethernet14
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 10.0.0.17/31
 !
 interface Ethernet49/1
    description L2_LEAF2A_Ethernet1/3
@@ -351,13 +382,6 @@ interface Ethernet51/1
    description L2_LEAF3B_Ethernet97/2
    no shutdown
    channel-group 501 mode active
-!
-interface Ethernet52/1
-   description P2P_WAN_Ethernet1/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 10.0.0.5/31
 !
 interface Ethernet55/1
    description MLAG_SPINE1_Ethernet55/1
@@ -671,7 +695,10 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 10.0.0.4 | 652001 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.0.0.4 | 65580 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.0.0.8 | 65580 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.0.0.12 | 65595 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 10.0.0.16 | 65595 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 10.1.1.0 | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | default | - | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
@@ -700,8 +727,17 @@ router bgp 65550
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
    neighbor 10.0.0.4 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.0.0.4 remote-as 652001
-   neighbor 10.0.0.4 description WAN
+   neighbor 10.0.0.4 remote-as 65580
+   neighbor 10.0.0.4 description ptp-1
+   neighbor 10.0.0.8 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 10.0.0.8 remote-as 65580
+   neighbor 10.0.0.8 description ptp-2
+   neighbor 10.0.0.12 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 10.0.0.12 remote-as 65595
+   neighbor 10.0.0.12 description av-bl-1
+   neighbor 10.0.0.16 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 10.0.0.16 remote-as 65595
+   neighbor 10.0.0.16 description av-bl-2
    neighbor 10.1.1.0 peer group MLAG-IPv4-UNDERLAY-PEER
    neighbor 10.1.1.0 description SPINE1_Vlan4093
    redistribute connected
