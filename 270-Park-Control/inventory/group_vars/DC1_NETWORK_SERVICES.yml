@@ -15,8 +15,18 @@ tenants:
             nodes:
               - node: SPINE1
                 ip_address: 10.1.10.2/23
+                igmp_snooping_enabled: true
+                igmp_snooping_querier:
+                  enabled: true
+                  source_address: 172.16.16.16
+                  version: 3
               - node: SPINE2
                 ip_address: 10.1.10.3/23
+                igmp_snooping_enabled: true
+                igmp_snooping_querier:
+                  enabled: true
+                  source_address: 172.16.16.16
+                  version: 3
           - id: 120
             name: 'IDF1-Voice'
             tags: ["120"]
@@ -26,8 +36,14 @@ tenants:
             nodes:
               - node: SPINE1
                 ip_address: 10.1.20.2/23
+                #igmp_snooping_enabled: false
+                igmp_snooping_querier:
+                  enabled: false
               - node: SPINE2
                 ip_address: 10.1.20.3/23
+                #igmp_snooping_enabled: false
+                igmp_snooping_querier:
+                  enabled: false
           - id: 130
             name: 'IDF1-Guest'
             tags: ["130"]

@@ -722,9 +722,27 @@ router bgp 65550
 | ------------- | ---------- | ----------------------- | ----- | ---------------------- | ------------------- |
 | Enabled | - | - | - | - | - |
 
+##### IP IGMP Snooping Vlan Summary
+
+| Vlan | IGMP Snooping | Fast Leave | Max Groups | Proxy |
+| ---- | ------------- | ---------- | ---------- | ----- |
+| 110 | True | - | - | - |
+| 120 | - | - | - | - |
+
+| Vlan | Querier Enabled | IP Address | Query Interval | Max Response Time | Last Member Query Interval | Last Member Query Count | Startup Query Interval | Startup Query Count | Version |
+| ---- | --------------- | ---------- | -------------- | ----------------- | -------------------------- | ----------------------- | ---------------------- | ------------------- | ------- |
+| 110 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 120 | False | - | - | - | - | - | - | - | - |
+
 #### IP IGMP Snooping Device Configuration
 
 ```eos
+!
+ip igmp snooping vlan 110
+ip igmp snooping vlan 110 querier
+ip igmp snooping vlan 110 querier address 172.16.16.16
+ip igmp snooping vlan 110 querier version 3
+no ip igmp snooping vlan 120 querier
 ```
 
 ## Filters
