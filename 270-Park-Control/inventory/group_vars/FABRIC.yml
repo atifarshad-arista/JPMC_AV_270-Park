@@ -32,7 +32,7 @@ l3spine:
     mlag_interfaces: [Ethernet55/1, Ethernet56/1]
     bgp_as: 65550
     bgp_defaults:
-     # Literal bgp commands <str>
+    # Literal bgp commands <str>
       - timers bgp 5 15
       - neighbor default send-community
       - distance bgp 20 200 200
