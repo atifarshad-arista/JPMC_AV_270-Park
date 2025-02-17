@@ -34,12 +34,13 @@ l3spine:
     bgp_defaults:
     # Literal bgp commands <str>
       - bgp asn notation asdot
+      - no bgp default ipv4-unicast
       - timers bgp 5 15
-      - neighbor default send-community
       - distance bgp 20 200 200
       - graceful-restart restart-time 300
       - graceful-restart
       - maximum-paths 128
+      - neighbor default send-community
 
   node_groups:
     - group: SPINES

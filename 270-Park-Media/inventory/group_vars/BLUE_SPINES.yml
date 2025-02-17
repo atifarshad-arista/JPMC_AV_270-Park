@@ -6,6 +6,16 @@ media_spine:
     platform: vEOS-lab
     loopback_ipv4_pool: 10.255.2.0/27
     bgp_as: "65200"
+    bgp_defaults:
+    # Literal bgp commands <str>
+      - bgp asn notation asdot
+      - no bgp default ipv4-unicast
+      - timers bgp 5 15
+      - distance bgp 20 200 200
+      - graceful-restart restart-time 300
+      - graceful-restart
+      - maximum-paths 128
+      - neighbor default send-community
     filter:
       tenants: [ blue ]
 
