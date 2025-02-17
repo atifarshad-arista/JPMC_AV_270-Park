@@ -662,6 +662,7 @@ ASN Notation: asplain
 
 | BGP Tuning |
 | ---------- |
+| bgp asn notation asdot |
 | timers bgp 5 15 |
 | neighbor default send-community |
 | distance bgp 20 200 200 |
@@ -709,6 +710,7 @@ router bgp 65550
    router-id 172.16.1.2
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
+   bgp asn notation asdot
    timers bgp 5 15
    neighbor default send-community
    distance bgp 20 200 200

@@ -33,6 +33,7 @@ l3spine:
     bgp_as: 65550
     bgp_defaults:
     # Literal bgp commands <str>
+      - bgp asn notation asdot
       - timers bgp 5 15
       - neighbor default send-community
       - distance bgp 20 200 200
