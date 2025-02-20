@@ -8,7 +8,14 @@ node_type_keys:
     network_services:
       l2: true
       l3: true
-    default_ptp_priority1: 10
+  - key: border_leaf
+    type: border_leaf
+    default_overlay_routing_protocol: none
+    connected_endpoints: true
+    network_services:
+      l2: true
+      l3: true
+    default_ptp_priority1: 30
   - key: media_spine
     type: media_spine
     default_overlay_routing_protocol: none
@@ -30,7 +37,7 @@ local_users:
   - name: ansible
     privilege: 15
     role: network-admin
-    sha512_password: $6$7u4j1rkb3VELgcZE$EJt2Qff8kd/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920
+    sha512_password: $6$7u4j1rkb3VELgcZE/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920
   - name: admin
     privilege: 15
     role: network-admin
@@ -47,23 +54,31 @@ default_interfaces:
   - types:
       - media_spine
     platforms:
-      - default
+      - 7808R3
     uplink_interfaces:
-      - Ethernet1-2
+      - Ethernet3/1-4/1
     downlink_interfaces:
-      - Ethernet1-8
+      - Ethernet4-7/1-36/1
   - types:
       - media_leaf
     platforms:
-      - default
+      - 720XP
     uplink_interfaces:
-      - Ethernet1-4
+      - Ethernet49-50/1
+    downlink_interfaces:
+      - Ethernet1-48
   - types:
       - ptp_leaf
     platforms:
-      - default
+      - 7280SR3
     uplink_interfaces:
-      - Ethernet1-2
+      - Ethernet49-52/1
+  - types:
+      - border_leaf
+    platforms:
+      - 7280CR3
+    uplink_interfaces:
+      - Ethernet33-36/1
 
 daemon_terminattr:
   cvaddrs:
@@ -90,8 +105,8 @@ aaa_authorization:
   exec:
     default: local
 
-mgmt_interface: Ethernet0
-mgmt_gateway: 172.16.1.1
+mgmt_interface: Management1
+mgmt_gateway: 10.100.100.1
 mgmt_destination_networks:
   - 0.0.0.0/0
 
@@ -110,17 +125,28 @@ core_interfaces:
   p2p_links:
     - id: 1
       nodes: [ media-PTP-1, media-PTP-2 ]
-      interfaces: [ Ethernet3, Ethernet3 ]
+      interfaces: [ Ethernet3/1/1, Ethernet3/1/1 ]
       ptp:
         enabled: true
       include_in_underlay_protocol: false
     - id: 2
       nodes: [ media-PTP-1, media-PTP-2 ]
-      interfaces: [ Ethernet4, Ethernet4 ]
+      interfaces: [ Ethernet3/2/1, Ethernet3/2/1 ]
       ptp:
         enabled: true
       include_in_underlay_protocol: false
-
+    - id: 3
+      nodes: [ border-leaf1, border-leaf2 ]
+      interfaces: [ Ethernet3/3/1, Ethernet3/3/1 ]
+      ptp:
+        enabled: true
+      include_in_underlay_protocol: false
+    - id: 4
+      nodes: [ border-leaf1, border-leaf2 ]
+      interfaces: [ Ethernet3/4/1, Ethernet3/4/1 ]
+      ptp:
+        enabled: true
+      include_in_underlay_protocol: false
 
 eos_validate_state_validation_mode_loose: true
 root_dir: '{{ inventory_dir }}'

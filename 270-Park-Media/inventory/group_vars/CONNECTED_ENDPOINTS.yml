@@ -2,7 +2,7 @@
 # Port Profiles
 # Common settings inherited to network_ports
 port_profiles:
-  - profile: AMBER_111
+  - profile: RED_111
     mode: access
     enabled: false
     vlans: "111"
@@ -11,7 +11,7 @@ port_profiles:
     ptp:
       enabled: true
 
-  - profile: AMBER_112
+  - profile: RED_112
     mode: access
     enabled: false
     vlans: "112"
@@ -44,18 +44,18 @@ port_profiles:
 network_ports:
   # Generic Port Settings
   - switches:
-      - amber-leaf1
+      - red-leaf1
     switch_ports:
       - Ethernet3-48
-    profile: AMBER_111
-    description: AMBER_VLAN111
+    profile: RED_111
+    description: RED_VLAN111
 
   - switches:
-      - amber-leaf2
+      - red-leaf2
     switch_ports:
       - Ethernet3-48
-    profile: AMBER_112
-    description: AMBER_VLAN112
+    profile: RED_112
+    description: RED_VLAN112
 
   - switches:
       - blue-leaf1
