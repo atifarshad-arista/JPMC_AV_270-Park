@@ -1,15 +1,15 @@
 ---
 tenants:
-  - name: amber
+  - name: red
     vrfs:
       - name: default
         svis:
           - id: 111
             name: VLAN111
             enabled: true
-            tags: [ amber-leaf1 ]
+            tags: [ red-leaf1 ]
             nodes:
-              - node: amber-leaf1
+              - node: red-leaf1
                 ip_address: 10.10.111.1/24
             ip_helpers:
               - ip_helper: 10.252.4.253
@@ -17,9 +17,9 @@ tenants:
           - id: 112
             name: VLAN112
             enabled: true
-            tags: [ amber-leaf2 ]
+            tags: [ red-leaf2 ]
             nodes:
-              - node: amber-leaf2
+              - node: red-leaf2
                 ip_address: 10.10.112.1/24
             ip_helpers:
               - ip_helper: 10.252.4.253

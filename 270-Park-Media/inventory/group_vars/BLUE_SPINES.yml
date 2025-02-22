@@ -3,9 +3,9 @@ type: media_spine
 
 media_spine:
   defaults:
-    platform: vEOS-lab
-    loopback_ipv4_pool: 10.255.2.0/27
-    bgp_as: "65200"
+    platform: 7808R3
+    loopback_ipv4_pool: 169.27.195.0/25
+    bgp_as: "65010.1"
     bgp_defaults:
     # Literal bgp commands <str>
       - bgp asn notation asdot
@@ -22,4 +22,4 @@ media_spine:
   nodes:
     - name: blue-spine1
       id: 1
-      mgmt_ip: 172.16.1.21/24
+      mgmt_ip: 10.100.100.4/24

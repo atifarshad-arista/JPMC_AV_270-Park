@@ -14,51 +14,171 @@ all:
           ansible_network_os: eos
     FABRIC:
       children:
-        AMBER:
-          children:
-            AMBER_SPINES:
-              hosts:
-                amber-spine1:
-                  ansible_host: 172.16.1.11
-            AMBER_LEAVES:
-              hosts:
-                amber-leaf1:
-                  ansible_host: 172.16.1.111
-                amber-leaf2:
-                  ansible_host: 172.16.1.112
         BLUE:
           children:
             BLUE_SPINES:
               hosts:
                 blue-spine1:
-                  ansible_host: 172.16.1.21
-            BLUE_LEAVES:
+                  ansible_host: 10.100.100.4
+            BLUE_LEAFS:
               hosts:
                 blue-leaf1:
-                  ansible_host: 172.16.1.211
+                  ansible_host: 10.100.100.5
                 blue-leaf2:
-                  ansible_host: 172.16.1.212
-        PTP_LEAVES:
+                  ansible_host: 10.100.100.6
+                blue-leaf3:
+                  ansible_host: 10.100.100.7
+                blue-leaf4:
+                  ansible_host: 10.100.100.8
+                blue-leaf5:
+                  ansible_host: 10.100.100.9
+                blue-leaf6:
+                  ansible_host: 10.100.100.10
+                blue-leaf7:
+                  ansible_host: 10.100.100.11
+                blue-leaf8:
+                  ansible_host: 10.100.100.12
+                blue-leaf9:
+                  ansible_host: 10.100.100.13
+                blue-leaf10:
+                  ansible_host: 10.100.100.14
+                blue-leaf11:
+                  ansible_host: 10.100.100.15
+                blue-leaf12:
+                  ansible_host: 10.100.100.16
+                blue-leaf13:
+                  ansible_host: 10.100.100.17
+                blue-leaf14:
+                  ansible_host: 10.100.100.18
+                blue-leaf15:
+                  ansible_host: 10.100.100.19
+                blue-leaf16:
+                  ansible_host: 10.100.100.20
+                blue-leaf17:
+                  ansible_host: 10.100.100.21
+                blue-leaf18:
+                  ansible_host: 10.100.100.22
+                blue-leaf19:
+                  ansible_host: 10.100.100.23
+                blue-leaf20:
+                  ansible_host: 10.100.100.24
+                blue-leaf21:
+                  ansible_host: 10.100.100.25
+                blue-leaf22:
+                  ansible_host: 10.100.100.26
+                blue-leaf23:
+                  ansible_host: 10.100.100.27
+                blue-leaf24:
+                  ansible_host: 10.100.100.28
+                blue-leaf25:
+                  ansible_host: 10.100.100.29
+                blue-leaf26:
+                  ansible_host: 10.100.100.30
+                blue-leaf27:
+                  ansible_host: 10.100.100.31
+                blue-leaf28:
+                  ansible_host: 10.100.100.32
+                blue-leaf29:
+                  ansible_host: 10.100.100.33
+                blue-leaf30:
+                  ansible_host: 10.100.100.34
+                blue-leaf31:
+                  ansible_host: 10.100.100.35
+                blue-leaf32:
+                  ansible_host: 10.100.100.36
+        RED:
+          children:
+            RED_SPINES:
+              hosts:
+                red-spine1:
+                  ansible_host: 10.100.100.37
+            RED_LEAFS:
+              hosts:
+                red-leaf1:
+                  ansible_host: 10.100.100.38
+                red-leaf2:
+                  ansible_host: 10.100.100.39
+                red-leaf3:
+                  ansible_host: 10.100.100.40
+                red-leaf4:
+                  ansible_host: 10.100.100.41
+                red-leaf5:
+                  ansible_host: 10.100.100.42
+                red-leaf6:
+                  ansible_host: 10.100.100.43
+                red-leaf7:
+                  ansible_host: 10.100.100.44
+                red-leaf8:
+                  ansible_host: 10.100.100.45
+                red-leaf9:
+                  ansible_host: 10.100.100.46
+                red-leaf10:
+                  ansible_host: 10.100.100.47
+                red-leaf11:
+                  ansible_host: 10.100.100.48
+                red-leaf12:
+                  ansible_host: 10.100.100.49
+                red-leaf13:
+                  ansible_host: 10.100.100.50
+                red-leaf14:
+                  ansible_host: 10.100.100.51
+                red-leaf15:
+                  ansible_host: 10.100.100.52
+                red-leaf16:
+                  ansible_host: 10.100.100.53
+                red-leaf17:
+                  ansible_host: 10.100.100.54
+                red-leaf18:
+                  ansible_host: 10.100.100.55
+                red-leaf19:
+                  ansible_host: 10.100.100.56
+                red-leaf20:
+                  ansible_host: 10.100.100.57
+                red-leaf21:
+                  ansible_host: 10.100.100.58
+                red-leaf22:
+                  ansible_host: 10.100.100.59
+                red-leaf23:
+                  ansible_host: 10.100.100.60
+                red-leaf24:
+                  ansible_host: 10.100.100.61
+                red-leaf25:
+                  ansible_host: 10.100.100.62
+                red-leaf26:
+                  ansible_host: 10.100.100.63
+                red-leaf27:
+                  ansible_host: 10.100.100.64
+                red-leaf28:
+                  ansible_host: 10.100.100.65
+                red-leaf29:
+                  ansible_host: 10.100.100.66
+                red-leaf30:
+                  ansible_host: 10.100.100.67
+                red-leaf31:
+                  ansible_host: 10.100.100.68
+                red-leaf32:
+                  ansible_host: 10.100.100.69
+        PTP_LEAFS:
           hosts:
             media-PTP-1:
-              ansible_host: 172.16.1.131
+              ansible_host: 10.100.101.2
             media-PTP-2:
-              ansible_host: 172.16.1.132
-        BORDER_LEAVES:
+              ansible_host: 10.100.100.3
+        BORDER_LEAFS:
           hosts:
-            av-bl-1:
-              ansible_host: 172.16.1.231
-            av-bl-2:
-              ansible_host: 172.16.1.232
+              border-leaf1:
+                ansible_host: 10.100.101.4
+              border-leaf2:
+                ansible_host: 10.100.101.5
     NETWORK_SERVICES:
       children:
-        AMBER_LEAVES:
-        BLUE_LEAVES:
-        PTP_LEAVES:
-        BORDER_LEAVES:
+        RED_LEAFS:
+        BLUE_LEAFS:
+        PTP_LEAFS:
+        BORDER_LEAFS:
     CONNECTED_ENDPOINTS:
       children:
-        AMBER_LEAVES:
-        BLUE_LEAVES:
-        PTP_LEAVES:
-        BORDER_LEAVES:
+        RED_LEAFS:
+        BLUE_LEAFS:
+        PTP_LEAFS:
+        BORDER_LEAFS:

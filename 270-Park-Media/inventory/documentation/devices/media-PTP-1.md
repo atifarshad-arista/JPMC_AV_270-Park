@@ -52,23 +52,23 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Ethernet0 | OOB_MANAGEMENT | oob | MGMT | 172.16.3.101/24 | 172.16.1.1 |
+| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.101.2/24 | 10.100.100.1 |
 
 ##### IPv6
 
 | Management Interface | Description | Type | VRF | IPv6 Address | IPv6 Gateway |
 | -------------------- | ----------- | ---- | --- | ------------ | ------------ |
-| Ethernet0 | OOB_MANAGEMENT | oob | MGMT | - | - |
+| Management1 | OOB_MANAGEMENT | oob | MGMT | - | - |
 
 #### Management Interfaces Device Configuration
 
 ```eos
 !
-interface Ethernet0
+interface Management1
    description OOB_MANAGEMENT
    no shutdown
    vrf MGMT
-   ip address 172.16.3.101/24
+   ip address 10.100.101.2/24
 ```
 
 ### IP Name Servers
@@ -114,16 +114,16 @@ ntp server vrf MGMT 0.pool.ntp.org
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| 00:1C:73:0a:00:01 | - | 10 | 1 | - | 127 | boundary | - |
+| 00:1C:73:7f:00:01 | - | 127 | 1 | - | 127 | boundary | - |
 
 #### PTP Device Configuration
 
 ```eos
 !
-ptp clock-identity 00:1C:73:0a:00:01
+ptp clock-identity 00:1C:73:7f:00:01
 ptp domain 127
 ptp mode boundary
-ptp priority1 10
+ptp priority1 127
 ptp priority2 1
 ptp monitor threshold offset-from-master 250
 ptp monitor threshold mean-path-delay 1500
@@ -346,43 +346,15 @@ vlan 131
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet1 | P2P_amber-spine1_Ethernet5 | - | 10.255.253.1/31 | default | 1500 | False | - | - |
-| Ethernet2 | P2P_blue-spine1_Ethernet5 | - | 10.255.253.3/31 | default | 1500 | False | - | - |
+| Ethernet49/1 | P2P_red-spine1_Ethernet49/1 | - | 100.83.88.1/31 | default | 1500 | False | - | - |
+| Ethernet50/1 | P2P_blue-spine1_Ethernet49/1 | - | 100.83.88.3/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
 ```eos
 !
-interface Ethernet1
-   description P2P_amber-spine1_Ethernet5
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 10.255.253.1/31
-   pim ipv4 sparse-mode
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet2
-   description P2P_blue-spine1_Ethernet5
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 10.255.253.3/31
-   pim ipv4 sparse-mode
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet3
-   description P2P_media-PTP-2_Ethernet3
+interface Ethernet3/1/1
+   description P2P_media-PTP-2_Ethernet3/1/1
    no shutdown
    mtu 1500
    no switchport
@@ -393,8 +365,8 @@ interface Ethernet3
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet4
-   description P2P_media-PTP-2_Ethernet4
+interface Ethernet3/2/1
+   description P2P_media-PTP-2_Ethernet3/2/1
    no shutdown
    mtu 1500
    no switchport
@@ -676,6 +648,34 @@ interface Ethernet48
    shutdown
    speed forced 1000full
    switchport
+!
+interface Ethernet49/1
+   description P2P_red-spine1_Ethernet49/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.88.1/31
+   pim ipv4 sparse-mode
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet50/1
+   description P2P_blue-spine1_Ethernet49/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.88.3/31
+   pim ipv4 sparse-mode
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 ```
 
 ### Loopback Interfaces
@@ -686,7 +686,7 @@ interface Ethernet48
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 10.255.3.1/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.1/32 |
 
 ##### IPv6
 
@@ -701,7 +701,7 @@ interface Ethernet48
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 10.255.3.1/32
+   ip address 169.27.195.1/32
 ```
 
 ### VLAN Interfaces
@@ -771,13 +771,13 @@ no ip routing vrf MGMT
 
 | VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
 | --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
-| MGMT | 0.0.0.0/0 | 172.16.1.1 | - | 1 | - | - | - |
+| MGMT | 0.0.0.0/0 | 10.100.100.1 | - | 1 | - | - | - |
 
 #### Static Routes Device Configuration
 
 ```eos
 !
-ip route vrf MGMT 0.0.0.0/0 172.16.1.1
+ip route vrf MGMT 0.0.0.0/0 10.100.100.1
 ```
 
 ### Router BGP
@@ -788,10 +788,11 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65400 | 10.255.3.1 |
+| 65003.1 | 169.27.195.1 |
 
 | BGP Tuning |
 | ---------- |
+| update wait-install |
 | no bgp default ipv4-unicast |
 | maximum-paths 4 ecmp 4 |
 
@@ -809,27 +810,28 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 10.255.253.0 | 65100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 10.255.253.2 | 65200 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.0 | 65020.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.2 | 65010.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
 ```eos
 !
-router bgp 65400
-   router-id 10.255.3.1
+router bgp 65003.1
+   router-id 169.27.195.1
+   update wait-install
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
    neighbor P2P-IPv4-eBGP-PEERS peer group
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
-   neighbor 10.255.253.0 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.253.0 remote-as 65100
-   neighbor 10.255.253.0 description amber-spine1_Ethernet5
-   neighbor 10.255.253.2 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 10.255.253.2 remote-as 65200
-   neighbor 10.255.253.2 description blue-spine1_Ethernet5
+   neighbor 100.83.88.0 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.0 remote-as 65020.1
+   neighbor 100.83.88.0 description red-spine1_Ethernet49/1
+   neighbor 100.83.88.2 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.2 remote-as 65010.1
+   neighbor 100.83.88.2 description blue-spine1_Ethernet49/1
    redistribute connected
    !
    address-family ipv4
@@ -872,8 +874,8 @@ router multicast
 
 | Interface Name | VRF Name | IP Version | Border Router | DR Priority | Local Interface |
 | -------------- | -------- | ---------- | ------------- | ----------- | --------------- |
-| Ethernet1 | - | IPv4 | - | - | - |
-| Ethernet2 | - | IPv4 | - | - | - |
+| Ethernet49/1 | - | IPv4 | - | - | - |
+| Ethernet50/1 | - | IPv4 | - | - | - |
 
 ## VRF Instances
 
