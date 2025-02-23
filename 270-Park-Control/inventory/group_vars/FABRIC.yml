@@ -22,15 +22,15 @@ ansible_httpapi_validate_certs: false
 # Spine Switches
 l3spine:
   defaults:
-    platform: cEOSLab
+    platform: 7308X3
     spanning_tree_mode: mstp
     spanning_tree_priority: 4096
-    loopback_ipv4_pool: 172.16.1.0/24
+    loopback_ipv4_pool: 169.27.195.0/25
     mlag_peer_ipv4_pool: 192.168.0.0/24
     mlag_peer_l3_ipv4_pool: 10.1.1.0/24
     virtual_router_mac_address: 00:1c:73:00:dc:01
-    mlag_interfaces: [Ethernet55/1, Ethernet56/1]
-    bgp_as: 65550
+    mlag_interfaces: [ Ethernet8/31/1, Ethernet8/32/1 ]
+    bgp_as: 65003.3
     bgp_defaults:
     # Literal bgp commands <str>
       - bgp asn notation asdot
@@ -45,163 +45,162 @@ l3spine:
   node_groups:
     - group: SPINES
       nodes:
-        - name: SPINE1
-          id: 1
-          mgmt_ip: 172.16.100.101/24
-        - name: SPINE2
-          id: 2
-          mgmt_ip: 172.16.100.102/24
+        - name: green-spine1
+          id: 71
+          mgmt_ip: 10.100.100.70/24
+        - name: green-spine2
+          id: 72
+          mgmt_ip: 10.100.100.71/24
+
 # IDF - Leaf Switches
 l2leaf:
   defaults:
-    platform: cEOSLab
+    platform: 720XP
     mlag_peer_ipv4_pool: 192.168.0.0/24
     spanning_tree_mode: mstp
     spanning_tree_priority: 16384
-    inband_mgmt_subnet: 10.10.10.0/24
-    inband_mgmt_vlan: 10
+    inband_mgmt_subnet: 10.239.1.0/24
+    inband_mgmt_vlan: 113
+
+# Green Leaf switches Node group Build
   node_groups:
-    - group: IDF1
-      mlag: true
-      uplink_interfaces: [Ethernet51]
-      mlag_interfaces: [Ethernet53, Ethernet54]
-      filter:
-        tags: [ "110", "120", "130" ]
-      nodes:
-        - name: LEAF1A
-          id: 3
-          mgmt_ip: 172.16.100.103/24
-          uplink_switches: [SPINE1]
-          uplink_switch_interfaces: [Ethernet1]
-        - name: LEAF1B
-          id: 4
-          mgmt_ip: 172.16.100.104/24
-          uplink_switches: [SPINE2]
-          uplink_switch_interfaces: [Ethernet1]
-    - group: IDF2
+    # - group: IDF1
+    #   mlag: true
+    #   uplink_interfaces: [Ethernet51]
+    #   mlag_interfaces: [Ethernet53, Ethernet54]
+    #   filter:
+    #     tags: [ "110", "120", "130" ]
+    #   nodes:
+    #     - name: LEAF1A
+    #       id: 3
+    #       mgmt_ip: 172.16.100.103/24
+    #       uplink_switches: [SPINE1]
+    #       uplink_switch_interfaces: [Ethernet1]
+    #     - name: LEAF1B
+    #       id: 4
+    #       mgmt_ip: 172.16.100.104/24
+    #       uplink_switches: [SPINE2]
+    #       uplink_switch_interfaces: [Ethernet1]
+    - group: AVTR01C
       platform: 720XP
       mlag: false
       filter:
-        tags: [ "210", "220", "230" ]
+        tags: [ "201", "202" ]
       nodes:
-        - name: LEAF2A
-          id: 5
-          mgmt_ip: 172.16.100.105/24
-          uplink_interfaces: [Ethernet1/1, Ethernet1/3]
-          uplink_switches: [SPINE1, SPINE2]
-          uplink_switch_interfaces: [Ethernet49/1, Ethernet49/1]
-    - group: IDF3_AGG
-      mlag: true
-      mlag_interfaces: [Ethernet98/3, Ethernet98/4]
-      uplink_switches: [SPINE1, SPINE2]
-      uplink_interfaces: [Ethernet97/1, Ethernet97/2]
+        - name: green-leaf1
+          id: 73
+          mgmt_ip: 10.100.100.72/24
+          uplink_interfaces: [Ethernet53/1, Ethernet54/1]
+          uplink_switches: [green-spine1, green-spine2]
+          uplink_switch_interfaces: [Ethernet3/5/1, Ethernet3/5/1]
+    - group: 02TRA
+      platform: 720XP
+      mlag: false
       filter:
-        tags: [ "310", "320", "330" ]
+        tags: [ "202", "203", "204" ]
       nodes:
-        - name: LEAF3A
-          id: 6
-          mgmt_ip: 172.16.100.106/24
-          uplink_switch_interfaces: [Ethernet50/1, Ethernet50/1]
-        - name: LEAF3B
-          id: 7
-          mgmt_ip: 172.16.100.107/24
-          uplink_switch_interfaces: [Ethernet51/1, Ethernet51/1]
-    - group: IDF3_3C
+        - name: green-leaf2
+          id: 74
+          mgmt_ip: 10.100.100.73/24
+          uplink_interfaces: [Ethernet53/1, Ethernet54/1]
+          uplink_switches: [green-spine1, green-spine2]
+          uplink_switch_interfaces: [Ethernet3/6/1, Ethernet3/6/1]
+    - group: 02TRB
+      platform: 720XP
       mlag: false
-      uplink_switches: [LEAF3A, LEAF3B]
-      uplink_interfaces: [Ethernet97/1, Ethernet97/2]
+      filter:
+        tags: [ "201", "203", "205", "207", "209" ]
       nodes:
-        - name: LEAF3C
-          id: 8
-          mgmt_ip: 172.16.100.108/24
-          uplink_switch_interfaces: [Ethernet97/3, Ethernet97/3]
-    - group: IDF3_3D
+        - name: green-leaf3
+          id: 75
+          mgmt_ip: 10.100.100.74/24
+          uplink_interfaces: [Ethernet53/1, Ethernet54/1]
+          uplink_switches: [green-spine1, green-spine2]
+          uplink_switch_interfaces: [Ethernet3/7/1, Ethernet3/7/1]
+    - group: 02TRC
+      platform: 720XP
       mlag: false
-      uplink_switches: [LEAF3A, LEAF3B]
-      uplink_interfaces: [Ethernet97/1, Ethernet97/2]
+      filter:
+        tags: [ "202", "204", "206", "208" ]
       nodes:
-        - name: LEAF3D
-          id: 9
-          mgmt_ip: 172.16.100.109/24
-          uplink_switch_interfaces: [Ethernet97/4, Ethernet97/4]
-    - group: IDF3_3E
+        - name: green-leaf4
+          id: 76
+          mgmt_ip: 10.100.100.75/24
+          uplink_interfaces: [Ethernet53/1, Ethernet54/1]
+          uplink_switches: [green-spine1, green-spine2]
+          uplink_switch_interfaces: [Ethernet3/8/1, Ethernet3/8/1]
+    - group: 02TRD
+      platform: 720XP
       mlag: false
-      uplink_switches: [LEAF3A, LEAF3B]
-      uplink_interfaces: [Ethernet97/1, Ethernet97/2]
+      filter:
+        tags: [ "202", "203" ]
       nodes:
-        - name: LEAF3E
-          id: 10
-          mgmt_ip: 172.16.100.110/24
-          uplink_switch_interfaces: [Ethernet98/1, Ethernet98/1]
-
-#### Override for vEOS/cEOS Lab Caveats ####
-p2p_uplinks_mtu: 1500
-
-# Underlay Routing Protocol
-underlay_routing_protocol: ebgp
+        - name: green-leaf5
+          id: 77
+          mgmt_ip: 10.100.100.76/24
+          uplink_interfaces: [Ethernet53/1, Ethernet54/1]
+          uplink_switches: [green-spine1, green-spine2]
+          uplink_switch_interfaces: [Ethernet3/9/1, Ethernet3/9/1]
 
 #### WAN/Core Edge Links ####
 core_interfaces:
   p2p_links:
-    - ip: [ 10.0.0.3/31, 10.0.0.2/31 ]
-      nodes: [ SPINE1, ptp-1 ]
-      interfaces: [ Ethernet11, Ethernet13 ]
+    - ip: [ 100.83.88.240/31, 100.83.88.241/31 ]
+      nodes: [ green-spine1, media-PTP-1 ]
+      interfaces: [ Ethernet3/1/1, Ethernet1/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ 65550, 65580 ]
-
-    - ip: [ 10.0.0.7/31, 10.0.0.6/31 ]
-      nodes: [ SPINE1, ptp-2 ]
-      interfaces: [ Ethernet12, Ethernet13 ]
+      as: [ "65003.3", "65003.1" ]
+    - ip: [ 100.83.88.242/31, 100.83.88.243/31 ]
+      nodes: [ green-spine2, media-PTP-1 ]
+      interfaces: [ Ethernet3/1/1, Ethernet2/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ 65550, 65580 ]
-      #underlay_multicast: true
-
-    - ip: [ 10.0.0.11/31, 10.0.0.10/31 ]
-      nodes: [ SPINE1, av-bl-1 ]
-      interfaces: [ Ethernet13, Ethernet13 ]
+      as: [ "65003.3", "65003.1" ]
+    - ip: [ 100.83.88.244/31, 100.83.88.245/31 ]
+      nodes: [ green-spine1, media-PTP-2 ]
+      interfaces: [ Ethernet3/2/1, Ethernet1/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ 65550, 65595 ]
-      #underlay_multicast: true
-
-    - ip: [ 10.0.0.15/31, 10.0.0.14/31 ]
-      nodes: [ SPINE1, av-bl-2 ]
-      interfaces: [ Ethernet14, Ethernet13 ]
+      as: [ "65003.3", "65003.1" ]
+    - ip: [ 100.83.88.246/31, 100.83.88.247/31 ]
+      nodes: [ green-spine2, media-PTP-2 ]
+      interfaces: [ Ethernet3/2/1, Ethernet2/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ 65550, 65595 ]
-      #underlay_multicast: true
-
-    - ip: [ 10.0.0.5/31, 10.0.0.4/31 ]
-      nodes: [ SPINE2, ptp-1 ]
-      interfaces: [ Ethernet11, Ethernet14]
+      as: [ "65003.3", "65003.1" ]
+    - ip: [ 100.83.88.248/31, 100.83.88.249/31 ]
+      nodes: [ green-spine1, border-leaf1 ]
+      interfaces: [ Ethernet3/3/1, Ethernet35/1 ]
       include_in_underlay_protocol: true
-      as: [ 65550, 65580 ]
-
-    - ip: [ 10.0.0.9/31, 10.0.0.8/31 ]
-      nodes: [ SPINE2, ptp-2 ]
-      interfaces: [ Ethernet12, Ethernet14 ]
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65003.3", "65003.2" ]
+    - ip: [ 100.83.88.250/31, 100.83.88.251/31 ]
+      nodes: [ green-spine2, border-leaf1 ]
+      interfaces: [ Ethernet3/3/1, Ethernet36/1 ]
       include_in_underlay_protocol: true
-      as: [ 65550, 65580 ]
-
-    - ip: [ 10.0.0.13/31, 10.0.0.12/31 ]
-      nodes: [ SPINE2, av-bl-1 ]
-      interfaces: [ Ethernet13, Ethernet14 ]
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65003.3", "65003.2" ]
+    - ip: [ 100.83.88.252/31, 100.83.88.253/31 ]
+      nodes: [ green-spine1, border-leaf2 ]
+      interfaces: [ Ethernet3/4/1, Ethernet35/1 ]
       include_in_underlay_protocol: true
-      as: [ 65550, 65595 ]
-
-    - ip: [ 10.0.0.17/31, 10.0.0.16/31 ]
-      nodes: [ SPINE2, av-bl-2 ]
-      interfaces: [ Ethernet14, Ethernet14 ]
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65003.3", "65003.2" ]
+    - ip: [ 100.83.88.254/31, 100.83.88.255/31 ]
+      nodes: [ green-spine2, border-leaf2 ]
+      interfaces: [ Ethernet3/4/1, Ethernet36/1 ]
       include_in_underlay_protocol: true
-      as: [ 65550, 65595 ]
-
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65003.3", "65003.2" ]
 bgp_peer_groups:
   ipv4_underlay_peers:
     name: P2P-IPv4-eBGP-PEERS

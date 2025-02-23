@@ -17,28 +17,22 @@ DC1:
       children:
         DC1_SPINES:
           hosts:
-            SPINE1:
-              ansible_host: 172.16.100.101
-            SPINE2:
-              ansible_host: 172.16.100.102
+            green-spine1:
+              ansible_host: 10.100.100.70
+            green-spine2:
+              ansible_host: 10.100.100.71
         DC1_LEAFS:
           hosts:
-            LEAF1A:
-              ansible_host: 172.16.100.103
-            LEAF1B:
-              ansible_host: 172.16.100.104
-            LEAF2A:
-              ansible_host: 172.16.100.105
-            LEAF3A:
-              ansible_host: 172.16.100.106
-            LEAF3B:
-              ansible_host: 172.16.100.107
-            LEAF3C:
-              ansible_host: 172.16.100.108
-            LEAF3D:
-              ansible_host: 172.16.100.109
-            LEAF3E:
-              ansible_host: 172.16.100.110
+            green-leaf1:
+              ansible_host: 10.100.100.72
+            green-leaf2:
+              ansible_host: 10.100.100.73
+            green-leaf3:
+              ansible_host: 10.100.100.74
+            green-leaf4:
+              ansible_host: 10.100.100.75
+            green-leaf5:
+              ansible_host: 10.100.100.76
     DC1_NETWORK_SERVICES:
       children:
         DC1_LEAFS:
@@ -47,3 +41,4 @@ DC1:
       children:
         DC1_LEAFS:
         DC1_SPINES:
+

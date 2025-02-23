@@ -17,16 +17,13 @@
 
 | POD | Type | Node | Management IP | Platform | Provisioned in CloudVision | Serial Number |
 | --- | ---- | ---- | ------------- | -------- | -------------------------- | ------------- |
-| FABRIC | l2leaf | LEAF1A | 172.16.100.103/24 | cEOSLab | Provisioned | - |
-| FABRIC | l2leaf | LEAF1B | 172.16.100.104/24 | cEOSLab | Provisioned | - |
-| FABRIC | l2leaf | LEAF2A | 172.16.100.105/24 | 720XP | Provisioned | - |
-| FABRIC | l2leaf | LEAF3A | 172.16.100.106/24 | cEOSLab | Provisioned | - |
-| FABRIC | l2leaf | LEAF3B | 172.16.100.107/24 | cEOSLab | Provisioned | - |
-| FABRIC | l2leaf | LEAF3C | 172.16.100.108/24 | cEOSLab | Provisioned | - |
-| FABRIC | l2leaf | LEAF3D | 172.16.100.109/24 | cEOSLab | Provisioned | - |
-| FABRIC | l2leaf | LEAF3E | 172.16.100.110/24 | cEOSLab | Provisioned | - |
-| FABRIC | l3spine | SPINE1 | 172.16.100.101/24 | cEOSLab | Provisioned | - |
-| FABRIC | l3spine | SPINE2 | 172.16.100.102/24 | cEOSLab | Provisioned | - |
+| FABRIC | l2leaf | green-leaf1 | 10.100.100.72/24 | 720XP | Provisioned | - |
+| FABRIC | l2leaf | green-leaf2 | 10.100.100.73/24 | 720XP | Provisioned | - |
+| FABRIC | l2leaf | green-leaf3 | 10.100.100.74/24 | 720XP | Provisioned | - |
+| FABRIC | l2leaf | green-leaf4 | 10.100.100.75/24 | 720XP | Provisioned | - |
+| FABRIC | l2leaf | green-leaf5 | 10.100.100.76/24 | 720XP | Provisioned | - |
+| FABRIC | l3spine | green-spine1 | 10.100.100.70/24 | 7308X3 | Provisioned | - |
+| FABRIC | l3spine | green-spine2 | 10.100.100.71/24 | 7308X3 | Provisioned | - |
 
 > Provision status is based on Ansible inventory declaration and do not represent real status from CloudVision.
 
@@ -34,39 +31,28 @@
 
 | POD | Type | Node | Management IP | Inband Interface |
 | --- | ---- | ---- | ------------- | ---------------- |
-| FABRIC | l2leaf | LEAF1A | 10.10.10.6/24 | Vlan10 |
-| FABRIC | l2leaf | LEAF1B | 10.10.10.7/24 | Vlan10 |
-| FABRIC | l2leaf | LEAF2A | 10.10.10.8/24 | Vlan10 |
-| FABRIC | l2leaf | LEAF3A | 10.10.10.9/24 | Vlan10 |
-| FABRIC | l2leaf | LEAF3B | 10.10.10.10/24 | Vlan10 |
-| FABRIC | l2leaf | LEAF3C | 10.10.10.11/24 | Vlan10 |
-| FABRIC | l2leaf | LEAF3D | 10.10.10.12/24 | Vlan10 |
-| FABRIC | l2leaf | LEAF3E | 10.10.10.13/24 | Vlan10 |
+| FABRIC | l2leaf | green-leaf1 | 10.239.1.76/24 | Vlan113 |
+| FABRIC | l2leaf | green-leaf2 | 10.239.1.77/24 | Vlan113 |
+| FABRIC | l2leaf | green-leaf3 | 10.239.1.78/24 | Vlan113 |
+| FABRIC | l2leaf | green-leaf4 | 10.239.1.79/24 | Vlan113 |
+| FABRIC | l2leaf | green-leaf5 | 10.239.1.80/24 | Vlan113 |
 
 ## Fabric Topology
 
 | Type | Node | Node Interface | Peer Type | Peer Node | Peer Interface |
 | ---- | ---- | -------------- | --------- | ----------| -------------- |
-| l2leaf | LEAF1A | Ethernet51 | l3spine | SPINE1 | Ethernet1 |
-| l2leaf | LEAF1A | Ethernet53 | mlag_peer | LEAF1B | Ethernet53 |
-| l2leaf | LEAF1A | Ethernet54 | mlag_peer | LEAF1B | Ethernet54 |
-| l2leaf | LEAF1B | Ethernet51 | l3spine | SPINE2 | Ethernet1 |
-| l2leaf | LEAF2A | Ethernet1/1 | l3spine | SPINE1 | Ethernet49/1 |
-| l2leaf | LEAF2A | Ethernet1/3 | l3spine | SPINE2 | Ethernet49/1 |
-| l2leaf | LEAF3A | Ethernet97/1 | l3spine | SPINE1 | Ethernet50/1 |
-| l2leaf | LEAF3A | Ethernet97/2 | l3spine | SPINE2 | Ethernet50/1 |
-| l2leaf | LEAF3A | Ethernet97/3 | l2leaf | LEAF3C | Ethernet97/1 |
-| l2leaf | LEAF3A | Ethernet97/4 | l2leaf | LEAF3D | Ethernet97/1 |
-| l2leaf | LEAF3A | Ethernet98/1 | l2leaf | LEAF3E | Ethernet97/1 |
-| l2leaf | LEAF3A | Ethernet98/3 | mlag_peer | LEAF3B | Ethernet98/3 |
-| l2leaf | LEAF3A | Ethernet98/4 | mlag_peer | LEAF3B | Ethernet98/4 |
-| l2leaf | LEAF3B | Ethernet97/1 | l3spine | SPINE1 | Ethernet51/1 |
-| l2leaf | LEAF3B | Ethernet97/2 | l3spine | SPINE2 | Ethernet51/1 |
-| l2leaf | LEAF3B | Ethernet97/3 | l2leaf | LEAF3C | Ethernet97/2 |
-| l2leaf | LEAF3B | Ethernet97/4 | l2leaf | LEAF3D | Ethernet97/2 |
-| l2leaf | LEAF3B | Ethernet98/1 | l2leaf | LEAF3E | Ethernet97/2 |
-| l3spine | SPINE1 | Ethernet55/1 | mlag_peer | SPINE2 | Ethernet55/1 |
-| l3spine | SPINE1 | Ethernet56/1 | mlag_peer | SPINE2 | Ethernet56/1 |
+| l2leaf | green-leaf1 | Ethernet53/1 | l3spine | green-spine1 | Ethernet3/5/1 |
+| l2leaf | green-leaf1 | Ethernet54/1 | l3spine | green-spine2 | Ethernet3/5/1 |
+| l2leaf | green-leaf2 | Ethernet53/1 | l3spine | green-spine1 | Ethernet3/6/1 |
+| l2leaf | green-leaf2 | Ethernet54/1 | l3spine | green-spine2 | Ethernet3/6/1 |
+| l2leaf | green-leaf3 | Ethernet53/1 | l3spine | green-spine1 | Ethernet3/7/1 |
+| l2leaf | green-leaf3 | Ethernet54/1 | l3spine | green-spine2 | Ethernet3/7/1 |
+| l2leaf | green-leaf4 | Ethernet53/1 | l3spine | green-spine1 | Ethernet3/8/1 |
+| l2leaf | green-leaf4 | Ethernet54/1 | l3spine | green-spine2 | Ethernet3/8/1 |
+| l2leaf | green-leaf5 | Ethernet53/1 | l3spine | green-spine1 | Ethernet3/9/1 |
+| l2leaf | green-leaf5 | Ethernet54/1 | l3spine | green-spine2 | Ethernet3/9/1 |
+| l3spine | green-spine1 | Ethernet8/31/1 | mlag_peer | green-spine2 | Ethernet8/31/1 |
+| l3spine | green-spine1 | Ethernet8/32/1 | mlag_peer | green-spine2 | Ethernet8/32/1 |
 
 ## Fabric IP Allocation
 
@@ -84,14 +70,14 @@
 
 | Loopback Pool | Available Addresses | Assigned addresses | Assigned Address % |
 | ------------- | ------------------- | ------------------ | ------------------ |
-| 172.16.1.0/24 | 256 | 2 | 0.79 % |
+| 169.27.195.0/25 | 128 | 2 | 1.57 % |
 
 ### Loopback0 Interfaces Node Allocation
 
 | POD | Node | Loopback0 |
 | --- | ---- | --------- |
-| FABRIC | SPINE1 | 172.16.1.1/32 |
-| FABRIC | SPINE2 | 172.16.1.2/32 |
+| FABRIC | green-spine1 | 169.27.195.71/32 |
+| FABRIC | green-spine2 | 169.27.195.72/32 |
 
 ### VTEP Loopback VXLAN Tunnel Source Interfaces (VTEPs Only)
 
