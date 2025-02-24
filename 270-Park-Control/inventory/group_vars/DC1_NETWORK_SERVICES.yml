@@ -3,7 +3,7 @@
 
 tenants:
   - name: MY_FABRIC
-    enable_mlag_ibgp_peering_vrfs:
+    #enable_mlag_ibgp_peering_vrfs:
     vrfs:
       - name: default
         mlag_ibgp_peering_vlan: 4093
