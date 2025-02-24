@@ -1788,87 +1788,87 @@ ip route vrf MGMT 0.0.0.0/0 172.16.100.1
 
 | Vlan | Querier Enabled | IP Address | Query Interval | Max Response Time | Last Member Query Interval | Last Member Query Count | Startup Query Interval | Startup Query Count | Version |
 | ---- | --------------- | ---------- | -------------- | ----------------- | -------------------------- | ----------------------- | ---------------------- | ------------------- | ------- |
-| 113 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 201 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 202 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 203 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 204 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 205 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 206 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 207 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 208 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 209 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 210 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 211 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 212 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 213 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 214 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 215 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 216 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 217 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 218 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 219 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 220 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 221 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 222 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 223 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 224 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 225 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 226 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 227 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 228 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 229 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 230 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 231 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 232 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 233 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 234 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 235 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 236 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 237 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 238 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 239 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 240 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 241 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 242 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 243 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 244 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 245 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 246 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 247 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 248 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 249 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 250 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 251 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 252 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 253 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 254 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 255 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 256 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 257 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 258 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 259 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 260 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 261 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 262 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 263 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 264 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 265 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 266 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 267 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 268 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 269 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 270 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 271 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 272 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 273 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 274 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 275 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 276 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 277 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 278 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 279 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
-| 280 | True | =172.16.16.16 | - | - | - | - | - | - | 3 |
+| 113 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 201 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 202 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 203 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 204 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 205 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 206 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 207 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 208 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 209 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 210 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 211 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 212 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 213 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 214 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 215 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 216 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 217 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 218 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 219 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 220 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 221 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 222 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 223 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 224 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 225 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 226 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 227 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 228 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 229 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 230 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 231 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 232 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 233 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 234 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 235 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 236 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 237 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 238 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 239 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 240 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 241 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 242 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 243 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 244 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 245 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 246 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 247 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 248 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 249 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 250 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 251 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 252 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 253 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 254 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 255 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 256 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 257 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 258 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 259 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 260 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 261 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 262 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 263 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 264 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 265 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 266 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 267 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 268 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 269 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 270 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 271 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 272 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 273 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 274 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 275 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 276 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 277 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 278 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 279 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
+| 280 | True | 172.16.16.16 | - | - | - | - | - | - | 3 |
 
 #### IP IGMP Snooping Device Configuration
 
@@ -1876,327 +1876,327 @@ ip route vrf MGMT 0.0.0.0/0 172.16.100.1
 !
 ip igmp snooping vlan 113
 ip igmp snooping vlan 113 querier
-ip igmp snooping vlan 113 querier address =172.16.16.16
+ip igmp snooping vlan 113 querier address 172.16.16.16
 ip igmp snooping vlan 113 querier version 3
 ip igmp snooping vlan 201
 ip igmp snooping vlan 201 querier
-ip igmp snooping vlan 201 querier address =172.16.16.16
+ip igmp snooping vlan 201 querier address 172.16.16.16
 ip igmp snooping vlan 201 querier version 3
 ip igmp snooping vlan 202
 ip igmp snooping vlan 202 querier
-ip igmp snooping vlan 202 querier address =172.16.16.16
+ip igmp snooping vlan 202 querier address 172.16.16.16
 ip igmp snooping vlan 202 querier version 3
 ip igmp snooping vlan 203
 ip igmp snooping vlan 203 querier
-ip igmp snooping vlan 203 querier address =172.16.16.16
+ip igmp snooping vlan 203 querier address 172.16.16.16
 ip igmp snooping vlan 203 querier version 3
 ip igmp snooping vlan 204
 ip igmp snooping vlan 204 querier
-ip igmp snooping vlan 204 querier address =172.16.16.16
+ip igmp snooping vlan 204 querier address 172.16.16.16
 ip igmp snooping vlan 204 querier version 3
 ip igmp snooping vlan 205
 ip igmp snooping vlan 205 querier
-ip igmp snooping vlan 205 querier address =172.16.16.16
+ip igmp snooping vlan 205 querier address 172.16.16.16
 ip igmp snooping vlan 205 querier version 3
 ip igmp snooping vlan 206
 ip igmp snooping vlan 206 querier
-ip igmp snooping vlan 206 querier address =172.16.16.16
+ip igmp snooping vlan 206 querier address 172.16.16.16
 ip igmp snooping vlan 206 querier version 3
 ip igmp snooping vlan 207
 ip igmp snooping vlan 207 querier
-ip igmp snooping vlan 207 querier address =172.16.16.16
+ip igmp snooping vlan 207 querier address 172.16.16.16
 ip igmp snooping vlan 207 querier version 3
 ip igmp snooping vlan 208
 ip igmp snooping vlan 208 querier
-ip igmp snooping vlan 208 querier address =172.16.16.16
+ip igmp snooping vlan 208 querier address 172.16.16.16
 ip igmp snooping vlan 208 querier version 3
 ip igmp snooping vlan 209
 ip igmp snooping vlan 209 querier
-ip igmp snooping vlan 209 querier address =172.16.16.16
+ip igmp snooping vlan 209 querier address 172.16.16.16
 ip igmp snooping vlan 209 querier version 3
 ip igmp snooping vlan 210
 ip igmp snooping vlan 210 querier
-ip igmp snooping vlan 210 querier address =172.16.16.16
+ip igmp snooping vlan 210 querier address 172.16.16.16
 ip igmp snooping vlan 210 querier version 3
 ip igmp snooping vlan 211
 ip igmp snooping vlan 211 querier
-ip igmp snooping vlan 211 querier address =172.16.16.16
+ip igmp snooping vlan 211 querier address 172.16.16.16
 ip igmp snooping vlan 211 querier version 3
 ip igmp snooping vlan 212
 ip igmp snooping vlan 212 querier
-ip igmp snooping vlan 212 querier address =172.16.16.16
+ip igmp snooping vlan 212 querier address 172.16.16.16
 ip igmp snooping vlan 212 querier version 3
 ip igmp snooping vlan 213
 ip igmp snooping vlan 213 querier
-ip igmp snooping vlan 213 querier address =172.16.16.16
+ip igmp snooping vlan 213 querier address 172.16.16.16
 ip igmp snooping vlan 213 querier version 3
 ip igmp snooping vlan 214
 ip igmp snooping vlan 214 querier
-ip igmp snooping vlan 214 querier address =172.16.16.16
+ip igmp snooping vlan 214 querier address 172.16.16.16
 ip igmp snooping vlan 214 querier version 3
 ip igmp snooping vlan 215
 ip igmp snooping vlan 215 querier
-ip igmp snooping vlan 215 querier address =172.16.16.16
+ip igmp snooping vlan 215 querier address 172.16.16.16
 ip igmp snooping vlan 215 querier version 3
 ip igmp snooping vlan 216
 ip igmp snooping vlan 216 querier
-ip igmp snooping vlan 216 querier address =172.16.16.16
+ip igmp snooping vlan 216 querier address 172.16.16.16
 ip igmp snooping vlan 216 querier version 3
 ip igmp snooping vlan 217
 ip igmp snooping vlan 217 querier
-ip igmp snooping vlan 217 querier address =172.16.16.16
+ip igmp snooping vlan 217 querier address 172.16.16.16
 ip igmp snooping vlan 217 querier version 3
 ip igmp snooping vlan 218
 ip igmp snooping vlan 218 querier
-ip igmp snooping vlan 218 querier address =172.16.16.16
+ip igmp snooping vlan 218 querier address 172.16.16.16
 ip igmp snooping vlan 218 querier version 3
 ip igmp snooping vlan 219
 ip igmp snooping vlan 219 querier
-ip igmp snooping vlan 219 querier address =172.16.16.16
+ip igmp snooping vlan 219 querier address 172.16.16.16
 ip igmp snooping vlan 219 querier version 3
 ip igmp snooping vlan 220
 ip igmp snooping vlan 220 querier
-ip igmp snooping vlan 220 querier address =172.16.16.16
+ip igmp snooping vlan 220 querier address 172.16.16.16
 ip igmp snooping vlan 220 querier version 3
 ip igmp snooping vlan 221
 ip igmp snooping vlan 221 querier
-ip igmp snooping vlan 221 querier address =172.16.16.16
+ip igmp snooping vlan 221 querier address 172.16.16.16
 ip igmp snooping vlan 221 querier version 3
 ip igmp snooping vlan 222
 ip igmp snooping vlan 222 querier
-ip igmp snooping vlan 222 querier address =172.16.16.16
+ip igmp snooping vlan 222 querier address 172.16.16.16
 ip igmp snooping vlan 222 querier version 3
 ip igmp snooping vlan 223
 ip igmp snooping vlan 223 querier
-ip igmp snooping vlan 223 querier address =172.16.16.16
+ip igmp snooping vlan 223 querier address 172.16.16.16
 ip igmp snooping vlan 223 querier version 3
 ip igmp snooping vlan 224
 ip igmp snooping vlan 224 querier
-ip igmp snooping vlan 224 querier address =172.16.16.16
+ip igmp snooping vlan 224 querier address 172.16.16.16
 ip igmp snooping vlan 224 querier version 3
 ip igmp snooping vlan 225
 ip igmp snooping vlan 225 querier
-ip igmp snooping vlan 225 querier address =172.16.16.16
+ip igmp snooping vlan 225 querier address 172.16.16.16
 ip igmp snooping vlan 225 querier version 3
 ip igmp snooping vlan 226
 ip igmp snooping vlan 226 querier
-ip igmp snooping vlan 226 querier address =172.16.16.16
+ip igmp snooping vlan 226 querier address 172.16.16.16
 ip igmp snooping vlan 226 querier version 3
 ip igmp snooping vlan 227
 ip igmp snooping vlan 227 querier
-ip igmp snooping vlan 227 querier address =172.16.16.16
+ip igmp snooping vlan 227 querier address 172.16.16.16
 ip igmp snooping vlan 227 querier version 3
 ip igmp snooping vlan 228
 ip igmp snooping vlan 228 querier
-ip igmp snooping vlan 228 querier address =172.16.16.16
+ip igmp snooping vlan 228 querier address 172.16.16.16
 ip igmp snooping vlan 228 querier version 3
 ip igmp snooping vlan 229
 ip igmp snooping vlan 229 querier
-ip igmp snooping vlan 229 querier address =172.16.16.16
+ip igmp snooping vlan 229 querier address 172.16.16.16
 ip igmp snooping vlan 229 querier version 3
 ip igmp snooping vlan 230
 ip igmp snooping vlan 230 querier
-ip igmp snooping vlan 230 querier address =172.16.16.16
+ip igmp snooping vlan 230 querier address 172.16.16.16
 ip igmp snooping vlan 230 querier version 3
 ip igmp snooping vlan 231
 ip igmp snooping vlan 231 querier
-ip igmp snooping vlan 231 querier address =172.16.16.16
+ip igmp snooping vlan 231 querier address 172.16.16.16
 ip igmp snooping vlan 231 querier version 3
 ip igmp snooping vlan 232
 ip igmp snooping vlan 232 querier
-ip igmp snooping vlan 232 querier address =172.16.16.16
+ip igmp snooping vlan 232 querier address 172.16.16.16
 ip igmp snooping vlan 232 querier version 3
 ip igmp snooping vlan 233
 ip igmp snooping vlan 233 querier
-ip igmp snooping vlan 233 querier address =172.16.16.16
+ip igmp snooping vlan 233 querier address 172.16.16.16
 ip igmp snooping vlan 233 querier version 3
 ip igmp snooping vlan 234
 ip igmp snooping vlan 234 querier
-ip igmp snooping vlan 234 querier address =172.16.16.16
+ip igmp snooping vlan 234 querier address 172.16.16.16
 ip igmp snooping vlan 234 querier version 3
 ip igmp snooping vlan 235
 ip igmp snooping vlan 235 querier
-ip igmp snooping vlan 235 querier address =172.16.16.16
+ip igmp snooping vlan 235 querier address 172.16.16.16
 ip igmp snooping vlan 235 querier version 3
 ip igmp snooping vlan 236
 ip igmp snooping vlan 236 querier
-ip igmp snooping vlan 236 querier address =172.16.16.16
+ip igmp snooping vlan 236 querier address 172.16.16.16
 ip igmp snooping vlan 236 querier version 3
 ip igmp snooping vlan 237
 ip igmp snooping vlan 237 querier
-ip igmp snooping vlan 237 querier address =172.16.16.16
+ip igmp snooping vlan 237 querier address 172.16.16.16
 ip igmp snooping vlan 237 querier version 3
 ip igmp snooping vlan 238
 ip igmp snooping vlan 238 querier
-ip igmp snooping vlan 238 querier address =172.16.16.16
+ip igmp snooping vlan 238 querier address 172.16.16.16
 ip igmp snooping vlan 238 querier version 3
 ip igmp snooping vlan 239
 ip igmp snooping vlan 239 querier
-ip igmp snooping vlan 239 querier address =172.16.16.16
+ip igmp snooping vlan 239 querier address 172.16.16.16
 ip igmp snooping vlan 239 querier version 3
 ip igmp snooping vlan 240
 ip igmp snooping vlan 240 querier
-ip igmp snooping vlan 240 querier address =172.16.16.16
+ip igmp snooping vlan 240 querier address 172.16.16.16
 ip igmp snooping vlan 240 querier version 3
 ip igmp snooping vlan 241
 ip igmp snooping vlan 241 querier
-ip igmp snooping vlan 241 querier address =172.16.16.16
+ip igmp snooping vlan 241 querier address 172.16.16.16
 ip igmp snooping vlan 241 querier version 3
 ip igmp snooping vlan 242
 ip igmp snooping vlan 242 querier
-ip igmp snooping vlan 242 querier address =172.16.16.16
+ip igmp snooping vlan 242 querier address 172.16.16.16
 ip igmp snooping vlan 242 querier version 3
 ip igmp snooping vlan 243
 ip igmp snooping vlan 243 querier
-ip igmp snooping vlan 243 querier address =172.16.16.16
+ip igmp snooping vlan 243 querier address 172.16.16.16
 ip igmp snooping vlan 243 querier version 3
 ip igmp snooping vlan 244
 ip igmp snooping vlan 244 querier
-ip igmp snooping vlan 244 querier address =172.16.16.16
+ip igmp snooping vlan 244 querier address 172.16.16.16
 ip igmp snooping vlan 244 querier version 3
 ip igmp snooping vlan 245
 ip igmp snooping vlan 245 querier
-ip igmp snooping vlan 245 querier address =172.16.16.16
+ip igmp snooping vlan 245 querier address 172.16.16.16
 ip igmp snooping vlan 245 querier version 3
 ip igmp snooping vlan 246
 ip igmp snooping vlan 246 querier
-ip igmp snooping vlan 246 querier address =172.16.16.16
+ip igmp snooping vlan 246 querier address 172.16.16.16
 ip igmp snooping vlan 246 querier version 3
 ip igmp snooping vlan 247
 ip igmp snooping vlan 247 querier
-ip igmp snooping vlan 247 querier address =172.16.16.16
+ip igmp snooping vlan 247 querier address 172.16.16.16
 ip igmp snooping vlan 247 querier version 3
 ip igmp snooping vlan 248
 ip igmp snooping vlan 248 querier
-ip igmp snooping vlan 248 querier address =172.16.16.16
+ip igmp snooping vlan 248 querier address 172.16.16.16
 ip igmp snooping vlan 248 querier version 3
 ip igmp snooping vlan 249
 ip igmp snooping vlan 249 querier
-ip igmp snooping vlan 249 querier address =172.16.16.16
+ip igmp snooping vlan 249 querier address 172.16.16.16
 ip igmp snooping vlan 249 querier version 3
 ip igmp snooping vlan 250
 ip igmp snooping vlan 250 querier
-ip igmp snooping vlan 250 querier address =172.16.16.16
+ip igmp snooping vlan 250 querier address 172.16.16.16
 ip igmp snooping vlan 250 querier version 3
 ip igmp snooping vlan 251
 ip igmp snooping vlan 251 querier
-ip igmp snooping vlan 251 querier address =172.16.16.16
+ip igmp snooping vlan 251 querier address 172.16.16.16
 ip igmp snooping vlan 251 querier version 3
 ip igmp snooping vlan 252
 ip igmp snooping vlan 252 querier
-ip igmp snooping vlan 252 querier address =172.16.16.16
+ip igmp snooping vlan 252 querier address 172.16.16.16
 ip igmp snooping vlan 252 querier version 3
 ip igmp snooping vlan 253
 ip igmp snooping vlan 253 querier
-ip igmp snooping vlan 253 querier address =172.16.16.16
+ip igmp snooping vlan 253 querier address 172.16.16.16
 ip igmp snooping vlan 253 querier version 3
 ip igmp snooping vlan 254
 ip igmp snooping vlan 254 querier
-ip igmp snooping vlan 254 querier address =172.16.16.16
+ip igmp snooping vlan 254 querier address 172.16.16.16
 ip igmp snooping vlan 254 querier version 3
 ip igmp snooping vlan 255
 ip igmp snooping vlan 255 querier
-ip igmp snooping vlan 255 querier address =172.16.16.16
+ip igmp snooping vlan 255 querier address 172.16.16.16
 ip igmp snooping vlan 255 querier version 3
 ip igmp snooping vlan 256
 ip igmp snooping vlan 256 querier
-ip igmp snooping vlan 256 querier address =172.16.16.16
+ip igmp snooping vlan 256 querier address 172.16.16.16
 ip igmp snooping vlan 256 querier version 3
 ip igmp snooping vlan 257
 ip igmp snooping vlan 257 querier
-ip igmp snooping vlan 257 querier address =172.16.16.16
+ip igmp snooping vlan 257 querier address 172.16.16.16
 ip igmp snooping vlan 257 querier version 3
 ip igmp snooping vlan 258
 ip igmp snooping vlan 258 querier
-ip igmp snooping vlan 258 querier address =172.16.16.16
+ip igmp snooping vlan 258 querier address 172.16.16.16
 ip igmp snooping vlan 258 querier version 3
 ip igmp snooping vlan 259
 ip igmp snooping vlan 259 querier
-ip igmp snooping vlan 259 querier address =172.16.16.16
+ip igmp snooping vlan 259 querier address 172.16.16.16
 ip igmp snooping vlan 259 querier version 3
 ip igmp snooping vlan 260
 ip igmp snooping vlan 260 querier
-ip igmp snooping vlan 260 querier address =172.16.16.16
+ip igmp snooping vlan 260 querier address 172.16.16.16
 ip igmp snooping vlan 260 querier version 3
 ip igmp snooping vlan 261
 ip igmp snooping vlan 261 querier
-ip igmp snooping vlan 261 querier address =172.16.16.16
+ip igmp snooping vlan 261 querier address 172.16.16.16
 ip igmp snooping vlan 261 querier version 3
 ip igmp snooping vlan 262
 ip igmp snooping vlan 262 querier
-ip igmp snooping vlan 262 querier address =172.16.16.16
+ip igmp snooping vlan 262 querier address 172.16.16.16
 ip igmp snooping vlan 262 querier version 3
 ip igmp snooping vlan 263
 ip igmp snooping vlan 263 querier
-ip igmp snooping vlan 263 querier address =172.16.16.16
+ip igmp snooping vlan 263 querier address 172.16.16.16
 ip igmp snooping vlan 263 querier version 3
 ip igmp snooping vlan 264
 ip igmp snooping vlan 264 querier
-ip igmp snooping vlan 264 querier address =172.16.16.16
+ip igmp snooping vlan 264 querier address 172.16.16.16
 ip igmp snooping vlan 264 querier version 3
 ip igmp snooping vlan 265
 ip igmp snooping vlan 265 querier
-ip igmp snooping vlan 265 querier address =172.16.16.16
+ip igmp snooping vlan 265 querier address 172.16.16.16
 ip igmp snooping vlan 265 querier version 3
 ip igmp snooping vlan 266
 ip igmp snooping vlan 266 querier
-ip igmp snooping vlan 266 querier address =172.16.16.16
+ip igmp snooping vlan 266 querier address 172.16.16.16
 ip igmp snooping vlan 266 querier version 3
 ip igmp snooping vlan 267
 ip igmp snooping vlan 267 querier
-ip igmp snooping vlan 267 querier address =172.16.16.16
+ip igmp snooping vlan 267 querier address 172.16.16.16
 ip igmp snooping vlan 267 querier version 3
 ip igmp snooping vlan 268
 ip igmp snooping vlan 268 querier
-ip igmp snooping vlan 268 querier address =172.16.16.16
+ip igmp snooping vlan 268 querier address 172.16.16.16
 ip igmp snooping vlan 268 querier version 3
 ip igmp snooping vlan 269
 ip igmp snooping vlan 269 querier
-ip igmp snooping vlan 269 querier address =172.16.16.16
+ip igmp snooping vlan 269 querier address 172.16.16.16
 ip igmp snooping vlan 269 querier version 3
 ip igmp snooping vlan 270
 ip igmp snooping vlan 270 querier
-ip igmp snooping vlan 270 querier address =172.16.16.16
+ip igmp snooping vlan 270 querier address 172.16.16.16
 ip igmp snooping vlan 270 querier version 3
 ip igmp snooping vlan 271
 ip igmp snooping vlan 271 querier
-ip igmp snooping vlan 271 querier address =172.16.16.16
+ip igmp snooping vlan 271 querier address 172.16.16.16
 ip igmp snooping vlan 271 querier version 3
 ip igmp snooping vlan 272
 ip igmp snooping vlan 272 querier
-ip igmp snooping vlan 272 querier address =172.16.16.16
+ip igmp snooping vlan 272 querier address 172.16.16.16
 ip igmp snooping vlan 272 querier version 3
 ip igmp snooping vlan 273
 ip igmp snooping vlan 273 querier
-ip igmp snooping vlan 273 querier address =172.16.16.16
+ip igmp snooping vlan 273 querier address 172.16.16.16
 ip igmp snooping vlan 273 querier version 3
 ip igmp snooping vlan 274
 ip igmp snooping vlan 274 querier
-ip igmp snooping vlan 274 querier address =172.16.16.16
+ip igmp snooping vlan 274 querier address 172.16.16.16
 ip igmp snooping vlan 274 querier version 3
 ip igmp snooping vlan 275
 ip igmp snooping vlan 275 querier
-ip igmp snooping vlan 275 querier address =172.16.16.16
+ip igmp snooping vlan 275 querier address 172.16.16.16
 ip igmp snooping vlan 275 querier version 3
 ip igmp snooping vlan 276
 ip igmp snooping vlan 276 querier
-ip igmp snooping vlan 276 querier address =172.16.16.16
+ip igmp snooping vlan 276 querier address 172.16.16.16
 ip igmp snooping vlan 276 querier version 3
 ip igmp snooping vlan 277
 ip igmp snooping vlan 277 querier
-ip igmp snooping vlan 277 querier address =172.16.16.16
+ip igmp snooping vlan 277 querier address 172.16.16.16
 ip igmp snooping vlan 277 querier version 3
 ip igmp snooping vlan 278
 ip igmp snooping vlan 278 querier
-ip igmp snooping vlan 278 querier address =172.16.16.16
+ip igmp snooping vlan 278 querier address 172.16.16.16
 ip igmp snooping vlan 278 querier version 3
 ip igmp snooping vlan 279
 ip igmp snooping vlan 279 querier
-ip igmp snooping vlan 279 querier address =172.16.16.16
+ip igmp snooping vlan 279 querier address 172.16.16.16
 ip igmp snooping vlan 279 querier version 3
 ip igmp snooping vlan 280
 ip igmp snooping vlan 280 querier
-ip igmp snooping vlan 280 querier address =172.16.16.16
+ip igmp snooping vlan 280 querier address 172.16.16.16
 ip igmp snooping vlan 280 querier version 3
 ```
 

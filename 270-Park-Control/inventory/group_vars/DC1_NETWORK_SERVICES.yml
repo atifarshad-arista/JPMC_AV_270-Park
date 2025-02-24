@@ -1,1711 +1,1789 @@
 ---
 ### group_vars/DC1_NETWORK_SERVICES.yml
-
 tenants:
   - name: MY_FABRIC
-    #enable_mlag_ibgp_peering_vrfs:
     vrfs:
       - name: default
         mlag_ibgp_peering_vlan: 4093
         svis:
-          - id: 113
-            name: 'VLAN_113'
-            tags: ["113"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.113.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.113.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.113.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 201
-            name: 'VLAN_201'
-            tags: ["201"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.1.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.1.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.1.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 202
-            name: 'VLAN_202'
-            tags: ["202"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.2.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.2.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.2.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 203
-            name: 'VLAN_203'
-            tags: ["203"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.3.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.3.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.3.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 204
-            name: 'VLAN_204'
-            tags: ["204"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.4.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.4.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.4.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 205
-            name: 'VLAN_205'
-            tags: ["205"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.5.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.5.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.5.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 206
-            name: 'VLAN_206'
-            tags: ["206"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.6.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.6.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.6.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 207
-            name: 'VLAN_207'
-            tags: ["207"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.7.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.7.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.7.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 208
-            name: 'VLAN_208'
-            tags: ["208"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.8.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.8.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.8.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 209
-            name: 'VLAN_209'
-            tags: ["209"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.9.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.9.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.9.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 210
-            name: 'VLAN_210'
-            tags: ["210"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.10.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.10.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.10.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 211
-            name: 'VLAN_211'
-            tags: ["211"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.11.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.11.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.11.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 212
-            name: 'VLAN_212'
-            tags: ["212"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.12.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.12.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.12.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 213
-            name: 'VLAN_213'
-            tags: ["213"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.13.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.13.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.13.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 214
-            name: 'VLAN_214'
-            tags: ["214"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.14.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.14.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.14.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 215
-            name: 'VLAN_215'
-            tags: ["215"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.15.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.15.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.15.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 216
-            name: 'VLAN_216'
-            tags: ["216"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.16.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.16.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.16.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 217
-            name: 'VLAN_217'
-            tags: ["217"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.17.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.17.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.17.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 218
-            name: 'VLAN_218'
-            tags: ["218"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.18.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.18.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.18.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 219
-            name: 'VLAN_219'
-            tags: ["219"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.19.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.19.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.19.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 220
-            name: 'VLAN_220'
-            tags: ["220"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.20.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.20.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.20.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 221
-            name: 'VLAN_221'
-            tags: ["221"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.21.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.21.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.21.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 222
-            name: 'VLAN_222'
-            tags: ["222"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.22.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.22.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.22.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 223
-            name: 'VLAN_223'
-            tags: ["223"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.23.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.23.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.23.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 224
-            name: 'VLAN_224'
-            tags: ["224"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.24.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.24.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.24.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 225
-            name: 'VLAN_225'
-            tags: ["225"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.25.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.25.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.25.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 226
-            name: 'VLAN_226'
-            tags: ["226"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.26.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.26.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.26.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 227
-            name: 'VLAN_227'
-            tags: ["227"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.27.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.27.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.27.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 228
-            name: 'VLAN_228'
-            tags: ["228"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.28.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.28.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.28.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 229
-            name: 'VLAN_229'
-            tags: ["229"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.29.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.29.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.29.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 230
-            name: 'VLAN_230'
-            tags: ["230"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.30.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.30.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.30.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 231
-            name: 'VLAN_231'
-            tags: ["231"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.31.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.31.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.31.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 232
-            name: 'VLAN_232'
-            tags: ["232"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.32.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.32.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.32.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 233
-            name: 'VLAN_233'
-            tags: ["233"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.33.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.33.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.33.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 234
-            name: 'VLAN_234'
-            tags: ["234"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.34.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.34.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.34.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 235
-            name: 'VLAN_235'
-            tags: ["235"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.35.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.35.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.35.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 236
-            name: 'VLAN_236'
-            tags: ["236"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.36.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.36.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.36.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 237
-            name: 'VLAN_237'
-            tags: ["237"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.37.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.37.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.37.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 238
-            name: 'VLAN_238'
-            tags: ["238"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.38.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.38.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.38.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 239
-            name: 'VLAN_239'
-            tags: ["239"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.39.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.39.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.39.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 240
-            name: 'VLAN_240'
-            tags: ["240"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.40.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.40.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.40.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 241
-            name: 'VLAN_241'
-            tags: ["241"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.41.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.41.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.41.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 242
-            name: 'VLAN_242'
-            tags: ["242"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.42.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.42.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.42.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 243
-            name: 'VLAN_243'
-            tags: ["243"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.43.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.43.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.43.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 244
-            name: 'VLAN_244'
-            tags: ["244"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.44.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.44.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.44.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 245
-            name: 'VLAN_245'
-            tags: ["245"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.45.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.45.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.45.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 246
-            name: 'VLAN_246'
-            tags: ["246"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.46.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.46.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.46.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 247
-            name: 'VLAN_247'
-            tags: ["247"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.47.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.47.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.47.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 248
-            name: 'VLAN_248'
-            tags: ["248"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.48.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.48.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.48.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 249
-            name: 'VLAN_249'
-            tags: ["249"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.49.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.49.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.49.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 250
-            name: 'VLAN_250'
-            tags: ["250"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.50.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.50.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.50.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 251
-            name: 'VLAN_251'
-            tags: ["251"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.51.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.51.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.51.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 252
-            name: 'VLAN_252'
-            tags: ["252"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.52.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.52.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.52.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 253
-            name: 'VLAN_253'
-            tags: ["253"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.53.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.53.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.53.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 254
-            name: 'VLAN_254'
-            tags: ["254"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.54.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.54.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.54.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 255
-            name: 'VLAN_255'
-            tags: ["255"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.55.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.55.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.55.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 256
-            name: 'VLAN_256'
-            tags: ["256"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.56.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.56.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.56.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 257
-            name: 'VLAN_257'
-            tags: ["257"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.57.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.57.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.57.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 258
-            name: 'VLAN_258'
-            tags: ["258"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.58.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.58.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.58.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 259
-            name: 'VLAN_259'
-            tags: ["259"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.59.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.59.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.59.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 260
-            name: 'VLAN_260'
-            tags: ["260"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.60.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.60.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.60.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 261
-            name: 'VLAN_261'
-            tags: ["261"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.61.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.61.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.61.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 262
-            name: 'VLAN_262'
-            tags: ["262"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.62.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.62.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.62.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 263
-            name: 'VLAN_263'
-            tags: ["263"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.63.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.63.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.63.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 264
-            name: 'VLAN_264'
-            tags: ["264"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.64.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.64.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.64.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 265
-            name: 'VLAN_265'
-            tags: ["265"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.65.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.65.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.65.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 266
-            name: 'VLAN_266'
-            tags: ["266"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.66.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.66.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.66.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 267
-            name: 'VLAN_267'
-            tags: ["267"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.67.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.67.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.67.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 268
-            name: 'VLAN_268'
-            tags: ["268"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.68.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.68.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.68.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 269
-            name: 'VLAN_269'
-            tags: ["269"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.69.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.69.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.69.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 270
-            name: 'VLAN_270'
-            tags: ["270"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.70.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.70.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.70.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 271
-            name: 'VLAN_271'
-            tags: ["271"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.71.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.71.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.71.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 272
-            name: 'VLAN_272'
-            tags: ["272"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.72.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.72.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.72.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 273
-            name: 'VLAN_273'
-            tags: ["273"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.73.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.73.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.73.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 274
-            name: 'VLAN_274'
-            tags: ["274"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.74.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.74.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.74.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 275
-            name: 'VLAN_275'
-            tags: ["275"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.75.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.75.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.75.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 276
-            name: 'VLAN_276'
-            tags: ["276"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.76.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.76.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.76.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 277
-            name: 'VLAN_277'
-            tags: ["277"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.77.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.77.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.77.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 278
-            name: 'VLAN_278'
-            tags: ["278"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.78.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.78.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.78.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 279
-            name: 'VLAN_279'
-            tags: ["279"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.79.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.79.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.79.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-          - id: 280
-            name: 'VLAN_280'
-            tags: ["280"]
-            enabled: true
-            ip_virtual_router_addresses:
-              - 10.239.80.1/24
-            nodes:
-              - node: green-spine1
-                ip_address: 10.239.80.2/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
-              - node: green-spine2
-                ip_address: 10.239.80.3/24
-                igmp_snooping_enabled: true
-                igmp_snooping_querier:
-                  enabled: true
-                  source_address: =172.16.16.16
-                  version: 3
+        - id: 113
+          name: 'VLAN_113'
+          tags: ["113"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.113.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.113.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.113.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 201
+          name: 'VLAN_201'
+          tags: ["201"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.1.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.1.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.1.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 202
+          name: 'VLAN_202'
+          tags: ["202"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.2.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.2.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.2.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 203
+          name: 'VLAN_203'
+          tags: ["203"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.3.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.3.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.3.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 204
+          name: 'VLAN_204'
+          tags: ["204"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.4.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.4.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.4.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 205
+          name: 'VLAN_205'
+          tags: ["205"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.5.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.5.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.5.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 206
+          name: 'VLAN_206'
+          tags: ["206"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.6.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.6.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.6.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 207
+          name: 'VLAN_207'
+          tags: ["207"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.7.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.7.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.7.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 208
+          name: 'VLAN_208'
+          tags: ["208"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.8.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.8.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.8.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 209
+          name: 'VLAN_209'
+          tags: ["209"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.9.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.9.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.9.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 210
+          name: 'VLAN_210'
+          tags: ["210"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.10.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.10.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.10.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 211
+          name: 'VLAN_211'
+          tags: ["211"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.11.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.11.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.11.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 212
+          name: 'VLAN_212'
+          tags: ["212"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.12.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.12.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.12.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 213
+          name: 'VLAN_213'
+          tags: ["213"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.13.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.13.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.13.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 214
+          name: 'VLAN_214'
+          tags: ["214"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.14.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.14.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.14.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 215
+          name: 'VLAN_215'
+          tags: ["215"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.15.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.15.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.15.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 216
+          name: 'VLAN_216'
+          tags: ["216"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.16.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.16.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.16.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 217
+          name: 'VLAN_217'
+          tags: ["217"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.17.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.17.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.17.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 218
+          name: 'VLAN_218'
+          tags: ["218"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.18.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.18.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.18.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 219
+          name: 'VLAN_219'
+          tags: ["219"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.19.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.19.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.19.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 220
+          name: 'VLAN_220'
+          tags: ["220"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.20.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.20.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.20.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 221
+          name: 'VLAN_221'
+          tags: ["221"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.21.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.21.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.21.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 222
+          name: 'VLAN_222'
+          tags: ["222"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.22.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.22.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.22.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 223
+          name: 'VLAN_223'
+          tags: ["223"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.23.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.23.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.23.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 224
+          name: 'VLAN_224'
+          tags: ["224"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.24.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.24.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.24.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 225
+          name: 'VLAN_225'
+          tags: ["225"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.25.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.25.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.25.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 226
+          name: 'VLAN_226'
+          tags: ["226"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.26.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.26.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.26.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 227
+          name: 'VLAN_227'
+          tags: ["227"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.27.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.27.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.27.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 228
+          name: 'VLAN_228'
+          tags: ["228"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.28.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.28.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.28.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 229
+          name: 'VLAN_229'
+          tags: ["229"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.29.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.29.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.29.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 230
+          name: 'VLAN_230'
+          tags: ["230"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.30.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.30.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.30.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 231
+          name: 'VLAN_231'
+          tags: ["231"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.31.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.31.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.31.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 232
+          name: 'VLAN_232'
+          tags: ["232"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.32.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.32.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.32.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 233
+          name: 'VLAN_233'
+          tags: ["233"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.33.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.33.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.33.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 234
+          name: 'VLAN_234'
+          tags: ["234"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.34.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.34.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.34.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 235
+          name: 'VLAN_235'
+          tags: ["235"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.35.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.35.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.35.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 236
+          name: 'VLAN_236'
+          tags: ["236"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.36.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.36.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.36.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 237
+          name: 'VLAN_237'
+          tags: ["237"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.37.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.37.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.37.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 238
+          name: 'VLAN_238'
+          tags: ["238"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.38.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.38.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.38.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 239
+          name: 'VLAN_239'
+          tags: ["239"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.39.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.39.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.39.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 240
+          name: 'VLAN_240'
+          tags: ["240"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.40.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.40.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.40.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 241
+          name: 'VLAN_241'
+          tags: ["241"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.41.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.41.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.41.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 242
+          name: 'VLAN_242'
+          tags: ["242"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.42.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.42.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.42.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 243
+          name: 'VLAN_243'
+          tags: ["243"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.43.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.43.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.43.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 244
+          name: 'VLAN_244'
+          tags: ["244"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.44.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.44.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.44.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 245
+          name: 'VLAN_245'
+          tags: ["245"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.45.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.45.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.45.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 246
+          name: 'VLAN_246'
+          tags: ["246"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.46.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.46.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.46.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 247
+          name: 'VLAN_247'
+          tags: ["247"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.47.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.47.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.47.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 248
+          name: 'VLAN_248'
+          tags: ["248"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.48.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.48.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.48.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 249
+          name: 'VLAN_249'
+          tags: ["249"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.49.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.49.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.49.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 250
+          name: 'VLAN_250'
+          tags: ["250"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.50.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.50.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.50.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 251
+          name: 'VLAN_251'
+          tags: ["251"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.51.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.51.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.51.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 252
+          name: 'VLAN_252'
+          tags: ["252"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.52.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.52.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.52.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 253
+          name: 'VLAN_253'
+          tags: ["253"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.53.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.53.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.53.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 254
+          name: 'VLAN_254'
+          tags: ["254"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.54.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.54.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.54.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 255
+          name: 'VLAN_255'
+          tags: ["255"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.55.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.55.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.55.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 256
+          name: 'VLAN_256'
+          tags: ["256"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.56.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.56.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.56.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 257
+          name: 'VLAN_257'
+          tags: ["257"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.57.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.57.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.57.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 258
+          name: 'VLAN_258'
+          tags: ["258"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.58.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.58.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.58.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 259
+          name: 'VLAN_259'
+          tags: ["259"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.59.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.59.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.59.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 260
+          name: 'VLAN_260'
+          tags: ["260"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.60.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.60.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.60.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 261
+          name: 'VLAN_261'
+          tags: ["261"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.61.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.61.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.61.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 262
+          name: 'VLAN_262'
+          tags: ["262"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.62.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.62.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.62.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 263
+          name: 'VLAN_263'
+          tags: ["263"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.63.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.63.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.63.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 264
+          name: 'VLAN_264'
+          tags: ["264"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.64.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.64.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.64.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 265
+          name: 'VLAN_265'
+          tags: ["265"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.65.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.65.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.65.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 266
+          name: 'VLAN_266'
+          tags: ["266"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.66.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.66.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.66.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 267
+          name: 'VLAN_267'
+          tags: ["267"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.67.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.67.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.67.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 268
+          name: 'VLAN_268'
+          tags: ["268"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.68.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.68.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.68.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 269
+          name: 'VLAN_269'
+          tags: ["269"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.69.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.69.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.69.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 270
+          name: 'VLAN_270'
+          tags: ["270"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.70.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.70.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.70.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 271
+          name: 'VLAN_271'
+          tags: ["271"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.71.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.71.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.71.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 272
+          name: 'VLAN_272'
+          tags: ["272"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.72.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.72.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.72.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 273
+          name: 'VLAN_273'
+          tags: ["273"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.73.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.73.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.73.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 274
+          name: 'VLAN_274'
+          tags: ["274"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.74.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.74.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.74.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 275
+          name: 'VLAN_275'
+          tags: ["275"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.75.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.75.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.75.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 276
+          name: 'VLAN_276'
+          tags: ["276"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.76.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.76.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.76.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 277
+          name: 'VLAN_277'
+          tags: ["277"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.77.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.77.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.77.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 278
+          name: 'VLAN_278'
+          tags: ["278"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.78.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.78.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.78.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 279
+          name: 'VLAN_279'
+          tags: ["279"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.79.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.79.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.79.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+
+        - id: 280
+          name: 'VLAN_280'
+          tags: ["280"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 10.239.80.1/24
+          nodes:
+            - node: green-spine1
+              ip_address: 10.239.80.2/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
+            - node: green-spine2
+              ip_address: 10.239.80.3/24
+              igmp_snooping_enabled: true
+              igmp_snooping_querier:
+                enabled: true
+                source_address: 172.16.16.16
+                version: 3
