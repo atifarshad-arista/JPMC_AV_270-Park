@@ -184,7 +184,7 @@ aaa authorization exec default local
 
 | Domain-id | Local-interface | Peer-address | Peer-link |
 | --------- | --------------- | ------------ | --------- |
-| SPINES | Vlan4094 | 192.168.0.141 | Port-Channel8311 |
+| SPINES | Vlan4094 | 192.168.0.19 | Port-Channel8311 |
 
 Dual primary detection is disabled.
 
@@ -195,7 +195,7 @@ Dual primary detection is disabled.
 mlag configuration
    domain-id SPINES
    local-interface Vlan4094
-   peer-address 192.168.0.141
+   peer-address 192.168.0.19
    peer-link Port-Channel8311
    reload-delay mlag 300
    reload-delay non-mlag 330
@@ -597,11 +597,189 @@ vlan 4094
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
-| Ethernet3/5/1 | L2_green-leaf1_Ethernet53/1 | *trunk | *113,201-202 | *- | *- | 351 |
-| Ethernet3/6/1 | L2_green-leaf2_Ethernet53/1 | *trunk | *113,202-204 | *- | *- | 361 |
-| Ethernet3/7/1 | L2_green-leaf3_Ethernet53/1 | *trunk | *113,201,203,205,207,209 | *- | *- | 371 |
-| Ethernet3/8/1 | L2_green-leaf4_Ethernet53/1 | *trunk | *113,202,204,206,208 | *- | *- | 381 |
-| Ethernet3/9/1 | L2_green-leaf5_Ethernet53/1 | *trunk | *113,202-203 | *- | *- | 391 |
+| Ethernet3/5/1 | L2_green-leaf1_Ethernet53/1 | *trunk | *113,201-202 | *- | *- | 112 |
+| Ethernet3/6/1 | L2_green-leaf2_Ethernet53/1 | *trunk | *113,202-204 | *- | *- | 113 |
+| Ethernet3/7/1 | L2_green-leaf3_Ethernet53/1 | *trunk | *113,201,203,205,207,209 | *- | *- | 114 |
+| Ethernet3/8/1 | L2_green-leaf4_Ethernet53/1 | *trunk | *113,202,204,206,208 | *- | *- | 115 |
+| Ethernet3/9/1 | L2_green-leaf5_Ethernet53/1 | *trunk | *113 | *- | *- | 116 |
+| Ethernet3/10/1 | L2_green-leaf6_Ethernet53/1 | *trunk | *113,201,203-205,207-209 | *- | *- | 117 |
+| Ethernet3/11/1 | L2_green-leaf7_Ethernet53/1 | *trunk | *113,201-207,209 | *- | *- | 118 |
+| Ethernet3/12/1 | L2_green-leaf8_Ethernet53/1 | *trunk | *113,201-204,206-207,209 | *- | *- | 119 |
+| Ethernet3/13/1 | L2_green-leaf9_Ethernet53/1 | *trunk | *113,201-204,206-207,209 | *- | *- | 120 |
+| Ethernet3/14/1 | L2_green-leaf10_Ethernet53/1 | *trunk | *113,201-204,206-207,209 | *- | *- | 121 |
+| Ethernet3/15/1 | L2_green-leaf11_Ethernet53/1 | *trunk | *113,201-204,206-207,209 | *- | *- | 122 |
+| Ethernet3/16/1 | L2_green-leaf12_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 123 |
+| Ethernet3/17/1 | L2_green-leaf13_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 124 |
+| Ethernet3/18/1 | L2_green-leaf14_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 125 |
+| Ethernet3/19/1 | L2_green-leaf15_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 126 |
+| Ethernet3/20/1 | L2_green-leaf16_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 127 |
+| Ethernet3/21/1 | L2_green-leaf17_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 128 |
+| Ethernet3/22/1 | L2_green-leaf18_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 129 |
+| Ethernet3/23/1 | L2_green-leaf19_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 130 |
+| Ethernet3/24/1 | L2_green-leaf20_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 131 |
+| Ethernet3/25/1 | L2_green-leaf21_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 132 |
+| Ethernet3/26/1 | L2_green-leaf22_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 133 |
+| Ethernet3/27/1 | L2_green-leaf23_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 134 |
+| Ethernet3/28/1 | L2_green-leaf24_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 135 |
+| Ethernet3/29/1 | L2_green-leaf25_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 136 |
+| Ethernet3/30/1 | L2_green-leaf26_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 137 |
+| Ethernet3/31/1 | L2_green-leaf27_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 138 |
+| Ethernet3/32/1 | L2_green-leaf28_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 139 |
+| Ethernet4/1/1 | L2_green-leaf29_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 140 |
+| Ethernet4/2/1 | L2_green-leaf30_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 141 |
+| Ethernet4/3/1 | L2_green-leaf31_Ethernet53/1 | *trunk | *113,201-204,206,209 | *- | *- | 142 |
+| Ethernet4/4/1 | L2_green-leaf32_Ethernet53/1 | *trunk | *113,201-204,206,208-209 | *- | *- | 143 |
+| Ethernet4/5/1 | L2_green-leaf33_Ethernet53/1 | *trunk | *113,201-204,206,208-209 | *- | *- | 144 |
+| Ethernet4/6/1 | L2_green-leaf34_Ethernet53/1 | *trunk | *113,201-204,206,208-209 | *- | *- | 145 |
+| Ethernet4/7/1 | L2_green-leaf35_Ethernet53/1 | *trunk | *113,201-204,206,208-209 | *- | *- | 146 |
+| Ethernet4/8/1 | L2_green-leaf36_Ethernet53/1 | *trunk | *113,201-204,206,208-209 | *- | *- | 147 |
+| Ethernet4/9/1 | L2_green-leaf37_Ethernet53/1 | *trunk | *113,201-204,206,208-209 | *- | *- | 148 |
+| Ethernet4/10/1 | L2_green-leaf38_Ethernet53/1 | *trunk | *113,201-204,206,208 | *- | *- | 149 |
+| Ethernet4/11/1 | L2_green-leaf39_Ethernet53/1 | *trunk | *113,201-204,208 | *- | *- | 150 |
+| Ethernet4/12/1 | L2_green-leaf40_Ethernet53/1 | *trunk | *113,201-204,208 | *- | *- | 151 |
+| Ethernet4/13/1 | L2_green-leaf41_Ethernet53/1 | *trunk | *113,201-204,208 | *- | *- | 152 |
+| Ethernet4/14/1 | L2_green-leaf42_Ethernet53/1 | *trunk | *113,201-204,208 | *- | *- | 153 |
+| Ethernet4/15/1 | L2_green-leaf43_Ethernet53/1 | *trunk | *113,201-204,208 | *- | *- | 154 |
+| Ethernet4/16/1 | L2_green-leaf44_Ethernet53/1 | *trunk | *113,201-204,208 | *- | *- | 155 |
+| Ethernet4/17/1 | L2_green-leaf45_Ethernet53/1 | *trunk | *113,201-204,208 | *- | *- | 156 |
+| Ethernet4/18/1 | L2_green-leaf46_Ethernet53/1 | *trunk | *113,201-204,208 | *- | *- | 157 |
+| Ethernet4/19/1 | L2_green-leaf47_Ethernet53/1 | *trunk | *113,201-204,208 | *- | *- | 158 |
+| Ethernet4/20/1 | L2_green-leaf48_Ethernet53/1 | *trunk | *113,201-204,207-208 | *- | *- | 159 |
+| Ethernet4/21/1 | L2_green-leaf49_Ethernet53/1 | *trunk | *113,201-204,207-208 | *- | *- | 160 |
+| Ethernet4/22/1 | L2_green-leaf50_Ethernet53/1 | *trunk | *113,201-204,207-208 | *- | *- | 161 |
+| Ethernet4/23/1 | L2_green-leaf51_Ethernet53/1 | *trunk | *113,201-204,207-208 | *- | *- | 162 |
+| Ethernet4/24/1 | L2_green-leaf52_Ethernet53/1 | *trunk | *113,201-204,207-208 | *- | *- | 163 |
+| Ethernet4/25/1 | L2_green-leaf53_Ethernet53/1 | *trunk | *113,201-204,207-208 | *- | *- | 164 |
+| Ethernet4/26/1 | L2_green-leaf54_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 165 |
+| Ethernet4/27/1 | L2_green-leaf55_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 166 |
+| Ethernet4/28/1 | L2_green-leaf56_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 167 |
+| Ethernet4/29/1 | L2_green-leaf57_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 168 |
+| Ethernet4/30/1 | L2_green-leaf58_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 169 |
+| Ethernet4/31/1 | L2_green-leaf59_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 170 |
+| Ethernet4/32/1 | L2_green-leaf60_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 171 |
+| Ethernet5/1/1 | L2_green-leaf61_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 172 |
+| Ethernet5/2/1 | L2_green-leaf62_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 173 |
+| Ethernet5/3/1 | L2_green-leaf63_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 174 |
+| Ethernet5/4/1 | L2_green-leaf64_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 175 |
+| Ethernet5/5/1 | L2_green-leaf65_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 176 |
+| Ethernet5/6/1 | L2_green-leaf66_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 177 |
+| Ethernet5/7/1 | L2_green-leaf67_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 178 |
+| Ethernet5/8/1 | L2_green-leaf68_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 179 |
+| Ethernet5/9/1 | L2_green-leaf69_Ethernet53/1 | *trunk | *113,203-204,207-208 | *- | *- | 180 |
+| Ethernet5/10/1 | L2_green-leaf70_Ethernet53/1 | *trunk | *113,203-205,207-208 | *- | *- | 181 |
+| Ethernet5/11/1 | L2_green-leaf71_Ethernet53/1 | *trunk | *113,203-205,207-208 | *- | *- | 182 |
+| Ethernet5/12/1 | L2_green-leaf72_Ethernet53/1 | *trunk | *113,203-205,207-208 | *- | *- | 183 |
+| Ethernet5/13/1 | L2_green-leaf73_Ethernet53/1 | *trunk | *113,203-205,207-208 | *- | *- | 184 |
+| Ethernet5/14/1 | L2_green-leaf74_Ethernet53/1 | *trunk | *113,203-205,207-208 | *- | *- | 185 |
+| Ethernet5/15/1 | L2_green-leaf75_Ethernet53/1 | *trunk | *113,203-205,207-208 | *- | *- | 186 |
+| Ethernet5/16/1 | L2_green-leaf76_Ethernet53/1 | *trunk | *113,203-205,207-209 | *- | *- | 187 |
+| Ethernet5/17/1 | L2_green-leaf77_Ethernet53/1 | *trunk | *113,203-205,207-209 | *- | *- | 188 |
+| Ethernet5/18/1 | L2_green-leaf78_Ethernet53/1 | *trunk | *113,203-205,207-209 | *- | *- | 189 |
+| Ethernet5/19/1 | L2_green-leaf79_Ethernet53/1 | *trunk | *113,203-205,207-209 | *- | *- | 190 |
+| Ethernet5/20/1 | L2_green-leaf80_Ethernet53/1 | *trunk | *113,203-204,207-209 | *- | *- | 191 |
+| Ethernet5/21/1 | L2_green-leaf81_Ethernet53/1 | *trunk | *113,203-204,207-209 | *- | *- | 192 |
+| Ethernet5/22/1 | L2_green-leaf82_Ethernet53/1 | *trunk | *113,203-204,207-209 | *- | *- | 193 |
+| Ethernet5/23/1 | L2_green-leaf83_Ethernet53/1 | *trunk | *113,203-204,207-209 | *- | *- | 194 |
+| Ethernet5/24/1 | L2_green-leaf84_Ethernet53/1 | *trunk | *113,207-209 | *- | *- | 195 |
+| Ethernet5/25/1 | L2_green-leaf85_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 196 |
+| Ethernet5/26/1 | L2_green-leaf86_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 197 |
+| Ethernet5/27/1 | L2_green-leaf87_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 198 |
+| Ethernet5/28/1 | L2_green-leaf88_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 199 |
+| Ethernet5/29/1 | L2_green-leaf89_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 1100 |
+| Ethernet5/30/1 | L2_green-leaf90_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 1101 |
+| Ethernet5/31/1 | L2_green-leaf91_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 1102 |
+| Ethernet5/32/1 | L2_green-leaf92_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 1103 |
+| Ethernet6/1/1 | L2_green-leaf93_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 1104 |
+| Ethernet6/2/1 | L2_green-leaf94_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 1105 |
+| Ethernet6/3/1 | L2_green-leaf95_Ethernet53/1 | *trunk | *113,207,209 | *- | *- | 1106 |
+| Ethernet6/4/1 | L2_green-leaf96_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1107 |
+| Ethernet6/5/1 | L2_green-leaf97_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1108 |
+| Ethernet6/6/1 | L2_green-leaf98_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1109 |
+| Ethernet6/7/1 | L2_green-leaf99_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1110 |
+| Ethernet6/8/1 | L2_green-leaf100_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1111 |
+| Ethernet6/9/1 | L2_green-leaf101_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1112 |
+| Ethernet6/10/1 | L2_green-leaf102_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1113 |
+| Ethernet6/11/1 | L2_green-leaf103_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1114 |
+| Ethernet6/12/1 | L2_green-leaf104_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1115 |
+| Ethernet6/13/1 | L2_green-leaf105_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1116 |
+| Ethernet6/14/1 | L2_green-leaf106_Ethernet53/1 | *trunk | *113,205,207,209 | *- | *- | 1117 |
+| Ethernet6/15/1 | L2_green-leaf107_Ethernet53/1 | *trunk | *113,205,207 | *- | *- | 1118 |
+| Ethernet6/16/1 | L2_green-leaf108_Ethernet53/1 | *trunk | *113,205,207 | *- | *- | 1119 |
+| Ethernet6/17/1 | L2_green-leaf109_Ethernet53/1 | *trunk | *113,205,207 | *- | *- | 1120 |
+| Ethernet6/18/1 | L2_green-leaf110_Ethernet53/1 | *trunk | *113,205,207 | *- | *- | 1121 |
+| Ethernet6/19/1 | L2_green-leaf111_Ethernet53/1 | *trunk | *113,205,207 | *- | *- | 1122 |
+| Ethernet6/20/1 | L2_green-leaf112_Ethernet53/1 | *trunk | *113,205,207 | *- | *- | 1123 |
+| Ethernet6/21/1 | L2_green-leaf113_Ethernet53/1 | *trunk | *113,203-205,207 | *- | *- | 1124 |
+| Ethernet6/22/1 | L2_green-leaf114_Ethernet53/1 | *trunk | *113,203-205,207 | *- | *- | 1125 |
+| Ethernet6/23/1 | L2_green-leaf115_Ethernet53/1 | *trunk | *113,203-205,207 | *- | *- | 1126 |
+| Ethernet6/24/1 | L2_green-leaf116_Ethernet53/1 | *trunk | *113,201-205,207 | *- | *- | 1127 |
+| Ethernet6/25/1 | L2_green-leaf117_Ethernet53/1 | *trunk | *113,201-205,207 | *- | *- | 1128 |
+| Ethernet6/26/1 | L2_green-leaf118_Ethernet53/1 | *trunk | *113,201-205,207 | *- | *- | 1129 |
+| Ethernet6/27/1 | L2_green-leaf119_Ethernet53/1 | *trunk | *113,201-205,207 | *- | *- | 1130 |
+| Ethernet6/28/1 | L2_green-leaf120_Ethernet53/1 | *trunk | *113,201,204-205,207 | *- | *- | 1131 |
+| Ethernet6/29/1 | L2_green-leaf121_Ethernet53/1 | *trunk | *113,201,204-205,207 | *- | *- | 1132 |
+| Ethernet6/30/1 | L2_green-leaf122_Ethernet53/1 | *trunk | *113,201,204-205,207 | *- | *- | 1133 |
+| Ethernet6/31/1 | L2_green-leaf123_Ethernet53/1 | *trunk | *113,201,204-205,207 | *- | *- | 1134 |
+| Ethernet6/32/1 | L2_green-leaf124_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1135 |
+| Ethernet7/1/1 | L2_green-leaf125_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1136 |
+| Ethernet7/2/1 | L2_green-leaf126_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1137 |
+| Ethernet7/3/1 | L2_green-leaf127_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1138 |
+| Ethernet7/4/1 | L2_green-leaf128_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1139 |
+| Ethernet7/5/1 | L2_green-leaf129_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1140 |
+| Ethernet7/6/1 | L2_green-leaf130_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1141 |
+| Ethernet7/7/1 | L2_green-leaf131_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1142 |
+| Ethernet7/8/1 | L2_green-leaf132_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1143 |
+| Ethernet7/9/1 | L2_green-leaf133_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1144 |
+| Ethernet7/10/1 | L2_green-leaf134_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1145 |
+| Ethernet7/11/1 | L2_green-leaf135_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1146 |
+| Ethernet7/12/1 | L2_green-leaf136_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1147 |
+| Ethernet7/13/1 | L2_green-leaf137_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1148 |
+| Ethernet7/14/1 | L2_green-leaf138_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1149 |
+| Ethernet7/15/1 | L2_green-leaf139_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1150 |
+| Ethernet7/16/1 | L2_green-leaf140_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1151 |
+| Ethernet7/17/1 | L2_green-leaf141_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1152 |
+| Ethernet7/18/1 | L2_green-leaf142_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1153 |
+| Ethernet7/19/1 | L2_green-leaf143_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1154 |
+| Ethernet7/20/1 | L2_green-leaf144_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1155 |
+| Ethernet7/21/1 | L2_green-leaf145_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1156 |
+| Ethernet7/22/1 | L2_green-leaf146_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1157 |
+| Ethernet7/23/1 | L2_green-leaf147_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1158 |
+| Ethernet7/24/1 | L2_green-leaf148_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1159 |
+| Ethernet7/25/1 | L2_green-leaf149_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1160 |
+| Ethernet7/26/1 | L2_green-leaf150_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1161 |
+| Ethernet7/27/1 | L2_green-leaf151_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1162 |
+| Ethernet7/28/1 | L2_green-leaf152_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1163 |
+| Ethernet7/29/1 | L2_green-leaf153_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1164 |
+| Ethernet7/30/1 | L2_green-leaf154_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1165 |
+| Ethernet7/31/1 | L2_green-leaf155_Ethernet53/1 | *trunk | *113,201,204-205,207-208 | *- | *- | 1166 |
+| Ethernet7/32/1 | L2_green-leaf156_Ethernet53/1 | *trunk | *113,201,204,207-208 | *- | *- | 1167 |
+| Ethernet8/1/1 | L2_green-leaf157_Ethernet53/1 | *trunk | *113,201,204,207-208 | *- | *- | 1168 |
+| Ethernet8/2/1 | L2_green-leaf158_Ethernet53/1 | *trunk | *113,201,204,207-208 | *- | *- | 1169 |
+| Ethernet8/3/1 | L2_green-leaf159_Ethernet53/1 | *trunk | *113,201,204,207-208 | *- | *- | 1170 |
+| Ethernet8/4/1 | L2_green-leaf160_Ethernet53/1 | *trunk | *113,201,204,207-208 | *- | *- | 1171 |
+| Ethernet8/5/1 | L2_green-leaf161_Ethernet53/1 | *trunk | *113,201,204,207-208 | *- | *- | 1172 |
+| Ethernet8/6/1 | L2_green-leaf162_Ethernet53/1 | *trunk | *113,201,204,207-208 | *- | *- | 1173 |
+| Ethernet8/7/1 | L2_green-leaf163_Ethernet53/1 | *trunk | *113,201,204,207-208 | *- | *- | 1174 |
+| Ethernet8/8/1 | L2_green-leaf164_Ethernet53/1 | *trunk | *113,201,204,207-208 | *- | *- | 1175 |
+| Ethernet8/9/1 | L2_green-leaf165_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1176 |
+| Ethernet8/10/1 | L2_green-leaf166_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1177 |
+| Ethernet8/11/1 | L2_green-leaf167_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1178 |
+| Ethernet8/12/1 | L2_green-leaf168_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1179 |
+| Ethernet8/13/1 | L2_green-leaf169_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1180 |
+| Ethernet8/14/1 | L2_green-leaf170_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1181 |
+| Ethernet8/15/1 | L2_green-leaf171_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1182 |
+| Ethernet8/16/1 | L2_green-leaf172_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1183 |
+| Ethernet8/17/1 | L2_green-leaf173_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1184 |
+| Ethernet8/18/1 | L2_green-leaf174_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1185 |
+| Ethernet8/19/1 | L2_green-leaf175_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1186 |
+| Ethernet8/20/1 | L2_green-leaf176_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1187 |
+| Ethernet8/21/1 | L2_green-leaf177_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1188 |
+| Ethernet8/22/1 | L2_green-leaf178_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1189 |
+| Ethernet8/23/1 | L2_green-leaf179_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1190 |
+| Ethernet8/24/1 | L2_green-leaf180_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1191 |
+| Ethernet8/25/1 | L2_green-leaf181_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1192 |
+| Ethernet8/26/1 | L2_green-leaf182_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1193 |
+| Ethernet8/27/1 | L2_green-leaf183_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1194 |
 | Ethernet8/31/1 | MLAG_green-spine2_Ethernet8/31/1 | *trunk | *- | *- | *MLAG | 8311 |
 | Ethernet8/32/1 | MLAG_green-spine2_Ethernet8/32/1 | *trunk | *- | *- | *MLAG | 8311 |
 
@@ -651,27 +829,917 @@ interface Ethernet3/4/1
 interface Ethernet3/5/1
    description L2_green-leaf1_Ethernet53/1
    no shutdown
-   channel-group 351 mode active
+   channel-group 112 mode active
 !
 interface Ethernet3/6/1
    description L2_green-leaf2_Ethernet53/1
    no shutdown
-   channel-group 361 mode active
+   channel-group 113 mode active
 !
 interface Ethernet3/7/1
    description L2_green-leaf3_Ethernet53/1
    no shutdown
-   channel-group 371 mode active
+   channel-group 114 mode active
 !
 interface Ethernet3/8/1
    description L2_green-leaf4_Ethernet53/1
    no shutdown
-   channel-group 381 mode active
+   channel-group 115 mode active
 !
 interface Ethernet3/9/1
    description L2_green-leaf5_Ethernet53/1
    no shutdown
-   channel-group 391 mode active
+   channel-group 116 mode active
+!
+interface Ethernet3/10/1
+   description L2_green-leaf6_Ethernet53/1
+   no shutdown
+   channel-group 117 mode active
+!
+interface Ethernet3/11/1
+   description L2_green-leaf7_Ethernet53/1
+   no shutdown
+   channel-group 118 mode active
+!
+interface Ethernet3/12/1
+   description L2_green-leaf8_Ethernet53/1
+   no shutdown
+   channel-group 119 mode active
+!
+interface Ethernet3/13/1
+   description L2_green-leaf9_Ethernet53/1
+   no shutdown
+   channel-group 120 mode active
+!
+interface Ethernet3/14/1
+   description L2_green-leaf10_Ethernet53/1
+   no shutdown
+   channel-group 121 mode active
+!
+interface Ethernet3/15/1
+   description L2_green-leaf11_Ethernet53/1
+   no shutdown
+   channel-group 122 mode active
+!
+interface Ethernet3/16/1
+   description L2_green-leaf12_Ethernet53/1
+   no shutdown
+   channel-group 123 mode active
+!
+interface Ethernet3/17/1
+   description L2_green-leaf13_Ethernet53/1
+   no shutdown
+   channel-group 124 mode active
+!
+interface Ethernet3/18/1
+   description L2_green-leaf14_Ethernet53/1
+   no shutdown
+   channel-group 125 mode active
+!
+interface Ethernet3/19/1
+   description L2_green-leaf15_Ethernet53/1
+   no shutdown
+   channel-group 126 mode active
+!
+interface Ethernet3/20/1
+   description L2_green-leaf16_Ethernet53/1
+   no shutdown
+   channel-group 127 mode active
+!
+interface Ethernet3/21/1
+   description L2_green-leaf17_Ethernet53/1
+   no shutdown
+   channel-group 128 mode active
+!
+interface Ethernet3/22/1
+   description L2_green-leaf18_Ethernet53/1
+   no shutdown
+   channel-group 129 mode active
+!
+interface Ethernet3/23/1
+   description L2_green-leaf19_Ethernet53/1
+   no shutdown
+   channel-group 130 mode active
+!
+interface Ethernet3/24/1
+   description L2_green-leaf20_Ethernet53/1
+   no shutdown
+   channel-group 131 mode active
+!
+interface Ethernet3/25/1
+   description L2_green-leaf21_Ethernet53/1
+   no shutdown
+   channel-group 132 mode active
+!
+interface Ethernet3/26/1
+   description L2_green-leaf22_Ethernet53/1
+   no shutdown
+   channel-group 133 mode active
+!
+interface Ethernet3/27/1
+   description L2_green-leaf23_Ethernet53/1
+   no shutdown
+   channel-group 134 mode active
+!
+interface Ethernet3/28/1
+   description L2_green-leaf24_Ethernet53/1
+   no shutdown
+   channel-group 135 mode active
+!
+interface Ethernet3/29/1
+   description L2_green-leaf25_Ethernet53/1
+   no shutdown
+   channel-group 136 mode active
+!
+interface Ethernet3/30/1
+   description L2_green-leaf26_Ethernet53/1
+   no shutdown
+   channel-group 137 mode active
+!
+interface Ethernet3/31/1
+   description L2_green-leaf27_Ethernet53/1
+   no shutdown
+   channel-group 138 mode active
+!
+interface Ethernet3/32/1
+   description L2_green-leaf28_Ethernet53/1
+   no shutdown
+   channel-group 139 mode active
+!
+interface Ethernet4/1/1
+   description L2_green-leaf29_Ethernet53/1
+   no shutdown
+   channel-group 140 mode active
+!
+interface Ethernet4/2/1
+   description L2_green-leaf30_Ethernet53/1
+   no shutdown
+   channel-group 141 mode active
+!
+interface Ethernet4/3/1
+   description L2_green-leaf31_Ethernet53/1
+   no shutdown
+   channel-group 142 mode active
+!
+interface Ethernet4/4/1
+   description L2_green-leaf32_Ethernet53/1
+   no shutdown
+   channel-group 143 mode active
+!
+interface Ethernet4/5/1
+   description L2_green-leaf33_Ethernet53/1
+   no shutdown
+   channel-group 144 mode active
+!
+interface Ethernet4/6/1
+   description L2_green-leaf34_Ethernet53/1
+   no shutdown
+   channel-group 145 mode active
+!
+interface Ethernet4/7/1
+   description L2_green-leaf35_Ethernet53/1
+   no shutdown
+   channel-group 146 mode active
+!
+interface Ethernet4/8/1
+   description L2_green-leaf36_Ethernet53/1
+   no shutdown
+   channel-group 147 mode active
+!
+interface Ethernet4/9/1
+   description L2_green-leaf37_Ethernet53/1
+   no shutdown
+   channel-group 148 mode active
+!
+interface Ethernet4/10/1
+   description L2_green-leaf38_Ethernet53/1
+   no shutdown
+   channel-group 149 mode active
+!
+interface Ethernet4/11/1
+   description L2_green-leaf39_Ethernet53/1
+   no shutdown
+   channel-group 150 mode active
+!
+interface Ethernet4/12/1
+   description L2_green-leaf40_Ethernet53/1
+   no shutdown
+   channel-group 151 mode active
+!
+interface Ethernet4/13/1
+   description L2_green-leaf41_Ethernet53/1
+   no shutdown
+   channel-group 152 mode active
+!
+interface Ethernet4/14/1
+   description L2_green-leaf42_Ethernet53/1
+   no shutdown
+   channel-group 153 mode active
+!
+interface Ethernet4/15/1
+   description L2_green-leaf43_Ethernet53/1
+   no shutdown
+   channel-group 154 mode active
+!
+interface Ethernet4/16/1
+   description L2_green-leaf44_Ethernet53/1
+   no shutdown
+   channel-group 155 mode active
+!
+interface Ethernet4/17/1
+   description L2_green-leaf45_Ethernet53/1
+   no shutdown
+   channel-group 156 mode active
+!
+interface Ethernet4/18/1
+   description L2_green-leaf46_Ethernet53/1
+   no shutdown
+   channel-group 157 mode active
+!
+interface Ethernet4/19/1
+   description L2_green-leaf47_Ethernet53/1
+   no shutdown
+   channel-group 158 mode active
+!
+interface Ethernet4/20/1
+   description L2_green-leaf48_Ethernet53/1
+   no shutdown
+   channel-group 159 mode active
+!
+interface Ethernet4/21/1
+   description L2_green-leaf49_Ethernet53/1
+   no shutdown
+   channel-group 160 mode active
+!
+interface Ethernet4/22/1
+   description L2_green-leaf50_Ethernet53/1
+   no shutdown
+   channel-group 161 mode active
+!
+interface Ethernet4/23/1
+   description L2_green-leaf51_Ethernet53/1
+   no shutdown
+   channel-group 162 mode active
+!
+interface Ethernet4/24/1
+   description L2_green-leaf52_Ethernet53/1
+   no shutdown
+   channel-group 163 mode active
+!
+interface Ethernet4/25/1
+   description L2_green-leaf53_Ethernet53/1
+   no shutdown
+   channel-group 164 mode active
+!
+interface Ethernet4/26/1
+   description L2_green-leaf54_Ethernet53/1
+   no shutdown
+   channel-group 165 mode active
+!
+interface Ethernet4/27/1
+   description L2_green-leaf55_Ethernet53/1
+   no shutdown
+   channel-group 166 mode active
+!
+interface Ethernet4/28/1
+   description L2_green-leaf56_Ethernet53/1
+   no shutdown
+   channel-group 167 mode active
+!
+interface Ethernet4/29/1
+   description L2_green-leaf57_Ethernet53/1
+   no shutdown
+   channel-group 168 mode active
+!
+interface Ethernet4/30/1
+   description L2_green-leaf58_Ethernet53/1
+   no shutdown
+   channel-group 169 mode active
+!
+interface Ethernet4/31/1
+   description L2_green-leaf59_Ethernet53/1
+   no shutdown
+   channel-group 170 mode active
+!
+interface Ethernet4/32/1
+   description L2_green-leaf60_Ethernet53/1
+   no shutdown
+   channel-group 171 mode active
+!
+interface Ethernet5/1/1
+   description L2_green-leaf61_Ethernet53/1
+   no shutdown
+   channel-group 172 mode active
+!
+interface Ethernet5/2/1
+   description L2_green-leaf62_Ethernet53/1
+   no shutdown
+   channel-group 173 mode active
+!
+interface Ethernet5/3/1
+   description L2_green-leaf63_Ethernet53/1
+   no shutdown
+   channel-group 174 mode active
+!
+interface Ethernet5/4/1
+   description L2_green-leaf64_Ethernet53/1
+   no shutdown
+   channel-group 175 mode active
+!
+interface Ethernet5/5/1
+   description L2_green-leaf65_Ethernet53/1
+   no shutdown
+   channel-group 176 mode active
+!
+interface Ethernet5/6/1
+   description L2_green-leaf66_Ethernet53/1
+   no shutdown
+   channel-group 177 mode active
+!
+interface Ethernet5/7/1
+   description L2_green-leaf67_Ethernet53/1
+   no shutdown
+   channel-group 178 mode active
+!
+interface Ethernet5/8/1
+   description L2_green-leaf68_Ethernet53/1
+   no shutdown
+   channel-group 179 mode active
+!
+interface Ethernet5/9/1
+   description L2_green-leaf69_Ethernet53/1
+   no shutdown
+   channel-group 180 mode active
+!
+interface Ethernet5/10/1
+   description L2_green-leaf70_Ethernet53/1
+   no shutdown
+   channel-group 181 mode active
+!
+interface Ethernet5/11/1
+   description L2_green-leaf71_Ethernet53/1
+   no shutdown
+   channel-group 182 mode active
+!
+interface Ethernet5/12/1
+   description L2_green-leaf72_Ethernet53/1
+   no shutdown
+   channel-group 183 mode active
+!
+interface Ethernet5/13/1
+   description L2_green-leaf73_Ethernet53/1
+   no shutdown
+   channel-group 184 mode active
+!
+interface Ethernet5/14/1
+   description L2_green-leaf74_Ethernet53/1
+   no shutdown
+   channel-group 185 mode active
+!
+interface Ethernet5/15/1
+   description L2_green-leaf75_Ethernet53/1
+   no shutdown
+   channel-group 186 mode active
+!
+interface Ethernet5/16/1
+   description L2_green-leaf76_Ethernet53/1
+   no shutdown
+   channel-group 187 mode active
+!
+interface Ethernet5/17/1
+   description L2_green-leaf77_Ethernet53/1
+   no shutdown
+   channel-group 188 mode active
+!
+interface Ethernet5/18/1
+   description L2_green-leaf78_Ethernet53/1
+   no shutdown
+   channel-group 189 mode active
+!
+interface Ethernet5/19/1
+   description L2_green-leaf79_Ethernet53/1
+   no shutdown
+   channel-group 190 mode active
+!
+interface Ethernet5/20/1
+   description L2_green-leaf80_Ethernet53/1
+   no shutdown
+   channel-group 191 mode active
+!
+interface Ethernet5/21/1
+   description L2_green-leaf81_Ethernet53/1
+   no shutdown
+   channel-group 192 mode active
+!
+interface Ethernet5/22/1
+   description L2_green-leaf82_Ethernet53/1
+   no shutdown
+   channel-group 193 mode active
+!
+interface Ethernet5/23/1
+   description L2_green-leaf83_Ethernet53/1
+   no shutdown
+   channel-group 194 mode active
+!
+interface Ethernet5/24/1
+   description L2_green-leaf84_Ethernet53/1
+   no shutdown
+   channel-group 195 mode active
+!
+interface Ethernet5/25/1
+   description L2_green-leaf85_Ethernet53/1
+   no shutdown
+   channel-group 196 mode active
+!
+interface Ethernet5/26/1
+   description L2_green-leaf86_Ethernet53/1
+   no shutdown
+   channel-group 197 mode active
+!
+interface Ethernet5/27/1
+   description L2_green-leaf87_Ethernet53/1
+   no shutdown
+   channel-group 198 mode active
+!
+interface Ethernet5/28/1
+   description L2_green-leaf88_Ethernet53/1
+   no shutdown
+   channel-group 199 mode active
+!
+interface Ethernet5/29/1
+   description L2_green-leaf89_Ethernet53/1
+   no shutdown
+   channel-group 1100 mode active
+!
+interface Ethernet5/30/1
+   description L2_green-leaf90_Ethernet53/1
+   no shutdown
+   channel-group 1101 mode active
+!
+interface Ethernet5/31/1
+   description L2_green-leaf91_Ethernet53/1
+   no shutdown
+   channel-group 1102 mode active
+!
+interface Ethernet5/32/1
+   description L2_green-leaf92_Ethernet53/1
+   no shutdown
+   channel-group 1103 mode active
+!
+interface Ethernet6/1/1
+   description L2_green-leaf93_Ethernet53/1
+   no shutdown
+   channel-group 1104 mode active
+!
+interface Ethernet6/2/1
+   description L2_green-leaf94_Ethernet53/1
+   no shutdown
+   channel-group 1105 mode active
+!
+interface Ethernet6/3/1
+   description L2_green-leaf95_Ethernet53/1
+   no shutdown
+   channel-group 1106 mode active
+!
+interface Ethernet6/4/1
+   description L2_green-leaf96_Ethernet53/1
+   no shutdown
+   channel-group 1107 mode active
+!
+interface Ethernet6/5/1
+   description L2_green-leaf97_Ethernet53/1
+   no shutdown
+   channel-group 1108 mode active
+!
+interface Ethernet6/6/1
+   description L2_green-leaf98_Ethernet53/1
+   no shutdown
+   channel-group 1109 mode active
+!
+interface Ethernet6/7/1
+   description L2_green-leaf99_Ethernet53/1
+   no shutdown
+   channel-group 1110 mode active
+!
+interface Ethernet6/8/1
+   description L2_green-leaf100_Ethernet53/1
+   no shutdown
+   channel-group 1111 mode active
+!
+interface Ethernet6/9/1
+   description L2_green-leaf101_Ethernet53/1
+   no shutdown
+   channel-group 1112 mode active
+!
+interface Ethernet6/10/1
+   description L2_green-leaf102_Ethernet53/1
+   no shutdown
+   channel-group 1113 mode active
+!
+interface Ethernet6/11/1
+   description L2_green-leaf103_Ethernet53/1
+   no shutdown
+   channel-group 1114 mode active
+!
+interface Ethernet6/12/1
+   description L2_green-leaf104_Ethernet53/1
+   no shutdown
+   channel-group 1115 mode active
+!
+interface Ethernet6/13/1
+   description L2_green-leaf105_Ethernet53/1
+   no shutdown
+   channel-group 1116 mode active
+!
+interface Ethernet6/14/1
+   description L2_green-leaf106_Ethernet53/1
+   no shutdown
+   channel-group 1117 mode active
+!
+interface Ethernet6/15/1
+   description L2_green-leaf107_Ethernet53/1
+   no shutdown
+   channel-group 1118 mode active
+!
+interface Ethernet6/16/1
+   description L2_green-leaf108_Ethernet53/1
+   no shutdown
+   channel-group 1119 mode active
+!
+interface Ethernet6/17/1
+   description L2_green-leaf109_Ethernet53/1
+   no shutdown
+   channel-group 1120 mode active
+!
+interface Ethernet6/18/1
+   description L2_green-leaf110_Ethernet53/1
+   no shutdown
+   channel-group 1121 mode active
+!
+interface Ethernet6/19/1
+   description L2_green-leaf111_Ethernet53/1
+   no shutdown
+   channel-group 1122 mode active
+!
+interface Ethernet6/20/1
+   description L2_green-leaf112_Ethernet53/1
+   no shutdown
+   channel-group 1123 mode active
+!
+interface Ethernet6/21/1
+   description L2_green-leaf113_Ethernet53/1
+   no shutdown
+   channel-group 1124 mode active
+!
+interface Ethernet6/22/1
+   description L2_green-leaf114_Ethernet53/1
+   no shutdown
+   channel-group 1125 mode active
+!
+interface Ethernet6/23/1
+   description L2_green-leaf115_Ethernet53/1
+   no shutdown
+   channel-group 1126 mode active
+!
+interface Ethernet6/24/1
+   description L2_green-leaf116_Ethernet53/1
+   no shutdown
+   channel-group 1127 mode active
+!
+interface Ethernet6/25/1
+   description L2_green-leaf117_Ethernet53/1
+   no shutdown
+   channel-group 1128 mode active
+!
+interface Ethernet6/26/1
+   description L2_green-leaf118_Ethernet53/1
+   no shutdown
+   channel-group 1129 mode active
+!
+interface Ethernet6/27/1
+   description L2_green-leaf119_Ethernet53/1
+   no shutdown
+   channel-group 1130 mode active
+!
+interface Ethernet6/28/1
+   description L2_green-leaf120_Ethernet53/1
+   no shutdown
+   channel-group 1131 mode active
+!
+interface Ethernet6/29/1
+   description L2_green-leaf121_Ethernet53/1
+   no shutdown
+   channel-group 1132 mode active
+!
+interface Ethernet6/30/1
+   description L2_green-leaf122_Ethernet53/1
+   no shutdown
+   channel-group 1133 mode active
+!
+interface Ethernet6/31/1
+   description L2_green-leaf123_Ethernet53/1
+   no shutdown
+   channel-group 1134 mode active
+!
+interface Ethernet6/32/1
+   description L2_green-leaf124_Ethernet53/1
+   no shutdown
+   channel-group 1135 mode active
+!
+interface Ethernet7/1/1
+   description L2_green-leaf125_Ethernet53/1
+   no shutdown
+   channel-group 1136 mode active
+!
+interface Ethernet7/2/1
+   description L2_green-leaf126_Ethernet53/1
+   no shutdown
+   channel-group 1137 mode active
+!
+interface Ethernet7/3/1
+   description L2_green-leaf127_Ethernet53/1
+   no shutdown
+   channel-group 1138 mode active
+!
+interface Ethernet7/4/1
+   description L2_green-leaf128_Ethernet53/1
+   no shutdown
+   channel-group 1139 mode active
+!
+interface Ethernet7/5/1
+   description L2_green-leaf129_Ethernet53/1
+   no shutdown
+   channel-group 1140 mode active
+!
+interface Ethernet7/6/1
+   description L2_green-leaf130_Ethernet53/1
+   no shutdown
+   channel-group 1141 mode active
+!
+interface Ethernet7/7/1
+   description L2_green-leaf131_Ethernet53/1
+   no shutdown
+   channel-group 1142 mode active
+!
+interface Ethernet7/8/1
+   description L2_green-leaf132_Ethernet53/1
+   no shutdown
+   channel-group 1143 mode active
+!
+interface Ethernet7/9/1
+   description L2_green-leaf133_Ethernet53/1
+   no shutdown
+   channel-group 1144 mode active
+!
+interface Ethernet7/10/1
+   description L2_green-leaf134_Ethernet53/1
+   no shutdown
+   channel-group 1145 mode active
+!
+interface Ethernet7/11/1
+   description L2_green-leaf135_Ethernet53/1
+   no shutdown
+   channel-group 1146 mode active
+!
+interface Ethernet7/12/1
+   description L2_green-leaf136_Ethernet53/1
+   no shutdown
+   channel-group 1147 mode active
+!
+interface Ethernet7/13/1
+   description L2_green-leaf137_Ethernet53/1
+   no shutdown
+   channel-group 1148 mode active
+!
+interface Ethernet7/14/1
+   description L2_green-leaf138_Ethernet53/1
+   no shutdown
+   channel-group 1149 mode active
+!
+interface Ethernet7/15/1
+   description L2_green-leaf139_Ethernet53/1
+   no shutdown
+   channel-group 1150 mode active
+!
+interface Ethernet7/16/1
+   description L2_green-leaf140_Ethernet53/1
+   no shutdown
+   channel-group 1151 mode active
+!
+interface Ethernet7/17/1
+   description L2_green-leaf141_Ethernet53/1
+   no shutdown
+   channel-group 1152 mode active
+!
+interface Ethernet7/18/1
+   description L2_green-leaf142_Ethernet53/1
+   no shutdown
+   channel-group 1153 mode active
+!
+interface Ethernet7/19/1
+   description L2_green-leaf143_Ethernet53/1
+   no shutdown
+   channel-group 1154 mode active
+!
+interface Ethernet7/20/1
+   description L2_green-leaf144_Ethernet53/1
+   no shutdown
+   channel-group 1155 mode active
+!
+interface Ethernet7/21/1
+   description L2_green-leaf145_Ethernet53/1
+   no shutdown
+   channel-group 1156 mode active
+!
+interface Ethernet7/22/1
+   description L2_green-leaf146_Ethernet53/1
+   no shutdown
+   channel-group 1157 mode active
+!
+interface Ethernet7/23/1
+   description L2_green-leaf147_Ethernet53/1
+   no shutdown
+   channel-group 1158 mode active
+!
+interface Ethernet7/24/1
+   description L2_green-leaf148_Ethernet53/1
+   no shutdown
+   channel-group 1159 mode active
+!
+interface Ethernet7/25/1
+   description L2_green-leaf149_Ethernet53/1
+   no shutdown
+   channel-group 1160 mode active
+!
+interface Ethernet7/26/1
+   description L2_green-leaf150_Ethernet53/1
+   no shutdown
+   channel-group 1161 mode active
+!
+interface Ethernet7/27/1
+   description L2_green-leaf151_Ethernet53/1
+   no shutdown
+   channel-group 1162 mode active
+!
+interface Ethernet7/28/1
+   description L2_green-leaf152_Ethernet53/1
+   no shutdown
+   channel-group 1163 mode active
+!
+interface Ethernet7/29/1
+   description L2_green-leaf153_Ethernet53/1
+   no shutdown
+   channel-group 1164 mode active
+!
+interface Ethernet7/30/1
+   description L2_green-leaf154_Ethernet53/1
+   no shutdown
+   channel-group 1165 mode active
+!
+interface Ethernet7/31/1
+   description L2_green-leaf155_Ethernet53/1
+   no shutdown
+   channel-group 1166 mode active
+!
+interface Ethernet7/32/1
+   description L2_green-leaf156_Ethernet53/1
+   no shutdown
+   channel-group 1167 mode active
+!
+interface Ethernet8/1/1
+   description L2_green-leaf157_Ethernet53/1
+   no shutdown
+   channel-group 1168 mode active
+!
+interface Ethernet8/2/1
+   description L2_green-leaf158_Ethernet53/1
+   no shutdown
+   channel-group 1169 mode active
+!
+interface Ethernet8/3/1
+   description L2_green-leaf159_Ethernet53/1
+   no shutdown
+   channel-group 1170 mode active
+!
+interface Ethernet8/4/1
+   description L2_green-leaf160_Ethernet53/1
+   no shutdown
+   channel-group 1171 mode active
+!
+interface Ethernet8/5/1
+   description L2_green-leaf161_Ethernet53/1
+   no shutdown
+   channel-group 1172 mode active
+!
+interface Ethernet8/6/1
+   description L2_green-leaf162_Ethernet53/1
+   no shutdown
+   channel-group 1173 mode active
+!
+interface Ethernet8/7/1
+   description L2_green-leaf163_Ethernet53/1
+   no shutdown
+   channel-group 1174 mode active
+!
+interface Ethernet8/8/1
+   description L2_green-leaf164_Ethernet53/1
+   no shutdown
+   channel-group 1175 mode active
+!
+interface Ethernet8/9/1
+   description L2_green-leaf165_Ethernet53/1
+   no shutdown
+   channel-group 1176 mode active
+!
+interface Ethernet8/10/1
+   description L2_green-leaf166_Ethernet53/1
+   no shutdown
+   channel-group 1177 mode active
+!
+interface Ethernet8/11/1
+   description L2_green-leaf167_Ethernet53/1
+   no shutdown
+   channel-group 1178 mode active
+!
+interface Ethernet8/12/1
+   description L2_green-leaf168_Ethernet53/1
+   no shutdown
+   channel-group 1179 mode active
+!
+interface Ethernet8/13/1
+   description L2_green-leaf169_Ethernet53/1
+   no shutdown
+   channel-group 1180 mode active
+!
+interface Ethernet8/14/1
+   description L2_green-leaf170_Ethernet53/1
+   no shutdown
+   channel-group 1181 mode active
+!
+interface Ethernet8/15/1
+   description L2_green-leaf171_Ethernet53/1
+   no shutdown
+   channel-group 1182 mode active
+!
+interface Ethernet8/16/1
+   description L2_green-leaf172_Ethernet53/1
+   no shutdown
+   channel-group 1183 mode active
+!
+interface Ethernet8/17/1
+   description L2_green-leaf173_Ethernet53/1
+   no shutdown
+   channel-group 1184 mode active
+!
+interface Ethernet8/18/1
+   description L2_green-leaf174_Ethernet53/1
+   no shutdown
+   channel-group 1185 mode active
+!
+interface Ethernet8/19/1
+   description L2_green-leaf175_Ethernet53/1
+   no shutdown
+   channel-group 1186 mode active
+!
+interface Ethernet8/20/1
+   description L2_green-leaf176_Ethernet53/1
+   no shutdown
+   channel-group 1187 mode active
+!
+interface Ethernet8/21/1
+   description L2_green-leaf177_Ethernet53/1
+   no shutdown
+   channel-group 1188 mode active
+!
+interface Ethernet8/22/1
+   description L2_green-leaf178_Ethernet53/1
+   no shutdown
+   channel-group 1189 mode active
+!
+interface Ethernet8/23/1
+   description L2_green-leaf179_Ethernet53/1
+   no shutdown
+   channel-group 1190 mode active
+!
+interface Ethernet8/24/1
+   description L2_green-leaf180_Ethernet53/1
+   no shutdown
+   channel-group 1191 mode active
+!
+interface Ethernet8/25/1
+   description L2_green-leaf181_Ethernet53/1
+   no shutdown
+   channel-group 1192 mode active
+!
+interface Ethernet8/26/1
+   description L2_green-leaf182_Ethernet53/1
+   no shutdown
+   channel-group 1193 mode active
+!
+interface Ethernet8/27/1
+   description L2_green-leaf183_Ethernet53/1
+   no shutdown
+   channel-group 1194 mode active
 !
 interface Ethernet8/31/1
    description MLAG_green-spine2_Ethernet8/31/1
@@ -692,56 +1760,1658 @@ interface Ethernet8/32/1
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | LACP Fallback Timeout | LACP Fallback Mode | MLAG ID | EVPN ESI |
 | --------- | ----------- | ---- | ----- | ----------- | ------------| --------------------- | ------------------ | ------- | -------- |
-| Port-Channel351 | L2_green-leaf1_Port-Channel531 | trunk | 113,201-202 | - | - | - | - | 351 | - |
-| Port-Channel361 | L2_green-leaf2_Port-Channel531 | trunk | 113,202-204 | - | - | - | - | 361 | - |
-| Port-Channel371 | L2_green-leaf3_Port-Channel531 | trunk | 113,201,203,205,207,209 | - | - | - | - | 371 | - |
-| Port-Channel381 | L2_green-leaf4_Port-Channel531 | trunk | 113,202,204,206,208 | - | - | - | - | 381 | - |
-| Port-Channel391 | L2_green-leaf5_Port-Channel531 | trunk | 113,202-203 | - | - | - | - | 391 | - |
+| Port-Channel112 | L2_green-leaf1_Port-Channel12 | trunk | 113,201-202 | - | - | - | - | 112 | - |
+| Port-Channel113 | L2_green-leaf2_Port-Channel13 | trunk | 113,202-204 | - | - | - | - | 113 | - |
+| Port-Channel114 | L2_green-leaf3_Port-Channel14 | trunk | 113,201,203,205,207,209 | - | - | - | - | 114 | - |
+| Port-Channel115 | L2_green-leaf4_Port-Channel15 | trunk | 113,202,204,206,208 | - | - | - | - | 115 | - |
+| Port-Channel116 | L2_green-leaf5_Port-Channel16 | trunk | 113 | - | - | - | - | 116 | - |
+| Port-Channel117 | L2_green-leaf6_Port-Channel17 | trunk | 113,201,203-205,207-209 | - | - | - | - | 117 | - |
+| Port-Channel118 | L2_green-leaf7_Port-Channel18 | trunk | 113,201-207,209 | - | - | - | - | 118 | - |
+| Port-Channel119 | L2_green-leaf8_Port-Channel19 | trunk | 113,201-204,206-207,209 | - | - | - | - | 119 | - |
+| Port-Channel120 | L2_green-leaf9_Port-Channel20 | trunk | 113,201-204,206-207,209 | - | - | - | - | 120 | - |
+| Port-Channel121 | L2_green-leaf10_Port-Channel21 | trunk | 113,201-204,206-207,209 | - | - | - | - | 121 | - |
+| Port-Channel122 | L2_green-leaf11_Port-Channel22 | trunk | 113,201-204,206-207,209 | - | - | - | - | 122 | - |
+| Port-Channel123 | L2_green-leaf12_Port-Channel23 | trunk | 113,201-204,206,209 | - | - | - | - | 123 | - |
+| Port-Channel124 | L2_green-leaf13_Port-Channel24 | trunk | 113,201-204,206,209 | - | - | - | - | 124 | - |
+| Port-Channel125 | L2_green-leaf14_Port-Channel25 | trunk | 113,201-204,206,209 | - | - | - | - | 125 | - |
+| Port-Channel126 | L2_green-leaf15_Port-Channel26 | trunk | 113,201-204,206,209 | - | - | - | - | 126 | - |
+| Port-Channel127 | L2_green-leaf16_Port-Channel27 | trunk | 113,201-204,206,209 | - | - | - | - | 127 | - |
+| Port-Channel128 | L2_green-leaf17_Port-Channel28 | trunk | 113,201-204,206,209 | - | - | - | - | 128 | - |
+| Port-Channel129 | L2_green-leaf18_Port-Channel29 | trunk | 113,201-204,206,209 | - | - | - | - | 129 | - |
+| Port-Channel130 | L2_green-leaf19_Port-Channel30 | trunk | 113,201-204,206,209 | - | - | - | - | 130 | - |
+| Port-Channel131 | L2_green-leaf20_Port-Channel31 | trunk | 113,201-204,206,209 | - | - | - | - | 131 | - |
+| Port-Channel132 | L2_green-leaf21_Port-Channel32 | trunk | 113,201-204,206,209 | - | - | - | - | 132 | - |
+| Port-Channel133 | L2_green-leaf22_Port-Channel33 | trunk | 113,201-204,206,209 | - | - | - | - | 133 | - |
+| Port-Channel134 | L2_green-leaf23_Port-Channel34 | trunk | 113,201-204,206,209 | - | - | - | - | 134 | - |
+| Port-Channel135 | L2_green-leaf24_Port-Channel35 | trunk | 113,201-204,206,209 | - | - | - | - | 135 | - |
+| Port-Channel136 | L2_green-leaf25_Port-Channel36 | trunk | 113,201-204,206,209 | - | - | - | - | 136 | - |
+| Port-Channel137 | L2_green-leaf26_Port-Channel37 | trunk | 113,201-204,206,209 | - | - | - | - | 137 | - |
+| Port-Channel138 | L2_green-leaf27_Port-Channel38 | trunk | 113,201-204,206,209 | - | - | - | - | 138 | - |
+| Port-Channel139 | L2_green-leaf28_Port-Channel39 | trunk | 113,201-204,206,209 | - | - | - | - | 139 | - |
+| Port-Channel140 | L2_green-leaf29_Port-Channel40 | trunk | 113,201-204,206,209 | - | - | - | - | 140 | - |
+| Port-Channel141 | L2_green-leaf30_Port-Channel41 | trunk | 113,201-204,206,209 | - | - | - | - | 141 | - |
+| Port-Channel142 | L2_green-leaf31_Port-Channel42 | trunk | 113,201-204,206,209 | - | - | - | - | 142 | - |
+| Port-Channel143 | L2_green-leaf32_Port-Channel43 | trunk | 113,201-204,206,208-209 | - | - | - | - | 143 | - |
+| Port-Channel144 | L2_green-leaf33_Port-Channel44 | trunk | 113,201-204,206,208-209 | - | - | - | - | 144 | - |
+| Port-Channel145 | L2_green-leaf34_Port-Channel45 | trunk | 113,201-204,206,208-209 | - | - | - | - | 145 | - |
+| Port-Channel146 | L2_green-leaf35_Port-Channel46 | trunk | 113,201-204,206,208-209 | - | - | - | - | 146 | - |
+| Port-Channel147 | L2_green-leaf36_Port-Channel47 | trunk | 113,201-204,206,208-209 | - | - | - | - | 147 | - |
+| Port-Channel148 | L2_green-leaf37_Port-Channel48 | trunk | 113,201-204,206,208-209 | - | - | - | - | 148 | - |
+| Port-Channel149 | L2_green-leaf38_Port-Channel49 | trunk | 113,201-204,206,208 | - | - | - | - | 149 | - |
+| Port-Channel150 | L2_green-leaf39_Port-Channel50 | trunk | 113,201-204,208 | - | - | - | - | 150 | - |
+| Port-Channel151 | L2_green-leaf40_Port-Channel51 | trunk | 113,201-204,208 | - | - | - | - | 151 | - |
+| Port-Channel152 | L2_green-leaf41_Port-Channel52 | trunk | 113,201-204,208 | - | - | - | - | 152 | - |
+| Port-Channel153 | L2_green-leaf42_Port-Channel53 | trunk | 113,201-204,208 | - | - | - | - | 153 | - |
+| Port-Channel154 | L2_green-leaf43_Port-Channel54 | trunk | 113,201-204,208 | - | - | - | - | 154 | - |
+| Port-Channel155 | L2_green-leaf44_Port-Channel55 | trunk | 113,201-204,208 | - | - | - | - | 155 | - |
+| Port-Channel156 | L2_green-leaf45_Port-Channel56 | trunk | 113,201-204,208 | - | - | - | - | 156 | - |
+| Port-Channel157 | L2_green-leaf46_Port-Channel57 | trunk | 113,201-204,208 | - | - | - | - | 157 | - |
+| Port-Channel158 | L2_green-leaf47_Port-Channel58 | trunk | 113,201-204,208 | - | - | - | - | 158 | - |
+| Port-Channel159 | L2_green-leaf48_Port-Channel59 | trunk | 113,201-204,207-208 | - | - | - | - | 159 | - |
+| Port-Channel160 | L2_green-leaf49_Port-Channel60 | trunk | 113,201-204,207-208 | - | - | - | - | 160 | - |
+| Port-Channel161 | L2_green-leaf50_Port-Channel61 | trunk | 113,201-204,207-208 | - | - | - | - | 161 | - |
+| Port-Channel162 | L2_green-leaf51_Port-Channel62 | trunk | 113,201-204,207-208 | - | - | - | - | 162 | - |
+| Port-Channel163 | L2_green-leaf52_Port-Channel63 | trunk | 113,201-204,207-208 | - | - | - | - | 163 | - |
+| Port-Channel164 | L2_green-leaf53_Port-Channel64 | trunk | 113,201-204,207-208 | - | - | - | - | 164 | - |
+| Port-Channel165 | L2_green-leaf54_Port-Channel65 | trunk | 113,203-204,207-208 | - | - | - | - | 165 | - |
+| Port-Channel166 | L2_green-leaf55_Port-Channel66 | trunk | 113,203-204,207-208 | - | - | - | - | 166 | - |
+| Port-Channel167 | L2_green-leaf56_Port-Channel67 | trunk | 113,203-204,207-208 | - | - | - | - | 167 | - |
+| Port-Channel168 | L2_green-leaf57_Port-Channel68 | trunk | 113,203-204,207-208 | - | - | - | - | 168 | - |
+| Port-Channel169 | L2_green-leaf58_Port-Channel69 | trunk | 113,203-204,207-208 | - | - | - | - | 169 | - |
+| Port-Channel170 | L2_green-leaf59_Port-Channel70 | trunk | 113,203-204,207-208 | - | - | - | - | 170 | - |
+| Port-Channel171 | L2_green-leaf60_Port-Channel71 | trunk | 113,203-204,207-208 | - | - | - | - | 171 | - |
+| Port-Channel172 | L2_green-leaf61_Port-Channel72 | trunk | 113,203-204,207-208 | - | - | - | - | 172 | - |
+| Port-Channel173 | L2_green-leaf62_Port-Channel73 | trunk | 113,203-204,207-208 | - | - | - | - | 173 | - |
+| Port-Channel174 | L2_green-leaf63_Port-Channel74 | trunk | 113,203-204,207-208 | - | - | - | - | 174 | - |
+| Port-Channel175 | L2_green-leaf64_Port-Channel75 | trunk | 113,203-204,207-208 | - | - | - | - | 175 | - |
+| Port-Channel176 | L2_green-leaf65_Port-Channel76 | trunk | 113,203-204,207-208 | - | - | - | - | 176 | - |
+| Port-Channel177 | L2_green-leaf66_Port-Channel77 | trunk | 113,203-204,207-208 | - | - | - | - | 177 | - |
+| Port-Channel178 | L2_green-leaf67_Port-Channel78 | trunk | 113,203-204,207-208 | - | - | - | - | 178 | - |
+| Port-Channel179 | L2_green-leaf68_Port-Channel79 | trunk | 113,203-204,207-208 | - | - | - | - | 179 | - |
+| Port-Channel180 | L2_green-leaf69_Port-Channel80 | trunk | 113,203-204,207-208 | - | - | - | - | 180 | - |
+| Port-Channel181 | L2_green-leaf70_Port-Channel81 | trunk | 113,203-205,207-208 | - | - | - | - | 181 | - |
+| Port-Channel182 | L2_green-leaf71_Port-Channel82 | trunk | 113,203-205,207-208 | - | - | - | - | 182 | - |
+| Port-Channel183 | L2_green-leaf72_Port-Channel83 | trunk | 113,203-205,207-208 | - | - | - | - | 183 | - |
+| Port-Channel184 | L2_green-leaf73_Port-Channel84 | trunk | 113,203-205,207-208 | - | - | - | - | 184 | - |
+| Port-Channel185 | L2_green-leaf74_Port-Channel85 | trunk | 113,203-205,207-208 | - | - | - | - | 185 | - |
+| Port-Channel186 | L2_green-leaf75_Port-Channel86 | trunk | 113,203-205,207-208 | - | - | - | - | 186 | - |
+| Port-Channel187 | L2_green-leaf76_Port-Channel87 | trunk | 113,203-205,207-209 | - | - | - | - | 187 | - |
+| Port-Channel188 | L2_green-leaf77_Port-Channel88 | trunk | 113,203-205,207-209 | - | - | - | - | 188 | - |
+| Port-Channel189 | L2_green-leaf78_Port-Channel89 | trunk | 113,203-205,207-209 | - | - | - | - | 189 | - |
+| Port-Channel190 | L2_green-leaf79_Port-Channel90 | trunk | 113,203-205,207-209 | - | - | - | - | 190 | - |
+| Port-Channel191 | L2_green-leaf80_Port-Channel91 | trunk | 113,203-204,207-209 | - | - | - | - | 191 | - |
+| Port-Channel192 | L2_green-leaf81_Port-Channel92 | trunk | 113,203-204,207-209 | - | - | - | - | 192 | - |
+| Port-Channel193 | L2_green-leaf82_Port-Channel93 | trunk | 113,203-204,207-209 | - | - | - | - | 193 | - |
+| Port-Channel194 | L2_green-leaf83_Port-Channel94 | trunk | 113,203-204,207-209 | - | - | - | - | 194 | - |
+| Port-Channel195 | L2_green-leaf84_Port-Channel95 | trunk | 113,207-209 | - | - | - | - | 195 | - |
+| Port-Channel196 | L2_green-leaf85_Port-Channel96 | trunk | 113,207,209 | - | - | - | - | 196 | - |
+| Port-Channel197 | L2_green-leaf86_Port-Channel97 | trunk | 113,207,209 | - | - | - | - | 197 | - |
+| Port-Channel198 | L2_green-leaf87_Port-Channel98 | trunk | 113,207,209 | - | - | - | - | 198 | - |
+| Port-Channel199 | L2_green-leaf88_Port-Channel99 | trunk | 113,207,209 | - | - | - | - | 199 | - |
+| Port-Channel1100 | L2_green-leaf89_Port-Channel100 | trunk | 113,207,209 | - | - | - | - | 1100 | - |
+| Port-Channel1101 | L2_green-leaf90_Port-Channel101 | trunk | 113,207,209 | - | - | - | - | 1101 | - |
+| Port-Channel1102 | L2_green-leaf91_Port-Channel102 | trunk | 113,207,209 | - | - | - | - | 1102 | - |
+| Port-Channel1103 | L2_green-leaf92_Port-Channel103 | trunk | 113,207,209 | - | - | - | - | 1103 | - |
+| Port-Channel1104 | L2_green-leaf93_Port-Channel104 | trunk | 113,207,209 | - | - | - | - | 1104 | - |
+| Port-Channel1105 | L2_green-leaf94_Port-Channel105 | trunk | 113,207,209 | - | - | - | - | 1105 | - |
+| Port-Channel1106 | L2_green-leaf95_Port-Channel106 | trunk | 113,207,209 | - | - | - | - | 1106 | - |
+| Port-Channel1107 | L2_green-leaf96_Port-Channel107 | trunk | 113,205,207,209 | - | - | - | - | 1107 | - |
+| Port-Channel1108 | L2_green-leaf97_Port-Channel108 | trunk | 113,205,207,209 | - | - | - | - | 1108 | - |
+| Port-Channel1109 | L2_green-leaf98_Port-Channel109 | trunk | 113,205,207,209 | - | - | - | - | 1109 | - |
+| Port-Channel1110 | L2_green-leaf99_Port-Channel110 | trunk | 113,205,207,209 | - | - | - | - | 1110 | - |
+| Port-Channel1111 | L2_green-leaf100_Port-Channel111 | trunk | 113,205,207,209 | - | - | - | - | 1111 | - |
+| Port-Channel1112 | L2_green-leaf101_Port-Channel112 | trunk | 113,205,207,209 | - | - | - | - | 1112 | - |
+| Port-Channel1113 | L2_green-leaf102_Port-Channel113 | trunk | 113,205,207,209 | - | - | - | - | 1113 | - |
+| Port-Channel1114 | L2_green-leaf103_Port-Channel114 | trunk | 113,205,207,209 | - | - | - | - | 1114 | - |
+| Port-Channel1115 | L2_green-leaf104_Port-Channel115 | trunk | 113,205,207,209 | - | - | - | - | 1115 | - |
+| Port-Channel1116 | L2_green-leaf105_Port-Channel116 | trunk | 113,205,207,209 | - | - | - | - | 1116 | - |
+| Port-Channel1117 | L2_green-leaf106_Port-Channel117 | trunk | 113,205,207,209 | - | - | - | - | 1117 | - |
+| Port-Channel1118 | L2_green-leaf107_Port-Channel118 | trunk | 113,205,207 | - | - | - | - | 1118 | - |
+| Port-Channel1119 | L2_green-leaf108_Port-Channel119 | trunk | 113,205,207 | - | - | - | - | 1119 | - |
+| Port-Channel1120 | L2_green-leaf109_Port-Channel120 | trunk | 113,205,207 | - | - | - | - | 1120 | - |
+| Port-Channel1121 | L2_green-leaf110_Port-Channel121 | trunk | 113,205,207 | - | - | - | - | 1121 | - |
+| Port-Channel1122 | L2_green-leaf111_Port-Channel122 | trunk | 113,205,207 | - | - | - | - | 1122 | - |
+| Port-Channel1123 | L2_green-leaf112_Port-Channel123 | trunk | 113,205,207 | - | - | - | - | 1123 | - |
+| Port-Channel1124 | L2_green-leaf113_Port-Channel124 | trunk | 113,203-205,207 | - | - | - | - | 1124 | - |
+| Port-Channel1125 | L2_green-leaf114_Port-Channel125 | trunk | 113,203-205,207 | - | - | - | - | 1125 | - |
+| Port-Channel1126 | L2_green-leaf115_Port-Channel126 | trunk | 113,203-205,207 | - | - | - | - | 1126 | - |
+| Port-Channel1127 | L2_green-leaf116_Port-Channel127 | trunk | 113,201-205,207 | - | - | - | - | 1127 | - |
+| Port-Channel1128 | L2_green-leaf117_Port-Channel128 | trunk | 113,201-205,207 | - | - | - | - | 1128 | - |
+| Port-Channel1129 | L2_green-leaf118_Port-Channel129 | trunk | 113,201-205,207 | - | - | - | - | 1129 | - |
+| Port-Channel1130 | L2_green-leaf119_Port-Channel130 | trunk | 113,201-205,207 | - | - | - | - | 1130 | - |
+| Port-Channel1131 | L2_green-leaf120_Port-Channel131 | trunk | 113,201,204-205,207 | - | - | - | - | 1131 | - |
+| Port-Channel1132 | L2_green-leaf121_Port-Channel132 | trunk | 113,201,204-205,207 | - | - | - | - | 1132 | - |
+| Port-Channel1133 | L2_green-leaf122_Port-Channel133 | trunk | 113,201,204-205,207 | - | - | - | - | 1133 | - |
+| Port-Channel1134 | L2_green-leaf123_Port-Channel134 | trunk | 113,201,204-205,207 | - | - | - | - | 1134 | - |
+| Port-Channel1135 | L2_green-leaf124_Port-Channel135 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1135 | - |
+| Port-Channel1136 | L2_green-leaf125_Port-Channel136 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1136 | - |
+| Port-Channel1137 | L2_green-leaf126_Port-Channel137 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1137 | - |
+| Port-Channel1138 | L2_green-leaf127_Port-Channel138 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1138 | - |
+| Port-Channel1139 | L2_green-leaf128_Port-Channel139 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1139 | - |
+| Port-Channel1140 | L2_green-leaf129_Port-Channel140 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1140 | - |
+| Port-Channel1141 | L2_green-leaf130_Port-Channel141 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1141 | - |
+| Port-Channel1142 | L2_green-leaf131_Port-Channel142 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1142 | - |
+| Port-Channel1143 | L2_green-leaf132_Port-Channel143 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1143 | - |
+| Port-Channel1144 | L2_green-leaf133_Port-Channel144 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1144 | - |
+| Port-Channel1145 | L2_green-leaf134_Port-Channel145 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1145 | - |
+| Port-Channel1146 | L2_green-leaf135_Port-Channel146 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1146 | - |
+| Port-Channel1147 | L2_green-leaf136_Port-Channel147 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1147 | - |
+| Port-Channel1148 | L2_green-leaf137_Port-Channel148 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1148 | - |
+| Port-Channel1149 | L2_green-leaf138_Port-Channel149 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1149 | - |
+| Port-Channel1150 | L2_green-leaf139_Port-Channel150 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1150 | - |
+| Port-Channel1151 | L2_green-leaf140_Port-Channel151 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1151 | - |
+| Port-Channel1152 | L2_green-leaf141_Port-Channel152 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1152 | - |
+| Port-Channel1153 | L2_green-leaf142_Port-Channel153 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1153 | - |
+| Port-Channel1154 | L2_green-leaf143_Port-Channel154 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1154 | - |
+| Port-Channel1155 | L2_green-leaf144_Port-Channel155 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1155 | - |
+| Port-Channel1156 | L2_green-leaf145_Port-Channel156 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1156 | - |
+| Port-Channel1157 | L2_green-leaf146_Port-Channel157 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1157 | - |
+| Port-Channel1158 | L2_green-leaf147_Port-Channel158 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1158 | - |
+| Port-Channel1159 | L2_green-leaf148_Port-Channel159 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1159 | - |
+| Port-Channel1160 | L2_green-leaf149_Port-Channel160 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1160 | - |
+| Port-Channel1161 | L2_green-leaf150_Port-Channel161 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1161 | - |
+| Port-Channel1162 | L2_green-leaf151_Port-Channel162 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1162 | - |
+| Port-Channel1163 | L2_green-leaf152_Port-Channel163 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1163 | - |
+| Port-Channel1164 | L2_green-leaf153_Port-Channel164 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1164 | - |
+| Port-Channel1165 | L2_green-leaf154_Port-Channel165 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1165 | - |
+| Port-Channel1166 | L2_green-leaf155_Port-Channel166 | trunk | 113,201,204-205,207-208 | - | - | - | - | 1166 | - |
+| Port-Channel1167 | L2_green-leaf156_Port-Channel167 | trunk | 113,201,204,207-208 | - | - | - | - | 1167 | - |
+| Port-Channel1168 | L2_green-leaf157_Port-Channel168 | trunk | 113,201,204,207-208 | - | - | - | - | 1168 | - |
+| Port-Channel1169 | L2_green-leaf158_Port-Channel169 | trunk | 113,201,204,207-208 | - | - | - | - | 1169 | - |
+| Port-Channel1170 | L2_green-leaf159_Port-Channel170 | trunk | 113,201,204,207-208 | - | - | - | - | 1170 | - |
+| Port-Channel1171 | L2_green-leaf160_Port-Channel171 | trunk | 113,201,204,207-208 | - | - | - | - | 1171 | - |
+| Port-Channel1172 | L2_green-leaf161_Port-Channel172 | trunk | 113,201,204,207-208 | - | - | - | - | 1172 | - |
+| Port-Channel1173 | L2_green-leaf162_Port-Channel173 | trunk | 113,201,204,207-208 | - | - | - | - | 1173 | - |
+| Port-Channel1174 | L2_green-leaf163_Port-Channel174 | trunk | 113,201,204,207-208 | - | - | - | - | 1174 | - |
+| Port-Channel1175 | L2_green-leaf164_Port-Channel175 | trunk | 113,201,204,207-208 | - | - | - | - | 1175 | - |
+| Port-Channel1176 | L2_green-leaf165_Port-Channel176 | trunk | 113,201,204,206-208 | - | - | - | - | 1176 | - |
+| Port-Channel1177 | L2_green-leaf166_Port-Channel177 | trunk | 113,201,204,206-208 | - | - | - | - | 1177 | - |
+| Port-Channel1178 | L2_green-leaf167_Port-Channel178 | trunk | 113,201,204,206-208 | - | - | - | - | 1178 | - |
+| Port-Channel1179 | L2_green-leaf168_Port-Channel179 | trunk | 113,201,204,206-208 | - | - | - | - | 1179 | - |
+| Port-Channel1180 | L2_green-leaf169_Port-Channel180 | trunk | 113,201,204,206-208 | - | - | - | - | 1180 | - |
+| Port-Channel1181 | L2_green-leaf170_Port-Channel181 | trunk | 113,201,204,206-208 | - | - | - | - | 1181 | - |
+| Port-Channel1182 | L2_green-leaf171_Port-Channel182 | trunk | 113,201,204,206-208 | - | - | - | - | 1182 | - |
+| Port-Channel1183 | L2_green-leaf172_Port-Channel183 | trunk | 113,201,204,206-208 | - | - | - | - | 1183 | - |
+| Port-Channel1184 | L2_green-leaf173_Port-Channel184 | trunk | 113,201,204,206-208 | - | - | - | - | 1184 | - |
+| Port-Channel1185 | L2_green-leaf174_Port-Channel185 | trunk | 113,201,204,206-208 | - | - | - | - | 1185 | - |
+| Port-Channel1186 | L2_green-leaf175_Port-Channel186 | trunk | 113,201,204,206-208 | - | - | - | - | 1186 | - |
+| Port-Channel1187 | L2_green-leaf176_Port-Channel187 | trunk | 113,201,204,206-208 | - | - | - | - | 1187 | - |
+| Port-Channel1188 | L2_green-leaf177_Port-Channel188 | trunk | 113,201,204,206-208 | - | - | - | - | 1188 | - |
+| Port-Channel1189 | L2_green-leaf178_Port-Channel189 | trunk | 113,201,204,206-208 | - | - | - | - | 1189 | - |
+| Port-Channel1190 | L2_green-leaf179_Port-Channel190 | trunk | 113,201,204,206-208 | - | - | - | - | 1190 | - |
+| Port-Channel1191 | L2_green-leaf180_Port-Channel191 | trunk | 113,201,204,206-208 | - | - | - | - | 1191 | - |
+| Port-Channel1192 | L2_green-leaf181_Port-Channel192 | trunk | 113,201,204,206-208 | - | - | - | - | 1192 | - |
+| Port-Channel1193 | L2_green-leaf182_Port-Channel193 | trunk | 113,201,204,206-208 | - | - | - | - | 1193 | - |
+| Port-Channel1194 | L2_green-leaf183_Port-Channel194 | trunk | 113,201,204,206-208 | - | - | - | - | 1194 | - |
 | Port-Channel8311 | MLAG_green-spine2_Port-Channel8311 | trunk | - | - | MLAG | - | - | - | - |
 
 #### Port-Channel Interfaces Device Configuration
 
 ```eos
 !
-interface Port-Channel351
-   description L2_green-leaf1_Port-Channel531
+interface Port-Channel112
+   description L2_green-leaf1_Port-Channel12
    no shutdown
    switchport trunk allowed vlan 113,201-202
    switchport mode trunk
    switchport
-   mlag 351
+   mlag 112
 !
-interface Port-Channel361
-   description L2_green-leaf2_Port-Channel531
+interface Port-Channel113
+   description L2_green-leaf2_Port-Channel13
    no shutdown
    switchport trunk allowed vlan 113,202-204
    switchport mode trunk
    switchport
-   mlag 361
+   mlag 113
 !
-interface Port-Channel371
-   description L2_green-leaf3_Port-Channel531
+interface Port-Channel114
+   description L2_green-leaf3_Port-Channel14
    no shutdown
    switchport trunk allowed vlan 113,201,203,205,207,209
    switchport mode trunk
    switchport
-   mlag 371
+   mlag 114
 !
-interface Port-Channel381
-   description L2_green-leaf4_Port-Channel531
+interface Port-Channel115
+   description L2_green-leaf4_Port-Channel15
    no shutdown
    switchport trunk allowed vlan 113,202,204,206,208
    switchport mode trunk
    switchport
-   mlag 381
+   mlag 115
 !
-interface Port-Channel391
-   description L2_green-leaf5_Port-Channel531
+interface Port-Channel116
+   description L2_green-leaf5_Port-Channel16
    no shutdown
-   switchport trunk allowed vlan 113,202-203
+   switchport trunk allowed vlan 113
    switchport mode trunk
    switchport
-   mlag 391
+   mlag 116
+!
+interface Port-Channel117
+   description L2_green-leaf6_Port-Channel17
+   no shutdown
+   switchport trunk allowed vlan 113,201,203-205,207-209
+   switchport mode trunk
+   switchport
+   mlag 117
+!
+interface Port-Channel118
+   description L2_green-leaf7_Port-Channel18
+   no shutdown
+   switchport trunk allowed vlan 113,201-207,209
+   switchport mode trunk
+   switchport
+   mlag 118
+!
+interface Port-Channel119
+   description L2_green-leaf8_Port-Channel19
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206-207,209
+   switchport mode trunk
+   switchport
+   mlag 119
+!
+interface Port-Channel120
+   description L2_green-leaf9_Port-Channel20
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206-207,209
+   switchport mode trunk
+   switchport
+   mlag 120
+!
+interface Port-Channel121
+   description L2_green-leaf10_Port-Channel21
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206-207,209
+   switchport mode trunk
+   switchport
+   mlag 121
+!
+interface Port-Channel122
+   description L2_green-leaf11_Port-Channel22
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206-207,209
+   switchport mode trunk
+   switchport
+   mlag 122
+!
+interface Port-Channel123
+   description L2_green-leaf12_Port-Channel23
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 123
+!
+interface Port-Channel124
+   description L2_green-leaf13_Port-Channel24
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 124
+!
+interface Port-Channel125
+   description L2_green-leaf14_Port-Channel25
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 125
+!
+interface Port-Channel126
+   description L2_green-leaf15_Port-Channel26
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 126
+!
+interface Port-Channel127
+   description L2_green-leaf16_Port-Channel27
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 127
+!
+interface Port-Channel128
+   description L2_green-leaf17_Port-Channel28
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 128
+!
+interface Port-Channel129
+   description L2_green-leaf18_Port-Channel29
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 129
+!
+interface Port-Channel130
+   description L2_green-leaf19_Port-Channel30
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 130
+!
+interface Port-Channel131
+   description L2_green-leaf20_Port-Channel31
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 131
+!
+interface Port-Channel132
+   description L2_green-leaf21_Port-Channel32
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 132
+!
+interface Port-Channel133
+   description L2_green-leaf22_Port-Channel33
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 133
+!
+interface Port-Channel134
+   description L2_green-leaf23_Port-Channel34
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 134
+!
+interface Port-Channel135
+   description L2_green-leaf24_Port-Channel35
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 135
+!
+interface Port-Channel136
+   description L2_green-leaf25_Port-Channel36
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 136
+!
+interface Port-Channel137
+   description L2_green-leaf26_Port-Channel37
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 137
+!
+interface Port-Channel138
+   description L2_green-leaf27_Port-Channel38
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 138
+!
+interface Port-Channel139
+   description L2_green-leaf28_Port-Channel39
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 139
+!
+interface Port-Channel140
+   description L2_green-leaf29_Port-Channel40
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 140
+!
+interface Port-Channel141
+   description L2_green-leaf30_Port-Channel41
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 141
+!
+interface Port-Channel142
+   description L2_green-leaf31_Port-Channel42
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,209
+   switchport mode trunk
+   switchport
+   mlag 142
+!
+interface Port-Channel143
+   description L2_green-leaf32_Port-Channel43
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,208-209
+   switchport mode trunk
+   switchport
+   mlag 143
+!
+interface Port-Channel144
+   description L2_green-leaf33_Port-Channel44
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,208-209
+   switchport mode trunk
+   switchport
+   mlag 144
+!
+interface Port-Channel145
+   description L2_green-leaf34_Port-Channel45
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,208-209
+   switchport mode trunk
+   switchport
+   mlag 145
+!
+interface Port-Channel146
+   description L2_green-leaf35_Port-Channel46
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,208-209
+   switchport mode trunk
+   switchport
+   mlag 146
+!
+interface Port-Channel147
+   description L2_green-leaf36_Port-Channel47
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,208-209
+   switchport mode trunk
+   switchport
+   mlag 147
+!
+interface Port-Channel148
+   description L2_green-leaf37_Port-Channel48
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,208-209
+   switchport mode trunk
+   switchport
+   mlag 148
+!
+interface Port-Channel149
+   description L2_green-leaf38_Port-Channel49
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,206,208
+   switchport mode trunk
+   switchport
+   mlag 149
+!
+interface Port-Channel150
+   description L2_green-leaf39_Port-Channel50
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,208
+   switchport mode trunk
+   switchport
+   mlag 150
+!
+interface Port-Channel151
+   description L2_green-leaf40_Port-Channel51
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,208
+   switchport mode trunk
+   switchport
+   mlag 151
+!
+interface Port-Channel152
+   description L2_green-leaf41_Port-Channel52
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,208
+   switchport mode trunk
+   switchport
+   mlag 152
+!
+interface Port-Channel153
+   description L2_green-leaf42_Port-Channel53
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,208
+   switchport mode trunk
+   switchport
+   mlag 153
+!
+interface Port-Channel154
+   description L2_green-leaf43_Port-Channel54
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,208
+   switchport mode trunk
+   switchport
+   mlag 154
+!
+interface Port-Channel155
+   description L2_green-leaf44_Port-Channel55
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,208
+   switchport mode trunk
+   switchport
+   mlag 155
+!
+interface Port-Channel156
+   description L2_green-leaf45_Port-Channel56
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,208
+   switchport mode trunk
+   switchport
+   mlag 156
+!
+interface Port-Channel157
+   description L2_green-leaf46_Port-Channel57
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,208
+   switchport mode trunk
+   switchport
+   mlag 157
+!
+interface Port-Channel158
+   description L2_green-leaf47_Port-Channel58
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,208
+   switchport mode trunk
+   switchport
+   mlag 158
+!
+interface Port-Channel159
+   description L2_green-leaf48_Port-Channel59
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 159
+!
+interface Port-Channel160
+   description L2_green-leaf49_Port-Channel60
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 160
+!
+interface Port-Channel161
+   description L2_green-leaf50_Port-Channel61
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 161
+!
+interface Port-Channel162
+   description L2_green-leaf51_Port-Channel62
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 162
+!
+interface Port-Channel163
+   description L2_green-leaf52_Port-Channel63
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 163
+!
+interface Port-Channel164
+   description L2_green-leaf53_Port-Channel64
+   no shutdown
+   switchport trunk allowed vlan 113,201-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 164
+!
+interface Port-Channel165
+   description L2_green-leaf54_Port-Channel65
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 165
+!
+interface Port-Channel166
+   description L2_green-leaf55_Port-Channel66
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 166
+!
+interface Port-Channel167
+   description L2_green-leaf56_Port-Channel67
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 167
+!
+interface Port-Channel168
+   description L2_green-leaf57_Port-Channel68
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 168
+!
+interface Port-Channel169
+   description L2_green-leaf58_Port-Channel69
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 169
+!
+interface Port-Channel170
+   description L2_green-leaf59_Port-Channel70
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 170
+!
+interface Port-Channel171
+   description L2_green-leaf60_Port-Channel71
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 171
+!
+interface Port-Channel172
+   description L2_green-leaf61_Port-Channel72
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 172
+!
+interface Port-Channel173
+   description L2_green-leaf62_Port-Channel73
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 173
+!
+interface Port-Channel174
+   description L2_green-leaf63_Port-Channel74
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 174
+!
+interface Port-Channel175
+   description L2_green-leaf64_Port-Channel75
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 175
+!
+interface Port-Channel176
+   description L2_green-leaf65_Port-Channel76
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 176
+!
+interface Port-Channel177
+   description L2_green-leaf66_Port-Channel77
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 177
+!
+interface Port-Channel178
+   description L2_green-leaf67_Port-Channel78
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 178
+!
+interface Port-Channel179
+   description L2_green-leaf68_Port-Channel79
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 179
+!
+interface Port-Channel180
+   description L2_green-leaf69_Port-Channel80
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-208
+   switchport mode trunk
+   switchport
+   mlag 180
+!
+interface Port-Channel181
+   description L2_green-leaf70_Port-Channel81
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 181
+!
+interface Port-Channel182
+   description L2_green-leaf71_Port-Channel82
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 182
+!
+interface Port-Channel183
+   description L2_green-leaf72_Port-Channel83
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 183
+!
+interface Port-Channel184
+   description L2_green-leaf73_Port-Channel84
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 184
+!
+interface Port-Channel185
+   description L2_green-leaf74_Port-Channel85
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 185
+!
+interface Port-Channel186
+   description L2_green-leaf75_Port-Channel86
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 186
+!
+interface Port-Channel187
+   description L2_green-leaf76_Port-Channel87
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-209
+   switchport mode trunk
+   switchport
+   mlag 187
+!
+interface Port-Channel188
+   description L2_green-leaf77_Port-Channel88
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-209
+   switchport mode trunk
+   switchport
+   mlag 188
+!
+interface Port-Channel189
+   description L2_green-leaf78_Port-Channel89
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-209
+   switchport mode trunk
+   switchport
+   mlag 189
+!
+interface Port-Channel190
+   description L2_green-leaf79_Port-Channel90
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207-209
+   switchport mode trunk
+   switchport
+   mlag 190
+!
+interface Port-Channel191
+   description L2_green-leaf80_Port-Channel91
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-209
+   switchport mode trunk
+   switchport
+   mlag 191
+!
+interface Port-Channel192
+   description L2_green-leaf81_Port-Channel92
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-209
+   switchport mode trunk
+   switchport
+   mlag 192
+!
+interface Port-Channel193
+   description L2_green-leaf82_Port-Channel93
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-209
+   switchport mode trunk
+   switchport
+   mlag 193
+!
+interface Port-Channel194
+   description L2_green-leaf83_Port-Channel94
+   no shutdown
+   switchport trunk allowed vlan 113,203-204,207-209
+   switchport mode trunk
+   switchport
+   mlag 194
+!
+interface Port-Channel195
+   description L2_green-leaf84_Port-Channel95
+   no shutdown
+   switchport trunk allowed vlan 113,207-209
+   switchport mode trunk
+   switchport
+   mlag 195
+!
+interface Port-Channel196
+   description L2_green-leaf85_Port-Channel96
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 196
+!
+interface Port-Channel197
+   description L2_green-leaf86_Port-Channel97
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 197
+!
+interface Port-Channel198
+   description L2_green-leaf87_Port-Channel98
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 198
+!
+interface Port-Channel199
+   description L2_green-leaf88_Port-Channel99
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 199
+!
+interface Port-Channel1100
+   description L2_green-leaf89_Port-Channel100
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 1100
+!
+interface Port-Channel1101
+   description L2_green-leaf90_Port-Channel101
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 1101
+!
+interface Port-Channel1102
+   description L2_green-leaf91_Port-Channel102
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 1102
+!
+interface Port-Channel1103
+   description L2_green-leaf92_Port-Channel103
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 1103
+!
+interface Port-Channel1104
+   description L2_green-leaf93_Port-Channel104
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 1104
+!
+interface Port-Channel1105
+   description L2_green-leaf94_Port-Channel105
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 1105
+!
+interface Port-Channel1106
+   description L2_green-leaf95_Port-Channel106
+   no shutdown
+   switchport trunk allowed vlan 113,207,209
+   switchport mode trunk
+   switchport
+   mlag 1106
+!
+interface Port-Channel1107
+   description L2_green-leaf96_Port-Channel107
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1107
+!
+interface Port-Channel1108
+   description L2_green-leaf97_Port-Channel108
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1108
+!
+interface Port-Channel1109
+   description L2_green-leaf98_Port-Channel109
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1109
+!
+interface Port-Channel1110
+   description L2_green-leaf99_Port-Channel110
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1110
+!
+interface Port-Channel1111
+   description L2_green-leaf100_Port-Channel111
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1111
+!
+interface Port-Channel1112
+   description L2_green-leaf101_Port-Channel112
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1112
+!
+interface Port-Channel1113
+   description L2_green-leaf102_Port-Channel113
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1113
+!
+interface Port-Channel1114
+   description L2_green-leaf103_Port-Channel114
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1114
+!
+interface Port-Channel1115
+   description L2_green-leaf104_Port-Channel115
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1115
+!
+interface Port-Channel1116
+   description L2_green-leaf105_Port-Channel116
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1116
+!
+interface Port-Channel1117
+   description L2_green-leaf106_Port-Channel117
+   no shutdown
+   switchport trunk allowed vlan 113,205,207,209
+   switchport mode trunk
+   switchport
+   mlag 1117
+!
+interface Port-Channel1118
+   description L2_green-leaf107_Port-Channel118
+   no shutdown
+   switchport trunk allowed vlan 113,205,207
+   switchport mode trunk
+   switchport
+   mlag 1118
+!
+interface Port-Channel1119
+   description L2_green-leaf108_Port-Channel119
+   no shutdown
+   switchport trunk allowed vlan 113,205,207
+   switchport mode trunk
+   switchport
+   mlag 1119
+!
+interface Port-Channel1120
+   description L2_green-leaf109_Port-Channel120
+   no shutdown
+   switchport trunk allowed vlan 113,205,207
+   switchport mode trunk
+   switchport
+   mlag 1120
+!
+interface Port-Channel1121
+   description L2_green-leaf110_Port-Channel121
+   no shutdown
+   switchport trunk allowed vlan 113,205,207
+   switchport mode trunk
+   switchport
+   mlag 1121
+!
+interface Port-Channel1122
+   description L2_green-leaf111_Port-Channel122
+   no shutdown
+   switchport trunk allowed vlan 113,205,207
+   switchport mode trunk
+   switchport
+   mlag 1122
+!
+interface Port-Channel1123
+   description L2_green-leaf112_Port-Channel123
+   no shutdown
+   switchport trunk allowed vlan 113,205,207
+   switchport mode trunk
+   switchport
+   mlag 1123
+!
+interface Port-Channel1124
+   description L2_green-leaf113_Port-Channel124
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207
+   switchport mode trunk
+   switchport
+   mlag 1124
+!
+interface Port-Channel1125
+   description L2_green-leaf114_Port-Channel125
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207
+   switchport mode trunk
+   switchport
+   mlag 1125
+!
+interface Port-Channel1126
+   description L2_green-leaf115_Port-Channel126
+   no shutdown
+   switchport trunk allowed vlan 113,203-205,207
+   switchport mode trunk
+   switchport
+   mlag 1126
+!
+interface Port-Channel1127
+   description L2_green-leaf116_Port-Channel127
+   no shutdown
+   switchport trunk allowed vlan 113,201-205,207
+   switchport mode trunk
+   switchport
+   mlag 1127
+!
+interface Port-Channel1128
+   description L2_green-leaf117_Port-Channel128
+   no shutdown
+   switchport trunk allowed vlan 113,201-205,207
+   switchport mode trunk
+   switchport
+   mlag 1128
+!
+interface Port-Channel1129
+   description L2_green-leaf118_Port-Channel129
+   no shutdown
+   switchport trunk allowed vlan 113,201-205,207
+   switchport mode trunk
+   switchport
+   mlag 1129
+!
+interface Port-Channel1130
+   description L2_green-leaf119_Port-Channel130
+   no shutdown
+   switchport trunk allowed vlan 113,201-205,207
+   switchport mode trunk
+   switchport
+   mlag 1130
+!
+interface Port-Channel1131
+   description L2_green-leaf120_Port-Channel131
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207
+   switchport mode trunk
+   switchport
+   mlag 1131
+!
+interface Port-Channel1132
+   description L2_green-leaf121_Port-Channel132
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207
+   switchport mode trunk
+   switchport
+   mlag 1132
+!
+interface Port-Channel1133
+   description L2_green-leaf122_Port-Channel133
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207
+   switchport mode trunk
+   switchport
+   mlag 1133
+!
+interface Port-Channel1134
+   description L2_green-leaf123_Port-Channel134
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207
+   switchport mode trunk
+   switchport
+   mlag 1134
+!
+interface Port-Channel1135
+   description L2_green-leaf124_Port-Channel135
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1135
+!
+interface Port-Channel1136
+   description L2_green-leaf125_Port-Channel136
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1136
+!
+interface Port-Channel1137
+   description L2_green-leaf126_Port-Channel137
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1137
+!
+interface Port-Channel1138
+   description L2_green-leaf127_Port-Channel138
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1138
+!
+interface Port-Channel1139
+   description L2_green-leaf128_Port-Channel139
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1139
+!
+interface Port-Channel1140
+   description L2_green-leaf129_Port-Channel140
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1140
+!
+interface Port-Channel1141
+   description L2_green-leaf130_Port-Channel141
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1141
+!
+interface Port-Channel1142
+   description L2_green-leaf131_Port-Channel142
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1142
+!
+interface Port-Channel1143
+   description L2_green-leaf132_Port-Channel143
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1143
+!
+interface Port-Channel1144
+   description L2_green-leaf133_Port-Channel144
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1144
+!
+interface Port-Channel1145
+   description L2_green-leaf134_Port-Channel145
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1145
+!
+interface Port-Channel1146
+   description L2_green-leaf135_Port-Channel146
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1146
+!
+interface Port-Channel1147
+   description L2_green-leaf136_Port-Channel147
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1147
+!
+interface Port-Channel1148
+   description L2_green-leaf137_Port-Channel148
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1148
+!
+interface Port-Channel1149
+   description L2_green-leaf138_Port-Channel149
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1149
+!
+interface Port-Channel1150
+   description L2_green-leaf139_Port-Channel150
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1150
+!
+interface Port-Channel1151
+   description L2_green-leaf140_Port-Channel151
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1151
+!
+interface Port-Channel1152
+   description L2_green-leaf141_Port-Channel152
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1152
+!
+interface Port-Channel1153
+   description L2_green-leaf142_Port-Channel153
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1153
+!
+interface Port-Channel1154
+   description L2_green-leaf143_Port-Channel154
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1154
+!
+interface Port-Channel1155
+   description L2_green-leaf144_Port-Channel155
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1155
+!
+interface Port-Channel1156
+   description L2_green-leaf145_Port-Channel156
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1156
+!
+interface Port-Channel1157
+   description L2_green-leaf146_Port-Channel157
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1157
+!
+interface Port-Channel1158
+   description L2_green-leaf147_Port-Channel158
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1158
+!
+interface Port-Channel1159
+   description L2_green-leaf148_Port-Channel159
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1159
+!
+interface Port-Channel1160
+   description L2_green-leaf149_Port-Channel160
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1160
+!
+interface Port-Channel1161
+   description L2_green-leaf150_Port-Channel161
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1161
+!
+interface Port-Channel1162
+   description L2_green-leaf151_Port-Channel162
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1162
+!
+interface Port-Channel1163
+   description L2_green-leaf152_Port-Channel163
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1163
+!
+interface Port-Channel1164
+   description L2_green-leaf153_Port-Channel164
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1164
+!
+interface Port-Channel1165
+   description L2_green-leaf154_Port-Channel165
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1165
+!
+interface Port-Channel1166
+   description L2_green-leaf155_Port-Channel166
+   no shutdown
+   switchport trunk allowed vlan 113,201,204-205,207-208
+   switchport mode trunk
+   switchport
+   mlag 1166
+!
+interface Port-Channel1167
+   description L2_green-leaf156_Port-Channel167
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,207-208
+   switchport mode trunk
+   switchport
+   mlag 1167
+!
+interface Port-Channel1168
+   description L2_green-leaf157_Port-Channel168
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,207-208
+   switchport mode trunk
+   switchport
+   mlag 1168
+!
+interface Port-Channel1169
+   description L2_green-leaf158_Port-Channel169
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,207-208
+   switchport mode trunk
+   switchport
+   mlag 1169
+!
+interface Port-Channel1170
+   description L2_green-leaf159_Port-Channel170
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,207-208
+   switchport mode trunk
+   switchport
+   mlag 1170
+!
+interface Port-Channel1171
+   description L2_green-leaf160_Port-Channel171
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,207-208
+   switchport mode trunk
+   switchport
+   mlag 1171
+!
+interface Port-Channel1172
+   description L2_green-leaf161_Port-Channel172
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,207-208
+   switchport mode trunk
+   switchport
+   mlag 1172
+!
+interface Port-Channel1173
+   description L2_green-leaf162_Port-Channel173
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,207-208
+   switchport mode trunk
+   switchport
+   mlag 1173
+!
+interface Port-Channel1174
+   description L2_green-leaf163_Port-Channel174
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,207-208
+   switchport mode trunk
+   switchport
+   mlag 1174
+!
+interface Port-Channel1175
+   description L2_green-leaf164_Port-Channel175
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,207-208
+   switchport mode trunk
+   switchport
+   mlag 1175
+!
+interface Port-Channel1176
+   description L2_green-leaf165_Port-Channel176
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1176
+!
+interface Port-Channel1177
+   description L2_green-leaf166_Port-Channel177
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1177
+!
+interface Port-Channel1178
+   description L2_green-leaf167_Port-Channel178
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1178
+!
+interface Port-Channel1179
+   description L2_green-leaf168_Port-Channel179
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1179
+!
+interface Port-Channel1180
+   description L2_green-leaf169_Port-Channel180
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1180
+!
+interface Port-Channel1181
+   description L2_green-leaf170_Port-Channel181
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1181
+!
+interface Port-Channel1182
+   description L2_green-leaf171_Port-Channel182
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1182
+!
+interface Port-Channel1183
+   description L2_green-leaf172_Port-Channel183
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1183
+!
+interface Port-Channel1184
+   description L2_green-leaf173_Port-Channel184
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1184
+!
+interface Port-Channel1185
+   description L2_green-leaf174_Port-Channel185
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1185
+!
+interface Port-Channel1186
+   description L2_green-leaf175_Port-Channel186
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1186
+!
+interface Port-Channel1187
+   description L2_green-leaf176_Port-Channel187
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1187
+!
+interface Port-Channel1188
+   description L2_green-leaf177_Port-Channel188
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1188
+!
+interface Port-Channel1189
+   description L2_green-leaf178_Port-Channel189
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1189
+!
+interface Port-Channel1190
+   description L2_green-leaf179_Port-Channel190
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1190
+!
+interface Port-Channel1191
+   description L2_green-leaf180_Port-Channel191
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1191
+!
+interface Port-Channel1192
+   description L2_green-leaf181_Port-Channel192
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1192
+!
+interface Port-Channel1193
+   description L2_green-leaf182_Port-Channel193
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1193
+!
+interface Port-Channel1194
+   description L2_green-leaf183_Port-Channel194
+   no shutdown
+   switchport trunk allowed vlan 113,201,204,206-208
+   switchport mode trunk
+   switchport
+   mlag 1194
 !
 interface Port-Channel8311
    description MLAG_green-spine2_Port-Channel8311
@@ -759,7 +3429,7 @@ interface Port-Channel8311
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 169.27.195.71/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.10/32 |
 
 ##### IPv6
 
@@ -774,7 +3444,7 @@ interface Port-Channel8311
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 169.27.195.71/32
+   ip address 169.27.195.10/32
 ```
 
 ### VLAN Interfaces
@@ -952,8 +3622,8 @@ interface Loopback0
 | Vlan278 |  default  |  10.239.78.2/24  |  -  |  10.239.78.1/24  |  -  |  -  |
 | Vlan279 |  default  |  10.239.79.2/24  |  -  |  10.239.79.1/24  |  -  |  -  |
 | Vlan280 |  default  |  10.239.80.2/24  |  -  |  10.239.80.1/24  |  -  |  -  |
-| Vlan4093 |  default  |  10.1.1.140/31  |  -  |  -  |  -  |  -  |
-| Vlan4094 |  default  |  192.168.0.140/31  |  -  |  -  |  -  |  -  |
+| Vlan4093 |  default  |  100.83.88.18/31  |  -  |  -  |  -  |  -  |
+| Vlan4094 |  default  |  192.168.0.18/31  |  -  |  -  |  -  |  -  |
 
 #### VLAN Interfaces Device Configuration
 
@@ -1453,14 +4123,14 @@ interface Vlan4093
    no shutdown
    mtu 9214
    vrf default
-   ip address 10.1.1.140/31
+   ip address 100.83.88.18/31
 !
 interface Vlan4094
    description MLAG
    no shutdown
    mtu 9214
    no autostate
-   ip address 192.168.0.140/31
+   ip address 192.168.0.18/31
 ```
 
 ## Routing
@@ -2210,14 +4880,14 @@ ip igmp snooping vlan 280 querier version 3
 
 | Sequence | Action |
 | -------- | ------ |
-| 10 | permit 10.1.1.140/31 |
+| 10 | permit 100.83.88.18/31 |
 
 #### Prefix-lists Device Configuration
 
 ```eos
 !
 ip prefix-list PL-MLAG-PEER-VRFS
-   seq 10 permit 10.1.1.140/31
+   seq 10 permit 100.83.88.18/31
 ```
 
 ### Route-maps

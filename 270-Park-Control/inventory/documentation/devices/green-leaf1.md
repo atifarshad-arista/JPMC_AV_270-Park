@@ -45,7 +45,7 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management0 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.72/24 | 172.16.100.1 |
+| Management0 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.72/23 | 172.16.100.1 |
 
 ##### IPv6
 
@@ -61,7 +61,7 @@ interface Management0
    description OOB_MANAGEMENT
    no shutdown
    vrf MGMT
-   ip address 10.100.100.72/24
+   ip address 10.100.100.72/23
 ```
 
 ### IP Name Servers
@@ -239,8 +239,8 @@ vlan 202
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
-| Ethernet53/1 | L2_green-spine1_Ethernet3/5/1 | *trunk | *113,201-202 | *- | *- | 531 |
-| Ethernet54/1 | L2_green-spine2_Ethernet3/5/1 | *trunk | *113,201-202 | *- | *- | 531 |
+| Ethernet53/1 | L2_green-spine1_Ethernet3/5/1 | *trunk | *113,201-202 | *- | *- | 12 |
+| Ethernet54/1 | L2_green-spine2_Ethernet3/5/1 | *trunk | *113,201-202 | *- | *- | 12 |
 
 *Inherited from Port-Channel Interface
 
@@ -251,12 +251,12 @@ vlan 202
 interface Ethernet53/1
    description L2_green-spine1_Ethernet3/5/1
    no shutdown
-   channel-group 531 mode active
+   channel-group 12 mode active
 !
 interface Ethernet54/1
    description L2_green-spine2_Ethernet3/5/1
    no shutdown
-   channel-group 531 mode active
+   channel-group 12 mode active
 ```
 
 ### Port-Channel Interfaces
@@ -267,14 +267,14 @@ interface Ethernet54/1
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | LACP Fallback Timeout | LACP Fallback Mode | MLAG ID | EVPN ESI |
 | --------- | ----------- | ---- | ----- | ----------- | ------------| --------------------- | ------------------ | ------- | -------- |
-| Port-Channel531 | L2_SPINES_Port-Channel351 | trunk | 113,201-202 | - | - | - | - | - | - |
+| Port-Channel12 | L2_SPINES_Port-Channel112 | trunk | 113,201-202 | - | - | - | - | - | - |
 
 #### Port-Channel Interfaces Device Configuration
 
 ```eos
 !
-interface Port-Channel531
-   description L2_SPINES_Port-Channel351
+interface Port-Channel12
+   description L2_SPINES_Port-Channel112
    no shutdown
    switchport trunk allowed vlan 113,201-202
    switchport mode trunk
@@ -293,7 +293,7 @@ interface Port-Channel531
 
 | Interface | VRF | IP Address | IP Address Virtual | IP Router Virtual Address | ACL In | ACL Out |
 | --------- | --- | ---------- | ------------------ | ------------------------- | ------ | ------- |
-| Vlan113 |  default  |  10.239.1.76/24  |  -  |  -  |  -  |  -  |
+| Vlan113 |  default  |  10.239.1.15/24  |  -  |  -  |  -  |  -  |
 
 #### VLAN Interfaces Device Configuration
 
@@ -303,7 +303,7 @@ interface Vlan113
    description Inband Management
    no shutdown
    mtu 1500
-   ip address 10.239.1.76/24
+   ip address 10.239.1.15/24
 ```
 
 ## Routing
