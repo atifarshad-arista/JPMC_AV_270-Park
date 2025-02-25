@@ -34,10 +34,10 @@
   - [IP Routing](#ip-routing)
   - [IPv6 Routing](#ipv6-routing)
   - [Static Routes](#static-routes)
+  - [Router BGP](#router-bgp)
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
 - [Filters](#filters)
-  - [Prefix-lists](#prefix-lists)
   - [Route-maps](#route-maps)
 - [VRF Instances](#vrf-instances)
   - [VRF Instances Summary](#vrf-instances-summary)
@@ -328,7 +328,7 @@ vlan internal order ascending range 1006 1199
 | 278 | VLAN_278 | - |
 | 279 | VLAN_279 | - |
 | 280 | VLAN_280 | - |
-| 4093 | MLAG_L3_VRF_default | MLAG |
+| 4093 | MLAG_L3 | MLAG |
 | 4094 | MLAG | MLAG |
 
 ### VLANs Device Configuration
@@ -579,7 +579,7 @@ vlan 280
    name VLAN_280
 !
 vlan 4093
-   name MLAG_L3_VRF_default
+   name MLAG_L3
    trunk group MLAG
 !
 vlan 4094
@@ -3534,7 +3534,7 @@ interface Loopback0
 | Vlan278 | VLAN_278 | default | - | False |
 | Vlan279 | VLAN_279 | default | - | False |
 | Vlan280 | VLAN_280 | default | - | False |
-| Vlan4093 | MLAG_L3_VRF_default | default | 9214 | False |
+| Vlan4093 | MLAG_L3 | default | 9214 | False |
 | Vlan4094 | MLAG | default | 9214 | False |
 
 ##### IPv4
@@ -4119,10 +4119,9 @@ interface Vlan280
    ip virtual-router address 10.239.80.1/24
 !
 interface Vlan4093
-   description MLAG_L3_VRF_default
+   description MLAG_L3
    no shutdown
    mtu 9214
-   vrf default
    ip address 100.83.88.19/31
 !
 interface Vlan4094
@@ -4358,6 +4357,110 @@ ip route 10.239.79.0/24 Vlan279 name VARP
 ip route 10.239.80.0/24 Vlan280 name VARP
 ip route 10.239.113.0/24 Vlan113 name VARP
 ip route vrf MGMT 0.0.0.0/0 172.16.100.1
+```
+
+### Router BGP
+
+ASN Notation: asplain
+
+#### Router BGP Summary
+
+| BGP AS | Router ID |
+| ------ | --------- |
+| 65003.3 | 169.27.195.11 |
+
+| BGP Tuning |
+| ---------- |
+| bgp asn notation asdot |
+| no bgp default ipv4-unicast |
+| timers bgp 5 15 |
+| distance bgp 20 200 200 |
+| graceful-restart restart-time 300 |
+| graceful-restart |
+| maximum-paths 128 |
+| neighbor default send-community |
+| update wait-install |
+| no bgp default ipv4-unicast |
+| maximum-paths 4 ecmp 4 |
+
+#### Router BGP Peer Groups
+
+##### MLAG-IPv4-UNDERLAY-PEER
+
+| Settings | Value |
+| -------- | ----- |
+| Address Family | ipv4 |
+| Remote AS | 65003.3 |
+| Next-hop self | True |
+| Send community | all |
+| Maximum routes | 12000 |
+
+##### P2P-IPv4-eBGP-PEERS
+
+| Settings | Value |
+| -------- | ----- |
+| Address Family | ipv4 |
+| Send community | all |
+| Maximum routes | 12000 |
+
+#### BGP Neighbors
+
+| Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
+| -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
+| 100.83.88.18 | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | default | - | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | - | - | - | - | - | - |
+| 100.83.88.243 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.247 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.251 | 65003.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.255 | 65003.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+
+#### Router BGP Device Configuration
+
+```eos
+!
+router bgp 65003.3
+   router-id 169.27.195.11
+   update wait-install
+   no bgp default ipv4-unicast
+   maximum-paths 4 ecmp 4
+   bgp asn notation asdot
+   no bgp default ipv4-unicast
+   timers bgp 5 15
+   distance bgp 20 200 200
+   graceful-restart restart-time 300
+   graceful-restart
+   maximum-paths 128
+   neighbor default send-community
+   neighbor MLAG-IPv4-UNDERLAY-PEER peer group
+   neighbor MLAG-IPv4-UNDERLAY-PEER remote-as 65003.3
+   neighbor MLAG-IPv4-UNDERLAY-PEER next-hop-self
+   neighbor MLAG-IPv4-UNDERLAY-PEER description green-spine1
+   neighbor MLAG-IPv4-UNDERLAY-PEER route-map RM-MLAG-PEER-IN in
+   neighbor MLAG-IPv4-UNDERLAY-PEER send-community
+   neighbor MLAG-IPv4-UNDERLAY-PEER maximum-routes 12000
+   neighbor P2P-IPv4-eBGP-PEERS peer group
+   neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
+   neighbor P2P-IPv4-eBGP-PEERS send-community
+   neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 100.83.88.18 peer group MLAG-IPv4-UNDERLAY-PEER
+   neighbor 100.83.88.18 description green-spine1_Vlan4093
+   neighbor 100.83.88.243 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.243 remote-as 65003.1
+   neighbor 100.83.88.243 description media-PTP-1
+   neighbor 100.83.88.247 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.247 remote-as 65003.1
+   neighbor 100.83.88.247 description media-PTP-2
+   neighbor 100.83.88.251 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.251 remote-as 65003.2
+   neighbor 100.83.88.251 description border-leaf1
+   neighbor 100.83.88.255 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.255 remote-as 65003.2
+   neighbor 100.83.88.255 description border-leaf2
+   redistribute connected
+   redistribute attached-host
+   !
+   address-family ipv4
+      neighbor MLAG-IPv4-UNDERLAY-PEER activate
+      neighbor P2P-IPv4-eBGP-PEERS activate
 ```
 
 ## Multicast
@@ -4872,43 +4975,23 @@ ip igmp snooping vlan 280 querier version 3
 
 ## Filters
 
-### Prefix-lists
-
-#### Prefix-lists Summary
-
-##### PL-MLAG-PEER-VRFS
-
-| Sequence | Action |
-| -------- | ------ |
-| 10 | permit 100.83.88.18/31 |
-
-#### Prefix-lists Device Configuration
-
-```eos
-!
-ip prefix-list PL-MLAG-PEER-VRFS
-   seq 10 permit 100.83.88.18/31
-```
-
 ### Route-maps
 
 #### Route-maps Summary
 
-##### RM-CONN-2-BGP-VRFS
+##### RM-MLAG-PEER-IN
 
 | Sequence | Type | Match | Set | Sub-Route-Map | Continue |
 | -------- | ---- | ----- | --- | ------------- | -------- |
-| 10 | deny | ip address prefix-list PL-MLAG-PEER-VRFS | - | - | - |
-| 20 | permit | - | - | - | - |
+| 10 | permit | - | origin incomplete | - | - |
 
 #### Route-maps Device Configuration
 
 ```eos
 !
-route-map RM-CONN-2-BGP-VRFS deny 10
-   match ip address prefix-list PL-MLAG-PEER-VRFS
-!
-route-map RM-CONN-2-BGP-VRFS permit 20
+route-map RM-MLAG-PEER-IN permit 10
+   description Make routes learned over MLAG Peer-link less preferred on spines to ensure optimal routing
+   set origin incomplete
 ```
 
 ## VRF Instances

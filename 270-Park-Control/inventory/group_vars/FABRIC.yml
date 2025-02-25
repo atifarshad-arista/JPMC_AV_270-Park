@@ -2614,6 +2614,10 @@ l2leaf:
           uplink_switch_interfaces: [Ethernet8/27/1, Ethernet8/27/1]
           uplink_port_channel_id: 194
           uplink_switch_port_channel_id: 1194
+
+# Underlay Routing Protocol
+underlay_routing_protocol: ebgp
+
 #### WAN/Core Edge Links ####
 core_interfaces:
   p2p_links:
