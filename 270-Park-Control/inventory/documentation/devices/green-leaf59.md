@@ -6,6 +6,7 @@
   - [Management Interfaces](#management-interfaces)
   - [IP Name Servers](#ip-name-servers)
   - [NTP](#ntp)
+  - [PTP](#ptp)
   - [Management API HTTP](#management-api-http)
 - [Authentication](#authentication)
   - [Local Users](#local-users)
@@ -104,6 +105,31 @@ ip name-server vrf MGMT 8.8.8.8
 ntp local-interface vrf MGMT Management0
 ntp server vrf MGMT pool.ntp.org
 ntp server vrf MGMT time.google.com prefer
+```
+
+### PTP
+#### PTP Summary
+
+| Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
+| -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
+| 00:1C:73:7f:00:46 | - | 127 | 70 | - | 127 | boundary | - |
+
+#### PTP Device Configuration
+
+```eos
+!
+ptp clock-identity 00:1C:73:7f:00:46
+ptp domain 127
+ptp mode boundary
+ptp priority1 127
+ptp priority2 70
+ptp monitor threshold offset-from-master 250
+ptp monitor threshold mean-path-delay 1500
+ptp monitor sequence-id
+ptp monitor threshold missing-message sync 3 sequence-ids
+ptp monitor threshold missing-message follow-up 3 sequence-ids
+ptp monitor threshold missing-message delay-resp 3 sequence-ids
+ptp monitor threshold missing-message announce 3 sequence-ids
 ```
 
 ### Management API HTTP
@@ -287,6 +313,12 @@ interface Port-Channel70
    switchport trunk allowed vlan 113,203-204,207-208
    switchport mode trunk
    switchport
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 ```
 
 ### VLAN Interfaces

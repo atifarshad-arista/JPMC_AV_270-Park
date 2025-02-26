@@ -6,6 +6,7 @@
   - [Management Interfaces](#management-interfaces)
   - [IP Name Servers](#ip-name-servers)
   - [NTP](#ntp)
+  - [PTP](#ptp)
   - [Management API HTTP](#management-api-http)
 - [Authentication](#authentication)
   - [Local Users](#local-users)
@@ -112,6 +113,31 @@ ip name-server vrf MGMT 8.8.8.8
 ntp local-interface vrf MGMT Management0
 ntp server vrf MGMT pool.ntp.org
 ntp server vrf MGMT time.google.com prefer
+```
+
+### PTP
+#### PTP Summary
+
+| Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
+| -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
+| 00:1C:73:7f:00:0b | - | 127 | 11 | - | 127 | boundary | - |
+
+#### PTP Device Configuration
+
+```eos
+!
+ptp clock-identity 00:1C:73:7f:00:0b
+ptp domain 127
+ptp mode boundary
+ptp priority1 127
+ptp priority2 11
+ptp monitor threshold offset-from-master 250
+ptp monitor threshold mean-path-delay 1500
+ptp monitor sequence-id
+ptp monitor threshold missing-message sync 3 sequence-ids
+ptp monitor threshold missing-message follow-up 3 sequence-ids
+ptp monitor threshold missing-message delay-resp 3 sequence-ids
+ptp monitor threshold missing-message announce 3 sequence-ids
 ```
 
 ### Management API HTTP
@@ -1956,6 +1982,12 @@ interface Port-Channel112
    switchport mode trunk
    switchport
    mlag 112
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel113
    description L2_green-leaf2_Port-Channel13
@@ -1964,6 +1996,12 @@ interface Port-Channel113
    switchport mode trunk
    switchport
    mlag 113
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel114
    description L2_green-leaf3_Port-Channel14
@@ -1972,6 +2010,12 @@ interface Port-Channel114
    switchport mode trunk
    switchport
    mlag 114
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel115
    description L2_green-leaf4_Port-Channel15
@@ -1980,6 +2024,12 @@ interface Port-Channel115
    switchport mode trunk
    switchport
    mlag 115
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel116
    description L2_green-leaf5_Port-Channel16
@@ -1988,6 +2038,12 @@ interface Port-Channel116
    switchport mode trunk
    switchport
    mlag 116
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel117
    description L2_green-leaf6_Port-Channel17
@@ -1996,6 +2052,12 @@ interface Port-Channel117
    switchport mode trunk
    switchport
    mlag 117
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel118
    description L2_green-leaf7_Port-Channel18
@@ -2004,6 +2066,12 @@ interface Port-Channel118
    switchport mode trunk
    switchport
    mlag 118
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel119
    description L2_green-leaf8_Port-Channel19
@@ -2012,6 +2080,12 @@ interface Port-Channel119
    switchport mode trunk
    switchport
    mlag 119
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel120
    description L2_green-leaf9_Port-Channel20
@@ -2020,6 +2094,12 @@ interface Port-Channel120
    switchport mode trunk
    switchport
    mlag 120
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel121
    description L2_green-leaf10_Port-Channel21
@@ -2028,6 +2108,12 @@ interface Port-Channel121
    switchport mode trunk
    switchport
    mlag 121
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel122
    description L2_green-leaf11_Port-Channel22
@@ -2036,6 +2122,12 @@ interface Port-Channel122
    switchport mode trunk
    switchport
    mlag 122
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel123
    description L2_green-leaf12_Port-Channel23
@@ -2044,6 +2136,12 @@ interface Port-Channel123
    switchport mode trunk
    switchport
    mlag 123
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel124
    description L2_green-leaf13_Port-Channel24
@@ -2052,6 +2150,12 @@ interface Port-Channel124
    switchport mode trunk
    switchport
    mlag 124
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel125
    description L2_green-leaf14_Port-Channel25
@@ -2060,6 +2164,12 @@ interface Port-Channel125
    switchport mode trunk
    switchport
    mlag 125
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel126
    description L2_green-leaf15_Port-Channel26
@@ -2068,6 +2178,12 @@ interface Port-Channel126
    switchport mode trunk
    switchport
    mlag 126
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel127
    description L2_green-leaf16_Port-Channel27
@@ -2076,6 +2192,12 @@ interface Port-Channel127
    switchport mode trunk
    switchport
    mlag 127
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel128
    description L2_green-leaf17_Port-Channel28
@@ -2084,6 +2206,12 @@ interface Port-Channel128
    switchport mode trunk
    switchport
    mlag 128
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel129
    description L2_green-leaf18_Port-Channel29
@@ -2092,6 +2220,12 @@ interface Port-Channel129
    switchport mode trunk
    switchport
    mlag 129
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel130
    description L2_green-leaf19_Port-Channel30
@@ -2100,6 +2234,12 @@ interface Port-Channel130
    switchport mode trunk
    switchport
    mlag 130
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel131
    description L2_green-leaf20_Port-Channel31
@@ -2108,6 +2248,12 @@ interface Port-Channel131
    switchport mode trunk
    switchport
    mlag 131
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel132
    description L2_green-leaf21_Port-Channel32
@@ -2116,6 +2262,12 @@ interface Port-Channel132
    switchport mode trunk
    switchport
    mlag 132
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel133
    description L2_green-leaf22_Port-Channel33
@@ -2124,6 +2276,12 @@ interface Port-Channel133
    switchport mode trunk
    switchport
    mlag 133
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel134
    description L2_green-leaf23_Port-Channel34
@@ -2132,6 +2290,12 @@ interface Port-Channel134
    switchport mode trunk
    switchport
    mlag 134
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel135
    description L2_green-leaf24_Port-Channel35
@@ -2140,6 +2304,12 @@ interface Port-Channel135
    switchport mode trunk
    switchport
    mlag 135
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel136
    description L2_green-leaf25_Port-Channel36
@@ -2148,6 +2318,12 @@ interface Port-Channel136
    switchport mode trunk
    switchport
    mlag 136
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel137
    description L2_green-leaf26_Port-Channel37
@@ -2156,6 +2332,12 @@ interface Port-Channel137
    switchport mode trunk
    switchport
    mlag 137
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel138
    description L2_green-leaf27_Port-Channel38
@@ -2164,6 +2346,12 @@ interface Port-Channel138
    switchport mode trunk
    switchport
    mlag 138
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel139
    description L2_green-leaf28_Port-Channel39
@@ -2172,6 +2360,12 @@ interface Port-Channel139
    switchport mode trunk
    switchport
    mlag 139
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel140
    description L2_green-leaf29_Port-Channel40
@@ -2180,6 +2374,12 @@ interface Port-Channel140
    switchport mode trunk
    switchport
    mlag 140
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel141
    description L2_green-leaf30_Port-Channel41
@@ -2188,6 +2388,12 @@ interface Port-Channel141
    switchport mode trunk
    switchport
    mlag 141
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel142
    description L2_green-leaf31_Port-Channel42
@@ -2196,6 +2402,12 @@ interface Port-Channel142
    switchport mode trunk
    switchport
    mlag 142
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel143
    description L2_green-leaf32_Port-Channel43
@@ -2204,6 +2416,12 @@ interface Port-Channel143
    switchport mode trunk
    switchport
    mlag 143
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel144
    description L2_green-leaf33_Port-Channel44
@@ -2212,6 +2430,12 @@ interface Port-Channel144
    switchport mode trunk
    switchport
    mlag 144
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel145
    description L2_green-leaf34_Port-Channel45
@@ -2220,6 +2444,12 @@ interface Port-Channel145
    switchport mode trunk
    switchport
    mlag 145
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel146
    description L2_green-leaf35_Port-Channel46
@@ -2228,6 +2458,12 @@ interface Port-Channel146
    switchport mode trunk
    switchport
    mlag 146
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel147
    description L2_green-leaf36_Port-Channel47
@@ -2236,6 +2472,12 @@ interface Port-Channel147
    switchport mode trunk
    switchport
    mlag 147
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel148
    description L2_green-leaf37_Port-Channel48
@@ -2244,6 +2486,12 @@ interface Port-Channel148
    switchport mode trunk
    switchport
    mlag 148
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel149
    description L2_green-leaf38_Port-Channel49
@@ -2252,6 +2500,12 @@ interface Port-Channel149
    switchport mode trunk
    switchport
    mlag 149
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel150
    description L2_green-leaf39_Port-Channel50
@@ -2260,6 +2514,12 @@ interface Port-Channel150
    switchport mode trunk
    switchport
    mlag 150
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel151
    description L2_green-leaf40_Port-Channel51
@@ -2268,6 +2528,12 @@ interface Port-Channel151
    switchport mode trunk
    switchport
    mlag 151
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel152
    description L2_green-leaf41_Port-Channel52
@@ -2276,6 +2542,12 @@ interface Port-Channel152
    switchport mode trunk
    switchport
    mlag 152
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel153
    description L2_green-leaf42_Port-Channel53
@@ -2284,6 +2556,12 @@ interface Port-Channel153
    switchport mode trunk
    switchport
    mlag 153
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel154
    description L2_green-leaf43_Port-Channel54
@@ -2292,6 +2570,12 @@ interface Port-Channel154
    switchport mode trunk
    switchport
    mlag 154
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel155
    description L2_green-leaf44_Port-Channel55
@@ -2300,6 +2584,12 @@ interface Port-Channel155
    switchport mode trunk
    switchport
    mlag 155
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel156
    description L2_green-leaf45_Port-Channel56
@@ -2308,6 +2598,12 @@ interface Port-Channel156
    switchport mode trunk
    switchport
    mlag 156
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel157
    description L2_green-leaf46_Port-Channel57
@@ -2316,6 +2612,12 @@ interface Port-Channel157
    switchport mode trunk
    switchport
    mlag 157
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel158
    description L2_green-leaf47_Port-Channel58
@@ -2324,6 +2626,12 @@ interface Port-Channel158
    switchport mode trunk
    switchport
    mlag 158
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel159
    description L2_green-leaf48_Port-Channel59
@@ -2332,6 +2640,12 @@ interface Port-Channel159
    switchport mode trunk
    switchport
    mlag 159
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel160
    description L2_green-leaf49_Port-Channel60
@@ -2340,6 +2654,12 @@ interface Port-Channel160
    switchport mode trunk
    switchport
    mlag 160
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel161
    description L2_green-leaf50_Port-Channel61
@@ -2348,6 +2668,12 @@ interface Port-Channel161
    switchport mode trunk
    switchport
    mlag 161
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel162
    description L2_green-leaf51_Port-Channel62
@@ -2356,6 +2682,12 @@ interface Port-Channel162
    switchport mode trunk
    switchport
    mlag 162
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel163
    description L2_green-leaf52_Port-Channel63
@@ -2364,6 +2696,12 @@ interface Port-Channel163
    switchport mode trunk
    switchport
    mlag 163
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel164
    description L2_green-leaf53_Port-Channel64
@@ -2372,6 +2710,12 @@ interface Port-Channel164
    switchport mode trunk
    switchport
    mlag 164
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel165
    description L2_green-leaf54_Port-Channel65
@@ -2380,6 +2724,12 @@ interface Port-Channel165
    switchport mode trunk
    switchport
    mlag 165
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel166
    description L2_green-leaf55_Port-Channel66
@@ -2388,6 +2738,12 @@ interface Port-Channel166
    switchport mode trunk
    switchport
    mlag 166
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel167
    description L2_green-leaf56_Port-Channel67
@@ -2396,6 +2752,12 @@ interface Port-Channel167
    switchport mode trunk
    switchport
    mlag 167
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel168
    description L2_green-leaf57_Port-Channel68
@@ -2404,6 +2766,12 @@ interface Port-Channel168
    switchport mode trunk
    switchport
    mlag 168
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel169
    description L2_green-leaf58_Port-Channel69
@@ -2412,6 +2780,12 @@ interface Port-Channel169
    switchport mode trunk
    switchport
    mlag 169
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel170
    description L2_green-leaf59_Port-Channel70
@@ -2420,6 +2794,12 @@ interface Port-Channel170
    switchport mode trunk
    switchport
    mlag 170
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel171
    description L2_green-leaf60_Port-Channel71
@@ -2428,6 +2808,12 @@ interface Port-Channel171
    switchport mode trunk
    switchport
    mlag 171
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel172
    description L2_green-leaf61_Port-Channel72
@@ -2436,6 +2822,12 @@ interface Port-Channel172
    switchport mode trunk
    switchport
    mlag 172
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel173
    description L2_green-leaf62_Port-Channel73
@@ -2444,6 +2836,12 @@ interface Port-Channel173
    switchport mode trunk
    switchport
    mlag 173
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel174
    description L2_green-leaf63_Port-Channel74
@@ -2452,6 +2850,12 @@ interface Port-Channel174
    switchport mode trunk
    switchport
    mlag 174
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel175
    description L2_green-leaf64_Port-Channel75
@@ -2460,6 +2864,12 @@ interface Port-Channel175
    switchport mode trunk
    switchport
    mlag 175
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel176
    description L2_green-leaf65_Port-Channel76
@@ -2468,6 +2878,12 @@ interface Port-Channel176
    switchport mode trunk
    switchport
    mlag 176
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel177
    description L2_green-leaf66_Port-Channel77
@@ -2476,6 +2892,12 @@ interface Port-Channel177
    switchport mode trunk
    switchport
    mlag 177
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel178
    description L2_green-leaf67_Port-Channel78
@@ -2484,6 +2906,12 @@ interface Port-Channel178
    switchport mode trunk
    switchport
    mlag 178
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel179
    description L2_green-leaf68_Port-Channel79
@@ -2492,6 +2920,12 @@ interface Port-Channel179
    switchport mode trunk
    switchport
    mlag 179
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel180
    description L2_green-leaf69_Port-Channel80
@@ -2500,6 +2934,12 @@ interface Port-Channel180
    switchport mode trunk
    switchport
    mlag 180
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel181
    description L2_green-leaf70_Port-Channel81
@@ -2508,6 +2948,12 @@ interface Port-Channel181
    switchport mode trunk
    switchport
    mlag 181
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel182
    description L2_green-leaf71_Port-Channel82
@@ -2516,6 +2962,12 @@ interface Port-Channel182
    switchport mode trunk
    switchport
    mlag 182
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel183
    description L2_green-leaf72_Port-Channel83
@@ -2524,6 +2976,12 @@ interface Port-Channel183
    switchport mode trunk
    switchport
    mlag 183
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel184
    description L2_green-leaf73_Port-Channel84
@@ -2532,6 +2990,12 @@ interface Port-Channel184
    switchport mode trunk
    switchport
    mlag 184
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel185
    description L2_green-leaf74_Port-Channel85
@@ -2540,6 +3004,12 @@ interface Port-Channel185
    switchport mode trunk
    switchport
    mlag 185
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel186
    description L2_green-leaf75_Port-Channel86
@@ -2548,6 +3018,12 @@ interface Port-Channel186
    switchport mode trunk
    switchport
    mlag 186
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel187
    description L2_green-leaf76_Port-Channel87
@@ -2556,6 +3032,12 @@ interface Port-Channel187
    switchport mode trunk
    switchport
    mlag 187
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel188
    description L2_green-leaf77_Port-Channel88
@@ -2564,6 +3046,12 @@ interface Port-Channel188
    switchport mode trunk
    switchport
    mlag 188
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel189
    description L2_green-leaf78_Port-Channel89
@@ -2572,6 +3060,12 @@ interface Port-Channel189
    switchport mode trunk
    switchport
    mlag 189
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel190
    description L2_green-leaf79_Port-Channel90
@@ -2580,6 +3074,12 @@ interface Port-Channel190
    switchport mode trunk
    switchport
    mlag 190
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel191
    description L2_green-leaf80_Port-Channel91
@@ -2588,6 +3088,12 @@ interface Port-Channel191
    switchport mode trunk
    switchport
    mlag 191
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel192
    description L2_green-leaf81_Port-Channel92
@@ -2596,6 +3102,12 @@ interface Port-Channel192
    switchport mode trunk
    switchport
    mlag 192
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel193
    description L2_green-leaf82_Port-Channel93
@@ -2604,6 +3116,12 @@ interface Port-Channel193
    switchport mode trunk
    switchport
    mlag 193
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel194
    description L2_green-leaf83_Port-Channel94
@@ -2612,6 +3130,12 @@ interface Port-Channel194
    switchport mode trunk
    switchport
    mlag 194
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel195
    description L2_green-leaf84_Port-Channel95
@@ -2620,6 +3144,12 @@ interface Port-Channel195
    switchport mode trunk
    switchport
    mlag 195
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel196
    description L2_green-leaf85_Port-Channel96
@@ -2628,6 +3158,12 @@ interface Port-Channel196
    switchport mode trunk
    switchport
    mlag 196
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel197
    description L2_green-leaf86_Port-Channel97
@@ -2636,6 +3172,12 @@ interface Port-Channel197
    switchport mode trunk
    switchport
    mlag 197
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel198
    description L2_green-leaf87_Port-Channel98
@@ -2644,6 +3186,12 @@ interface Port-Channel198
    switchport mode trunk
    switchport
    mlag 198
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel199
    description L2_green-leaf88_Port-Channel99
@@ -2652,6 +3200,12 @@ interface Port-Channel199
    switchport mode trunk
    switchport
    mlag 199
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1100
    description L2_green-leaf89_Port-Channel100
@@ -2660,6 +3214,12 @@ interface Port-Channel1100
    switchport mode trunk
    switchport
    mlag 1100
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1101
    description L2_green-leaf90_Port-Channel101
@@ -2668,6 +3228,12 @@ interface Port-Channel1101
    switchport mode trunk
    switchport
    mlag 1101
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1102
    description L2_green-leaf91_Port-Channel102
@@ -2676,6 +3242,12 @@ interface Port-Channel1102
    switchport mode trunk
    switchport
    mlag 1102
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1103
    description L2_green-leaf92_Port-Channel103
@@ -2684,6 +3256,12 @@ interface Port-Channel1103
    switchport mode trunk
    switchport
    mlag 1103
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1104
    description L2_green-leaf93_Port-Channel104
@@ -2692,6 +3270,12 @@ interface Port-Channel1104
    switchport mode trunk
    switchport
    mlag 1104
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1105
    description L2_green-leaf94_Port-Channel105
@@ -2700,6 +3284,12 @@ interface Port-Channel1105
    switchport mode trunk
    switchport
    mlag 1105
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1106
    description L2_green-leaf95_Port-Channel106
@@ -2708,6 +3298,12 @@ interface Port-Channel1106
    switchport mode trunk
    switchport
    mlag 1106
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1107
    description L2_green-leaf96_Port-Channel107
@@ -2716,6 +3312,12 @@ interface Port-Channel1107
    switchport mode trunk
    switchport
    mlag 1107
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1108
    description L2_green-leaf97_Port-Channel108
@@ -2724,6 +3326,12 @@ interface Port-Channel1108
    switchport mode trunk
    switchport
    mlag 1108
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1109
    description L2_green-leaf98_Port-Channel109
@@ -2732,6 +3340,12 @@ interface Port-Channel1109
    switchport mode trunk
    switchport
    mlag 1109
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1110
    description L2_green-leaf99_Port-Channel110
@@ -2740,6 +3354,12 @@ interface Port-Channel1110
    switchport mode trunk
    switchport
    mlag 1110
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1111
    description L2_green-leaf100_Port-Channel111
@@ -2748,6 +3368,12 @@ interface Port-Channel1111
    switchport mode trunk
    switchport
    mlag 1111
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1112
    description L2_green-leaf101_Port-Channel112
@@ -2756,6 +3382,12 @@ interface Port-Channel1112
    switchport mode trunk
    switchport
    mlag 1112
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1113
    description L2_green-leaf102_Port-Channel113
@@ -2764,6 +3396,12 @@ interface Port-Channel1113
    switchport mode trunk
    switchport
    mlag 1113
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1114
    description L2_green-leaf103_Port-Channel114
@@ -2772,6 +3410,12 @@ interface Port-Channel1114
    switchport mode trunk
    switchport
    mlag 1114
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1115
    description L2_green-leaf104_Port-Channel115
@@ -2780,6 +3424,12 @@ interface Port-Channel1115
    switchport mode trunk
    switchport
    mlag 1115
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1116
    description L2_green-leaf105_Port-Channel116
@@ -2788,6 +3438,12 @@ interface Port-Channel1116
    switchport mode trunk
    switchport
    mlag 1116
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1117
    description L2_green-leaf106_Port-Channel117
@@ -2796,6 +3452,12 @@ interface Port-Channel1117
    switchport mode trunk
    switchport
    mlag 1117
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1118
    description L2_green-leaf107_Port-Channel118
@@ -2804,6 +3466,12 @@ interface Port-Channel1118
    switchport mode trunk
    switchport
    mlag 1118
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1119
    description L2_green-leaf108_Port-Channel119
@@ -2812,6 +3480,12 @@ interface Port-Channel1119
    switchport mode trunk
    switchport
    mlag 1119
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1120
    description L2_green-leaf109_Port-Channel120
@@ -2820,6 +3494,12 @@ interface Port-Channel1120
    switchport mode trunk
    switchport
    mlag 1120
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1121
    description L2_green-leaf110_Port-Channel121
@@ -2828,6 +3508,12 @@ interface Port-Channel1121
    switchport mode trunk
    switchport
    mlag 1121
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1122
    description L2_green-leaf111_Port-Channel122
@@ -2836,6 +3522,12 @@ interface Port-Channel1122
    switchport mode trunk
    switchport
    mlag 1122
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1123
    description L2_green-leaf112_Port-Channel123
@@ -2844,6 +3536,12 @@ interface Port-Channel1123
    switchport mode trunk
    switchport
    mlag 1123
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1124
    description L2_green-leaf113_Port-Channel124
@@ -2852,6 +3550,12 @@ interface Port-Channel1124
    switchport mode trunk
    switchport
    mlag 1124
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1125
    description L2_green-leaf114_Port-Channel125
@@ -2860,6 +3564,12 @@ interface Port-Channel1125
    switchport mode trunk
    switchport
    mlag 1125
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1126
    description L2_green-leaf115_Port-Channel126
@@ -2868,6 +3578,12 @@ interface Port-Channel1126
    switchport mode trunk
    switchport
    mlag 1126
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1127
    description L2_green-leaf116_Port-Channel127
@@ -2876,6 +3592,12 @@ interface Port-Channel1127
    switchport mode trunk
    switchport
    mlag 1127
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1128
    description L2_green-leaf117_Port-Channel128
@@ -2884,6 +3606,12 @@ interface Port-Channel1128
    switchport mode trunk
    switchport
    mlag 1128
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1129
    description L2_green-leaf118_Port-Channel129
@@ -2892,6 +3620,12 @@ interface Port-Channel1129
    switchport mode trunk
    switchport
    mlag 1129
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1130
    description L2_green-leaf119_Port-Channel130
@@ -2900,6 +3634,12 @@ interface Port-Channel1130
    switchport mode trunk
    switchport
    mlag 1130
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1131
    description L2_green-leaf120_Port-Channel131
@@ -2908,6 +3648,12 @@ interface Port-Channel1131
    switchport mode trunk
    switchport
    mlag 1131
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1132
    description L2_green-leaf121_Port-Channel132
@@ -2916,6 +3662,12 @@ interface Port-Channel1132
    switchport mode trunk
    switchport
    mlag 1132
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1133
    description L2_green-leaf122_Port-Channel133
@@ -2924,6 +3676,12 @@ interface Port-Channel1133
    switchport mode trunk
    switchport
    mlag 1133
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1134
    description L2_green-leaf123_Port-Channel134
@@ -2932,6 +3690,12 @@ interface Port-Channel1134
    switchport mode trunk
    switchport
    mlag 1134
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1135
    description L2_green-leaf124_Port-Channel135
@@ -2940,6 +3704,12 @@ interface Port-Channel1135
    switchport mode trunk
    switchport
    mlag 1135
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1136
    description L2_green-leaf125_Port-Channel136
@@ -2948,6 +3718,12 @@ interface Port-Channel1136
    switchport mode trunk
    switchport
    mlag 1136
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1137
    description L2_green-leaf126_Port-Channel137
@@ -2956,6 +3732,12 @@ interface Port-Channel1137
    switchport mode trunk
    switchport
    mlag 1137
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1138
    description L2_green-leaf127_Port-Channel138
@@ -2964,6 +3746,12 @@ interface Port-Channel1138
    switchport mode trunk
    switchport
    mlag 1138
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1139
    description L2_green-leaf128_Port-Channel139
@@ -2972,6 +3760,12 @@ interface Port-Channel1139
    switchport mode trunk
    switchport
    mlag 1139
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1140
    description L2_green-leaf129_Port-Channel140
@@ -2980,6 +3774,12 @@ interface Port-Channel1140
    switchport mode trunk
    switchport
    mlag 1140
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1141
    description L2_green-leaf130_Port-Channel141
@@ -2988,6 +3788,12 @@ interface Port-Channel1141
    switchport mode trunk
    switchport
    mlag 1141
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1142
    description L2_green-leaf131_Port-Channel142
@@ -2996,6 +3802,12 @@ interface Port-Channel1142
    switchport mode trunk
    switchport
    mlag 1142
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1143
    description L2_green-leaf132_Port-Channel143
@@ -3004,6 +3816,12 @@ interface Port-Channel1143
    switchport mode trunk
    switchport
    mlag 1143
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1144
    description L2_green-leaf133_Port-Channel144
@@ -3012,6 +3830,12 @@ interface Port-Channel1144
    switchport mode trunk
    switchport
    mlag 1144
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1145
    description L2_green-leaf134_Port-Channel145
@@ -3020,6 +3844,12 @@ interface Port-Channel1145
    switchport mode trunk
    switchport
    mlag 1145
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1146
    description L2_green-leaf135_Port-Channel146
@@ -3028,6 +3858,12 @@ interface Port-Channel1146
    switchport mode trunk
    switchport
    mlag 1146
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1147
    description L2_green-leaf136_Port-Channel147
@@ -3036,6 +3872,12 @@ interface Port-Channel1147
    switchport mode trunk
    switchport
    mlag 1147
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1148
    description L2_green-leaf137_Port-Channel148
@@ -3044,6 +3886,12 @@ interface Port-Channel1148
    switchport mode trunk
    switchport
    mlag 1148
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1149
    description L2_green-leaf138_Port-Channel149
@@ -3052,6 +3900,12 @@ interface Port-Channel1149
    switchport mode trunk
    switchport
    mlag 1149
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1150
    description L2_green-leaf139_Port-Channel150
@@ -3060,6 +3914,12 @@ interface Port-Channel1150
    switchport mode trunk
    switchport
    mlag 1150
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1151
    description L2_green-leaf140_Port-Channel151
@@ -3068,6 +3928,12 @@ interface Port-Channel1151
    switchport mode trunk
    switchport
    mlag 1151
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1152
    description L2_green-leaf141_Port-Channel152
@@ -3076,6 +3942,12 @@ interface Port-Channel1152
    switchport mode trunk
    switchport
    mlag 1152
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1153
    description L2_green-leaf142_Port-Channel153
@@ -3084,6 +3956,12 @@ interface Port-Channel1153
    switchport mode trunk
    switchport
    mlag 1153
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1154
    description L2_green-leaf143_Port-Channel154
@@ -3092,6 +3970,12 @@ interface Port-Channel1154
    switchport mode trunk
    switchport
    mlag 1154
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1155
    description L2_green-leaf144_Port-Channel155
@@ -3100,6 +3984,12 @@ interface Port-Channel1155
    switchport mode trunk
    switchport
    mlag 1155
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1156
    description L2_green-leaf145_Port-Channel156
@@ -3108,6 +3998,12 @@ interface Port-Channel1156
    switchport mode trunk
    switchport
    mlag 1156
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1157
    description L2_green-leaf146_Port-Channel157
@@ -3116,6 +4012,12 @@ interface Port-Channel1157
    switchport mode trunk
    switchport
    mlag 1157
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1158
    description L2_green-leaf147_Port-Channel158
@@ -3124,6 +4026,12 @@ interface Port-Channel1158
    switchport mode trunk
    switchport
    mlag 1158
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1159
    description L2_green-leaf148_Port-Channel159
@@ -3132,6 +4040,12 @@ interface Port-Channel1159
    switchport mode trunk
    switchport
    mlag 1159
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1160
    description L2_green-leaf149_Port-Channel160
@@ -3140,6 +4054,12 @@ interface Port-Channel1160
    switchport mode trunk
    switchport
    mlag 1160
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1161
    description L2_green-leaf150_Port-Channel161
@@ -3148,6 +4068,12 @@ interface Port-Channel1161
    switchport mode trunk
    switchport
    mlag 1161
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1162
    description L2_green-leaf151_Port-Channel162
@@ -3156,6 +4082,12 @@ interface Port-Channel1162
    switchport mode trunk
    switchport
    mlag 1162
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1163
    description L2_green-leaf152_Port-Channel163
@@ -3164,6 +4096,12 @@ interface Port-Channel1163
    switchport mode trunk
    switchport
    mlag 1163
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1164
    description L2_green-leaf153_Port-Channel164
@@ -3172,6 +4110,12 @@ interface Port-Channel1164
    switchport mode trunk
    switchport
    mlag 1164
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1165
    description L2_green-leaf154_Port-Channel165
@@ -3180,6 +4124,12 @@ interface Port-Channel1165
    switchport mode trunk
    switchport
    mlag 1165
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1166
    description L2_green-leaf155_Port-Channel166
@@ -3188,6 +4138,12 @@ interface Port-Channel1166
    switchport mode trunk
    switchport
    mlag 1166
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1167
    description L2_green-leaf156_Port-Channel167
@@ -3196,6 +4152,12 @@ interface Port-Channel1167
    switchport mode trunk
    switchport
    mlag 1167
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1168
    description L2_green-leaf157_Port-Channel168
@@ -3204,6 +4166,12 @@ interface Port-Channel1168
    switchport mode trunk
    switchport
    mlag 1168
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1169
    description L2_green-leaf158_Port-Channel169
@@ -3212,6 +4180,12 @@ interface Port-Channel1169
    switchport mode trunk
    switchport
    mlag 1169
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1170
    description L2_green-leaf159_Port-Channel170
@@ -3220,6 +4194,12 @@ interface Port-Channel1170
    switchport mode trunk
    switchport
    mlag 1170
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1171
    description L2_green-leaf160_Port-Channel171
@@ -3228,6 +4208,12 @@ interface Port-Channel1171
    switchport mode trunk
    switchport
    mlag 1171
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1172
    description L2_green-leaf161_Port-Channel172
@@ -3236,6 +4222,12 @@ interface Port-Channel1172
    switchport mode trunk
    switchport
    mlag 1172
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1173
    description L2_green-leaf162_Port-Channel173
@@ -3244,6 +4236,12 @@ interface Port-Channel1173
    switchport mode trunk
    switchport
    mlag 1173
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1174
    description L2_green-leaf163_Port-Channel174
@@ -3252,6 +4250,12 @@ interface Port-Channel1174
    switchport mode trunk
    switchport
    mlag 1174
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1175
    description L2_green-leaf164_Port-Channel175
@@ -3260,6 +4264,12 @@ interface Port-Channel1175
    switchport mode trunk
    switchport
    mlag 1175
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1176
    description L2_green-leaf165_Port-Channel176
@@ -3268,6 +4278,12 @@ interface Port-Channel1176
    switchport mode trunk
    switchport
    mlag 1176
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1177
    description L2_green-leaf166_Port-Channel177
@@ -3276,6 +4292,12 @@ interface Port-Channel1177
    switchport mode trunk
    switchport
    mlag 1177
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1178
    description L2_green-leaf167_Port-Channel178
@@ -3284,6 +4306,12 @@ interface Port-Channel1178
    switchport mode trunk
    switchport
    mlag 1178
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1179
    description L2_green-leaf168_Port-Channel179
@@ -3292,6 +4320,12 @@ interface Port-Channel1179
    switchport mode trunk
    switchport
    mlag 1179
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1180
    description L2_green-leaf169_Port-Channel180
@@ -3300,6 +4334,12 @@ interface Port-Channel1180
    switchport mode trunk
    switchport
    mlag 1180
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1181
    description L2_green-leaf170_Port-Channel181
@@ -3308,6 +4348,12 @@ interface Port-Channel1181
    switchport mode trunk
    switchport
    mlag 1181
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1182
    description L2_green-leaf171_Port-Channel182
@@ -3316,6 +4362,12 @@ interface Port-Channel1182
    switchport mode trunk
    switchport
    mlag 1182
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1183
    description L2_green-leaf172_Port-Channel183
@@ -3324,6 +4376,12 @@ interface Port-Channel1183
    switchport mode trunk
    switchport
    mlag 1183
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1184
    description L2_green-leaf173_Port-Channel184
@@ -3332,6 +4390,12 @@ interface Port-Channel1184
    switchport mode trunk
    switchport
    mlag 1184
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1185
    description L2_green-leaf174_Port-Channel185
@@ -3340,6 +4404,12 @@ interface Port-Channel1185
    switchport mode trunk
    switchport
    mlag 1185
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1186
    description L2_green-leaf175_Port-Channel186
@@ -3348,6 +4418,12 @@ interface Port-Channel1186
    switchport mode trunk
    switchport
    mlag 1186
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1187
    description L2_green-leaf176_Port-Channel187
@@ -3356,6 +4432,12 @@ interface Port-Channel1187
    switchport mode trunk
    switchport
    mlag 1187
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1188
    description L2_green-leaf177_Port-Channel188
@@ -3364,6 +4446,12 @@ interface Port-Channel1188
    switchport mode trunk
    switchport
    mlag 1188
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1189
    description L2_green-leaf178_Port-Channel189
@@ -3372,6 +4460,12 @@ interface Port-Channel1189
    switchport mode trunk
    switchport
    mlag 1189
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1190
    description L2_green-leaf179_Port-Channel190
@@ -3380,6 +4474,12 @@ interface Port-Channel1190
    switchport mode trunk
    switchport
    mlag 1190
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1191
    description L2_green-leaf180_Port-Channel191
@@ -3388,6 +4488,12 @@ interface Port-Channel1191
    switchport mode trunk
    switchport
    mlag 1191
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1192
    description L2_green-leaf181_Port-Channel192
@@ -3396,6 +4502,12 @@ interface Port-Channel1192
    switchport mode trunk
    switchport
    mlag 1192
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1193
    description L2_green-leaf182_Port-Channel193
@@ -3404,6 +4516,12 @@ interface Port-Channel1193
    switchport mode trunk
    switchport
    mlag 1193
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel1194
    description L2_green-leaf183_Port-Channel194
@@ -3412,6 +4530,12 @@ interface Port-Channel1194
    switchport mode trunk
    switchport
    mlag 1194
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Port-Channel8311
    description MLAG_green-spine1_Port-Channel8311
