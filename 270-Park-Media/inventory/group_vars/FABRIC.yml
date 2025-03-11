@@ -43,6 +43,13 @@ local_users:
     role: network-admin
     no_password: true
 
+logging:
+  # Console logging severity level.
+  monitor: "notifications"
+
+mcs_client:
+  shutdown: false
+
 bgp_peer_groups:
   ipv4_underlay_peers:
     name: P2P-IPv4-eBGP-PEERS
@@ -95,8 +102,103 @@ daemon_terminattr:
 # Changed ptp to ptp_settings
 ptp_settings:
   enabled: true
+  auto_clock_identity: false
+  domain: 100
 
-underlay_multicast: true
+spanning_tree:
+  mode: "mstp"
+
+snmp_server:
+  communities:
+      # Community name.
+    - name: gt1m3rg3r
+      access: "ro"
+  local_interfaces:
+      # Interface name.
+    - name: loopback0
+  hosts:
+    - host: 202.40.72.61
+      community: gt1m3rg3r
+      version: "2c"
+    - host: 202.40.73.61
+      community: gt1m3rg3r
+      version: "2c"
+
+hardware:
+  speed_groups:
+    - speed_group: 4
+      # Serdes speed like "10g" or "25g".
+      serdes: "10g"
+system:
+  l1:
+    unsupported_speed_action: "error"
+    unsupported_error_correction_action: "error"
+clock:
+  timezone: America/New_York
+
+management_api_http:
+  enable_http: True
+  enable_https: False
+
+management_cvx:
+  shutdown: false
+  server_hosts:
+  # IP or hostname.
+    - 172.16.131.127
+    - 172.16.131.128
+    - 172.16.131.129
+  # Interface name.
+  source_interface: Loopback0
+
+management_api_gnmi:
+  provider: "eos-native"
+  transport:
+    grpc:
+        # Transport name.
+      - name: NRVT
+        vrf: MGMT
+        port: 5909
+
+management_api_models:
+  providers:
+    - name: "smash"
+      paths:
+        - path: bridging
+        - path: ptp
+        - path: routing
+  # providers:
+  #   - name: "macsec"
+
+management_ssh:
+  access_groups:
+      # Standard ACL Name.
+    - name: MGMT-SSH-ACL
+      # VRF Name.
+      vrf: MGMT
+
+standard_access_lists:
+    # Access-list Name.
+  - name: MGMT-SSH-ACL
+    counters_per_entry: False
+    sequence_numbers: # required
+        # Sequence ID.
+      - sequence: 10
+        # Action as string.
+        # Example: "deny ip any any"
+        action: permit host 172.20.111.100
+
+ip_http_client_source_interfaces:
+    # Interface Name.
+  - name: Management 1
+    vrf: MGMT
+
+# Enable pim sparse mode on L3 uplinks
+underlay_multicast: False
+
+# Enable multicast routing
+router_multicast:
+  ipv4:
+    routing: True
 
 aaa_authentication:
   login:
@@ -110,16 +212,52 @@ mgmt_gateway: 10.100.100.1
 mgmt_destination_networks:
   - 0.0.0.0/0
 
+
 name_servers:
   - 192.168.1.1
 
+
+# ntp:
+#   local_interface:
+#     name: Management1
+#     vrf: MGMT
+#   servers:
+#     - name: 0.pool.ntp.org
+#       vrf: MGMT
+
 ntp:
-  local_interface:
-    name: Management1
-    vrf: MGMT
   servers:
-    - name: 0.pool.ntp.org
+    # IP or hostname e.g., 2.2.2.55, 2001:db8::55, ie.pool.ntp.org.
+    - name: 172.16.131.2
+      burst: False
+      iburst: True
+      preferred: False
+      # VRF name.
       vrf: MGMT
+    - name: 172.16.131.3
+      burst: False
+      iburst: True
+      preferred: True
+      # VRF name.
+      vrf: MGMT
+roles:
+    # Role name.
+  - name: network-user
+    sequence_numbers:
+        # Sequence number.
+      - sequence: 10
+        action: "deny"
+        # "config", "config-all", "exec" or mode key as string.
+        mode: "exec"
+        # Command as string.
+        command: enable|configure|bash|python-shell|\|
+      - sequence: 20
+        action: "permit"
+        # "config", "config-all", "exec" or mode key as string.
+        mode: "exec"
+        # Command as string.
+        command: ".*"
+
 
 core_interfaces:
   p2p_links:

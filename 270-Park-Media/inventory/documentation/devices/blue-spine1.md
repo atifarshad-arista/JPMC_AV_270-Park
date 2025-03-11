@@ -5,16 +5,30 @@
 - [Management](#management)
   - [Management Interfaces](#management-interfaces)
   - [IP Name Servers](#ip-name-servers)
+  - [Clock Settings](#clock-settings)
   - [NTP](#ntp)
   - [PTP](#ptp)
+  - [Management SSH](#management-ssh)
+  - [IP Client Source Interfaces](#ip-client-source-interfaces)
+  - [Management API gNMI](#management-api-gnmi)
+  - [Management CVX Summary](#management-cvx-summary)
   - [Management API HTTP](#management-api-http)
+  - [Management API Models](#management-api-models)
 - [Authentication](#authentication)
   - [Local Users](#local-users)
+  - [Roles](#roles)
   - [Enable Password](#enable-password)
   - [AAA Authentication](#aaa-authentication)
   - [AAA Authorization](#aaa-authorization)
 - [Monitoring](#monitoring)
   - [TerminAttr Daemon](#terminattr-daemon)
+  - [Logging](#logging)
+  - [MCS Client Summary](#mcs-client-summary)
+  - [SNMP](#snmp)
+  - [Hardware](#hardware)
+- [Spanning Tree](#spanning-tree)
+  - [Spanning Tree Summary](#spanning-tree-summary)
+  - [Spanning Tree Device Configuration](#spanning-tree-device-configuration)
 - [Internal VLAN Allocation Policy](#internal-vlan-allocation-policy)
   - [Internal VLAN Allocation Policy Summary](#internal-vlan-allocation-policy-summary)
   - [Internal VLAN Allocation Policy Device Configuration](#internal-vlan-allocation-policy-device-configuration)
@@ -30,10 +44,14 @@
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
   - [Router Multicast](#router-multicast)
-  - [PIM Sparse Mode](#pim-sparse-mode)
+- [ACL](#acl)
+  - [Standard Access-lists](#standard-access-lists)
 - [VRF Instances](#vrf-instances)
   - [VRF Instances Summary](#vrf-instances-summary)
   - [VRF Instances Device Configuration](#vrf-instances-device-configuration)
+- [System L1](#system-l1)
+  - [Unsupported Interface Configurations](#unsupported-interface-configurations)
+  - [System L1 Device Configuration](#system-l1-device-configuration)
 
 ## Management
 
@@ -78,28 +96,36 @@ interface Management1
 ip name-server vrf MGMT 192.168.1.1
 ```
 
+### Clock Settings
+
+#### Clock Timezone Settings
+
+Clock Timezone is set to **America/New_York**.
+
+#### Clock Device Configuration
+
+```eos
+!
+clock timezone America/New_York
+```
+
 ### NTP
 
 #### NTP Summary
-
-##### NTP Local Interface
-
-| Interface | VRF |
-| --------- | --- |
-| Management1 | MGMT |
 
 ##### NTP Servers
 
 | Server | VRF | Preferred | Burst | iBurst | Version | Min Poll | Max Poll | Local-interface | Key |
 | ------ | --- | --------- | ----- | ------ | ------- | -------- | -------- | --------------- | --- |
-| 0.pool.ntp.org | MGMT | - | - | - | - | - | - | - | - |
+| 172.16.131.2 | MGMT | False | False | True | - | - | - | - | - |
+| 172.16.131.3 | MGMT | True | False | True | - | - | - | - | - |
 
 #### NTP Device Configuration
 
 ```eos
 !
-ntp local-interface vrf MGMT Management1
-ntp server vrf MGMT 0.pool.ntp.org
+ntp server vrf MGMT 172.16.131.2 iburst
+ntp server vrf MGMT 172.16.131.3 prefer iburst
 ```
 
 ### PTP
@@ -107,24 +133,114 @@ ntp server vrf MGMT 0.pool.ntp.org
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| 00:1C:73:14:00:01 | - | 20 | 1 | - | 127 | boundary | - |
+| - | 172.31.1.11 | 20 | 101 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
 ```eos
 !
-ptp clock-identity 00:1C:73:14:00:01
-ptp domain 127
+ptp domain 100
 ptp mode boundary
 ptp priority1 20
-ptp priority2 1
-ptp monitor threshold offset-from-master 250
-ptp monitor threshold mean-path-delay 1500
-ptp monitor sequence-id
-ptp monitor threshold missing-message sync 3 sequence-ids
-ptp monitor threshold missing-message follow-up 3 sequence-ids
-ptp monitor threshold missing-message delay-resp 3 sequence-ids
-ptp monitor threshold missing-message announce 3 sequence-ids
+ptp priority2 101
+ptp source ip 172.31.1.11
+ptp ttl 8
+ptp monitor threshold offset-from-master 500
+ptp monitor threshold mean-path-delay 2500
+no ptp monitor sequence-id
+```
+
+### Management SSH
+
+#### IPv4 ACL
+
+| IPv4 ACL | VRF |
+| -------- | --- |
+| MGMT-SSH-ACL | MGMT |
+
+#### SSH Timeout and Management
+
+| Idle Timeout | SSH Management |
+| ------------ | -------------- |
+| default | Enabled |
+
+#### Max number of SSH sessions limit and per-host limit
+
+| Connection Limit | Max from a single Host |
+| ---------------- | ---------------------- |
+| - | - |
+
+#### Ciphers and Algorithms
+
+| Ciphers | Key-exchange methods | MAC algorithms | Hostkey server algorithms |
+|---------|----------------------|----------------|---------------------------|
+| default | default | default | default |
+
+
+#### Management SSH Device Configuration
+
+```eos
+!
+management ssh
+   ip access-group MGMT-SSH-ACL vrf MGMT in
+```
+
+### IP Client Source Interfaces
+
+| IP Client | VRF | Source Interface Name |
+| --------- | --- | --------------------- |
+| HTTP | MGMT | Management 1 |
+
+#### IP Client Source Interfaces Device Configuration
+
+```eos
+!
+ip http client local-interface Management 1 vrf MGMT
+ ```
+
+### Management API gNMI
+
+#### Management API gNMI Summary
+
+| Transport | SSL Profile | VRF | Notification Timestamp | ACL | Port |
+| --------- | ----------- | --- | ---------------------- | --- | ---- |
+| NRVT | - | MGMT | last-change-time | - | 5909 |
+
+Provider eos-native is configured.
+
+#### Management API gNMI Device Configuration
+
+```eos
+!
+management api gnmi
+   transport grpc NRVT
+      port 5909
+      vrf MGMT
+   provider eos-native
+```
+
+### Management CVX Summary
+
+| Shutdown | CVX Servers |
+| -------- | ----------- |
+| False | 172.16.131.127, 172.16.131.128, 172.16.131.129 |
+
+#### Management CVX Source Interface
+
+| Interface | VRF |
+| --------- | --- |
+| Loopback0 | - |
+
+#### Management CVX Device Configuration
+
+```eos
+!
+management cvx
+   no shutdown
+   server host 172.16.131.127
+   server host 172.16.131.128
+   server host 172.16.131.129
+   source-interface Loopback0
 ```
 
 ### Management API HTTP
@@ -153,6 +269,28 @@ management api http-commands
       no shutdown
 ```
 
+### Management API Models
+
+#### Management API Models Summary
+
+| Provider | Path | Disabled |
+| -------- | ---- | ------- |
+| smash | bridging | False |
+| smash | ptp | False |
+| smash | routing | False |
+
+#### Management API Models Device Configuration
+
+```eos
+!
+management api models
+   !
+   provider smash
+      path bridging
+      path ptp
+      path routing
+```
+
 ## Authentication
 
 ### Local Users
@@ -170,6 +308,26 @@ management api http-commands
 !
 username admin privilege 15 role network-admin nopassword
 username ansible privilege 15 role network-admin secret sha512 <removed>
+```
+
+### Roles
+
+#### Roles Summary
+
+##### Role network-user
+
+| Sequence | Action | Mode | Command |
+| -------- | ------ | ---- | ------- |
+| 10 | deny | exec | enable|configure|bash|python-shell|\| |
+| 20 | permit | exec | .* |
+
+#### Roles Device Configuration
+
+```eos
+!
+role network-user
+   10 deny mode exec command enable|configure|bash|python-shell|\|
+   20 permit mode exec command .*
 ```
 
 ### Enable Password
@@ -225,6 +383,92 @@ aaa authorization exec default local
 daemon TerminAttr
    exec /usr/bin/TerminAttr -cvaddr=192.168.1.12:9910 -cvauth=token,/tmp/token -cvvrf=MGMT -disableaaa -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs
    no shutdown
+```
+
+### Logging
+
+#### Logging Servers and Features Summary
+
+| Type | Level |
+| -----| ----- |
+| Monitor | notifications |
+
+#### Logging Servers and Features Device Configuration
+
+```eos
+!
+logging monitor notifications
+```
+
+### MCS Client Summary
+
+MCS client is enabled
+
+#### MCS Client Device Configuration
+
+```eos
+!
+mcs client
+   no shutdown
+```
+
+### SNMP
+
+#### SNMP Configuration Summary
+
+| Contact | Location | SNMP Traps | State |
+| ------- | -------- | ---------- | ----- |
+| - | - | All | Disabled |
+
+#### SNMP Local Interfaces
+
+| Local Interface | VRF |
+| --------------- | --- |
+| loopback0 | default |
+
+#### SNMP Hosts Configuration
+
+| Host | VRF | Community | Username | Authentication level | SNMP Version |
+| ---- |---- | --------- | -------- | -------------------- | ------------ |
+| 202.40.72.61 | - | <removed> | - | - | 2c |
+| 202.40.73.61 | - | <removed> | - | - | 2c |
+
+#### SNMP Communities
+
+| Community | Access | Access List IPv4 | Access List IPv6 | View |
+| --------- | ------ | ---------------- | ---------------- | ---- |
+| <removed> | ro | - | - | - |
+
+#### SNMP Device Configuration
+
+```eos
+!
+snmp-server local-interface loopback0
+snmp-server community <removed> ro
+snmp-server host 202.40.72.61 version 2c <removed>
+snmp-server host 202.40.73.61 version 2c <removed>
+```
+
+### Hardware
+
+#### Hardware Device Configuration
+
+```eos
+!
+hardware speed-group 4 serdes 10g
+```
+
+## Spanning Tree
+
+### Spanning Tree Summary
+
+STP mode: **mstp**
+
+### Spanning Tree Device Configuration
+
+```eos
+!
+spanning-tree mode mstp
 ```
 
 ## Internal VLAN Allocation Policy
@@ -338,7 +582,6 @@ interface Ethernet4/11/1
    mtu 1500
    no switchport
    ip address 100.83.88.40/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -352,7 +595,6 @@ interface Ethernet4/12/1
    mtu 1500
    no switchport
    ip address 100.83.88.42/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -366,7 +608,6 @@ interface Ethernet4/13/1
    mtu 1500
    no switchport
    ip address 100.83.88.48/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -380,7 +621,6 @@ interface Ethernet4/14/1
    mtu 1500
    no switchport
    ip address 100.83.88.50/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -394,7 +634,6 @@ interface Ethernet4/15/1
    mtu 1500
    no switchport
    ip address 100.83.88.56/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -408,7 +647,6 @@ interface Ethernet4/16/1
    mtu 1500
    no switchport
    ip address 100.83.88.58/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -422,7 +660,6 @@ interface Ethernet4/17/1
    mtu 1500
    no switchport
    ip address 100.83.88.64/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -436,7 +673,6 @@ interface Ethernet4/18/1
    mtu 1500
    no switchport
    ip address 100.83.88.66/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -450,7 +686,6 @@ interface Ethernet4/19/1
    mtu 1500
    no switchport
    ip address 100.83.88.72/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -464,7 +699,6 @@ interface Ethernet4/20/1
    mtu 1500
    no switchport
    ip address 100.83.88.74/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -478,7 +712,6 @@ interface Ethernet4/21/1
    mtu 1500
    no switchport
    ip address 100.83.88.80/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -492,7 +725,6 @@ interface Ethernet4/22/1
    mtu 1500
    no switchport
    ip address 100.83.88.82/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -506,7 +738,6 @@ interface Ethernet4/23/1
    mtu 1500
    no switchport
    ip address 100.83.88.88/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -520,7 +751,6 @@ interface Ethernet4/24/1
    mtu 1500
    no switchport
    ip address 100.83.88.90/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -534,7 +764,6 @@ interface Ethernet4/25/1
    mtu 1500
    no switchport
    ip address 100.83.88.96/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -548,7 +777,6 @@ interface Ethernet4/26/1
    mtu 1500
    no switchport
    ip address 100.83.88.98/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -562,7 +790,6 @@ interface Ethernet4/27/1
    mtu 1500
    no switchport
    ip address 100.83.88.104/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -576,7 +803,6 @@ interface Ethernet4/28/1
    mtu 1500
    no switchport
    ip address 100.83.88.106/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -590,7 +816,6 @@ interface Ethernet4/29/1
    mtu 1500
    no switchport
    ip address 100.83.88.112/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -604,7 +829,6 @@ interface Ethernet4/30/1
    mtu 1500
    no switchport
    ip address 100.83.88.114/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -618,7 +842,6 @@ interface Ethernet4/31/1
    mtu 1500
    no switchport
    ip address 100.83.88.120/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -632,7 +855,6 @@ interface Ethernet4/32/1
    mtu 1500
    no switchport
    ip address 100.83.88.122/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -646,7 +868,6 @@ interface Ethernet4/33/1
    mtu 1500
    no switchport
    ip address 100.83.88.128/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -660,7 +881,6 @@ interface Ethernet4/34/1
    mtu 1500
    no switchport
    ip address 100.83.88.130/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -674,7 +894,6 @@ interface Ethernet4/35/1
    mtu 1500
    no switchport
    ip address 100.83.88.136/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -688,7 +907,6 @@ interface Ethernet4/36/1
    mtu 1500
    no switchport
    ip address 100.83.88.138/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -702,7 +920,6 @@ interface Ethernet5/1/1
    mtu 1500
    no switchport
    ip address 100.83.88.144/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -716,7 +933,6 @@ interface Ethernet5/2/1
    mtu 1500
    no switchport
    ip address 100.83.88.146/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -730,7 +946,6 @@ interface Ethernet5/3/1
    mtu 1500
    no switchport
    ip address 100.83.88.152/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -744,7 +959,6 @@ interface Ethernet5/4/1
    mtu 1500
    no switchport
    ip address 100.83.88.154/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -758,7 +972,6 @@ interface Ethernet5/5/1
    mtu 1500
    no switchport
    ip address 100.83.88.160/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -772,7 +985,6 @@ interface Ethernet5/6/1
    mtu 1500
    no switchport
    ip address 100.83.88.162/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -786,7 +998,6 @@ interface Ethernet5/7/1
    mtu 1500
    no switchport
    ip address 100.83.88.168/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -800,7 +1011,6 @@ interface Ethernet5/8/1
    mtu 1500
    no switchport
    ip address 100.83.88.170/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -814,7 +1024,6 @@ interface Ethernet5/9/1
    mtu 1500
    no switchport
    ip address 100.83.88.176/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -828,7 +1037,6 @@ interface Ethernet5/10/1
    mtu 1500
    no switchport
    ip address 100.83.88.178/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -842,7 +1050,6 @@ interface Ethernet5/11/1
    mtu 1500
    no switchport
    ip address 100.83.88.184/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -856,7 +1063,6 @@ interface Ethernet5/12/1
    mtu 1500
    no switchport
    ip address 100.83.88.186/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -870,7 +1076,6 @@ interface Ethernet5/13/1
    mtu 1500
    no switchport
    ip address 100.83.88.192/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -884,7 +1089,6 @@ interface Ethernet5/14/1
    mtu 1500
    no switchport
    ip address 100.83.88.194/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -898,7 +1102,6 @@ interface Ethernet5/15/1
    mtu 1500
    no switchport
    ip address 100.83.88.200/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -912,7 +1115,6 @@ interface Ethernet5/16/1
    mtu 1500
    no switchport
    ip address 100.83.88.202/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -926,7 +1128,6 @@ interface Ethernet5/17/1
    mtu 1500
    no switchport
    ip address 100.83.88.208/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -940,7 +1141,6 @@ interface Ethernet5/18/1
    mtu 1500
    no switchport
    ip address 100.83.88.210/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -954,7 +1154,6 @@ interface Ethernet5/19/1
    mtu 1500
    no switchport
    ip address 100.83.88.216/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -968,7 +1167,6 @@ interface Ethernet5/20/1
    mtu 1500
    no switchport
    ip address 100.83.88.218/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -982,7 +1180,6 @@ interface Ethernet5/21/1
    mtu 1500
    no switchport
    ip address 100.83.88.224/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -996,7 +1193,6 @@ interface Ethernet5/22/1
    mtu 1500
    no switchport
    ip address 100.83.88.226/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1010,7 +1206,6 @@ interface Ethernet5/23/1
    mtu 1500
    no switchport
    ip address 100.83.88.232/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1024,7 +1219,6 @@ interface Ethernet5/24/1
    mtu 1500
    no switchport
    ip address 100.83.88.234/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1038,7 +1232,6 @@ interface Ethernet5/25/1
    mtu 1500
    no switchport
    ip address 100.83.88.240/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1052,7 +1245,6 @@ interface Ethernet5/26/1
    mtu 1500
    no switchport
    ip address 100.83.88.242/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1066,7 +1258,6 @@ interface Ethernet5/27/1
    mtu 1500
    no switchport
    ip address 100.83.88.248/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1080,7 +1271,6 @@ interface Ethernet5/28/1
    mtu 1500
    no switchport
    ip address 100.83.88.250/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1094,7 +1284,6 @@ interface Ethernet5/29/1
    mtu 1500
    no switchport
    ip address 100.83.89.0/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1108,7 +1297,6 @@ interface Ethernet5/30/1
    mtu 1500
    no switchport
    ip address 100.83.89.2/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1122,7 +1310,6 @@ interface Ethernet5/31/1
    mtu 1500
    no switchport
    ip address 100.83.89.8/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1136,7 +1323,6 @@ interface Ethernet5/32/1
    mtu 1500
    no switchport
    ip address 100.83.89.10/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1150,7 +1336,6 @@ interface Ethernet5/33/1
    mtu 1500
    no switchport
    ip address 100.83.89.16/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1164,7 +1349,6 @@ interface Ethernet5/34/1
    mtu 1500
    no switchport
    ip address 100.83.89.18/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1178,7 +1362,6 @@ interface Ethernet5/35/1
    mtu 1500
    no switchport
    ip address 100.83.89.24/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1192,7 +1375,6 @@ interface Ethernet5/36/1
    mtu 1500
    no switchport
    ip address 100.83.89.26/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1206,7 +1388,6 @@ interface Ethernet6/1/1
    mtu 1500
    no switchport
    ip address 100.83.89.32/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1220,7 +1401,6 @@ interface Ethernet6/2/1
    mtu 1500
    no switchport
    ip address 100.83.89.34/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1234,7 +1414,6 @@ interface Ethernet33/1
    mtu 1500
    no switchport
    ip address 100.83.88.18/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1248,7 +1427,6 @@ interface Ethernet34/1
    mtu 1500
    no switchport
    ip address 100.83.88.26/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1262,7 +1440,6 @@ interface Ethernet49/1
    mtu 1500
    no switchport
    ip address 100.83.88.2/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1276,7 +1453,6 @@ interface Ethernet50/1
    mtu 1500
    no switchport
    ip address 100.83.88.10/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1731,80 +1907,25 @@ router multicast
       routing
 ```
 
-### PIM Sparse Mode
+## ACL
 
-#### PIM Sparse Mode Enabled Interfaces
+### Standard Access-lists
 
-| Interface Name | VRF Name | IP Version | Border Router | DR Priority | Local Interface |
-| -------------- | -------- | ---------- | ------------- | ----------- | --------------- |
-| Ethernet4/11/1 | - | IPv4 | - | - | - |
-| Ethernet4/12/1 | - | IPv4 | - | - | - |
-| Ethernet4/13/1 | - | IPv4 | - | - | - |
-| Ethernet4/14/1 | - | IPv4 | - | - | - |
-| Ethernet4/15/1 | - | IPv4 | - | - | - |
-| Ethernet4/16/1 | - | IPv4 | - | - | - |
-| Ethernet4/17/1 | - | IPv4 | - | - | - |
-| Ethernet4/18/1 | - | IPv4 | - | - | - |
-| Ethernet4/19/1 | - | IPv4 | - | - | - |
-| Ethernet4/20/1 | - | IPv4 | - | - | - |
-| Ethernet4/21/1 | - | IPv4 | - | - | - |
-| Ethernet4/22/1 | - | IPv4 | - | - | - |
-| Ethernet4/23/1 | - | IPv4 | - | - | - |
-| Ethernet4/24/1 | - | IPv4 | - | - | - |
-| Ethernet4/25/1 | - | IPv4 | - | - | - |
-| Ethernet4/26/1 | - | IPv4 | - | - | - |
-| Ethernet4/27/1 | - | IPv4 | - | - | - |
-| Ethernet4/28/1 | - | IPv4 | - | - | - |
-| Ethernet4/29/1 | - | IPv4 | - | - | - |
-| Ethernet4/30/1 | - | IPv4 | - | - | - |
-| Ethernet4/31/1 | - | IPv4 | - | - | - |
-| Ethernet4/32/1 | - | IPv4 | - | - | - |
-| Ethernet4/33/1 | - | IPv4 | - | - | - |
-| Ethernet4/34/1 | - | IPv4 | - | - | - |
-| Ethernet4/35/1 | - | IPv4 | - | - | - |
-| Ethernet4/36/1 | - | IPv4 | - | - | - |
-| Ethernet5/1/1 | - | IPv4 | - | - | - |
-| Ethernet5/2/1 | - | IPv4 | - | - | - |
-| Ethernet5/3/1 | - | IPv4 | - | - | - |
-| Ethernet5/4/1 | - | IPv4 | - | - | - |
-| Ethernet5/5/1 | - | IPv4 | - | - | - |
-| Ethernet5/6/1 | - | IPv4 | - | - | - |
-| Ethernet5/7/1 | - | IPv4 | - | - | - |
-| Ethernet5/8/1 | - | IPv4 | - | - | - |
-| Ethernet5/9/1 | - | IPv4 | - | - | - |
-| Ethernet5/10/1 | - | IPv4 | - | - | - |
-| Ethernet5/11/1 | - | IPv4 | - | - | - |
-| Ethernet5/12/1 | - | IPv4 | - | - | - |
-| Ethernet5/13/1 | - | IPv4 | - | - | - |
-| Ethernet5/14/1 | - | IPv4 | - | - | - |
-| Ethernet5/15/1 | - | IPv4 | - | - | - |
-| Ethernet5/16/1 | - | IPv4 | - | - | - |
-| Ethernet5/17/1 | - | IPv4 | - | - | - |
-| Ethernet5/18/1 | - | IPv4 | - | - | - |
-| Ethernet5/19/1 | - | IPv4 | - | - | - |
-| Ethernet5/20/1 | - | IPv4 | - | - | - |
-| Ethernet5/21/1 | - | IPv4 | - | - | - |
-| Ethernet5/22/1 | - | IPv4 | - | - | - |
-| Ethernet5/23/1 | - | IPv4 | - | - | - |
-| Ethernet5/24/1 | - | IPv4 | - | - | - |
-| Ethernet5/25/1 | - | IPv4 | - | - | - |
-| Ethernet5/26/1 | - | IPv4 | - | - | - |
-| Ethernet5/27/1 | - | IPv4 | - | - | - |
-| Ethernet5/28/1 | - | IPv4 | - | - | - |
-| Ethernet5/29/1 | - | IPv4 | - | - | - |
-| Ethernet5/30/1 | - | IPv4 | - | - | - |
-| Ethernet5/31/1 | - | IPv4 | - | - | - |
-| Ethernet5/32/1 | - | IPv4 | - | - | - |
-| Ethernet5/33/1 | - | IPv4 | - | - | - |
-| Ethernet5/34/1 | - | IPv4 | - | - | - |
-| Ethernet5/35/1 | - | IPv4 | - | - | - |
-| Ethernet5/36/1 | - | IPv4 | - | - | - |
-| Ethernet6/1/1 | - | IPv4 | - | - | - |
-| Ethernet6/2/1 | - | IPv4 | - | - | - |
-| Ethernet33/1 | - | IPv4 | - | - | - |
-| Ethernet34/1 | - | IPv4 | - | - | - |
-| Ethernet49/1 | - | IPv4 | - | - | - |
-| Ethernet50/1 | - | IPv4 | - | - | - |
+#### Standard Access-lists Summary
+
+##### MGMT-SSH-ACL
+
+| Sequence | Action |
+| -------- | ------ |
+| 10 | permit host 172.20.111.100 |
+
+#### Standard Access-lists Device Configuration
+
+```eos
+!
+ip access-list standard MGMT-SSH-ACL
+   10 permit host 172.20.111.100
+```
 
 ## VRF Instances
 
@@ -1819,4 +1940,22 @@ router multicast
 ```eos
 !
 vrf instance MGMT
+```
+
+## System L1
+
+### Unsupported Interface Configurations
+
+| Unsupported Configuration | action |
+| ---------------- | -------|
+| Speed | error |
+| Error correction | error |
+
+### System L1 Device Configuration
+
+```eos
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
 ```

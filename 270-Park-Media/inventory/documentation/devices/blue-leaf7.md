@@ -5,16 +5,27 @@
 - [Management](#management)
   - [Management Interfaces](#management-interfaces)
   - [IP Name Servers](#ip-name-servers)
+  - [Clock Settings](#clock-settings)
   - [NTP](#ntp)
   - [PTP](#ptp)
+  - [Management SSH](#management-ssh)
+  - [IP Client Source Interfaces](#ip-client-source-interfaces)
+  - [Management API gNMI](#management-api-gnmi)
+  - [Management CVX Summary](#management-cvx-summary)
   - [Management API HTTP](#management-api-http)
+  - [Management API Models](#management-api-models)
 - [Authentication](#authentication)
   - [Local Users](#local-users)
+  - [Roles](#roles)
   - [Enable Password](#enable-password)
   - [AAA Authentication](#aaa-authentication)
   - [AAA Authorization](#aaa-authorization)
 - [Monitoring](#monitoring)
   - [TerminAttr Daemon](#terminattr-daemon)
+  - [Logging](#logging)
+  - [MCS Client Summary](#mcs-client-summary)
+  - [SNMP](#snmp)
+  - [Hardware](#hardware)
 - [Spanning Tree](#spanning-tree)
   - [Spanning Tree Summary](#spanning-tree-summary)
   - [Spanning Tree Device Configuration](#spanning-tree-device-configuration)
@@ -33,10 +44,14 @@
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
   - [Router Multicast](#router-multicast)
-  - [PIM Sparse Mode](#pim-sparse-mode)
+- [ACL](#acl)
+  - [Standard Access-lists](#standard-access-lists)
 - [VRF Instances](#vrf-instances)
   - [VRF Instances Summary](#vrf-instances-summary)
   - [VRF Instances Device Configuration](#vrf-instances-device-configuration)
+- [System L1](#system-l1)
+  - [Unsupported Interface Configurations](#unsupported-interface-configurations)
+  - [System L1 Device Configuration](#system-l1-device-configuration)
 
 ## Management
 
@@ -81,28 +96,36 @@ interface Management1
 ip name-server vrf MGMT 192.168.1.1
 ```
 
+### Clock Settings
+
+#### Clock Timezone Settings
+
+Clock Timezone is set to **America/New_York**.
+
+#### Clock Device Configuration
+
+```eos
+!
+clock timezone America/New_York
+```
+
 ### NTP
 
 #### NTP Summary
-
-##### NTP Local Interface
-
-| Interface | VRF |
-| --------- | --- |
-| Management1 | MGMT |
 
 ##### NTP Servers
 
 | Server | VRF | Preferred | Burst | iBurst | Version | Min Poll | Max Poll | Local-interface | Key |
 | ------ | --- | --------- | ----- | ------ | ------- | -------- | -------- | --------------- | --- |
-| 0.pool.ntp.org | MGMT | - | - | - | - | - | - | - | - |
+| 172.16.131.2 | MGMT | False | False | True | - | - | - | - | - |
+| 172.16.131.3 | MGMT | True | False | True | - | - | - | - | - |
 
 #### NTP Device Configuration
 
 ```eos
 !
-ntp local-interface vrf MGMT Management1
-ntp server vrf MGMT 0.pool.ntp.org
+ntp server vrf MGMT 172.16.131.2 iburst
+ntp server vrf MGMT 172.16.131.3 prefer iburst
 ```
 
 ### PTP
@@ -110,24 +133,114 @@ ntp server vrf MGMT 0.pool.ntp.org
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| 00:1C:73:1e:00:02 | - | 30 | 2 | - | 127 | boundary | - |
+| - | 172.31.1.12 | 30 | 101 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
 ```eos
 !
-ptp clock-identity 00:1C:73:1e:00:02
-ptp domain 127
+ptp domain 100
 ptp mode boundary
 ptp priority1 30
-ptp priority2 2
-ptp monitor threshold offset-from-master 250
-ptp monitor threshold mean-path-delay 1500
-ptp monitor sequence-id
-ptp monitor threshold missing-message sync 3 sequence-ids
-ptp monitor threshold missing-message follow-up 3 sequence-ids
-ptp monitor threshold missing-message delay-resp 3 sequence-ids
-ptp monitor threshold missing-message announce 3 sequence-ids
+ptp priority2 101
+ptp source ip 172.31.1.12
+ptp ttl 8
+ptp monitor threshold offset-from-master 500
+ptp monitor threshold mean-path-delay 2500
+no ptp monitor sequence-id
+```
+
+### Management SSH
+
+#### IPv4 ACL
+
+| IPv4 ACL | VRF |
+| -------- | --- |
+| MGMT-SSH-ACL | MGMT |
+
+#### SSH Timeout and Management
+
+| Idle Timeout | SSH Management |
+| ------------ | -------------- |
+| default | Enabled |
+
+#### Max number of SSH sessions limit and per-host limit
+
+| Connection Limit | Max from a single Host |
+| ---------------- | ---------------------- |
+| - | - |
+
+#### Ciphers and Algorithms
+
+| Ciphers | Key-exchange methods | MAC algorithms | Hostkey server algorithms |
+|---------|----------------------|----------------|---------------------------|
+| default | default | default | default |
+
+
+#### Management SSH Device Configuration
+
+```eos
+!
+management ssh
+   ip access-group MGMT-SSH-ACL vrf MGMT in
+```
+
+### IP Client Source Interfaces
+
+| IP Client | VRF | Source Interface Name |
+| --------- | --- | --------------------- |
+| HTTP | MGMT | Management 1 |
+
+#### IP Client Source Interfaces Device Configuration
+
+```eos
+!
+ip http client local-interface Management 1 vrf MGMT
+ ```
+
+### Management API gNMI
+
+#### Management API gNMI Summary
+
+| Transport | SSL Profile | VRF | Notification Timestamp | ACL | Port |
+| --------- | ----------- | --- | ---------------------- | --- | ---- |
+| NRVT | - | MGMT | last-change-time | - | 5909 |
+
+Provider eos-native is configured.
+
+#### Management API gNMI Device Configuration
+
+```eos
+!
+management api gnmi
+   transport grpc NRVT
+      port 5909
+      vrf MGMT
+   provider eos-native
+```
+
+### Management CVX Summary
+
+| Shutdown | CVX Servers |
+| -------- | ----------- |
+| False | 172.16.131.127, 172.16.131.128, 172.16.131.129 |
+
+#### Management CVX Source Interface
+
+| Interface | VRF |
+| --------- | --- |
+| Loopback0 | - |
+
+#### Management CVX Device Configuration
+
+```eos
+!
+management cvx
+   no shutdown
+   server host 172.16.131.127
+   server host 172.16.131.128
+   server host 172.16.131.129
+   source-interface Loopback0
 ```
 
 ### Management API HTTP
@@ -156,6 +269,28 @@ management api http-commands
       no shutdown
 ```
 
+### Management API Models
+
+#### Management API Models Summary
+
+| Provider | Path | Disabled |
+| -------- | ---- | ------- |
+| smash | bridging | False |
+| smash | ptp | False |
+| smash | routing | False |
+
+#### Management API Models Device Configuration
+
+```eos
+!
+management api models
+   !
+   provider smash
+      path bridging
+      path ptp
+      path routing
+```
+
 ## Authentication
 
 ### Local Users
@@ -173,6 +308,26 @@ management api http-commands
 !
 username admin privilege 15 role network-admin nopassword
 username ansible privilege 15 role network-admin secret sha512 <removed>
+```
+
+### Roles
+
+#### Roles Summary
+
+##### Role network-user
+
+| Sequence | Action | Mode | Command |
+| -------- | ------ | ---- | ------- |
+| 10 | deny | exec | enable|configure|bash|python-shell|\| |
+| 20 | permit | exec | .* |
+
+#### Roles Device Configuration
+
+```eos
+!
+role network-user
+   10 deny mode exec command enable|configure|bash|python-shell|\|
+   20 permit mode exec command .*
 ```
 
 ### Enable Password
@@ -228,6 +383,79 @@ aaa authorization exec default local
 daemon TerminAttr
    exec /usr/bin/TerminAttr -cvaddr=192.168.1.12:9910 -cvauth=token,/tmp/token -cvvrf=MGMT -disableaaa -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs
    no shutdown
+```
+
+### Logging
+
+#### Logging Servers and Features Summary
+
+| Type | Level |
+| -----| ----- |
+| Monitor | notifications |
+
+#### Logging Servers and Features Device Configuration
+
+```eos
+!
+logging monitor notifications
+```
+
+### MCS Client Summary
+
+MCS client is enabled
+
+#### MCS Client Device Configuration
+
+```eos
+!
+mcs client
+   no shutdown
+```
+
+### SNMP
+
+#### SNMP Configuration Summary
+
+| Contact | Location | SNMP Traps | State |
+| ------- | -------- | ---------- | ----- |
+| - | - | All | Disabled |
+
+#### SNMP Local Interfaces
+
+| Local Interface | VRF |
+| --------------- | --- |
+| loopback0 | default |
+
+#### SNMP Hosts Configuration
+
+| Host | VRF | Community | Username | Authentication level | SNMP Version |
+| ---- |---- | --------- | -------- | -------------------- | ------------ |
+| 202.40.72.61 | - | <removed> | - | - | 2c |
+| 202.40.73.61 | - | <removed> | - | - | 2c |
+
+#### SNMP Communities
+
+| Community | Access | Access List IPv4 | Access List IPv6 | View |
+| --------- | ------ | ---------------- | ---------------- | ---- |
+| <removed> | ro | - | - | - |
+
+#### SNMP Device Configuration
+
+```eos
+!
+snmp-server local-interface loopback0
+snmp-server community <removed> ro
+snmp-server host 202.40.72.61 version 2c <removed>
+snmp-server host 202.40.73.61 version 2c <removed>
+```
+
+### Hardware
+
+#### Hardware Device Configuration
+
+```eos
+!
+hardware speed-group 4 serdes 10g
 ```
 
 ## Spanning Tree
@@ -295,7 +523,6 @@ interface Ethernet49/1
    mtu 1500
    no switchport
    ip address 100.83.88.89/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -309,7 +536,6 @@ interface Ethernet50/1
    mtu 1500
    no switchport
    ip address 100.83.88.91/31
-   pim ipv4 sparse-mode
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -500,14 +726,25 @@ router multicast
       routing
 ```
 
-### PIM Sparse Mode
+## ACL
 
-#### PIM Sparse Mode Enabled Interfaces
+### Standard Access-lists
 
-| Interface Name | VRF Name | IP Version | Border Router | DR Priority | Local Interface |
-| -------------- | -------- | ---------- | ------------- | ----------- | --------------- |
-| Ethernet49/1 | - | IPv4 | - | - | - |
-| Ethernet50/1 | - | IPv4 | - | - | - |
+#### Standard Access-lists Summary
+
+##### MGMT-SSH-ACL
+
+| Sequence | Action |
+| -------- | ------ |
+| 10 | permit host 172.20.111.100 |
+
+#### Standard Access-lists Device Configuration
+
+```eos
+!
+ip access-list standard MGMT-SSH-ACL
+   10 permit host 172.20.111.100
+```
 
 ## VRF Instances
 
@@ -522,4 +759,22 @@ router multicast
 ```eos
 !
 vrf instance MGMT
+```
+
+## System L1
+
+### Unsupported Interface Configurations
+
+| Unsupported Configuration | action |
+| ---------------- | -------|
+| Speed | error |
+| Error correction | error |
+
+### System L1 Device Configuration
+
+```eos
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
 ```

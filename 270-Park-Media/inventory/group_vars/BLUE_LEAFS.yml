@@ -24,7 +24,18 @@ media_leaf:
     filter:
       tenants: [ blue ]
     ptp:
-      priority2: 2
+      source_ip: 172.31.1.12
+      priority1: 30
+      priority2: 101
+      ttl: 8
+      monitor:
+        #enabled: <bool; default=True>
+        threshold:
+          offset_from_master: 500
+          mean_path_delay: 2500
+        missing_message:
+                sequence_ids:
+                  enabled: False
   nodes:
     - name: blue-leaf1
       id: 6
