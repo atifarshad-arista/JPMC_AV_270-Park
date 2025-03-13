@@ -635,7 +635,6 @@ ASN Notation: asplain
 | BGP Tuning |
 | ---------- |
 | bgp asn notation asdot |
-| no bgp default ipv4-unicast |
 | timers bgp 5 15 |
 | distance bgp 20 200 200 |
 | graceful-restart restart-time 300 |
@@ -674,7 +673,6 @@ router bgp 65011.21
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
    bgp asn notation asdot
-   no bgp default ipv4-unicast
    timers bgp 5 15
    distance bgp 20 200 200
    graceful-restart restart-time 300

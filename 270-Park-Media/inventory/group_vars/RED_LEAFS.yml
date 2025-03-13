@@ -14,7 +14,7 @@ media_leaf:
     bgp_defaults:
     # Literal bgp commands <str>
       - bgp asn notation asdot
-      - no bgp default ipv4-unicast
+      #- no bgp default ipv4-unicast
       - timers bgp 5 15
       - distance bgp 20 200 200
       - graceful-restart restart-time 300
