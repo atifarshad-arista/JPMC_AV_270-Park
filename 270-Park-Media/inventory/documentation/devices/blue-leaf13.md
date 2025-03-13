@@ -642,6 +642,7 @@ ASN Notation: asplain
 | graceful-restart |
 | maximum-paths 128 |
 | neighbor default send-community |
+| redistribute attached-host |
 | update wait-install |
 | no bgp default ipv4-unicast |
 | maximum-paths 4 ecmp 4 |
@@ -680,6 +681,7 @@ router bgp 65011.13
    graceful-restart
    maximum-paths 128
    neighbor default send-community
+   redistribute attached-host
    neighbor P2P-IPv4-eBGP-PEERS peer group
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
