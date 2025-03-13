@@ -21,6 +21,7 @@ media_leaf:
       - graceful-restart
       - maximum-paths 128
       - neighbor default send-community
+      - redistribute attached-host
     filter:
       tenants: [ blue ]
     ptp:

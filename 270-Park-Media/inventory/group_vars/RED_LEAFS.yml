@@ -21,6 +21,7 @@ media_leaf:
       - graceful-restart
       - maximum-paths 128
       - neighbor default send-community
+      - redistribute attached-host
     filter:
       tenants: [ red ]
     ptp:
@@ -36,6 +37,7 @@ media_leaf:
         missing_message:
                 sequence_ids:
                   enabled: False
+
   nodes:
     - name: red-leaf1
       id: 39
