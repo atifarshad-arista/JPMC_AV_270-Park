@@ -10,7 +10,10 @@ port_profiles:
     spanning_tree_bpdufilter: enabled
     ptp:
       enabled: true
-
+    structured_config:
+      multicast:
+        ipv4:
+          static: True
   - profile: RED_112
     mode: access
     enabled: false
@@ -19,7 +22,10 @@ port_profiles:
     spanning_tree_bpdufilter: enabled
     ptp:
       enabled: true
-
+    structured_config:
+      multicast:
+        ipv4:
+          static: True
   - profile: BLUE_211
     mode: access
     enabled: false
@@ -28,6 +34,10 @@ port_profiles:
     spanning_tree_bpdufilter: enabled
     ptp:
       enabled: true
+    structured_config:
+      multicast:
+        ipv4:
+          static: True
 
   - profile: BLUE_212
     mode: access
@@ -37,6 +47,10 @@ port_profiles:
     spanning_tree_bpdufilter: enabled
     ptp:
       enabled: true
+    structured_config:
+      multicast:
+        ipv4:
+          static: True
 
 # Network Ports
 # All switch_ports ranges are expanded into individual port configurations

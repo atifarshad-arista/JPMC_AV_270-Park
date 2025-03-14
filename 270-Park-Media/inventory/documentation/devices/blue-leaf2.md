@@ -572,6 +572,57 @@ vlan 212
 
 *Inherited from Port-Channel Interface
 
+##### Multicast Routing
+
+| Interface | IP Version | Static Routes Allowed | Multicast Boundaries |
+| --------- | ---------- | --------------------- | -------------------- |
+| Ethernet3 | IPv4 | True | - |
+| Ethernet4 | IPv4 | True | - |
+| Ethernet5 | IPv4 | True | - |
+| Ethernet6 | IPv4 | True | - |
+| Ethernet7 | IPv4 | True | - |
+| Ethernet8 | IPv4 | True | - |
+| Ethernet9 | IPv4 | True | - |
+| Ethernet10 | IPv4 | True | - |
+| Ethernet11 | IPv4 | True | - |
+| Ethernet12 | IPv4 | True | - |
+| Ethernet13 | IPv4 | True | - |
+| Ethernet14 | IPv4 | True | - |
+| Ethernet15 | IPv4 | True | - |
+| Ethernet16 | IPv4 | True | - |
+| Ethernet17 | IPv4 | True | - |
+| Ethernet18 | IPv4 | True | - |
+| Ethernet19 | IPv4 | True | - |
+| Ethernet20 | IPv4 | True | - |
+| Ethernet21 | IPv4 | True | - |
+| Ethernet22 | IPv4 | True | - |
+| Ethernet23 | IPv4 | True | - |
+| Ethernet24 | IPv4 | True | - |
+| Ethernet25 | IPv4 | True | - |
+| Ethernet26 | IPv4 | True | - |
+| Ethernet27 | IPv4 | True | - |
+| Ethernet28 | IPv4 | True | - |
+| Ethernet29 | IPv4 | True | - |
+| Ethernet30 | IPv4 | True | - |
+| Ethernet31 | IPv4 | True | - |
+| Ethernet32 | IPv4 | True | - |
+| Ethernet33 | IPv4 | True | - |
+| Ethernet34 | IPv4 | True | - |
+| Ethernet35 | IPv4 | True | - |
+| Ethernet36 | IPv4 | True | - |
+| Ethernet37 | IPv4 | True | - |
+| Ethernet38 | IPv4 | True | - |
+| Ethernet39 | IPv4 | True | - |
+| Ethernet40 | IPv4 | True | - |
+| Ethernet41 | IPv4 | True | - |
+| Ethernet42 | IPv4 | True | - |
+| Ethernet43 | IPv4 | True | - |
+| Ethernet44 | IPv4 | True | - |
+| Ethernet45 | IPv4 | True | - |
+| Ethernet46 | IPv4 | True | - |
+| Ethernet47 | IPv4 | True | - |
+| Ethernet48 | IPv4 | True | - |
+
 ##### IPv4
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
@@ -589,6 +640,7 @@ interface Ethernet3
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -605,6 +657,7 @@ interface Ethernet4
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -621,6 +674,7 @@ interface Ethernet5
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -637,6 +691,7 @@ interface Ethernet6
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -653,6 +708,7 @@ interface Ethernet7
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -669,6 +725,7 @@ interface Ethernet8
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -685,6 +742,7 @@ interface Ethernet9
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -701,6 +759,7 @@ interface Ethernet10
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -717,6 +776,7 @@ interface Ethernet11
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -733,6 +793,7 @@ interface Ethernet12
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -749,6 +810,7 @@ interface Ethernet13
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -765,6 +827,7 @@ interface Ethernet14
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -781,6 +844,7 @@ interface Ethernet15
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -797,6 +861,7 @@ interface Ethernet16
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -813,6 +878,7 @@ interface Ethernet17
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -829,6 +895,7 @@ interface Ethernet18
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -845,6 +912,7 @@ interface Ethernet19
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -861,6 +929,7 @@ interface Ethernet20
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -877,6 +946,7 @@ interface Ethernet21
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -893,6 +963,7 @@ interface Ethernet22
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -909,6 +980,7 @@ interface Ethernet23
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -925,6 +997,7 @@ interface Ethernet24
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -941,6 +1014,7 @@ interface Ethernet25
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -957,6 +1031,7 @@ interface Ethernet26
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -973,6 +1048,7 @@ interface Ethernet27
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -989,6 +1065,7 @@ interface Ethernet28
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1005,6 +1082,7 @@ interface Ethernet29
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1021,6 +1099,7 @@ interface Ethernet30
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1037,6 +1116,7 @@ interface Ethernet31
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1053,6 +1133,7 @@ interface Ethernet32
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1069,6 +1150,7 @@ interface Ethernet33
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1085,6 +1167,7 @@ interface Ethernet34
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1101,6 +1184,7 @@ interface Ethernet35
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1117,6 +1201,7 @@ interface Ethernet36
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1133,6 +1218,7 @@ interface Ethernet37
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1149,6 +1235,7 @@ interface Ethernet38
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1165,6 +1252,7 @@ interface Ethernet39
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1181,6 +1269,7 @@ interface Ethernet40
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1197,6 +1286,7 @@ interface Ethernet41
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1213,6 +1303,7 @@ interface Ethernet42
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1229,6 +1320,7 @@ interface Ethernet43
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1245,6 +1337,7 @@ interface Ethernet44
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1261,6 +1354,7 @@ interface Ethernet45
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1277,6 +1371,7 @@ interface Ethernet46
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1293,6 +1388,7 @@ interface Ethernet47
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1309,6 +1405,7 @@ interface Ethernet48
    switchport access vlan 212
    switchport mode access
    switchport
+   multicast ipv4 static
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
