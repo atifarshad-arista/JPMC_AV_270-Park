@@ -19,6 +19,11 @@ ansible_httpapi_use_ssl: true
 # Do not try to validate certs
 ansible_httpapi_validate_certs: false
 
+logging:
+  # Console logging severity level.
+  monitor: "notifications"
+
+
 aaa_authentication:
   login:
     default: local
@@ -27,13 +32,90 @@ aaa_authorization:
     default: local
   serial_console: True
   commands:
-
     # Command authorization method(s) as a string.
     # Examples:
     # - "group tacacs+ local"
     # - "group MYGROUP none"
     # - "group tacacs+ group MYGROUP local
     all_default: local
+
+# Changed ptp to ptp_settings
+ptp_settings:
+  enabled: true
+  auto_clock_identity: false
+  domain: 100
+
+spanning_tree:
+  mode: "mstp"
+
+snmp_server:
+  communities:
+      # Community name.
+    - name: gt1m3rg3r
+      access: "ro"
+  local_interfaces:
+      # Interface name.
+    - name: loopback0
+  hosts:
+    - host: 202.40.72.61
+      community: gt1m3rg3r
+      version: "2c"
+    - host: 202.40.73.61
+      community: gt1m3rg3r
+      version: "2c"
+
+hardware:
+  speed_groups:
+    - speed_group: 4
+      # Serdes speed like "10g" or "25g".
+      serdes: "10g"
+system:
+  l1:
+    unsupported_speed_action: "error"
+    unsupported_error_correction_action: "error"
+clock:
+  timezone: America/New_York
+
+management_api_http:
+  enable_http: True
+  enable_https: False
+
+management_cvx:
+  shutdown: false
+  server_hosts:
+  # IP or hostname.
+    - 172.16.131.127
+    - 172.16.131.128
+    - 172.16.131.129
+  # Interface name.
+  source_interface: Loopback0
+
+management_api_gnmi:
+  provider: "eos-native"
+  transport:
+    grpc:
+        # Transport name.
+      - name: NRVT
+        vrf: MGMT
+        port: 5909
+
+management_api_models:
+  providers:
+    - name: "smash"
+      paths:
+        - path: bridging
+        - path: ptp
+        - path: routing
+  # providers:
+  #   - name: "macsec"
+
+management_ssh:
+  access_groups:
+      # Standard ACL Name.
+    - name: MGMT-SSH-ACL
+      # VRF Name.
+      vrf: MGMT
+
 
 # Spine Switches
 l3spine:
@@ -50,13 +132,28 @@ l3spine:
     bgp_defaults:
     # Literal bgp commands <str>
       - bgp asn notation asdot
-      - no bgp default ipv4-unicast
+      #- no bgp default ipv4-unicast
       - timers bgp 5 15
       - distance bgp 20 200 200
       - graceful-restart restart-time 300
       - graceful-restart
       - maximum-paths 128
       - neighbor default send-community
+      #- no redistribute attached-host
+    ptp:
+      domain: 100
+      source_ip: 172.31.1.12
+      priority1: 20
+      priority2: 103
+      ttl: 8
+      monitor:
+        #enabled: <bool; default=True>
+        threshold:
+          offset_from_master: 500
+          mean_path_delay: 2500
+        missing_message:
+                sequence_ids:
+                  enabled: False
 
   node_groups:
     - group: SPINES

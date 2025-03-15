@@ -28,3 +28,14 @@ ntp_settings:
   servers:
     - name: time.google.com
     - name: pool.ntp.org
+
+standard_access_lists:
+    # Access-list Name.
+  - name: MGMT-SSH-ACL
+    counters_per_entry: False
+    sequence_numbers: # required
+        # Sequence ID.
+      - sequence: 10
+        # Action as string.
+        # Example: "deny ip any any"
+        action: permit host 172.20.111.100
