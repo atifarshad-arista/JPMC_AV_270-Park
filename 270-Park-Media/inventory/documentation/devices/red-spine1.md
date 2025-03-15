@@ -33,6 +33,7 @@
   - [Internal VLAN Allocation Policy Summary](#internal-vlan-allocation-policy-summary)
   - [Internal VLAN Allocation Policy Device Configuration](#internal-vlan-allocation-policy-device-configuration)
 - [Interfaces](#interfaces)
+  - [Switchport Default](#switchport-default)
   - [Ethernet Interfaces](#ethernet-interfaces)
   - [Loopback Interfaces](#loopback-interfaces)
 - [Routing](#routing)
@@ -487,6 +488,19 @@ vlan internal order ascending range 1006 1199
 ```
 
 ## Interfaces
+
+### Switchport Default
+
+#### Switchport Defaults Summary
+
+- Default Switchport Mode: routed
+
+#### Switchport Default Device Configuration
+
+```eos
+!
+switchport default mode routed
+```
 
 ### Ethernet Interfaces
 

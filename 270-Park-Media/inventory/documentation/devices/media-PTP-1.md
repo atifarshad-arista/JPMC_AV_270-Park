@@ -36,6 +36,7 @@
   - [VLANs Summary](#vlans-summary)
   - [VLANs Device Configuration](#vlans-device-configuration)
 - [Interfaces](#interfaces)
+  - [Switchport Default](#switchport-default)
   - [Ethernet Interfaces](#ethernet-interfaces)
   - [Loopback Interfaces](#loopback-interfaces)
   - [VLAN Interfaces](#vlan-interfaces)
@@ -516,6 +517,19 @@ vlan 131
 ```
 
 ## Interfaces
+
+### Switchport Default
+
+#### Switchport Defaults Summary
+
+- Default Switchport Mode: routed
+
+#### Switchport Default Device Configuration
+
+```eos
+!
+switchport default mode routed
+```
 
 ### Ethernet Interfaces
 

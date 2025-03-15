@@ -55,6 +55,9 @@ bgp_peer_groups:
     name: P2P-IPv4-eBGP-PEERS
     password: 7x4B4rnJhZB438m9+BrBfQ==
 
+switchport_default:
+  mode: "routed"
+
 p2p_uplinks_mtu: 1500
 
 default_interfaces:
