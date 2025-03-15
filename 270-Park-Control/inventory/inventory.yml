@@ -13,6 +13,7 @@ DC1:
           ansible_httpapi_use_ssl: true
           ansible_httpapi_validate_certs: false
           ansible_network_os: eos
+          ansible_httpapi_port: 443
     FABRIC:
       children:
         DC1_SPINES:
