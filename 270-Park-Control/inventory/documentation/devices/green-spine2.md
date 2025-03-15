@@ -11,6 +11,7 @@
 - [Authentication](#authentication)
   - [Local Users](#local-users)
   - [Enable Password](#enable-password)
+  - [AAA Authentication](#aaa-authentication)
   - [AAA Authorization](#aaa-authorization)
 - [MLAG](#mlag)
   - [MLAG Summary](#mlag-summary)
@@ -187,6 +188,21 @@ username admin privilege 15 role network-admin secret sha512 <removed>
 
 Enable password has been disabled
 
+### AAA Authentication
+
+#### AAA Authentication Summary
+
+| Type | Sub-type | User Stores |
+| ---- | -------- | ---------- |
+| Login | default | local |
+
+#### AAA Authentication Device Configuration
+
+```eos
+aaa authentication login default local
+!
+```
+
 ### AAA Authorization
 
 #### AAA Authorization Summary
@@ -197,10 +213,20 @@ Enable password has been disabled
 
 Authorization for configuration commands is disabled.
 
+Authorization for serial console is enabled.
+
+#### AAA Authorization Privilege Levels Summary
+
+| Privilege Level | User Stores |
+| --------------- | ----------- |
+| all | local |
+
 #### AAA Authorization Device Configuration
 
 ```eos
+aaa authorization serial-console
 aaa authorization exec default local
+aaa authorization commands all default local
 !
 ```
 

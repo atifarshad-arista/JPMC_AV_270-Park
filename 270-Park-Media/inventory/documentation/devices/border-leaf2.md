@@ -362,10 +362,20 @@ aaa authentication login default local
 
 Authorization for configuration commands is disabled.
 
+Authorization for serial console is enabled.
+
+#### AAA Authorization Privilege Levels Summary
+
+| Privilege Level | User Stores |
+| --------------- | ----------- |
+| all | local |
+
 #### AAA Authorization Device Configuration
 
 ```eos
+aaa authorization serial-console
 aaa authorization exec default local
+aaa authorization commands all default local
 !
 ```
 

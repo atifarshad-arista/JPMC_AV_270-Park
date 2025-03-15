@@ -209,6 +209,15 @@ aaa_authentication:
 aaa_authorization:
   exec:
     default: local
+  serial_console: True
+  commands:
+
+    # Command authorization method(s) as a string.
+    # Examples:
+    # - "group tacacs+ local"
+    # - "group MYGROUP none"
+    # - "group tacacs+ group MYGROUP local
+    all_default: local
 
 mgmt_interface: Management1
 mgmt_gateway: 10.100.100.1
