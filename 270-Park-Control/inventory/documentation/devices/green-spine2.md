@@ -148,13 +148,12 @@ ntp server vrf MGMT time.google.com prefer
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| 00:1C:73:14:00:67 | 172.31.1.12 | 20 | 103 | 8 | 100 | boundary | - |
+| - | 172.31.1.12 | 20 | 103 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
 ```eos
 !
-ptp clock-identity 00:1C:73:14:00:67
 ptp domain 100
 ptp mode boundary
 ptp priority1 20
@@ -5724,7 +5723,7 @@ ASN Notation: asplain
 
 #### Router BGP Peer Groups
 
-##### MLAG-IPv4-UNDERLAY-PEER
+##### MLAG-iBGP-PEER
 
 | Settings | Value |
 | -------- | ----- |
@@ -5746,7 +5745,7 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 100.83.88.18 | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | default | - | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | Inherited from peer group MLAG-IPv4-UNDERLAY-PEER | - | - | - | - | - | - |
+| 100.83.88.18 | Inherited from peer group MLAG-iBGP-PEER | default | - | Inherited from peer group MLAG-iBGP-PEER | Inherited from peer group MLAG-iBGP-PEER | - | - | - | - | - | - |
 | 100.83.88.243 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.247 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.251 | 65003.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
@@ -5768,19 +5767,20 @@ router bgp 65003.3
    graceful-restart
    maximum-paths 128
    neighbor default send-community
-   neighbor MLAG-IPv4-UNDERLAY-PEER peer group
-   neighbor MLAG-IPv4-UNDERLAY-PEER remote-as 65003.3
-   neighbor MLAG-IPv4-UNDERLAY-PEER next-hop-self
-   neighbor MLAG-IPv4-UNDERLAY-PEER description green-spine1
-   neighbor MLAG-IPv4-UNDERLAY-PEER route-map RM-MLAG-PEER-IN in
-   neighbor MLAG-IPv4-UNDERLAY-PEER send-community
-   neighbor MLAG-IPv4-UNDERLAY-PEER maximum-routes 12000
+   neighbor MLAG-iBGP-PEER peer group
+   neighbor MLAG-iBGP-PEER remote-as 65003.3
+   neighbor MLAG-iBGP-PEER next-hop-self
+   neighbor MLAG-iBGP-PEER description green-spine1
+   neighbor MLAG-iBGP-PEER route-map RM-MLAG-PEER-IN in
+   neighbor MLAG-iBGP-PEER password 7 <removed>
+   neighbor MLAG-iBGP-PEER send-community
+   neighbor MLAG-iBGP-PEER maximum-routes 12000
    neighbor P2P-IPv4-eBGP-PEERS peer group
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
-   neighbor 100.83.88.18 peer group MLAG-IPv4-UNDERLAY-PEER
-   neighbor 100.83.88.18 description green-spine1_Vlan4093
+   neighbor 100.83.88.18 peer group MLAG-iBGP-PEER
+   neighbor 100.83.88.18 description Testing
    neighbor 100.83.88.243 peer group P2P-IPv4-eBGP-PEERS
    neighbor 100.83.88.243 remote-as 65003.1
    neighbor 100.83.88.243 description media-PTP-1
@@ -5797,7 +5797,7 @@ router bgp 65003.3
    redistribute attached-host
    !
    address-family ipv4
-      neighbor MLAG-IPv4-UNDERLAY-PEER activate
+      neighbor MLAG-iBGP-PEER activate
       neighbor P2P-IPv4-eBGP-PEERS activate
 ```
 

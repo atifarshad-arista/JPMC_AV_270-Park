@@ -3,3 +3,4 @@
 
 type: l3spine     # Must be either spine|l3spine
 
+mlag_bgp_peer_description: Testing

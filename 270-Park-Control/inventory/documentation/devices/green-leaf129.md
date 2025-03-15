@@ -140,14 +140,13 @@ ntp server vrf MGMT time.google.com prefer
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| 00:1C:73:7f:00:8c | - | 127 | 140 | - | 127 | boundary | - |
+| - | - | 127 | 140 | - | 100 | boundary | - |
 
 #### PTP Device Configuration
 
 ```eos
 !
-ptp clock-identity 00:1C:73:7f:00:8c
-ptp domain 127
+ptp domain 100
 ptp mode boundary
 ptp priority1 127
 ptp priority2 140

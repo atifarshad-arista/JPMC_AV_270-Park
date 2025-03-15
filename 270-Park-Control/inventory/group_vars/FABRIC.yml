@@ -39,12 +39,6 @@ aaa_authorization:
     # - "group tacacs+ group MYGROUP local
     all_default: local
 
-# Changed ptp to ptp_settings
-ptp_settings:
-  enabled: true
-  auto_clock_identity: false
-  domain: 100
-
 spanning_tree:
   mode: "mstp"
 
@@ -116,7 +110,19 @@ management_ssh:
       # VRF Name.
       vrf: MGMT
 
+bgp_peer_groups:
+  ipv4_underlay_peers:
+    name: P2P-IPv4-eBGP-PEERS
+    password: 7x4B4rnJhZB438m9+BrBfQ==
+  mlag_ipv4_underlay_peer:
+    name: MLAG-iBGP-PEER
+    password: 4b21pAdCvWeAqpcKDFMdWw==
 
+# Changed ptp to ptp_settings
+ptp_settings:
+  enabled: true
+  auto_clock_identity: false
+  domain: 100
 # Spine Switches
 l3spine:
   defaults:
@@ -2791,10 +2797,3 @@ core_interfaces:
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65003.3", "65003.2" ]
-bgp_peer_groups:
-  ipv4_underlay_peers:
-    name: P2P-IPv4-eBGP-PEERS
-    password: 7x4B4rnJhZB438m9+BrBfQ==
-
-ptp_settings:
-      enabled: true
