@@ -788,8 +788,8 @@
 
 | POD | Node | Loopback0 |
 | --- | ---- | --------- |
-| FABRIC | green-spine1 | 169.27.195.10/32 |
-| FABRIC | green-spine2 | 169.27.195.11/32 |
+| FABRIC | green-spine1 | 169.27.195.1/32 |
+| FABRIC | green-spine2 | 169.27.195.2/32 |
 
 ### VTEP Loopback VXLAN Tunnel Source Interfaces (VTEPs Only)
 

@@ -425,7 +425,7 @@ hardware speed-group 4 serdes 10g
 
 | Domain-id | Local-interface | Peer-address | Peer-link |
 | --------- | --------------- | ------------ | --------- |
-| SPINES | Vlan4094 | 192.168.0.19 | Port-Channel8311 |
+| CTL_SPINES_MLAG | Vlan4094 | 172.16.0.1 | Port-Channel1000 |
 
 Dual primary detection is disabled.
 
@@ -434,10 +434,10 @@ Dual primary detection is disabled.
 ```eos
 !
 mlag configuration
-   domain-id SPINES
+   domain-id CTL_SPINES_MLAG
    local-interface Vlan4094
-   peer-address 192.168.0.19
-   peer-link Port-Channel8311
+   peer-address 172.16.0.1
+   peer-link Port-Channel1000
    reload-delay mlag 300
    reload-delay non-mlag 330
 ```
@@ -1021,8 +1021,8 @@ vlan 4094
 | Ethernet8/25/1 | L2_green-leaf181_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1192 |
 | Ethernet8/26/1 | L2_green-leaf182_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1193 |
 | Ethernet8/27/1 | L2_green-leaf183_Ethernet53/1 | *trunk | *113,201,204,206-208 | *- | *- | 1194 |
-| Ethernet8/31/1 | MLAG_green-spine2_Ethernet8/31/1 | *trunk | *- | *- | *MLAG | 8311 |
-| Ethernet8/32/1 | MLAG_green-spine2_Ethernet8/32/1 | *trunk | *- | *- | *MLAG | 8311 |
+| Ethernet8/31/1 | MLAG_green-spine2_Ethernet8/31/1 | *trunk | *- | *- | *MLAG | 1000 |
+| Ethernet8/32/1 | MLAG_green-spine2_Ethernet8/32/1 | *trunk | *- | *- | *MLAG | 1000 |
 
 *Inherited from Port-Channel Interface
 
@@ -1985,12 +1985,12 @@ interface Ethernet8/27/1
 interface Ethernet8/31/1
    description MLAG_green-spine2_Ethernet8/31/1
    no shutdown
-   channel-group 8311 mode active
+   channel-group 1000 mode active
 !
 interface Ethernet8/32/1
    description MLAG_green-spine2_Ethernet8/32/1
    no shutdown
-   channel-group 8311 mode active
+   channel-group 1000 mode active
 ```
 
 ### Port-Channel Interfaces
@@ -2089,6 +2089,7 @@ interface Ethernet8/32/1
 | Port-Channel197 | L2_green-leaf86_Port-Channel97 | trunk | 113,207,209 | - | - | - | - | 197 | - |
 | Port-Channel198 | L2_green-leaf87_Port-Channel98 | trunk | 113,207,209 | - | - | - | - | 198 | - |
 | Port-Channel199 | L2_green-leaf88_Port-Channel99 | trunk | 113,207,209 | - | - | - | - | 199 | - |
+| Port-Channel1000 | MLAG_green-spine2_Port-Channel1000 | trunk | - | - | MLAG | - | - | - | - |
 | Port-Channel1100 | L2_green-leaf89_Port-Channel100 | trunk | 113,207,209 | - | - | - | - | 1100 | - |
 | Port-Channel1101 | L2_green-leaf90_Port-Channel101 | trunk | 113,207,209 | - | - | - | - | 1101 | - |
 | Port-Channel1102 | L2_green-leaf91_Port-Channel102 | trunk | 113,207,209 | - | - | - | - | 1102 | - |
@@ -2184,7 +2185,6 @@ interface Ethernet8/32/1
 | Port-Channel1192 | L2_green-leaf181_Port-Channel192 | trunk | 113,201,204,206-208 | - | - | - | - | 1192 | - |
 | Port-Channel1193 | L2_green-leaf182_Port-Channel193 | trunk | 113,201,204,206-208 | - | - | - | - | 1193 | - |
 | Port-Channel1194 | L2_green-leaf183_Port-Channel194 | trunk | 113,201,204,206-208 | - | - | - | - | 1194 | - |
-| Port-Channel8311 | MLAG_green-spine2_Port-Channel8311 | trunk | - | - | MLAG | - | - | - | - |
 
 #### Port-Channel Interfaces Device Configuration
 
@@ -3421,6 +3421,13 @@ interface Port-Channel199
    ptp delay-req interval -3
    ptp sync-message interval -3
    ptp transport ipv4
+!
+interface Port-Channel1000
+   description MLAG_green-spine2_Port-Channel1000
+   no shutdown
+   switchport mode trunk
+   switchport trunk group MLAG
+   switchport
 !
 interface Port-Channel1100
    description L2_green-leaf89_Port-Channel100
@@ -4751,13 +4758,6 @@ interface Port-Channel1194
    ptp delay-req interval -3
    ptp sync-message interval -3
    ptp transport ipv4
-!
-interface Port-Channel8311
-   description MLAG_green-spine2_Port-Channel8311
-   no shutdown
-   switchport mode trunk
-   switchport trunk group MLAG
-   switchport
 ```
 
 ### Loopback Interfaces
@@ -4768,7 +4768,7 @@ interface Port-Channel8311
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 169.27.195.10/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.1/32 |
 
 ##### IPv6
 
@@ -4783,7 +4783,7 @@ interface Port-Channel8311
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 169.27.195.10/32
+   ip address 169.27.195.1/32
 ```
 
 ### VLAN Interfaces
@@ -4961,8 +4961,8 @@ interface Loopback0
 | Vlan278 |  default  |  10.239.78.2/24  |  -  |  10.239.78.1/24  |  -  |  -  |
 | Vlan279 |  default  |  10.239.79.2/24  |  -  |  10.239.79.1/24  |  -  |  -  |
 | Vlan280 |  default  |  10.239.80.2/24  |  -  |  10.239.80.1/24  |  -  |  -  |
-| Vlan4093 |  default  |  100.83.88.18/31  |  -  |  -  |  -  |  -  |
-| Vlan4094 |  default  |  192.168.0.18/31  |  -  |  -  |  -  |  -  |
+| Vlan4093 |  default  |  100.83.88.0/31  |  -  |  -  |  -  |  -  |
+| Vlan4094 |  default  |  172.16.0.0/31  |  -  |  -  |  -  |  -  |
 
 #### VLAN Interfaces Device Configuration
 
@@ -5461,14 +5461,14 @@ interface Vlan4093
    description MLAG_L3
    no shutdown
    mtu 9214
-   ip address 100.83.88.18/31
+   ip address 100.83.88.0/31
 !
 interface Vlan4094
    description MLAG
    no shutdown
    mtu 9214
    no autostate
-   ip address 192.168.0.18/31
+   ip address 172.16.0.0/31
 ```
 
 ## Routing
@@ -5706,7 +5706,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65003.3 | 169.27.195.10 |
+| 65003.3 | 169.27.195.1 |
 
 | BGP Tuning |
 | ---------- |
@@ -5745,7 +5745,7 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 100.83.88.19 | Inherited from peer group MLAG-iBGP-PEER | default | - | Inherited from peer group MLAG-iBGP-PEER | Inherited from peer group MLAG-iBGP-PEER | - | - | - | - | - | - |
+| 100.83.88.1 | Inherited from peer group MLAG-iBGP-PEER | default | - | Inherited from peer group MLAG-iBGP-PEER | Inherited from peer group MLAG-iBGP-PEER | - | - | - | - | - | - |
 | 100.83.88.241 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.245 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.249 | 65003.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
@@ -5756,7 +5756,7 @@ ASN Notation: asplain
 ```eos
 !
 router bgp 65003.3
-   router-id 169.27.195.10
+   router-id 169.27.195.1
    update wait-install
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
@@ -5779,8 +5779,8 @@ router bgp 65003.3
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
-   neighbor 100.83.88.19 peer group MLAG-iBGP-PEER
-   neighbor 100.83.88.19 description Testing
+   neighbor 100.83.88.1 peer group MLAG-iBGP-PEER
+   neighbor 100.83.88.1 description Testing
    neighbor 100.83.88.241 peer group P2P-IPv4-eBGP-PEERS
    neighbor 100.83.88.241 remote-as 65003.1
    neighbor 100.83.88.241 description media-PTP-1
