@@ -52,6 +52,7 @@
   - [Route-maps](#route-maps)
 - [ACL](#acl)
   - [Standard Access-lists](#standard-access-lists)
+  - [IP Access-lists](#ip-access-lists)
 - [VRF Instances](#vrf-instances)
   - [VRF Instances Summary](#vrf-instances-summary)
   - [VRF Instances Device Configuration](#vrf-instances-device-configuration)
@@ -6350,6 +6351,28 @@ route-map RM-MLAG-PEER-IN permit 10
 !
 ip access-list standard MGMT-SSH-ACL
    10 permit host 172.20.111.100
+```
+
+### IP Access-lists
+
+#### IP Access-lists Device Configuration
+
+```eos
+!
+ip access-list DENY-INTER-VLAN-TRAFFIC
+   10 permit ip any 172.16.131.0/24
+   20 deny ip any any
+!
+ip access-list INTER-VLAN-TRAFFIC-BLOCK
+   10 permit ip any 1172.16.131.0/24
+   20 deny ip any any
+!
+ip access-list IP-NAT-INSIDE-ACL-1
+   10 permit ip host 172.16.131.91 any
+   20 permit ip host 172.16.131.92 any
+   30 permit ip host 172.16.131.93 any
+   40 permit ip host 172.16.131.98 any
+   50 permit ip host 172.16.131.99 any
 ```
 
 ## VRF Instances

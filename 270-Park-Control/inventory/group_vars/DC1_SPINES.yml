@@ -3,3 +3,63 @@
 
 type: l3spine     # Must be either spine|l3spine
 
+ip_access_lists:
+    # Access-list Name.
+  - name: DENY-INTER-VLAN-TRAFFIC
+    counters_per_entry: False
+    entries:
+      - sequence: 10
+        action: "permit"
+        protocol: ip
+        source: any
+        destination: 172.16.131.0/24
+      - sequence: 20
+        # Action as string.
+        # Example: "deny ip any any"
+        action: "deny"
+        protocol: ip
+        source: any
+        destination: any
+
+  - name: INTER-VLAN-TRAFFIC-BLOCK
+    counters_per_entry: False
+    entries:
+      - sequence: 10
+        action: "permit"
+        protocol: ip
+        source: any
+        destination: 1172.16.131.0/24
+      - sequence: 20
+        action: "deny"
+        protocol: ip
+        source: any
+        destination: any
+
+  - name: IP-NAT-INSIDE-ACL-1
+    counters_per_entry: False
+    entries:
+      - sequence: 10
+        action: "permit"
+        protocol: ip
+        source: 172.16.131.91
+        destination: any
+      - sequence: 20
+        action: "permit"
+        protocol: ip
+        source: 172.16.131.92
+        destination: any
+      - sequence: 30
+        action: "permit"
+        protocol: ip
+        source: 172.16.131.93
+        destination: any
+      - sequence: 40
+        action: "permit"
+        protocol: ip
+        source: 172.16.131.98
+        destination: any
+      - sequence: 50
+        action: "permit"
+        protocol: ip
+        source: 172.16.131.99
+        destination: any

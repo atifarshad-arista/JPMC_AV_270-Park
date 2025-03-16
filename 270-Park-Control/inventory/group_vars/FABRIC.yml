@@ -145,7 +145,6 @@ l3spine:
     mlag_domain_id: CTL_SPINES_MLAG
     mlag_port_channel_id: 1000
     #mlag_peer_link_allowed_vlans: <str>
-
     bgp_as: 65003.3
     bgp_defaults:
     # Literal bgp commands <str>
@@ -183,6 +182,21 @@ l3spine:
           id: 2
           mgmt_ip: 10.100.100.71/24
 
+# ipv4_acls:
+
+#     # Access-list name.
+#     # When using substitution for any fields, the interface name will be appended to the ACL name.
+#   - name: DENY-INTER-VLAN-TRAFFIC
+
+#     # ACL Entries.
+#     entries: # required
+#       - source: any
+#         # This field supports substitution of the fields "interface_ip" for SVIs and both "interface_ip" and "peer_ip" for Layer 3 interfaces.
+#         # Alternatively it can be set with a static value of "any", "<ip>/<mask>" or "<ip>". "<ip>" without a mask means host.
+#         destination: 172.16.131.0/24
+#         # ACL entry sequence number.
+#         sequence: 10
+#         action: "permit"
 # IDF - Leaf Switches
 l2leaf:
   defaults:
