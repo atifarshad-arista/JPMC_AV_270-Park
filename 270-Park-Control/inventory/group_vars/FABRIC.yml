@@ -74,16 +74,6 @@ management_api_http:
   enable_http: True
   enable_https: False
 
-management_cvx:
-  shutdown: false
-  server_hosts:
-  # IP or hostname.
-    - 172.16.131.127
-    - 172.16.131.128
-    - 172.16.131.129
-  # Interface name.
-  source_interface: Loopback0
-
 management_api_gnmi:
   provider: "eos-native"
   transport:
@@ -159,7 +149,7 @@ l3spine:
       #- no redistribute attached-host
     ptp:
       domain: 100
-      source_ip: 172.31.1.12
+      source_ip: #<loopback0 ip>
       priority1: 20
       priority2: 103
       ttl: 8
@@ -182,21 +172,6 @@ l3spine:
           id: 2
           mgmt_ip: 10.100.100.71/24
 
-# ipv4_acls:
-
-#     # Access-list name.
-#     # When using substitution for any fields, the interface name will be appended to the ACL name.
-#   - name: DENY-INTER-VLAN-TRAFFIC
-
-#     # ACL Entries.
-#     entries: # required
-#       - source: any
-#         # This field supports substitution of the fields "interface_ip" for SVIs and both "interface_ip" and "peer_ip" for Layer 3 interfaces.
-#         # Alternatively it can be set with a static value of "any", "<ip>/<mask>" or "<ip>". "<ip>" without a mask means host.
-#         destination: 172.16.131.0/24
-#         # ACL entry sequence number.
-#         sequence: 10
-#         action: "permit"
 # IDF - Leaf Switches
 l2leaf:
   defaults:
@@ -209,7 +184,20 @@ l2leaf:
     # Default Port-channel ID is the first member interface# whcih can exceed limit of 2000
     # uplink_switch_port_channel_id: 1007 # Test uplink_switch_port_channel_id on mlag l2leaf
     # uplink_port_channel_id: 1001 # Test uplink_port_channel_id on mlag l2leaf
-
+    ptp:
+      domain: 100
+      source_ip: #<MGMT VLAN SVI
+      priority1: 30
+      priority2: 103
+      ttl: 8
+      monitor:
+        #enabled: <bool; default=True>
+        threshold:
+          offset_from_master: 500
+          mean_path_delay: 2500
+        missing_message:
+                sequence_ids:
+                  enabled: False
 
 # Green Leaf switches Node group Build
   node_groups:

@@ -149,7 +149,7 @@ ntp server vrf MGMT time.google.com prefer
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| - | 172.31.1.12 | 20 | 103 | 8 | 100 | boundary | - |
+| - | - | 20 | 103 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
@@ -159,7 +159,6 @@ ptp domain 100
 ptp mode boundary
 ptp priority1 20
 ptp priority2 103
-ptp source ip 172.31.1.12
 ptp ttl 8
 ptp monitor threshold offset-from-master 500
 ptp monitor threshold mean-path-delay 2500

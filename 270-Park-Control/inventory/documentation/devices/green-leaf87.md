@@ -10,7 +10,6 @@
   - [PTP](#ptp)
   - [Management SSH](#management-ssh)
   - [Management API gNMI](#management-api-gnmi)
-  - [Management CVX Summary](#management-cvx-summary)
   - [Management API HTTP](#management-api-http)
   - [Management API Models](#management-api-models)
 - [Authentication](#authentication)
@@ -140,7 +139,7 @@ ntp server vrf MGMT time.google.com prefer
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| - | - | 127 | 98 | - | 100 | boundary | - |
+| - | - | 30 | 103 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
@@ -148,15 +147,12 @@ ntp server vrf MGMT time.google.com prefer
 !
 ptp domain 100
 ptp mode boundary
-ptp priority1 127
-ptp priority2 98
-ptp monitor threshold offset-from-master 250
-ptp monitor threshold mean-path-delay 1500
-ptp monitor sequence-id
-ptp monitor threshold missing-message sync 3 sequence-ids
-ptp monitor threshold missing-message follow-up 3 sequence-ids
-ptp monitor threshold missing-message delay-resp 3 sequence-ids
-ptp monitor threshold missing-message announce 3 sequence-ids
+ptp priority1 30
+ptp priority2 103
+ptp ttl 8
+ptp monitor threshold offset-from-master 500
+ptp monitor threshold mean-path-delay 2500
+no ptp monitor sequence-id
 ```
 
 ### Management SSH
@@ -213,30 +209,6 @@ management api gnmi
       port 5909
       vrf MGMT
    provider eos-native
-```
-
-### Management CVX Summary
-
-| Shutdown | CVX Servers |
-| -------- | ----------- |
-| False | 172.16.131.127, 172.16.131.128, 172.16.131.129 |
-
-#### Management CVX Source Interface
-
-| Interface | VRF |
-| --------- | --- |
-| Loopback0 | - |
-
-#### Management CVX Device Configuration
-
-```eos
-!
-management cvx
-   no shutdown
-   server host 172.16.131.127
-   server host 172.16.131.128
-   server host 172.16.131.129
-   source-interface Loopback0
 ```
 
 ### Management API HTTP
