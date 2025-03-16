@@ -5780,7 +5780,7 @@ router bgp 65003.3
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
    neighbor 100.83.88.1 peer group MLAG-iBGP-PEER
-   neighbor 100.83.88.1 description Testing
+   neighbor 100.83.88.1 description green-spine2_Vlan4093
    neighbor 100.83.88.241 peer group P2P-IPv4-eBGP-PEERS
    neighbor 100.83.88.241 remote-as 65003.1
    neighbor 100.83.88.241 description media-PTP-1

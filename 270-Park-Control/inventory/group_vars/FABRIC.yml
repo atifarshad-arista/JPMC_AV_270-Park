@@ -110,6 +110,14 @@ management_ssh:
       # VRF Name.
       vrf: MGMT
 
+trunk_groups:
+  # Trunk Group used for MLAG VLAN (Typically VLAN 4094). name: default="MLAG">
+  mlag:
+    name: "MLAG"
+  # Trunk Group used for MLAG L3 peering VLAN and for VRF L3 peering VLANs (Typically VLAN 4093).name: default="MLAG">
+  mlag_l3:
+    name: "MLAG"
+
 bgp_peer_groups:
   ipv4_underlay_peers:
     name: P2P-IPv4-eBGP-PEERS
@@ -137,6 +145,7 @@ l3spine:
     mlag_domain_id: CTL_SPINES_MLAG
     mlag_port_channel_id: 1000
     #mlag_peer_link_allowed_vlans: <str>
+
     bgp_as: 65003.3
     bgp_defaults:
     # Literal bgp commands <str>
