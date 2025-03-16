@@ -15,6 +15,7 @@
   - [Management API Models](#management-api-models)
 - [Authentication](#authentication)
   - [Local Users](#local-users)
+  - [Roles](#roles)
   - [Enable Password](#enable-password)
   - [AAA Authentication](#aaa-authentication)
   - [AAA Authorization](#aaa-authorization)
@@ -70,7 +71,7 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management0 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.71/24 | 172.16.100.1 |
+| Management0 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.71/24 | 10.176.143.129 |
 
 ##### IPv6
 
@@ -308,6 +309,26 @@ management api models
 ```eos
 !
 username admin privilege 15 role network-admin secret sha512 <removed>
+```
+
+### Roles
+
+#### Roles Summary
+
+##### Role network-user
+
+| Sequence | Action | Mode | Command |
+| -------- | ------ | ---- | ------- |
+| 10 | deny | exec | enable|configure|bash|python-shell|\| |
+| 20 | permit | exec | .* |
+
+#### Roles Device Configuration
+
+```eos
+!
+role network-user
+   10 deny mode exec command enable|configure|bash|python-shell|\|
+   20 permit mode exec command .*
 ```
 
 ### Enable Password
@@ -5527,7 +5548,7 @@ no ip routing vrf MGMT
 
 | VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
 | --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
-| MGMT | 0.0.0.0/0 | 172.16.100.1 | - | 1 | - | - | - |
+| MGMT | 0.0.0.0/0 | 10.176.143.129 | - | 1 | - | - | - |
 | default | 10.239.113.0/24 | - | Vlan113 | 1 | - | VARP | - |
 | default | 10.239.1.0/24 | - | Vlan201 | 1 | - | VARP | - |
 | default | 10.239.2.0/24 | - | Vlan202 | 1 | - | VARP | - |
@@ -5695,7 +5716,7 @@ ip route 10.239.78.0/24 Vlan278 name VARP
 ip route 10.239.79.0/24 Vlan279 name VARP
 ip route 10.239.80.0/24 Vlan280 name VARP
 ip route 10.239.113.0/24 Vlan113 name VARP
-ip route vrf MGMT 0.0.0.0/0 172.16.100.1
+ip route vrf MGMT 0.0.0.0/0 10.176.143.129
 ```
 
 ### Router BGP

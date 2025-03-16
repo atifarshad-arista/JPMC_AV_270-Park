@@ -14,6 +14,7 @@
   - [Management API Models](#management-api-models)
 - [Authentication](#authentication)
   - [Local Users](#local-users)
+  - [Roles](#roles)
   - [Enable Password](#enable-password)
   - [AAA Authentication](#aaa-authentication)
   - [AAA Authorization](#aaa-authorization)
@@ -274,6 +275,26 @@ management api models
 ```eos
 !
 username admin privilege 15 role network-admin secret sha512 <removed>
+```
+
+### Roles
+
+#### Roles Summary
+
+##### Role network-user
+
+| Sequence | Action | Mode | Command |
+| -------- | ------ | ---- | ------- |
+| 10 | deny | exec | enable|configure|bash|python-shell|\| |
+| 20 | permit | exec | .* |
+
+#### Roles Device Configuration
+
+```eos
+!
+role network-user
+   10 deny mode exec command enable|configure|bash|python-shell|\|
+   20 permit mode exec command .*
 ```
 
 ### Enable Password

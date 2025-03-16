@@ -121,6 +121,25 @@ ptp_settings:
   enabled: true
   auto_clock_identity: false
   domain: 100
+
+roles:
+    # Role name.
+  - name: network-user
+    sequence_numbers:
+        # Sequence number.
+      - sequence: 10
+        action: "deny"
+        # "config", "config-all", "exec" or mode key as string.
+        mode: "exec"
+        # Command as string.
+        command: enable|configure|bash|python-shell|\|
+      - sequence: 20
+        action: "permit"
+        # "config", "config-all", "exec" or mode key as string.
+        mode: "exec"
+        # Command as string.
+        command: ".*"
+
 # Spine Switches
 l3spine:
   defaults:
@@ -168,9 +187,11 @@ l3spine:
         - name: green-spine1
           id: 1
           mgmt_ip: 10.100.100.70/24
+          mgmt_gateway: 10.176.143.129
         - name: green-spine2
           id: 2
           mgmt_ip: 10.100.100.71/24
+          mgmt_gateway: 10.176.143.129
 
 # IDF - Leaf Switches
 l2leaf:
@@ -230,6 +251,7 @@ l2leaf:
           filter:
             tags: [  "201", "202" ]
           mgmt_ip: 10.100.100.72/23
+          mgmt_gateway: 10.176.143.129
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [green-spine1, green-spine2]
           uplink_switch_interfaces: [Ethernet3/5/1, Ethernet3/5/1]
