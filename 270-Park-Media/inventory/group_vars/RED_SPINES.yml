@@ -19,9 +19,8 @@ media_spine:
     filter:
       tenants: [ red ]
     ptp:
-      source_ip: 172.31.1.11
       priority1: 20
-      priority2: 101
+      #priority2: 101
       ttl: 8
       monitor:
         #enabled: <bool; default=True>
@@ -35,3 +34,6 @@ media_spine:
     - name: red-spine1
       id: 1
       mgmt_ip: 10.100.100.37/24
+      ptp:
+        source_ip: 172.31.1.11
+        priority2: 101

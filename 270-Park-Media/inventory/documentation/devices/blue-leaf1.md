@@ -138,7 +138,7 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| - | 172.31.1.12 | 30 | 101 | 8 | 100 | boundary | - |
+| - | 172.31.1.12 | 30 | 201 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
@@ -147,7 +147,7 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 ptp domain 100
 ptp mode boundary
 ptp priority1 30
-ptp priority2 101
+ptp priority2 201
 ptp source ip 172.31.1.12
 ptp ttl 8
 ptp monitor threshold offset-from-master 500

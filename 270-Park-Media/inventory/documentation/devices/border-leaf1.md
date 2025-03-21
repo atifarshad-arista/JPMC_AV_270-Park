@@ -134,7 +134,7 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| - | - | 30 | 3 | - | 100 | boundary | - |
+| - | loopback0 | 20 | 105 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
@@ -142,15 +142,13 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 !
 ptp domain 100
 ptp mode boundary
-ptp priority1 30
-ptp priority2 3
-ptp monitor threshold offset-from-master 250
-ptp monitor threshold mean-path-delay 1500
-ptp monitor sequence-id
-ptp monitor threshold missing-message sync 3 sequence-ids
-ptp monitor threshold missing-message follow-up 3 sequence-ids
-ptp monitor threshold missing-message delay-resp 3 sequence-ids
-ptp monitor threshold missing-message announce 3 sequence-ids
+ptp priority1 20
+ptp priority2 105
+ptp source ip loopback0
+ptp ttl 8
+ptp monitor threshold offset-from-master 500
+ptp monitor threshold mean-path-delay 2500
+no ptp monitor sequence-id
 ```
 
 ### Management SSH

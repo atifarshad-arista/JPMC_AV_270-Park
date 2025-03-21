@@ -44,6 +44,10 @@ media_leaf:
       mgmt_ip: 10.100.100.5/24
       filter:
         tags: [ blue-leaf1 ]
+      ptp:
+        source_ip: 172.31.1.12
+        #priority1: 40
+        priority2: 201
     - name: blue-leaf2
       id: 7
       bgp_as: "65011.2"

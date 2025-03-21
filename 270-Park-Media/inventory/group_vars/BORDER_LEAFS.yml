@@ -11,6 +11,18 @@ border_leaf:
     spanning_tree_mode: mstp
     filter:
       tenants: [ border ]
+    ptp:
+      priority1: 20
+      # priority2: 100
+      ttl: 8
+      monitor:
+        #enabled: <bool; default=True>
+        threshold:
+          offset_from_master: 500
+          mean_path_delay: 2500
+        missing_message:
+                sequence_ids:
+                  enabled: False
 
   nodes:
     - name: border-leaf1
@@ -20,6 +32,10 @@ border_leaf:
       filter:
         tags: [ border-leaf1 ]
       uplink_switch_interfaces: [ Ethernet33/1, Ethernet33/1 ]
+      ptp:
+        source_ip: loopback0
+        priority2: 105
+
 
     - name: border-leaf2
       id: 4
@@ -28,3 +44,6 @@ border_leaf:
       filter:
         tags: [ border-leaf2 ]
       uplink_switch_interfaces: [ Ethernet34/1, Ethernet34/1 ]
+      ptp:
+        source_ip: loopback0
+        priority2: 106

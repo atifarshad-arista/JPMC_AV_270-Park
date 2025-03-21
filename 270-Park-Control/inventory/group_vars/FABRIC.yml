@@ -168,9 +168,7 @@ l3spine:
       #- no redistribute attached-host
     ptp:
       domain: 100
-      source_ip: #<loopback0 ip>
       priority1: 20
-      priority2: 103
       ttl: 8
       monitor:
         #enabled: <bool; default=True>
@@ -188,10 +186,16 @@ l3spine:
           id: 1
           mgmt_ip: 10.100.100.70/24
           mgmt_gateway: 10.176.143.129
+          ptp:
+            source_ip: loopback0
+            priority2: 103
         - name: green-spine2
           id: 2
           mgmt_ip: 10.100.100.71/24
           mgmt_gateway: 10.176.143.129
+          ptp:
+            source_ip: loopback0
+            priority2: 104
 
 # IDF - Leaf Switches
 l2leaf:
@@ -257,6 +261,11 @@ l2leaf:
           uplink_switch_interfaces: [Ethernet3/5/1, Ethernet3/5/1]
           uplink_port_channel_id: 12
           uplink_switch_port_channel_id: 112
+          ptp:
+            domain: 100
+            source_ip: #<MGMT VLAN SVI
+            priority1: 30
+            priority2: 103
     - group: 02TRA
       platform: 720XP
       mlag: false
