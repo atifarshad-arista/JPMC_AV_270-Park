@@ -546,6 +546,8 @@ switchport default mode routed
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
+| Ethernet1 | - | - | - | - | - | - |
+| Ethernet2 | - | - | - | - | - | - |
 | Ethernet3 | BLUE_VLAN211 | access | 211 | - | - | - |
 | Ethernet4 | BLUE_VLAN211 | access | 211 | - | - | - |
 | Ethernet5 | BLUE_VLAN211 | access | 211 | - | - | - |
@@ -599,6 +601,8 @@ switchport default mode routed
 
 | Interface | IP Version | Static Routes Allowed | Multicast Boundaries |
 | --------- | ---------- | --------------------- | -------------------- |
+| Ethernet1 | IPv4 | True | - |
+| Ethernet2 | IPv4 | True | - |
 | Ethernet3 | IPv4 | True | - |
 | Ethernet4 | IPv4 | True | - |
 | Ethernet5 | IPv4 | True | - |
@@ -656,6 +660,16 @@ switchport default mode routed
 #### Ethernet Interfaces Device Configuration
 
 ```eos
+!
+interface Ethernet1
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet2
+   no shutdown
+   switchport
+   multicast ipv4 static
 !
 interface Ethernet3
    description BLUE_VLAN211

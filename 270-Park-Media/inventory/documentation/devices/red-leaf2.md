@@ -546,6 +546,8 @@ switchport default mode routed
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
+| Ethernet1 | - | - | - | - | - | - |
+| Ethernet2 | - | - | - | - | - | - |
 | Ethernet3 | RED_VLAN112 | access | 112 | - | - | - |
 | Ethernet4 | RED_VLAN112 | access | 112 | - | - | - |
 | Ethernet5 | RED_VLAN112 | access | 112 | - | - | - |
@@ -599,6 +601,8 @@ switchport default mode routed
 
 | Interface | IP Version | Static Routes Allowed | Multicast Boundaries |
 | --------- | ---------- | --------------------- | -------------------- |
+| Ethernet1 | IPv4 | True | - |
+| Ethernet2 | IPv4 | True | - |
 | Ethernet3 | IPv4 | True | - |
 | Ethernet4 | IPv4 | True | - |
 | Ethernet5 | IPv4 | True | - |
@@ -646,9 +650,26 @@ switchport default mode routed
 | Ethernet47 | IPv4 | True | - |
 | Ethernet48 | IPv4 | True | - |
 
+##### IPv4
+
+| Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
+| --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
+| Ethernet49/1 | P2P_red-spine1_Ethernet4/13/1 | - | 100.83.100.49/31 | default | 1500 | False | - | - |
+| Ethernet50/1 | P2P_red-spine1_Ethernet4/14/1 | - | 100.83.100.51/31 | default | 1500 | False | - | - |
+
 #### Ethernet Interfaces Device Configuration
 
 ```eos
+!
+interface Ethernet1
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet2
+   no shutdown
+   switchport
+   multicast ipv4 static
 !
 interface Ethernet3
    description RED_VLAN112
@@ -1431,6 +1452,32 @@ interface Ethernet48
    ptp transport ipv4
    spanning-tree portfast
    spanning-tree bpdufilter enable
+!
+interface Ethernet49/1
+   description P2P_red-spine1_Ethernet4/13/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.100.49/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet50/1
+   description P2P_red-spine1_Ethernet4/14/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.100.51/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 ```
 
 ### Loopback Interfaces
@@ -1441,7 +1488,7 @@ interface Ethernet48
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 169.27.195.41/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.8/32 |
 
 ##### IPv6
 
@@ -1456,7 +1503,7 @@ interface Ethernet48
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 169.27.195.41/32
+   ip address 169.27.195.8/32
 ```
 
 ### VLAN Interfaces
@@ -1529,7 +1576,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65021.2 | 169.27.195.41 |
+| 65021.2 | 169.27.195.8 |
 
 | BGP Tuning |
 | ---------- |
@@ -1541,6 +1588,7 @@ ASN Notation: asplain
 | maximum-paths 128 |
 | neighbor default send-community |
 | redistribute attached-host |
+| update wait-install |
 | no bgp default ipv4-unicast |
 | maximum-paths 4 ecmp 4 |
 
@@ -1554,12 +1602,20 @@ ASN Notation: asplain
 | Send community | all |
 | Maximum routes | 12000 |
 
+#### BGP Neighbors
+
+| Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
+| -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
+| 100.83.100.48 | 65020.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.100.50 | 65020.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+
 #### Router BGP Device Configuration
 
 ```eos
 !
 router bgp 65021.2
-   router-id 169.27.195.41
+   router-id 169.27.195.8
+   update wait-install
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
    bgp asn notation asdot
@@ -1574,6 +1630,12 @@ router bgp 65021.2
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 100.83.100.48 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.100.48 remote-as 65020.1
+   neighbor 100.83.100.48 description red-spine1_Ethernet4/13/1
+   neighbor 100.83.100.50 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.100.50 remote-as 65020.1
+   neighbor 100.83.100.50 description red-spine1_Ethernet4/14/1
    redistribute connected
    !
    address-family ipv4

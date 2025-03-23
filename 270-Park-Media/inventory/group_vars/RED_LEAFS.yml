@@ -40,193 +40,193 @@ media_leaf:
 
   nodes:
     - name: red-leaf1
-      id: 39
+      id: 6
       bgp_as: "65021.1"
       mgmt_ip: 10.100.100.38/24
       filter:
         tags: [ red-leaf1 ]
     - name: red-leaf2
-      id: 40
+      id: 7
       bgp_as: "65021.2"
       mgmt_ip: 10.100.100.39/24
       filter:
         tags: [ red-leaf2 ]
     - name: red-leaf3
-      id: 41
+      id: 8
       bgp_as: "65021.3"
       mgmt_ip: 10.100.100.40/24
       filter:
         tags: [ red-leaf3 ]
     - name: red-leaf4
-      id: 42
+      id: 9
       bgp_as: "65021.4"
       mgmt_ip: 10.100.100.41/24
       filter:
         tags: [ red-leaf4 ]
     - name: red-leaf5
-      id: 43
+      id: 10
       bgp_as: "65021.5"
       mgmt_ip: 10.100.100.42/24
       filter:
         tags: [ red-leaf5 ]
     - name: red-leaf6
-      id: 44
+      id: 11
       bgp_as: "65021.6"
       mgmt_ip: 10.100.100.43/24
       filter:
         tags: [ red-leaf6 ]
     - name: red-leaf7
-      id: 45
+      id: 12
       bgp_as: "65021.7"
       mgmt_ip: 10.100.100.44/24
       filter:
         tags: [ red-leaf7 ]
     - name: red-leaf8
-      id: 46
+      id: 13
       bgp_as: "65021.8"
       mgmt_ip: 10.100.100.45/24
       filter:
         tags: [ red-leaf8 ]
     - name: red-leaf9
-      id: 47
+      id: 14
       bgp_as: "65021.9"
       mgmt_ip: 10.100.100.46/24
       filter:
         tags: [ red-leaf9 ]
     - name: red-leaf10
-      id: 48
+      id: 15
       bgp_as: "65021.10"
       mgmt_ip: 10.100.100.47/24
       filter:
         tags: [ red-leaf10 ]
     - name: red-leaf11
-      id: 49
+      id: 16
       bgp_as: "65021.11"
       mgmt_ip: 10.100.100.48/24
       filter:
         tags: [ red-leaf11 ]
     - name: red-leaf12
-      id: 50
+      id: 17
       bgp_as: "65021.12"
       mgmt_ip: 10.100.100.49/24
       filter:
         tags: [ red-leaf12 ]
     - name: red-leaf13
-      id: 51
+      id: 18
       bgp_as: "65021.13"
       mgmt_ip: 10.100.100.50/24
       filter:
         tags: [ red-leaf13 ]
     - name: red-leaf14
-      id: 52
+      id: 19
       bgp_as: "65021.14"
       mgmt_ip: 10.100.100.51/24
       filter:
         tags: [ red-leaf14 ]
     - name: red-leaf15
-      id: 53
+      id: 20
       bgp_as: "65021.15"
       mgmt_ip: 10.100.100.52/24
       filter:
         tags: [ red-leaf15 ]
     - name: red-leaf16
-      id: 54
+      id: 21
       bgp_as: "65021.16"
       mgmt_ip: 10.100.100.53/24
       filter:
         tags: [ red-leaf16 ]
     - name: red-leaf17
-      id: 55
+      id: 22
       bgp_as: "65021.17"
       mgmt_ip: 10.100.100.54/24
       filter:
         tags: [ red-leaf17 ]
     - name: red-leaf18
-      id: 56
+      id: 23
       bgp_as: "65021.18"
       mgmt_ip: 10.100.100.55/24
       filter:
         tags: [ red-leaf18 ]
     - name: red-leaf19
-      id: 57
+      id: 24
       bgp_as: "65021.19"
       mgmt_ip: 10.100.100.56/24
       filter:
         tags: [ red-leaf19 ]
     - name: red-leaf20
-      id: 58
+      id: 25
       bgp_as: "65021.20"
       mgmt_ip: 10.100.100.57/24
       filter:
         tags: [ red-leaf20 ]
     - name: red-leaf21
-      id: 59
+      id: 26
       bgp_as: "65021.21"
       mgmt_ip: 10.100.100.58/24
       filter:
         tags: [ red-leaf21 ]
     - name: red-leaf22
-      id: 60
+      id: 27
       bgp_as: "65021.22"
       mgmt_ip: 10.100.100.59/24
       filter:
         tags: [ red-leaf22 ]
     - name: red-leaf23
-      id: 61
+      id: 28
       bgp_as: "65021.23"
       mgmt_ip: 10.100.100.60/24
       filter:
         tags: [ red-leaf23 ]
     - name: red-leaf24
-      id: 62
+      id: 29
       bgp_as: "65021.24"
       mgmt_ip: 10.100.100.61/24
       filter:
         tags: [ red-leaf24 ]
     - name: red-leaf25
-      id: 63
+      id: 30
       bgp_as: "65021.25"
       mgmt_ip: 10.100.100.62/24
       filter:
         tags: [ red-leaf25 ]
     - name: red-leaf26
-      id: 64
+      id: 31
       bgp_as: "65021.26"
       mgmt_ip: 10.100.100.63/24
       filter:
         tags: [ red-leaf26 ]
     - name: red-leaf27
-      id: 65
+      id: 32
       bgp_as: "65021.27"
       mgmt_ip: 10.100.100.64/24
       filter:
         tags: [ red-leaf27 ]
     - name: red-leaf28
-      id: 66
+      id: 33
       bgp_as: "65021.28"
       mgmt_ip: 10.100.100.65/24
       filter:
         tags: [ red-leaf28 ]
     - name: red-leaf29
-      id: 67
+      id: 34
       bgp_as: "65021.29"
       mgmt_ip: 10.100.100.66/24
       filter:
         tags: [ red-leaf29 ]
     - name: red-leaf30
-      id: 68
+      id: 35
       bgp_as: "65021.30"
       mgmt_ip: 10.100.100.67/24
       filter:
         tags: [ red-leaf30 ]
     - name: red-leaf31
-      id: 69
+      id: 36
       bgp_as: "65021.31"
       mgmt_ip: 10.100.100.68/24
       filter:
         tags: [ red-leaf31 ]
     - name: red-leaf32
-      id: 70
+      id: 37
       bgp_as: "65021.32"
       mgmt_ip: 10.100.100.69/24
       filter:

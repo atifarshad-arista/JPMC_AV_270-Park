@@ -34,6 +34,7 @@
   - [Internal VLAN Allocation Policy Device Configuration](#internal-vlan-allocation-policy-device-configuration)
 - [Interfaces](#interfaces)
   - [Switchport Default](#switchport-default)
+  - [Ethernet Interfaces](#ethernet-interfaces)
   - [Loopback Interfaces](#loopback-interfaces)
 - [Routing](#routing)
   - [Service Routing Protocols Model](#service-routing-protocols-model)
@@ -517,6 +518,396 @@ vlan internal order ascending range 1006 1199
 switchport default mode routed
 ```
 
+### Ethernet Interfaces
+
+#### Ethernet Interfaces Summary
+
+##### L2
+
+| Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
+| --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
+| Ethernet1 | - | - | - | - | - | - |
+| Ethernet2 | - | - | - | - | - | - |
+| Ethernet3 | - | - | - | - | - | - |
+| Ethernet4 | - | - | - | - | - | - |
+| Ethernet5 | - | - | - | - | - | - |
+| Ethernet6 | - | - | - | - | - | - |
+| Ethernet7 | - | - | - | - | - | - |
+| Ethernet8 | - | - | - | - | - | - |
+| Ethernet9 | - | - | - | - | - | - |
+| Ethernet10 | - | - | - | - | - | - |
+| Ethernet11 | - | - | - | - | - | - |
+| Ethernet12 | - | - | - | - | - | - |
+| Ethernet13 | - | - | - | - | - | - |
+| Ethernet14 | - | - | - | - | - | - |
+| Ethernet15 | - | - | - | - | - | - |
+| Ethernet16 | - | - | - | - | - | - |
+| Ethernet17 | - | - | - | - | - | - |
+| Ethernet18 | - | - | - | - | - | - |
+| Ethernet19 | - | - | - | - | - | - |
+| Ethernet20 | - | - | - | - | - | - |
+| Ethernet21 | - | - | - | - | - | - |
+| Ethernet22 | - | - | - | - | - | - |
+| Ethernet23 | - | - | - | - | - | - |
+| Ethernet24 | - | - | - | - | - | - |
+| Ethernet25 | - | - | - | - | - | - |
+| Ethernet26 | - | - | - | - | - | - |
+| Ethernet27 | - | - | - | - | - | - |
+| Ethernet28 | - | - | - | - | - | - |
+| Ethernet29 | - | - | - | - | - | - |
+| Ethernet30 | - | - | - | - | - | - |
+| Ethernet31 | - | - | - | - | - | - |
+| Ethernet32 | - | - | - | - | - | - |
+| Ethernet33 | - | - | - | - | - | - |
+| Ethernet34 | - | - | - | - | - | - |
+| Ethernet35 | - | - | - | - | - | - |
+| Ethernet36 | - | - | - | - | - | - |
+| Ethernet37 | - | - | - | - | - | - |
+| Ethernet38 | - | - | - | - | - | - |
+| Ethernet39 | - | - | - | - | - | - |
+| Ethernet40 | - | - | - | - | - | - |
+| Ethernet41 | - | - | - | - | - | - |
+| Ethernet42 | - | - | - | - | - | - |
+| Ethernet43 | - | - | - | - | - | - |
+| Ethernet44 | - | - | - | - | - | - |
+| Ethernet45 | - | - | - | - | - | - |
+| Ethernet46 | - | - | - | - | - | - |
+| Ethernet47 | - | - | - | - | - | - |
+| Ethernet48 | - | - | - | - | - | - |
+
+*Inherited from Port-Channel Interface
+
+##### Multicast Routing
+
+| Interface | IP Version | Static Routes Allowed | Multicast Boundaries |
+| --------- | ---------- | --------------------- | -------------------- |
+| Ethernet1 | IPv4 | True | - |
+| Ethernet2 | IPv4 | True | - |
+| Ethernet3 | IPv4 | True | - |
+| Ethernet4 | IPv4 | True | - |
+| Ethernet5 | IPv4 | True | - |
+| Ethernet6 | IPv4 | True | - |
+| Ethernet7 | IPv4 | True | - |
+| Ethernet8 | IPv4 | True | - |
+| Ethernet9 | IPv4 | True | - |
+| Ethernet10 | IPv4 | True | - |
+| Ethernet11 | IPv4 | True | - |
+| Ethernet12 | IPv4 | True | - |
+| Ethernet13 | IPv4 | True | - |
+| Ethernet14 | IPv4 | True | - |
+| Ethernet15 | IPv4 | True | - |
+| Ethernet16 | IPv4 | True | - |
+| Ethernet17 | IPv4 | True | - |
+| Ethernet18 | IPv4 | True | - |
+| Ethernet19 | IPv4 | True | - |
+| Ethernet20 | IPv4 | True | - |
+| Ethernet21 | IPv4 | True | - |
+| Ethernet22 | IPv4 | True | - |
+| Ethernet23 | IPv4 | True | - |
+| Ethernet24 | IPv4 | True | - |
+| Ethernet25 | IPv4 | True | - |
+| Ethernet26 | IPv4 | True | - |
+| Ethernet27 | IPv4 | True | - |
+| Ethernet28 | IPv4 | True | - |
+| Ethernet29 | IPv4 | True | - |
+| Ethernet30 | IPv4 | True | - |
+| Ethernet31 | IPv4 | True | - |
+| Ethernet32 | IPv4 | True | - |
+| Ethernet33 | IPv4 | True | - |
+| Ethernet34 | IPv4 | True | - |
+| Ethernet35 | IPv4 | True | - |
+| Ethernet36 | IPv4 | True | - |
+| Ethernet37 | IPv4 | True | - |
+| Ethernet38 | IPv4 | True | - |
+| Ethernet39 | IPv4 | True | - |
+| Ethernet40 | IPv4 | True | - |
+| Ethernet41 | IPv4 | True | - |
+| Ethernet42 | IPv4 | True | - |
+| Ethernet43 | IPv4 | True | - |
+| Ethernet44 | IPv4 | True | - |
+| Ethernet45 | IPv4 | True | - |
+| Ethernet46 | IPv4 | True | - |
+| Ethernet47 | IPv4 | True | - |
+| Ethernet48 | IPv4 | True | - |
+
+##### IPv4
+
+| Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
+| --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
+| Ethernet49/1 | P2P_red-spine1_Ethernet4/15/1 | - | 100.83.100.57/31 | default | 1500 | False | - | - |
+| Ethernet50/1 | P2P_red-spine1_Ethernet4/16/1 | - | 100.83.100.59/31 | default | 1500 | False | - | - |
+
+#### Ethernet Interfaces Device Configuration
+
+```eos
+!
+interface Ethernet1
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet2
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet3
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet4
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet5
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet6
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet7
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet8
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet9
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet10
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet11
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet12
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet13
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet14
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet15
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet16
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet17
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet18
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet19
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet20
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet21
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet22
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet23
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet24
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet25
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet26
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet27
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet28
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet29
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet30
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet31
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet32
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet33
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet34
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet35
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet36
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet37
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet38
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet39
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet40
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet41
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet42
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet43
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet44
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet45
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet46
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet47
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet48
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet49/1
+   description P2P_red-spine1_Ethernet4/15/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.100.57/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet50/1
+   description P2P_red-spine1_Ethernet4/16/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.100.59/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+```
+
 ### Loopback Interfaces
 
 #### Loopback Interfaces Summary
@@ -525,7 +916,7 @@ switchport default mode routed
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 169.27.195.42/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.9/32 |
 
 ##### IPv6
 
@@ -540,7 +931,7 @@ switchport default mode routed
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 169.27.195.42/32
+   ip address 169.27.195.9/32
 ```
 
 ## Routing
@@ -588,7 +979,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65021.3 | 169.27.195.42 |
+| 65021.3 | 169.27.195.9 |
 
 | BGP Tuning |
 | ---------- |
@@ -600,6 +991,7 @@ ASN Notation: asplain
 | maximum-paths 128 |
 | neighbor default send-community |
 | redistribute attached-host |
+| update wait-install |
 | no bgp default ipv4-unicast |
 | maximum-paths 4 ecmp 4 |
 
@@ -613,12 +1005,20 @@ ASN Notation: asplain
 | Send community | all |
 | Maximum routes | 12000 |
 
+#### BGP Neighbors
+
+| Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
+| -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
+| 100.83.100.56 | 65020.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.100.58 | 65020.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+
 #### Router BGP Device Configuration
 
 ```eos
 !
 router bgp 65021.3
-   router-id 169.27.195.42
+   router-id 169.27.195.9
+   update wait-install
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
    bgp asn notation asdot
@@ -633,6 +1033,12 @@ router bgp 65021.3
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 100.83.100.56 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.100.56 remote-as 65020.1
+   neighbor 100.83.100.56 description red-spine1_Ethernet4/15/1
+   neighbor 100.83.100.58 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.100.58 remote-as 65020.1
+   neighbor 100.83.100.58 description red-spine1_Ethernet4/16/1
    redistribute connected
    !
    address-family ipv4

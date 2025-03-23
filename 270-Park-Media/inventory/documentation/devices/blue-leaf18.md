@@ -526,8 +526,109 @@ switchport default mode routed
 
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
+| Ethernet1 | - | - | - | - | - | - |
+| Ethernet2 | - | - | - | - | - | - |
+| Ethernet3 | - | - | - | - | - | - |
+| Ethernet4 | - | - | - | - | - | - |
+| Ethernet5 | - | - | - | - | - | - |
+| Ethernet6 | - | - | - | - | - | - |
+| Ethernet7 | - | - | - | - | - | - |
+| Ethernet8 | - | - | - | - | - | - |
+| Ethernet9 | - | - | - | - | - | - |
+| Ethernet10 | - | - | - | - | - | - |
+| Ethernet11 | - | - | - | - | - | - |
+| Ethernet12 | - | - | - | - | - | - |
+| Ethernet13 | - | - | - | - | - | - |
+| Ethernet14 | - | - | - | - | - | - |
+| Ethernet15 | - | - | - | - | - | - |
+| Ethernet16 | - | - | - | - | - | - |
+| Ethernet17 | - | - | - | - | - | - |
+| Ethernet18 | - | - | - | - | - | - |
+| Ethernet19 | - | - | - | - | - | - |
+| Ethernet20 | - | - | - | - | - | - |
+| Ethernet21 | - | - | - | - | - | - |
+| Ethernet22 | - | - | - | - | - | - |
+| Ethernet23 | - | - | - | - | - | - |
+| Ethernet24 | - | - | - | - | - | - |
+| Ethernet25 | - | - | - | - | - | - |
+| Ethernet26 | - | - | - | - | - | - |
+| Ethernet27 | - | - | - | - | - | - |
+| Ethernet28 | - | - | - | - | - | - |
+| Ethernet29 | - | - | - | - | - | - |
+| Ethernet30 | - | - | - | - | - | - |
+| Ethernet31 | - | - | - | - | - | - |
+| Ethernet32 | - | - | - | - | - | - |
+| Ethernet33 | - | - | - | - | - | - |
+| Ethernet34 | - | - | - | - | - | - |
+| Ethernet35 | - | - | - | - | - | - |
+| Ethernet36 | - | - | - | - | - | - |
+| Ethernet37 | - | - | - | - | - | - |
+| Ethernet38 | - | - | - | - | - | - |
+| Ethernet39 | - | - | - | - | - | - |
+| Ethernet40 | - | - | - | - | - | - |
+| Ethernet41 | - | - | - | - | - | - |
+| Ethernet42 | - | - | - | - | - | - |
+| Ethernet43 | - | - | - | - | - | - |
+| Ethernet44 | - | - | - | - | - | - |
+| Ethernet45 | - | - | - | - | - | - |
+| Ethernet46 | - | - | - | - | - | - |
+| Ethernet47 | - | - | - | - | - | - |
+| Ethernet48 | - | - | - | - | - | - |
 
 *Inherited from Port-Channel Interface
+
+##### Multicast Routing
+
+| Interface | IP Version | Static Routes Allowed | Multicast Boundaries |
+| --------- | ---------- | --------------------- | -------------------- |
+| Ethernet1 | IPv4 | True | - |
+| Ethernet2 | IPv4 | True | - |
+| Ethernet3 | IPv4 | True | - |
+| Ethernet4 | IPv4 | True | - |
+| Ethernet5 | IPv4 | True | - |
+| Ethernet6 | IPv4 | True | - |
+| Ethernet7 | IPv4 | True | - |
+| Ethernet8 | IPv4 | True | - |
+| Ethernet9 | IPv4 | True | - |
+| Ethernet10 | IPv4 | True | - |
+| Ethernet11 | IPv4 | True | - |
+| Ethernet12 | IPv4 | True | - |
+| Ethernet13 | IPv4 | True | - |
+| Ethernet14 | IPv4 | True | - |
+| Ethernet15 | IPv4 | True | - |
+| Ethernet16 | IPv4 | True | - |
+| Ethernet17 | IPv4 | True | - |
+| Ethernet18 | IPv4 | True | - |
+| Ethernet19 | IPv4 | True | - |
+| Ethernet20 | IPv4 | True | - |
+| Ethernet21 | IPv4 | True | - |
+| Ethernet22 | IPv4 | True | - |
+| Ethernet23 | IPv4 | True | - |
+| Ethernet24 | IPv4 | True | - |
+| Ethernet25 | IPv4 | True | - |
+| Ethernet26 | IPv4 | True | - |
+| Ethernet27 | IPv4 | True | - |
+| Ethernet28 | IPv4 | True | - |
+| Ethernet29 | IPv4 | True | - |
+| Ethernet30 | IPv4 | True | - |
+| Ethernet31 | IPv4 | True | - |
+| Ethernet32 | IPv4 | True | - |
+| Ethernet33 | IPv4 | True | - |
+| Ethernet34 | IPv4 | True | - |
+| Ethernet35 | IPv4 | True | - |
+| Ethernet36 | IPv4 | True | - |
+| Ethernet37 | IPv4 | True | - |
+| Ethernet38 | IPv4 | True | - |
+| Ethernet39 | IPv4 | True | - |
+| Ethernet40 | IPv4 | True | - |
+| Ethernet41 | IPv4 | True | - |
+| Ethernet42 | IPv4 | True | - |
+| Ethernet43 | IPv4 | True | - |
+| Ethernet44 | IPv4 | True | - |
+| Ethernet45 | IPv4 | True | - |
+| Ethernet46 | IPv4 | True | - |
+| Ethernet47 | IPv4 | True | - |
+| Ethernet48 | IPv4 | True | - |
 
 ##### IPv4
 
@@ -539,6 +640,246 @@ switchport default mode routed
 #### Ethernet Interfaces Device Configuration
 
 ```eos
+!
+interface Ethernet1
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet2
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet3
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet4
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet5
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet6
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet7
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet8
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet9
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet10
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet11
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet12
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet13
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet14
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet15
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet16
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet17
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet18
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet19
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet20
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet21
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet22
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet23
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet24
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet25
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet26
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet27
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet28
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet29
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet30
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet31
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet32
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet33
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet34
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet35
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet36
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet37
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet38
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet39
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet40
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet41
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet42
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet43
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet44
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet45
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet46
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet47
+   no shutdown
+   switchport
+   multicast ipv4 static
+!
+interface Ethernet48
+   no shutdown
+   switchport
+   multicast ipv4 static
 !
 interface Ethernet49/1
    description P2P_blue-spine1_Ethernet5/9/1
