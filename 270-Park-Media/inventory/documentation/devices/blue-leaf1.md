@@ -44,7 +44,6 @@
   - [Service Routing Protocols Model](#service-routing-protocols-model)
   - [IP Routing](#ip-routing)
   - [IPv6 Routing](#ipv6-routing)
-  - [Static Routes](#static-routes)
   - [Router BGP](#router-bgp)
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
@@ -68,7 +67,7 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.5/24 | 10.100.100.1 |
+| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.5/24 | - |
 
 ##### IPv6
 
@@ -138,7 +137,7 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| - | 172.31.1.12 | 30 | 201 | 8 | 100 | boundary | - |
+| - | 172.31.1.12 | 30 | 103 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
@@ -147,7 +146,7 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 ptp domain 100
 ptp mode boundary
 ptp priority1 30
-ptp priority2 201
+ptp priority2 103
 ptp source ip 172.31.1.12
 ptp ttl 8
 ptp monitor threshold offset-from-master 500
@@ -1553,21 +1552,6 @@ no ip routing vrf MGMT
 | --- | --------------- |
 | default | False |
 | MGMT | false |
-
-### Static Routes
-
-#### Static Routes Summary
-
-| VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
-| --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
-| MGMT | 0.0.0.0/0 | 10.100.100.1 | - | 1 | - | - | - |
-
-#### Static Routes Device Configuration
-
-```eos
-!
-ip route vrf MGMT 0.0.0.0/0 10.100.100.1
-```
 
 ### Router BGP
 

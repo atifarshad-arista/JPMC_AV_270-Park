@@ -40,7 +40,6 @@
   - [Service Routing Protocols Model](#service-routing-protocols-model)
   - [IP Routing](#ip-routing)
   - [IPv6 Routing](#ipv6-routing)
-  - [Static Routes](#static-routes)
   - [Router BGP](#router-bgp)
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
@@ -64,7 +63,7 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.37/24 | 10.100.100.1 |
+| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.37/24 | - |
 
 ##### IPv6
 
@@ -651,21 +650,6 @@ no ip routing vrf MGMT
 | --- | --------------- |
 | default | False |
 | MGMT | false |
-
-### Static Routes
-
-#### Static Routes Summary
-
-| VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
-| --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
-| MGMT | 0.0.0.0/0 | 10.100.100.1 | - | 1 | - | - | - |
-
-#### Static Routes Device Configuration
-
-```eos
-!
-ip route vrf MGMT 0.0.0.0/0 10.100.100.1
-```
 
 ### Router BGP
 

@@ -220,7 +220,7 @@ aaa_authorization:
     all_default: local
 
 mgmt_interface: Management1
-mgmt_gateway: 10.100.100.1
+#mgmt_gateway: 10.100.100.1
 mgmt_destination_networks:
   - 0.0.0.0/0
 

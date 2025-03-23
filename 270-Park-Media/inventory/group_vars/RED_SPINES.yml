@@ -37,3 +37,9 @@ media_spine:
       ptp:
         source_ip: 172.31.1.11
         priority2: 101
+    - name: red-spine2
+      id: 2
+      mgmt_ip: 10.100.100.37/24
+      ptp:
+        source_ip: 172.31.1.11
+        priority2: 102

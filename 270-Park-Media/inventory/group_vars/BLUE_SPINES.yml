@@ -31,8 +31,14 @@ media_spine:
                   enabled: False
   nodes:
     - name: blue-spine1
-      id: 1
+      id: 38
       mgmt_ip: 10.100.100.4/24
       ptp:
         source_ip: loopback0
         priority2: 102
+    - name: blue-spine2
+      id: 39
+      mgmt_ip: 10.100.100.5/24
+      ptp:
+        source_ip: loopback0
+        priority2: 103

@@ -27,7 +27,7 @@ media_leaf:
     ptp:
       source_ip: 172.31.1.12
       priority1: 30
-      priority2: 101
+      priority2: 103
       ttl: 8
       monitor:
         #enabled: <bool; default=True>
@@ -47,7 +47,7 @@ media_leaf:
       ptp:
         source_ip: 172.31.1.12
         #priority1: 40
-        priority2: 201
+        #priority2: 201
     - name: blue-leaf2
       id: 7
       bgp_as: "65011.2"

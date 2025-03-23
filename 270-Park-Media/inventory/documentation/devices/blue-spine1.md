@@ -40,7 +40,6 @@
   - [Service Routing Protocols Model](#service-routing-protocols-model)
   - [IP Routing](#ip-routing)
   - [IPv6 Routing](#ipv6-routing)
-  - [Static Routes](#static-routes)
   - [Router BGP](#router-bgp)
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
@@ -64,7 +63,7 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.4/24 | 10.100.100.1 |
+| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.4/24 | - |
 
 ##### IPv6
 
@@ -1493,7 +1492,7 @@ interface Ethernet50/1
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 169.27.195.1/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.38/32 |
 
 ##### IPv6
 
@@ -1508,7 +1507,7 @@ interface Ethernet50/1
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 169.27.195.1/32
+   ip address 169.27.195.38/32
 ```
 
 ## Routing
@@ -1548,21 +1547,6 @@ no ip routing vrf MGMT
 | default | False |
 | MGMT | false |
 
-### Static Routes
-
-#### Static Routes Summary
-
-| VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
-| --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
-| MGMT | 0.0.0.0/0 | 10.100.100.1 | - | 1 | - | - | - |
-
-#### Static Routes Device Configuration
-
-```eos
-!
-ip route vrf MGMT 0.0.0.0/0 10.100.100.1
-```
-
 ### Router BGP
 
 ASN Notation: asplain
@@ -1571,7 +1555,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65010.1 | 169.27.195.1 |
+| 65010.1 | 169.27.195.38 |
 
 | BGP Tuning |
 | ---------- |
@@ -1674,7 +1658,7 @@ ASN Notation: asplain
 ```eos
 !
 router bgp 65010.1
-   router-id 169.27.195.1
+   router-id 169.27.195.38
    update wait-install
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4

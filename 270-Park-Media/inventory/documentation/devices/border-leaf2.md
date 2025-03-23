@@ -40,7 +40,6 @@
   - [Service Routing Protocols Model](#service-routing-protocols-model)
   - [IP Routing](#ip-routing)
   - [IPv6 Routing](#ipv6-routing)
-  - [Static Routes](#static-routes)
   - [Router BGP](#router-bgp)
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
@@ -64,7 +63,7 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.101.5/24 | 10.100.100.1 |
+| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.101.5/24 | - |
 
 ##### IPv6
 
@@ -134,7 +133,7 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| - | loopback0 | 20 | 106 | 8 | 100 | boundary | - |
+| - | loopback0 | 20 | 101 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
@@ -143,7 +142,7 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 ptp domain 100
 ptp mode boundary
 ptp priority1 20
-ptp priority2 106
+ptp priority2 101
 ptp source ip loopback0
 ptp ttl 8
 ptp monitor threshold offset-from-master 500
@@ -536,34 +535,12 @@ switchport default mode routed
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
 | Ethernet33/1 | P2P_red-spine1_Ethernet34/1 | - | 100.83.88.25/31 | default | 1500 | False | - | - |
 | Ethernet34/1 | P2P_blue-spine1_Ethernet34/1 | - | 100.83.88.27/31 | default | 1500 | False | - | - |
+| Ethernet35/1 | P2P_green-spine1_Ethernet3/4/1 | - | 100.83.88.253/31 | default | 1500 | False | - | - |
+| Ethernet36/1 | P2P_green-spine2_Ethernet3/4/1 | - | 100.83.88.255/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
 ```eos
-!
-interface Ethernet3/3/1
-   description P2P_border-leaf1_Ethernet3/3/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet3/4/1
-   description P2P_border-leaf1_Ethernet3/4/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
 !
 interface Ethernet33/1
    description P2P_red-spine1_Ethernet34/1
@@ -590,6 +567,20 @@ interface Ethernet34/1
    ptp delay-req interval -3
    ptp sync-message interval -3
    ptp transport ipv4
+!
+interface Ethernet35/1
+   description P2P_green-spine1_Ethernet3/4/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.88.253/31
+!
+interface Ethernet36/1
+   description P2P_green-spine2_Ethernet3/4/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.88.255/31
 ```
 
 ### Loopback Interfaces
@@ -655,21 +646,6 @@ no ip routing vrf MGMT
 | default | False |
 | MGMT | false |
 
-### Static Routes
-
-#### Static Routes Summary
-
-| VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
-| --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
-| MGMT | 0.0.0.0/0 | 10.100.100.1 | - | 1 | - | - | - |
-
-#### Static Routes Device Configuration
-
-```eos
-!
-ip route vrf MGMT 0.0.0.0/0 10.100.100.1
-```
-
 ### Router BGP
 
 ASN Notation: asplain
@@ -702,6 +678,8 @@ ASN Notation: asplain
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
 | 100.83.88.24 | 65020.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.26 | 65010.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.252 | 65003.3 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.254 | 65003.3 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
@@ -722,6 +700,12 @@ router bgp 65003.2
    neighbor 100.83.88.26 peer group P2P-IPv4-eBGP-PEERS
    neighbor 100.83.88.26 remote-as 65010.1
    neighbor 100.83.88.26 description blue-spine1_Ethernet34/1
+   neighbor 100.83.88.252 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.252 remote-as 65003.3
+   neighbor 100.83.88.252 description green-spine1
+   neighbor 100.83.88.254 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.254 remote-as 65003.3
+   neighbor 100.83.88.254 description green-spine2
    redistribute connected
    !
    address-family ipv4

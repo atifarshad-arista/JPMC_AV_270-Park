@@ -27,7 +27,7 @@ media_leaf:
     ptp:
       source_ip: 172.31.1.12
       priority1: 30
-      priority2: 101
+      priority2: 102
       ttl: 8
       monitor:
         #enabled: <bool; default=True>

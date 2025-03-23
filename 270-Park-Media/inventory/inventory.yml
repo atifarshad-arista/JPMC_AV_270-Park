@@ -20,10 +20,12 @@ all:
               hosts:
                 blue-spine1:
                   ansible_host: 10.100.100.4
+                  serial_number: HBG24140357
             BLUE_LEAFS:
               hosts:
                 blue-leaf1:
                   ansible_host: 10.100.100.5
+                  serial_number: HBG24140358
                 blue-leaf2:
                   ansible_host: 10.100.100.6
                 blue-leaf3:
@@ -92,10 +94,12 @@ all:
               hosts:
                 red-spine1:
                   ansible_host: 10.100.100.37
+                  serial_number: HBG24140359
             RED_LEAFS:
               hosts:
                 red-leaf1:
                   ansible_host: 10.100.100.38
+                  serial_number: HBG24140360
                 red-leaf2:
                   ansible_host: 10.100.100.39
                 red-leaf3:

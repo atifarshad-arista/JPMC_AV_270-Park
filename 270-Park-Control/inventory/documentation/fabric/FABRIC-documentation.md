@@ -17,7 +17,7 @@
 
 | POD | Type | Node | Management IP | Platform | Provisioned in CloudVision | Serial Number |
 | --- | ---- | ---- | ------------- | -------- | -------------------------- | ------------- |
-| FABRIC | l2leaf | green-leaf1 | 10.100.100.72/23 | 720XP | Provisioned | - |
+| FABRIC | l2leaf | green-leaf1 | 10.100.100.72/23 | 720XP | Provisioned | HBG24140372 |
 | FABRIC | l2leaf | green-leaf2 | 10.100.100.73/23 | 720XP | Provisioned | - |
 | FABRIC | l2leaf | green-leaf3 | 10.100.100.74/23 | 720XP | Provisioned | - |
 | FABRIC | l2leaf | green-leaf4 | 10.100.100.75/23 | 720XP | Provisioned | - |
@@ -200,8 +200,8 @@
 | FABRIC | l2leaf | green-leaf181 | 10.100.100.252/23 | 720XP | Provisioned | - |
 | FABRIC | l2leaf | green-leaf182 | 10.100.100.253/23 | 720XP | Provisioned | - |
 | FABRIC | l2leaf | green-leaf183 | 10.100.100.254/23 | 720XP | Provisioned | - |
-| FABRIC | l3spine | green-spine1 | 10.100.100.70/24 | 7308X3 | Provisioned | - |
-| FABRIC | l3spine | green-spine2 | 10.100.100.71/24 | 7308X3 | Provisioned | - |
+| FABRIC | l3spine | green-spine1 | 10.100.100.70/24 | 7308X3 | Provisioned | HBG24140370 |
+| FABRIC | l3spine | green-spine2 | 10.100.100.71/24 | 7308X3 | Provisioned | HBG24140371 |
 
 > Provision status is based on Ansible inventory declaration and do not represent real status from CloudVision.
 

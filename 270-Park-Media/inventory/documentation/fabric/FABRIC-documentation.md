@@ -17,7 +17,7 @@
 
 | POD | Type | Node | Management IP | Platform | Provisioned in CloudVision | Serial Number |
 | --- | ---- | ---- | ------------- | -------- | -------------------------- | ------------- |
-| FABRIC | media_leaf | blue-leaf1 | 10.100.100.5/24 | 720XP | Provisioned | - |
+| FABRIC | media_leaf | blue-leaf1 | 10.100.100.5/24 | 720XP | Provisioned | HBG24140358 |
 | FABRIC | media_leaf | blue-leaf2 | 10.100.100.6/24 | 720XP | Provisioned | - |
 | FABRIC | media_leaf | blue-leaf3 | 10.100.100.7/24 | 720XP | Provisioned | - |
 | FABRIC | media_leaf | blue-leaf4 | 10.100.100.8/24 | 720XP | Provisioned | - |
@@ -49,12 +49,12 @@
 | FABRIC | media_leaf | blue-leaf30 | 10.100.100.34/24 | 720XP | Provisioned | - |
 | FABRIC | media_leaf | blue-leaf31 | 10.100.100.35/24 | 720XP | Provisioned | - |
 | FABRIC | media_leaf | blue-leaf32 | 10.100.100.36/24 | 720XP | Provisioned | - |
-| FABRIC | media_spine | blue-spine1 | 10.100.100.4/24 | 7808R3 | Provisioned | - |
+| FABRIC | media_spine | blue-spine1 | 10.100.100.4/24 | 7808R3 | Provisioned | HBG24140357 |
 | FABRIC | border_leaf | border-leaf1 | 10.100.101.4/24 | 7280CR3 | Provisioned | - |
 | FABRIC | border_leaf | border-leaf2 | 10.100.101.5/24 | 7280CR3 | Provisioned | - |
 | FABRIC | ptp_leaf | media-PTP-1 | 10.100.101.2/24 | 7280SR3 | Provisioned | - |
 | FABRIC | ptp_leaf | media-PTP-2 | 10.100.100.3/24 | 7280SR3 | Provisioned | - |
-| FABRIC | media_leaf | red-leaf1 | 10.100.100.38/24 | vEOS-lab | Provisioned | - |
+| FABRIC | media_leaf | red-leaf1 | 10.100.100.38/24 | vEOS-lab | Provisioned | HBG24140360 |
 | FABRIC | media_leaf | red-leaf2 | 10.100.100.39/24 | vEOS-lab | Provisioned | - |
 | FABRIC | media_leaf | red-leaf3 | 10.100.100.40/24 | vEOS-lab | Provisioned | - |
 | FABRIC | media_leaf | red-leaf4 | 10.100.100.41/24 | vEOS-lab | Provisioned | - |
@@ -86,7 +86,7 @@
 | FABRIC | media_leaf | red-leaf30 | 10.100.100.67/24 | vEOS-lab | Provisioned | - |
 | FABRIC | media_leaf | red-leaf31 | 10.100.100.68/24 | vEOS-lab | Provisioned | - |
 | FABRIC | media_leaf | red-leaf32 | 10.100.100.69/24 | vEOS-lab | Provisioned | - |
-| FABRIC | media_spine | red-spine1 | 10.100.100.37/24 | 7808R3 | Provisioned | - |
+| FABRIC | media_spine | red-spine1 | 10.100.100.37/24 | 7808R3 | Provisioned | HBG24140359 |
 
 > Provision status is based on Ansible inventory declaration and do not represent real status from CloudVision.
 
@@ -167,12 +167,8 @@
 | media_spine | blue-spine1 | Ethernet34/1 | border_leaf | border-leaf2 | Ethernet34/1 |
 | media_spine | blue-spine1 | Ethernet49/1 | ptp_leaf | media-PTP-1 | Ethernet50/1 |
 | media_spine | blue-spine1 | Ethernet50/1 | ptp_leaf | media-PTP-2 | Ethernet50/1 |
-| border_leaf | border-leaf1 | Ethernet3/3/1 | border_leaf | border-leaf2 | Ethernet3/3/1 |
-| border_leaf | border-leaf1 | Ethernet3/4/1 | border_leaf | border-leaf2 | Ethernet3/4/1 |
 | border_leaf | border-leaf1 | Ethernet33/1 | media_spine | red-spine1 | Ethernet33/1 |
 | border_leaf | border-leaf2 | Ethernet33/1 | media_spine | red-spine1 | Ethernet34/1 |
-| ptp_leaf | media-PTP-1 | Ethernet3/1/1 | ptp_leaf | media-PTP-2 | Ethernet3/1/1 |
-| ptp_leaf | media-PTP-1 | Ethernet3/2/1 | ptp_leaf | media-PTP-2 | Ethernet3/2/1 |
 | ptp_leaf | media-PTP-1 | Ethernet49/1 | media_spine | red-spine1 | Ethernet49/1 |
 | ptp_leaf | media-PTP-2 | Ethernet49/1 | media_spine | red-spine1 | Ethernet50/1 |
 
@@ -303,7 +299,7 @@
 | FABRIC | blue-leaf30 | 169.27.195.36/32 |
 | FABRIC | blue-leaf31 | 169.27.195.37/32 |
 | FABRIC | blue-leaf32 | 169.27.195.38/32 |
-| FABRIC | blue-spine1 | 169.27.195.1/32 |
+| FABRIC | blue-spine1 | 169.27.195.38/32 |
 | FABRIC | border-leaf1 | 169.27.195.3/32 |
 | FABRIC | border-leaf2 | 169.27.195.4/32 |
 | FABRIC | media-PTP-1 | 169.27.195.1/32 |
