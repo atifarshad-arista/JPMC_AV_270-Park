@@ -11,6 +11,17 @@ border_leaf:
     spanning_tree_mode: mstp
     filter:
       tenants: [ border ]
+    bgp_defaults:
+    # Literal bgp commands <str>
+      - bgp asn notation asdot
+      #- no bgp default ipv4-unicast
+      - timers bgp 5 15
+      - distance bgp 20 200 200
+      - graceful-restart restart-time 300
+      - graceful-restart
+      - maximum-paths 128
+      - neighbor default send-community
+    bgp_as: "65214"
     ptp:
       priority1: 20
       priority2: 101
@@ -27,7 +38,6 @@ border_leaf:
   nodes:
     - name: border-leaf1
       id: 3
-      bgp_as: "65003.2"
       mgmt_ip: 10.100.101.4/24
       filter:
         tags: [ border-leaf1 ]
@@ -37,42 +47,9 @@ border_leaf:
 
     - name: border-leaf2
       id: 4
-      bgp_as: "65003.2"
       mgmt_ip: 10.100.101.5/24
       filter:
         tags: [ border-leaf2 ]
       uplink_switch_interfaces: [ Ethernet34/1, Ethernet34/1 ]
       ptp:
         source_ip: loopback0
-
-
-core_interfaces:
-  p2p_links:
-    - ip: [ 100.83.88.249//31, 100.83.88.248/31 ]
-      nodes: [ border-leaf1, green-spine1 ]
-      interfaces: [ Ethernet35/1, Ethernet3/3/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.2", "65003.3"  ]
-    - ip: [ 100.83.88.251/31, 100.83.88.250/31 ]
-      nodes: [ border-leaf1, green-spine2 ]
-      interfaces: [ Ethernet36/1 , Ethernet3/3/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.2", "65003.3" ]
-    - ip: [ 100.83.88.253/31, 100.83.88.252/31 ]
-      nodes: [ border-leaf2 , green-spine1 ]
-      interfaces: [ Ethernet35/1, Ethernet3/4/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.2", "65003.3" ]
-    - ip: [ 100.83.88.255/31, 100.83.88.254/31 ]
-      nodes: [ border-leaf2, green-spine2 ]
-      interfaces: [ Ethernet36/1, Ethernet3/4/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.2", "65003.3" ]

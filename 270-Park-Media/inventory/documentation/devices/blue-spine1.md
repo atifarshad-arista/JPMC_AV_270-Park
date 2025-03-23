@@ -1584,10 +1584,10 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 100.83.88.3 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.88.11 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.88.19 | 65003.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.88.27 | 65003.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.3 | 65213.37370 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.11 | 65213.37370 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.19 | 65214 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.27 | 65214 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.41 | 65011.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.43 | 65011.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.49 | 65011.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
@@ -1674,16 +1674,16 @@ router bgp 65010.1
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
    neighbor 100.83.88.3 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.3 remote-as 65003.1
+   neighbor 100.83.88.3 remote-as 65213.37370
    neighbor 100.83.88.3 description media-PTP-1_Ethernet50/1
    neighbor 100.83.88.11 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.11 remote-as 65003.1
+   neighbor 100.83.88.11 remote-as 65213.37370
    neighbor 100.83.88.11 description media-PTP-2_Ethernet50/1
    neighbor 100.83.88.19 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.19 remote-as 65003.2
+   neighbor 100.83.88.19 remote-as 65214
    neighbor 100.83.88.19 description border-leaf1_Ethernet34/1
    neighbor 100.83.88.27 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.27 remote-as 65003.2
+   neighbor 100.83.88.27 remote-as 65214
    neighbor 100.83.88.27 description border-leaf2_Ethernet34/1
    neighbor 100.83.88.41 peer group P2P-IPv4-eBGP-PEERS
    neighbor 100.83.88.41 remote-as 65011.1

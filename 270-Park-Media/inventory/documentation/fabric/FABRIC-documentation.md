@@ -167,8 +167,12 @@
 | media_spine | blue-spine1 | Ethernet34/1 | border_leaf | border-leaf2 | Ethernet34/1 |
 | media_spine | blue-spine1 | Ethernet49/1 | ptp_leaf | media-PTP-1 | Ethernet50/1 |
 | media_spine | blue-spine1 | Ethernet50/1 | ptp_leaf | media-PTP-2 | Ethernet50/1 |
+| border_leaf | border-leaf1 | Ethernet3 | border_leaf | border-leaf2 | Ethernet3 |
+| border_leaf | border-leaf1 | Ethernet4 | border_leaf | border-leaf2 | Ethernet4 |
 | border_leaf | border-leaf1 | Ethernet33/1 | media_spine | red-spine1 | Ethernet33/1 |
 | border_leaf | border-leaf2 | Ethernet33/1 | media_spine | red-spine1 | Ethernet34/1 |
+| ptp_leaf | media-PTP-1 | Ethernet3 | ptp_leaf | media-PTP-2 | Ethernet3 |
+| ptp_leaf | media-PTP-1 | Ethernet4 | ptp_leaf | media-PTP-2 | Ethernet4 |
 | ptp_leaf | media-PTP-1 | Ethernet49/1 | media_spine | red-spine1 | Ethernet49/1 |
 | ptp_leaf | media-PTP-2 | Ethernet49/1 | media_spine | red-spine1 | Ethernet50/1 |
 

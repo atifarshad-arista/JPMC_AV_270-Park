@@ -688,10 +688,10 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 100.83.88.1 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.88.9 | 65003.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.88.17 | 65003.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.88.25 | 65003.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.1 | 65213.37370 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.9 | 65213.37370 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.17 | 65214 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.88.25 | 65214 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
@@ -714,16 +714,16 @@ router bgp 65020.1
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
    neighbor 100.83.88.1 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.1 remote-as 65003.1
+   neighbor 100.83.88.1 remote-as 65213.37370
    neighbor 100.83.88.1 description media-PTP-1_Ethernet49/1
    neighbor 100.83.88.9 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.9 remote-as 65003.1
+   neighbor 100.83.88.9 remote-as 65213.37370
    neighbor 100.83.88.9 description media-PTP-2_Ethernet49/1
    neighbor 100.83.88.17 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.17 remote-as 65003.2
+   neighbor 100.83.88.17 remote-as 65214
    neighbor 100.83.88.17 description border-leaf1_Ethernet33/1
    neighbor 100.83.88.25 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.25 remote-as 65003.2
+   neighbor 100.83.88.25 remote-as 65214
    neighbor 100.83.88.25 description border-leaf2_Ethernet33/1
    redistribute connected
    !
