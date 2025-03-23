@@ -3,12 +3,12 @@ type: media_leaf
 
 media_leaf:
   defaults:
-    platform: vEOS-lab
+    platform: 720XP
     loopback_ipv4_pool: 169.27.195.0/25
     loopback_ipv4_offset: 1
     uplink_switches: [ 'red-spine1', 'red-spine1' ]
     max_parallel_uplinks: 2
-    uplink_ipv4_pool: 100.83.88.0/23
+    uplink_ipv4_pool: 100.83.100.0/22
     spanning_tree_priority: 4096
     spanning_tree_mode: mstp
     bgp_defaults:

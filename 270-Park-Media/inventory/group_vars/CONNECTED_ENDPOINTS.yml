@@ -2,6 +2,13 @@
 # Port Profiles
 # Common settings inherited to network_ports
 port_profiles:
+
+  # To intoduce multicast ipv4 static
+  - profile: STATIC_MULTICAST
+    structured_config:
+      multicast:
+        ipv4:
+          static: True
   - profile: RED_111
     mode: access
     enabled: false
@@ -56,6 +63,14 @@ port_profiles:
 # All switch_ports ranges are expanded into individual port configurations
 # Switches are matched with regex matching the full hostname.
 network_ports:
+  # Generic Port Settings
+  - switches:
+      - blue-leaf.*
+      - red-leaf.*
+    switch_ports:
+      - Ethernet1-48
+    profile: STATIC_MULTICAST
+
   # Generic Port Settings
   - switches:
       - red-leaf1
