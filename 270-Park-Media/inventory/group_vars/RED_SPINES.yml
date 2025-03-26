@@ -5,11 +5,11 @@ media_spine:
   defaults:
     platform: 7808R3
     loopback_ipv4_pool: 169.27.195.0/25
-    bgp_as: "65020.1"
+    bgp_as: "65210.37100"
     bgp_defaults:
     # Literal bgp commands <str>
       - bgp asn notation asdot
-     # - no bgp default ipv4-unicast
+    # - no bgp default ipv4-unicast
       - timers bgp 5 15
       - distance bgp 20 200 200
       - graceful-restart restart-time 300
@@ -18,6 +18,7 @@ media_spine:
       - neighbor default send-community
     filter:
       tenants: [ red ]
+    mgmt_interface: Management0
     ptp:
       priority1: 20
       #priority2: 101
@@ -30,16 +31,15 @@ media_spine:
         missing_message:
                 sequence_ids:
                   enabled: False
+
+
   nodes:
     - name: red-spine1
       id: 1
-      mgmt_ip: 10.100.100.37/24
+      loopback_ipv4_address: 169.27.195.0
+      mgmt_ip: 10.176.143.139/27
+      mgmt_gateway: 10.176.143.129
       ptp:
-        source_ip: 172.31.1.11
+        source_ip: 169.27.195.0
         priority2: 101
-    - name: red-spine2
-      id: 2
-      mgmt_ip: 10.100.100.37/24
-      ptp:
-        source_ip: 172.31.1.11
-        priority2: 102
+

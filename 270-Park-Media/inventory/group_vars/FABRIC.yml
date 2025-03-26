@@ -66,13 +66,14 @@ default_interfaces:
     platforms:
       - 7808R3
     uplink_interfaces:
-      - Ethernet3/1-4/1
+      - Ethernet3-4/32/1
+      - Ethernet6-7/10/1
     downlink_interfaces:
       - Ethernet4-7/1-36/1
   - types:
       - media_leaf
     platforms:
-      - 720XP
+      - 7289R3
     uplink_interfaces:
       - Ethernet49-50/1
     downlink_interfaces:
@@ -82,13 +83,13 @@ default_interfaces:
     platforms:
       - 7280SR3
     uplink_interfaces:
-      - Ethernet49-52/1
+      - Ethernet49-54
   - types:
       - border_leaf
     platforms:
       - 7280CR3
     uplink_interfaces:
-      - Ethernet33-36/1
+      - Ethernet31-36/1
 
 daemon_terminattr:
   cvaddrs:
@@ -221,21 +222,13 @@ aaa_authorization:
 
 mgmt_interface: Management1
 #mgmt_gateway: 10.100.100.1
+mgmt_interface_vrf: MGMT
 mgmt_destination_networks:
   - 0.0.0.0/0
 
 
 name_servers:
   - 192.168.1.1
-
-
-# ntp:
-#   local_interface:
-#     name: Management1
-#     vrf: MGMT
-#   servers:
-#     - name: 0.pool.ntp.org
-#       vrf: MGMT
 
 ntp:
   servers:
@@ -270,58 +263,12 @@ roles:
         # Command as string.
         command: ".*"
 
-
-# core_interfaces:
-#   p2p_links:
-#     - id: 1
-#       nodes: [ media-PTP-1, media-PTP-2 ]
-#       interfaces: [ Ethernet3/1/1, Ethernet3/1/1 ]
-#       ptp:
-#         enabled: true
-#       include_in_underlay_protocol: false
-#     - id: 2
-#       nodes: [ media-PTP-1, media-PTP-2 ]
-#       interfaces: [ Ethernet3/2/1, Ethernet3/2/1 ]
-#       ptp:
-#         enabled: true
-#       include_in_underlay_protocol: false
-#     - id: 3
-#       nodes: [ border-leaf1, border-leaf2 ]
-#       interfaces: [ Ethernet3/3/1, Ethernet3/3/1 ]
-#       ptp:
-#         enabled: true
-#       include_in_underlay_protocol: false
-#     - id: 4
-#       nodes: [ border-leaf1, border-leaf2 ]
-#       interfaces: [ Ethernet3/4/1, Ethernet3/4/1 ]
-#       ptp:
-#         enabled: true
-#       include_in_underlay_protocol: false
-
+# Create UPLINKS -> Media Spines to BL and PTP, -> Green Spines to BL and PTP (Note: Green spines are used here just to configure PTP/BL for them )
 core_interfaces:
   p2p_links:
 
-    # PTP Switch L3 Interlinks with Port-Channel
-    - ip: [ 100.83.88.240/31, 100.83.88.241/31 ]
-    #- id: 1
-      nodes: [ media-PTP-1, media-PTP-2 ]
-      port_channel:
-        description: INTER_SWITCH_LINK
-        mode: "active"
-        nodes_child_interfaces:
-          - node: media-PTP-1
-            # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
-            interfaces: [ Ethernet3, Ethernet4 ]
-            channel_id: 1000
-          - node: media-PTP-2
-            # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
-            interfaces: [ Ethernet3, Ethernet4 ]
-            channel_id: 1000
-      as: [ "65213.37370", "65213.37370" ]
-
-
-    # Border Leaf Switch L3 Interlinks with Port-Channel
-    - ip: [ 100.83.88.242/31, 100.83.88.243/31 ]
+    #++++++ Border Leaf to Border Leaf Switch L3 Interlinks with Port-Channel
+    - ip: [ 100.83.93.8/31, 100.83.93.9/31 ]
     #- id: 1
       nodes: [ border-leaf1, border-leaf2 ]
       port_channel:
@@ -330,74 +277,131 @@ core_interfaces:
         nodes_child_interfaces:
           - node: border-leaf1
             # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
-            interfaces: [ Ethernet3, Ethernet4 ]
+            interfaces: [ Ethernet35/1, Ethernet36/1 ]
             channel_id: 1000
           - node: border-leaf2
             # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
-            interfaces: [ Ethernet3, Ethernet4 ]
+            interfaces: [ Ethernet35/1, Ethernet36/1 ]
             channel_id: 1000
       as: [ "65214", "65214" ]
 
-    # PTP to Green Spines p2p L3 Links
-    - ip: [ 100.83.88.244/31, 100.83.88.245/31 ]
-      nodes: [ media-PTP-1, green-spine1  ]
-      interfaces: [ Ethernet1/1, Ethernet3/1/1  ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.37370", "65212.37300" ]
-    - ip: [ 100.83.88.246/31, 100.83.88.247/31 ]
-      nodes: [ media-PTP-1, green-spine2 ]
-      interfaces: [ Ethernet2/1, Ethernet3/1/1,  ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.37370", "65212.37300" ]
-    - ip: [ 100.83.88.248/31, 100.83.88.249/31 ]
-      nodes: [ media-PTP-2, green-spine1  ]
-      interfaces: [ Ethernet1/1, Ethernet3/2/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.37370", "65212.37300" ]
-    - ip: [ 100.83.88.250/31, 100.83.88.251/31 ]
-      nodes: [ media-PTP-2, green-spine2 ]
-      interfaces: [ Ethernet2/1, Ethernet3/2/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.37370", "65212.37300" ]
+    #+++++++++ PTP Switch L3 Interlinks with Port-Channel
+    - ip: [ 100.83.93.10/31, 100.83.93.11/31 ]
+    #- id: 1
+      nodes: [ media-PTP-1, media-PTP-2 ]
+      port_channel:
+        description: INTER_SWITCH_LINK
+        mode: "active"
+        nodes_child_interfaces:
+          - node: media-PTP-1
+            # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
+            interfaces: [ Ethernet53, Ethernet54 ]
+            channel_id: 1000
+          - node: media-PTP-2
+            # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
+            interfaces: [ Ethernet53, Ethernet54 ]
+            channel_id: 1000
+      as: [ "65213.37370", "65213.37370" ]
 
-    # Border to Green Spines p2p L3 Links
-    - ip: [ 100.83.89.244/31, 100.83.89.245/31 ]
+    #+++++++ Border to Green Spines p2p L3 Links
+    - ip: [ 100.83.93.17/31, 100.83.93.16/31 ]
       nodes: [ border-leaf1, green-spine1  ]
-      interfaces: [ Ethernet1/1, Ethernet3/1/1  ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65214", "65212.37300" ]
-    - ip: [ 100.83.89.246/31, 100.83.89.247/31 ]
-      nodes: [ border-leaf1, green-spine2 ]
-      interfaces: [ Ethernet2/1, Ethernet3/1/1,  ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65214", "65212.37300" ]
-    - ip: [ 100.83.89.248/31, 100.83.89.249/31 ]
-      nodes: [ border-leaf2, green-spine1  ]
-      interfaces: [ Ethernet1/1, Ethernet3/2/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65214", "65212.37300" ]
-    - ip: [ 100.83.89.250/31, 100.83.89.251/31 ]
-      nodes: [ border-leaf2, green-spine2 ]
-      interfaces: [ Ethernet2/1, Ethernet3/2/1 ]
+      interfaces: [ Ethernet31/1, Ethernet3/30/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65214", "65212.37300" ]
 
+    - ip: [ 100.83.93.19/31, 100.83.93.18/31 ]
+      nodes: [ border-leaf1, green-spine2 ]
+      interfaces: [ Ethernet32/1, Ethernet3/30/1 ]
+      include_in_underlay_protocol: true
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.21/31, 100.83.93.20/31 ]
+      nodes: [ border-leaf2, green-spine1  ]
+      interfaces: [ Ethernet31/1, Ethernet4/30/1 ]
+      include_in_underlay_protocol: true
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.23/31, 100.83.93.22/31 ]
+      nodes: [ border-leaf2, green-spine2 ]
+      interfaces: [ Ethernet32/1, Ethernet4/30/1 ]
+      include_in_underlay_protocol: true
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65214", "65212.37300" ]
+
+    #+++++ PTP to Green Spines p2p L3 Links
+    - ip: [ 100.83.93.25/31, 100.83.93.24/31 ]
+      nodes: [ media-PTP-1, green-spine1  ]
+      interfaces: [ Ethernet51, Ethernet3/31/1 ]
+      include_in_underlay_protocol: true
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65003.37370", "65212.37300" ]
+
+    - ip: [ 100.83.93.27/31, 100.83.93.26/31 ]
+      nodes: [ media-PTP-1, green-spine2 ]
+      interfaces: [ Ethernet52, Ethernet3/31/1 ]
+      include_in_underlay_protocol: true
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65003.37370", "65212.37300" ]
+
+    - ip: [ 100.83.93.29/31, 100.83.93.28/31 ]
+      nodes: [ media-PTP-2, green-spine1  ]
+      interfaces: [ Ethernet51, Ethernet4/31/1 ]
+      include_in_underlay_protocol: true
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65003.37370", "65212.37300" ]
+
+    - ip: [ 100.83.93.31/31, 100.83.93.30/31 ]
+      nodes: [ media-PTP-2, green-spine2 ]
+      interfaces: [ Ethernet52, Ethernet4/31/1 ]
+      include_in_underlay_protocol: true
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+      as: [ "65003.37370", "65212.37300" ]
+
+    # #+++++ PTP to Red Spine p2p L3 Links
+    # - ip: [ 100.83.93.5/31, 100.83.93.4/31 ]
+    #   nodes: [ media-PTP-1, red-spine1  ]
+    #   interfaces: [ Ethernet49, Ethernet3/32/1 ]
+    #   include_in_underlay_protocol: true
+    #   # If the AS is different than the AS number configured for the node,
+    #   # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+    #   as: [ "65003.37370", "65210.37100" ]
+
+    # - ip: [ 100.83.93.7/31, 100.83.93.6/31 ]
+    #   nodes: [ media-PTP-2, red-spine1 ]
+    #   interfaces: [ Ethernet49, Ethernet4/32/1 ]
+    #   include_in_underlay_protocol: true
+    #   # If the AS is different than the AS number configured for the node,
+    #   # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+    #   as: [ "65003.37370", "65210.37100" ]
+
+    # #+++++ PTP to Blue Spine p2p L3 Links
+    # - ip: [ 100.83.93.13/31, 100.83.93.12/31 ]
+    #   nodes: [ media-PTP-1, blue-spine1  ]
+    #   interfaces: [ Ethernet50, Ethernet3/32/1 ]
+    #   include_in_underlay_protocol: true
+    #   # If the AS is different than the AS number configured for the node,
+    #   # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+    #   as: [ "65003.37370", "65212.37200" ]
+
+    # - ip: [ 100.83.93.15/31, 100.83.93.14/31 ]
+    #   nodes: [ media-PTP-2, blue-spine1 ]
+    #   interfaces: [ Ethernet50, Ethernet4/32/1 ]
+    #   include_in_underlay_protocol: true
+    #   # If the AS is different than the AS number configured for the node,
+    #   # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
+    #   as: [ "65003.37370", "65212.37200" ]
 
 eos_validate_state_validation_mode_loose: true
 root_dir: '{{ inventory_dir }}'

@@ -7,8 +7,8 @@ media_leaf:
     loopback_ipv4_pool: 169.27.195.0/25
     loopback_ipv4_offset: 1
     uplink_switches: [ 'red-spine1', 'red-spine1' ]
-    max_parallel_uplinks: 2
-    uplink_ipv4_pool: 100.83.100.0/22
+    max_parallel_uplinks: 6
+    uplink_ipv4_pool:  100.83.200.0/22
     spanning_tree_priority: 4096
     spanning_tree_mode: mstp
     bgp_defaults:
@@ -40,194 +40,400 @@ media_leaf:
 
   nodes:
     - name: red-leaf1
-      id: 6
-      bgp_as: "65021.1"
-      mgmt_ip: 10.100.100.38/24
+      id: 1
+      loopback_ipv4_address: 169.27.195.1
+      bgp_as: "65210.37101"
+      mgmt_ip: 10.176.143.141/27
+      mgmt_gateway: 10.176.143.129
       filter:
         tags: [ red-leaf1 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1', 'red-spine1', 'red-spine1', 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3, Ethernet2/4, Ethernet3/1, Ethernet3/2 ]
+      uplink_switch_interfaces: [ Ethernet6/18/1, Ethernet6/19/1, Ethernet6/20/1, Ethernet7/1/1,  Ethernet7/2/1, Ethernet7/3/1 ]
+      #uplink_ipv4_pool: 100.83.94.0/28
+      ptp:
+        source_ip: 169.27.195.1
     - name: red-leaf2
-      id: 7
-      bgp_as: "65021.2"
-      mgmt_ip: 10.100.100.39/24
+      id: 2
+      loopback_ipv4_address: 169.27.195.2
+      bgp_as: "65210.37102"
+      mgmt_ip: 10.176.143.170/27
+      mgmt_gateway: 10.176.143.161
       filter:
         tags: [ red-leaf2 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1', 'red-spine1', 'red-spine1', 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/1, Ethernet2/3, Ethernet3/1, Ethernet2/2, Ethernet2/4, Ethernet3/2 ]
+      uplink_switch_interfaces: [ Ethernet6/4/1, Ethernet6/5/1, Ethernet6/6/1, Ethernet7/4/1, Ethernet7/5/1, Ethernet7/6/1 ]
+      #uplink_ipv4_pool: 100.83.94.16/28
+      ptp:
+        source_ip: 169.27.195.2
+
     - name: red-leaf3
-      id: 8
-      bgp_as: "65021.3"
-      mgmt_ip: 10.100.100.40/24
+      id: 3
+      loopback_ipv4_address: 169.27.195.3
+      bgp_as: "65210.37105"
+      mgmt_ip: 10.166.80.6/27
+      mgmt_gateway: 10.166.80.1
       filter:
         tags: [ red-leaf3 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet55, Ethernet56 ]
+      uplink_switch_interfaces: [ Ethernet3/32/2, Ethernet4/32/2 ]
+      #uplink_ipv4_pool: 100.83.94.32/28
+      ptp:
+        source_ip: 169.27.195.3
     - name: red-leaf4
-      id: 9
-      bgp_as: "65021.4"
-      mgmt_ip: 10.100.100.41/24
+      id: 4
+      loopback_ipv4_address: 169.27.195.4
+      bgp_as: "5210.37103"
+      mgmt_ip: 10.166.80.10/27
+      mgmt_gateway: 10.166.80.1
       filter:
         tags: [ red-leaf4 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/1, Ethernet2/3, Ethernet2/2 ]
+      uplink_switch_interfaces: [ Ethernet6/7/1, Ethernet6/8/1, Ethernet7/7/1 ]
+      #uplink_ipv4_pool: 100.83.94.48/28
+      ptp:
+        source_ip: 169.27.195.4
     - name: red-leaf5
-      id: 10
-      bgp_as: "65021.5"
-      mgmt_ip: 10.100.100.42/24
+      id: 5
+      loopback_ipv4_address: 169.27.195.5
+      bgp_as: "65210.37106"
+      mgmt_ip: 10.166.80.40/27
+      mgmt_gateway: 10.166.80.33
       filter:
         tags: [ red-leaf5 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1', 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet56, Ethernet54, Ethernet55, Ethernet53 ]
+      uplink_switch_interfaces: [ Ethernet3/31/4, Ethernet3/32/3, Ethernet4/32/3, Ethernet5/33/3 ]
+      #uplink_ipv4_pool: 100.83.94.64/28
+      ptp:
+        source_ip: 169.27.195.5
     - name: red-leaf6
-      id: 11
-      bgp_as: "65021.6"
-      mgmt_ip: 10.100.100.43/24
+      id: 6
+      loopback_ipv4_address: 169.27.195.6
+      bgp_as: "65210.37104"
+      mgmt_ip: 10.166.80.44/27
+      mgmt_gateway: 10.166.80.1
       filter:
         tags: [ red-leaf6 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/9/1, Ethernet7/8/1, Ethernet7/9/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
+
     - name: red-leaf7
-      id: 12
+      id: 7
       bgp_as: "65021.7"
       mgmt_ip: 10.100.100.44/24
       filter:
         tags: [ red-leaf7 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/21/1, Ethernet7/10/1, Ethernet7/11/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf8
-      id: 13
+      id: 8
       bgp_as: "65021.8"
       mgmt_ip: 10.100.100.45/24
       filter:
         tags: [ red-leaf8 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/22/1, Ethernet7/11/1, Ethernet7/12/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf9
-      id: 14
+      id: 9
       bgp_as: "65021.9"
       mgmt_ip: 10.100.100.46/24
       filter:
         tags: [ red-leaf9 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/23/1, Ethernet7/12/1, Ethernet7/13/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf10
-      id: 15
+      id: 10
       bgp_as: "65021.10"
       mgmt_ip: 10.100.100.47/24
       filter:
         tags: [ red-leaf10 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/24/1, Ethernet7/13/1, Ethernet7/14/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf11
-      id: 16
+      id: 11
       bgp_as: "65021.11"
       mgmt_ip: 10.100.100.48/24
       filter:
         tags: [ red-leaf11 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/25/1, Ethernet7/15/1, Ethernet7/16/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf12
-      id: 17
+      id: 12
       bgp_as: "65021.12"
       mgmt_ip: 10.100.100.49/24
       filter:
         tags: [ red-leaf12 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/26/1, Ethernet7/17/1, Ethernet7/18/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf13
-      id: 18
+      id: 13
       bgp_as: "65021.13"
       mgmt_ip: 10.100.100.50/24
       filter:
         tags: [ red-leaf13 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/27/1, Ethernet7/18/1, Ethernet7/19/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf14
-      id: 19
+      id: 14
       bgp_as: "65021.14"
       mgmt_ip: 10.100.100.51/24
       filter:
         tags: [ red-leaf14 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/28/1, Ethernet7/19/1, Ethernet7/20/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf15
-      id: 20
+      id: 15
       bgp_as: "65021.15"
       mgmt_ip: 10.100.100.52/24
       filter:
         tags: [ red-leaf15 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/29/1, Ethernet7/23/1, Ethernet7/22/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf16
-      id: 21
+      id: 16
       bgp_as: "65021.16"
       mgmt_ip: 10.100.100.53/24
       filter:
         tags: [ red-leaf16 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/30/1, Ethernet7/21/1, Ethernet7/22/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf17
-      id: 22
+      id: 17
       bgp_as: "65021.17"
       mgmt_ip: 10.100.100.54/24
       filter:
         tags: [ red-leaf17 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/29/1, Ethernet9/21/1, Ethernet9/22/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf18
-      id: 23
+      id: 18
       bgp_as: "65021.18"
       mgmt_ip: 10.100.100.55/24
       filter:
         tags: [ red-leaf18 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/30/1, Ethernet9/23/1, Ethernet9/24/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf19
-      id: 24
+      id: 19
       bgp_as: "65021.19"
       mgmt_ip: 10.100.100.56/24
       filter:
         tags: [ red-leaf19 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/31/1, Ethernet9/25/1, Ethernet9/26/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf20
-      id: 25
+      id: 20
       bgp_as: "65021.20"
       mgmt_ip: 10.100.100.57/24
       filter:
         tags: [ red-leaf20 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/32/1, Ethernet9/27/1, Ethernet9/28/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf21
-      id: 26
+      id: 21
       bgp_as: "65021.21"
       mgmt_ip: 10.100.100.58/24
       filter:
         tags: [ red-leaf21 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/33/1, Ethernet9/29/1, Ethernet9/30/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf22
-      id: 27
+      id: 22
       bgp_as: "65021.22"
       mgmt_ip: 10.100.100.59/24
       filter:
         tags: [ red-leaf22 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/34/1, Ethernet9/31/1, Ethernet9/32/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf23
-      id: 28
+      id: 23
       bgp_as: "65021.23"
       mgmt_ip: 10.100.100.60/24
       filter:
         tags: [ red-leaf23 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/35/1, Ethernet9/33/1, Ethernet9/34/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf24
-      id: 29
+      id: 24
       bgp_as: "65021.24"
       mgmt_ip: 10.100.100.61/24
       filter:
         tags: [ red-leaf24 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/36/1, Ethernet9/35/1, Ethernet9/36/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf25
-      id: 30
+      id: 25
       bgp_as: "65021.25"
       mgmt_ip: 10.100.100.62/24
       filter:
         tags: [ red-leaf25 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/37/1, Ethernet9/37/1, Ethernet9/38/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf26
-      id: 31
+      id: 26
       bgp_as: "65021.26"
       mgmt_ip: 10.100.100.63/24
       filter:
         tags: [ red-leaf26 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/38/1, Ethernet9/39/1, Ethernet9/40/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf27
-      id: 32
+      id: 27
       bgp_as: "65021.27"
       mgmt_ip: 10.100.100.64/24
       filter:
         tags: [ red-leaf27 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/39/1, Ethernet9/41/1, Ethernet9/42/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf28
-      id: 33
+      id: 28
       bgp_as: "65021.28"
       mgmt_ip: 10.100.100.65/24
       filter:
         tags: [ red-leaf28 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/40/1, Ethernet9/43/1, Ethernet9/44/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf29
-      id: 34
+      id: 29
       bgp_as: "65021.29"
       mgmt_ip: 10.100.100.66/24
       filter:
         tags: [ red-leaf29 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/41/1, Ethernet9/45/1, Ethernet9/46/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf30
-      id: 35
+      id: 30
       bgp_as: "65021.30"
       mgmt_ip: 10.100.100.67/24
       filter:
         tags: [ red-leaf30 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/42/1, Ethernet9/47/1, Ethernet9/48/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf31
-      id: 36
+      id: 31
       bgp_as: "65021.31"
       mgmt_ip: 10.100.100.68/24
       filter:
         tags: [ red-leaf31 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/43/1, Ethernet9/49/1, Ethernet9/50/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
     - name: red-leaf32
-      id: 37
+      id: 32
       bgp_as: "65021.32"
       mgmt_ip: 10.100.100.69/24
       filter:
         tags: [ red-leaf32 ]
+      uplink_switches: [ 'red-spine1', 'red-spine1' ]
+      uplink_interfaces: [ Ethernet2/2, Ethernet2/1, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet8/44/1, Ethernet9/51/1, Ethernet9/52/1 ]
+      #uplink_ipv4_pool: 100.83.94.80/28
+      ptp:
+        source_ip: 169.27.195.6
