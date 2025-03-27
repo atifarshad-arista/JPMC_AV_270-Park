@@ -3386,7 +3386,7 @@ core_interfaces:
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65213.37370" ]
-bgp_peer_groups:
-  ipv4_underlay_peers:
-    name: P2P-IPv4-eBGP-PEERS
-    password: mreaokCFFWBRRZJ82Fn0HA==
+# bgp_peer_groups:
+#   ipv4_underlay_peers:
+#     name: P2P-IPv4-eBGP-PEERS
+#     password: mreaokCFFWBRRZJ82Fn0HA==
