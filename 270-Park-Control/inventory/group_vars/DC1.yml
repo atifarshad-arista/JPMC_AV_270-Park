@@ -7,6 +7,22 @@ local_users:
     privilege: 15
     role: network-admin
     sha512_password: "$6$eucN5ngreuExDgwS$xnD7T8jO..GBDX0DUlp.hn.W7yW94xTjSanqgaQGBzPIhDAsyAl9N4oScHvOMvf07uVBFI4mKMxwdVEUVKgY/."
+  - name: avnetuser
+    privilege: 0
+    role: network-user
+    sha512_password: "$6$l7sHbz6mxuq6peq0$FQjHbRIfcZrdI1Cw7Qs4HhUbFbzmUa.dTleGY95TgzEJgNvHh/TlhzCClknEk634p5nQHn/RFBEjebebU4jxd."
+  - name: providius
+    privilege: 7
+    role: network-operator
+    sha512_password: "$6$BQgcQzmXutC8.k0U$w5Ly4dFtFe9KUYOc6XmPSnm0cW3F/uL90jfA1EkfH16TI4n5PcSWNk7byu1LSUR8i8ha0dWFrMHkX9b76Ih6X1"
+  - name: testlab
+    privilege: 15
+    role: network-admin
+    sha512_password: "$6$emh7YIY16uJLWXGR$rpNN3L9JAe6K2eynKi6lcoSUQFm7Uxa6gCRwEOA8FO7adXHv31Xd4PFwybBe3icIsxGHZjQvjEKocceIiMXIc/"
+  - name: thelabeng
+    privilege: 15
+    role: network-admin
+    sha512_password: "$6$/D8cGV410nyAUOxm$TvYHuvz9sK3.EWQeT6EiNHVclEa3EOjgYZ6022WCekli1LVLzUHql27CnUV6/NlHL0Mn9qtj8yRL6w58hFSHS0"
 
 # AAA Authorization
 aaa_authorization:
@@ -15,27 +31,16 @@ aaa_authorization:
 
 # OOB Management network default gateway.
 mgmt_gateway: 172.16.100.1
-mgmt_interface: Management0
+mgmt_interface: Management1
 
 # dns servers.
-name_servers:
-  - 8.8.4.4
-  - 8.8.8.8
+# name_servers:
+#   - 8.8.4.4
+#   - 8.8.8.8
 
 # NTP Servers IP or DNS name, first NTP server will be preferred, and sourced from Management VRF
 ntp_settings:
-  server_vrf: use_mgmt_interface_vrf
-  servers:
-    - name: time.google.com
-    - name: pool.ntp.org
-
-standard_access_lists:
-    # Access-list Name.
-  - name: MGMT-SSH-ACL
-    counters_per_entry: False
-    sequence_numbers: # required
-        # Sequence ID.
-      - sequence: 10
-        # Action as string.
-        # Example: "deny ip any any"
-        action: permit host 172.20.111.100
+  # server_vrf: use_mgmt_interface_vrf
+  # servers:
+  #   - name: time.google.com
+  #   - name: pool.ntp.org

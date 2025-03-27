@@ -1,0 +1,38 @@
+---
+type: ptp_leaf
+
+ptp_leaf:
+  defaults:
+    platform: 7280SR3
+    loopback_ipv4_pool: Loopback0
+    uplink_switches: [ 'C160064-037B100A', 'C160064-037B200A', 'C160064-037B300A', 'C160064-037B301A' ]
+    uplink_ipv4_pool: p2p_wan
+    spanning_tree_priority: 4096
+    spanning_tree_mode: mstp
+    filter:
+      tenants: [ ptp ]
+
+  nodes:
+    - name: C160064-037B370A
+      id: 203
+      bgp_as: "65213.37370"
+      loopback_ipv4_address: 169.27.195.72
+      mgmt_ip: 10.176.143.137/27
+      mgmt_gateway: 10.176.143.129
+      filter:
+        tags: [ C160064-037B370A ]
+      uplink_switch_interfaces:
+        #- Ethernet49-52/1
+        - 51-52
+
+    - name: C160064-037B371A
+      id: 204
+      bgp_as: "65213.37370"
+      loopback_ipv4_address: 169.27.195.73
+      mgmt_ip: 10.176.143.166/27
+      mgmt_gateway: 10.176.143.161
+      filter:
+        tags: [ C160064-037B371A ]
+      uplink_switch_interfaces:
+        #- Ethernet49-52/1
+        - 51-52

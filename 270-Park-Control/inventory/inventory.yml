@@ -6,390 +6,751 @@ DC1:
       hosts:
         cvp:
           # Ansible variables used by the ansible_avd and ansible_cvp roles to push configuration to devices via CVP
-          ansible_host: 192.168.1.12
+          ansible_host: 10.176.143.135
           ansible_user: ansible
           ansible_password: ansible
           ansible_connection: httpapi
           ansible_httpapi_use_ssl: true
           ansible_httpapi_validate_certs: false
           ansible_network_os: eos
-          ansible_httpapi_port: 443
     FABRIC:
       children:
         DC1_SPINES:
           hosts:
-            green-spine1:
-              ansible_host: 10.100.100.70
-            green-spine2:
-              ansible_host: 10.100.100.71
+            C160064-037B300A:
+              description: green-spine1
+              ansible_host: 10.176.143.136
+              serial_number: HBG24140357
+            C160064-037B301A:
+              description: green-spine2
+              ansible_host: 10.176.143.165
+              serial_number: HBG24120B3C
         DC1_LEAFS:
           hosts:
-            green-leaf1:
-              ansible_host: 10.100.100.72
-            green-leaf2:
-              ansible_host: 10.100.100.73
-            green-leaf3:
-              ansible_host: 10.100.100.74
-            green-leaf4:
-              ansible_host: 10.100.100.75
-            green-leaf5:
-              ansible_host: 10.100.100.76
-            green-leaf6:
-              ansible_host: 10.100.100.77
-            green-leaf7:
-              ansible_host: 10.100.100.78
-            green-leaf8:
-              ansible_host: 10.100.100.79
-            green-leaf9:
-              ansible_host: 10.100.100.80
-            green-leaf10:
-              ansible_host: 10.100.100.81
-            green-leaf11:
-              ansible_host: 10.100.100.82
-            green-leaf12:
-              ansible_host: 10.100.100.83
-            green-leaf13:
-              ansible_host: 10.100.100.84
-            green-leaf14:
-              ansible_host: 10.100.100.85
-            green-leaf15:
-              ansible_host: 10.100.100.86
-            green-leaf16:
-              ansible_host: 10.100.100.87
-            green-leaf17:
-              ansible_host: 10.100.100.88
-            green-leaf18:
-              ansible_host: 10.100.100.89
-            green-leaf19:
-              ansible_host: 10.100.100.90
-            green-leaf20:
-              ansible_host: 10.100.100.91
-            green-leaf21:
-              ansible_host: 10.100.100.92
-            green-leaf22:
-              ansible_host: 10.100.100.93
-            green-leaf23:
-              ansible_host: 10.100.100.94
-            green-leaf24:
-              ansible_host: 10.100.100.95
-            green-leaf25:
-              ansible_host: 10.100.100.96
-            green-leaf26:
-              ansible_host: 10.100.100.97
-            green-leaf27:
-              ansible_host: 10.100.100.98
-            green-leaf28:
-              ansible_host: 10.100.100.99
-            green-leaf29:
-              ansible_host: 10.100.100.100
-            green-leaf30:
-              ansible_host: 10.100.100.101
-            green-leaf31:
-              ansible_host: 10.100.100.102
-            green-leaf32:
-              ansible_host: 10.100.100.103
-            green-leaf33:
-              ansible_host: 10.100.100.104
-            green-leaf34:
-              ansible_host: 10.100.100.105
-            green-leaf35:
-              ansible_host: 10.100.100.106
-            green-leaf36:
-              ansible_host: 10.100.100.107
-            green-leaf37:
-              ansible_host: 10.100.100.108
-            green-leaf38:
-              ansible_host: 10.100.100.109
-            green-leaf39:
-              ansible_host: 10.100.100.110
-            green-leaf40:
-              ansible_host: 10.100.100.111
-            green-leaf41:
-              ansible_host: 10.100.100.112
-            green-leaf42:
-              ansible_host: 10.100.100.113
-            green-leaf43:
-              ansible_host: 10.100.100.114
-            green-leaf44:
-              ansible_host: 10.100.100.115
-            green-leaf45:
-              ansible_host: 10.100.100.116
-            green-leaf46:
-              ansible_host: 10.100.100.117
-            green-leaf47:
-              ansible_host: 10.100.100.118
-            green-leaf48:
-              ansible_host: 10.100.100.119
-            green-leaf49:
-              ansible_host: 10.100.100.120
-            green-leaf50:
-              ansible_host: 10.100.100.121
-            green-leaf51:
-              ansible_host: 10.100.100.122
-            green-leaf52:
-              ansible_host: 10.100.100.123
-            green-leaf53:
-              ansible_host: 10.100.100.124
-            green-leaf54:
-              ansible_host: 10.100.100.125
-            green-leaf55:
-              ansible_host: 10.100.100.126
-            green-leaf56:
-              ansible_host: 10.100.100.127
-            green-leaf57:
-              ansible_host: 10.100.100.128
-            green-leaf58:
-              ansible_host: 10.100.100.129
-            green-leaf59:
-              ansible_host: 10.100.100.130
-            green-leaf60:
-              ansible_host: 10.100.100.131
-            green-leaf61:
-              ansible_host: 10.100.100.132
-            green-leaf62:
-              ansible_host: 10.100.100.133
-            green-leaf63:
-              ansible_host: 10.100.100.134
-            green-leaf64:
-              ansible_host: 10.100.100.135
-            green-leaf65:
-              ansible_host: 10.100.100.136
-            green-leaf66:
-              ansible_host: 10.100.100.137
-            green-leaf67:
-              ansible_host: 10.100.100.138
-            green-leaf68:
-              ansible_host: 10.100.100.139
-            green-leaf69:
-              ansible_host: 10.100.100.140
-            green-leaf70:
-              ansible_host: 10.100.100.141
-            green-leaf71:
-              ansible_host: 10.100.100.142
-            green-leaf72:
-              ansible_host: 10.100.100.143
-            green-leaf73:
-              ansible_host: 10.100.100.144
-            green-leaf74:
-              ansible_host: 10.100.100.145
-            green-leaf75:
-              ansible_host: 10.100.100.146
-            green-leaf76:
-              ansible_host: 10.100.100.147
-            green-leaf77:
-              ansible_host: 10.100.100.148
-            green-leaf78:
-              ansible_host: 10.100.100.149
-            green-leaf79:
-              ansible_host: 10.100.100.150
-            green-leaf80:
-              ansible_host: 10.100.100.151
-            green-leaf81:
-              ansible_host: 10.100.100.152
-            green-leaf82:
-              ansible_host: 10.100.100.153
-            green-leaf83:
-              ansible_host: 10.100.100.154
-            green-leaf84:
-              ansible_host: 10.100.100.155
-            green-leaf85:
-              ansible_host: 10.100.100.156
-            green-leaf86:
-              ansible_host: 10.100.100.157
-            green-leaf87:
-              ansible_host: 10.100.100.158
-            green-leaf88:
-              ansible_host: 10.100.100.159
-            green-leaf89:
-              ansible_host: 10.100.100.160
-            green-leaf90:
-              ansible_host: 10.100.100.161
-            green-leaf91:
-              ansible_host: 10.100.100.162
-            green-leaf92:
-              ansible_host: 10.100.100.163
-            green-leaf93:
-              ansible_host: 10.100.100.164
-            green-leaf94:
-              ansible_host: 10.100.100.165
-            green-leaf95:
-              ansible_host: 10.100.100.166
-            green-leaf96:
-              ansible_host: 10.100.100.167
-            green-leaf97:
-              ansible_host: 10.100.100.168
-            green-leaf98:
-              ansible_host: 10.100.100.169
-            green-leaf99:
-              ansible_host: 10.100.100.170
-            green-leaf100:
-              ansible_host: 10.100.100.171
-            green-leaf101:
-              ansible_host: 10.100.100.172
-            green-leaf102:
-              ansible_host: 10.100.100.173
-            green-leaf103:
-              ansible_host: 10.100.100.174
-            green-leaf104:
-              ansible_host: 10.100.100.175
-            green-leaf105:
-              ansible_host: 10.100.100.176
-            green-leaf106:
-              ansible_host: 10.100.100.177
-            green-leaf107:
-              ansible_host: 10.100.100.178
-            green-leaf108:
-              ansible_host: 10.100.100.179
-            green-leaf109:
-              ansible_host: 10.100.100.180
-            green-leaf110:
-              ansible_host: 10.100.100.181
-            green-leaf111:
-              ansible_host: 10.100.100.182
-            green-leaf112:
-              ansible_host: 10.100.100.183
-            green-leaf113:
-              ansible_host: 10.100.100.184
-            green-leaf114:
-              ansible_host: 10.100.100.185
-            green-leaf115:
-              ansible_host: 10.100.100.186
-            green-leaf116:
-              ansible_host: 10.100.100.187
-            green-leaf117:
-              ansible_host: 10.100.100.188
-            green-leaf118:
-              ansible_host: 10.100.100.189
-            green-leaf119:
-              ansible_host: 10.100.100.190
-            green-leaf120:
-              ansible_host: 10.100.100.191
-            green-leaf121:
-              ansible_host: 10.100.100.192
-            green-leaf122:
-              ansible_host: 10.100.100.193
-            green-leaf123:
-              ansible_host: 10.100.100.194
-            green-leaf124:
-              ansible_host: 10.100.100.195
-            green-leaf125:
-              ansible_host: 10.100.100.196
-            green-leaf126:
-              ansible_host: 10.100.100.197
-            green-leaf127:
-              ansible_host: 10.100.100.198
-            green-leaf128:
-              ansible_host: 10.100.100.199
-            green-leaf129:
-              ansible_host: 10.100.100.200
-            green-leaf130:
-              ansible_host: 10.100.100.201
-            green-leaf131:
-              ansible_host: 10.100.100.202
-            green-leaf132:
-              ansible_host: 10.100.100.203
-            green-leaf133:
-              ansible_host: 10.100.100.204
-            green-leaf134:
-              ansible_host: 10.100.100.205
-            green-leaf135:
-              ansible_host: 10.100.100.206
-            green-leaf136:
-              ansible_host: 10.100.100.207
-            green-leaf137:
-              ansible_host: 10.100.100.208
-            green-leaf138:
-              ansible_host: 10.100.100.209
-            green-leaf139:
-              ansible_host: 10.100.100.210
-            green-leaf140:
-              ansible_host: 10.100.100.211
-            green-leaf141:
-              ansible_host: 10.100.100.212
-            green-leaf142:
-              ansible_host: 10.100.100.213
-            green-leaf143:
-              ansible_host: 10.100.100.214
-            green-leaf144:
-              ansible_host: 10.100.100.215
-            green-leaf145:
-              ansible_host: 10.100.100.216
-            green-leaf146:
-              ansible_host: 10.100.100.217
-            green-leaf147:
-              ansible_host: 10.100.100.218
-            green-leaf148:
-              ansible_host: 10.100.100.219
-            green-leaf149:
-              ansible_host: 10.100.100.220
-            green-leaf150:
-              ansible_host: 10.100.100.221
-            green-leaf151:
-              ansible_host: 10.100.100.222
-            green-leaf152:
-              ansible_host: 10.100.100.223
-            green-leaf153:
-              ansible_host: 10.100.100.224
-            green-leaf154:
-              ansible_host: 10.100.100.225
-            green-leaf155:
-              ansible_host: 10.100.100.226
-            green-leaf156:
-              ansible_host: 10.100.100.227
-            green-leaf157:
-              ansible_host: 10.100.100.228
-            green-leaf158:
-              ansible_host: 10.100.100.229
-            green-leaf159:
-              ansible_host: 10.100.100.230
-            green-leaf160:
-              ansible_host: 10.100.100.231
-            green-leaf161:
-              ansible_host: 10.100.100.232
-            green-leaf162:
-              ansible_host: 10.100.100.233
-            green-leaf163:
-              ansible_host: 10.100.100.234
-            green-leaf164:
-              ansible_host: 10.100.100.235
-            green-leaf165:
-              ansible_host: 10.100.100.236
-            green-leaf166:
-              ansible_host: 10.100.100.237
-            green-leaf167:
-              ansible_host: 10.100.100.238
-            green-leaf168:
-              ansible_host: 10.100.100.239
-            green-leaf169:
-              ansible_host: 10.100.100.240
-            green-leaf170:
-              ansible_host: 10.100.100.241
-            green-leaf171:
-              ansible_host: 10.100.100.242
-            green-leaf172:
-              ansible_host: 10.100.100.243
-            green-leaf173:
-              ansible_host: 10.100.100.244
-            green-leaf174:
-              ansible_host: 10.100.100.245
-            green-leaf175:
-              ansible_host: 10.100.100.246
-            green-leaf176:
-              ansible_host: 10.100.100.247
-            green-leaf177:
-              ansible_host: 10.100.100.248
-            green-leaf178:
-              ansible_host: 10.100.100.249
-            green-leaf179:
-              ansible_host: 10.100.100.250
-            green-leaf180:
-              ansible_host: 10.100.100.251
-            green-leaf181:
-              ansible_host: 10.100.100.252
-            green-leaf182:
-              ansible_host: 10.100.100.253
-            green-leaf183:
-              ansible_host: 10.100.100.254
+            C160064-037B302A:
+              description: green-leaf1
+              ansible_host: 10.176.143.130
+              serial_number: HBG2414034A
+            C160064-037B303A:
+              description: green-leaf2
+              ansible_host: 10.176.143.131
+              serial_number: HBG2414032M
+            C160064-037B309A:
+              description: green-leaf3
+              ansible_host: 10.176.143.132
+              serial_number: HBG24120B12
+            C160064-037B304A:
+              description: green-leaf4
+              ansible_host: 10.176.143.133
+              serial_number: HBG24120AZM
+            C160064-037B305A:
+              description: green-leaf5
+              ansible_host: 10.176.143.140
+              serial_number: HBG241100BS
+            C160064-037B306A:
+              description: green-leaf6
+              ansible_host: 10.176.143.142
+              serial_number: HBG241100AA
+            C160064-037B307A:
+              description: green-leaf7
+              ansible_host: 10.176.143.145
+              serial_number: HBG241100BV
+            C160064-037B308A:
+              description: green-leaf8
+              ansible_host: 10.176.143.146
+              serial_number: HBG241605HG
+            C160064-037B310A:
+              description: green-leaf9
+              ansible_host: 10.176.143.162
+              serial_number: HBG24140358
+            C160064-037B311A:
+              description: green-leaf10
+              ansible_host: 10.176.143.163
+              serial_number: HBG2414033L
+            C160064-037B312A:
+              description: green-leaf11
+              ansible_host: 10.176.143.164
+              serial_number: HBG241605K0
+            C160064-037B313A:
+              description: green-leaf12
+              ansible_host: 10.176.143.169
+              serial_number: NA
+            C160064-037B314A:
+              description: green-leaf13
+              ansible_host: 10.176.143.171
+              serial_number: HBG24140320
+            C160064-037B315A:
+              description: green-leaf14
+              ansible_host: 10.176.143.174
+              serial_number: HBG24120B03
+            C160064-037B316A:
+              description: green-leaf15
+              ansible_host: 10.176.143.175
+              serial_number: HBG24120AZL
+            C160064-037B317A:
+              description: green-leaf16
+              ansible_host: 10.176.143.194
+              serial_number: HBG24120B3T
+            C160064-037B318A:
+              description: green-leaf17
+              ansible_host: 10.176.143.195
+              serial_number: HBG24120B34
+            C160064-037B319A:
+              description: green-leaf18
+              ansible_host: 10.176.143.196
+              serial_number: HBG24120B09
+            C160064-037B320A:
+              description: green-leaf19
+              ansible_host: 10.176.143.197
+              serial_number: HBG24120B25
+            C160064-037B321A:
+              description: green-leaf20
+              ansible_host: 10.176.143.198
+              serial_number: HBG2414032C
+            C160064-037B323A:
+              description: green-leaf21
+              ansible_host: 10.176.143.199
+              serial_number: HBG241605HU
+            C160064-037B324A:
+              description: green-leaf22
+              ansible_host: 10.176.143.200
+              serial_number: HBG241605GY
+            C160064-037B325A:
+              description: green-leaf23
+              ansible_host: 10.176.143.201
+              serial_number: HBG241605K1
+            C160064-037B326A:
+              description: green-leaf24
+              ansible_host: 10.176.143.226
+              serial_number: HBG241605HL
+            C160064-037B327A:
+              description: green-leaf25
+              ansible_host: 10.176.143.227
+              serial_number: HBG2414032N
+            C160064-037B328A:
+              description: green-leaf26
+              ansible_host: 10.176.143.228
+              serial_number: HBG2414032G
+            C160064-037B329A:
+              description: green-leaf27
+              ansible_host: 10.176.143.229
+              serial_number: HBG2414034E
+            C160064-037B330A:
+              description: green-leaf28
+              ansible_host: 10.176.143.230
+              serial_number: HBG241605GT
+            C160064-037B331A:
+              description: green-leaf29
+              ansible_host: 10.176.143.231
+              serial_number: HBG241605H0
+            C160064-037B332A:
+              description: green-leaf30
+              ansible_host: 10.176.143.232
+              serial_number: HBG241605HA
+            C160064-037B333A:
+              description: green-leaf31
+              ansible_host: 10.176.143.233
+              serial_number: HBG241605HK
+            C160064-037B334A:
+              description: green-leaf32
+              ansible_host: 10.176.143.234
+              serial_number: HBG2414033N
+            C160064-037B335A:
+              description: green-leaf33
+              ansible_host: 10.176.143.235
+              serial_number: HBG241605GS
+            C160064-037B336A:
+              description: green-leaf34
+              ansible_host: 10.166.80.2
+              serial_number: HBG241605GM
+            C160064-037B337A:
+              description: green-leaf35
+              ansible_host: 10.166.80.3
+              serial_number: NA
+            C160064-037B338A:
+              description: green-leaf36
+              ansible_host: 10.166.80.4
+              serial_number: NA
+            C160064-037B339A:
+              description: green-leaf37
+              ansible_host: 10.166.80.5
+              serial_number: HBG24110009F
+            C160064-037B340A:
+              description: green-leaf38
+              ansible_host: 10.166.80.8
+              serial_number: HBG2414034L
+            C160064-037B341A:
+              description: green-leaf39
+              ansible_host: 10.166.80.9
+              serial_number: HBG241100AL
+            C160064-037B342A:
+              description: green-leaf40
+              ansible_host: 10.166.80.11
+              serial_number: HBG241100BU
+            C160064-037B343A:
+              description: green-leaf41
+              ansible_host: 10.166.80.13
+              serial_number: NA
+            C160064-037B344A:
+              description: green-leaf42
+              ansible_host: 10.166.80.14
+              serial_number: NA
+            C160064-037B345A:
+              description: green-leaf43
+              ansible_host: 10.166.80.15
+              serial_number: HBG241605HZ
+            C160064-037B346A:
+              description: green-leaf44
+              ansible_host: 10.166.80.16
+              serial_number: HBG241605GU
+            C160064-037B347A:
+              description: green-leaf45
+              ansible_host: 10.166.80.17
+              serial_number: HBG2411009C
+            C160064-037B348A:
+              description: green-leaf46
+              ansible_host: 10.166.80.18
+              serial_number: HBG241100AB
+            C160064-037B349A:
+              description: green-leaf47
+              ansible_host: 10.166.80.34
+              serial_number: HBG241605GN
+            C160064-037B350A:
+              description: green-leaf48
+              ansible_host: 10.166.80.35
+              serial_number: HBG241605GV
+            C160064-037B351A:
+              description: green-leaf49
+              ansible_host: 10.166.80.36
+              serial_number: HBG24120B0J
+            C160064-037B352A:
+              description: green-leaf50
+              ansible_host: 10.166.80.37
+              serial_number: HBG24110097
+            C160064-037B353A:
+              description: green-leaf51
+              ansible_host: 10.166.80.38
+              serial_number: HBG241100AN
+            C160064-037B354A:
+              description: green-leaf52
+              ansible_host: 10.166.80.39
+              serial_number: HBG241605HM
+            C160064-037B362A:
+              description: green-leaf53
+              ansible_host: 10.166.80.42
+              serial_number: HBG241605JJ
+            C160064-037B355A:
+              description: green-leaf54
+              ansible_host: 10.166.80.43
+              serial_number: HBG241100C0
+            C160064-037B356A:
+              description: green-leaf55
+              ansible_host: 10.166.80.45
+              serial_number: HBG24110094
+            C160064-037B357A:
+              description: green-leaf56
+              ansible_host: 10.166.80.47
+              serial_number: HBG241100B6
+            C160064-037B358A:
+              description: green-leaf57
+              ansible_host: 10.166.80.48
+              serial_number: NA
+            C160064-037B359A:
+              description: green-leaf58
+              ansible_host: 10.166.80.49
+              serial_number: NA
+            C160064-037B360A:
+              description: green-leaf59
+              ansible_host: 10.166.80.50
+              serial_number: NA
+            C160064-037B361A:
+              description: green-leaf60
+              ansible_host: 10.166.80.51
+              serial_number: NA
+            C160064-001B301A:
+              description: green-leaf61
+              ansible_host: 10.176.142.82
+              serial_number: NA
+            C160064-002B301A:
+              description: green-leaf62
+              ansible_host: 10.176.136.115
+              serial_number: NA
+            C160064-002B302A:
+              description: green-leaf63
+              ansible_host: 10.176.136.131
+              serial_number: NA
+            C160064-002B303A:
+              description: green-leaf64
+              ansible_host: TBD
+              serial_number: NA
+            C160064-002B304A:
+              description: green-leaf65
+              ansible_host: TBD
+              serial_number: NA
+            C160064-002B305A:
+              description: green-leaf66
+              ansible_host: 10.176.142.98
+              serial_number: NA
+            C160064-002B306A:
+              description: green-leaf67
+              ansible_host: 10.176.142.99
+              serial_number: NA
+            C160064-002B307A:
+              description: green-leaf68
+              ansible_host: 10.176.142.100
+              serial_number: NA
+            C160064-002B308A:
+              description: green-leaf69
+              ansible_host: 10.176.142.101
+              serial_number: NA
+            C160064-003B301A:
+              description: green-leaf70
+              ansible_host: 10.176.136.152
+              serial_number: NA
+            C160064-003B302A:
+              description: green-leaf71
+              ansible_host: 10.176.136.153
+              serial_number: NA
+            C160064-004B301A:
+              description: green-leaf72
+              ansible_host: 10.176.136.183
+              serial_number: NA
+            C160064-004B302A:
+              description: green-leaf73
+              ansible_host: 10.176.136.184
+              serial_number: NA
+            C160064-005B301A:
+              description: green-leaf74
+              ansible_host: 10.176.136.216
+              serial_number: NA
+            C160064-005B302A:
+              description: green-leaf75
+              ansible_host: 10.176.136.217
+              serial_number: NA
+            C160064-006B301A:
+              description: green-leaf76
+              ansible_host: 10.176.136.248
+              serial_number: NA
+            C160064-006B302A:
+              description: green-leaf77
+              ansible_host: 10.176.136.249
+              serial_number: NA
+            C160064-007B301A:
+              description: green-leaf78
+              ansible_host: 10.176.137.24
+              serial_number: NA
+            C160064-007B302A:
+              description: green-leaf79
+              ansible_host: 10.176.137.25
+              serial_number: NA
+            C160064-008B301A:
+              description: green-leaf80
+              ansible_host: 10.176.137.56
+              serial_number: NA
+            C160064-008B302A:
+              description: green-leaf81
+              ansible_host: 10.176.137.57
+              serial_number: NA
+            C160064-009B301A:
+              description: green-leaf82
+              ansible_host: 10.176.137.88
+              serial_number: NA
+            C160064-009B302A:
+              description: green-leaf83
+              ansible_host: 10.176.137.89
+              serial_number: NA
+            C160064-010B301A:
+              description: green-leaf84
+              ansible_host: 10.176.137.120
+              serial_number: NA
+            C160064-010B302A:
+              description: green-leaf85
+              ansible_host: 10.176.137.121
+              serial_number: NA
+            C160064-013B301A:
+              description: green-leaf86
+              ansible_host: 10.176.142.114
+              serial_number: NA
+            C160064-013B302A:
+              description: green-leaf87
+              ansible_host: 10.176.142.115
+              serial_number: NA
+            C160064-013B303A:
+              description: green-leaf88
+              ansible_host: 10.176.142.130
+              serial_number: NA
+            C160064-013B304A:
+              description: green-leaf89
+              ansible_host: 10.176.142.131
+              serial_number: NA
+            C160064-013B305A:
+              description: green-leaf90
+              ansible_host: 10.176.142.132
+              serial_number: NA
+            C160064-014B301A:
+              description: green-leaf91
+              ansible_host: 10.176.138.3
+              serial_number: NA
+            C160064-014B302A:
+              description: green-leaf92
+              ansible_host: 10.176.142.146
+              serial_number: NA
+            C160064-014B303A:
+              description: green-leaf93
+              ansible_host: 10.176.142.147
+              serial_number: NA
+            C160064-014B304A:
+              description: green-leaf94
+              ansible_host: 10.176.142.162
+              serial_number: NA
+            C160064-014B305A:
+              description: green-leaf95
+              ansible_host: 10.176.142.163
+              serial_number: NA
+            C160064-015B301A:
+              description: green-leaf96
+              ansible_host: 10.176.138.36
+              serial_number: NA
+            C160064-015B302A:
+              description: green-leaf97
+              ansible_host: 10.176.138.37
+              serial_number: NA
+            C160064-015B303A:
+              description: green-leaf98
+              ansible_host: 10.176.142.178
+              serial_number: NA
+            C160064-015B304A:
+              description: green-leaf99
+              ansible_host: 10.176.142.179
+              serial_number: NA
+            C160064-015B305A:
+              description: green-leaf100
+              ansible_host: 10.176.142.180
+              serial_number: NA
+            C160064-015B306A:
+              description: green-leaf101
+              ansible_host: 10.176.142.181
+              serial_number: NA
+            C160064-015B307A:
+              description: green-leaf102
+              ansible_host: 10.176.142.182
+              serial_number: NA
+            C160064-015B308A:
+              description: green-leaf103
+              ansible_host: 10.176.142.183
+              serial_number: NA
+            C160064-015B309A:
+              description: green-leaf104
+              ansible_host: 10.176.142.184
+              serial_number: NA
+            C160064-015B310A:
+              description: green-leaf105
+              ansible_host: 10.176.142.185
+              serial_number: NA
+            C160064-015B311A:
+              description: green-leaf106
+              ansible_host: 10.176.142.186
+              serial_number: NA
+            C160064-015B313A:
+              description: green-leaf107
+              ansible_host: 10.176.142.194
+              serial_number: NA
+            C160064-015B314A:
+              description: green-leaf108
+              ansible_host: 10.176.142.195
+              serial_number: NA
+            C160064-016B301A:
+              description: green-leaf109
+              ansible_host: 10.176.138.68
+              serial_number: NA
+            C160064-016B302A:
+              description: green-leaf110
+              ansible_host: 10.176.138.69
+              serial_number: NA
+            C160064-016B303A:
+              description: green-leaf111
+              ansible_host: 10.176.142.210
+              serial_number: NA
+            C160064-016B304A:
+              description: green-leaf112
+              ansible_host: 10.176.142.211
+              serial_number: NA
+            C160064-016B305A:
+              description: green-leaf113
+              ansible_host: 10.176.142.212
+              serial_number: NA
+            C160064-016B306A:
+              description: green-leaf114
+              ansible_host: 10.176.142.213
+              serial_number: NA
+            C160064-016B307A:
+              description: green-leaf115
+              ansible_host: 10.176.142.214
+              serial_number: NA
+            C160064-016B308A:
+              description: green-leaf116
+              ansible_host: 10.176.142.226
+              serial_number: NA
+            C160064-016B309A:
+              description: green-leaf117
+              ansible_host: 10.176.142.227
+              serial_number: NA
+            C160064-016B310A:
+              description: green-leaf118
+              ansible_host: 10.176.142.228
+              serial_number: NA
+            C160064-016B311A:
+              description: green-leaf119
+              ansible_host: 10.176.142.229
+              serial_number: NA
+            C160064-016B312A:
+              description: green-leaf120
+              ansible_host: 10.176.142.230
+              serial_number: NA
+            C160064-017B301A:
+              description: green-leaf121
+              ansible_host: 10.176.138.84
+              serial_number: NA
+            C160064-017B302A:
+              description: green-leaf122
+              ansible_host: 10.176.142.242
+              serial_number: NA
+            C160064-017B303A:
+              description: green-leaf123
+              ansible_host: 10.176.142.243
+              serial_number: NA
+            C160064-017B304A:
+              description: green-leaf124
+              ansible_host: 10.176.142.244
+              serial_number: NA
+            C160064-017B305A:
+              description: green-leaf125
+              ansible_host: 10.176.142.245
+              serial_number: NA
+            C160064-017B306A:
+              description: green-leaf126
+              ansible_host: 10.176.142.246
+              serial_number: NA
+            C160064-017B307A:
+              description: green-leaf127
+              ansible_host: 10.176.142.247
+              serial_number: NA
+            C160064-020B301A:
+              description: green-leaf128
+              ansible_host: 10.176.138.179
+              serial_number: NA
+            C160064-021B301A:
+              description: green-leaf129
+              ansible_host: 10.176.138.211
+              serial_number: NA
+            C160064-022B301A:
+              description: green-leaf130
+              ansible_host: 10.176.138.243
+              serial_number: NA
+            C160064-023B301A:
+              description: green-leaf131
+              ansible_host: 10.176.139.19
+              serial_number: NA
+            C160064-024B301A:
+              description: green-leaf132
+              ansible_host: 10.176.139.51
+              serial_number: NA
+            C160064-025B301A:
+              description: green-leaf133
+              ansible_host: 10.176.139.83
+              serial_number: NA
+            C160064-026B301A:
+              description: green-leaf134
+              ansible_host: 10.176.139.115
+              serial_number: NA
+            C160064-027B301A:
+              description: green-leaf135
+              ansible_host: 10.176.139.147
+              serial_number: NA
+            C160064-028B301A:
+              description: green-leaf136
+              ansible_host: 10.176.139.179
+              serial_number: NA
+            C160064-030B301A:
+              description: green-leaf137
+              ansible_host: 10.176.139.243
+              serial_number: NA
+            C160064-031B301A:
+              description: green-leaf138
+              ansible_host: 10.176.140.19
+              serial_number: NA
+            C160064-032B301A:
+              description: green-leaf139
+              ansible_host: 10.176.140.51
+              serial_number: NA
+            C160064-033B301A:
+              description: green-leaf140
+              ansible_host: 10.176.140.83
+              serial_number: NA
+            C160064-034B301A:
+              description: green-leaf141
+              ansible_host: 10.176.140.115
+              serial_number: NA
+            C160064-035B301A:
+              description: green-leaf142
+              ansible_host: 10.176.140.147
+              serial_number: NA
+            C160064-036B301A:
+              description: green-leaf143
+              ansible_host: 10.176.140.179
+              serial_number: NA
+            C160064-037B369A:
+              description: green-leaf144
+              ansible_host: 10.176.140.229
+              serial_number: NA
+            C160064-040B301A:
+              description: green-leaf145
+              ansible_host: 10.176.141.20
+              serial_number: NA
+            C160064-041B301A:
+              description: green-leaf146
+              ansible_host: 10.176.141.36
+              serial_number: NA
+            C160064-042B301A:
+              description: green-leaf147
+              ansible_host: 10.176.141.52
+              serial_number: NA
+            C160064-043B301A:
+              description: green-leaf148
+              ansible_host: 10.176.141.68
+              serial_number: NA
+            C160064-044B301A:
+              description: green-leaf149
+              ansible_host: 10.176.141.84
+              serial_number: NA
+            C160064-045B301A:
+              description: green-leaf150
+              ansible_host: 10.176.141.100
+              serial_number: NA
+            C160064-045B302A:
+              description: green-leaf151
+              ansible_host: 10.176.141.101
+              serial_number: NA
+            C160064-045B303A:
+              description: green-leaf152
+              ansible_host: 10.176.141.102
+              serial_number: NA
+            C160064-046B301A:
+              description: green-leaf153
+              ansible_host: 10.176.141.116
+              serial_number: NA
+            C160064-046B302A:
+              description: green-leaf154
+              ansible_host: 10.176.141.117
+              serial_number: NA
+            C160064-046B303A:
+              description: green-leaf155
+              ansible_host: 10.176.141.118
+              serial_number: NA
+            C160064-047B301A:
+              description: green-leaf156
+              ansible_host: 10.176.141.132
+              serial_number: NA
+            C160064-048B301A:
+              description: green-leaf157
+              ansible_host: 10.176.143.2
+              serial_number: NA
+            C160064-048B302A:
+              description: green-leaf158
+              ansible_host: 10.176.143.3
+              serial_number: NA
+            C160064-048B303A:
+              description: green-leaf159
+              ansible_host: 10.176.143.18
+              serial_number: NA
+            C160064-048B304A:
+              description: green-leaf160
+              ansible_host: 10.176.143.19
+              serial_number: NA
+            C160064-049B301A:
+              description: green-leaf161
+              ansible_host: 10.176.141.165
+              serial_number: NA
+            C160064-049B302A:
+              description: green-leaf162
+              ansible_host: 10.176.141.166
+              serial_number: NA
+            C160064-049B303A:
+              description: green-leaf163
+              ansible_host: 10.176.143.34
+              serial_number: NA
+            C160064-049B304A:
+              description: green-leaf164
+              ansible_host: 10.176.143.35
+              serial_number: NA
+            C160064-049B305A:
+              description: green-leaf165
+              ansible_host: 10.176.143.50
+              serial_number: NA
+            C160064-049B306A:
+              description: green-leaf166
+              ansible_host: 10.176.143.51
+              serial_number: NA
+            C160064-050B301A:
+              description: green-leaf167
+              ansible_host: 10.176.143.66
+              serial_number: NA
+            C160064-050B302A:
+              description: green-leaf168
+              ansible_host: 10.176.143.67
+              serial_number: NA
+            C160064-050B303A:
+              description: green-leaf169
+              ansible_host: 10.176.143.68
+              serial_number: NA
+            C160064-050B304A:
+              description: green-leaf170
+              ansible_host: 10.176.143.82
+              serial_number: NA
+            C160064-050B305A:
+              description: green-leaf171
+              ansible_host: 10.176.143.83
+              serial_number: NA
+            C160064-050B306A:
+              description: green-leaf172
+              ansible_host: 10.176.143.84
+              serial_number: NA
+            C160064-050B307A:
+              description: green-leaf173
+              ansible_host: 10.176.143.85
+              serial_number: NA
+            C160064-051B301A:
+              description: green-leaf174
+              ansible_host: 10.176.143.98
+              serial_number: NA
+            C160064-051B302A:
+              description: green-leaf175
+              ansible_host: 10.176.143.99
+              serial_number: NA
+            C160064-051B304A:
+              description: green-leaf176
+              ansible_host: 10.176.143.114
+              serial_number: NA
+            C160064-051B305A:
+              description: green-leaf177
+              ansible_host: 10.176.143.115
+              serial_number: NA
+            C160064-051B306A:
+              description: green-leaf178
+              ansible_host: 10.176.143.116
+              serial_number: NA
+            C160064-051B307A:
+              description: green-leaf179
+              ansible_host: 10.176.143.117
+              serial_number: NA
+            C160064-056B301A:
+              description: green-leaf180
+              ansible_host: 10.176.142.19
+              serial_number: NA
+            C160064-056B302A:
+              description: green-leaf181
+              ansible_host: 10.176.142.20
+              serial_number: NA
     DC1_NETWORK_SERVICES:
       children:
         DC1_LEAFS:
