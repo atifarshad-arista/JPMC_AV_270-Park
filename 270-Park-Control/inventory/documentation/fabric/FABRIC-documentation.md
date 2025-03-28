@@ -20,8 +20,8 @@
 | FABRIC | l2leaf | C160064-001B301A | 10.176.142.82/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-002B301A | 10.176.136.115/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-002B302A | 10.176.136.131/28 | 720XP | Provisioned | NA |
-| FABRIC | l2leaf | C160064-002B303A | TBD | 720XP | Provisioned | NA |
-| FABRIC | l2leaf | C160064-002B304A | TBD | 720XP | Provisioned | NA |
+| FABRIC | l2leaf | C160064-002B303A | 10.176.136.116/28 | 720XP | Provisioned | NA |
+| FABRIC | l2leaf | C160064-002B304A | 10.176.136.117/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-002B305A | 10.176.142.98/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-002B306A | 10.176.142.99/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-002B307A | 10.176.142.100/28 | 720XP | Provisioned | NA |
