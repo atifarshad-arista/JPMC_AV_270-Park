@@ -232,6 +232,7 @@ l2leaf:
     # uplink_switch_port_channel_id: 1007 # Test uplink_switch_port_channel_id on mlag l2leaf
     # uplink_port_channel_id: 1001 # Test uplink_port_channel_id on mlag l2leaf
     ptp:
+      enabled: false
       domain: 100
       #source_ip:
       priority1: 30
