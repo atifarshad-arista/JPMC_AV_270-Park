@@ -635,8 +635,8 @@ switchport default mode routed
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet55 | P2P_red-spine1_Ethernet3/32/2 | - | 100.83.200.49/31 | default | 1500 | False | - | - |
-| Ethernet56 | P2P_red-spine1_Ethernet4/32/2 | - | 100.83.200.51/31 | default | 1500 | False | - | - |
+| Ethernet55 | P2P_red-spine1_Ethernet3/32/2 | - | 100.83.94.33/31 | default | 1500 | False | - | - |
+| Ethernet56 | P2P_red-spine1_Ethernet4/32/2 | - | 100.83.94.35/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
@@ -887,7 +887,7 @@ interface Ethernet55
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.49/31
+   ip address 100.83.94.33/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -900,7 +900,7 @@ interface Ethernet56
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.51/31
+   ip address 100.83.94.35/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1025,8 +1025,8 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 100.83.200.48 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.200.50 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.32 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.34 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
@@ -1049,12 +1049,12 @@ router bgp 65210.37105
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
-   neighbor 100.83.200.48 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.48 remote-as 65210.37100
-   neighbor 100.83.200.48 description red-spine1_Ethernet3/32/2
-   neighbor 100.83.200.50 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.50 remote-as 65210.37100
-   neighbor 100.83.200.50 description red-spine1_Ethernet4/32/2
+   neighbor 100.83.94.32 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.32 remote-as 65210.37100
+   neighbor 100.83.94.32 description red-spine1_Ethernet3/32/2
+   neighbor 100.83.94.34 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.34 remote-as 65210.37100
+   neighbor 100.83.94.34 description red-spine1_Ethernet4/32/2
    redistribute connected
    !
    address-family ipv4

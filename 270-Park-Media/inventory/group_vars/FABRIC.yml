@@ -33,15 +33,33 @@ node_type_keys:
       l3: true
     default_ptp_priority1: 30
 
+# local users
 local_users:
+  - name: admin
+    privilege: 15
+    role: network-admin
+    sha512_password: "$6$eucN5ngreuExDgwS$xnD7T8jO..GBDX0DUlp.hn.W7yW94xTjSanqgaQGBzPIhDAsyAl9N4oScHvOMvf07uVBFI4mKMxwdVEUVKgY/."
+  - name: avnetuser
+    privilege: 0
+    role: network-user
+    sha512_password: "$6$l7sHbz6mxuq6peq0$FQjHbRIfcZrdI1Cw7Qs4HhUbFbzmUa.dTleGY95TgzEJgNvHh/TlhzCClknEk634p5nQHn/RFBEjebebU4jxd."
+  - name: providius
+    privilege: 7
+    role: network-operator
+    sha512_password: "$6$BQgcQzmXutC8.k0U$w5Ly4dFtFe9KUYOc6XmPSnm0cW3F/uL90jfA1EkfH16TI4n5PcSWNk7byu1LSUR8i8ha0dWFrMHkX9b76Ih6X1"
+  - name: testlab
+    privilege: 15
+    role: network-admin
+    sha512_password: "$6$emh7YIY16uJLWXGR$rpNN3L9JAe6K2eynKi6lcoSUQFm7Uxa6gCRwEOA8FO7adXHv31Xd4PFwybBe3icIsxGHZjQvjEKocceIiMXIc/"
+  - name: thelabeng
+    privilege: 15
+    role: network-admin
+    sha512_password: "$6$/D8cGV410nyAUOxm$TvYHuvz9sK3.EWQeT6EiNHVclEa3EOjgYZ6022WCekli1LVLzUHql27CnUV6/NlHL0Mn9qtj8yRL6w58hFSHS0"
   - name: ansible
     privilege: 15
     role: network-admin
     sha512_password: $6$7u4j1rkb3VELgcZE/TapRoci0XaIZsL4tFzgq1YZBLD9c6f/knXzvcYY0NcMKndZeCv0T268knGKhOEwZAxqKjlMm920
-  - name: admin
-    privilege: 15
-    role: network-admin
-    no_password: true
+
 
 logging:
   # Console logging severity level.
@@ -55,9 +73,6 @@ bgp_peer_groups:
     name: P2P-IPv4-eBGP-PEERS
     password: 7x4B4rnJhZB438m9+BrBfQ==
 
-switchport_default:
-  mode: "routed"
-
 p2p_uplinks_mtu: 1500
 
 default_interfaces:
@@ -66,30 +81,34 @@ default_interfaces:
     platforms:
       - 7808R3
     uplink_interfaces:
-      - Ethernet3-4/32/1
-      - Ethernet6-7/10/1
+      - Ethernet3/1-4/1
     downlink_interfaces:
       - Ethernet4-7/1-36/1
   - types:
       - media_leaf
     platforms:
-      - 7289R3
+      - 7289R3A
+      - 7280SR3
     uplink_interfaces:
-      - Ethernet49-50/1
+      - Ethernet4-10/1-16/1
+      - Ethernet49-56/1
     downlink_interfaces:
+      - Ethernet1-48
       - Ethernet1-48
   - types:
       - ptp_leaf
     platforms:
       - 7280SR3
     uplink_interfaces:
-      - Ethernet49-54
+      - Ethernet49-56/1
+    downlink_interfaces:
+      - Ethernet1-48
   - types:
       - border_leaf
     platforms:
       - 7280CR3
     uplink_interfaces:
-      - Ethernet31-36/1
+      - Ethernet1-36/1-4
 
 daemon_terminattr:
   cvaddrs:
@@ -210,25 +229,24 @@ aaa_authentication:
 aaa_authorization:
   exec:
     default: local
-  serial_console: True
-  commands:
-
-    # Command authorization method(s) as a string.
-    # Examples:
-    # - "group tacacs+ local"
-    # - "group MYGROUP none"
-    # - "group tacacs+ group MYGROUP local
-    all_default: local
 
 mgmt_interface: Management1
-#mgmt_gateway: 10.100.100.1
-mgmt_interface_vrf: MGMT
+mgmt_gateway: 10.100.100.1
 mgmt_destination_networks:
   - 0.0.0.0/0
 
 
 name_servers:
   - 192.168.1.1
+
+
+# ntp:
+#   local_interface:
+#     name: Management1
+#     vrf: MGMT
+#   servers:
+#     - name: 0.pool.ntp.org
+#       vrf: MGMT
 
 ntp:
   servers:
@@ -263,6 +281,7 @@ roles:
         # Command as string.
         command: ".*"
 
+
 # Create UPLINKS -> Media Spines to BL and PTP, -> Green Spines to BL and PTP (Note: Green spines are used here just to configure PTP/BL for them )
 core_interfaces:
   p2p_links:
@@ -270,16 +289,16 @@ core_interfaces:
     #++++++ Border Leaf to Border Leaf Switch L3 Interlinks with Port-Channel
     - ip: [ 100.83.93.8/31, 100.83.93.9/31 ]
     #- id: 1
-      nodes: [ border-leaf1, border-leaf2 ]
+      nodes: [ C160064-037B380A, C160064-037B381A ]
       port_channel:
         description: INTER_SWITCH_LINK
         mode: "active"
         nodes_child_interfaces:
-          - node: border-leaf1
+          - node: C160064-037B380A
             # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
             interfaces: [ Ethernet35/1, Ethernet36/1 ]
             channel_id: 1000
-          - node: border-leaf2
+          - node: C160064-037B381A
             # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
             interfaces: [ Ethernet35/1, Ethernet36/1 ]
             channel_id: 1000
@@ -288,16 +307,16 @@ core_interfaces:
     #+++++++++ PTP Switch L3 Interlinks with Port-Channel
     - ip: [ 100.83.93.10/31, 100.83.93.11/31 ]
     #- id: 1
-      nodes: [ media-PTP-1, media-PTP-2 ]
+      nodes: [ C160064-037B370A, C160064-037B371A ]
       port_channel:
         description: INTER_SWITCH_LINK
         mode: "active"
         nodes_child_interfaces:
-          - node: media-PTP-1
+          - node: C160064-037B370A
             # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
             interfaces: [ Ethernet53, Ethernet54 ]
             channel_id: 1000
-          - node: media-PTP-2
+          - node: C160064-037B371A
             # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
             interfaces: [ Ethernet53, Ethernet54 ]
             channel_id: 1000
@@ -305,7 +324,7 @@ core_interfaces:
 
     #+++++++ Border to Green Spines p2p L3 Links
     - ip: [ 100.83.93.17/31, 100.83.93.16/31 ]
-      nodes: [ border-leaf1, green-spine1  ]
+      nodes: [ C160064-037B380A, C160064-037B300A  ]
       interfaces: [ Ethernet31/1, Ethernet3/30/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -313,7 +332,7 @@ core_interfaces:
       as: [ "65214", "65212.37300" ]
 
     - ip: [ 100.83.93.19/31, 100.83.93.18/31 ]
-      nodes: [ border-leaf1, green-spine2 ]
+      nodes: [ C160064-037B380A, C160064-037B301A ]
       interfaces: [ Ethernet32/1, Ethernet3/30/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -321,7 +340,7 @@ core_interfaces:
       as: [ "65214", "65212.37300" ]
 
     - ip: [ 100.83.93.21/31, 100.83.93.20/31 ]
-      nodes: [ border-leaf2, green-spine1  ]
+      nodes: [ C160064-037B381A, C160064-037B300A  ]
       interfaces: [ Ethernet31/1, Ethernet4/30/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -329,7 +348,7 @@ core_interfaces:
       as: [ "65214", "65212.37300" ]
 
     - ip: [ 100.83.93.23/31, 100.83.93.22/31 ]
-      nodes: [ border-leaf2, green-spine2 ]
+      nodes: [ C160064-037B381A, C160064-037B301A ]
       interfaces: [ Ethernet32/1, Ethernet4/30/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -338,7 +357,7 @@ core_interfaces:
 
     #+++++ PTP to Green Spines p2p L3 Links
     - ip: [ 100.83.93.25/31, 100.83.93.24/31 ]
-      nodes: [ media-PTP-1, green-spine1  ]
+      nodes: [ C160064-037B370A, C160064-037B300A  ]
       interfaces: [ Ethernet51, Ethernet3/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -346,7 +365,7 @@ core_interfaces:
       as: [ "65003.37370", "65212.37300" ]
 
     - ip: [ 100.83.93.27/31, 100.83.93.26/31 ]
-      nodes: [ media-PTP-1, green-spine2 ]
+      nodes: [ C160064-037B370A, C160064-037B301A ]
       interfaces: [ Ethernet52, Ethernet3/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -354,7 +373,7 @@ core_interfaces:
       as: [ "65003.37370", "65212.37300" ]
 
     - ip: [ 100.83.93.29/31, 100.83.93.28/31 ]
-      nodes: [ media-PTP-2, green-spine1  ]
+      nodes: [ C160064-037B371A, C160064-037B300A  ]
       interfaces: [ Ethernet51, Ethernet4/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -362,46 +381,13 @@ core_interfaces:
       as: [ "65003.37370", "65212.37300" ]
 
     - ip: [ 100.83.93.31/31, 100.83.93.30/31 ]
-      nodes: [ media-PTP-2, green-spine2 ]
+      nodes: [ C160064-037B371A, C160064-037B301A ]
       interfaces: [ Ethernet52, Ethernet4/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65003.37370", "65212.37300" ]
 
-    # #+++++ PTP to Red Spine p2p L3 Links
-    # - ip: [ 100.83.93.5/31, 100.83.93.4/31 ]
-    #   nodes: [ media-PTP-1, red-spine1  ]
-    #   interfaces: [ Ethernet49, Ethernet3/32/1 ]
-    #   include_in_underlay_protocol: true
-    #   # If the AS is different than the AS number configured for the node,
-    #   # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-    #   as: [ "65003.37370", "65210.37100" ]
-
-    # - ip: [ 100.83.93.7/31, 100.83.93.6/31 ]
-    #   nodes: [ media-PTP-2, red-spine1 ]
-    #   interfaces: [ Ethernet49, Ethernet4/32/1 ]
-    #   include_in_underlay_protocol: true
-    #   # If the AS is different than the AS number configured for the node,
-    #   # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-    #   as: [ "65003.37370", "65210.37100" ]
-
-    # #+++++ PTP to Blue Spine p2p L3 Links
-    # - ip: [ 100.83.93.13/31, 100.83.93.12/31 ]
-    #   nodes: [ media-PTP-1, blue-spine1  ]
-    #   interfaces: [ Ethernet50, Ethernet3/32/1 ]
-    #   include_in_underlay_protocol: true
-    #   # If the AS is different than the AS number configured for the node,
-    #   # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-    #   as: [ "65003.37370", "65212.37200" ]
-
-    # - ip: [ 100.83.93.15/31, 100.83.93.14/31 ]
-    #   nodes: [ media-PTP-2, blue-spine1 ]
-    #   interfaces: [ Ethernet50, Ethernet4/32/1 ]
-    #   include_in_underlay_protocol: true
-    #   # If the AS is different than the AS number configured for the node,
-    #   # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-    #   as: [ "65003.37370", "65212.37200" ]
 
 eos_validate_state_validation_mode_loose: true
 root_dir: '{{ inventory_dir }}'

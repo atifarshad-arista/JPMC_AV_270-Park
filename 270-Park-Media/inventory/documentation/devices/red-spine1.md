@@ -40,6 +40,7 @@
   - [Service Routing Protocols Model](#service-routing-protocols-model)
   - [IP Routing](#ip-routing)
   - [IPv6 Routing](#ipv6-routing)
+  - [Static Routes](#static-routes)
   - [Router BGP](#router-bgp)
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
@@ -63,23 +64,23 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.37/24 | - |
+| Management0 | OOB_MANAGEMENT | oob | MGMT | 10.176.143.139/27 | 10.176.143.129 |
 
 ##### IPv6
 
 | Management Interface | Description | Type | VRF | IPv6 Address | IPv6 Gateway |
 | -------------------- | ----------- | ---- | --- | ------------ | ------------ |
-| Management1 | OOB_MANAGEMENT | oob | MGMT | - | - |
+| Management0 | OOB_MANAGEMENT | oob | MGMT | - | - |
 
 #### Management Interfaces Device Configuration
 
 ```eos
 !
-interface Management1
+interface Management0
    description OOB_MANAGEMENT
    no shutdown
    vrf MGMT
-   ip address 10.100.100.37/24
+   ip address 10.176.143.139/27
 ```
 
 ### IP Name Servers
@@ -133,7 +134,7 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| - | 172.31.1.11 | 20 | 101 | 8 | 100 | boundary | - |
+| - | 169.27.195.0 | 20 | 101 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
@@ -143,7 +144,7 @@ ptp domain 100
 ptp mode boundary
 ptp priority1 20
 ptp priority2 101
-ptp source ip 172.31.1.11
+ptp source ip 169.27.195.0
 ptp ttl 8
 ptp monitor threshold offset-from-master 500
 ptp monitor threshold mean-path-delay 2500
@@ -526,85 +527,98 @@ switchport default mode routed
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet4/11/1 | P2P_red-leaf1_Ethernet49/1 | - | 100.83.100.40/31 | default | 1500 | False | - | - |
-| Ethernet4/12/1 | P2P_red-leaf1_Ethernet50/1 | - | 100.83.100.42/31 | default | 1500 | False | - | - |
-| Ethernet4/13/1 | P2P_red-leaf2_Ethernet49/1 | - | 100.83.100.48/31 | default | 1500 | False | - | - |
-| Ethernet4/14/1 | P2P_red-leaf2_Ethernet50/1 | - | 100.83.100.50/31 | default | 1500 | False | - | - |
-| Ethernet4/15/1 | P2P_red-leaf3_Ethernet49/1 | - | 100.83.100.56/31 | default | 1500 | False | - | - |
-| Ethernet4/16/1 | P2P_red-leaf3_Ethernet50/1 | - | 100.83.100.58/31 | default | 1500 | False | - | - |
-| Ethernet4/17/1 | P2P_red-leaf4_Ethernet49/1 | - | 100.83.100.64/31 | default | 1500 | False | - | - |
-| Ethernet4/18/1 | P2P_red-leaf4_Ethernet50/1 | - | 100.83.100.66/31 | default | 1500 | False | - | - |
-| Ethernet4/19/1 | P2P_red-leaf5_Ethernet49/1 | - | 100.83.100.72/31 | default | 1500 | False | - | - |
-| Ethernet4/20/1 | P2P_red-leaf5_Ethernet50/1 | - | 100.83.100.74/31 | default | 1500 | False | - | - |
-| Ethernet4/21/1 | P2P_red-leaf6_Ethernet49/1 | - | 100.83.100.80/31 | default | 1500 | False | - | - |
-| Ethernet4/22/1 | P2P_red-leaf6_Ethernet50/1 | - | 100.83.100.82/31 | default | 1500 | False | - | - |
-| Ethernet4/23/1 | P2P_red-leaf7_Ethernet49/1 | - | 100.83.100.88/31 | default | 1500 | False | - | - |
-| Ethernet4/24/1 | P2P_red-leaf7_Ethernet50/1 | - | 100.83.100.90/31 | default | 1500 | False | - | - |
-| Ethernet4/25/1 | P2P_red-leaf8_Ethernet49/1 | - | 100.83.100.96/31 | default | 1500 | False | - | - |
-| Ethernet4/26/1 | P2P_red-leaf8_Ethernet50/1 | - | 100.83.100.98/31 | default | 1500 | False | - | - |
-| Ethernet4/27/1 | P2P_red-leaf9_Ethernet49/1 | - | 100.83.100.104/31 | default | 1500 | False | - | - |
-| Ethernet4/28/1 | P2P_red-leaf9_Ethernet50/1 | - | 100.83.100.106/31 | default | 1500 | False | - | - |
-| Ethernet4/29/1 | P2P_red-leaf10_Ethernet49/1 | - | 100.83.100.112/31 | default | 1500 | False | - | - |
-| Ethernet4/30/1 | P2P_red-leaf10_Ethernet50/1 | - | 100.83.100.114/31 | default | 1500 | False | - | - |
-| Ethernet4/31/1 | P2P_red-leaf11_Ethernet49/1 | - | 100.83.100.120/31 | default | 1500 | False | - | - |
-| Ethernet4/32/1 | P2P_red-leaf11_Ethernet50/1 | - | 100.83.100.122/31 | default | 1500 | False | - | - |
-| Ethernet4/33/1 | P2P_red-leaf12_Ethernet49/1 | - | 100.83.100.128/31 | default | 1500 | False | - | - |
-| Ethernet4/34/1 | P2P_red-leaf12_Ethernet50/1 | - | 100.83.100.130/31 | default | 1500 | False | - | - |
-| Ethernet4/35/1 | P2P_red-leaf13_Ethernet49/1 | - | 100.83.100.136/31 | default | 1500 | False | - | - |
-| Ethernet4/36/1 | P2P_red-leaf13_Ethernet50/1 | - | 100.83.100.138/31 | default | 1500 | False | - | - |
-| Ethernet5/1/1 | P2P_red-leaf14_Ethernet49/1 | - | 100.83.100.144/31 | default | 1500 | False | - | - |
-| Ethernet5/2/1 | P2P_red-leaf14_Ethernet50/1 | - | 100.83.100.146/31 | default | 1500 | False | - | - |
-| Ethernet5/3/1 | P2P_red-leaf15_Ethernet49/1 | - | 100.83.100.152/31 | default | 1500 | False | - | - |
-| Ethernet5/4/1 | P2P_red-leaf15_Ethernet50/1 | - | 100.83.100.154/31 | default | 1500 | False | - | - |
-| Ethernet5/5/1 | P2P_red-leaf16_Ethernet49/1 | - | 100.83.100.160/31 | default | 1500 | False | - | - |
-| Ethernet5/6/1 | P2P_red-leaf16_Ethernet50/1 | - | 100.83.100.162/31 | default | 1500 | False | - | - |
-| Ethernet5/7/1 | P2P_red-leaf17_Ethernet49/1 | - | 100.83.100.168/31 | default | 1500 | False | - | - |
-| Ethernet5/8/1 | P2P_red-leaf17_Ethernet50/1 | - | 100.83.100.170/31 | default | 1500 | False | - | - |
-| Ethernet5/9/1 | P2P_red-leaf18_Ethernet49/1 | - | 100.83.100.176/31 | default | 1500 | False | - | - |
-| Ethernet5/10/1 | P2P_red-leaf18_Ethernet50/1 | - | 100.83.100.178/31 | default | 1500 | False | - | - |
-| Ethernet5/11/1 | P2P_red-leaf19_Ethernet49/1 | - | 100.83.100.184/31 | default | 1500 | False | - | - |
-| Ethernet5/12/1 | P2P_red-leaf19_Ethernet50/1 | - | 100.83.100.186/31 | default | 1500 | False | - | - |
-| Ethernet5/13/1 | P2P_red-leaf20_Ethernet49/1 | - | 100.83.100.192/31 | default | 1500 | False | - | - |
-| Ethernet5/14/1 | P2P_red-leaf20_Ethernet50/1 | - | 100.83.100.194/31 | default | 1500 | False | - | - |
-| Ethernet5/15/1 | P2P_red-leaf21_Ethernet49/1 | - | 100.83.100.200/31 | default | 1500 | False | - | - |
-| Ethernet5/16/1 | P2P_red-leaf21_Ethernet50/1 | - | 100.83.100.202/31 | default | 1500 | False | - | - |
-| Ethernet5/17/1 | P2P_red-leaf22_Ethernet49/1 | - | 100.83.100.208/31 | default | 1500 | False | - | - |
-| Ethernet5/18/1 | P2P_red-leaf22_Ethernet50/1 | - | 100.83.100.210/31 | default | 1500 | False | - | - |
-| Ethernet5/19/1 | P2P_red-leaf23_Ethernet49/1 | - | 100.83.100.216/31 | default | 1500 | False | - | - |
-| Ethernet5/20/1 | P2P_red-leaf23_Ethernet50/1 | - | 100.83.100.218/31 | default | 1500 | False | - | - |
-| Ethernet5/21/1 | P2P_red-leaf24_Ethernet49/1 | - | 100.83.100.224/31 | default | 1500 | False | - | - |
-| Ethernet5/22/1 | P2P_red-leaf24_Ethernet50/1 | - | 100.83.100.226/31 | default | 1500 | False | - | - |
-| Ethernet5/23/1 | P2P_red-leaf25_Ethernet49/1 | - | 100.83.100.232/31 | default | 1500 | False | - | - |
-| Ethernet5/24/1 | P2P_red-leaf25_Ethernet50/1 | - | 100.83.100.234/31 | default | 1500 | False | - | - |
-| Ethernet5/25/1 | P2P_red-leaf26_Ethernet49/1 | - | 100.83.100.240/31 | default | 1500 | False | - | - |
-| Ethernet5/26/1 | P2P_red-leaf26_Ethernet50/1 | - | 100.83.100.242/31 | default | 1500 | False | - | - |
-| Ethernet5/27/1 | P2P_red-leaf27_Ethernet49/1 | - | 100.83.100.248/31 | default | 1500 | False | - | - |
-| Ethernet5/28/1 | P2P_red-leaf27_Ethernet50/1 | - | 100.83.100.250/31 | default | 1500 | False | - | - |
-| Ethernet5/29/1 | P2P_red-leaf28_Ethernet49/1 | - | 100.83.101.0/31 | default | 1500 | False | - | - |
-| Ethernet5/30/1 | P2P_red-leaf28_Ethernet50/1 | - | 100.83.101.2/31 | default | 1500 | False | - | - |
-| Ethernet5/31/1 | P2P_red-leaf29_Ethernet49/1 | - | 100.83.101.8/31 | default | 1500 | False | - | - |
-| Ethernet5/32/1 | P2P_red-leaf29_Ethernet50/1 | - | 100.83.101.10/31 | default | 1500 | False | - | - |
-| Ethernet5/33/1 | P2P_red-leaf30_Ethernet49/1 | - | 100.83.101.16/31 | default | 1500 | False | - | - |
-| Ethernet5/34/1 | P2P_red-leaf30_Ethernet50/1 | - | 100.83.101.18/31 | default | 1500 | False | - | - |
-| Ethernet5/35/1 | P2P_red-leaf31_Ethernet49/1 | - | 100.83.101.24/31 | default | 1500 | False | - | - |
-| Ethernet5/36/1 | P2P_red-leaf31_Ethernet50/1 | - | 100.83.101.26/31 | default | 1500 | False | - | - |
-| Ethernet6/1/1 | P2P_red-leaf32_Ethernet49/1 | - | 100.83.101.32/31 | default | 1500 | False | - | - |
-| Ethernet6/2/1 | P2P_red-leaf32_Ethernet50/1 | - | 100.83.101.34/31 | default | 1500 | False | - | - |
-| Ethernet33/1 | P2P_border-leaf1_Ethernet33/1 | - | 100.83.88.16/31 | default | 1500 | False | - | - |
-| Ethernet34/1 | P2P_border-leaf2_Ethernet33/1 | - | 100.83.88.24/31 | default | 1500 | False | - | - |
-| Ethernet49/1 | P2P_media-PTP-1_Ethernet49/1 | - | 100.83.88.0/31 | default | 1500 | False | - | - |
-| Ethernet50/1 | P2P_media-PTP-2_Ethernet49/1 | - | 100.83.88.8/31 | default | 1500 | False | - | - |
+| Ethernet3/31/4 | P2P_red-leaf5_Ethernet56 | - | 100.83.94.64/31 | default | 1500 | False | - | - |
+| Ethernet3/32/1 | P2P_media-PTP-1_Ethernet49 | - | 100.83.88.0/31 | default | 1500 | False | - | - |
+| Ethernet3/32/2 | P2P_red-leaf3_Ethernet55 | - | 100.83.94.32/31 | default | 1500 | False | - | - |
+| Ethernet3/32/3 | P2P_red-leaf5_Ethernet54 | - | 100.83.94.66/31 | default | 1500 | False | - | - |
+| Ethernet4/32/1 | P2P_media-PTP-2_Ethernet49 | - | 100.83.88.8/31 | default | 1500 | False | - | - |
+| Ethernet4/32/2 | P2P_red-leaf3_Ethernet56 | - | 100.83.94.34/31 | default | 1500 | False | - | - |
+| Ethernet4/32/3 | P2P_red-leaf5_Ethernet55 | - | 100.83.94.68/31 | default | 1500 | False | - | - |
+| Ethernet5/33/3 | P2P_red-leaf5_Ethernet53 | - | 100.83.94.70/31 | default | 1500 | False | - | - |
+| Ethernet6/4/1 | P2P_red-leaf2_Ethernet2/1 | - | 100.83.94.16/31 | default | 1500 | False | - | - |
+| Ethernet6/5/1 | P2P_red-leaf2_Ethernet2/3 | - | 100.83.94.18/31 | default | 1500 | False | - | - |
+| Ethernet6/6/1 | P2P_red-leaf2_Ethernet3/1 | - | 100.83.94.20/31 | default | 1500 | False | - | - |
+| Ethernet6/7/1 | P2P_red-leaf4_Ethernet2/1 | - | 100.83.94.48/31 | default | 1500 | False | - | - |
+| Ethernet6/8/1 | P2P_red-leaf4_Ethernet2/3 | - | 100.83.94.50/31 | default | 1500 | False | - | - |
+| Ethernet6/9/1 | P2P_red-leaf6_Ethernet2/2 | - | 100.83.94.80/31 | default | 1500 | False | - | - |
+| Ethernet6/18/1 | P2P_red-leaf1_Ethernet2/1 | - | 100.83.94.0/31 | default | 1500 | False | - | - |
+| Ethernet6/19/1 | P2P_red-leaf1_Ethernet2/2 | - | 100.83.94.2/31 | default | 1500 | False | - | - |
+| Ethernet6/20/1 | P2P_red-leaf1_Ethernet2/3 | - | 100.83.94.4/31 | default | 1500 | False | - | - |
+| Ethernet6/21/1 | P2P_red-leaf7_Ethernet2/2 | - | 100.83.94.96/31 | default | 1500 | False | - | - |
+| Ethernet6/22/1 | P2P_red-leaf8_Ethernet2/2 | - | 100.83.94.112/31 | default | 1500 | False | - | - |
+| Ethernet6/23/1 | P2P_red-leaf9_Ethernet2/2 | - | 100.83.94.128/31 | default | 1500 | False | - | - |
+| Ethernet6/24/1 | P2P_red-leaf10_Ethernet2/2 | - | 100.83.94.144/31 | default | 1500 | False | - | - |
+| Ethernet6/25/1 | P2P_red-leaf11_Ethernet2/2 | - | 100.83.94.160/31 | default | 1500 | False | - | - |
+| Ethernet6/26/1 | P2P_red-leaf12_Ethernet2/2 | - | 100.83.94.176/31 | default | 1500 | False | - | - |
+| Ethernet6/27/1 | P2P_red-leaf13_Ethernet2/2 | - | 100.83.94.192/31 | default | 1500 | False | - | - |
+| Ethernet6/28/1 | P2P_red-leaf14_Ethernet2/2 | - | 100.83.94.208/31 | default | 1500 | False | - | - |
+| Ethernet6/29/1 | P2P_red-leaf15_Ethernet2/2 | - | 100.83.94.224/31 | default | 1500 | False | - | - |
+| Ethernet6/30/1 | P2P_red-leaf16_Ethernet2/2 | - | 100.83.94.240/31 | default | 1500 | False | - | - |
+| Ethernet7/1/1 | P2P_red-leaf1_Ethernet2/4 | - | 100.83.94.6/31 | default | 1500 | False | - | - |
+| Ethernet7/2/1 | P2P_red-leaf1_Ethernet3/1 | - | 100.83.94.8/31 | default | 1500 | False | - | - |
+| Ethernet7/3/1 | P2P_red-leaf1_Ethernet3/2 | - | 100.83.94.10/31 | default | 1500 | False | - | - |
+| Ethernet7/4/1 | P2P_red-leaf2_Ethernet2/2 | - | 100.83.94.22/31 | default | 1500 | False | - | - |
+| Ethernet7/5/1 | P2P_red-leaf2_Ethernet2/4 | - | 100.83.94.24/31 | default | 1500 | False | - | - |
+| Ethernet7/6/1 | P2P_red-leaf2_Ethernet3/2 | - | 100.83.94.26/31 | default | 1500 | False | - | - |
+| Ethernet7/7/1 | P2P_red-leaf4_Ethernet2/2 | - | 100.83.94.52/31 | default | 1500 | False | - | - |
+| Ethernet7/8/1 | P2P_red-leaf6_Ethernet2/1 | - | 100.83.94.82/31 | default | 1500 | False | - | - |
+| Ethernet7/10/1 | P2P_red-leaf7_Ethernet2/1 | - | 100.83.94.98/31 | default | 1500 | False | - | - |
+| Ethernet7/11/1 | P2P_red-leaf8_Ethernet2/1 | - | 100.83.94.114/31 | default | 1500 | False | - | - |
+| Ethernet7/12/1 | P2P_red-leaf8_Ethernet2/3 | - | 100.83.94.116/31 | default | 1500 | False | - | - |
+| Ethernet7/13/1 | P2P_red-leaf10_Ethernet2/1 | - | 100.83.94.146/31 | default | 1500 | False | - | - |
+| Ethernet7/15/1 | P2P_red-leaf11_Ethernet2/1 | - | 100.83.94.162/31 | default | 1500 | False | - | - |
+| Ethernet7/17/1 | P2P_red-leaf12_Ethernet2/1 | - | 100.83.94.178/31 | default | 1500 | False | - | - |
+| Ethernet7/18/1 | P2P_red-leaf13_Ethernet2/1 | - | 100.83.94.194/31 | default | 1500 | False | - | - |
+| Ethernet7/19/1 | P2P_red-leaf14_Ethernet2/1 | - | 100.83.94.210/31 | default | 1500 | False | - | - |
+| Ethernet7/21/1 | P2P_red-leaf16_Ethernet2/1 | - | 100.83.94.242/31 | default | 1500 | False | - | - |
+| Ethernet7/23/1 | P2P_red-leaf15_Ethernet2/1 | - | 100.83.94.226/31 | default | 1500 | False | - | - |
+| Ethernet7/33/1 | P2P_red-leaf9_Ethernet2/1 | - | 100.83.94.130/31 | default | 1500 | False | - | - |
+| Ethernet8/29/1 | P2P_red-leaf17_Ethernet2/2 | - | 100.83.95.0/31 | default | 1500 | False | - | - |
+| Ethernet8/30/1 | P2P_red-leaf18_Ethernet2/2 | - | 100.83.95.16/31 | default | 1500 | False | - | - |
+| Ethernet8/31/1 | P2P_red-leaf19_Ethernet2/2 | - | 100.83.95.32/31 | default | 1500 | False | - | - |
+| Ethernet8/32/1 | P2P_red-leaf20_Ethernet2/2 | - | 100.83.95.48/31 | default | 1500 | False | - | - |
+| Ethernet8/33/1 | P2P_red-leaf21_Ethernet2/2 | - | 100.83.95.64/31 | default | 1500 | False | - | - |
+| Ethernet8/34/1 | P2P_red-leaf22_Ethernet2/2 | - | 100.83.95.80/31 | default | 1500 | False | - | - |
+| Ethernet8/35/1 | P2P_red-leaf23_Ethernet2/2 | - | 100.83.95.96/31 | default | 1500 | False | - | - |
+| Ethernet8/36/1 | P2P_red-leaf24_Ethernet2/2 | - | 100.83.95.112/31 | default | 1500 | False | - | - |
+| Ethernet8/37/1 | P2P_red-leaf25_Ethernet2/2 | - | 100.83.95.128/31 | default | 1500 | False | - | - |
+| Ethernet8/38/1 | P2P_red-leaf26_Ethernet2/2 | - | 100.83.95.144/31 | default | 1500 | False | - | - |
+| Ethernet8/39/1 | P2P_red-leaf27_Ethernet2/2 | - | 100.83.95.160/31 | default | 1500 | False | - | - |
+| Ethernet8/40/1 | P2P_red-leaf28_Ethernet2/2 | - | 100.83.95.176/31 | default | 1500 | False | - | - |
+| Ethernet8/41/1 | P2P_red-leaf29_Ethernet2/2 | - | 100.83.95.192/31 | default | 1500 | False | - | - |
+| Ethernet8/42/1 | P2P_red-leaf30_Ethernet2/2 | - | 100.83.95.208/31 | default | 1500 | False | - | - |
+| Ethernet8/43/1 | P2P_red-leaf31_Ethernet2/2 | - | 100.83.95.224/31 | default | 1500 | False | - | - |
+| Ethernet8/44/1 | P2P_red-leaf32_Ethernet2/2 | - | 100.83.95.240/31 | default | 1500 | False | - | - |
+| Ethernet9/21/1 | P2P_red-leaf17_Ethernet2/1 | - | 100.83.95.2/31 | default | 1500 | False | - | - |
+| Ethernet9/23/1 | P2P_red-leaf18_Ethernet2/1 | - | 100.83.95.18/31 | default | 1500 | False | - | - |
+| Ethernet9/25/1 | P2P_red-leaf19_Ethernet2/1 | - | 100.83.95.34/31 | default | 1500 | False | - | - |
+| Ethernet9/27/1 | P2P_red-leaf20_Ethernet2/1 | - | 100.83.95.50/31 | default | 1500 | False | - | - |
+| Ethernet9/29/1 | P2P_red-leaf21_Ethernet2/1 | - | 100.83.95.66/31 | default | 1500 | False | - | - |
+| Ethernet9/31/1 | P2P_red-leaf22_Ethernet2/1 | - | 100.83.95.82/31 | default | 1500 | False | - | - |
+| Ethernet9/33/1 | P2P_red-leaf23_Ethernet2/1 | - | 100.83.95.98/31 | default | 1500 | False | - | - |
+| Ethernet9/35/1 | P2P_red-leaf24_Ethernet2/1 | - | 100.83.95.114/31 | default | 1500 | False | - | - |
+| Ethernet9/37/1 | P2P_red-leaf25_Ethernet2/1 | - | 100.83.95.130/31 | default | 1500 | False | - | - |
+| Ethernet9/39/1 | P2P_red-leaf26_Ethernet2/1 | - | 100.83.95.146/31 | default | 1500 | False | - | - |
+| Ethernet9/41/1 | P2P_red-leaf27_Ethernet2/1 | - | 100.83.95.162/31 | default | 1500 | False | - | - |
+| Ethernet9/43/1 | P2P_red-leaf28_Ethernet2/1 | - | 100.83.95.178/31 | default | 1500 | False | - | - |
+| Ethernet9/45/1 | P2P_red-leaf29_Ethernet2/1 | - | 100.83.95.194/31 | default | 1500 | False | - | - |
+| Ethernet9/47/1 | P2P_red-leaf30_Ethernet2/1 | - | 100.83.95.210/31 | default | 1500 | False | - | - |
+| Ethernet9/49/1 | P2P_red-leaf31_Ethernet2/1 | - | 100.83.95.226/31 | default | 1500 | False | - | - |
+| Ethernet9/51/1 | P2P_red-leaf32_Ethernet2/1 | - | 100.83.95.242/31 | default | 1500 | False | - | - |
+| Ethernet9/52/1 | P2P_red-leaf8_Ethernet2/4 | - | 100.83.94.118/31 | default | 1500 | False | - | - |
+| Ethernet33/1 | P2P_border-leaf1_Ethernet31/1 | - | 100.83.88.16/31 | default | 1500 | False | - | - |
+| Ethernet34/1 | P2P_border-leaf2_Ethernet31/1 | - | 100.83.88.24/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
 ```eos
 !
-interface Ethernet4/11/1
-   description P2P_red-leaf1_Ethernet49/1
+interface Ethernet3/31/4
+   description P2P_red-leaf5_Ethernet56
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.40/31
+   ip address 100.83.94.64/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -612,12 +626,12 @@ interface Ethernet4/11/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet4/12/1
-   description P2P_red-leaf1_Ethernet50/1
+interface Ethernet3/32/1
+   description P2P_media-PTP-1_Ethernet49
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.42/31
+   ip address 100.83.88.0/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -625,12 +639,12 @@ interface Ethernet4/12/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet4/13/1
-   description P2P_red-leaf2_Ethernet49/1
+interface Ethernet3/32/2
+   description P2P_red-leaf3_Ethernet55
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.48/31
+   ip address 100.83.94.32/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -638,233 +652,12 @@ interface Ethernet4/13/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet4/14/1
-   description P2P_red-leaf2_Ethernet50/1
+interface Ethernet3/32/3
+   description P2P_red-leaf5_Ethernet54
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.50/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/15/1
-   description P2P_red-leaf3_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.56/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/16/1
-   description P2P_red-leaf3_Ethernet50/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.58/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/17/1
-   description P2P_red-leaf4_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.64/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/18/1
-   description P2P_red-leaf4_Ethernet50/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.66/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/19/1
-   description P2P_red-leaf5_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.72/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/20/1
-   description P2P_red-leaf5_Ethernet50/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.74/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/21/1
-   description P2P_red-leaf6_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.80/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/22/1
-   description P2P_red-leaf6_Ethernet50/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.82/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/23/1
-   description P2P_red-leaf7_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.88/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/24/1
-   description P2P_red-leaf7_Ethernet50/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.90/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/25/1
-   description P2P_red-leaf8_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.96/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/26/1
-   description P2P_red-leaf8_Ethernet50/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.98/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/27/1
-   description P2P_red-leaf9_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.104/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/28/1
-   description P2P_red-leaf9_Ethernet50/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.106/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/29/1
-   description P2P_red-leaf10_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.112/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/30/1
-   description P2P_red-leaf10_Ethernet50/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.114/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet4/31/1
-   description P2P_red-leaf11_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.100.120/31
+   ip address 100.83.94.66/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -873,11 +666,11 @@ interface Ethernet4/31/1
    ptp transport ipv4
 !
 interface Ethernet4/32/1
-   description P2P_red-leaf11_Ethernet50/1
+   description P2P_media-PTP-2_Ethernet49
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.122/31
+   ip address 100.83.88.8/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -885,12 +678,12 @@ interface Ethernet4/32/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet4/33/1
-   description P2P_red-leaf12_Ethernet49/1
+interface Ethernet4/32/2
+   description P2P_red-leaf3_Ethernet56
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.128/31
+   ip address 100.83.94.34/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -898,12 +691,12 @@ interface Ethernet4/33/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet4/34/1
-   description P2P_red-leaf12_Ethernet50/1
+interface Ethernet4/32/3
+   description P2P_red-leaf5_Ethernet55
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.130/31
+   ip address 100.83.94.68/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -911,12 +704,12 @@ interface Ethernet4/34/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet4/35/1
-   description P2P_red-leaf13_Ethernet49/1
+interface Ethernet5/33/3
+   description P2P_red-leaf5_Ethernet53
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.136/31
+   ip address 100.83.94.70/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -924,12 +717,12 @@ interface Ethernet4/35/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet4/36/1
-   description P2P_red-leaf13_Ethernet50/1
+interface Ethernet6/4/1
+   description P2P_red-leaf2_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.138/31
+   ip address 100.83.94.16/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -937,12 +730,12 @@ interface Ethernet4/36/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/1/1
-   description P2P_red-leaf14_Ethernet49/1
+interface Ethernet6/5/1
+   description P2P_red-leaf2_Ethernet2/3
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.144/31
+   ip address 100.83.94.18/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -950,12 +743,12 @@ interface Ethernet5/1/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/2/1
-   description P2P_red-leaf14_Ethernet50/1
+interface Ethernet6/6/1
+   description P2P_red-leaf2_Ethernet3/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.146/31
+   ip address 100.83.94.20/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -963,12 +756,12 @@ interface Ethernet5/2/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/3/1
-   description P2P_red-leaf15_Ethernet49/1
+interface Ethernet6/7/1
+   description P2P_red-leaf4_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.152/31
+   ip address 100.83.94.48/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -976,12 +769,12 @@ interface Ethernet5/3/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/4/1
-   description P2P_red-leaf15_Ethernet50/1
+interface Ethernet6/8/1
+   description P2P_red-leaf4_Ethernet2/3
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.154/31
+   ip address 100.83.94.50/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -989,12 +782,12 @@ interface Ethernet5/4/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/5/1
-   description P2P_red-leaf16_Ethernet49/1
+interface Ethernet6/9/1
+   description P2P_red-leaf6_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.160/31
+   ip address 100.83.94.80/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1002,12 +795,12 @@ interface Ethernet5/5/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/6/1
-   description P2P_red-leaf16_Ethernet50/1
+interface Ethernet6/18/1
+   description P2P_red-leaf1_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.162/31
+   ip address 100.83.94.0/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1015,12 +808,12 @@ interface Ethernet5/6/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/7/1
-   description P2P_red-leaf17_Ethernet49/1
+interface Ethernet6/19/1
+   description P2P_red-leaf1_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.168/31
+   ip address 100.83.94.2/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1028,12 +821,12 @@ interface Ethernet5/7/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/8/1
-   description P2P_red-leaf17_Ethernet50/1
+interface Ethernet6/20/1
+   description P2P_red-leaf1_Ethernet2/3
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.170/31
+   ip address 100.83.94.4/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1041,12 +834,12 @@ interface Ethernet5/8/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/9/1
-   description P2P_red-leaf18_Ethernet49/1
+interface Ethernet6/21/1
+   description P2P_red-leaf7_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.176/31
+   ip address 100.83.94.96/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1054,12 +847,12 @@ interface Ethernet5/9/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/10/1
-   description P2P_red-leaf18_Ethernet50/1
+interface Ethernet6/22/1
+   description P2P_red-leaf8_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.178/31
+   ip address 100.83.94.112/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1067,12 +860,12 @@ interface Ethernet5/10/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/11/1
-   description P2P_red-leaf19_Ethernet49/1
+interface Ethernet6/23/1
+   description P2P_red-leaf9_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.184/31
+   ip address 100.83.94.128/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1080,12 +873,12 @@ interface Ethernet5/11/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/12/1
-   description P2P_red-leaf19_Ethernet50/1
+interface Ethernet6/24/1
+   description P2P_red-leaf10_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.186/31
+   ip address 100.83.94.144/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1093,12 +886,12 @@ interface Ethernet5/12/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/13/1
-   description P2P_red-leaf20_Ethernet49/1
+interface Ethernet6/25/1
+   description P2P_red-leaf11_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.192/31
+   ip address 100.83.94.160/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1106,12 +899,12 @@ interface Ethernet5/13/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/14/1
-   description P2P_red-leaf20_Ethernet50/1
+interface Ethernet6/26/1
+   description P2P_red-leaf12_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.194/31
+   ip address 100.83.94.176/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1119,12 +912,12 @@ interface Ethernet5/14/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/15/1
-   description P2P_red-leaf21_Ethernet49/1
+interface Ethernet6/27/1
+   description P2P_red-leaf13_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.200/31
+   ip address 100.83.94.192/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1132,12 +925,12 @@ interface Ethernet5/15/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/16/1
-   description P2P_red-leaf21_Ethernet50/1
+interface Ethernet6/28/1
+   description P2P_red-leaf14_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.202/31
+   ip address 100.83.94.208/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1145,12 +938,12 @@ interface Ethernet5/16/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/17/1
-   description P2P_red-leaf22_Ethernet49/1
+interface Ethernet6/29/1
+   description P2P_red-leaf15_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.208/31
+   ip address 100.83.94.224/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1158,12 +951,12 @@ interface Ethernet5/17/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/18/1
-   description P2P_red-leaf22_Ethernet50/1
+interface Ethernet6/30/1
+   description P2P_red-leaf16_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.210/31
+   ip address 100.83.94.240/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1171,12 +964,12 @@ interface Ethernet5/18/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/19/1
-   description P2P_red-leaf23_Ethernet49/1
+interface Ethernet7/1/1
+   description P2P_red-leaf1_Ethernet2/4
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.216/31
+   ip address 100.83.94.6/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1184,12 +977,12 @@ interface Ethernet5/19/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/20/1
-   description P2P_red-leaf23_Ethernet50/1
+interface Ethernet7/2/1
+   description P2P_red-leaf1_Ethernet3/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.218/31
+   ip address 100.83.94.8/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1197,12 +990,12 @@ interface Ethernet5/20/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/21/1
-   description P2P_red-leaf24_Ethernet49/1
+interface Ethernet7/3/1
+   description P2P_red-leaf1_Ethernet3/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.224/31
+   ip address 100.83.94.10/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1210,12 +1003,12 @@ interface Ethernet5/21/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/22/1
-   description P2P_red-leaf24_Ethernet50/1
+interface Ethernet7/4/1
+   description P2P_red-leaf2_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.226/31
+   ip address 100.83.94.22/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1223,12 +1016,12 @@ interface Ethernet5/22/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/23/1
-   description P2P_red-leaf25_Ethernet49/1
+interface Ethernet7/5/1
+   description P2P_red-leaf2_Ethernet2/4
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.232/31
+   ip address 100.83.94.24/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1236,12 +1029,12 @@ interface Ethernet5/23/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/24/1
-   description P2P_red-leaf25_Ethernet50/1
+interface Ethernet7/6/1
+   description P2P_red-leaf2_Ethernet3/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.234/31
+   ip address 100.83.94.26/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1249,12 +1042,12 @@ interface Ethernet5/24/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/25/1
-   description P2P_red-leaf26_Ethernet49/1
+interface Ethernet7/7/1
+   description P2P_red-leaf4_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.240/31
+   ip address 100.83.94.52/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1262,12 +1055,12 @@ interface Ethernet5/25/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/26/1
-   description P2P_red-leaf26_Ethernet50/1
+interface Ethernet7/8/1
+   description P2P_red-leaf6_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.242/31
+   ip address 100.83.94.82/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1275,12 +1068,12 @@ interface Ethernet5/26/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/27/1
-   description P2P_red-leaf27_Ethernet49/1
+interface Ethernet7/10/1
+   description P2P_red-leaf7_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.248/31
+   ip address 100.83.94.98/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1288,12 +1081,12 @@ interface Ethernet5/27/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/28/1
-   description P2P_red-leaf27_Ethernet50/1
+interface Ethernet7/11/1
+   description P2P_red-leaf8_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.100.250/31
+   ip address 100.83.94.114/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1301,12 +1094,12 @@ interface Ethernet5/28/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/29/1
-   description P2P_red-leaf28_Ethernet49/1
+interface Ethernet7/12/1
+   description P2P_red-leaf8_Ethernet2/3
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.0/31
+   ip address 100.83.94.116/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1314,12 +1107,12 @@ interface Ethernet5/29/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/30/1
-   description P2P_red-leaf28_Ethernet50/1
+interface Ethernet7/13/1
+   description P2P_red-leaf10_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.2/31
+   ip address 100.83.94.146/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1327,12 +1120,12 @@ interface Ethernet5/30/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/31/1
-   description P2P_red-leaf29_Ethernet49/1
+interface Ethernet7/15/1
+   description P2P_red-leaf11_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.8/31
+   ip address 100.83.94.162/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1340,12 +1133,12 @@ interface Ethernet5/31/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/32/1
-   description P2P_red-leaf29_Ethernet50/1
+interface Ethernet7/17/1
+   description P2P_red-leaf12_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.10/31
+   ip address 100.83.94.178/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1353,12 +1146,12 @@ interface Ethernet5/32/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/33/1
-   description P2P_red-leaf30_Ethernet49/1
+interface Ethernet7/18/1
+   description P2P_red-leaf13_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.16/31
+   ip address 100.83.94.194/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1366,12 +1159,12 @@ interface Ethernet5/33/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/34/1
-   description P2P_red-leaf30_Ethernet50/1
+interface Ethernet7/19/1
+   description P2P_red-leaf14_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.18/31
+   ip address 100.83.94.210/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1379,12 +1172,12 @@ interface Ethernet5/34/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/35/1
-   description P2P_red-leaf31_Ethernet49/1
+interface Ethernet7/21/1
+   description P2P_red-leaf16_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.24/31
+   ip address 100.83.94.242/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1392,12 +1185,12 @@ interface Ethernet5/35/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet5/36/1
-   description P2P_red-leaf31_Ethernet50/1
+interface Ethernet7/23/1
+   description P2P_red-leaf15_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.26/31
+   ip address 100.83.94.226/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1405,12 +1198,12 @@ interface Ethernet5/36/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet6/1/1
-   description P2P_red-leaf32_Ethernet49/1
+interface Ethernet7/33/1
+   description P2P_red-leaf9_Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.32/31
+   ip address 100.83.94.130/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1418,12 +1211,428 @@ interface Ethernet6/1/1
    ptp sync-message interval -3
    ptp transport ipv4
 !
-interface Ethernet6/2/1
-   description P2P_red-leaf32_Ethernet50/1
+interface Ethernet8/29/1
+   description P2P_red-leaf17_Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.101.34/31
+   ip address 100.83.95.0/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/30/1
+   description P2P_red-leaf18_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.16/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/31/1
+   description P2P_red-leaf19_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.32/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/32/1
+   description P2P_red-leaf20_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.48/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/33/1
+   description P2P_red-leaf21_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.64/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/34/1
+   description P2P_red-leaf22_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.80/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/35/1
+   description P2P_red-leaf23_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.96/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/36/1
+   description P2P_red-leaf24_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.112/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/37/1
+   description P2P_red-leaf25_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.128/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/38/1
+   description P2P_red-leaf26_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.144/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/39/1
+   description P2P_red-leaf27_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.160/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/40/1
+   description P2P_red-leaf28_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.176/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/41/1
+   description P2P_red-leaf29_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.192/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/42/1
+   description P2P_red-leaf30_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.208/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/43/1
+   description P2P_red-leaf31_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.224/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet8/44/1
+   description P2P_red-leaf32_Ethernet2/2
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.240/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/21/1
+   description P2P_red-leaf17_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.2/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/23/1
+   description P2P_red-leaf18_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.18/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/25/1
+   description P2P_red-leaf19_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.34/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/27/1
+   description P2P_red-leaf20_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.50/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/29/1
+   description P2P_red-leaf21_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.66/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/31/1
+   description P2P_red-leaf22_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.82/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/33/1
+   description P2P_red-leaf23_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.98/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/35/1
+   description P2P_red-leaf24_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.114/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/37/1
+   description P2P_red-leaf25_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.130/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/39/1
+   description P2P_red-leaf26_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.146/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/41/1
+   description P2P_red-leaf27_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.162/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/43/1
+   description P2P_red-leaf28_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.178/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/45/1
+   description P2P_red-leaf29_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.194/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/47/1
+   description P2P_red-leaf30_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.210/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/49/1
+   description P2P_red-leaf31_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.226/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/51/1
+   description P2P_red-leaf32_Ethernet2/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.95.242/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet9/52/1
+   description P2P_red-leaf8_Ethernet2/4
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.94.118/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1432,7 +1641,7 @@ interface Ethernet6/2/1
    ptp transport ipv4
 !
 interface Ethernet33/1
-   description P2P_border-leaf1_Ethernet33/1
+   description P2P_border-leaf1_Ethernet31/1
    no shutdown
    mtu 1500
    no switchport
@@ -1445,37 +1654,11 @@ interface Ethernet33/1
    ptp transport ipv4
 !
 interface Ethernet34/1
-   description P2P_border-leaf2_Ethernet33/1
+   description P2P_border-leaf2_Ethernet31/1
    no shutdown
    mtu 1500
    no switchport
    ip address 100.83.88.24/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet49/1
-   description P2P_media-PTP-1_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.88.0/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet50/1
-   description P2P_media-PTP-2_Ethernet49/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.88.8/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1492,7 +1675,7 @@ interface Ethernet50/1
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 169.27.195.1/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.0/32 |
 
 ##### IPv6
 
@@ -1507,7 +1690,7 @@ interface Ethernet50/1
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 169.27.195.1/32
+   ip address 169.27.195.0/32
 ```
 
 ## Routing
@@ -1547,6 +1730,21 @@ no ip routing vrf MGMT
 | default | False |
 | MGMT | false |
 
+### Static Routes
+
+#### Static Routes Summary
+
+| VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
+| --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
+| MGMT | 0.0.0.0/0 | 10.176.143.129 | - | 1 | - | - | - |
+
+#### Static Routes Device Configuration
+
+```eos
+!
+ip route vrf MGMT 0.0.0.0/0 10.176.143.129
+```
+
 ### Router BGP
 
 ASN Notation: asplain
@@ -1555,7 +1753,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65020.1 | 169.27.195.1 |
+| 65210.37100 | 169.27.195.0 |
 
 | BGP Tuning |
 | ---------- |
@@ -1588,77 +1786,90 @@ ASN Notation: asplain
 | 100.83.88.9 | 65213.37370 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.17 | 65214 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 | 100.83.88.25 | 65214 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.41 | 65021.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.43 | 65021.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.49 | 65021.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.51 | 65021.2 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.57 | 65021.3 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.59 | 65021.3 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.65 | 65021.4 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.67 | 65021.4 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.73 | 65021.5 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.75 | 65021.5 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.81 | 65021.6 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.83 | 65021.6 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.89 | 65021.7 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.91 | 65021.7 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.97 | 65021.8 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.99 | 65021.8 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.105 | 65021.9 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.107 | 65021.9 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.113 | 65021.10 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.115 | 65021.10 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.121 | 65021.11 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.123 | 65021.11 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.129 | 65021.12 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.131 | 65021.12 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.137 | 65021.13 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.139 | 65021.13 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.145 | 65021.14 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.147 | 65021.14 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.153 | 65021.15 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.155 | 65021.15 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.161 | 65021.16 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.163 | 65021.16 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.169 | 65021.17 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.171 | 65021.17 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.177 | 65021.18 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.179 | 65021.18 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.185 | 65021.19 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.187 | 65021.19 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.193 | 65021.20 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.195 | 65021.20 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.201 | 65021.21 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.203 | 65021.21 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.209 | 65021.22 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.211 | 65021.22 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.217 | 65021.23 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.219 | 65021.23 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.225 | 65021.24 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.227 | 65021.24 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.233 | 65021.25 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.235 | 65021.25 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.241 | 65021.26 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.243 | 65021.26 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.249 | 65021.27 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.100.251 | 65021.27 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.1 | 65021.28 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.3 | 65021.28 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.9 | 65021.29 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.11 | 65021.29 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.17 | 65021.30 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.19 | 65021.30 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.25 | 65021.31 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.27 | 65021.31 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.33 | 65021.32 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.101.35 | 65021.32 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.1 | 65210.37101 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.3 | 65210.37101 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.5 | 65210.37101 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.7 | 65210.37101 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.9 | 65210.37101 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.11 | 65210.37101 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.17 | 65210.37102 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.19 | 65210.37102 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.21 | 65210.37102 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.23 | 65210.37102 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.25 | 65210.37102 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.27 | 65210.37102 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.33 | 65210.37105 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.35 | 65210.37105 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.49 | 5210.37103 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.51 | 5210.37103 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.53 | 5210.37103 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.65 | 65210.37106 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.67 | 65210.37106 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.69 | 65210.37106 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.71 | 65210.37106 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.81 | 65210.37104 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.83 | 65210.37104 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.97 | 65021.7 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.99 | 65021.7 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.113 | 65021.8 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.115 | 65021.8 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.117 | 65021.8 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.119 | 65021.8 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.129 | 65021.9 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.131 | 65021.9 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.145 | 65021.10 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.147 | 65021.10 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.161 | 65021.11 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.163 | 65021.11 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.177 | 65021.12 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.179 | 65021.12 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.193 | 65021.13 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.195 | 65021.13 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.209 | 65021.14 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.211 | 65021.14 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.225 | 65021.15 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.227 | 65021.15 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.241 | 65021.16 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.243 | 65021.16 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.1 | 65021.17 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.3 | 65021.17 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.17 | 65021.18 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.19 | 65021.18 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.33 | 65021.19 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.35 | 65021.19 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.49 | 65021.20 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.51 | 65021.20 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.65 | 65021.21 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.67 | 65021.21 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.81 | 65021.22 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.83 | 65021.22 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.97 | 65021.23 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.99 | 65021.23 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.113 | 65021.24 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.115 | 65021.24 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.129 | 65021.25 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.131 | 65021.25 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.145 | 65021.26 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.147 | 65021.26 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.161 | 65021.27 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.163 | 65021.27 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.177 | 65021.28 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.179 | 65021.28 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.193 | 65021.29 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.195 | 65021.29 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.209 | 65021.30 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.211 | 65021.30 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.225 | 65021.31 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.227 | 65021.31 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.241 | 65021.32 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.95.243 | 65021.32 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
 ```eos
 !
-router bgp 65020.1
-   router-id 169.27.195.1
+router bgp 65210.37100
+   router-id 169.27.195.0
    update wait-install
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
@@ -1675,208 +1886,247 @@ router bgp 65020.1
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
    neighbor 100.83.88.1 peer group P2P-IPv4-eBGP-PEERS
    neighbor 100.83.88.1 remote-as 65213.37370
-   neighbor 100.83.88.1 description media-PTP-1_Ethernet49/1
+   neighbor 100.83.88.1 description media-PTP-1_Ethernet49
    neighbor 100.83.88.9 peer group P2P-IPv4-eBGP-PEERS
    neighbor 100.83.88.9 remote-as 65213.37370
-   neighbor 100.83.88.9 description media-PTP-2_Ethernet49/1
+   neighbor 100.83.88.9 description media-PTP-2_Ethernet49
    neighbor 100.83.88.17 peer group P2P-IPv4-eBGP-PEERS
    neighbor 100.83.88.17 remote-as 65214
-   neighbor 100.83.88.17 description border-leaf1_Ethernet33/1
+   neighbor 100.83.88.17 description border-leaf1_Ethernet31/1
    neighbor 100.83.88.25 peer group P2P-IPv4-eBGP-PEERS
    neighbor 100.83.88.25 remote-as 65214
-   neighbor 100.83.88.25 description border-leaf2_Ethernet33/1
-   neighbor 100.83.100.41 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.41 remote-as 65021.1
-   neighbor 100.83.100.41 description red-leaf1_Ethernet49/1
-   neighbor 100.83.100.43 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.43 remote-as 65021.1
-   neighbor 100.83.100.43 description red-leaf1_Ethernet50/1
-   neighbor 100.83.100.49 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.49 remote-as 65021.2
-   neighbor 100.83.100.49 description red-leaf2_Ethernet49/1
-   neighbor 100.83.100.51 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.51 remote-as 65021.2
-   neighbor 100.83.100.51 description red-leaf2_Ethernet50/1
-   neighbor 100.83.100.57 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.57 remote-as 65021.3
-   neighbor 100.83.100.57 description red-leaf3_Ethernet49/1
-   neighbor 100.83.100.59 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.59 remote-as 65021.3
-   neighbor 100.83.100.59 description red-leaf3_Ethernet50/1
-   neighbor 100.83.100.65 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.65 remote-as 65021.4
-   neighbor 100.83.100.65 description red-leaf4_Ethernet49/1
-   neighbor 100.83.100.67 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.67 remote-as 65021.4
-   neighbor 100.83.100.67 description red-leaf4_Ethernet50/1
-   neighbor 100.83.100.73 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.73 remote-as 65021.5
-   neighbor 100.83.100.73 description red-leaf5_Ethernet49/1
-   neighbor 100.83.100.75 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.75 remote-as 65021.5
-   neighbor 100.83.100.75 description red-leaf5_Ethernet50/1
-   neighbor 100.83.100.81 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.81 remote-as 65021.6
-   neighbor 100.83.100.81 description red-leaf6_Ethernet49/1
-   neighbor 100.83.100.83 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.83 remote-as 65021.6
-   neighbor 100.83.100.83 description red-leaf6_Ethernet50/1
-   neighbor 100.83.100.89 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.89 remote-as 65021.7
-   neighbor 100.83.100.89 description red-leaf7_Ethernet49/1
-   neighbor 100.83.100.91 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.91 remote-as 65021.7
-   neighbor 100.83.100.91 description red-leaf7_Ethernet50/1
-   neighbor 100.83.100.97 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.97 remote-as 65021.8
-   neighbor 100.83.100.97 description red-leaf8_Ethernet49/1
-   neighbor 100.83.100.99 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.99 remote-as 65021.8
-   neighbor 100.83.100.99 description red-leaf8_Ethernet50/1
-   neighbor 100.83.100.105 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.105 remote-as 65021.9
-   neighbor 100.83.100.105 description red-leaf9_Ethernet49/1
-   neighbor 100.83.100.107 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.107 remote-as 65021.9
-   neighbor 100.83.100.107 description red-leaf9_Ethernet50/1
-   neighbor 100.83.100.113 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.113 remote-as 65021.10
-   neighbor 100.83.100.113 description red-leaf10_Ethernet49/1
-   neighbor 100.83.100.115 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.115 remote-as 65021.10
-   neighbor 100.83.100.115 description red-leaf10_Ethernet50/1
-   neighbor 100.83.100.121 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.121 remote-as 65021.11
-   neighbor 100.83.100.121 description red-leaf11_Ethernet49/1
-   neighbor 100.83.100.123 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.123 remote-as 65021.11
-   neighbor 100.83.100.123 description red-leaf11_Ethernet50/1
-   neighbor 100.83.100.129 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.129 remote-as 65021.12
-   neighbor 100.83.100.129 description red-leaf12_Ethernet49/1
-   neighbor 100.83.100.131 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.131 remote-as 65021.12
-   neighbor 100.83.100.131 description red-leaf12_Ethernet50/1
-   neighbor 100.83.100.137 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.137 remote-as 65021.13
-   neighbor 100.83.100.137 description red-leaf13_Ethernet49/1
-   neighbor 100.83.100.139 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.139 remote-as 65021.13
-   neighbor 100.83.100.139 description red-leaf13_Ethernet50/1
-   neighbor 100.83.100.145 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.145 remote-as 65021.14
-   neighbor 100.83.100.145 description red-leaf14_Ethernet49/1
-   neighbor 100.83.100.147 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.147 remote-as 65021.14
-   neighbor 100.83.100.147 description red-leaf14_Ethernet50/1
-   neighbor 100.83.100.153 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.153 remote-as 65021.15
-   neighbor 100.83.100.153 description red-leaf15_Ethernet49/1
-   neighbor 100.83.100.155 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.155 remote-as 65021.15
-   neighbor 100.83.100.155 description red-leaf15_Ethernet50/1
-   neighbor 100.83.100.161 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.161 remote-as 65021.16
-   neighbor 100.83.100.161 description red-leaf16_Ethernet49/1
-   neighbor 100.83.100.163 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.163 remote-as 65021.16
-   neighbor 100.83.100.163 description red-leaf16_Ethernet50/1
-   neighbor 100.83.100.169 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.169 remote-as 65021.17
-   neighbor 100.83.100.169 description red-leaf17_Ethernet49/1
-   neighbor 100.83.100.171 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.171 remote-as 65021.17
-   neighbor 100.83.100.171 description red-leaf17_Ethernet50/1
-   neighbor 100.83.100.177 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.177 remote-as 65021.18
-   neighbor 100.83.100.177 description red-leaf18_Ethernet49/1
-   neighbor 100.83.100.179 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.179 remote-as 65021.18
-   neighbor 100.83.100.179 description red-leaf18_Ethernet50/1
-   neighbor 100.83.100.185 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.185 remote-as 65021.19
-   neighbor 100.83.100.185 description red-leaf19_Ethernet49/1
-   neighbor 100.83.100.187 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.187 remote-as 65021.19
-   neighbor 100.83.100.187 description red-leaf19_Ethernet50/1
-   neighbor 100.83.100.193 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.193 remote-as 65021.20
-   neighbor 100.83.100.193 description red-leaf20_Ethernet49/1
-   neighbor 100.83.100.195 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.195 remote-as 65021.20
-   neighbor 100.83.100.195 description red-leaf20_Ethernet50/1
-   neighbor 100.83.100.201 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.201 remote-as 65021.21
-   neighbor 100.83.100.201 description red-leaf21_Ethernet49/1
-   neighbor 100.83.100.203 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.203 remote-as 65021.21
-   neighbor 100.83.100.203 description red-leaf21_Ethernet50/1
-   neighbor 100.83.100.209 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.209 remote-as 65021.22
-   neighbor 100.83.100.209 description red-leaf22_Ethernet49/1
-   neighbor 100.83.100.211 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.211 remote-as 65021.22
-   neighbor 100.83.100.211 description red-leaf22_Ethernet50/1
-   neighbor 100.83.100.217 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.217 remote-as 65021.23
-   neighbor 100.83.100.217 description red-leaf23_Ethernet49/1
-   neighbor 100.83.100.219 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.219 remote-as 65021.23
-   neighbor 100.83.100.219 description red-leaf23_Ethernet50/1
-   neighbor 100.83.100.225 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.225 remote-as 65021.24
-   neighbor 100.83.100.225 description red-leaf24_Ethernet49/1
-   neighbor 100.83.100.227 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.227 remote-as 65021.24
-   neighbor 100.83.100.227 description red-leaf24_Ethernet50/1
-   neighbor 100.83.100.233 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.233 remote-as 65021.25
-   neighbor 100.83.100.233 description red-leaf25_Ethernet49/1
-   neighbor 100.83.100.235 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.235 remote-as 65021.25
-   neighbor 100.83.100.235 description red-leaf25_Ethernet50/1
-   neighbor 100.83.100.241 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.241 remote-as 65021.26
-   neighbor 100.83.100.241 description red-leaf26_Ethernet49/1
-   neighbor 100.83.100.243 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.243 remote-as 65021.26
-   neighbor 100.83.100.243 description red-leaf26_Ethernet50/1
-   neighbor 100.83.100.249 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.249 remote-as 65021.27
-   neighbor 100.83.100.249 description red-leaf27_Ethernet49/1
-   neighbor 100.83.100.251 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.100.251 remote-as 65021.27
-   neighbor 100.83.100.251 description red-leaf27_Ethernet50/1
-   neighbor 100.83.101.1 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.1 remote-as 65021.28
-   neighbor 100.83.101.1 description red-leaf28_Ethernet49/1
-   neighbor 100.83.101.3 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.3 remote-as 65021.28
-   neighbor 100.83.101.3 description red-leaf28_Ethernet50/1
-   neighbor 100.83.101.9 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.9 remote-as 65021.29
-   neighbor 100.83.101.9 description red-leaf29_Ethernet49/1
-   neighbor 100.83.101.11 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.11 remote-as 65021.29
-   neighbor 100.83.101.11 description red-leaf29_Ethernet50/1
-   neighbor 100.83.101.17 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.17 remote-as 65021.30
-   neighbor 100.83.101.17 description red-leaf30_Ethernet49/1
-   neighbor 100.83.101.19 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.19 remote-as 65021.30
-   neighbor 100.83.101.19 description red-leaf30_Ethernet50/1
-   neighbor 100.83.101.25 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.25 remote-as 65021.31
-   neighbor 100.83.101.25 description red-leaf31_Ethernet49/1
-   neighbor 100.83.101.27 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.27 remote-as 65021.31
-   neighbor 100.83.101.27 description red-leaf31_Ethernet50/1
-   neighbor 100.83.101.33 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.33 remote-as 65021.32
-   neighbor 100.83.101.33 description red-leaf32_Ethernet49/1
-   neighbor 100.83.101.35 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.101.35 remote-as 65021.32
-   neighbor 100.83.101.35 description red-leaf32_Ethernet50/1
+   neighbor 100.83.88.25 description border-leaf2_Ethernet31/1
+   neighbor 100.83.94.1 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.1 remote-as 65210.37101
+   neighbor 100.83.94.1 description red-leaf1_Ethernet2/1
+   neighbor 100.83.94.3 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.3 remote-as 65210.37101
+   neighbor 100.83.94.3 description red-leaf1_Ethernet2/2
+   neighbor 100.83.94.5 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.5 remote-as 65210.37101
+   neighbor 100.83.94.5 description red-leaf1_Ethernet2/3
+   neighbor 100.83.94.7 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.7 remote-as 65210.37101
+   neighbor 100.83.94.7 description red-leaf1_Ethernet2/4
+   neighbor 100.83.94.9 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.9 remote-as 65210.37101
+   neighbor 100.83.94.9 description red-leaf1_Ethernet3/1
+   neighbor 100.83.94.11 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.11 remote-as 65210.37101
+   neighbor 100.83.94.11 description red-leaf1_Ethernet3/2
+   neighbor 100.83.94.17 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.17 remote-as 65210.37102
+   neighbor 100.83.94.17 description red-leaf2_Ethernet2/1
+   neighbor 100.83.94.19 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.19 remote-as 65210.37102
+   neighbor 100.83.94.19 description red-leaf2_Ethernet2/3
+   neighbor 100.83.94.21 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.21 remote-as 65210.37102
+   neighbor 100.83.94.21 description red-leaf2_Ethernet3/1
+   neighbor 100.83.94.23 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.23 remote-as 65210.37102
+   neighbor 100.83.94.23 description red-leaf2_Ethernet2/2
+   neighbor 100.83.94.25 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.25 remote-as 65210.37102
+   neighbor 100.83.94.25 description red-leaf2_Ethernet2/4
+   neighbor 100.83.94.27 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.27 remote-as 65210.37102
+   neighbor 100.83.94.27 description red-leaf2_Ethernet3/2
+   neighbor 100.83.94.33 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.33 remote-as 65210.37105
+   neighbor 100.83.94.33 description red-leaf3_Ethernet55
+   neighbor 100.83.94.35 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.35 remote-as 65210.37105
+   neighbor 100.83.94.35 description red-leaf3_Ethernet56
+   neighbor 100.83.94.49 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.49 remote-as 5210.37103
+   neighbor 100.83.94.49 description red-leaf4_Ethernet2/1
+   neighbor 100.83.94.51 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.51 remote-as 5210.37103
+   neighbor 100.83.94.51 description red-leaf4_Ethernet2/3
+   neighbor 100.83.94.53 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.53 remote-as 5210.37103
+   neighbor 100.83.94.53 description red-leaf4_Ethernet2/2
+   neighbor 100.83.94.65 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.65 remote-as 65210.37106
+   neighbor 100.83.94.65 description red-leaf5_Ethernet56
+   neighbor 100.83.94.67 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.67 remote-as 65210.37106
+   neighbor 100.83.94.67 description red-leaf5_Ethernet54
+   neighbor 100.83.94.69 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.69 remote-as 65210.37106
+   neighbor 100.83.94.69 description red-leaf5_Ethernet55
+   neighbor 100.83.94.71 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.71 remote-as 65210.37106
+   neighbor 100.83.94.71 description red-leaf5_Ethernet53
+   neighbor 100.83.94.81 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.81 remote-as 65210.37104
+   neighbor 100.83.94.81 description red-leaf6_Ethernet2/2
+   neighbor 100.83.94.83 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.83 remote-as 65210.37104
+   neighbor 100.83.94.83 description red-leaf6_Ethernet2/1
+   neighbor 100.83.94.97 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.97 remote-as 65021.7
+   neighbor 100.83.94.97 description red-leaf7_Ethernet2/2
+   neighbor 100.83.94.99 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.99 remote-as 65021.7
+   neighbor 100.83.94.99 description red-leaf7_Ethernet2/1
+   neighbor 100.83.94.113 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.113 remote-as 65021.8
+   neighbor 100.83.94.113 description red-leaf8_Ethernet2/2
+   neighbor 100.83.94.115 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.115 remote-as 65021.8
+   neighbor 100.83.94.115 description red-leaf8_Ethernet2/1
+   neighbor 100.83.94.117 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.117 remote-as 65021.8
+   neighbor 100.83.94.117 description red-leaf8_Ethernet2/3
+   neighbor 100.83.94.119 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.119 remote-as 65021.8
+   neighbor 100.83.94.119 description red-leaf8_Ethernet2/4
+   neighbor 100.83.94.129 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.129 remote-as 65021.9
+   neighbor 100.83.94.129 description red-leaf9_Ethernet2/2
+   neighbor 100.83.94.131 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.131 remote-as 65021.9
+   neighbor 100.83.94.131 description red-leaf9_Ethernet2/1
+   neighbor 100.83.94.145 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.145 remote-as 65021.10
+   neighbor 100.83.94.145 description red-leaf10_Ethernet2/2
+   neighbor 100.83.94.147 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.147 remote-as 65021.10
+   neighbor 100.83.94.147 description red-leaf10_Ethernet2/1
+   neighbor 100.83.94.161 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.161 remote-as 65021.11
+   neighbor 100.83.94.161 description red-leaf11_Ethernet2/2
+   neighbor 100.83.94.163 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.163 remote-as 65021.11
+   neighbor 100.83.94.163 description red-leaf11_Ethernet2/1
+   neighbor 100.83.94.177 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.177 remote-as 65021.12
+   neighbor 100.83.94.177 description red-leaf12_Ethernet2/2
+   neighbor 100.83.94.179 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.179 remote-as 65021.12
+   neighbor 100.83.94.179 description red-leaf12_Ethernet2/1
+   neighbor 100.83.94.193 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.193 remote-as 65021.13
+   neighbor 100.83.94.193 description red-leaf13_Ethernet2/2
+   neighbor 100.83.94.195 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.195 remote-as 65021.13
+   neighbor 100.83.94.195 description red-leaf13_Ethernet2/1
+   neighbor 100.83.94.209 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.209 remote-as 65021.14
+   neighbor 100.83.94.209 description red-leaf14_Ethernet2/2
+   neighbor 100.83.94.211 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.211 remote-as 65021.14
+   neighbor 100.83.94.211 description red-leaf14_Ethernet2/1
+   neighbor 100.83.94.225 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.225 remote-as 65021.15
+   neighbor 100.83.94.225 description red-leaf15_Ethernet2/2
+   neighbor 100.83.94.227 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.227 remote-as 65021.15
+   neighbor 100.83.94.227 description red-leaf15_Ethernet2/1
+   neighbor 100.83.94.241 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.241 remote-as 65021.16
+   neighbor 100.83.94.241 description red-leaf16_Ethernet2/2
+   neighbor 100.83.94.243 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.243 remote-as 65021.16
+   neighbor 100.83.94.243 description red-leaf16_Ethernet2/1
+   neighbor 100.83.95.1 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.1 remote-as 65021.17
+   neighbor 100.83.95.1 description red-leaf17_Ethernet2/2
+   neighbor 100.83.95.3 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.3 remote-as 65021.17
+   neighbor 100.83.95.3 description red-leaf17_Ethernet2/1
+   neighbor 100.83.95.17 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.17 remote-as 65021.18
+   neighbor 100.83.95.17 description red-leaf18_Ethernet2/2
+   neighbor 100.83.95.19 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.19 remote-as 65021.18
+   neighbor 100.83.95.19 description red-leaf18_Ethernet2/1
+   neighbor 100.83.95.33 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.33 remote-as 65021.19
+   neighbor 100.83.95.33 description red-leaf19_Ethernet2/2
+   neighbor 100.83.95.35 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.35 remote-as 65021.19
+   neighbor 100.83.95.35 description red-leaf19_Ethernet2/1
+   neighbor 100.83.95.49 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.49 remote-as 65021.20
+   neighbor 100.83.95.49 description red-leaf20_Ethernet2/2
+   neighbor 100.83.95.51 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.51 remote-as 65021.20
+   neighbor 100.83.95.51 description red-leaf20_Ethernet2/1
+   neighbor 100.83.95.65 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.65 remote-as 65021.21
+   neighbor 100.83.95.65 description red-leaf21_Ethernet2/2
+   neighbor 100.83.95.67 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.67 remote-as 65021.21
+   neighbor 100.83.95.67 description red-leaf21_Ethernet2/1
+   neighbor 100.83.95.81 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.81 remote-as 65021.22
+   neighbor 100.83.95.81 description red-leaf22_Ethernet2/2
+   neighbor 100.83.95.83 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.83 remote-as 65021.22
+   neighbor 100.83.95.83 description red-leaf22_Ethernet2/1
+   neighbor 100.83.95.97 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.97 remote-as 65021.23
+   neighbor 100.83.95.97 description red-leaf23_Ethernet2/2
+   neighbor 100.83.95.99 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.99 remote-as 65021.23
+   neighbor 100.83.95.99 description red-leaf23_Ethernet2/1
+   neighbor 100.83.95.113 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.113 remote-as 65021.24
+   neighbor 100.83.95.113 description red-leaf24_Ethernet2/2
+   neighbor 100.83.95.115 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.115 remote-as 65021.24
+   neighbor 100.83.95.115 description red-leaf24_Ethernet2/1
+   neighbor 100.83.95.129 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.129 remote-as 65021.25
+   neighbor 100.83.95.129 description red-leaf25_Ethernet2/2
+   neighbor 100.83.95.131 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.131 remote-as 65021.25
+   neighbor 100.83.95.131 description red-leaf25_Ethernet2/1
+   neighbor 100.83.95.145 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.145 remote-as 65021.26
+   neighbor 100.83.95.145 description red-leaf26_Ethernet2/2
+   neighbor 100.83.95.147 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.147 remote-as 65021.26
+   neighbor 100.83.95.147 description red-leaf26_Ethernet2/1
+   neighbor 100.83.95.161 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.161 remote-as 65021.27
+   neighbor 100.83.95.161 description red-leaf27_Ethernet2/2
+   neighbor 100.83.95.163 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.163 remote-as 65021.27
+   neighbor 100.83.95.163 description red-leaf27_Ethernet2/1
+   neighbor 100.83.95.177 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.177 remote-as 65021.28
+   neighbor 100.83.95.177 description red-leaf28_Ethernet2/2
+   neighbor 100.83.95.179 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.179 remote-as 65021.28
+   neighbor 100.83.95.179 description red-leaf28_Ethernet2/1
+   neighbor 100.83.95.193 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.193 remote-as 65021.29
+   neighbor 100.83.95.193 description red-leaf29_Ethernet2/2
+   neighbor 100.83.95.195 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.195 remote-as 65021.29
+   neighbor 100.83.95.195 description red-leaf29_Ethernet2/1
+   neighbor 100.83.95.209 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.209 remote-as 65021.30
+   neighbor 100.83.95.209 description red-leaf30_Ethernet2/2
+   neighbor 100.83.95.211 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.211 remote-as 65021.30
+   neighbor 100.83.95.211 description red-leaf30_Ethernet2/1
+   neighbor 100.83.95.225 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.225 remote-as 65021.31
+   neighbor 100.83.95.225 description red-leaf31_Ethernet2/2
+   neighbor 100.83.95.227 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.227 remote-as 65021.31
+   neighbor 100.83.95.227 description red-leaf31_Ethernet2/1
+   neighbor 100.83.95.241 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.241 remote-as 65021.32
+   neighbor 100.83.95.241 description red-leaf32_Ethernet2/2
+   neighbor 100.83.95.243 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.95.243 remote-as 65021.32
+   neighbor 100.83.95.243 description red-leaf32_Ethernet2/1
    redistribute connected
    !
    address-family ipv4

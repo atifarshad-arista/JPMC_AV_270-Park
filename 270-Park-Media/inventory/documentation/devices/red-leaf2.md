@@ -655,12 +655,12 @@ switchport default mode routed
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet2/1 | P2P_red-spine1_Ethernet6/4/1 | - | 100.83.200.73/31 | default | 1500 | False | - | - |
-| Ethernet2/2 | P2P_red-spine1_Ethernet7/4/1 | - | 100.83.200.79/31 | default | 1500 | False | - | - |
-| Ethernet2/3 | P2P_red-spine1_Ethernet6/5/1 | - | 100.83.200.75/31 | default | 1500 | False | - | - |
-| Ethernet2/4 | P2P_red-spine1_Ethernet7/5/1 | - | 100.83.200.81/31 | default | 1500 | False | - | - |
-| Ethernet3/1 | P2P_red-spine1_Ethernet6/6/1 | - | 100.83.200.77/31 | default | 1500 | False | - | - |
-| Ethernet3/2 | P2P_red-spine1_Ethernet7/6/1 | - | 100.83.200.83/31 | default | 1500 | False | - | - |
+| Ethernet2/1 | P2P_red-spine1_Ethernet6/4/1 | - | 100.83.94.17/31 | default | 1500 | False | - | - |
+| Ethernet2/2 | P2P_red-spine1_Ethernet7/4/1 | - | 100.83.94.23/31 | default | 1500 | False | - | - |
+| Ethernet2/3 | P2P_red-spine1_Ethernet6/5/1 | - | 100.83.94.19/31 | default | 1500 | False | - | - |
+| Ethernet2/4 | P2P_red-spine1_Ethernet7/5/1 | - | 100.83.94.25/31 | default | 1500 | False | - | - |
+| Ethernet3/1 | P2P_red-spine1_Ethernet6/6/1 | - | 100.83.94.21/31 | default | 1500 | False | - | - |
+| Ethernet3/2 | P2P_red-spine1_Ethernet7/6/1 | - | 100.83.94.27/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
@@ -681,7 +681,7 @@ interface Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.73/31
+   ip address 100.83.94.17/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -694,7 +694,7 @@ interface Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.79/31
+   ip address 100.83.94.23/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -707,7 +707,7 @@ interface Ethernet2/3
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.75/31
+   ip address 100.83.94.19/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -720,7 +720,7 @@ interface Ethernet2/4
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.81/31
+   ip address 100.83.94.25/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -750,7 +750,7 @@ interface Ethernet3/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.77/31
+   ip address 100.83.94.21/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -763,7 +763,7 @@ interface Ethernet3/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.83/31
+   ip address 100.83.94.27/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -1678,12 +1678,12 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 100.83.200.72 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.200.74 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.200.76 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.200.78 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.200.80 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.200.82 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.16 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.18 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.20 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.22 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.24 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.26 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
@@ -1706,24 +1706,24 @@ router bgp 65210.37102
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
-   neighbor 100.83.200.72 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.72 remote-as 65210.37100
-   neighbor 100.83.200.72 description red-spine1_Ethernet6/4/1
-   neighbor 100.83.200.74 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.74 remote-as 65210.37100
-   neighbor 100.83.200.74 description red-spine1_Ethernet6/5/1
-   neighbor 100.83.200.76 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.76 remote-as 65210.37100
-   neighbor 100.83.200.76 description red-spine1_Ethernet6/6/1
-   neighbor 100.83.200.78 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.78 remote-as 65210.37100
-   neighbor 100.83.200.78 description red-spine1_Ethernet7/4/1
-   neighbor 100.83.200.80 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.80 remote-as 65210.37100
-   neighbor 100.83.200.80 description red-spine1_Ethernet7/5/1
-   neighbor 100.83.200.82 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.82 remote-as 65210.37100
-   neighbor 100.83.200.82 description red-spine1_Ethernet7/6/1
+   neighbor 100.83.94.16 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.16 remote-as 65210.37100
+   neighbor 100.83.94.16 description red-spine1_Ethernet6/4/1
+   neighbor 100.83.94.18 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.18 remote-as 65210.37100
+   neighbor 100.83.94.18 description red-spine1_Ethernet6/5/1
+   neighbor 100.83.94.20 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.20 remote-as 65210.37100
+   neighbor 100.83.94.20 description red-spine1_Ethernet6/6/1
+   neighbor 100.83.94.22 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.22 remote-as 65210.37100
+   neighbor 100.83.94.22 description red-spine1_Ethernet7/4/1
+   neighbor 100.83.94.24 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.24 remote-as 65210.37100
+   neighbor 100.83.94.24 description red-spine1_Ethernet7/5/1
+   neighbor 100.83.94.26 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.26 remote-as 65210.37100
+   neighbor 100.83.94.26 description red-spine1_Ethernet7/6/1
    redistribute connected
    !
    address-family ipv4

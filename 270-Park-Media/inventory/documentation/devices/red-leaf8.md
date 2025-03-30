@@ -634,8 +634,10 @@ switchport default mode routed
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet2/1 | P2P_red-spine1_Ethernet7/11/1 | - | 100.83.200.171/31 | default | 1500 | False | - | - |
-| Ethernet2/2 | P2P_red-spine1_Ethernet6/22/1 | - | 100.83.200.169/31 | default | 1500 | False | - | - |
+| Ethernet2/1 | P2P_red-spine1_Ethernet7/11/1 | - | 100.83.94.115/31 | default | 1500 | False | - | - |
+| Ethernet2/2 | P2P_red-spine1_Ethernet6/22/1 | - | 100.83.94.113/31 | default | 1500 | False | - | - |
+| Ethernet2/3 | P2P_red-spine1_Ethernet7/12/1 | - | 100.83.94.117/31 | default | 1500 | False | - | - |
+| Ethernet2/4 | P2P_red-spine1_Ethernet9/52/1 | - | 100.83.94.119/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
@@ -656,7 +658,7 @@ interface Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.171/31
+   ip address 100.83.94.115/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -669,7 +671,33 @@ interface Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.169/31
+   ip address 100.83.94.113/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet2/3
+   description P2P_red-spine1_Ethernet7/12/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.94.117/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet2/4
+   description P2P_red-spine1_Ethernet9/52/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.94.119/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -916,7 +944,7 @@ interface Ethernet48
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 169.27.195.9/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.2/32 |
 
 ##### IPv6
 
@@ -931,7 +959,7 @@ interface Ethernet48
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 169.27.195.9/32
+   ip address 169.27.195.2/32
 ```
 
 ## Routing
@@ -979,7 +1007,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65021.8 | 169.27.195.9 |
+| 65021.8 | 169.27.195.2 |
 
 | BGP Tuning |
 | ---------- |
@@ -1009,15 +1037,17 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 100.83.200.168 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.200.170 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.112 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.114 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.116 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.118 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
 ```eos
 !
 router bgp 65021.8
-   router-id 169.27.195.9
+   router-id 169.27.195.2
    update wait-install
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
@@ -1033,12 +1063,18 @@ router bgp 65021.8
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
-   neighbor 100.83.200.168 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.168 remote-as 65210.37100
-   neighbor 100.83.200.168 description red-spine1_Ethernet6/22/1
-   neighbor 100.83.200.170 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.170 remote-as 65210.37100
-   neighbor 100.83.200.170 description red-spine1_Ethernet7/11/1
+   neighbor 100.83.94.112 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.112 remote-as 65210.37100
+   neighbor 100.83.94.112 description red-spine1_Ethernet6/22/1
+   neighbor 100.83.94.114 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.114 remote-as 65210.37100
+   neighbor 100.83.94.114 description red-spine1_Ethernet7/11/1
+   neighbor 100.83.94.116 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.116 remote-as 65210.37100
+   neighbor 100.83.94.116 description red-spine1_Ethernet7/12/1
+   neighbor 100.83.94.118 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.118 remote-as 65210.37100
+   neighbor 100.83.94.118 description red-spine1_Ethernet9/52/1
    redistribute connected
    !
    address-family ipv4

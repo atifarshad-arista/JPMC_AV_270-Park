@@ -634,8 +634,8 @@ switchport default mode routed
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet2/1 | P2P_red-spine1_Ethernet7/15/1 | - | 100.83.200.243/31 | default | 1500 | False | - | - |
-| Ethernet2/2 | P2P_red-spine1_Ethernet6/25/1 | - | 100.83.200.241/31 | default | 1500 | False | - | - |
+| Ethernet2/1 | P2P_red-spine1_Ethernet7/15/1 | - | 100.83.94.163/31 | default | 1500 | False | - | - |
+| Ethernet2/2 | P2P_red-spine1_Ethernet6/25/1 | - | 100.83.94.161/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
@@ -656,7 +656,7 @@ interface Ethernet2/1
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.243/31
+   ip address 100.83.94.163/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -669,7 +669,7 @@ interface Ethernet2/2
    no shutdown
    mtu 1500
    no switchport
-   ip address 100.83.200.241/31
+   ip address 100.83.94.161/31
    ptp enable
    ptp announce interval 0
    ptp announce timeout 3
@@ -916,7 +916,7 @@ interface Ethernet48
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 169.27.195.12/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.2/32 |
 
 ##### IPv6
 
@@ -931,7 +931,7 @@ interface Ethernet48
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 169.27.195.12/32
+   ip address 169.27.195.2/32
 ```
 
 ## Routing
@@ -979,7 +979,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65021.11 | 169.27.195.12 |
+| 65021.11 | 169.27.195.2 |
 
 | BGP Tuning |
 | ---------- |
@@ -1009,15 +1009,15 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 100.83.200.240 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.200.242 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.160 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.94.162 | 65210.37100 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
 ```eos
 !
 router bgp 65021.11
-   router-id 169.27.195.12
+   router-id 169.27.195.2
    update wait-install
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
@@ -1033,12 +1033,12 @@ router bgp 65021.11
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
-   neighbor 100.83.200.240 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.240 remote-as 65210.37100
-   neighbor 100.83.200.240 description red-spine1_Ethernet6/25/1
-   neighbor 100.83.200.242 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.200.242 remote-as 65210.37100
-   neighbor 100.83.200.242 description red-spine1_Ethernet7/15/1
+   neighbor 100.83.94.160 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.160 remote-as 65210.37100
+   neighbor 100.83.94.160 description red-spine1_Ethernet6/25/1
+   neighbor 100.83.94.162 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.162 remote-as 65210.37100
+   neighbor 100.83.94.162 description red-spine1_Ethernet7/15/1
    redistribute connected
    !
    address-family ipv4

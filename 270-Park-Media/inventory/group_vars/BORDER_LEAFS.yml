@@ -5,55 +5,43 @@ border_leaf:
   defaults:
     platform: 7280CR3
     loopback_ipv4_pool: 169.27.195.0/25
-    uplink_switches: [ 'red-spine1', 'blue-spine1', 'green-spine1', 'green-spine2' ]
-    uplink_ipv4_pool: 100.83.88.0/23
+    uplink_switches: [ 'C160064-037B100A', 'C160064-037B200A', 'C160064-037B300A', 'C160064-037B301A' ]
+    uplink_ipv4_pool: 100.83.93.0/24
     spanning_tree_priority: 4096
     spanning_tree_mode: mstp
     filter:
       tenants: [ border ]
-    bgp_defaults:
-    # Literal bgp commands <str>
-      - bgp asn notation asdot
-      #- no bgp default ipv4-unicast
-      - timers bgp 5 15
-      - distance bgp 20 200 200
-      - graceful-restart restart-time 300
-      - graceful-restart
-      - maximum-paths 128
-      - neighbor default send-community
-    bgp_as: "65214"
-    ptp:
-      priority1: 30
-      priority2: 101
-      ttl: 8
-      monitor:
-        #enabled: <bool; default=True>
-        threshold:
-          offset_from_master: 500
-          mean_path_delay: 2500
-        missing_message:
-                sequence_ids:
-                  enabled: False
 
   nodes:
-    - name: border-leaf1
-      id: 3
+    - name: C160064-037B380A
+      id: 5
       loopback_ipv4_address: 169.27.195.70
+      bgp_as: "65214"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.143.138/27
       mgmt_gateway: 10.176.143.129
       filter:
-        tags: [ border-leaf1 ]
-      uplink_switch_interfaces: [ Ethernet33/1, Ethernet33/1 ]
-      ptp:
-        source_ip: 169.27.195.70
+        tags: [ C160064-037B380A ]
+      uplink_switches: [ 'C160064-037B100A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet33/1, Ethernet34/1 ]
+      uplink_switch_interfaces: [ Ethernet8/10/1, Ethernet8/11/1 ]
+       # uplink_switch_interfaces:
+      #   - Ethernet1-31/1-4
+      #   - Ethernet33-36/1-7
 
-    - name: border-leaf2
-      id: 4
+
+    - name: C160064-037B381A
+      id: 6
       loopback_ipv4_address: 169.27.195.71
+      bgp_as: "65214"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.143.167/27
       mgmt_gateway: 10.176.143.161
       filter:
-        tags: [ border-leaf2 ]
-      uplink_switch_interfaces: [ Ethernet34/1, Ethernet34/1 ]
-      ptp:
-        source_ip: 169.27.195.71
+        tags: [ C160064-037B381A ]
+      uplink_switches: [ 'C160064-037B100A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet33/1, Ethernet34/1 ]
+      uplink_switch_interfaces: [ Ethernet8/12/1, Ethernet8/13/1 ]
+      # uplink_switch_interfaces:
+      #   - Ethernet1-31/1-4
+      #   - Ethernet33-36/1-7

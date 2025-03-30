@@ -9,7 +9,7 @@ media_spine:
     bgp_defaults:
     # Literal bgp commands <str>
       - bgp asn notation asdot
-    # - no bgp default ipv4-unicast
+      - no bgp default ipv4-unicast
       - timers bgp 5 15
       - distance bgp 20 200 200
       - graceful-restart restart-time 300
@@ -18,10 +18,10 @@ media_spine:
       - neighbor default send-community
     filter:
       tenants: [ red ]
-    mgmt_interface: Management0
     ptp:
+      source_ip: 169.27.195.0
       priority1: 20
-      #priority2: 101
+      priority2: 101
       ttl: 8
       monitor:
         #enabled: <bool; default=True>
@@ -31,15 +31,10 @@ media_spine:
         missing_message:
                 sequence_ids:
                   enabled: False
-
-
   nodes:
-    - name: red-spine1
+    - name: C160064-037B100A
       id: 1
       loopback_ipv4_address: 169.27.195.0
+      mgmt_interface: Management0
       mgmt_ip: 10.176.143.139/27
       mgmt_gateway: 10.176.143.129
-      ptp:
-        source_ip: 169.27.195.0
-        priority2: 101
-
