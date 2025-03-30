@@ -65,8 +65,8 @@ port_profiles:
 network_ports:
   # Generic Port Settings
   - switches:
-      - blue-leaf.*
-      - red-leaf.*
+      - C160064-.*
+      # - red-leaf.*
     switch_ports:
       - Ethernet1-48
     profile: STATIC_MULTICAST
