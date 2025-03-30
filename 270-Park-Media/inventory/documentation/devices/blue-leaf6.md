@@ -40,6 +40,7 @@
   - [Service Routing Protocols Model](#service-routing-protocols-model)
   - [IP Routing](#ip-routing)
   - [IPv6 Routing](#ipv6-routing)
+  - [Static Routes](#static-routes)
   - [Router BGP](#router-bgp)
 - [Multicast](#multicast)
   - [IP IGMP Snooping](#ip-igmp-snooping)
@@ -63,7 +64,7 @@
 
 | Management Interface | Description | Type | VRF | IP Address | Gateway |
 | -------------------- | ----------- | ---- | --- | ---------- | ------- |
-| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.100.100.10/24 | - |
+| Management1 | OOB_MANAGEMENT | oob | MGMT | 10.166.80.46/27 | 10.166.80.33 |
 
 ##### IPv6
 
@@ -79,7 +80,7 @@ interface Management1
    description OOB_MANAGEMENT
    no shutdown
    vrf MGMT
-   ip address 10.100.100.10/24
+   ip address 10.166.80.46/27
 ```
 
 ### IP Name Servers
@@ -133,7 +134,7 @@ ntp server vrf MGMT 172.16.131.3 prefer iburst
 
 | Clock ID | Source IP | Priority 1 | Priority 2 | TTL | Domain | Mode | Forward Unicast |
 | -------- | --------- | ---------- | ---------- | --- | ------ | ---- | --------------- |
-| - | 172.31.1.12 | 30 | 103 | 8 | 100 | boundary | - |
+| - | 169.27.195.39 | 30 | 103 | 8 | 100 | boundary | - |
 
 #### PTP Device Configuration
 
@@ -143,7 +144,7 @@ ptp domain 100
 ptp mode boundary
 ptp priority1 30
 ptp priority2 103
-ptp source ip 172.31.1.12
+ptp source ip 169.27.195.39
 ptp ttl 8
 ptp monitor threshold offset-from-master 500
 ptp monitor threshold mean-path-delay 2500
@@ -634,8 +635,8 @@ switchport default mode routed
 
 | Interface | Description | Channel Group | IP Address | VRF |  MTU | Shutdown | ACL In | ACL Out |
 | --------- | ----------- | ------------- | ---------- | ----| ---- | -------- | ------ | ------- |
-| Ethernet49/1 | P2P_blue-spine1_Ethernet4/21/1 | - | 100.83.88.81/31 | default | 1500 | False | - | - |
-| Ethernet50/1 | P2P_blue-spine1_Ethernet4/22/1 | - | 100.83.88.83/31 | default | 1500 | False | - | - |
+| Ethernet2/1 | P2P_blue-spine1_Ethernet7/8/1 | - | 100.83.100.203/31 | default | 1500 | False | - | - |
+| Ethernet2/2 | P2P_blue-spine1_Ethernet6/9/1 | - | 100.83.100.201/31 | default | 1500 | False | - | - |
 
 #### Ethernet Interfaces Device Configuration
 
@@ -650,6 +651,32 @@ interface Ethernet2
    no shutdown
    switchport
    multicast ipv4 static
+!
+interface Ethernet2/1
+   description P2P_blue-spine1_Ethernet7/8/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.100.203/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
+!
+interface Ethernet2/2
+   description P2P_blue-spine1_Ethernet6/9/1
+   no shutdown
+   mtu 1500
+   no switchport
+   ip address 100.83.100.201/31
+   ptp enable
+   ptp announce interval 0
+   ptp announce timeout 3
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+   ptp transport ipv4
 !
 interface Ethernet3
    no shutdown
@@ -880,32 +907,6 @@ interface Ethernet48
    no shutdown
    switchport
    multicast ipv4 static
-!
-interface Ethernet49/1
-   description P2P_blue-spine1_Ethernet4/21/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.88.81/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
-!
-interface Ethernet50/1
-   description P2P_blue-spine1_Ethernet4/22/1
-   no shutdown
-   mtu 1500
-   no switchport
-   ip address 100.83.88.83/31
-   ptp enable
-   ptp announce interval 0
-   ptp announce timeout 3
-   ptp delay-req interval -3
-   ptp sync-message interval -3
-   ptp transport ipv4
 ```
 
 ### Loopback Interfaces
@@ -916,7 +917,7 @@ interface Ethernet50/1
 
 | Interface | Description | VRF | IP Address |
 | --------- | ----------- | --- | ---------- |
-| Loopback0 | ROUTER_ID | default | 169.27.195.12/32 |
+| Loopback0 | ROUTER_ID | default | 169.27.195.39/32 |
 
 ##### IPv6
 
@@ -931,7 +932,7 @@ interface Ethernet50/1
 interface Loopback0
    description ROUTER_ID
    no shutdown
-   ip address 169.27.195.12/32
+   ip address 169.27.195.39/32
 ```
 
 ## Routing
@@ -971,6 +972,21 @@ no ip routing vrf MGMT
 | default | False |
 | MGMT | false |
 
+### Static Routes
+
+#### Static Routes Summary
+
+| VRF | Destination Prefix | Next Hop IP | Exit interface | Administrative Distance | Tag | Route Name | Metric |
+| --- | ------------------ | ----------- | -------------- | ----------------------- | --- | ---------- | ------ |
+| MGMT | 0.0.0.0/0 | 10.166.80.33 | - | 1 | - | - | - |
+
+#### Static Routes Device Configuration
+
+```eos
+!
+ip route vrf MGMT 0.0.0.0/0 10.166.80.33
+```
+
 ### Router BGP
 
 ASN Notation: asplain
@@ -979,7 +995,7 @@ ASN Notation: asplain
 
 | BGP AS | Router ID |
 | ------ | --------- |
-| 65011.6 | 169.27.195.12 |
+| 65211.37204 | 169.27.195.39 |
 
 | BGP Tuning |
 | ---------- |
@@ -1009,15 +1025,15 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 100.83.88.80 | 65010.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
-| 100.83.88.82 | 65010.1 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.100.200 | 65211.37200 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
+| 100.83.100.202 | 65211.37200 | default | - | Inherited from peer group P2P-IPv4-eBGP-PEERS | Inherited from peer group P2P-IPv4-eBGP-PEERS | - | - | - | - | - | - |
 
 #### Router BGP Device Configuration
 
 ```eos
 !
-router bgp 65011.6
-   router-id 169.27.195.12
+router bgp 65211.37204
+   router-id 169.27.195.39
    update wait-install
    no bgp default ipv4-unicast
    maximum-paths 4 ecmp 4
@@ -1033,12 +1049,12 @@ router bgp 65011.6
    neighbor P2P-IPv4-eBGP-PEERS password 7 <removed>
    neighbor P2P-IPv4-eBGP-PEERS send-community
    neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
-   neighbor 100.83.88.80 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.80 remote-as 65010.1
-   neighbor 100.83.88.80 description blue-spine1_Ethernet4/21/1
-   neighbor 100.83.88.82 peer group P2P-IPv4-eBGP-PEERS
-   neighbor 100.83.88.82 remote-as 65010.1
-   neighbor 100.83.88.82 description blue-spine1_Ethernet4/22/1
+   neighbor 100.83.100.200 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.100.200 remote-as 65211.37200
+   neighbor 100.83.100.200 description blue-spine1_Ethernet6/9/1
+   neighbor 100.83.100.202 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.100.202 remote-as 65211.37200
+   neighbor 100.83.100.202 description blue-spine1_Ethernet7/8/1
    redistribute connected
    !
    address-family ipv4

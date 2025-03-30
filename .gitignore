@@ -1,6 +1,7 @@
 # uncomment to avoid uploading intended configurations in the repository
 # inventory/intended
 270-Park-Media/inventory/intended/structured_configs/
+270-Park-Media/inventory/documentation/devices
 270-Park-Control/inventory/intended/structured_configs/
 270-Park-Media/inventory/intended/configs/
 #270-Park-Control/inventory/intended/configs/
