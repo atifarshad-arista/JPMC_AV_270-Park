@@ -41,7 +41,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.34
       bgp_as: "65211.37201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.143.143/27
       mgmt_gateway: 10.176.143.129
       filter:
@@ -57,7 +57,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.35
       bgp_as: "65211.37202"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.143.172/27
       mgmt_gateway: 10.176.143.161
       filter:
@@ -89,7 +89,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.37
       bgp_as: "65211.37203"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.166.80.12/27
       mgmt_gateway: 10.166.80.1
       filter:
@@ -121,7 +121,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.39
       bgp_as: "65211.37204"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.166.80.46/27
       mgmt_gateway: 10.166.80.33
       filter:
@@ -137,7 +137,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.40
       bgp_as: "65211.01201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.142.84/28
       mgmt_gateway: 10.176.142.81
       filter:
@@ -153,7 +153,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.41
       bgp_as: "65211.02201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.142.103/28
       mgmt_gateway: 10.176.142.97
       filter:
@@ -169,7 +169,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.42
       bgp_as: "65211.03201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.136.155/28
       mgmt_gateway: 10.176.136.145
       filter:
@@ -201,7 +201,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.44
       bgp_as: "65211.05201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.136.219/28
       mgmt_gateway: 10.176.136.209
       filter:
@@ -233,7 +233,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.46
       bgp_as: "65211.07201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.137.27/28
       mgmt_gateway: 10.176.137.17
       filter:
@@ -265,7 +265,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.48
       bgp_as: "65211.09201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.137.91/28
       mgmt_gateway: 10.176.137.81
       filter:
@@ -313,7 +313,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.51
       bgp_as: "65211.13202"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.142.134/28
       mgmt_gateway: 10.176.142.129
       filter:
@@ -409,7 +409,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.57
       bgp_as: "65211.16201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.142.216/28
       mgmt_gateway: 10.176.142.209
       filter:
@@ -425,7 +425,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.58
       bgp_as: "65211.16202"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.142.232/28
       mgmt_gateway: 10.176.142.225
       filter:
@@ -473,7 +473,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.61
       bgp_as: "65211.49201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.141.168/28
       mgmt_gateway: 10.176.141.161
       filter:
@@ -489,7 +489,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.62
       bgp_as: "65211.50201"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.143.87/28
       mgmt_gateway: 10.176.143.81
       filter:
@@ -521,7 +521,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.64
       bgp_as: "65211.51202"
-      mgmt_interface: Management1
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.143.119/28
       mgmt_gateway: 10.176.143.113
       filter:
