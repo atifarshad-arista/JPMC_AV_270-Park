@@ -41,13 +41,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.34
       bgp_as: "65211.37201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.143.143/27
       mgmt_gateway: 10.176.143.129
       filter:
         tags: [ C160064-037B201A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/1/1, Ethernet7/1/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3, Ethernet2/4, Ethernet3/1, Ethernet3/2 ]
+      uplink_switch_interfaces: [ Ethernet6/1/1, Ethernet7/1/1, Ethernet6/2/1, Ethernet7/2/1, Ethernet6/3/1, Ethernet7/3/1 ]
       uplink_ipv4_pool: 100.83.88.0/28
       ptp:
         source_ip: 169.27.195.34
@@ -56,13 +57,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.35
       bgp_as: "65211.37202"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.143.172/27
       mgmt_gateway: 10.176.143.161
       filter:
         tags: [ C160064-037B202A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/2/1, Ethernet7/2/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3, Ethernet2/4, Ethernet3/1, Ethernet3/2 ]
+      uplink_switch_interfaces: [ Ethernet6/4/1, Ethernet7/4/1, Ethernet6/5/1, Ethernet7/5/1, Ethernet6/6/1, Ethernet7/6/1 ]
       uplink_ipv4_pool: 100.83.88.16/28
       ptp:
         source_ip: 169.27.195.35
@@ -71,13 +73,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.36
       bgp_as: "65211.37205"
+      mgmt_interface: Management1
       mgmt_ip: 10.166.80.7/27
       mgmt_gateway: 10.166.80.1
       filter:
         tags: [ C160064-037B205A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/3/1, Ethernet7/3/1 ]
+      uplink_interfaces: [ Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet3/32/2, Ethernet4/32/2 ]
       uplink_ipv4_pool: 100.83.88.32/28
       ptp:
         source_ip: 169.27.195.36
@@ -86,13 +89,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.37
       bgp_as: "65211.37203"
+      mgmt_interface: Management1
       mgmt_ip: 10.166.80.12/27
       mgmt_gateway: 10.166.80.1
       filter:
         tags: [ C160064-037B203A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/4/1, Ethernet7/4/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/7/1, Ethernet7/7/1, Ethernet6/8/1 ]
       uplink_ipv4_pool: 100.83.88.48/28
       ptp:
         source_ip: 169.27.195.37
@@ -101,13 +105,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.38
       bgp_as: "65211.37206"
+      mgmt_interface: Management1
       mgmt_ip: 10.166.80.41/27
       mgmt_gateway: 10.166.80.33
       filter:
         tags: [ C160064-037B206A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/5/1, Ethernet7/5/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet53/1, Ethernet54/1, Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet5/33/3, Ethernet3/32/3, Ethernet4/32/3, Ethernet3/31/4 ]
       uplink_ipv4_pool: 100.83.88.64/28
       ptp:
         source_ip: 169.27.195.38
@@ -116,13 +121,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.39
       bgp_as: "65211.37204"
+      mgmt_interface: Management1
       mgmt_ip: 10.166.80.46/27
       mgmt_gateway: 10.166.80.33
       filter:
         tags: [ C160064-037B204A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/6/1, Ethernet7/6/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet7/8/1, Ethernet6/9/1, Ethernet7/9/1 ]
       uplink_ipv4_pool: 100.83.88.80/28
       ptp:
         source_ip: 169.27.195.39
@@ -131,13 +137,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.40
       bgp_as: "65211.01201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.84/28
       mgmt_gateway: 10.176.142.81
       filter:
         tags: [ C160064-001B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/7/1, Ethernet7/7/1 ]
+      uplink_switch_interfaces: [ Ethernet6/23/1, Ethernet7/23/1 ]
       uplink_ipv4_pool: 100.83.88.96/28
       ptp:
         source_ip: 169.27.195.40
@@ -146,13 +153,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.41
       bgp_as: "65211.02201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.103/28
       mgmt_gateway: 10.176.142.97
       filter:
         tags: [ C160064-002B201A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/8/1, Ethernet7/8/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3, Ethernet2/4, Ethernet3/1 ]
+      uplink_switch_interfaces: [ Ethernet6/21/1, Ethernet7/21/1, Ethernet6/22/1, Ethernet7/22/1, Ethernet6/24/1 ]
       uplink_ipv4_pool: 100.83.88.112/28
       ptp:
         source_ip: 169.27.195.41
@@ -161,13 +169,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.42
       bgp_as: "65211.03201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.136.155/28
       mgmt_gateway: 10.176.136.145
       filter:
         tags: [ C160064-003B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/9/1, Ethernet7/9/1 ]
+      uplink_switch_interfaces: [ Ethernet6/20/1, Ethernet7/20/1 ]
       uplink_ipv4_pool: 100.83.88.128/28
       ptp:
         source_ip: 169.27.195.42
@@ -176,13 +185,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.43
       bgp_as: "65211.04201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.136.186/28
       mgmt_gateway: 10.176.136.177
       filter:
         tags: [ C160064-004B201A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/10/1, Ethernet7/10/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet53/1, Ethernet54/1, Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet3/33/1, Ethernet4/32/4, Ethernet5/33/4, Ethernet3/32/4 ]
       uplink_ipv4_pool: 100.83.88.144/28
       ptp:
         source_ip: 169.27.195.43
@@ -191,13 +201,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.44
       bgp_as: "65211.05201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.136.219/28
       mgmt_gateway: 10.176.136.209
       filter:
         tags: [ C160064-005B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/11/1, Ethernet7/11/1 ]
+      uplink_switch_interfaces: [ Ethernet6/19/1, Ethernet7/19/1 ]
       uplink_ipv4_pool: 100.83.88.160/28
       ptp:
         source_ip: 169.27.195.44
@@ -206,13 +217,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.45
       bgp_as: "65211.06201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.136.251/28
       mgmt_gateway: 10.176.136.241
       filter:
         tags: [ C160064-006B201A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/12/1, Ethernet7/12/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet53/1, Ethernet54/1, Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet5/34/2, Ethernet3/33/2, Ethernet4/33/1, Ethernet5/34/1 ]
       uplink_ipv4_pool: 100.83.88.176/28
       ptp:
         source_ip: 169.27.195.45
@@ -221,13 +233,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.46
       bgp_as: "65211.07201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.137.27/28
       mgmt_gateway: 10.176.137.17
       filter:
         tags: [ C160064-007B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/13/1, Ethernet7/13/1 ]
+      uplink_switch_interfaces: [ Ethernet6/18/1, Ethernet7/18/1 ]
       uplink_ipv4_pool: 100.83.88.192/28
       ptp:
         source_ip: 169.27.195.46
@@ -236,13 +249,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.47
       bgp_as: "65211.08201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.137.59/28
       mgmt_gateway: 10.176.137.49
       filter:
         tags: [ C160064-008B201A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/14/1, Ethernet7/14/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet53/1, Ethernet54/1, Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet4/33/3, Ethernet5/34/3, Ethernet3/33/3, Ethernet4/33/2 ]
       uplink_ipv4_pool: 100.83.88.208/28
       ptp:
         source_ip: 169.27.195.47
@@ -251,13 +265,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.48
       bgp_as: "65211.09201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.137.91/28
       mgmt_gateway: 10.176.137.81
       filter:
         tags: [ C160064-009B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/15/1, Ethernet7/15/1 ]
+      uplink_switch_interfaces: [ Ethernet6/17/1, Ethernet7/17/1 ]
       uplink_ipv4_pool: 100.83.88.224/28
       ptp:
         source_ip: 169.27.195.48
@@ -266,13 +281,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.49
       bgp_as: "65211.10201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.137.123/28
       mgmt_gateway: 10.176.137.113
       filter:
         tags: [ C160064-010B201A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/16/1, Ethernet7/16/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet53/1, Ethernet54/1, Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet3/34/4, Ethernet4/33/4, Ethernet5/34/4, Ethernet3/34/3 ]
       uplink_ipv4_pool: 100.83.88.240/28
       ptp:
         source_ip: 169.27.195.49
@@ -281,13 +297,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.50
       bgp_as: "65211.13201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.117/28
       mgmt_gateway: 10.176.142.113
       filter:
         tags: [ C160064-013B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/17/1, Ethernet7/17/1 ]
+      uplink_interfaces: [ Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet4/35/1, Ethernet5/35/1 ]
       uplink_ipv4_pool: 100.83.89.0/28
       ptp:
         source_ip: 169.27.195.50
@@ -296,13 +313,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.51
       bgp_as: "65211.13202"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.134/28
       mgmt_gateway: 10.176.142.129
       filter:
         tags: [ C160064-013B202A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/18/1, Ethernet7/18/1 ]
+      uplink_switch_interfaces: [ Ethernet6/16/1, Ethernet7/16/1 ]
       uplink_ipv4_pool: 100.83.89.16/28
       ptp:
         source_ip: 169.27.195.51
@@ -311,13 +329,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.52
       bgp_as: "65211.14201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.149/28
       mgmt_gateway: 10.176.142.145
       filter:
         tags: [ C160064-014B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/19/1, Ethernet7/19/1 ]
+      uplink_interfaces: [ Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet5/35/2, Ethernet3/35/1 ]
       uplink_ipv4_pool: 100.83.89.32/28
       ptp:
         source_ip: 169.27.195.52
@@ -326,13 +345,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.53
       bgp_as: "65211.14202"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.165/28
       mgmt_gateway: 10.176.142.161
       filter:
         tags: [ C160064-014B202A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/20/1, Ethernet7/20/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet53/1, Ethernet54/1, Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet4/35/3, Ethernet5/35/3, Ethernet3/35/2, Ethernet4/35/2 ]
       uplink_ipv4_pool: 100.83.89.48/28
       ptp:
         source_ip: 169.27.195.53
@@ -341,13 +361,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.54
       bgp_as: "65211.15201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.188/28
       mgmt_gateway: 10.176.142.177
       filter:
         tags: [ C160064-015B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/21/1, Ethernet7/21/1 ]
+      uplink_interfaces: [ Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet3/36/1, Ethernet4/36/1 ]
       uplink_ipv4_pool: 100.83.89.64/28
       ptp:
         source_ip: 169.27.195.54
@@ -356,13 +377,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.55
       bgp_as: "65211.15202"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.190/28
       mgmt_gateway: 10.176.142.177
       filter:
         tags: [ C160064-015B202A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/22/1, Ethernet7/22/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet54/1, Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet5/36/1, Ethernet3/35/4, Ethernet4/35/4 ]
       uplink_ipv4_pool: 100.83.89.80/28
       ptp:
         source_ip: 169.27.195.55
@@ -371,13 +393,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.56
       bgp_as: "65211.15203"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.192/28
       mgmt_gateway: 10.176.142.193
       filter:
         tags: [ C160064-015B203A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/23/1, Ethernet7/23/1 ]
+      uplink_interfaces: [ Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet5/35/4, Ethernet3/35/3 ]
       uplink_ipv4_pool: 100.83.89.96/28
       ptp:
         source_ip: 169.27.195.56
@@ -386,13 +409,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.57
       bgp_as: "65211.16201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.216/28
       mgmt_gateway: 10.176.142.209
       filter:
         tags: [ C160064-016B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/24/1, Ethernet7/24/1 ]
+      uplink_switch_interfaces: [ Ethernet6/15/1, Ethernet7/15/1 ]
       uplink_ipv4_pool: 100.83.89.112/28
       ptp:
         source_ip: 169.27.195.57
@@ -401,13 +425,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.58
       bgp_as: "65211.16202"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.232/28
       mgmt_gateway: 10.176.142.225
       filter:
         tags: [ C160064-016B202A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/25/1, Ethernet7/25/1 ]
+      uplink_switch_interfaces: [ Ethernet6/14/1, Ethernet7/14/1 ]
       uplink_ipv4_pool: 100.83.89.128/28
       ptp:
         source_ip: 169.27.195.58
@@ -416,13 +441,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.59
       bgp_as: "65211.17201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.249/28
       mgmt_gateway: 10.176.142.241
       filter:
         tags: [ C160064-017B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/26/1, Ethernet7/26/1 ]
+      uplink_interfaces: [ Ethernet54/1, Ethernet55/1 ]
+      uplink_switch_interfaces: [ Ethernet4/36/2, Ethernet5/36/2 ]
       uplink_ipv4_pool: 100.83.89.144/28
       ptp:
         source_ip: 169.27.195.59
@@ -431,13 +457,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.60
       bgp_as: "65211.46201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.141.120/28
       mgmt_gateway: 10.176.141.113
       filter:
         tags: [ C160064-046B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/27/1, Ethernet7/27/1 ]
+      uplink_interfaces: [ Ethernet54/1, Ethernet55/1 ]
+      uplink_switch_interfaces: [ Ethernet5/36/3, Ethernet3/36/2 ]
       uplink_ipv4_pool: 100.83.89.160/28
       ptp:
         source_ip: 169.27.195.60
@@ -446,6 +473,7 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.61
       bgp_as: "65211.49201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.141.168/28
       mgmt_gateway: 10.176.141.161
       filter:
@@ -461,13 +489,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.62
       bgp_as: "65211.50201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.143.87/28
       mgmt_gateway: 10.176.143.81
       filter:
         tags: [ C160064-050B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/29/1, Ethernet7/29/1 ]
+      uplink_switch_interfaces: [ Ethernet6/12/1, Ethernet7/12/1 ]
       uplink_ipv4_pool: 100.83.89.192/28
       ptp:
         source_ip: 169.27.195.62
@@ -476,13 +505,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.63
       bgp_as: "65211.51201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.143.101/28
       mgmt_gateway: 10.176.143.97
       filter:
         tags: [ C160064-051B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/30/1, Ethernet7/30/1 ]
+      uplink_interfaces: [ Ethernet54/1, Ethernet55/1 ]
+      uplink_switch_interfaces: [ Ethernet3/36/3, Ethernet4/36/3 ]
       uplink_ipv4_pool: 100.83.89.208/28
       ptp:
         source_ip: 169.27.195.63
@@ -491,13 +521,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.64
       bgp_as: "65211.51202"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.143.119/28
       mgmt_gateway: 10.176.143.113
       filter:
         tags: [ C160064-051B202A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/31/1, Ethernet7/31/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3 ]
+      uplink_switch_interfaces: [ Ethernet6/11/1, Ethernet7/11/1, Ethernet7/24/1 ]
       uplink_ipv4_pool: 100.83.89.224/28
       ptp:
         source_ip: 169.27.195.64
@@ -506,13 +537,14 @@ media_leaf:
       id: 1
       loopback_ipv4_address: 169.27.195.65
       bgp_as: "65211.56201"
+      mgmt_interface: Management1
       mgmt_ip: 10.176.142.22/28
       mgmt_gateway: 10.176.142.17
       filter:
         tags: [ C160064-056B201A ]
-      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
-      uplink_switch_interfaces: [ Ethernet6/32/1, Ethernet7/32/1 ]
+      uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
+      uplink_interfaces: [ Ethernet54/1, Ethernet55/1, Ethernet56/1 ]
+      uplink_switch_interfaces: [ Ethernet3/36/4, Ethernet4/36/4, Ethernet5/36/4 ]
       uplink_ipv4_pool: 100.83.89.240/28
       ptp:
         source_ip: 169.27.195.65

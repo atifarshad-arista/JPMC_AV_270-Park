@@ -99,138 +99,194 @@
 
 | Type | Node | Node Interface | Peer Type | Peer Node | Peer Interface |
 | ---- | ---- | -------------- | --------- | ----------| -------------- |
-| media_leaf | C160064-001B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/7/1 |
-| media_leaf | C160064-001B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/7/1 |
-| media_leaf | C160064-001B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/7/1 |
-| media_leaf | C160064-001B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/7/1 |
-| media_leaf | C160064-002B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/8/1 |
-| media_leaf | C160064-002B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/8/1 |
-| media_leaf | C160064-002B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/8/1 |
-| media_leaf | C160064-002B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/8/1 |
-| media_leaf | C160064-003B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/9/1 |
-| media_leaf | C160064-003B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/9/1 |
-| media_leaf | C160064-003B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/9/1 |
-| media_leaf | C160064-003B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/9/1 |
-| media_leaf | C160064-004B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/10/1 |
-| media_leaf | C160064-004B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/10/1 |
-| media_leaf | C160064-004B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/10/1 |
-| media_leaf | C160064-004B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/10/1 |
-| media_leaf | C160064-005B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/11/1 |
-| media_leaf | C160064-005B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/11/1 |
-| media_leaf | C160064-005B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/11/1 |
-| media_leaf | C160064-005B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/11/1 |
-| media_leaf | C160064-006B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/12/1 |
-| media_leaf | C160064-006B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/12/1 |
-| media_leaf | C160064-006B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/12/1 |
-| media_leaf | C160064-006B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/12/1 |
-| media_leaf | C160064-007B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/13/1 |
-| media_leaf | C160064-007B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/13/1 |
-| media_leaf | C160064-007B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/13/1 |
-| media_leaf | C160064-007B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/13/1 |
-| media_leaf | C160064-008B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/14/1 |
-| media_leaf | C160064-008B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/14/1 |
-| media_leaf | C160064-008B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/14/1 |
-| media_leaf | C160064-008B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/14/1 |
-| media_leaf | C160064-009B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/15/1 |
-| media_leaf | C160064-009B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/15/1 |
-| media_leaf | C160064-009B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/15/1 |
-| media_leaf | C160064-009B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/15/1 |
-| media_leaf | C160064-010B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/16/1 |
-| media_leaf | C160064-010B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/16/1 |
-| media_leaf | C160064-010B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/16/1 |
-| media_leaf | C160064-010B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/16/1 |
-| media_leaf | C160064-013B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/17/1 |
-| media_leaf | C160064-013B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/17/1 |
-| media_leaf | C160064-013B102A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/18/1 |
-| media_leaf | C160064-013B102A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/18/1 |
-| media_leaf | C160064-013B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/17/1 |
-| media_leaf | C160064-013B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/17/1 |
-| media_leaf | C160064-013B202A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/18/1 |
-| media_leaf | C160064-013B202A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/18/1 |
-| media_leaf | C160064-014B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/19/1 |
-| media_leaf | C160064-014B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/19/1 |
-| media_leaf | C160064-014B102A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/20/1 |
-| media_leaf | C160064-014B102A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/20/1 |
-| media_leaf | C160064-014B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/19/1 |
-| media_leaf | C160064-014B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/19/1 |
-| media_leaf | C160064-014B202A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/20/1 |
-| media_leaf | C160064-014B202A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/20/1 |
-| media_leaf | C160064-015B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/21/1 |
-| media_leaf | C160064-015B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/21/1 |
-| media_leaf | C160064-015B102A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/22/1 |
-| media_leaf | C160064-015B102A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/22/1 |
-| media_leaf | C160064-015B103A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/23/1 |
-| media_leaf | C160064-015B103A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/23/1 |
-| media_leaf | C160064-015B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/21/1 |
-| media_leaf | C160064-015B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/21/1 |
-| media_leaf | C160064-015B202A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/22/1 |
-| media_leaf | C160064-015B202A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/22/1 |
-| media_leaf | C160064-015B203A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/23/1 |
-| media_leaf | C160064-015B203A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/23/1 |
-| media_leaf | C160064-016B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/24/1 |
-| media_leaf | C160064-016B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/24/1 |
-| media_leaf | C160064-016B102A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/25/1 |
-| media_leaf | C160064-016B102A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/25/1 |
-| media_leaf | C160064-016B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/24/1 |
-| media_leaf | C160064-016B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/24/1 |
-| media_leaf | C160064-016B202A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/25/1 |
-| media_leaf | C160064-016B202A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/25/1 |
-| media_leaf | C160064-017B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/26/1 |
-| media_leaf | C160064-017B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/26/1 |
-| media_leaf | C160064-017B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/26/1 |
-| media_leaf | C160064-017B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/26/1 |
+| media_leaf | C160064-001B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/23/1 |
+| media_leaf | C160064-001B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/23/1 |
+| media_leaf | C160064-001B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/23/1 |
+| media_leaf | C160064-001B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/23/1 |
+| media_leaf | C160064-002B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/21/1 |
+| media_leaf | C160064-002B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/21/1 |
+| media_leaf | C160064-002B101A | Ethernet2/3 | media_spine | C160064-037B100A | Ethernet6/22/1 |
+| media_leaf | C160064-002B101A | Ethernet2/4 | media_spine | C160064-037B100A | Ethernet7/22/1 |
+| media_leaf | C160064-002B101A | Ethernet3/1 | media_spine | C160064-037B100A | Ethernet6/24/1 |
+| media_leaf | C160064-002B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/21/1 |
+| media_leaf | C160064-002B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/21/1 |
+| media_leaf | C160064-002B201A | Ethernet2/3 | media_spine | C160064-037B200A | Ethernet6/22/1 |
+| media_leaf | C160064-002B201A | Ethernet2/4 | media_spine | C160064-037B200A | Ethernet7/22/1 |
+| media_leaf | C160064-002B201A | Ethernet3/1 | media_spine | C160064-037B200A | Ethernet6/24/1 |
+| media_leaf | C160064-003B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/20/1 |
+| media_leaf | C160064-003B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/20/1 |
+| media_leaf | C160064-003B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/20/1 |
+| media_leaf | C160064-003B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/20/1 |
+| media_leaf | C160064-004B101A | Ethernet53/1 | media_spine | C160064-037B100A | Ethernet3/33/1 |
+| media_leaf | C160064-004B101A | Ethernet54/1 | media_spine | C160064-037B100A | Ethernet4/32/4 |
+| media_leaf | C160064-004B101A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet5/33/4 |
+| media_leaf | C160064-004B101A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet3/32/4 |
+| media_leaf | C160064-004B201A | Ethernet53/1 | media_spine | C160064-037B200A | Ethernet3/33/1 |
+| media_leaf | C160064-004B201A | Ethernet54/1 | media_spine | C160064-037B200A | Ethernet4/32/4 |
+| media_leaf | C160064-004B201A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet5/33/4 |
+| media_leaf | C160064-004B201A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet3/32/4 |
+| media_leaf | C160064-005B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/19/1 |
+| media_leaf | C160064-005B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/19/1 |
+| media_leaf | C160064-005B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/19/1 |
+| media_leaf | C160064-005B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/19/1 |
+| media_leaf | C160064-006B101A | Ethernet53/1 | media_spine | C160064-037B100A | Ethernet5/34/2 |
+| media_leaf | C160064-006B101A | Ethernet54/1 | media_spine | C160064-037B100A | Ethernet3/33/2 |
+| media_leaf | C160064-006B101A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet4/33/1 |
+| media_leaf | C160064-006B101A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet5/34/1 |
+| media_leaf | C160064-006B201A | Ethernet53/1 | media_spine | C160064-037B200A | Ethernet5/34/2 |
+| media_leaf | C160064-006B201A | Ethernet54/1 | media_spine | C160064-037B200A | Ethernet3/33/2 |
+| media_leaf | C160064-006B201A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet4/33/1 |
+| media_leaf | C160064-006B201A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet5/34/1 |
+| media_leaf | C160064-007B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/18/1 |
+| media_leaf | C160064-007B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/18/1 |
+| media_leaf | C160064-007B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/18/1 |
+| media_leaf | C160064-007B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/18/1 |
+| media_leaf | C160064-008B101A | Ethernet53/1 | media_spine | C160064-037B100A | Ethernet4/33/3 |
+| media_leaf | C160064-008B101A | Ethernet54/1 | media_spine | C160064-037B100A | Ethernet5/34/3 |
+| media_leaf | C160064-008B101A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet3/33/3 |
+| media_leaf | C160064-008B101A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet4/33/2 |
+| media_leaf | C160064-008B201A | Ethernet53/1 | media_spine | C160064-037B200A | Ethernet4/33/3 |
+| media_leaf | C160064-008B201A | Ethernet54/1 | media_spine | C160064-037B200A | Ethernet5/34/3 |
+| media_leaf | C160064-008B201A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet3/33/3 |
+| media_leaf | C160064-008B201A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet4/33/2 |
+| media_leaf | C160064-009B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/17/1 |
+| media_leaf | C160064-009B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/17/1 |
+| media_leaf | C160064-009B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/17/1 |
+| media_leaf | C160064-009B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/17/1 |
+| media_leaf | C160064-010B101A | Ethernet53/1 | media_spine | C160064-037B100A | Ethernet3/34/4 |
+| media_leaf | C160064-010B101A | Ethernet54/1 | media_spine | C160064-037B100A | Ethernet4/33/4 |
+| media_leaf | C160064-010B101A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet5/34/4 |
+| media_leaf | C160064-010B101A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet3/34/3 |
+| media_leaf | C160064-010B201A | Ethernet53/1 | media_spine | C160064-037B200A | Ethernet3/34/4 |
+| media_leaf | C160064-010B201A | Ethernet54/1 | media_spine | C160064-037B200A | Ethernet4/33/4 |
+| media_leaf | C160064-010B201A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet5/34/4 |
+| media_leaf | C160064-010B201A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet3/34/3 |
+| media_leaf | C160064-013B101A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet4/35/1 |
+| media_leaf | C160064-013B101A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet5/35/1 |
+| media_leaf | C160064-013B102A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/16/1 |
+| media_leaf | C160064-013B102A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/16/1 |
+| media_leaf | C160064-013B201A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet4/35/1 |
+| media_leaf | C160064-013B201A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet5/35/1 |
+| media_leaf | C160064-013B202A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/16/1 |
+| media_leaf | C160064-013B202A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/16/1 |
+| media_leaf | C160064-014B101A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet5/35/2 |
+| media_leaf | C160064-014B101A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet3/35/1 |
+| media_leaf | C160064-014B102A | Ethernet53/1 | media_spine | C160064-037B100A | Ethernet4/35/3 |
+| media_leaf | C160064-014B102A | Ethernet54/1 | media_spine | C160064-037B100A | Ethernet5/35/3 |
+| media_leaf | C160064-014B102A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet3/35/2 |
+| media_leaf | C160064-014B102A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet4/35/2 |
+| media_leaf | C160064-014B201A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet5/35/2 |
+| media_leaf | C160064-014B201A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet3/35/1 |
+| media_leaf | C160064-014B202A | Ethernet53/1 | media_spine | C160064-037B200A | Ethernet4/35/3 |
+| media_leaf | C160064-014B202A | Ethernet54/1 | media_spine | C160064-037B200A | Ethernet5/35/3 |
+| media_leaf | C160064-014B202A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet3/35/2 |
+| media_leaf | C160064-014B202A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet4/35/2 |
+| media_leaf | C160064-015B101A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet3/36/1 |
+| media_leaf | C160064-015B101A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet4/36/1 |
+| media_leaf | C160064-015B102A | Ethernet54/1 | media_spine | C160064-037B100A | Ethernet5/36/1 |
+| media_leaf | C160064-015B102A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet3/35/4 |
+| media_leaf | C160064-015B102A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet4/35/4 |
+| media_leaf | C160064-015B103A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet5/35/4 |
+| media_leaf | C160064-015B103A | Ethernet56/1 | media_spine | C160064-037B100A | Ethernet3/35/3 |
+| media_leaf | C160064-015B201A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet3/36/1 |
+| media_leaf | C160064-015B201A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet4/36/1 |
+| media_leaf | C160064-015B202A | Ethernet54/1 | media_spine | C160064-037B200A | Ethernet5/36/1 |
+| media_leaf | C160064-015B202A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet3/35/4 |
+| media_leaf | C160064-015B202A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet4/35/4 |
+| media_leaf | C160064-015B203A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet5/35/4 |
+| media_leaf | C160064-015B203A | Ethernet56/1 | media_spine | C160064-037B200A | Ethernet3/35/3 |
+| media_leaf | C160064-016B101A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/15/1 |
+| media_leaf | C160064-016B101A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/15/1 |
+| media_leaf | C160064-016B102A | Ethernet2/1 | media_spine | C160064-037B100A | Ethernet6/14/1 |
+| media_leaf | C160064-016B102A | Ethernet2/2 | media_spine | C160064-037B100A | Ethernet7/14/1 |
+| media_leaf | C160064-016B201A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/15/1 |
+| media_leaf | C160064-016B201A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/15/1 |
+| media_leaf | C160064-016B202A | Ethernet2/1 | media_spine | C160064-037B200A | Ethernet6/14/1 |
+| media_leaf | C160064-016B202A | Ethernet2/2 | media_spine | C160064-037B200A | Ethernet7/14/1 |
+| media_leaf | C160064-017B101A | Ethernet54/1 | media_spine | C160064-037B100A | Ethernet4/36/2 |
+| media_leaf | C160064-017B101A | Ethernet55/1 | media_spine | C160064-037B100A | Ethernet5/36/2 |
+| media_leaf | C160064-017B201A | Ethernet54/1 | media_spine | C160064-037B200A | Ethernet4/36/2 |
+| media_leaf | C160064-017B201A | Ethernet55/1 | media_spine | C160064-037B200A | Ethernet5/36/2 |
+| media_spine | C160064-037B100A | Ethernet3/31/4 | media_leaf | C160064-037B106A | Ethernet56/1 |
+| media_spine | C160064-037B100A | Ethernet3/32/2 | media_leaf | C160064-037B105A | Ethernet55/1 |
+| media_spine | C160064-037B100A | Ethernet3/32/3 | media_leaf | C160064-037B106A | Ethernet54/1 |
+| media_spine | C160064-037B100A | Ethernet3/36/2 | media_leaf | C160064-046B101A | Ethernet55/1 |
+| media_spine | C160064-037B100A | Ethernet3/36/3 | media_leaf | C160064-051B101A | Ethernet54/1 |
+| media_spine | C160064-037B100A | Ethernet3/36/4 | media_leaf | C160064-056B101A | Ethernet54/1 |
+| media_spine | C160064-037B100A | Ethernet4/32/2 | media_leaf | C160064-037B105A | Ethernet56/1 |
+| media_spine | C160064-037B100A | Ethernet4/32/3 | media_leaf | C160064-037B106A | Ethernet55/1 |
+| media_spine | C160064-037B100A | Ethernet4/36/3 | media_leaf | C160064-051B101A | Ethernet55/1 |
+| media_spine | C160064-037B100A | Ethernet4/36/4 | media_leaf | C160064-056B101A | Ethernet55/1 |
+| media_spine | C160064-037B100A | Ethernet5/33/3 | media_leaf | C160064-037B106A | Ethernet53/1 |
+| media_spine | C160064-037B100A | Ethernet5/36/3 | media_leaf | C160064-046B101A | Ethernet54/1 |
+| media_spine | C160064-037B100A | Ethernet5/36/4 | media_leaf | C160064-056B101A | Ethernet56/1 |
 | media_spine | C160064-037B100A | Ethernet6/1/1 | media_leaf | C160064-037B101A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/2/1 | media_leaf | C160064-037B102A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/3/1 | media_leaf | C160064-037B105A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/4/1 | media_leaf | C160064-037B103A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/5/1 | media_leaf | C160064-037B106A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/6/1 | media_leaf | C160064-037B104A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/27/1 | media_leaf | C160064-046B101A | Ethernet2/1 |
+| media_spine | C160064-037B100A | Ethernet6/2/1 | media_leaf | C160064-037B101A | Ethernet2/3 |
+| media_spine | C160064-037B100A | Ethernet6/3/1 | media_leaf | C160064-037B101A | Ethernet3/1 |
+| media_spine | C160064-037B100A | Ethernet6/4/1 | media_leaf | C160064-037B102A | Ethernet2/1 |
+| media_spine | C160064-037B100A | Ethernet6/5/1 | media_leaf | C160064-037B102A | Ethernet2/3 |
+| media_spine | C160064-037B100A | Ethernet6/6/1 | media_leaf | C160064-037B102A | Ethernet3/1 |
+| media_spine | C160064-037B100A | Ethernet6/7/1 | media_leaf | C160064-037B103A | Ethernet2/1 |
+| media_spine | C160064-037B100A | Ethernet6/8/1 | media_leaf | C160064-037B103A | Ethernet2/3 |
+| media_spine | C160064-037B100A | Ethernet6/9/1 | media_leaf | C160064-037B104A | Ethernet2/2 |
+| media_spine | C160064-037B100A | Ethernet6/11/1 | media_leaf | C160064-051B102A | Ethernet2/1 |
+| media_spine | C160064-037B100A | Ethernet6/12/1 | media_leaf | C160064-050B101A | Ethernet2/1 |
 | media_spine | C160064-037B100A | Ethernet6/28/1 | media_leaf | C160064-049B101A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/29/1 | media_leaf | C160064-050B101A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/30/1 | media_leaf | C160064-051B101A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/31/1 | media_leaf | C160064-051B102A | Ethernet2/1 |
-| media_spine | C160064-037B100A | Ethernet6/32/1 | media_leaf | C160064-056B101A | Ethernet2/1 |
 | media_spine | C160064-037B100A | Ethernet7/1/1 | media_leaf | C160064-037B101A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/2/1 | media_leaf | C160064-037B102A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/3/1 | media_leaf | C160064-037B105A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/4/1 | media_leaf | C160064-037B103A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/5/1 | media_leaf | C160064-037B106A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/6/1 | media_leaf | C160064-037B104A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/27/1 | media_leaf | C160064-046B101A | Ethernet2/2 |
+| media_spine | C160064-037B100A | Ethernet7/2/1 | media_leaf | C160064-037B101A | Ethernet2/4 |
+| media_spine | C160064-037B100A | Ethernet7/3/1 | media_leaf | C160064-037B101A | Ethernet3/2 |
+| media_spine | C160064-037B100A | Ethernet7/4/1 | media_leaf | C160064-037B102A | Ethernet2/2 |
+| media_spine | C160064-037B100A | Ethernet7/5/1 | media_leaf | C160064-037B102A | Ethernet2/4 |
+| media_spine | C160064-037B100A | Ethernet7/6/1 | media_leaf | C160064-037B102A | Ethernet3/2 |
+| media_spine | C160064-037B100A | Ethernet7/7/1 | media_leaf | C160064-037B103A | Ethernet2/2 |
+| media_spine | C160064-037B100A | Ethernet7/8/1 | media_leaf | C160064-037B104A | Ethernet2/1 |
+| media_spine | C160064-037B100A | Ethernet7/9/1 | media_leaf | C160064-037B104A | Ethernet2/3 |
+| media_spine | C160064-037B100A | Ethernet7/11/1 | media_leaf | C160064-051B102A | Ethernet2/2 |
+| media_spine | C160064-037B100A | Ethernet7/12/1 | media_leaf | C160064-050B101A | Ethernet2/2 |
+| media_spine | C160064-037B100A | Ethernet7/24/1 | media_leaf | C160064-051B102A | Ethernet2/3 |
 | media_spine | C160064-037B100A | Ethernet7/28/1 | media_leaf | C160064-049B101A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/29/1 | media_leaf | C160064-050B101A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/30/1 | media_leaf | C160064-051B101A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/31/1 | media_leaf | C160064-051B102A | Ethernet2/2 |
-| media_spine | C160064-037B100A | Ethernet7/32/1 | media_leaf | C160064-056B101A | Ethernet2/2 |
 | media_spine | C160064-037B100A | Ethernet8/10/1 | border_leaf | C160064-037B380A | Ethernet33/1 |
 | media_spine | C160064-037B100A | Ethernet8/12/1 | border_leaf | C160064-037B381A | Ethernet33/1 |
 | media_spine | C160064-037B100A | Ethernet9/12/1 | ptp_leaf | C160064-037B370A | Ethernet33/1 |
 | media_spine | C160064-037B100A | Ethernet9/13/1 | ptp_leaf | C160064-037B371A | Ethernet33/1 |
+| media_spine | C160064-037B200A | Ethernet3/31/4 | media_leaf | C160064-037B206A | Ethernet56/1 |
+| media_spine | C160064-037B200A | Ethernet3/32/2 | media_leaf | C160064-037B205A | Ethernet55/1 |
+| media_spine | C160064-037B200A | Ethernet3/32/3 | media_leaf | C160064-037B206A | Ethernet54/1 |
+| media_spine | C160064-037B200A | Ethernet3/36/2 | media_leaf | C160064-046B201A | Ethernet55/1 |
+| media_spine | C160064-037B200A | Ethernet3/36/3 | media_leaf | C160064-051B201A | Ethernet54/1 |
+| media_spine | C160064-037B200A | Ethernet3/36/4 | media_leaf | C160064-056B201A | Ethernet54/1 |
+| media_spine | C160064-037B200A | Ethernet4/32/2 | media_leaf | C160064-037B205A | Ethernet56/1 |
+| media_spine | C160064-037B200A | Ethernet4/32/3 | media_leaf | C160064-037B206A | Ethernet55/1 |
+| media_spine | C160064-037B200A | Ethernet4/36/3 | media_leaf | C160064-051B201A | Ethernet55/1 |
+| media_spine | C160064-037B200A | Ethernet4/36/4 | media_leaf | C160064-056B201A | Ethernet55/1 |
+| media_spine | C160064-037B200A | Ethernet5/33/3 | media_leaf | C160064-037B206A | Ethernet53/1 |
+| media_spine | C160064-037B200A | Ethernet5/36/3 | media_leaf | C160064-046B201A | Ethernet54/1 |
+| media_spine | C160064-037B200A | Ethernet5/36/4 | media_leaf | C160064-056B201A | Ethernet56/1 |
 | media_spine | C160064-037B200A | Ethernet6/1/1 | media_leaf | C160064-037B201A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/2/1 | media_leaf | C160064-037B202A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/3/1 | media_leaf | C160064-037B205A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/4/1 | media_leaf | C160064-037B203A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/5/1 | media_leaf | C160064-037B206A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/6/1 | media_leaf | C160064-037B204A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/27/1 | media_leaf | C160064-046B201A | Ethernet2/1 |
+| media_spine | C160064-037B200A | Ethernet6/2/1 | media_leaf | C160064-037B201A | Ethernet2/3 |
+| media_spine | C160064-037B200A | Ethernet6/3/1 | media_leaf | C160064-037B201A | Ethernet3/1 |
+| media_spine | C160064-037B200A | Ethernet6/4/1 | media_leaf | C160064-037B202A | Ethernet2/1 |
+| media_spine | C160064-037B200A | Ethernet6/5/1 | media_leaf | C160064-037B202A | Ethernet2/3 |
+| media_spine | C160064-037B200A | Ethernet6/6/1 | media_leaf | C160064-037B202A | Ethernet3/1 |
+| media_spine | C160064-037B200A | Ethernet6/7/1 | media_leaf | C160064-037B203A | Ethernet2/1 |
+| media_spine | C160064-037B200A | Ethernet6/8/1 | media_leaf | C160064-037B203A | Ethernet2/3 |
+| media_spine | C160064-037B200A | Ethernet6/9/1 | media_leaf | C160064-037B204A | Ethernet2/2 |
+| media_spine | C160064-037B200A | Ethernet6/11/1 | media_leaf | C160064-051B202A | Ethernet2/1 |
+| media_spine | C160064-037B200A | Ethernet6/12/1 | media_leaf | C160064-050B201A | Ethernet2/1 |
 | media_spine | C160064-037B200A | Ethernet6/28/1 | media_leaf | C160064-049B201A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/29/1 | media_leaf | C160064-050B201A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/30/1 | media_leaf | C160064-051B201A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/31/1 | media_leaf | C160064-051B202A | Ethernet2/1 |
-| media_spine | C160064-037B200A | Ethernet6/32/1 | media_leaf | C160064-056B201A | Ethernet2/1 |
 | media_spine | C160064-037B200A | Ethernet7/1/1 | media_leaf | C160064-037B201A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/2/1 | media_leaf | C160064-037B202A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/3/1 | media_leaf | C160064-037B205A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/4/1 | media_leaf | C160064-037B203A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/5/1 | media_leaf | C160064-037B206A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/6/1 | media_leaf | C160064-037B204A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/27/1 | media_leaf | C160064-046B201A | Ethernet2/2 |
+| media_spine | C160064-037B200A | Ethernet7/2/1 | media_leaf | C160064-037B201A | Ethernet2/4 |
+| media_spine | C160064-037B200A | Ethernet7/3/1 | media_leaf | C160064-037B201A | Ethernet3/2 |
+| media_spine | C160064-037B200A | Ethernet7/4/1 | media_leaf | C160064-037B202A | Ethernet2/2 |
+| media_spine | C160064-037B200A | Ethernet7/5/1 | media_leaf | C160064-037B202A | Ethernet2/4 |
+| media_spine | C160064-037B200A | Ethernet7/6/1 | media_leaf | C160064-037B202A | Ethernet3/2 |
+| media_spine | C160064-037B200A | Ethernet7/7/1 | media_leaf | C160064-037B203A | Ethernet2/2 |
+| media_spine | C160064-037B200A | Ethernet7/8/1 | media_leaf | C160064-037B204A | Ethernet2/1 |
+| media_spine | C160064-037B200A | Ethernet7/9/1 | media_leaf | C160064-037B204A | Ethernet2/3 |
+| media_spine | C160064-037B200A | Ethernet7/11/1 | media_leaf | C160064-051B202A | Ethernet2/2 |
+| media_spine | C160064-037B200A | Ethernet7/12/1 | media_leaf | C160064-050B201A | Ethernet2/2 |
+| media_spine | C160064-037B200A | Ethernet7/24/1 | media_leaf | C160064-051B202A | Ethernet2/3 |
 | media_spine | C160064-037B200A | Ethernet7/28/1 | media_leaf | C160064-049B201A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/29/1 | media_leaf | C160064-050B201A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/30/1 | media_leaf | C160064-051B201A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/31/1 | media_leaf | C160064-051B202A | Ethernet2/2 |
-| media_spine | C160064-037B200A | Ethernet7/32/1 | media_leaf | C160064-056B201A | Ethernet2/2 |
 | media_spine | C160064-037B200A | Ethernet8/11/1 | border_leaf | C160064-037B380A | Ethernet34/1 |
 | media_spine | C160064-037B200A | Ethernet8/13/1 | border_leaf | C160064-037B381A | Ethernet34/1 |
 | media_spine | C160064-037B200A | Ethernet9/13/1 | ptp_leaf | C160064-037B370A | Ethernet34/1 |
@@ -246,28 +302,28 @@
 
 | Uplink IPv4 Pool | Available Addresses | Assigned addresses | Assigned Address % |
 | ---------------- | ------------------- | ------------------ | ------------------ |
-| 100.83.88.0/28 | 16 | 4 | 25.0 % |
-| 100.83.88.16/28 | 16 | 4 | 25.0 % |
+| 100.83.88.0/28 | 16 | 12 | 75.0 % |
+| 100.83.88.16/28 | 16 | 12 | 75.0 % |
 | 100.83.88.32/28 | 16 | 4 | 25.0 % |
-| 100.83.88.48/28 | 16 | 4 | 25.0 % |
-| 100.83.88.64/28 | 16 | 4 | 25.0 % |
-| 100.83.88.80/28 | 16 | 4 | 25.0 % |
+| 100.83.88.48/28 | 16 | 6 | 37.5 % |
+| 100.83.88.64/28 | 16 | 8 | 50.0 % |
+| 100.83.88.80/28 | 16 | 6 | 37.5 % |
 | 100.83.88.96/28 | 16 | 4 | 25.0 % |
-| 100.83.88.112/28 | 16 | 4 | 25.0 % |
+| 100.83.88.112/28 | 16 | 10 | 62.5 % |
 | 100.83.88.128/28 | 16 | 4 | 25.0 % |
-| 100.83.88.144/28 | 16 | 4 | 25.0 % |
+| 100.83.88.144/28 | 16 | 8 | 50.0 % |
 | 100.83.88.160/28 | 16 | 4 | 25.0 % |
-| 100.83.88.176/28 | 16 | 4 | 25.0 % |
+| 100.83.88.176/28 | 16 | 8 | 50.0 % |
 | 100.83.88.192/28 | 16 | 4 | 25.0 % |
-| 100.83.88.208/28 | 16 | 4 | 25.0 % |
+| 100.83.88.208/28 | 16 | 8 | 50.0 % |
 | 100.83.88.224/28 | 16 | 4 | 25.0 % |
-| 100.83.88.240/28 | 16 | 4 | 25.0 % |
+| 100.83.88.240/28 | 16 | 8 | 50.0 % |
 | 100.83.89.0/28 | 16 | 4 | 25.0 % |
 | 100.83.89.16/28 | 16 | 4 | 25.0 % |
 | 100.83.89.32/28 | 16 | 4 | 25.0 % |
-| 100.83.89.48/28 | 16 | 4 | 25.0 % |
+| 100.83.89.48/28 | 16 | 8 | 50.0 % |
 | 100.83.89.64/28 | 16 | 4 | 25.0 % |
-| 100.83.89.80/28 | 16 | 4 | 25.0 % |
+| 100.83.89.80/28 | 16 | 6 | 37.5 % |
 | 100.83.89.96/28 | 16 | 4 | 25.0 % |
 | 100.83.89.112/28 | 16 | 4 | 25.0 % |
 | 100.83.89.128/28 | 16 | 4 | 25.0 % |
@@ -276,31 +332,31 @@
 | 100.83.89.176/28 | 16 | 4 | 25.0 % |
 | 100.83.89.192/28 | 16 | 4 | 25.0 % |
 | 100.83.89.208/28 | 16 | 4 | 25.0 % |
-| 100.83.89.224/28 | 16 | 4 | 25.0 % |
-| 100.83.89.240/28 | 16 | 4 | 25.0 % |
+| 100.83.89.224/28 | 16 | 6 | 37.5 % |
+| 100.83.89.240/28 | 16 | 6 | 37.5 % |
 | 100.83.93.0/24 | 256 | 16 | 6.25 % |
-| 100.83.94.0/28 | 16 | 4 | 25.0 % |
-| 100.83.94.16/28 | 16 | 4 | 25.0 % |
+| 100.83.94.0/28 | 16 | 12 | 75.0 % |
+| 100.83.94.16/28 | 16 | 12 | 75.0 % |
 | 100.83.94.32/28 | 16 | 4 | 25.0 % |
-| 100.83.94.48/28 | 16 | 4 | 25.0 % |
-| 100.83.94.64/28 | 16 | 4 | 25.0 % |
-| 100.83.94.80/28 | 16 | 4 | 25.0 % |
+| 100.83.94.48/28 | 16 | 6 | 37.5 % |
+| 100.83.94.64/28 | 16 | 8 | 50.0 % |
+| 100.83.94.80/28 | 16 | 6 | 37.5 % |
 | 100.83.94.96/28 | 16 | 4 | 25.0 % |
-| 100.83.94.112/28 | 16 | 4 | 25.0 % |
+| 100.83.94.112/28 | 16 | 10 | 62.5 % |
 | 100.83.94.128/28 | 16 | 4 | 25.0 % |
-| 100.83.94.144/28 | 16 | 4 | 25.0 % |
+| 100.83.94.144/28 | 16 | 8 | 50.0 % |
 | 100.83.94.160/28 | 16 | 4 | 25.0 % |
-| 100.83.94.176/28 | 16 | 4 | 25.0 % |
+| 100.83.94.176/28 | 16 | 8 | 50.0 % |
 | 100.83.94.192/28 | 16 | 4 | 25.0 % |
-| 100.83.94.208/28 | 16 | 4 | 25.0 % |
+| 100.83.94.208/28 | 16 | 8 | 50.0 % |
 | 100.83.94.224/28 | 16 | 4 | 25.0 % |
-| 100.83.94.240/28 | 16 | 4 | 25.0 % |
+| 100.83.94.240/28 | 16 | 8 | 50.0 % |
 | 100.83.95.0/28 | 16 | 4 | 25.0 % |
 | 100.83.95.16/28 | 16 | 4 | 25.0 % |
 | 100.83.95.32/28 | 16 | 4 | 25.0 % |
-| 100.83.95.48/28 | 16 | 4 | 25.0 % |
+| 100.83.95.48/28 | 16 | 8 | 50.0 % |
 | 100.83.95.64/28 | 16 | 4 | 25.0 % |
-| 100.83.95.80/28 | 16 | 4 | 25.0 % |
+| 100.83.95.80/28 | 16 | 6 | 37.5 % |
 | 100.83.95.96/28 | 16 | 4 | 25.0 % |
 | 100.83.95.112/28 | 16 | 4 | 25.0 % |
 | 100.83.95.128/28 | 16 | 4 | 25.0 % |
@@ -309,145 +365,201 @@
 | 100.83.95.176/28 | 16 | 4 | 25.0 % |
 | 100.83.95.192/28 | 16 | 4 | 25.0 % |
 | 100.83.95.208/28 | 16 | 4 | 25.0 % |
-| 100.83.95.224/28 | 16 | 4 | 25.0 % |
-| 100.83.95.240/28 | 16 | 4 | 25.0 % |
+| 100.83.95.224/28 | 16 | 6 | 37.5 % |
+| 100.83.95.240/28 | 16 | 6 | 37.5 % |
 
 ### Point-To-Point Links Node Allocation
 
 | Node | Node Interface | Node IP Address | Peer Node | Peer Interface | Peer IP Address |
 | ---- | -------------- | --------------- | --------- | -------------- | --------------- |
-| C160064-001B101A | Ethernet2/1 | 100.83.94.97/31 | C160064-037B100A | Ethernet6/7/1 | 100.83.94.96/31 |
-| C160064-001B101A | Ethernet2/2 | 100.83.94.99/31 | C160064-037B100A | Ethernet7/7/1 | 100.83.94.98/31 |
-| C160064-001B201A | Ethernet2/1 | 100.83.88.97/31 | C160064-037B200A | Ethernet6/7/1 | 100.83.88.96/31 |
-| C160064-001B201A | Ethernet2/2 | 100.83.88.99/31 | C160064-037B200A | Ethernet7/7/1 | 100.83.88.98/31 |
-| C160064-002B101A | Ethernet2/1 | 100.83.94.113/31 | C160064-037B100A | Ethernet6/8/1 | 100.83.94.112/31 |
-| C160064-002B101A | Ethernet2/2 | 100.83.94.115/31 | C160064-037B100A | Ethernet7/8/1 | 100.83.94.114/31 |
-| C160064-002B201A | Ethernet2/1 | 100.83.88.113/31 | C160064-037B200A | Ethernet6/8/1 | 100.83.88.112/31 |
-| C160064-002B201A | Ethernet2/2 | 100.83.88.115/31 | C160064-037B200A | Ethernet7/8/1 | 100.83.88.114/31 |
-| C160064-003B101A | Ethernet2/1 | 100.83.94.129/31 | C160064-037B100A | Ethernet6/9/1 | 100.83.94.128/31 |
-| C160064-003B101A | Ethernet2/2 | 100.83.94.131/31 | C160064-037B100A | Ethernet7/9/1 | 100.83.94.130/31 |
-| C160064-003B201A | Ethernet2/1 | 100.83.88.129/31 | C160064-037B200A | Ethernet6/9/1 | 100.83.88.128/31 |
-| C160064-003B201A | Ethernet2/2 | 100.83.88.131/31 | C160064-037B200A | Ethernet7/9/1 | 100.83.88.130/31 |
-| C160064-004B101A | Ethernet2/1 | 100.83.94.145/31 | C160064-037B100A | Ethernet6/10/1 | 100.83.94.144/31 |
-| C160064-004B101A | Ethernet2/2 | 100.83.94.147/31 | C160064-037B100A | Ethernet7/10/1 | 100.83.94.146/31 |
-| C160064-004B201A | Ethernet2/1 | 100.83.88.145/31 | C160064-037B200A | Ethernet6/10/1 | 100.83.88.144/31 |
-| C160064-004B201A | Ethernet2/2 | 100.83.88.147/31 | C160064-037B200A | Ethernet7/10/1 | 100.83.88.146/31 |
-| C160064-005B101A | Ethernet2/1 | 100.83.94.161/31 | C160064-037B100A | Ethernet6/11/1 | 100.83.94.160/31 |
-| C160064-005B101A | Ethernet2/2 | 100.83.94.163/31 | C160064-037B100A | Ethernet7/11/1 | 100.83.94.162/31 |
-| C160064-005B201A | Ethernet2/1 | 100.83.88.161/31 | C160064-037B200A | Ethernet6/11/1 | 100.83.88.160/31 |
-| C160064-005B201A | Ethernet2/2 | 100.83.88.163/31 | C160064-037B200A | Ethernet7/11/1 | 100.83.88.162/31 |
-| C160064-006B101A | Ethernet2/1 | 100.83.94.177/31 | C160064-037B100A | Ethernet6/12/1 | 100.83.94.176/31 |
-| C160064-006B101A | Ethernet2/2 | 100.83.94.179/31 | C160064-037B100A | Ethernet7/12/1 | 100.83.94.178/31 |
-| C160064-006B201A | Ethernet2/1 | 100.83.88.177/31 | C160064-037B200A | Ethernet6/12/1 | 100.83.88.176/31 |
-| C160064-006B201A | Ethernet2/2 | 100.83.88.179/31 | C160064-037B200A | Ethernet7/12/1 | 100.83.88.178/31 |
-| C160064-007B101A | Ethernet2/1 | 100.83.94.193/31 | C160064-037B100A | Ethernet6/13/1 | 100.83.94.192/31 |
-| C160064-007B101A | Ethernet2/2 | 100.83.94.195/31 | C160064-037B100A | Ethernet7/13/1 | 100.83.94.194/31 |
-| C160064-007B201A | Ethernet2/1 | 100.83.88.193/31 | C160064-037B200A | Ethernet6/13/1 | 100.83.88.192/31 |
-| C160064-007B201A | Ethernet2/2 | 100.83.88.195/31 | C160064-037B200A | Ethernet7/13/1 | 100.83.88.194/31 |
-| C160064-008B101A | Ethernet2/1 | 100.83.94.209/31 | C160064-037B100A | Ethernet6/14/1 | 100.83.94.208/31 |
-| C160064-008B101A | Ethernet2/2 | 100.83.94.211/31 | C160064-037B100A | Ethernet7/14/1 | 100.83.94.210/31 |
-| C160064-008B201A | Ethernet2/1 | 100.83.88.209/31 | C160064-037B200A | Ethernet6/14/1 | 100.83.88.208/31 |
-| C160064-008B201A | Ethernet2/2 | 100.83.88.211/31 | C160064-037B200A | Ethernet7/14/1 | 100.83.88.210/31 |
-| C160064-009B101A | Ethernet2/1 | 100.83.94.225/31 | C160064-037B100A | Ethernet6/15/1 | 100.83.94.224/31 |
-| C160064-009B101A | Ethernet2/2 | 100.83.94.227/31 | C160064-037B100A | Ethernet7/15/1 | 100.83.94.226/31 |
-| C160064-009B201A | Ethernet2/1 | 100.83.88.225/31 | C160064-037B200A | Ethernet6/15/1 | 100.83.88.224/31 |
-| C160064-009B201A | Ethernet2/2 | 100.83.88.227/31 | C160064-037B200A | Ethernet7/15/1 | 100.83.88.226/31 |
-| C160064-010B101A | Ethernet2/1 | 100.83.94.241/31 | C160064-037B100A | Ethernet6/16/1 | 100.83.94.240/31 |
-| C160064-010B101A | Ethernet2/2 | 100.83.94.243/31 | C160064-037B100A | Ethernet7/16/1 | 100.83.94.242/31 |
-| C160064-010B201A | Ethernet2/1 | 100.83.88.241/31 | C160064-037B200A | Ethernet6/16/1 | 100.83.88.240/31 |
-| C160064-010B201A | Ethernet2/2 | 100.83.88.243/31 | C160064-037B200A | Ethernet7/16/1 | 100.83.88.242/31 |
-| C160064-013B101A | Ethernet2/1 | 100.83.95.1/31 | C160064-037B100A | Ethernet6/17/1 | 100.83.95.0/31 |
-| C160064-013B101A | Ethernet2/2 | 100.83.95.3/31 | C160064-037B100A | Ethernet7/17/1 | 100.83.95.2/31 |
-| C160064-013B102A | Ethernet2/1 | 100.83.95.17/31 | C160064-037B100A | Ethernet6/18/1 | 100.83.95.16/31 |
-| C160064-013B102A | Ethernet2/2 | 100.83.95.19/31 | C160064-037B100A | Ethernet7/18/1 | 100.83.95.18/31 |
-| C160064-013B201A | Ethernet2/1 | 100.83.89.1/31 | C160064-037B200A | Ethernet6/17/1 | 100.83.89.0/31 |
-| C160064-013B201A | Ethernet2/2 | 100.83.89.3/31 | C160064-037B200A | Ethernet7/17/1 | 100.83.89.2/31 |
-| C160064-013B202A | Ethernet2/1 | 100.83.89.17/31 | C160064-037B200A | Ethernet6/18/1 | 100.83.89.16/31 |
-| C160064-013B202A | Ethernet2/2 | 100.83.89.19/31 | C160064-037B200A | Ethernet7/18/1 | 100.83.89.18/31 |
-| C160064-014B101A | Ethernet2/1 | 100.83.95.33/31 | C160064-037B100A | Ethernet6/19/1 | 100.83.95.32/31 |
-| C160064-014B101A | Ethernet2/2 | 100.83.95.35/31 | C160064-037B100A | Ethernet7/19/1 | 100.83.95.34/31 |
-| C160064-014B102A | Ethernet2/1 | 100.83.95.49/31 | C160064-037B100A | Ethernet6/20/1 | 100.83.95.48/31 |
-| C160064-014B102A | Ethernet2/2 | 100.83.95.51/31 | C160064-037B100A | Ethernet7/20/1 | 100.83.95.50/31 |
-| C160064-014B201A | Ethernet2/1 | 100.83.89.33/31 | C160064-037B200A | Ethernet6/19/1 | 100.83.89.32/31 |
-| C160064-014B201A | Ethernet2/2 | 100.83.89.35/31 | C160064-037B200A | Ethernet7/19/1 | 100.83.89.34/31 |
-| C160064-014B202A | Ethernet2/1 | 100.83.89.49/31 | C160064-037B200A | Ethernet6/20/1 | 100.83.89.48/31 |
-| C160064-014B202A | Ethernet2/2 | 100.83.89.51/31 | C160064-037B200A | Ethernet7/20/1 | 100.83.89.50/31 |
-| C160064-015B101A | Ethernet2/1 | 100.83.95.65/31 | C160064-037B100A | Ethernet6/21/1 | 100.83.95.64/31 |
-| C160064-015B101A | Ethernet2/2 | 100.83.95.67/31 | C160064-037B100A | Ethernet7/21/1 | 100.83.95.66/31 |
-| C160064-015B102A | Ethernet2/1 | 100.83.95.81/31 | C160064-037B100A | Ethernet6/22/1 | 100.83.95.80/31 |
-| C160064-015B102A | Ethernet2/2 | 100.83.95.83/31 | C160064-037B100A | Ethernet7/22/1 | 100.83.95.82/31 |
-| C160064-015B103A | Ethernet2/1 | 100.83.95.97/31 | C160064-037B100A | Ethernet6/23/1 | 100.83.95.96/31 |
-| C160064-015B103A | Ethernet2/2 | 100.83.95.99/31 | C160064-037B100A | Ethernet7/23/1 | 100.83.95.98/31 |
-| C160064-015B201A | Ethernet2/1 | 100.83.89.65/31 | C160064-037B200A | Ethernet6/21/1 | 100.83.89.64/31 |
-| C160064-015B201A | Ethernet2/2 | 100.83.89.67/31 | C160064-037B200A | Ethernet7/21/1 | 100.83.89.66/31 |
-| C160064-015B202A | Ethernet2/1 | 100.83.89.81/31 | C160064-037B200A | Ethernet6/22/1 | 100.83.89.80/31 |
-| C160064-015B202A | Ethernet2/2 | 100.83.89.83/31 | C160064-037B200A | Ethernet7/22/1 | 100.83.89.82/31 |
-| C160064-015B203A | Ethernet2/1 | 100.83.89.97/31 | C160064-037B200A | Ethernet6/23/1 | 100.83.89.96/31 |
-| C160064-015B203A | Ethernet2/2 | 100.83.89.99/31 | C160064-037B200A | Ethernet7/23/1 | 100.83.89.98/31 |
-| C160064-016B101A | Ethernet2/1 | 100.83.95.113/31 | C160064-037B100A | Ethernet6/24/1 | 100.83.95.112/31 |
-| C160064-016B101A | Ethernet2/2 | 100.83.95.115/31 | C160064-037B100A | Ethernet7/24/1 | 100.83.95.114/31 |
-| C160064-016B102A | Ethernet2/1 | 100.83.95.129/31 | C160064-037B100A | Ethernet6/25/1 | 100.83.95.128/31 |
-| C160064-016B102A | Ethernet2/2 | 100.83.95.131/31 | C160064-037B100A | Ethernet7/25/1 | 100.83.95.130/31 |
-| C160064-016B201A | Ethernet2/1 | 100.83.89.113/31 | C160064-037B200A | Ethernet6/24/1 | 100.83.89.112/31 |
-| C160064-016B201A | Ethernet2/2 | 100.83.89.115/31 | C160064-037B200A | Ethernet7/24/1 | 100.83.89.114/31 |
-| C160064-016B202A | Ethernet2/1 | 100.83.89.129/31 | C160064-037B200A | Ethernet6/25/1 | 100.83.89.128/31 |
-| C160064-016B202A | Ethernet2/2 | 100.83.89.131/31 | C160064-037B200A | Ethernet7/25/1 | 100.83.89.130/31 |
-| C160064-017B101A | Ethernet2/1 | 100.83.95.145/31 | C160064-037B100A | Ethernet6/26/1 | 100.83.95.144/31 |
-| C160064-017B101A | Ethernet2/2 | 100.83.95.147/31 | C160064-037B100A | Ethernet7/26/1 | 100.83.95.146/31 |
-| C160064-017B201A | Ethernet2/1 | 100.83.89.145/31 | C160064-037B200A | Ethernet6/26/1 | 100.83.89.144/31 |
-| C160064-017B201A | Ethernet2/2 | 100.83.89.147/31 | C160064-037B200A | Ethernet7/26/1 | 100.83.89.146/31 |
+| C160064-001B101A | Ethernet2/1 | 100.83.94.97/31 | C160064-037B100A | Ethernet6/23/1 | 100.83.94.96/31 |
+| C160064-001B101A | Ethernet2/2 | 100.83.94.99/31 | C160064-037B100A | Ethernet7/23/1 | 100.83.94.98/31 |
+| C160064-001B201A | Ethernet2/1 | 100.83.88.97/31 | C160064-037B200A | Ethernet6/23/1 | 100.83.88.96/31 |
+| C160064-001B201A | Ethernet2/2 | 100.83.88.99/31 | C160064-037B200A | Ethernet7/23/1 | 100.83.88.98/31 |
+| C160064-002B101A | Ethernet2/1 | 100.83.94.113/31 | C160064-037B100A | Ethernet6/21/1 | 100.83.94.112/31 |
+| C160064-002B101A | Ethernet2/2 | 100.83.94.115/31 | C160064-037B100A | Ethernet7/21/1 | 100.83.94.114/31 |
+| C160064-002B101A | Ethernet2/3 | 100.83.94.117/31 | C160064-037B100A | Ethernet6/22/1 | 100.83.94.116/31 |
+| C160064-002B101A | Ethernet2/4 | 100.83.94.119/31 | C160064-037B100A | Ethernet7/22/1 | 100.83.94.118/31 |
+| C160064-002B101A | Ethernet3/1 | 100.83.94.121/31 | C160064-037B100A | Ethernet6/24/1 | 100.83.94.120/31 |
+| C160064-002B201A | Ethernet2/1 | 100.83.88.113/31 | C160064-037B200A | Ethernet6/21/1 | 100.83.88.112/31 |
+| C160064-002B201A | Ethernet2/2 | 100.83.88.115/31 | C160064-037B200A | Ethernet7/21/1 | 100.83.88.114/31 |
+| C160064-002B201A | Ethernet2/3 | 100.83.88.117/31 | C160064-037B200A | Ethernet6/22/1 | 100.83.88.116/31 |
+| C160064-002B201A | Ethernet2/4 | 100.83.88.119/31 | C160064-037B200A | Ethernet7/22/1 | 100.83.88.118/31 |
+| C160064-002B201A | Ethernet3/1 | 100.83.88.121/31 | C160064-037B200A | Ethernet6/24/1 | 100.83.88.120/31 |
+| C160064-003B101A | Ethernet2/1 | 100.83.94.129/31 | C160064-037B100A | Ethernet6/20/1 | 100.83.94.128/31 |
+| C160064-003B101A | Ethernet2/2 | 100.83.94.131/31 | C160064-037B100A | Ethernet7/20/1 | 100.83.94.130/31 |
+| C160064-003B201A | Ethernet2/1 | 100.83.88.129/31 | C160064-037B200A | Ethernet6/20/1 | 100.83.88.128/31 |
+| C160064-003B201A | Ethernet2/2 | 100.83.88.131/31 | C160064-037B200A | Ethernet7/20/1 | 100.83.88.130/31 |
+| C160064-004B101A | Ethernet53/1 | 100.83.94.145/31 | C160064-037B100A | Ethernet3/33/1 | 100.83.94.144/31 |
+| C160064-004B101A | Ethernet54/1 | 100.83.94.147/31 | C160064-037B100A | Ethernet4/32/4 | 100.83.94.146/31 |
+| C160064-004B101A | Ethernet55/1 | 100.83.94.149/31 | C160064-037B100A | Ethernet5/33/4 | 100.83.94.148/31 |
+| C160064-004B101A | Ethernet56/1 | 100.83.94.151/31 | C160064-037B100A | Ethernet3/32/4 | 100.83.94.150/31 |
+| C160064-004B201A | Ethernet53/1 | 100.83.88.145/31 | C160064-037B200A | Ethernet3/33/1 | 100.83.88.144/31 |
+| C160064-004B201A | Ethernet54/1 | 100.83.88.147/31 | C160064-037B200A | Ethernet4/32/4 | 100.83.88.146/31 |
+| C160064-004B201A | Ethernet55/1 | 100.83.88.149/31 | C160064-037B200A | Ethernet5/33/4 | 100.83.88.148/31 |
+| C160064-004B201A | Ethernet56/1 | 100.83.88.151/31 | C160064-037B200A | Ethernet3/32/4 | 100.83.88.150/31 |
+| C160064-005B101A | Ethernet2/1 | 100.83.94.161/31 | C160064-037B100A | Ethernet6/19/1 | 100.83.94.160/31 |
+| C160064-005B101A | Ethernet2/2 | 100.83.94.163/31 | C160064-037B100A | Ethernet7/19/1 | 100.83.94.162/31 |
+| C160064-005B201A | Ethernet2/1 | 100.83.88.161/31 | C160064-037B200A | Ethernet6/19/1 | 100.83.88.160/31 |
+| C160064-005B201A | Ethernet2/2 | 100.83.88.163/31 | C160064-037B200A | Ethernet7/19/1 | 100.83.88.162/31 |
+| C160064-006B101A | Ethernet53/1 | 100.83.94.177/31 | C160064-037B100A | Ethernet5/34/2 | 100.83.94.176/31 |
+| C160064-006B101A | Ethernet54/1 | 100.83.94.179/31 | C160064-037B100A | Ethernet3/33/2 | 100.83.94.178/31 |
+| C160064-006B101A | Ethernet55/1 | 100.83.94.181/31 | C160064-037B100A | Ethernet4/33/1 | 100.83.94.180/31 |
+| C160064-006B101A | Ethernet56/1 | 100.83.94.183/31 | C160064-037B100A | Ethernet5/34/1 | 100.83.94.182/31 |
+| C160064-006B201A | Ethernet53/1 | 100.83.88.177/31 | C160064-037B200A | Ethernet5/34/2 | 100.83.88.176/31 |
+| C160064-006B201A | Ethernet54/1 | 100.83.88.179/31 | C160064-037B200A | Ethernet3/33/2 | 100.83.88.178/31 |
+| C160064-006B201A | Ethernet55/1 | 100.83.88.181/31 | C160064-037B200A | Ethernet4/33/1 | 100.83.88.180/31 |
+| C160064-006B201A | Ethernet56/1 | 100.83.88.183/31 | C160064-037B200A | Ethernet5/34/1 | 100.83.88.182/31 |
+| C160064-007B101A | Ethernet2/1 | 100.83.94.193/31 | C160064-037B100A | Ethernet6/18/1 | 100.83.94.192/31 |
+| C160064-007B101A | Ethernet2/2 | 100.83.94.195/31 | C160064-037B100A | Ethernet7/18/1 | 100.83.94.194/31 |
+| C160064-007B201A | Ethernet2/1 | 100.83.88.193/31 | C160064-037B200A | Ethernet6/18/1 | 100.83.88.192/31 |
+| C160064-007B201A | Ethernet2/2 | 100.83.88.195/31 | C160064-037B200A | Ethernet7/18/1 | 100.83.88.194/31 |
+| C160064-008B101A | Ethernet53/1 | 100.83.94.209/31 | C160064-037B100A | Ethernet4/33/3 | 100.83.94.208/31 |
+| C160064-008B101A | Ethernet54/1 | 100.83.94.211/31 | C160064-037B100A | Ethernet5/34/3 | 100.83.94.210/31 |
+| C160064-008B101A | Ethernet55/1 | 100.83.94.213/31 | C160064-037B100A | Ethernet3/33/3 | 100.83.94.212/31 |
+| C160064-008B101A | Ethernet56/1 | 100.83.94.215/31 | C160064-037B100A | Ethernet4/33/2 | 100.83.94.214/31 |
+| C160064-008B201A | Ethernet53/1 | 100.83.88.209/31 | C160064-037B200A | Ethernet4/33/3 | 100.83.88.208/31 |
+| C160064-008B201A | Ethernet54/1 | 100.83.88.211/31 | C160064-037B200A | Ethernet5/34/3 | 100.83.88.210/31 |
+| C160064-008B201A | Ethernet55/1 | 100.83.88.213/31 | C160064-037B200A | Ethernet3/33/3 | 100.83.88.212/31 |
+| C160064-008B201A | Ethernet56/1 | 100.83.88.215/31 | C160064-037B200A | Ethernet4/33/2 | 100.83.88.214/31 |
+| C160064-009B101A | Ethernet2/1 | 100.83.94.225/31 | C160064-037B100A | Ethernet6/17/1 | 100.83.94.224/31 |
+| C160064-009B101A | Ethernet2/2 | 100.83.94.227/31 | C160064-037B100A | Ethernet7/17/1 | 100.83.94.226/31 |
+| C160064-009B201A | Ethernet2/1 | 100.83.88.225/31 | C160064-037B200A | Ethernet6/17/1 | 100.83.88.224/31 |
+| C160064-009B201A | Ethernet2/2 | 100.83.88.227/31 | C160064-037B200A | Ethernet7/17/1 | 100.83.88.226/31 |
+| C160064-010B101A | Ethernet53/1 | 100.83.94.241/31 | C160064-037B100A | Ethernet3/34/4 | 100.83.94.240/31 |
+| C160064-010B101A | Ethernet54/1 | 100.83.94.243/31 | C160064-037B100A | Ethernet4/33/4 | 100.83.94.242/31 |
+| C160064-010B101A | Ethernet55/1 | 100.83.94.245/31 | C160064-037B100A | Ethernet5/34/4 | 100.83.94.244/31 |
+| C160064-010B101A | Ethernet56/1 | 100.83.94.247/31 | C160064-037B100A | Ethernet3/34/3 | 100.83.94.246/31 |
+| C160064-010B201A | Ethernet53/1 | 100.83.88.241/31 | C160064-037B200A | Ethernet3/34/4 | 100.83.88.240/31 |
+| C160064-010B201A | Ethernet54/1 | 100.83.88.243/31 | C160064-037B200A | Ethernet4/33/4 | 100.83.88.242/31 |
+| C160064-010B201A | Ethernet55/1 | 100.83.88.245/31 | C160064-037B200A | Ethernet5/34/4 | 100.83.88.244/31 |
+| C160064-010B201A | Ethernet56/1 | 100.83.88.247/31 | C160064-037B200A | Ethernet3/34/3 | 100.83.88.246/31 |
+| C160064-013B101A | Ethernet55/1 | 100.83.95.1/31 | C160064-037B100A | Ethernet4/35/1 | 100.83.95.0/31 |
+| C160064-013B101A | Ethernet56/1 | 100.83.95.3/31 | C160064-037B100A | Ethernet5/35/1 | 100.83.95.2/31 |
+| C160064-013B102A | Ethernet2/1 | 100.83.95.17/31 | C160064-037B100A | Ethernet6/16/1 | 100.83.95.16/31 |
+| C160064-013B102A | Ethernet2/2 | 100.83.95.19/31 | C160064-037B100A | Ethernet7/16/1 | 100.83.95.18/31 |
+| C160064-013B201A | Ethernet55/1 | 100.83.89.1/31 | C160064-037B200A | Ethernet4/35/1 | 100.83.89.0/31 |
+| C160064-013B201A | Ethernet56/1 | 100.83.89.3/31 | C160064-037B200A | Ethernet5/35/1 | 100.83.89.2/31 |
+| C160064-013B202A | Ethernet2/1 | 100.83.89.17/31 | C160064-037B200A | Ethernet6/16/1 | 100.83.89.16/31 |
+| C160064-013B202A | Ethernet2/2 | 100.83.89.19/31 | C160064-037B200A | Ethernet7/16/1 | 100.83.89.18/31 |
+| C160064-014B101A | Ethernet55/1 | 100.83.95.33/31 | C160064-037B100A | Ethernet5/35/2 | 100.83.95.32/31 |
+| C160064-014B101A | Ethernet56/1 | 100.83.95.35/31 | C160064-037B100A | Ethernet3/35/1 | 100.83.95.34/31 |
+| C160064-014B102A | Ethernet53/1 | 100.83.95.49/31 | C160064-037B100A | Ethernet4/35/3 | 100.83.95.48/31 |
+| C160064-014B102A | Ethernet54/1 | 100.83.95.51/31 | C160064-037B100A | Ethernet5/35/3 | 100.83.95.50/31 |
+| C160064-014B102A | Ethernet55/1 | 100.83.95.53/31 | C160064-037B100A | Ethernet3/35/2 | 100.83.95.52/31 |
+| C160064-014B102A | Ethernet56/1 | 100.83.95.55/31 | C160064-037B100A | Ethernet4/35/2 | 100.83.95.54/31 |
+| C160064-014B201A | Ethernet55/1 | 100.83.89.33/31 | C160064-037B200A | Ethernet5/35/2 | 100.83.89.32/31 |
+| C160064-014B201A | Ethernet56/1 | 100.83.89.35/31 | C160064-037B200A | Ethernet3/35/1 | 100.83.89.34/31 |
+| C160064-014B202A | Ethernet53/1 | 100.83.89.49/31 | C160064-037B200A | Ethernet4/35/3 | 100.83.89.48/31 |
+| C160064-014B202A | Ethernet54/1 | 100.83.89.51/31 | C160064-037B200A | Ethernet5/35/3 | 100.83.89.50/31 |
+| C160064-014B202A | Ethernet55/1 | 100.83.89.53/31 | C160064-037B200A | Ethernet3/35/2 | 100.83.89.52/31 |
+| C160064-014B202A | Ethernet56/1 | 100.83.89.55/31 | C160064-037B200A | Ethernet4/35/2 | 100.83.89.54/31 |
+| C160064-015B101A | Ethernet55/1 | 100.83.95.65/31 | C160064-037B100A | Ethernet3/36/1 | 100.83.95.64/31 |
+| C160064-015B101A | Ethernet56/1 | 100.83.95.67/31 | C160064-037B100A | Ethernet4/36/1 | 100.83.95.66/31 |
+| C160064-015B102A | Ethernet54/1 | 100.83.95.81/31 | C160064-037B100A | Ethernet5/36/1 | 100.83.95.80/31 |
+| C160064-015B102A | Ethernet55/1 | 100.83.95.83/31 | C160064-037B100A | Ethernet3/35/4 | 100.83.95.82/31 |
+| C160064-015B102A | Ethernet56/1 | 100.83.95.85/31 | C160064-037B100A | Ethernet4/35/4 | 100.83.95.84/31 |
+| C160064-015B103A | Ethernet55/1 | 100.83.95.97/31 | C160064-037B100A | Ethernet5/35/4 | 100.83.95.96/31 |
+| C160064-015B103A | Ethernet56/1 | 100.83.95.99/31 | C160064-037B100A | Ethernet3/35/3 | 100.83.95.98/31 |
+| C160064-015B201A | Ethernet55/1 | 100.83.89.65/31 | C160064-037B200A | Ethernet3/36/1 | 100.83.89.64/31 |
+| C160064-015B201A | Ethernet56/1 | 100.83.89.67/31 | C160064-037B200A | Ethernet4/36/1 | 100.83.89.66/31 |
+| C160064-015B202A | Ethernet54/1 | 100.83.89.81/31 | C160064-037B200A | Ethernet5/36/1 | 100.83.89.80/31 |
+| C160064-015B202A | Ethernet55/1 | 100.83.89.83/31 | C160064-037B200A | Ethernet3/35/4 | 100.83.89.82/31 |
+| C160064-015B202A | Ethernet56/1 | 100.83.89.85/31 | C160064-037B200A | Ethernet4/35/4 | 100.83.89.84/31 |
+| C160064-015B203A | Ethernet55/1 | 100.83.89.97/31 | C160064-037B200A | Ethernet5/35/4 | 100.83.89.96/31 |
+| C160064-015B203A | Ethernet56/1 | 100.83.89.99/31 | C160064-037B200A | Ethernet3/35/3 | 100.83.89.98/31 |
+| C160064-016B101A | Ethernet2/1 | 100.83.95.113/31 | C160064-037B100A | Ethernet6/15/1 | 100.83.95.112/31 |
+| C160064-016B101A | Ethernet2/2 | 100.83.95.115/31 | C160064-037B100A | Ethernet7/15/1 | 100.83.95.114/31 |
+| C160064-016B102A | Ethernet2/1 | 100.83.95.129/31 | C160064-037B100A | Ethernet6/14/1 | 100.83.95.128/31 |
+| C160064-016B102A | Ethernet2/2 | 100.83.95.131/31 | C160064-037B100A | Ethernet7/14/1 | 100.83.95.130/31 |
+| C160064-016B201A | Ethernet2/1 | 100.83.89.113/31 | C160064-037B200A | Ethernet6/15/1 | 100.83.89.112/31 |
+| C160064-016B201A | Ethernet2/2 | 100.83.89.115/31 | C160064-037B200A | Ethernet7/15/1 | 100.83.89.114/31 |
+| C160064-016B202A | Ethernet2/1 | 100.83.89.129/31 | C160064-037B200A | Ethernet6/14/1 | 100.83.89.128/31 |
+| C160064-016B202A | Ethernet2/2 | 100.83.89.131/31 | C160064-037B200A | Ethernet7/14/1 | 100.83.89.130/31 |
+| C160064-017B101A | Ethernet54/1 | 100.83.95.145/31 | C160064-037B100A | Ethernet4/36/2 | 100.83.95.144/31 |
+| C160064-017B101A | Ethernet55/1 | 100.83.95.147/31 | C160064-037B100A | Ethernet5/36/2 | 100.83.95.146/31 |
+| C160064-017B201A | Ethernet54/1 | 100.83.89.145/31 | C160064-037B200A | Ethernet4/36/2 | 100.83.89.144/31 |
+| C160064-017B201A | Ethernet55/1 | 100.83.89.147/31 | C160064-037B200A | Ethernet5/36/2 | 100.83.89.146/31 |
+| C160064-037B100A | Ethernet3/31/4 | 100.83.94.70/31 | C160064-037B106A | Ethernet56/1 | 100.83.94.71/31 |
+| C160064-037B100A | Ethernet3/32/2 | 100.83.94.32/31 | C160064-037B105A | Ethernet55/1 | 100.83.94.33/31 |
+| C160064-037B100A | Ethernet3/32/3 | 100.83.94.66/31 | C160064-037B106A | Ethernet54/1 | 100.83.94.67/31 |
+| C160064-037B100A | Ethernet3/36/2 | 100.83.95.162/31 | C160064-046B101A | Ethernet55/1 | 100.83.95.163/31 |
+| C160064-037B100A | Ethernet3/36/3 | 100.83.95.208/31 | C160064-051B101A | Ethernet54/1 | 100.83.95.209/31 |
+| C160064-037B100A | Ethernet3/36/4 | 100.83.95.240/31 | C160064-056B101A | Ethernet54/1 | 100.83.95.241/31 |
+| C160064-037B100A | Ethernet4/32/2 | 100.83.94.34/31 | C160064-037B105A | Ethernet56/1 | 100.83.94.35/31 |
+| C160064-037B100A | Ethernet4/32/3 | 100.83.94.68/31 | C160064-037B106A | Ethernet55/1 | 100.83.94.69/31 |
+| C160064-037B100A | Ethernet4/36/3 | 100.83.95.210/31 | C160064-051B101A | Ethernet55/1 | 100.83.95.211/31 |
+| C160064-037B100A | Ethernet4/36/4 | 100.83.95.242/31 | C160064-056B101A | Ethernet55/1 | 100.83.95.243/31 |
+| C160064-037B100A | Ethernet5/33/3 | 100.83.94.64/31 | C160064-037B106A | Ethernet53/1 | 100.83.94.65/31 |
+| C160064-037B100A | Ethernet5/36/3 | 100.83.95.160/31 | C160064-046B101A | Ethernet54/1 | 100.83.95.161/31 |
+| C160064-037B100A | Ethernet5/36/4 | 100.83.95.244/31 | C160064-056B101A | Ethernet56/1 | 100.83.95.245/31 |
 | C160064-037B100A | Ethernet6/1/1 | 100.83.94.0/31 | C160064-037B101A | Ethernet2/1 | 100.83.94.1/31 |
-| C160064-037B100A | Ethernet6/2/1 | 100.83.94.16/31 | C160064-037B102A | Ethernet2/1 | 100.83.94.17/31 |
-| C160064-037B100A | Ethernet6/3/1 | 100.83.94.32/31 | C160064-037B105A | Ethernet2/1 | 100.83.94.33/31 |
-| C160064-037B100A | Ethernet6/4/1 | 100.83.94.48/31 | C160064-037B103A | Ethernet2/1 | 100.83.94.49/31 |
-| C160064-037B100A | Ethernet6/5/1 | 100.83.94.64/31 | C160064-037B106A | Ethernet2/1 | 100.83.94.65/31 |
-| C160064-037B100A | Ethernet6/6/1 | 100.83.94.80/31 | C160064-037B104A | Ethernet2/1 | 100.83.94.81/31 |
-| C160064-037B100A | Ethernet6/27/1 | 100.83.95.160/31 | C160064-046B101A | Ethernet2/1 | 100.83.95.161/31 |
+| C160064-037B100A | Ethernet6/2/1 | 100.83.94.4/31 | C160064-037B101A | Ethernet2/3 | 100.83.94.5/31 |
+| C160064-037B100A | Ethernet6/3/1 | 100.83.94.8/31 | C160064-037B101A | Ethernet3/1 | 100.83.94.9/31 |
+| C160064-037B100A | Ethernet6/4/1 | 100.83.94.16/31 | C160064-037B102A | Ethernet2/1 | 100.83.94.17/31 |
+| C160064-037B100A | Ethernet6/5/1 | 100.83.94.20/31 | C160064-037B102A | Ethernet2/3 | 100.83.94.21/31 |
+| C160064-037B100A | Ethernet6/6/1 | 100.83.94.24/31 | C160064-037B102A | Ethernet3/1 | 100.83.94.25/31 |
+| C160064-037B100A | Ethernet6/7/1 | 100.83.94.48/31 | C160064-037B103A | Ethernet2/1 | 100.83.94.49/31 |
+| C160064-037B100A | Ethernet6/8/1 | 100.83.94.52/31 | C160064-037B103A | Ethernet2/3 | 100.83.94.53/31 |
+| C160064-037B100A | Ethernet6/9/1 | 100.83.94.82/31 | C160064-037B104A | Ethernet2/2 | 100.83.94.83/31 |
+| C160064-037B100A | Ethernet6/11/1 | 100.83.95.224/31 | C160064-051B102A | Ethernet2/1 | 100.83.95.225/31 |
+| C160064-037B100A | Ethernet6/12/1 | 100.83.95.192/31 | C160064-050B101A | Ethernet2/1 | 100.83.95.193/31 |
 | C160064-037B100A | Ethernet6/28/1 | 100.83.95.176/31 | C160064-049B101A | Ethernet2/1 | 100.83.95.177/31 |
-| C160064-037B100A | Ethernet6/29/1 | 100.83.95.192/31 | C160064-050B101A | Ethernet2/1 | 100.83.95.193/31 |
-| C160064-037B100A | Ethernet6/30/1 | 100.83.95.208/31 | C160064-051B101A | Ethernet2/1 | 100.83.95.209/31 |
-| C160064-037B100A | Ethernet6/31/1 | 100.83.95.224/31 | C160064-051B102A | Ethernet2/1 | 100.83.95.225/31 |
-| C160064-037B100A | Ethernet6/32/1 | 100.83.95.240/31 | C160064-056B101A | Ethernet2/1 | 100.83.95.241/31 |
 | C160064-037B100A | Ethernet7/1/1 | 100.83.94.2/31 | C160064-037B101A | Ethernet2/2 | 100.83.94.3/31 |
-| C160064-037B100A | Ethernet7/2/1 | 100.83.94.18/31 | C160064-037B102A | Ethernet2/2 | 100.83.94.19/31 |
-| C160064-037B100A | Ethernet7/3/1 | 100.83.94.34/31 | C160064-037B105A | Ethernet2/2 | 100.83.94.35/31 |
-| C160064-037B100A | Ethernet7/4/1 | 100.83.94.50/31 | C160064-037B103A | Ethernet2/2 | 100.83.94.51/31 |
-| C160064-037B100A | Ethernet7/5/1 | 100.83.94.66/31 | C160064-037B106A | Ethernet2/2 | 100.83.94.67/31 |
-| C160064-037B100A | Ethernet7/6/1 | 100.83.94.82/31 | C160064-037B104A | Ethernet2/2 | 100.83.94.83/31 |
-| C160064-037B100A | Ethernet7/27/1 | 100.83.95.162/31 | C160064-046B101A | Ethernet2/2 | 100.83.95.163/31 |
+| C160064-037B100A | Ethernet7/2/1 | 100.83.94.6/31 | C160064-037B101A | Ethernet2/4 | 100.83.94.7/31 |
+| C160064-037B100A | Ethernet7/3/1 | 100.83.94.10/31 | C160064-037B101A | Ethernet3/2 | 100.83.94.11/31 |
+| C160064-037B100A | Ethernet7/4/1 | 100.83.94.18/31 | C160064-037B102A | Ethernet2/2 | 100.83.94.19/31 |
+| C160064-037B100A | Ethernet7/5/1 | 100.83.94.22/31 | C160064-037B102A | Ethernet2/4 | 100.83.94.23/31 |
+| C160064-037B100A | Ethernet7/6/1 | 100.83.94.26/31 | C160064-037B102A | Ethernet3/2 | 100.83.94.27/31 |
+| C160064-037B100A | Ethernet7/7/1 | 100.83.94.50/31 | C160064-037B103A | Ethernet2/2 | 100.83.94.51/31 |
+| C160064-037B100A | Ethernet7/8/1 | 100.83.94.80/31 | C160064-037B104A | Ethernet2/1 | 100.83.94.81/31 |
+| C160064-037B100A | Ethernet7/9/1 | 100.83.94.84/31 | C160064-037B104A | Ethernet2/3 | 100.83.94.85/31 |
+| C160064-037B100A | Ethernet7/11/1 | 100.83.95.226/31 | C160064-051B102A | Ethernet2/2 | 100.83.95.227/31 |
+| C160064-037B100A | Ethernet7/12/1 | 100.83.95.194/31 | C160064-050B101A | Ethernet2/2 | 100.83.95.195/31 |
+| C160064-037B100A | Ethernet7/24/1 | 100.83.95.228/31 | C160064-051B102A | Ethernet2/3 | 100.83.95.229/31 |
 | C160064-037B100A | Ethernet7/28/1 | 100.83.95.178/31 | C160064-049B101A | Ethernet2/2 | 100.83.95.179/31 |
-| C160064-037B100A | Ethernet7/29/1 | 100.83.95.194/31 | C160064-050B101A | Ethernet2/2 | 100.83.95.195/31 |
-| C160064-037B100A | Ethernet7/30/1 | 100.83.95.210/31 | C160064-051B101A | Ethernet2/2 | 100.83.95.211/31 |
-| C160064-037B100A | Ethernet7/31/1 | 100.83.95.226/31 | C160064-051B102A | Ethernet2/2 | 100.83.95.227/31 |
-| C160064-037B100A | Ethernet7/32/1 | 100.83.95.242/31 | C160064-056B101A | Ethernet2/2 | 100.83.95.243/31 |
 | C160064-037B100A | Ethernet8/10/1 | 100.83.93.16/31 | C160064-037B380A | Ethernet33/1 | 100.83.93.17/31 |
 | C160064-037B100A | Ethernet8/12/1 | 100.83.93.20/31 | C160064-037B381A | Ethernet33/1 | 100.83.93.21/31 |
 | C160064-037B100A | Ethernet9/12/1 | 100.83.93.8/31 | C160064-037B370A | Ethernet33/1 | 100.83.93.9/31 |
 | C160064-037B100A | Ethernet9/13/1 | 100.83.93.12/31 | C160064-037B371A | Ethernet33/1 | 100.83.93.13/31 |
+| C160064-037B200A | Ethernet3/31/4 | 100.83.88.70/31 | C160064-037B206A | Ethernet56/1 | 100.83.88.71/31 |
+| C160064-037B200A | Ethernet3/32/2 | 100.83.88.32/31 | C160064-037B205A | Ethernet55/1 | 100.83.88.33/31 |
+| C160064-037B200A | Ethernet3/32/3 | 100.83.88.66/31 | C160064-037B206A | Ethernet54/1 | 100.83.88.67/31 |
+| C160064-037B200A | Ethernet3/36/2 | 100.83.89.162/31 | C160064-046B201A | Ethernet55/1 | 100.83.89.163/31 |
+| C160064-037B200A | Ethernet3/36/3 | 100.83.89.208/31 | C160064-051B201A | Ethernet54/1 | 100.83.89.209/31 |
+| C160064-037B200A | Ethernet3/36/4 | 100.83.89.240/31 | C160064-056B201A | Ethernet54/1 | 100.83.89.241/31 |
+| C160064-037B200A | Ethernet4/32/2 | 100.83.88.34/31 | C160064-037B205A | Ethernet56/1 | 100.83.88.35/31 |
+| C160064-037B200A | Ethernet4/32/3 | 100.83.88.68/31 | C160064-037B206A | Ethernet55/1 | 100.83.88.69/31 |
+| C160064-037B200A | Ethernet4/36/3 | 100.83.89.210/31 | C160064-051B201A | Ethernet55/1 | 100.83.89.211/31 |
+| C160064-037B200A | Ethernet4/36/4 | 100.83.89.242/31 | C160064-056B201A | Ethernet55/1 | 100.83.89.243/31 |
+| C160064-037B200A | Ethernet5/33/3 | 100.83.88.64/31 | C160064-037B206A | Ethernet53/1 | 100.83.88.65/31 |
+| C160064-037B200A | Ethernet5/36/3 | 100.83.89.160/31 | C160064-046B201A | Ethernet54/1 | 100.83.89.161/31 |
+| C160064-037B200A | Ethernet5/36/4 | 100.83.89.244/31 | C160064-056B201A | Ethernet56/1 | 100.83.89.245/31 |
 | C160064-037B200A | Ethernet6/1/1 | 100.83.88.0/31 | C160064-037B201A | Ethernet2/1 | 100.83.88.1/31 |
-| C160064-037B200A | Ethernet6/2/1 | 100.83.88.16/31 | C160064-037B202A | Ethernet2/1 | 100.83.88.17/31 |
-| C160064-037B200A | Ethernet6/3/1 | 100.83.88.32/31 | C160064-037B205A | Ethernet2/1 | 100.83.88.33/31 |
-| C160064-037B200A | Ethernet6/4/1 | 100.83.88.48/31 | C160064-037B203A | Ethernet2/1 | 100.83.88.49/31 |
-| C160064-037B200A | Ethernet6/5/1 | 100.83.88.64/31 | C160064-037B206A | Ethernet2/1 | 100.83.88.65/31 |
-| C160064-037B200A | Ethernet6/6/1 | 100.83.88.80/31 | C160064-037B204A | Ethernet2/1 | 100.83.88.81/31 |
-| C160064-037B200A | Ethernet6/27/1 | 100.83.89.160/31 | C160064-046B201A | Ethernet2/1 | 100.83.89.161/31 |
+| C160064-037B200A | Ethernet6/2/1 | 100.83.88.4/31 | C160064-037B201A | Ethernet2/3 | 100.83.88.5/31 |
+| C160064-037B200A | Ethernet6/3/1 | 100.83.88.8/31 | C160064-037B201A | Ethernet3/1 | 100.83.88.9/31 |
+| C160064-037B200A | Ethernet6/4/1 | 100.83.88.16/31 | C160064-037B202A | Ethernet2/1 | 100.83.88.17/31 |
+| C160064-037B200A | Ethernet6/5/1 | 100.83.88.20/31 | C160064-037B202A | Ethernet2/3 | 100.83.88.21/31 |
+| C160064-037B200A | Ethernet6/6/1 | 100.83.88.24/31 | C160064-037B202A | Ethernet3/1 | 100.83.88.25/31 |
+| C160064-037B200A | Ethernet6/7/1 | 100.83.88.48/31 | C160064-037B203A | Ethernet2/1 | 100.83.88.49/31 |
+| C160064-037B200A | Ethernet6/8/1 | 100.83.88.52/31 | C160064-037B203A | Ethernet2/3 | 100.83.88.53/31 |
+| C160064-037B200A | Ethernet6/9/1 | 100.83.88.82/31 | C160064-037B204A | Ethernet2/2 | 100.83.88.83/31 |
+| C160064-037B200A | Ethernet6/11/1 | 100.83.89.224/31 | C160064-051B202A | Ethernet2/1 | 100.83.89.225/31 |
+| C160064-037B200A | Ethernet6/12/1 | 100.83.89.192/31 | C160064-050B201A | Ethernet2/1 | 100.83.89.193/31 |
 | C160064-037B200A | Ethernet6/28/1 | 100.83.89.176/31 | C160064-049B201A | Ethernet2/1 | 100.83.89.177/31 |
-| C160064-037B200A | Ethernet6/29/1 | 100.83.89.192/31 | C160064-050B201A | Ethernet2/1 | 100.83.89.193/31 |
-| C160064-037B200A | Ethernet6/30/1 | 100.83.89.208/31 | C160064-051B201A | Ethernet2/1 | 100.83.89.209/31 |
-| C160064-037B200A | Ethernet6/31/1 | 100.83.89.224/31 | C160064-051B202A | Ethernet2/1 | 100.83.89.225/31 |
-| C160064-037B200A | Ethernet6/32/1 | 100.83.89.240/31 | C160064-056B201A | Ethernet2/1 | 100.83.89.241/31 |
 | C160064-037B200A | Ethernet7/1/1 | 100.83.88.2/31 | C160064-037B201A | Ethernet2/2 | 100.83.88.3/31 |
-| C160064-037B200A | Ethernet7/2/1 | 100.83.88.18/31 | C160064-037B202A | Ethernet2/2 | 100.83.88.19/31 |
-| C160064-037B200A | Ethernet7/3/1 | 100.83.88.34/31 | C160064-037B205A | Ethernet2/2 | 100.83.88.35/31 |
-| C160064-037B200A | Ethernet7/4/1 | 100.83.88.50/31 | C160064-037B203A | Ethernet2/2 | 100.83.88.51/31 |
-| C160064-037B200A | Ethernet7/5/1 | 100.83.88.66/31 | C160064-037B206A | Ethernet2/2 | 100.83.88.67/31 |
-| C160064-037B200A | Ethernet7/6/1 | 100.83.88.82/31 | C160064-037B204A | Ethernet2/2 | 100.83.88.83/31 |
-| C160064-037B200A | Ethernet7/27/1 | 100.83.89.162/31 | C160064-046B201A | Ethernet2/2 | 100.83.89.163/31 |
+| C160064-037B200A | Ethernet7/2/1 | 100.83.88.6/31 | C160064-037B201A | Ethernet2/4 | 100.83.88.7/31 |
+| C160064-037B200A | Ethernet7/3/1 | 100.83.88.10/31 | C160064-037B201A | Ethernet3/2 | 100.83.88.11/31 |
+| C160064-037B200A | Ethernet7/4/1 | 100.83.88.18/31 | C160064-037B202A | Ethernet2/2 | 100.83.88.19/31 |
+| C160064-037B200A | Ethernet7/5/1 | 100.83.88.22/31 | C160064-037B202A | Ethernet2/4 | 100.83.88.23/31 |
+| C160064-037B200A | Ethernet7/6/1 | 100.83.88.26/31 | C160064-037B202A | Ethernet3/2 | 100.83.88.27/31 |
+| C160064-037B200A | Ethernet7/7/1 | 100.83.88.50/31 | C160064-037B203A | Ethernet2/2 | 100.83.88.51/31 |
+| C160064-037B200A | Ethernet7/8/1 | 100.83.88.80/31 | C160064-037B204A | Ethernet2/1 | 100.83.88.81/31 |
+| C160064-037B200A | Ethernet7/9/1 | 100.83.88.84/31 | C160064-037B204A | Ethernet2/3 | 100.83.88.85/31 |
+| C160064-037B200A | Ethernet7/11/1 | 100.83.89.226/31 | C160064-051B202A | Ethernet2/2 | 100.83.89.227/31 |
+| C160064-037B200A | Ethernet7/12/1 | 100.83.89.194/31 | C160064-050B201A | Ethernet2/2 | 100.83.89.195/31 |
+| C160064-037B200A | Ethernet7/24/1 | 100.83.89.228/31 | C160064-051B202A | Ethernet2/3 | 100.83.89.229/31 |
 | C160064-037B200A | Ethernet7/28/1 | 100.83.89.178/31 | C160064-049B201A | Ethernet2/2 | 100.83.89.179/31 |
-| C160064-037B200A | Ethernet7/29/1 | 100.83.89.194/31 | C160064-050B201A | Ethernet2/2 | 100.83.89.195/31 |
-| C160064-037B200A | Ethernet7/30/1 | 100.83.89.210/31 | C160064-051B201A | Ethernet2/2 | 100.83.89.211/31 |
-| C160064-037B200A | Ethernet7/31/1 | 100.83.89.226/31 | C160064-051B202A | Ethernet2/2 | 100.83.89.227/31 |
-| C160064-037B200A | Ethernet7/32/1 | 100.83.89.242/31 | C160064-056B201A | Ethernet2/2 | 100.83.89.243/31 |
 | C160064-037B200A | Ethernet8/11/1 | 100.83.93.18/31 | C160064-037B380A | Ethernet34/1 | 100.83.93.19/31 |
 | C160064-037B200A | Ethernet8/13/1 | 100.83.93.22/31 | C160064-037B381A | Ethernet34/1 | 100.83.93.23/31 |
 | C160064-037B200A | Ethernet9/13/1 | 100.83.93.10/31 | C160064-037B370A | Ethernet34/1 | 100.83.93.11/31 |
