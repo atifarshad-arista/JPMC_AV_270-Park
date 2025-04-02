@@ -35,6 +35,6 @@ media_spine:
     - name: C160064-037B100A
       id: 1
       loopback_ipv4_address: 169.27.195.0
-      mgmt_interface: Management0
+      mgmt_interface: Management1/1
       mgmt_ip: 10.176.143.139/27
       mgmt_gateway: 10.176.143.129
