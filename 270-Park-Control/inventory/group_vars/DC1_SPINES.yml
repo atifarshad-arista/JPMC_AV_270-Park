@@ -3,15 +3,15 @@
 
 type: l3spine     # Must be either spine|l3spine
 
-management_cvx:
-  shutdown: false
-  server_hosts:
-  # IP or hostname.
-    - 172.16.131.127
-    - 172.16.131.128
-    - 172.16.131.129
-  # Interface name.
-  source_interface: Loopback0
+# management_cvx:
+#   shutdown: false
+#   server_hosts:
+#   # IP or hostname.
+#     - 172.16.131.127
+#     - 172.16.131.128
+#     - 172.16.131.129
+#   # Interface name.
+#   source_interface: Loopback0
 
 ip_access_lists:
     # Access-list Name.

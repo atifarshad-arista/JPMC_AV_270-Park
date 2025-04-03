@@ -449,7 +449,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.161
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/2/1, Ethernet5/2/1]
+          uplink_switch_interfaces: [Ethernet6/2/1, Ethernet6/2/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 21
           ptp:
@@ -466,7 +466,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.161
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/2/1, Ethernet6/2/1]
+          uplink_switch_interfaces: [Ethernet7/2/1, Ethernet7/2/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 22
           ptp:
@@ -483,7 +483,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.161
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/2/1, Ethernet7/2/1]
+          uplink_switch_interfaces: [Ethernet8/2/1, Ethernet8/2/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 23
           ptp:
@@ -500,7 +500,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.161
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/2/1, Ethernet8/2/1]
+          uplink_switch_interfaces: [Ethernet9/2/1, Ethernet9/2/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 24
           ptp:
@@ -517,7 +517,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.161
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/2/1, Ethernet9/2/1]
+          uplink_switch_interfaces: [Ethernet10/2/1, Ethernet10/2/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 25
           ptp:
@@ -534,7 +534,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.193
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/2/1, Ethernet10/2/1]
+          uplink_switch_interfaces: [Ethernet10/23/1, Ethernet10/23/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 26
           ptp:
@@ -670,7 +670,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/3/1, Ethernet10/3/1]
+          uplink_switch_interfaces: [Ethernet8/5/1, Ethernet8/5/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 34
           ptp:
@@ -687,7 +687,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/4/1, Ethernet3/4/1]
+          uplink_switch_interfaces: [Ethernet9/5/1, Ethernet9/5/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 35
           ptp:
@@ -704,7 +704,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/4/1, Ethernet4/4/1]
+          uplink_switch_interfaces: [Ethernet10/5/1, Ethernet10/5/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 36
           ptp:
@@ -721,7 +721,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/4/1, Ethernet5/4/1]
+          uplink_switch_interfaces: [Ethernet3/6/1, Ethernet3/6/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 37
           ptp:
@@ -738,7 +738,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/4/1, Ethernet6/4/1]
+          uplink_switch_interfaces: [Ethernet4/6/1, Ethernet4/6/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 38
           ptp:
@@ -755,7 +755,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/4/1, Ethernet7/4/1]
+          uplink_switch_interfaces: [Ethernet5/6/1, Ethernet5/6/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 39
           ptp:
@@ -772,7 +772,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/4/1, Ethernet8/4/1]
+          uplink_switch_interfaces: [Ethernet6/6/1, Ethernet6/6/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 40
           ptp:
@@ -789,7 +789,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/4/1, Ethernet9/4/1]
+          uplink_switch_interfaces: [Ethernet7/6/1, Ethernet7/6/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 41
           ptp:
@@ -806,7 +806,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/4/1, Ethernet10/4/1]
+          uplink_switch_interfaces: [Ethernet10/3/1, Ethernet10/3/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 42
           ptp:
@@ -823,7 +823,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/5/1, Ethernet3/5/1]
+          uplink_switch_interfaces: [Ethernet3/4/1, Ethernet3/4/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 43
           ptp:
@@ -840,7 +840,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/5/1, Ethernet4/5/1]
+          uplink_switch_interfaces: [Ethernet4/4/1, Ethernet4/4/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 44
           ptp:
@@ -857,7 +857,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/5/1, Ethernet5/5/1]
+          uplink_switch_interfaces: [Ethernet5/4/1, Ethernet5/4/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 45
           ptp:
@@ -874,7 +874,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/5/1, Ethernet6/5/1]
+          uplink_switch_interfaces: [Ethernet6/4/1, Ethernet6/4/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 46
           ptp:
@@ -891,7 +891,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/5/1, Ethernet7/5/1]
+          uplink_switch_interfaces: [Ethernet7/4/1, Ethernet7/4/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 47
           ptp:
@@ -908,7 +908,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/5/1, Ethernet8/5/1]
+          uplink_switch_interfaces: [Ethernet8/4/1, Ethernet8/4/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 48
           ptp:
@@ -925,7 +925,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/5/1, Ethernet9/5/1]
+          uplink_switch_interfaces: [Ethernet9/4/1, Ethernet9/4/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 49
           ptp:
@@ -942,7 +942,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/5/1, Ethernet10/5/1]
+          uplink_switch_interfaces: [Ethernet10/4/1, Ethernet10/4/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 50
           ptp:
@@ -959,7 +959,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/6/1, Ethernet3/6/1]
+          uplink_switch_interfaces: [Ethernet3/5/1, Ethernet3/5/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 51
           ptp:
@@ -976,7 +976,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/6/1, Ethernet4/6/1]
+          uplink_switch_interfaces: [Ethernet4/5/1, Ethernet4/5/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 52
           ptp:
@@ -993,7 +993,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/6/1, Ethernet5/6/1]
+          uplink_switch_interfaces: [Ethernet5/5/1, Ethernet5/5/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 53
           ptp:
@@ -1010,7 +1010,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/6/1, Ethernet6/6/1]
+          uplink_switch_interfaces: [Ethernet6/5/1, Ethernet6/5/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 54
           ptp:
@@ -1027,7 +1027,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/6/1, Ethernet7/6/1]
+          uplink_switch_interfaces: [Ethernet7/5/1, Ethernet7/5/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 55
           ptp:
@@ -1044,7 +1044,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/6/1, Ethernet8/6/1]
+          uplink_switch_interfaces: [Ethernet8/11/1, Ethernet8/11/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 56
           ptp:
@@ -1061,7 +1061,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/6/1, Ethernet9/6/1]
+          uplink_switch_interfaces: [Ethernet8/6/1, Ethernet8/6/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 57
           ptp:
@@ -1078,7 +1078,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/6/1, Ethernet10/6/1]
+          uplink_switch_interfaces: [Ethernet9/6/1, Ethernet9/6/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 58
           ptp:
@@ -1095,7 +1095,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/7/1, Ethernet3/7/1]
+          uplink_switch_interfaces: [Ethernet10/6/1, Ethernet10/6/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 59
           ptp:
@@ -1112,7 +1112,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/7/1, Ethernet4/7/1]
+          uplink_switch_interfaces: [Ethernet3/7/1, Ethernet3/7/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 60
           ptp:
@@ -1129,7 +1129,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/7/1, Ethernet5/7/1]
+          uplink_switch_interfaces: [Ethernet4/7/1, Ethernet4/7/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 61
           ptp:
@@ -1146,7 +1146,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/7/1, Ethernet6/7/1]
+          uplink_switch_interfaces: [Ethernet5/7/1, Ethernet5/7/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 62
           ptp:
@@ -1163,7 +1163,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/7/1, Ethernet7/7/1]
+          uplink_switch_interfaces: [Ethernet6/7/1, Ethernet6/7/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 63
           ptp:
@@ -1180,7 +1180,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/7/1, Ethernet8/7/1]
+          uplink_switch_interfaces: [Ethernet7/7/1, Ethernet7/7/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 64
           ptp:
@@ -1197,7 +1197,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/7/1, Ethernet9/7/1]
+          uplink_switch_interfaces: [Ethernet8/7/1, Ethernet8/7/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 65
           ptp:
@@ -1214,7 +1214,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/7/1, Ethernet10/7/1]
+          uplink_switch_interfaces: [Ethernet9/7/1, Ethernet9/7/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 66
           ptp:
@@ -1231,7 +1231,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/8/1, Ethernet3/8/1]
+          uplink_switch_interfaces: [Ethernet10/7/1, Ethernet10/7/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 67
           ptp:
@@ -1248,7 +1248,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/8/1, Ethernet4/8/1]
+          uplink_switch_interfaces: [Ethernet3/8/1, Ethernet3/8/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 68
           ptp:
@@ -1265,7 +1265,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/8/1, Ethernet5/8/1]
+          uplink_switch_interfaces: [Ethernet4/8/1, Ethernet4/8/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 69
           ptp:
@@ -1282,7 +1282,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/8/1, Ethernet6/8/1]
+          uplink_switch_interfaces: [Ethernet5/8/1, Ethernet5/8/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 70
           ptp:
@@ -1299,7 +1299,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/8/1, Ethernet7/8/1]
+          uplink_switch_interfaces: [Ethernet9/23/1, Ethernet9/23/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 71
           ptp:
@@ -1316,7 +1316,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/8/1, Ethernet8/8/1]
+          uplink_switch_interfaces: [Ethernet8/23/1, Ethernet8/23/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 72
           ptp:
@@ -1333,7 +1333,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.129
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/8/1, Ethernet9/8/1]
+          uplink_switch_interfaces: [Ethernet7/23/1, Ethernet7/23/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 73
           ptp:
@@ -1350,7 +1350,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/8/1, Ethernet10/8/1]
+          uplink_switch_interfaces: [Ethernet6/23/1, Ethernet6/23/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 74
           ptp:
@@ -1367,7 +1367,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/9/1, Ethernet3/9/1]
+          uplink_switch_interfaces: [Ethernet5/23/1, Ethernet5/23/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 75
           ptp:
@@ -1384,7 +1384,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.97
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/9/1, Ethernet4/9/1]
+          uplink_switch_interfaces: [Ethernet9/22/1, Ethernet9/22/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 76
           ptp:
@@ -1401,7 +1401,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.97
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/9/1, Ethernet5/9/1]
+          uplink_switch_interfaces: [Ethernet10/22/1, Ethernet10/22/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 77
           ptp:
@@ -1418,7 +1418,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.97
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/9/1, Ethernet6/9/1]
+          uplink_switch_interfaces: [Ethernet3/23/1, Ethernet3/23/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 78
           ptp:
@@ -1435,7 +1435,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.97
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/9/1, Ethernet7/9/1]
+          uplink_switch_interfaces: [Ethernet4/23/1, Ethernet4/23/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 79
           ptp:
@@ -1452,7 +1452,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.145
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/9/1, Ethernet8/9/1]
+          uplink_switch_interfaces: [Ethernet7/22/1, Ethernet7/22/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 80
           ptp:
@@ -1469,7 +1469,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.145
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/9/1, Ethernet9/9/1]
+          uplink_switch_interfaces: [Ethernet8/22/1, Ethernet8/22/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 81
           ptp:
@@ -1486,7 +1486,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/9/1, Ethernet10/9/1]
+          uplink_switch_interfaces: [Ethernet5/22/1, Ethernet5/22/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 82
           ptp:
@@ -1503,7 +1503,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/10/1, Ethernet3/10/1]
+          uplink_switch_interfaces: [Ethernet6/22/1, Ethernet6/22/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 83
           ptp:
@@ -1520,7 +1520,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.209
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/10/1, Ethernet4/10/1]
+          uplink_switch_interfaces: [Ethernet3/22/1, Ethernet3/22/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 84
           ptp:
@@ -1537,7 +1537,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.209
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/10/1, Ethernet5/10/1]
+          uplink_switch_interfaces: [Ethernet4/22/1, Ethernet4/22/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 85
           ptp:
@@ -1554,7 +1554,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/10/1, Ethernet6/10/1]
+          uplink_switch_interfaces: [Ethernet9/21/1, Ethernet9/21/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 86
           ptp:
@@ -1571,7 +1571,7 @@ l2leaf:
           mgmt_gateway: 10.176.136.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/10/1, Ethernet7/10/1]
+          uplink_switch_interfaces: [Ethernet10/21/1, Ethernet10/21/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 87
           ptp:
@@ -1588,7 +1588,7 @@ l2leaf:
           mgmt_gateway: 10.176.137.17
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/10/1, Ethernet8/10/1]
+          uplink_switch_interfaces: [Ethernet7/21/1, Ethernet7/21/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 88
           ptp:
@@ -1605,7 +1605,7 @@ l2leaf:
           mgmt_gateway: 10.176.137.17
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/10/1, Ethernet9/10/1]
+          uplink_switch_interfaces: [Ethernet8/21/1, Ethernet8/21/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 89
           ptp:
@@ -1622,7 +1622,7 @@ l2leaf:
           mgmt_gateway: 10.176.137.49
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/10/1, Ethernet10/10/1]
+          uplink_switch_interfaces: [Ethernet5/21/1, Ethernet5/21/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 90
           ptp:
@@ -1639,7 +1639,7 @@ l2leaf:
           mgmt_gateway: 10.176.137.49
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/11/1, Ethernet3/11/1]
+          uplink_switch_interfaces: [Ethernet6/21/1, Ethernet6/21/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 91
           ptp:
@@ -1656,7 +1656,7 @@ l2leaf:
           mgmt_gateway: 10.176.137.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/11/1, Ethernet4/11/1]
+          uplink_switch_interfaces: [Ethernet3/21/1, Ethernet3/21/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 92
           ptp:
@@ -1673,7 +1673,7 @@ l2leaf:
           mgmt_gateway: 10.176.137.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/11/1, Ethernet5/11/1]
+          uplink_switch_interfaces: [Ethernet4/21/1, Ethernet4/21/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 93
           ptp:
@@ -1690,7 +1690,7 @@ l2leaf:
           mgmt_gateway: 10.176.137.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/11/1, Ethernet6/11/1]
+          uplink_switch_interfaces: [Ethernet9/20/1, Ethernet9/20/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 94
           ptp:
@@ -1707,7 +1707,7 @@ l2leaf:
           mgmt_gateway: 10.176.137.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/11/1, Ethernet7/11/1]
+          uplink_switch_interfaces: [Ethernet10/20/1, Ethernet10/20/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 95
           ptp:
@@ -1724,7 +1724,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/11/1, Ethernet8/11/1]
+          uplink_switch_interfaces: [Ethernet7/20/1, Ethernet7/20/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 96
           ptp:
@@ -1741,7 +1741,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/11/1, Ethernet9/11/1]
+          uplink_switch_interfaces: [Ethernet8/20/1, Ethernet8/20/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 97
           ptp:
@@ -1758,7 +1758,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.129
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/11/1, Ethernet10/11/1]
+          uplink_switch_interfaces: [Ethernet4/20/1, Ethernet4/20/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 98
           ptp:
@@ -1775,7 +1775,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.129
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/12/1, Ethernet3/12/1]
+          uplink_switch_interfaces: [Ethernet5/20/1, Ethernet5/20/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 99
           ptp:
@@ -1792,7 +1792,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.129
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/12/1, Ethernet4/12/1]
+          uplink_switch_interfaces: [Ethernet6/20/1, Ethernet6/20/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 100
           ptp:
@@ -1809,7 +1809,7 @@ l2leaf:
           mgmt_gateway: 10.176.138.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/12/1, Ethernet5/12/1]
+          uplink_switch_interfaces: [Ethernet3/20/1, Ethernet3/20/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 101
           ptp:
@@ -1826,7 +1826,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.145
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/12/1, Ethernet6/12/1]
+          uplink_switch_interfaces: [Ethernet9/19/1, Ethernet9/19/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 102
           ptp:
@@ -1843,7 +1843,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.145
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/12/1, Ethernet7/12/1]
+          uplink_switch_interfaces: [Ethernet10/19/1, Ethernet10/19/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 103
           ptp:
@@ -1860,7 +1860,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.161
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/12/1, Ethernet8/12/1]
+          uplink_switch_interfaces: [Ethernet7/19/1, Ethernet7/19/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 104
           ptp:
@@ -1877,7 +1877,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.161
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/12/1, Ethernet9/12/1]
+          uplink_switch_interfaces: [Ethernet8/19/1, Ethernet8/19/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 105
           ptp:
@@ -1894,7 +1894,7 @@ l2leaf:
           mgmt_gateway: 10.176.138.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/12/1, Ethernet10/12/1]
+          uplink_switch_interfaces: [Ethernet5/19/1, Ethernet5/19/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 106
           ptp:
@@ -1911,7 +1911,7 @@ l2leaf:
           mgmt_gateway: 10.176.138.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/13/1, Ethernet3/13/1]
+          uplink_switch_interfaces: [Ethernet6/19/1, Ethernet6/19/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 107
           ptp:
@@ -1928,7 +1928,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/13/1, Ethernet4/13/1]
+          uplink_switch_interfaces: [Ethernet4/18/1, Ethernet4/18/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 108
           ptp:
@@ -1945,7 +1945,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/13/1, Ethernet5/13/1]
+          uplink_switch_interfaces: [Ethernet5/18/1, Ethernet5/18/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 109
           ptp:
@@ -1962,7 +1962,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/13/1, Ethernet6/13/1]
+          uplink_switch_interfaces: [Ethernet6/18/1, Ethernet6/18/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 110
           ptp:
@@ -1979,7 +1979,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/13/1, Ethernet7/13/1]
+          uplink_switch_interfaces: [Ethernet7/18/1, Ethernet7/18/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 111
           ptp:
@@ -1996,7 +1996,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/13/1, Ethernet8/13/1]
+          uplink_switch_interfaces: [Ethernet8/18/1, Ethernet8/18/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 112
           ptp:
@@ -2013,7 +2013,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/13/1, Ethernet9/13/1]
+          uplink_switch_interfaces: [Ethernet9/18/1, Ethernet9/18/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 113
           ptp:
@@ -2030,7 +2030,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/13/1, Ethernet10/13/1]
+          uplink_switch_interfaces: [Ethernet10/18/1, Ethernet10/18/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 114
           ptp:
@@ -2047,7 +2047,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/14/1, Ethernet3/14/1]
+          uplink_switch_interfaces: [Ethernet3/19/1, Ethernet3/19/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 115
           ptp:
@@ -2064,7 +2064,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/14/1, Ethernet4/14/1]
+          uplink_switch_interfaces: [Ethernet4/19/1, Ethernet4/19/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 116
           ptp:
@@ -2081,7 +2081,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.193
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/14/1, Ethernet5/14/1]
+          uplink_switch_interfaces: [Ethernet10/17/1, Ethernet10/17/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 117
           ptp:
@@ -2098,7 +2098,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.193
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/14/1, Ethernet6/14/1]
+          uplink_switch_interfaces: [Ethernet3/18/1, Ethernet3/18/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 118
           ptp:
@@ -2115,7 +2115,7 @@ l2leaf:
           mgmt_gateway: 10.176.138.65
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/14/1, Ethernet7/14/1]
+          uplink_switch_interfaces: [Ethernet8/17/1, Ethernet8/17/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 119
           ptp:
@@ -2132,7 +2132,7 @@ l2leaf:
           mgmt_gateway: 10.176.138.65
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/14/1, Ethernet8/14/1]
+          uplink_switch_interfaces: [Ethernet9/17/1, Ethernet9/17/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 120
           ptp:
@@ -2149,7 +2149,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.209
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/14/1, Ethernet9/14/1]
+          uplink_switch_interfaces: [Ethernet3/17/1, Ethernet3/17/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 121
           ptp:
@@ -2166,7 +2166,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.209
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/14/1, Ethernet10/14/1]
+          uplink_switch_interfaces: [Ethernet4/17/1, Ethernet4/17/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 122
           ptp:
@@ -2183,7 +2183,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.209
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/15/1, Ethernet3/15/1]
+          uplink_switch_interfaces: [Ethernet5/17/1, Ethernet5/17/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 123
           ptp:
@@ -2200,7 +2200,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.209
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/15/1, Ethernet4/15/1]
+          uplink_switch_interfaces: [Ethernet6/17/1, Ethernet6/17/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 124
           ptp:
@@ -2217,7 +2217,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.209
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/15/1, Ethernet5/15/1]
+          uplink_switch_interfaces: [Ethernet7/17/1, Ethernet7/17/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 125
           ptp:
@@ -2234,7 +2234,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/15/1, Ethernet6/15/1]
+          uplink_switch_interfaces: [Ethernet6/16/1, Ethernet6/16/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 126
           ptp:
@@ -2251,7 +2251,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/15/1, Ethernet7/15/1]
+          uplink_switch_interfaces: [Ethernet7/16/1, Ethernet7/16/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 127
           ptp:
@@ -2268,7 +2268,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/15/1, Ethernet8/15/1]
+          uplink_switch_interfaces: [Ethernet8/16/1, Ethernet8/16/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 128
           ptp:
@@ -2285,7 +2285,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/15/1, Ethernet9/15/1]
+          uplink_switch_interfaces: [Ethernet9/16/1, Ethernet9/16/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 129
           ptp:
@@ -2302,7 +2302,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/15/1, Ethernet10/15/1]
+          uplink_switch_interfaces: [Ethernet10/16/1, Ethernet10/16/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 130
           ptp:
@@ -2319,7 +2319,7 @@ l2leaf:
           mgmt_gateway: 10.176.138.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/16/1, Ethernet3/16/1]
+          uplink_switch_interfaces: [Ethernet7/15/1, Ethernet7/15/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 131
           ptp:
@@ -2336,7 +2336,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/16/1, Ethernet4/16/1]
+          uplink_switch_interfaces: [Ethernet8/15/1, Ethernet8/15/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 132
           ptp:
@@ -2353,7 +2353,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/16/1, Ethernet5/16/1]
+          uplink_switch_interfaces: [Ethernet9/15/1, Ethernet9/15/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 133
           ptp:
@@ -2370,7 +2370,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/16/1, Ethernet6/16/1]
+          uplink_switch_interfaces: [Ethernet10/15/1, Ethernet10/15/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 134
           ptp:
@@ -2387,7 +2387,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/16/1, Ethernet7/16/1]
+          uplink_switch_interfaces: [Ethernet3/16/1, Ethernet3/16/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 135
           ptp:
@@ -2404,7 +2404,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/16/1, Ethernet8/16/1]
+          uplink_switch_interfaces: [Ethernet4/16/1, Ethernet4/16/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 136
           ptp:
@@ -2421,7 +2421,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/16/1, Ethernet9/16/1]
+          uplink_switch_interfaces: [Ethernet5/16/1, Ethernet5/16/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 137
           ptp:
@@ -2438,7 +2438,7 @@ l2leaf:
           mgmt_gateway: 10.176.138.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/16/1, Ethernet10/16/1]
+          uplink_switch_interfaces: [Ethernet6/15/1, Ethernet6/15/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 138
           ptp:
@@ -2455,7 +2455,7 @@ l2leaf:
           mgmt_gateway: 10.176.138.209
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/17/1, Ethernet3/17/1]
+          uplink_switch_interfaces: [Ethernet5/15/1, Ethernet5/15/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 139
           ptp:
@@ -2472,7 +2472,7 @@ l2leaf:
           mgmt_gateway: 10.176.138.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/17/1, Ethernet4/17/1]
+          uplink_switch_interfaces: [Ethernet4/15/1, Ethernet4/15/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 140
           ptp:
@@ -2489,7 +2489,7 @@ l2leaf:
           mgmt_gateway: 10.176.139.17
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/17/1, Ethernet5/17/1]
+          uplink_switch_interfaces: [Ethernet3/15/1, Ethernet3/15/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 141
           ptp:
@@ -2506,7 +2506,7 @@ l2leaf:
           mgmt_gateway: 10.176.139.49
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/17/1, Ethernet6/17/1]
+          uplink_switch_interfaces: [Ethernet10/14/1, Ethernet10/14/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 142
           ptp:
@@ -2523,7 +2523,7 @@ l2leaf:
           mgmt_gateway: 10.176.139.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/17/1, Ethernet7/17/1]
+          uplink_switch_interfaces: [Ethernet9/14/1, Ethernet9/14/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 143
           ptp:
@@ -2540,7 +2540,7 @@ l2leaf:
           mgmt_gateway: 10.176.139.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/17/1, Ethernet8/17/1]
+          uplink_switch_interfaces: [Ethernet8/14/1, Ethernet8/14/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 144
           ptp:
@@ -2557,7 +2557,7 @@ l2leaf:
           mgmt_gateway: 10.176.139.145
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/17/1, Ethernet9/17/1]
+          uplink_switch_interfaces: [Ethernet7/14/1, Ethernet7/14/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 145
           ptp:
@@ -2574,7 +2574,7 @@ l2leaf:
           mgmt_gateway: 10.176.139.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/17/1, Ethernet10/17/1]
+          uplink_switch_interfaces: [Ethernet6/14/1, Ethernet6/14/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 146
           ptp:
@@ -2591,7 +2591,7 @@ l2leaf:
           mgmt_gateway: 10.176.139.241
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/18/1, Ethernet3/18/1]
+          uplink_switch_interfaces: [Ethernet5/14/1, Ethernet5/14/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 147
           ptp:
@@ -2608,7 +2608,7 @@ l2leaf:
           mgmt_gateway: 10.176.140.17
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/18/1, Ethernet4/18/1]
+          uplink_switch_interfaces: [Ethernet4/14/1, Ethernet4/14/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 148
           ptp:
@@ -2625,7 +2625,7 @@ l2leaf:
           mgmt_gateway: 10.176.140.49
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/18/1, Ethernet5/18/1]
+          uplink_switch_interfaces: [Ethernet3/14/1, Ethernet3/14/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 149
           ptp:
@@ -2642,7 +2642,7 @@ l2leaf:
           mgmt_gateway: 10.176.140.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/18/1, Ethernet6/18/1]
+          uplink_switch_interfaces: [Ethernet10/13/1, Ethernet10/13/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 150
           ptp:
@@ -2659,7 +2659,7 @@ l2leaf:
           mgmt_gateway: 10.176.140.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/18/1, Ethernet7/18/1]
+          uplink_switch_interfaces: [Ethernet9/13/1, Ethernet9/13/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 151
           ptp:
@@ -2676,7 +2676,7 @@ l2leaf:
           mgmt_gateway: 10.176.140.145
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/18/1, Ethernet8/18/1]
+          uplink_switch_interfaces: [Ethernet8/13/1, Ethernet8/13/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 152
           ptp:
@@ -2693,7 +2693,7 @@ l2leaf:
           mgmt_gateway: 10.176.140.177
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/18/1, Ethernet9/18/1]
+          uplink_switch_interfaces: [Ethernet7/13/1, Ethernet7/13/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 153
           ptp:
@@ -2710,7 +2710,7 @@ l2leaf:
           mgmt_gateway: 10.176.140.225
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/18/1, Ethernet10/18/1]
+          uplink_switch_interfaces: [Ethernet6/13/1, Ethernet6/13/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 154
           ptp:
@@ -2727,7 +2727,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.17
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/19/1, Ethernet3/19/1]
+          uplink_switch_interfaces: [Ethernet5/13/1, Ethernet5/13/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 155
           ptp:
@@ -2744,7 +2744,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/19/1, Ethernet4/19/1]
+          uplink_switch_interfaces: [Ethernet4/13/1, Ethernet4/13/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 156
           ptp:
@@ -2761,7 +2761,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.49
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/19/1, Ethernet5/19/1]
+          uplink_switch_interfaces: [Ethernet3/13/1, Ethernet3/13/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 157
           ptp:
@@ -2778,7 +2778,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.65
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/19/1, Ethernet6/19/1]
+          uplink_switch_interfaces: [Ethernet10/12/1, Ethernet10/12/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 158
           ptp:
@@ -2795,7 +2795,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/19/1, Ethernet7/19/1]
+          uplink_switch_interfaces: [Ethernet9/12/1, Ethernet9/12/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 159
           ptp:
@@ -2812,7 +2812,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.97
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/19/1, Ethernet8/19/1]
+          uplink_switch_interfaces: [Ethernet6/12/1, Ethernet6/12/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 160
           ptp:
@@ -2829,7 +2829,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.97
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/19/1, Ethernet9/19/1]
+          uplink_switch_interfaces: [Ethernet7/12/1, Ethernet7/12/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 161
           ptp:
@@ -2846,7 +2846,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.97
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/19/1, Ethernet10/19/1]
+          uplink_switch_interfaces: [Ethernet8/12/1, Ethernet8/12/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 162
           ptp:
@@ -2863,7 +2863,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/20/1, Ethernet3/20/1]
+          uplink_switch_interfaces: [Ethernet10/11/1, Ethernet10/11/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 163
           ptp:
@@ -2880,7 +2880,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/20/1, Ethernet4/20/1]
+          uplink_switch_interfaces: [Ethernet3/12/1, Ethernet3/12/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 164
           ptp:
@@ -2897,7 +2897,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/20/1, Ethernet5/20/1]
+          uplink_switch_interfaces: [Ethernet4/12/1, Ethernet4/12/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 165
           ptp:
@@ -2914,7 +2914,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.129
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/20/1, Ethernet6/20/1]
+          uplink_switch_interfaces: [Ethernet9/11/1, Ethernet9/11/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 166
           ptp:
@@ -2931,7 +2931,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/20/1, Ethernet7/20/1]
+          uplink_switch_interfaces: [Ethernet5/11/1, Ethernet5/11/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 167
           ptp:
@@ -2948,7 +2948,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/20/1, Ethernet8/20/1]
+          uplink_switch_interfaces: [Ethernet6/11/1, Ethernet6/11/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 168
           ptp:
@@ -2965,7 +2965,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.17
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/20/1, Ethernet9/20/1]
+          uplink_switch_interfaces: [Ethernet3/11/1, Ethernet3/11/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 169
           ptp:
@@ -2982,7 +2982,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.17
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/20/1, Ethernet10/20/1]
+          uplink_switch_interfaces: [Ethernet4/11/1, Ethernet4/11/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 170
           ptp:
@@ -2999,7 +2999,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.161
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/21/1, Ethernet3/21/1]
+          uplink_switch_interfaces: [Ethernet9/10/1, Ethernet9/10/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 171
           ptp:
@@ -3016,7 +3016,7 @@ l2leaf:
           mgmt_gateway: 10.176.141.161
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/21/1, Ethernet4/21/1]
+          uplink_switch_interfaces: [Ethernet10/10/1, Ethernet10/10/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 172
           ptp:
@@ -3033,7 +3033,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/21/1, Ethernet5/21/1]
+          uplink_switch_interfaces: [Ethernet7/10/1, Ethernet7/10/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 173
           ptp:
@@ -3050,7 +3050,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.33
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/21/1, Ethernet6/21/1]
+          uplink_switch_interfaces: [Ethernet8/10/1, Ethernet8/10/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 174
           ptp:
@@ -3067,7 +3067,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.49
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/21/1, Ethernet7/21/1]
+          uplink_switch_interfaces: [Ethernet5/10/1, Ethernet5/10/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 175
           ptp:
@@ -3084,7 +3084,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.49
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/21/1, Ethernet8/21/1]
+          uplink_switch_interfaces: [Ethernet6/10/1, Ethernet6/10/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 176
           ptp:
@@ -3101,7 +3101,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.65
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/21/1, Ethernet9/21/1]
+          uplink_switch_interfaces: [Ethernet10/9/1, Ethernet10/9/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 177
           ptp:
@@ -3118,7 +3118,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.65
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/21/1, Ethernet10/21/1]
+          uplink_switch_interfaces: [Ethernet3/10/1, Ethernet3/10/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 178
           ptp:
@@ -3135,7 +3135,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.65
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/22/1, Ethernet3/22/1]
+          uplink_switch_interfaces: [Ethernet4/10/1, Ethernet4/10/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 179
           ptp:
@@ -3152,7 +3152,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/22/1, Ethernet4/22/1]
+          uplink_switch_interfaces: [Ethernet6/9/1, Ethernet6/9/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 180
           ptp:
@@ -3169,7 +3169,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/22/1, Ethernet5/22/1]
+          uplink_switch_interfaces: [Ethernet7/9/1, Ethernet7/9/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 181
           ptp:
@@ -3186,7 +3186,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/22/1, Ethernet6/22/1]
+          uplink_switch_interfaces: [Ethernet8/9/1, Ethernet8/9/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 182
           ptp:
@@ -3203,7 +3203,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.81
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/22/1, Ethernet7/22/1]
+          uplink_switch_interfaces: [Ethernet9/9/1, Ethernet9/9/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 183
           ptp:
@@ -3220,7 +3220,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.97
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/22/1, Ethernet8/22/1]
+          uplink_switch_interfaces: [Ethernet4/9/1, Ethernet4/9/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 184
           ptp:
@@ -3237,7 +3237,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.97
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet9/22/1, Ethernet9/22/1]
+          uplink_switch_interfaces: [Ethernet5/9/1, Ethernet5/9/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 185
           ptp:
@@ -3254,7 +3254,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet10/22/1, Ethernet10/22/1]
+          uplink_switch_interfaces: [Ethernet3/9/1, Ethernet3/9/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 186
           ptp:
@@ -3271,7 +3271,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet3/23/1, Ethernet3/23/1]
+          uplink_switch_interfaces: [Ethernet8/8/1, Ethernet8/8/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 187
           ptp:
@@ -3288,7 +3288,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet4/23/1, Ethernet4/23/1]
+          uplink_switch_interfaces: [Ethernet9/8/1, Ethernet9/8/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 188
           ptp:
@@ -3305,7 +3305,7 @@ l2leaf:
           mgmt_gateway: 10.176.143.113
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet5/23/1, Ethernet5/23/1]
+          uplink_switch_interfaces: [Ethernet10/8/1, Ethernet10/8/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 189
           ptp:
@@ -3322,7 +3322,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.17
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet6/23/1, Ethernet6/23/1]
+          uplink_switch_interfaces: [Ethernet6/8/1, Ethernet6/8/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 190
           ptp:
@@ -3339,7 +3339,7 @@ l2leaf:
           mgmt_gateway: 10.176.142.17
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet7/23/1, Ethernet7/23/1]
+          uplink_switch_interfaces: [Ethernet7/8/1, Ethernet7/8/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 191
           ptp:
