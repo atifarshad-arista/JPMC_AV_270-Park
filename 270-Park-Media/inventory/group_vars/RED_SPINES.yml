@@ -45,8 +45,8 @@ management_cvx:
   shutdown: false
   server_hosts:
   # IP or hostname.
-    - 10.169.67.240
-    - 10.169.67.241
-    - 10.169.67.242
+    - 10.155.243.141
+    - 10.155.243.142
+    - 10.155.243.143
   # Interface name.
   source_interface: Loopback0
