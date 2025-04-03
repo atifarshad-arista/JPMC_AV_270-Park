@@ -291,8 +291,8 @@
 | media_spine | C160064-037B200A | Ethernet8/13/1 | border_leaf | C160064-037B381A | Ethernet34/1 |
 | media_spine | C160064-037B200A | Ethernet9/13/1 | ptp_leaf | C160064-037B370A | Ethernet34/1 |
 | media_spine | C160064-037B200A | Ethernet9/14/1 | ptp_leaf | C160064-037B371A | Ethernet34/1 |
-| ptp_leaf | C160064-037B370A | Ethernet53 | ptp_leaf | C160064-037B371A | Ethernet53 |
-| ptp_leaf | C160064-037B370A | Ethernet54 | ptp_leaf | C160064-037B371A | Ethernet54 |
+| ptp_leaf | C160064-037B370A | Ethernet53/1 | ptp_leaf | C160064-037B371A | Ethernet53/1 |
+| ptp_leaf | C160064-037B370A | Ethernet54/1 | ptp_leaf | C160064-037B371A | Ethernet54/1 |
 | border_leaf | C160064-037B380A | Ethernet35/1 | border_leaf | C160064-037B381A | Ethernet35/1 |
 | border_leaf | C160064-037B380A | Ethernet36/1 | border_leaf | C160064-037B381A | Ethernet36/1 |
 
@@ -334,7 +334,7 @@
 | 100.83.89.208/28 | 16 | 4 | 25.0 % |
 | 100.83.89.224/28 | 16 | 6 | 37.5 % |
 | 100.83.89.240/28 | 16 | 6 | 37.5 % |
-| 100.83.93.0/24 | 256 | 16 | 6.25 % |
+| 100.83.93.0/24 | 256 | 24 | 9.38 % |
 | 100.83.94.0/28 | 16 | 12 | 75.0 % |
 | 100.83.94.16/28 | 16 | 12 | 75.0 % |
 | 100.83.94.32/28 | 16 | 4 | 25.0 % |
@@ -564,6 +564,10 @@
 | C160064-037B200A | Ethernet8/13/1 | 100.83.93.22/31 | C160064-037B381A | Ethernet34/1 | 100.83.93.23/31 |
 | C160064-037B200A | Ethernet9/13/1 | 100.83.93.10/31 | C160064-037B370A | Ethernet34/1 | 100.83.93.11/31 |
 | C160064-037B200A | Ethernet9/14/1 | 100.83.93.14/31 | C160064-037B371A | Ethernet34/1 | 100.83.93.15/31 |
+| C160064-037B370A | Ethernet53/1 | 100.83.93.12/31 | C160064-037B371A | Ethernet53/1 | 100.83.93.13/31 |
+| C160064-037B370A | Ethernet54/1 | 100.83.93.14/31 | C160064-037B371A | Ethernet54/1 | 100.83.93.15/31 |
+| C160064-037B380A | Ethernet35/1 | 100.83.93.8/31 | C160064-037B381A | Ethernet35/1 | 100.83.93.9/31 |
+| C160064-037B380A | Ethernet36/1 | 100.83.93.10/31 | C160064-037B381A | Ethernet36/1 | 100.83.93.11/31 |
 
 ### Loopback Interfaces (BGP EVPN Peering)
 

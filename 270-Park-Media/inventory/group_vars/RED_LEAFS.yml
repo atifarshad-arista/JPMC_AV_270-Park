@@ -548,3 +548,13 @@ media_leaf:
       uplink_ipv4_pool: 100.83.95.240/28
       ptp:
         source_ip: 169.27.195.32
+
+management_cvx:
+  shutdown: false
+  server_hosts:
+  # IP or hostname.
+    - 10.169.67.240
+    - 10.169.67.241
+    - 10.169.67.242
+  # Interface name.
+  source_interface: Loopback0

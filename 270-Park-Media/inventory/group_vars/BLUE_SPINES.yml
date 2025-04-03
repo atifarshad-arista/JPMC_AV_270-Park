@@ -38,3 +38,13 @@ media_spine:
       mgmt_interface: Management1/1
       mgmt_ip: 10.176.143.168/27
       mgmt_gateway: 10.176.143.161
+
+management_cvx:
+  shutdown: false
+  server_hosts:
+  # IP or hostname.
+    - 10.169.67.243
+    - 10.169.67.244
+    - 10.169.67.245
+  # Interface name.
+  source_interface: Loopback0

@@ -163,15 +163,15 @@ management_api_http:
   enable_http: True
   enable_https: False
 
-management_cvx:
-  shutdown: false
-  server_hosts:
-  # IP or hostname.
-    - 172.16.131.127
-    - 172.16.131.128
-    - 172.16.131.129
-  # Interface name.
-  source_interface: Loopback0
+# management_cvx:
+#   shutdown: false
+#   server_hosts:
+#   # IP or hostname.
+#     - 172.16.131.127
+#     - 172.16.131.128
+#     - 172.16.131.129
+#   # Interface name.
+#   source_interface: Loopback0
 
 management_api_gnmi:
   provider: "eos-native"
@@ -283,44 +283,37 @@ roles:
 
 
 # Create UPLINKS -> Media Spines to BL and PTP, -> Green Spines to BL and PTP (Note: Green spines are used here just to configure PTP/BL for them )
+#
+
 core_interfaces:
   p2p_links:
 
-    #++++++ Border Leaf to Border Leaf Switch L3 Interlinks with Port-Channel
+    #++++++ Border Leaf to Border Leaf Switch L3 Interlinks without Port-Channel
     - ip: [ 100.83.93.8/31, 100.83.93.9/31 ]
-    #- id: 1
       nodes: [ C160064-037B380A, C160064-037B381A ]
-      port_channel:
-        description: INTER_SWITCH_LINK
-        mode: "active"
-        nodes_child_interfaces:
-          - node: C160064-037B380A
-            # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
-            interfaces: [ Ethernet35/1, Ethernet36/1 ]
-            channel_id: 1000
-          - node: C160064-037B381A
-            # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
-            interfaces: [ Ethernet35/1, Ethernet36/1 ]
-            channel_id: 1000
+      include_in_underlay_protocol: true
+      interfaces: [ Ethernet35/1, Ethernet35/1 ]
       as: [ "65214", "65214" ]
 
-    #+++++++++ PTP Switch L3 Interlinks with Port-Channel
     - ip: [ 100.83.93.10/31, 100.83.93.11/31 ]
-    #- id: 1
+      nodes: [ C160064-037B380A, C160064-037B381A ]
+      include_in_underlay_protocol: true
+      interfaces: [ Ethernet36/1, Ethernet36/1 ]
+      as: [ "65214", "65214" ]
+
+    #+++++++++ PTP Switch L3 Interlinks without Port-Channel
+    - ip: [ 100.83.93.12/31, 100.83.93.13/31 ]
       nodes: [ C160064-037B370A, C160064-037B371A ]
-      port_channel:
-        description: INTER_SWITCH_LINK
-        mode: "active"
-        nodes_child_interfaces:
-          - node: C160064-037B370A
-            # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
-            interfaces: [ Ethernet53, Ethernet54 ]
-            channel_id: 1000
-          - node: C160064-037B371A
-            # List of node interfaces. Ex.- [ 'node1 interface1', 'node1 interface2' ].
-            interfaces: [ Ethernet53, Ethernet54 ]
-            channel_id: 1000
+      include_in_underlay_protocol: true
+      interfaces: [ Ethernet53/1, Ethernet53/1 ]
       as: [ "65213.37370", "65213.37370" ]
+
+    - ip: [ 100.83.93.14/31, 100.83.93.15/31 ]
+      nodes: [ C160064-037B370A, C160064-037B371A ]
+      include_in_underlay_protocol: true
+      interfaces: [ Ethernet54/1, Ethernet54/1 ]
+      as: [ "65213.37370", "65213.37370" ]
+
 
     #+++++++ Border to Green Spines p2p L3 Links
     - ip: [ 100.83.93.17/31, 100.83.93.16/31 ]
@@ -358,7 +351,7 @@ core_interfaces:
     #+++++ PTP to Green Spines p2p L3 Links
     - ip: [ 100.83.93.25/31, 100.83.93.24/31 ]
       nodes: [ C160064-037B370A, C160064-037B300A  ]
-      interfaces: [ Ethernet51, Ethernet3/31/1 ]
+      interfaces: [ Ethernet51/1, Ethernet3/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
@@ -366,7 +359,7 @@ core_interfaces:
 
     - ip: [ 100.83.93.27/31, 100.83.93.26/31 ]
       nodes: [ C160064-037B370A, C160064-037B301A ]
-      interfaces: [ Ethernet52, Ethernet3/31/1 ]
+      interfaces: [ Ethernet52/1, Ethernet3/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
@@ -374,7 +367,7 @@ core_interfaces:
 
     - ip: [ 100.83.93.29/31, 100.83.93.28/31 ]
       nodes: [ C160064-037B371A, C160064-037B300A  ]
-      interfaces: [ Ethernet51, Ethernet4/31/1 ]
+      interfaces: [ Ethernet51/1, Ethernet4/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
@@ -382,11 +375,12 @@ core_interfaces:
 
     - ip: [ 100.83.93.31/31, 100.83.93.30/31 ]
       nodes: [ C160064-037B371A, C160064-037B301A ]
-      interfaces: [ Ethernet52, Ethernet4/31/1 ]
+      interfaces: [ Ethernet52/1, Ethernet4/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65003.37370", "65212.37300" ]
+
 
 
 eos_validate_state_validation_mode_loose: true

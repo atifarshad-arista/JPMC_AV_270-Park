@@ -31,6 +31,8 @@ media_spine:
         missing_message:
                 sequence_ids:
                   enabled: False
+
+
   nodes:
     - name: C160064-037B100A
       id: 1
@@ -38,3 +40,13 @@ media_spine:
       mgmt_interface: Management1/1
       mgmt_ip: 10.176.143.139/27
       mgmt_gateway: 10.176.143.129
+
+management_cvx:
+  shutdown: false
+  server_hosts:
+  # IP or hostname.
+    - 10.169.67.240
+    - 10.169.67.241
+    - 10.169.67.242
+  # Interface name.
+  source_interface: Loopback0
