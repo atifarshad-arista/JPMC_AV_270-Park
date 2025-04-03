@@ -47,7 +47,7 @@ media_leaf:
       filter:
         tags: [ C160064-037B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3, Ethernet2/4, Ethernet3/1, Ethernet3/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1, Ethernet2/3/1, Ethernet2/4/1, Ethernet3/1/1, Ethernet3/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/1/1, Ethernet7/1/1, Ethernet6/2/1, Ethernet7/2/1, Ethernet6/3/1, Ethernet7/3/1 ]
       uplink_ipv4_pool: 100.83.88.0/28
       ptp:
@@ -63,7 +63,7 @@ media_leaf:
       filter:
         tags: [ C160064-037B202A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3, Ethernet2/4, Ethernet3/1, Ethernet3/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1, Ethernet2/3/1, Ethernet2/4/1, Ethernet3/1/1, Ethernet3/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/4/1, Ethernet7/4/1, Ethernet6/5/1, Ethernet7/5/1, Ethernet6/6/1, Ethernet7/6/1 ]
       uplink_ipv4_pool: 100.83.88.16/28
       ptp:
@@ -95,7 +95,7 @@ media_leaf:
       filter:
         tags: [ C160064-037B203A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1, Ethernet2/3/1 ]
       uplink_switch_interfaces: [ Ethernet6/7/1, Ethernet7/7/1, Ethernet6/8/1 ]
       uplink_ipv4_pool: 100.83.88.48/28
       ptp:
@@ -127,7 +127,7 @@ media_leaf:
       filter:
         tags: [ C160064-037B204A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1, Ethernet2/3/1 ]
       uplink_switch_interfaces: [ Ethernet7/8/1, Ethernet6/9/1, Ethernet7/9/1 ]
       uplink_ipv4_pool: 100.83.88.80/28
       ptp:
@@ -143,7 +143,7 @@ media_leaf:
       filter:
         tags: [ C160064-001B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/23/1, Ethernet7/23/1 ]
       uplink_ipv4_pool: 100.83.88.96/28
       ptp:
@@ -159,7 +159,7 @@ media_leaf:
       filter:
         tags: [ C160064-002B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3, Ethernet2/4, Ethernet3/1 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1, Ethernet2/3/1, Ethernet2/4/1, Ethernet3/1/1 ]
       uplink_switch_interfaces: [ Ethernet6/21/1, Ethernet7/21/1, Ethernet6/22/1, Ethernet7/22/1, Ethernet6/24/1 ]
       uplink_ipv4_pool: 100.83.88.112/28
       ptp:
@@ -175,7 +175,7 @@ media_leaf:
       filter:
         tags: [ C160064-003B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/20/1, Ethernet7/20/1 ]
       uplink_ipv4_pool: 100.83.88.128/28
       ptp:
@@ -207,7 +207,7 @@ media_leaf:
       filter:
         tags: [ C160064-005B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/19/1, Ethernet7/19/1 ]
       uplink_ipv4_pool: 100.83.88.160/28
       ptp:
@@ -239,7 +239,7 @@ media_leaf:
       filter:
         tags: [ C160064-007B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/18/1, Ethernet7/18/1 ]
       uplink_ipv4_pool: 100.83.88.192/28
       ptp:
@@ -271,7 +271,7 @@ media_leaf:
       filter:
         tags: [ C160064-009B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/17/1, Ethernet7/17/1 ]
       uplink_ipv4_pool: 100.83.88.224/28
       ptp:
@@ -319,7 +319,7 @@ media_leaf:
       filter:
         tags: [ C160064-013B202A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/16/1, Ethernet7/16/1 ]
       uplink_ipv4_pool: 100.83.89.16/28
       ptp:
@@ -415,7 +415,7 @@ media_leaf:
       filter:
         tags: [ C160064-016B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/15/1, Ethernet7/15/1 ]
       uplink_ipv4_pool: 100.83.89.112/28
       ptp:
@@ -431,7 +431,7 @@ media_leaf:
       filter:
         tags: [ C160064-016B202A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/14/1, Ethernet7/14/1 ]
       uplink_ipv4_pool: 100.83.89.128/28
       ptp:
@@ -479,7 +479,7 @@ media_leaf:
       filter:
         tags: [ C160064-049B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/28/1, Ethernet7/28/1 ]
       uplink_ipv4_pool: 100.83.89.176/28
       ptp:
@@ -495,7 +495,7 @@ media_leaf:
       filter:
         tags: [ C160064-050B201A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1 ]
       uplink_switch_interfaces: [ Ethernet6/12/1, Ethernet7/12/1 ]
       uplink_ipv4_pool: 100.83.89.192/28
       ptp:
@@ -527,7 +527,7 @@ media_leaf:
       filter:
         tags: [ C160064-051B202A ]
       uplink_switches: [ 'C160064-037B200A', 'C160064-037B200A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet2/1, Ethernet2/2, Ethernet2/3 ]
+      uplink_interfaces: [ Ethernet2/1/1, Ethernet2/2/1, Ethernet2/3/1 ]
       uplink_switch_interfaces: [ Ethernet6/11/1, Ethernet7/11/1, Ethernet7/24/1 ]
       uplink_ipv4_pool: 100.83.89.224/28
       ptp:
