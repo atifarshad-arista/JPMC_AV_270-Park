@@ -9,1737 +9,1737 @@ tenants:
         - id: 200
           name: 'IB-MGMT-VLAN'
           tags: ["200"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.93.240.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.240.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.93.240.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 100
           name: 'General-AV-Device-Control'
           tags: ["100"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.48.1/21
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.48.2/21
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.48.3/21
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 101
           name: 'Cerebrum-Out-of-Band'
           tags: ["101"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.46.1/23
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.46.2/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.46.3/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 102
           name: 'NMOS-Devices'
           tags: ["102"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.68.1/22
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.68.2/22
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.68.3/22
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 103
           name: 'Cerebrum-Panels'
           tags: ["103"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.80.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.80.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.80.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 104
           name: 'Ross-A'
           tags: ["104"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.112.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.112.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.112.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 105
           name: 'Ross-B'
           tags: ["105"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.113.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.113.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.113.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 106
           name: 'Misc-37-&-AVTR'
           tags: ["106"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.92.1/22
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.92.2/22
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.92.3/22
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 107
           name: 'PTZ/Cam-Ctl/Video'
           tags: ["107"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.130.44.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.130.44.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.130.44.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 108
           name: 'Shure-Wireless-Control'
           tags: ["108"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.56.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.56.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.56.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 121
           name: 'NDI'
           tags: ["121"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.192.150.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.150.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.150.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 131
           name: 'IPMX-A'
           tags: ["131"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.22.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.22.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.22.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 132
           name: 'IPMX-B'
           tags: ["132"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.23.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.23.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.23.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 141
           name: 'Barco-3'
           tags: ["141"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.76.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.76.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.76.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 142
           name: 'Barco-5'
           tags: ["142"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.77.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.77.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.77.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 143
           name: 'Barco-7'
           tags: ["143"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.112.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.112.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.112.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 144
           name: 'Barco-9'
           tags: ["144"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.113.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.113.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.113.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 161
           name: 'KVM'
           tags: ["161"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.93.232.1/22
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.232.2/22
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.93.232.3/22
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 162
           name: 'MegaPixel'
           tags: ["162"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.192.151.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.151.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.151.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 163
           name: '7th-Sense'
           tags: ["163"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.192.174.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.174.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.174.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 164
           name: 'Lighting'
           tags: ["164"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.93.243.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.243.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.93.243.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 181
           name: 'Canvas-Control'
           tags: ["181"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.192.175.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.175.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.175.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 201
           name: 'NPL-TBD'
           tags: ["201"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.146.188.1/23
           nodes:
             - node: C160064-037B300A
               ip_address: 10.146.188.2/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.146.188.3/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 202
           name: 'DC-Mgt-A/IPMI/iLO/iDRAC'
           tags: ["202"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.66.1/23
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.66.2/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.66.3/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 203
           name: 'DC-Mgt-B'
           tags: ["203"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.192.99.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.99.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.99.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 204
           name: 'DAS-C&C'
           tags: ["204"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.57.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.57.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.57.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 205
           name: 'DMF'
           tags: ["205"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.93.242.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.242.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.93.242.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 241
           name: 'Gfx-(tbd)'
           tags: ["241"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.81.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.81.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.81.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 242
           name: 'Edit-(tbd)'
           tags: ["242"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.90.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.90.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.90.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 243
           name: 'MAM-(tbd)'
           tags: ["243"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.169.91.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.91.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.91.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 244
           name: 'Storage'
           tags: ["244"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.192.98.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.98.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.98.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 245
           name: 'Art-Server-10G'
           tags: ["245"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.116.1/25
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.116.2/25
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.116.3/25
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 261
           name: 'AES67/ICM-A'
           tags: ["261"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.130.40.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.130.40.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.130.40.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 262
           name: 'AES67/ICM-B'
           tags: ["262"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.130.41.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.130.41.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.130.41.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 301
           name: '37CER-Dante/QLAN-A-W/L-Mics-Zoom'
           tags: ["301"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.56.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.56.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.56.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 302
           name: '37CER-Dante/QLAN-B-W/L-Mics-Zoom'
           tags: ["302"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.57.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.57.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.57.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 303
           name: 'BGM-Dante/QLAN-A'
           tags: ["303"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.224.1/23
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.224.2/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.224.3/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 304
           name: 'BGM-Dante/QLAN-B'
           tags: ["304"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.230.1/23
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.230.2/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.230.3/23
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 305
           name: 'G-Lobby-Dante/QLAN-A'
           tags: ["305"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.52.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.52.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.52.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 306
           name: 'G-Lobby-Dante/QLAN-B'
           tags: ["306"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.53.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.53.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.53.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 307
           name: '13-AV-Rack-Rm-Dante/QLAN-A'
           tags: ["307"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.120.1/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.2/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.120.3/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 308
           name: '13-AV-Rack-Rm-Dante/QLAN-B'
           tags: ["308"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.120.65/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.66/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.120.67/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 309
           name: '14-East-AV-Rack-Rm-Dante/QLAN-A'
           tags: ["309"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.120.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.120.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 310
           name: '14-East-AV-Rack-Rm-Dante/QLAN-B'
           tags: ["310"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.120.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.120.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 311
           name: '15-Balcony-Dante/QLAN-A'
           tags: ["311"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.121.1/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.2/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.121.3/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 312
           name: '15-Balcony-Dante/QLAN-B'
           tags: ["312"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.121.65/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.66/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.121.67/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 313
           name: '15-Lg-Flex-Dante/QLAN-A'
           tags: ["313"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.121.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.121.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 314
           name: '15-Lg-Flex-Dante/QLAN-B'
           tags: ["314"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.121.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.121.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 315
           name: '15-MPR-Dante/QLAN-A'
           tags: ["315"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.202.1/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.2/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.202.3/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 316
           name: '15-MPR-Dante/QLAN-B'
           tags: ["316"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.202.65/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.66/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.202.67/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 317
           name: '16-Lg-MPR-Dante/QLAN-A'
           tags: ["317"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.202.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.202.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 318
           name: '16-Lg-MPR-Dante/QLAN-B'
           tags: ["318"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.202.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.202.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 319
           name: '16-Med-Flex-1-Dante/QLAN-A'
           tags: ["319"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.203.1/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.2/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.203.3/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 320
           name: '16-Med-Flex-1-Dante/QLAN-B'
           tags: ["320"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.203.65/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.66/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.203.67/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 321
           name: '16-Med-Flex-2-Dante/QLAN-A'
           tags: ["321"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.203.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.203.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 322
           name: '16-Med-Flex-2-Dante/QLAN-B'
           tags: ["322"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.203.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.203.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 323
           name: '16-Med-MPR-Dante/QLAN-A'
           tags: ["323"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.206.1/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.2/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.206.3/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 324
           name: '16-Med-MPR-Dante/QLAN-B'
           tags: ["324"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.206.65/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.66/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.206.67/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 325
           name: '16-Balcony-Dante/QLAN-A'
           tags: ["325"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.206.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.206.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 326
           name: '16-Balcony-Dante/QLAN-B'
           tags: ["326"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.206.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.206.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 327
           name: '17-Lge-Flex-MPR-Dante/QLAN-A'
           tags: ["327"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.207.1/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.2/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.207.3/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 328
           name: '17-Lge-Flex-MPR-Dante/QLAN-B'
           tags: ["328"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.207.65/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.66/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.207.67/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 329
           name: '47-OC-Dante/QLAN-A'
           tags: ["329"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.216.1/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.2/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.216.3/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 330
           name: '47-OC-Dante/QLAN-B'
           tags: ["330"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.216.65/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.66/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.216.67/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 331
           name: '48-Reception-Dante/QLAN-A'
           tags: ["331"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.216.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.216.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 332
           name: '48-Reception-Dante/QLAN-B'
           tags: ["332"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.216.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.216.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 333
           name: '49-Reception-Dante/QLAN-A'
           tags: ["333"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.217.1/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.2/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.217.3/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 334
           name: '49-Reception-Dante/QLAN-B'
           tags: ["334"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.217.65/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.66/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.217.67/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 335
           name: '50-Boardroom-Dante/QLAN-A'
           tags: ["335"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.217.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.217.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 336
           name: '50-Boardroom-Dante/QLAN-B'
           tags: ["336"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.217.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.217.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 337
           name: '50-Med-MPR-Dante/QLAN-A'
           tags: ["337"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.207.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.207.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 338
           name: '50-Med-MPR-Dante/QLAN-B'
           tags: ["338"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.207.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.207.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 339
           name: '50-Reception-Dante/QLAN-A'
           tags: ["339"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.116.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.116.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.116.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 340
           name: '50-Reception-Dante/QLAN-B'
           tags: ["340"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.116.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.116.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.116.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 341
           name: '51-Lg-MPR-Dante/QLAN-A'
           tags: ["341"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.117.1/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.2/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.117.3/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 342
           name: '51-Lg-MPR-Dante/QLAN-B'
           tags: ["342"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.117.65/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.66/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.117.67/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 343
           name: '56-TOH-Dante/QLAN-A'
           tags: ["343"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.117.129/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.130/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.117.131/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 344
           name: '56-TOH-Dante/QLAN-B'
           tags: ["344"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 10.41.117.193/26
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.194/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.117.195/26
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
 
         - id: 1001
           name: 'Dynamic-Parking'
           tags: ["1001"]
-          enabled: true
+          enabled: false
           ip_virtual_router_addresses:
             - 192.168.100.1/24
           nodes:
             - node: C160064-037B300A
               ip_address: 192.168.100.2/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 192.168.100.3/24
-              igmp_snooping_enabled: true
+              igmp_snooping_enabled: false
               igmp_snooping_querier:
-                enabled: true
+                enabled: false
                 source_address: 172.16.16.16
                 version: 3
