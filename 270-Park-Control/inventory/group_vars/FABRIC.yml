@@ -108,18 +108,6 @@ trunk_groups:
   mlag_l3:
     name: "MLAG"
 
-bgp_peer_groups:
-  ipv4_underlay_peers:
-    name: P2P-IPv4-eBGP-PEERS
-    password: mreaokCFFWBRRZJ82Fn0HA==
-  mlag_ipv4_underlay_peer:
-    name: MLAG-iBGP-PEER
-    password: mreaokCFFWBRRZJ82Fn0HA==
-custom_structured_configuration_router_bgp:
-  redistribute:
-    attached_host:
-      enabled: False
-
 # Changed ptp to ptp_settings
 ptp_settings:
   enabled: true
@@ -164,6 +152,30 @@ default_interfaces:
     downlink_interfaces:
       - Ethernet1-48
 
+bgp_peer_groups:
+  ipv4_underlay_peers:
+    name: P2P-IPv4-eBGP-PEERS
+    password: tAFzZuVu4+b6rGq1btvPBg==
+  mlag_ipv4_underlay_peer:
+    name: MLAG-iBGP-PEER
+    password: Y1DORNO9hXlHDGry5BzExg==
+bgp_default_ipv4_unicast: False
+#bgp_ecmp: 4
+bgp_distance:
+  external_routes: 20
+  internal_routes: 200
+  local_routes: 200
+bgp_graceful_restart:
+  enabled: True
+  restart_time: 300
+bgp_maximum_paths: 128
+bgp_update_wait_install: False
+
+custom_structured_configuration_router_bgp:
+  redistribute:
+    attached_host:
+      enabled: False
+
 # Spine Switches
 l3spine:
   defaults:
@@ -179,17 +191,17 @@ l3spine:
     mlag_domain_id: CTL_SPINES_MLAG
     mlag_port_channel_id: 1000
     #mlag_peer_link_allowed_vlans: <str>
-    bgp_as: 65212.37300
+    bgp_as: "65212.37300"
     bgp_defaults:
     # Literal bgp commands <str>
       - bgp asn notation asdot
-      #- no bgp default ipv4-unicast
       - timers bgp 5 15
-      - distance bgp 20 200 200
-      - graceful-restart restart-time 300
-      - graceful-restart
-      - maximum-paths 128
       - neighbor default send-community
+      #- maximum-paths 128
+      #- no bgp default ipv4-unicast
+      # - distance bgp 20 200 200
+      # - graceful-restart restart-time 300
+      # - graceful-restart
       #- no redistribute attached-host
     ptp:
       domain: 100
@@ -3356,58 +3368,59 @@ underlay_routing_protocol: ebgp
 core_interfaces:
   p2p_links:
     - ip: [ 100.83.94.164/31, 100.83.94.165/31 ]
-      nodes: [ C160064-037B300A, C160064-037B380A ]
+      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW1 ]
       interfaces: [ Ethernet3/40/1, Ethernet1/31 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65214" ]
     - ip: [ 100.83.94.166/31, 100.83.94.167/31 ]
-      nodes: [ C160064-037B301A, C160064-037B380A ]
+      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW1 ]
       interfaces: [ Ethernet3/40/1, Ethernet1/32 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65214" ]
     - ip: [ 100.83.94.168/31, 100.83.94.169/31 ]
-      nodes: [ C160064-037B300A, C160064-037B381A ]
+      nodes: [ C160064-037B300A, C160064-037B381A_AVBLSW2 ]
       interfaces: [ Ethernet4/40/1, Ethernet1/31 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65214" ]
     - ip: [ 100.83.94.170/31, 100.83.94.171/31 ]
-      nodes: [ C160064-037B301A, C160064-037B381A ]
+      nodes: [ C160064-037B301A, C160064-037B381A_AVBLSW2 ]
       interfaces: [ Ethernet4/40/1, Ethernet1/32 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65214" ]
     - ip: [ 100.83.94.156/31, 100.83.94.157/31 ]
-      nodes: [ C160064-037B300A, C160064-037B370A ]
+      nodes: [ C160064-037B300A, C160064-037B370A_PDSW1 ]
       interfaces: [ Ethernet3/41/1, Ethernet51 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65213.37370" ]
     - ip: [ 100.83.94.158/31, 100.83.94.159/31 ]
-      nodes: [ C160064-037B301A, C160064-037B370A ]
+      nodes: [ C160064-037B301A, C160064-037B370A_PDSW1 ]
       interfaces: [ Ethernet3/41/1, Ethernet52 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65213.37370" ]
     - ip: [ 100.83.94.160/31, 100.83.94.161/31 ]
-      nodes: [ C160064-037B300A, C160064-037B371A ]
+      nodes: [ C160064-037B300A, C160064-037B371A_PDSW2 ]
       interfaces: [ Ethernet4/42/1, Ethernet51 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65213.37370" ]
     - ip: [ 100.83.94.162/31, 100.83.94.163/31 ]
-      nodes: [ C160064-037B301A, C160064-037B371A ]
+      nodes: [ C160064-037B301A, C160064-037B371A_PDSW2 ]
       interfaces: [ Ethernet4/42/1, Ethernet52 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65213.37370" ]
+
