@@ -1743,3 +1743,24 @@ tenants:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
+        - id: 1000
+          name: 'CV-Cluster'
+          tags: ["1000"]
+          enabled: false
+          ip_virtual_router_addresses:
+            - 10.155.243.129/27
+          nodes:
+            - node: C160064-037B300A
+              ip_address: 10.155.243.130/27
+              igmp_snooping_enabled: false
+              igmp_snooping_querier:
+                enabled: false
+                source_address: 172.16.16.16
+                version: 3
+            - node: C160064-037B301A
+              ip_address: 10.155.243.131/27
+              igmp_snooping_enabled: false
+              igmp_snooping_querier:
+                enabled: false
+                source_address: 172.16.16.16
+                version: 3
