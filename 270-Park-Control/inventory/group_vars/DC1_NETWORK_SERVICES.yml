@@ -9,7 +9,7 @@ tenants:
         - id: 200
           name: 'IB-MGMT-VLAN'
           tags: ["200"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.93.240.1/24
           nodes:
@@ -31,7 +31,7 @@ tenants:
         - id: 100
           name: 'General-AV-Device-Control'
           tags: ["100"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.48.1/21
           nodes:
@@ -53,7 +53,7 @@ tenants:
         - id: 101
           name: 'Cerebrum-Out-of-Band'
           tags: ["101"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.46.1/23
           nodes:
@@ -75,7 +75,7 @@ tenants:
         - id: 102
           name: 'NMOS-Devices'
           tags: ["102"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.68.1/22
           nodes:
@@ -97,7 +97,7 @@ tenants:
         - id: 103
           name: 'Cerebrum-Panels'
           tags: ["103"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.80.1/24
           nodes:
@@ -119,7 +119,7 @@ tenants:
         - id: 104
           name: 'Ross-A'
           tags: ["104"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.112.1/24
           nodes:
@@ -141,7 +141,7 @@ tenants:
         - id: 105
           name: 'Ross-B'
           tags: ["105"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.113.1/24
           nodes:
@@ -163,7 +163,7 @@ tenants:
         - id: 106
           name: 'Misc-37-&-AVTR'
           tags: ["106"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.92.1/22
           nodes:
@@ -185,7 +185,7 @@ tenants:
         - id: 107
           name: 'PTZ/Cam-Ctl/Video'
           tags: ["107"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.130.44.1/24
           nodes:
@@ -207,7 +207,7 @@ tenants:
         - id: 108
           name: 'Shure-Wireless-Control'
           tags: ["108"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.56.1/24
           nodes:
@@ -229,7 +229,7 @@ tenants:
         - id: 121
           name: 'NDI'
           tags: ["121"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.192.150.1/24
           nodes:
@@ -251,7 +251,7 @@ tenants:
         - id: 131
           name: 'IPMX-A'
           tags: ["131"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.22.1/24
           nodes:
@@ -273,7 +273,7 @@ tenants:
         - id: 132
           name: 'IPMX-B'
           tags: ["132"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.23.1/24
           nodes:
@@ -295,7 +295,7 @@ tenants:
         - id: 141
           name: 'Barco-3'
           tags: ["141"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.76.1/24
           nodes:
@@ -317,7 +317,7 @@ tenants:
         - id: 142
           name: 'Barco-5'
           tags: ["142"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.77.1/24
           nodes:
@@ -339,7 +339,7 @@ tenants:
         - id: 143
           name: 'Barco-7'
           tags: ["143"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.112.1/24
           nodes:
@@ -361,7 +361,7 @@ tenants:
         - id: 144
           name: 'Barco-9'
           tags: ["144"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.113.1/24
           nodes:
@@ -383,7 +383,7 @@ tenants:
         - id: 161
           name: 'KVM'
           tags: ["161"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.93.232.1/22
           nodes:
@@ -405,7 +405,7 @@ tenants:
         - id: 162
           name: 'MegaPixel'
           tags: ["162"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.192.151.1/24
           nodes:
@@ -427,7 +427,7 @@ tenants:
         - id: 163
           name: '7th-Sense'
           tags: ["163"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.192.174.1/24
           nodes:
@@ -449,7 +449,7 @@ tenants:
         - id: 164
           name: 'Lighting'
           tags: ["164"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.93.243.1/24
           nodes:
@@ -471,7 +471,7 @@ tenants:
         - id: 181
           name: 'Canvas-Control'
           tags: ["181"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.192.175.1/24
           nodes:
@@ -493,7 +493,7 @@ tenants:
         - id: 201
           name: 'NPL-TBD'
           tags: ["201"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.146.188.1/23
           nodes:
@@ -515,7 +515,7 @@ tenants:
         - id: 202
           name: 'DC-Mgt-A/IPMI/iLO/iDRAC'
           tags: ["202"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.66.1/23
           nodes:
@@ -537,7 +537,7 @@ tenants:
         - id: 203
           name: 'DC-Mgt-B'
           tags: ["203"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.192.99.1/24
           nodes:
@@ -559,7 +559,7 @@ tenants:
         - id: 204
           name: 'DAS-C&C'
           tags: ["204"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.57.1/24
           nodes:
@@ -581,7 +581,7 @@ tenants:
         - id: 205
           name: 'DMF'
           tags: ["205"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.93.242.1/24
           nodes:
@@ -603,7 +603,7 @@ tenants:
         - id: 241
           name: 'Gfx-(tbd)'
           tags: ["241"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.81.1/24
           nodes:
@@ -625,7 +625,7 @@ tenants:
         - id: 242
           name: 'Edit-(tbd)'
           tags: ["242"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.90.1/24
           nodes:
@@ -647,7 +647,7 @@ tenants:
         - id: 243
           name: 'MAM-(tbd)'
           tags: ["243"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.169.91.1/24
           nodes:
@@ -669,7 +669,7 @@ tenants:
         - id: 244
           name: 'Storage'
           tags: ["244"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.192.98.1/24
           nodes:
@@ -691,7 +691,7 @@ tenants:
         - id: 245
           name: 'Art-Server-10G'
           tags: ["245"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.116.1/25
           nodes:
@@ -713,7 +713,7 @@ tenants:
         - id: 261
           name: 'AES67/ICM-A'
           tags: ["261"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.130.40.1/24
           nodes:
@@ -735,7 +735,7 @@ tenants:
         - id: 262
           name: 'AES67/ICM-B'
           tags: ["262"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.130.41.1/24
           nodes:
@@ -757,7 +757,7 @@ tenants:
         - id: 301
           name: '37CER-Dante/QLAN-A-W/L-Mics-Zoom'
           tags: ["301"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.56.1/24
           nodes:
@@ -779,7 +779,7 @@ tenants:
         - id: 302
           name: '37CER-Dante/QLAN-B-W/L-Mics-Zoom'
           tags: ["302"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.57.1/24
           nodes:
@@ -801,7 +801,7 @@ tenants:
         - id: 303
           name: 'BGM-Dante/QLAN-A'
           tags: ["303"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.224.1/23
           nodes:
@@ -823,7 +823,7 @@ tenants:
         - id: 304
           name: 'BGM-Dante/QLAN-B'
           tags: ["304"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.230.1/23
           nodes:
@@ -845,7 +845,7 @@ tenants:
         - id: 305
           name: 'G-Lobby-Dante/QLAN-A'
           tags: ["305"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.52.1/24
           nodes:
@@ -867,7 +867,7 @@ tenants:
         - id: 306
           name: 'G-Lobby-Dante/QLAN-B'
           tags: ["306"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.53.1/24
           nodes:
@@ -889,7 +889,7 @@ tenants:
         - id: 307
           name: '13-AV-Rack-Rm-Dante/QLAN-A'
           tags: ["307"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.120.1/26
           nodes:
@@ -911,7 +911,7 @@ tenants:
         - id: 308
           name: '13-AV-Rack-Rm-Dante/QLAN-B'
           tags: ["308"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.120.65/26
           nodes:
@@ -933,7 +933,7 @@ tenants:
         - id: 309
           name: '14-East-AV-Rack-Rm-Dante/QLAN-A'
           tags: ["309"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.120.129/26
           nodes:
@@ -955,7 +955,7 @@ tenants:
         - id: 310
           name: '14-East-AV-Rack-Rm-Dante/QLAN-B'
           tags: ["310"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.120.193/26
           nodes:
@@ -977,7 +977,7 @@ tenants:
         - id: 311
           name: '15-Balcony-Dante/QLAN-A'
           tags: ["311"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.121.1/26
           nodes:
@@ -999,7 +999,7 @@ tenants:
         - id: 312
           name: '15-Balcony-Dante/QLAN-B'
           tags: ["312"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.121.65/26
           nodes:
@@ -1021,7 +1021,7 @@ tenants:
         - id: 313
           name: '15-Lg-Flex-Dante/QLAN-A'
           tags: ["313"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.121.129/26
           nodes:
@@ -1043,7 +1043,7 @@ tenants:
         - id: 314
           name: '15-Lg-Flex-Dante/QLAN-B'
           tags: ["314"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.121.193/26
           nodes:
@@ -1065,7 +1065,7 @@ tenants:
         - id: 315
           name: '15-MPR-Dante/QLAN-A'
           tags: ["315"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.202.1/26
           nodes:
@@ -1087,7 +1087,7 @@ tenants:
         - id: 316
           name: '15-MPR-Dante/QLAN-B'
           tags: ["316"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.202.65/26
           nodes:
@@ -1109,7 +1109,7 @@ tenants:
         - id: 317
           name: '16-Lg-MPR-Dante/QLAN-A'
           tags: ["317"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.202.129/26
           nodes:
@@ -1131,7 +1131,7 @@ tenants:
         - id: 318
           name: '16-Lg-MPR-Dante/QLAN-B'
           tags: ["318"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.202.193/26
           nodes:
@@ -1153,7 +1153,7 @@ tenants:
         - id: 319
           name: '16-Med-Flex-1-Dante/QLAN-A'
           tags: ["319"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.203.1/26
           nodes:
@@ -1175,7 +1175,7 @@ tenants:
         - id: 320
           name: '16-Med-Flex-1-Dante/QLAN-B'
           tags: ["320"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.203.65/26
           nodes:
@@ -1197,7 +1197,7 @@ tenants:
         - id: 321
           name: '16-Med-Flex-2-Dante/QLAN-A'
           tags: ["321"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.203.129/26
           nodes:
@@ -1219,7 +1219,7 @@ tenants:
         - id: 322
           name: '16-Med-Flex-2-Dante/QLAN-B'
           tags: ["322"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.203.193/26
           nodes:
@@ -1241,7 +1241,7 @@ tenants:
         - id: 323
           name: '16-Med-MPR-Dante/QLAN-A'
           tags: ["323"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.206.1/26
           nodes:
@@ -1263,7 +1263,7 @@ tenants:
         - id: 324
           name: '16-Med-MPR-Dante/QLAN-B'
           tags: ["324"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.206.65/26
           nodes:
@@ -1285,7 +1285,7 @@ tenants:
         - id: 325
           name: '16-Balcony-Dante/QLAN-A'
           tags: ["325"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.206.129/26
           nodes:
@@ -1307,7 +1307,7 @@ tenants:
         - id: 326
           name: '16-Balcony-Dante/QLAN-B'
           tags: ["326"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.206.193/26
           nodes:
@@ -1329,7 +1329,7 @@ tenants:
         - id: 327
           name: '17-Lge-Flex-MPR-Dante/QLAN-A'
           tags: ["327"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.207.1/26
           nodes:
@@ -1351,7 +1351,7 @@ tenants:
         - id: 328
           name: '17-Lge-Flex-MPR-Dante/QLAN-B'
           tags: ["328"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.207.65/26
           nodes:
@@ -1373,7 +1373,7 @@ tenants:
         - id: 329
           name: '47-OC-Dante/QLAN-A'
           tags: ["329"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.216.1/26
           nodes:
@@ -1395,7 +1395,7 @@ tenants:
         - id: 330
           name: '47-OC-Dante/QLAN-B'
           tags: ["330"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.216.65/26
           nodes:
@@ -1417,7 +1417,7 @@ tenants:
         - id: 331
           name: '48-Reception-Dante/QLAN-A'
           tags: ["331"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.216.129/26
           nodes:
@@ -1439,7 +1439,7 @@ tenants:
         - id: 332
           name: '48-Reception-Dante/QLAN-B'
           tags: ["332"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.216.193/26
           nodes:
@@ -1461,7 +1461,7 @@ tenants:
         - id: 333
           name: '49-Reception-Dante/QLAN-A'
           tags: ["333"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.217.1/26
           nodes:
@@ -1483,7 +1483,7 @@ tenants:
         - id: 334
           name: '49-Reception-Dante/QLAN-B'
           tags: ["334"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.217.65/26
           nodes:
@@ -1505,7 +1505,7 @@ tenants:
         - id: 335
           name: '50-Boardroom-Dante/QLAN-A'
           tags: ["335"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.217.129/26
           nodes:
@@ -1527,7 +1527,7 @@ tenants:
         - id: 336
           name: '50-Boardroom-Dante/QLAN-B'
           tags: ["336"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.217.193/26
           nodes:
@@ -1549,7 +1549,7 @@ tenants:
         - id: 337
           name: '50-Med-MPR-Dante/QLAN-A'
           tags: ["337"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.207.129/26
           nodes:
@@ -1571,7 +1571,7 @@ tenants:
         - id: 338
           name: '50-Med-MPR-Dante/QLAN-B'
           tags: ["338"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.207.193/26
           nodes:
@@ -1593,7 +1593,7 @@ tenants:
         - id: 339
           name: '50-Reception-Dante/QLAN-A'
           tags: ["339"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.116.129/26
           nodes:
@@ -1615,7 +1615,7 @@ tenants:
         - id: 340
           name: '50-Reception-Dante/QLAN-B'
           tags: ["340"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.116.193/26
           nodes:
@@ -1637,7 +1637,7 @@ tenants:
         - id: 341
           name: '51-Lg-MPR-Dante/QLAN-A'
           tags: ["341"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.117.1/26
           nodes:
@@ -1659,7 +1659,7 @@ tenants:
         - id: 342
           name: '51-Lg-MPR-Dante/QLAN-B'
           tags: ["342"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.117.65/26
           nodes:
@@ -1681,7 +1681,7 @@ tenants:
         - id: 343
           name: '56-TOH-Dante/QLAN-A'
           tags: ["343"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.117.129/26
           nodes:
@@ -1703,7 +1703,7 @@ tenants:
         - id: 344
           name: '56-TOH-Dante/QLAN-B'
           tags: ["344"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.41.117.193/26
           nodes:
@@ -1725,7 +1725,7 @@ tenants:
         - id: 1001
           name: 'Dynamic-Parking'
           tags: ["1001"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 192.168.100.1/24
           nodes:
@@ -1746,7 +1746,7 @@ tenants:
         - id: 1000
           name: 'CV-Cluster'
           tags: ["1000"]
-          enabled: false
+          enabled: true
           ip_virtual_router_addresses:
             - 10.155.243.129/27
           nodes:

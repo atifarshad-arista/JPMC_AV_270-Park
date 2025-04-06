@@ -115,6 +115,10 @@ bgp_peer_groups:
   mlag_ipv4_underlay_peer:
     name: MLAG-iBGP-PEER
     password: mreaokCFFWBRRZJ82Fn0HA==
+custom_structured_configuration_router_bgp:
+  redistribute:
+    attached_host:
+      enabled: False
 
 # Changed ptp to ptp_settings
 ptp_settings:
