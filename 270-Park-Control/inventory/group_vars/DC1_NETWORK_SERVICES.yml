@@ -11,7 +11,7 @@ tenants:
           tags: ["200"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.93.240.1/24
+            - 10.93.240.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.240.2/24
@@ -33,7 +33,7 @@ tenants:
           tags: ["100"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.48.1/21
+            - 10.169.48.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.48.2/21
@@ -55,7 +55,7 @@ tenants:
           tags: ["101"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.46.1/23
+            - 10.169.46.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.46.2/23
@@ -77,7 +77,7 @@ tenants:
           tags: ["102"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.68.1/22
+            - 10.169.68.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.68.2/22
@@ -99,7 +99,7 @@ tenants:
           tags: ["103"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.80.1/24
+            - 10.169.80.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.80.2/24
@@ -121,7 +121,7 @@ tenants:
           tags: ["104"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.112.1/24
+            - 10.169.112.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.112.2/24
@@ -143,7 +143,7 @@ tenants:
           tags: ["105"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.113.1/24
+            - 10.169.113.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.113.2/24
@@ -165,7 +165,7 @@ tenants:
           tags: ["106"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.92.1/22
+            - 10.169.92.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.92.2/22
@@ -187,7 +187,7 @@ tenants:
           tags: ["107"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.130.44.1/24
+            - 10.130.44.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.130.44.2/24
@@ -209,7 +209,7 @@ tenants:
           tags: ["108"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.56.1/24
+            - 10.169.56.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.56.2/24
@@ -231,7 +231,7 @@ tenants:
           tags: ["121"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.192.150.1/24
+            - 10.192.150.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.150.2/24
@@ -253,7 +253,7 @@ tenants:
           tags: ["131"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.22.1/24
+            - 10.41.22.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.22.2/24
@@ -275,7 +275,7 @@ tenants:
           tags: ["132"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.23.1/24
+            - 10.41.23.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.23.2/24
@@ -297,7 +297,7 @@ tenants:
           tags: ["141"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.76.1/24
+            - 10.41.76.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.76.2/24
@@ -319,7 +319,7 @@ tenants:
           tags: ["142"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.77.1/24
+            - 10.41.77.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.77.2/24
@@ -341,7 +341,7 @@ tenants:
           tags: ["143"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.112.1/24
+            - 10.41.112.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.112.2/24
@@ -363,7 +363,7 @@ tenants:
           tags: ["144"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.113.1/24
+            - 10.41.113.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.113.2/24
@@ -385,7 +385,7 @@ tenants:
           tags: ["161"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.93.232.1/22
+            - 10.93.232.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.232.2/22
@@ -407,7 +407,7 @@ tenants:
           tags: ["162"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.192.151.1/24
+            - 10.192.151.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.151.2/24
@@ -429,7 +429,7 @@ tenants:
           tags: ["163"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.192.174.1/24
+            - 10.192.174.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.174.2/24
@@ -451,7 +451,7 @@ tenants:
           tags: ["164"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.93.243.1/24
+            - 10.93.243.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.243.2/24
@@ -473,7 +473,7 @@ tenants:
           tags: ["181"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.192.175.1/24
+            - 10.192.175.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.175.2/24
@@ -495,7 +495,7 @@ tenants:
           tags: ["201"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.146.188.1/23
+            - 10.146.188.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.146.188.2/23
@@ -517,7 +517,7 @@ tenants:
           tags: ["202"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.66.1/23
+            - 10.169.66.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.66.2/23
@@ -539,7 +539,7 @@ tenants:
           tags: ["203"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.192.99.1/24
+            - 10.192.99.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.99.2/24
@@ -561,7 +561,7 @@ tenants:
           tags: ["204"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.57.1/24
+            - 10.169.57.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.57.2/24
@@ -583,7 +583,7 @@ tenants:
           tags: ["205"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.93.242.1/24
+            - 10.93.242.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.242.2/24
@@ -605,7 +605,7 @@ tenants:
           tags: ["241"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.81.1/24
+            - 10.169.81.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.81.2/24
@@ -627,7 +627,7 @@ tenants:
           tags: ["242"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.90.1/24
+            - 10.169.90.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.90.2/24
@@ -649,7 +649,7 @@ tenants:
           tags: ["243"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.169.91.1/24
+            - 10.169.91.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.91.2/24
@@ -671,7 +671,7 @@ tenants:
           tags: ["244"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.192.98.1/24
+            - 10.192.98.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.98.2/24
@@ -693,7 +693,7 @@ tenants:
           tags: ["245"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.116.1/25
+            - 10.41.116.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.116.2/25
@@ -715,7 +715,7 @@ tenants:
           tags: ["261"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.130.40.1/24
+            - 10.130.40.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.130.40.2/24
@@ -737,7 +737,7 @@ tenants:
           tags: ["262"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.130.41.1/24
+            - 10.130.41.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.130.41.2/24
@@ -759,7 +759,7 @@ tenants:
           tags: ["301"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.56.1/24
+            - 10.41.56.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.56.2/24
@@ -781,7 +781,7 @@ tenants:
           tags: ["302"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.57.1/24
+            - 10.41.57.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.57.2/24
@@ -803,7 +803,7 @@ tenants:
           tags: ["303"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.224.1/23
+            - 10.41.224.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.224.2/23
@@ -825,7 +825,7 @@ tenants:
           tags: ["304"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.230.1/23
+            - 10.41.230.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.230.2/23
@@ -847,7 +847,7 @@ tenants:
           tags: ["305"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.52.1/24
+            - 10.41.52.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.52.2/24
@@ -869,7 +869,7 @@ tenants:
           tags: ["306"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.53.1/24
+            - 10.41.53.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.53.2/24
@@ -891,7 +891,7 @@ tenants:
           tags: ["307"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.120.1/26
+            - 10.41.120.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.2/26
@@ -913,7 +913,7 @@ tenants:
           tags: ["308"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.120.65/26
+            - 10.41.120.65
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.66/26
@@ -935,7 +935,7 @@ tenants:
           tags: ["309"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.120.129/26
+            - 10.41.120.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.130/26
@@ -957,7 +957,7 @@ tenants:
           tags: ["310"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.120.193/26
+            - 10.41.120.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.194/26
@@ -979,7 +979,7 @@ tenants:
           tags: ["311"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.121.1/26
+            - 10.41.121.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.2/26
@@ -1001,7 +1001,7 @@ tenants:
           tags: ["312"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.121.65/26
+            - 10.41.121.65
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.66/26
@@ -1023,7 +1023,7 @@ tenants:
           tags: ["313"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.121.129/26
+            - 10.41.121.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.130/26
@@ -1045,7 +1045,7 @@ tenants:
           tags: ["314"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.121.193/26
+            - 10.41.121.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.194/26
@@ -1067,7 +1067,7 @@ tenants:
           tags: ["315"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.202.1/26
+            - 10.41.202.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.2/26
@@ -1089,7 +1089,7 @@ tenants:
           tags: ["316"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.202.65/26
+            - 10.41.202.65
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.66/26
@@ -1111,7 +1111,7 @@ tenants:
           tags: ["317"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.202.129/26
+            - 10.41.202.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.130/26
@@ -1133,7 +1133,7 @@ tenants:
           tags: ["318"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.202.193/26
+            - 10.41.202.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.194/26
@@ -1155,7 +1155,7 @@ tenants:
           tags: ["319"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.203.1/26
+            - 10.41.203.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.2/26
@@ -1177,7 +1177,7 @@ tenants:
           tags: ["320"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.203.65/26
+            - 10.41.203.65
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.66/26
@@ -1199,7 +1199,7 @@ tenants:
           tags: ["321"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.203.129/26
+            - 10.41.203.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.130/26
@@ -1221,7 +1221,7 @@ tenants:
           tags: ["322"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.203.193/26
+            - 10.41.203.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.194/26
@@ -1243,7 +1243,7 @@ tenants:
           tags: ["323"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.206.1/26
+            - 10.41.206.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.2/26
@@ -1265,7 +1265,7 @@ tenants:
           tags: ["324"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.206.65/26
+            - 10.41.206.65
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.66/26
@@ -1287,7 +1287,7 @@ tenants:
           tags: ["325"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.206.129/26
+            - 10.41.206.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.130/26
@@ -1309,7 +1309,7 @@ tenants:
           tags: ["326"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.206.193/26
+            - 10.41.206.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.194/26
@@ -1331,7 +1331,7 @@ tenants:
           tags: ["327"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.207.1/26
+            - 10.41.207.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.2/26
@@ -1353,7 +1353,7 @@ tenants:
           tags: ["328"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.207.65/26
+            - 10.41.207.65
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.66/26
@@ -1375,7 +1375,7 @@ tenants:
           tags: ["329"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.216.1/26
+            - 10.41.216.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.2/26
@@ -1397,7 +1397,7 @@ tenants:
           tags: ["330"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.216.65/26
+            - 10.41.216.65
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.66/26
@@ -1419,7 +1419,7 @@ tenants:
           tags: ["331"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.216.129/26
+            - 10.41.216.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.130/26
@@ -1441,7 +1441,7 @@ tenants:
           tags: ["332"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.216.193/26
+            - 10.41.216.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.194/26
@@ -1463,7 +1463,7 @@ tenants:
           tags: ["333"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.217.1/26
+            - 10.41.217.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.2/26
@@ -1485,7 +1485,7 @@ tenants:
           tags: ["334"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.217.65/26
+            - 10.41.217.65
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.66/26
@@ -1507,7 +1507,7 @@ tenants:
           tags: ["335"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.217.129/26
+            - 10.41.217.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.130/26
@@ -1529,7 +1529,7 @@ tenants:
           tags: ["336"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.217.193/26
+            - 10.41.217.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.194/26
@@ -1551,7 +1551,7 @@ tenants:
           tags: ["337"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.207.129/26
+            - 10.41.207.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.130/26
@@ -1573,7 +1573,7 @@ tenants:
           tags: ["338"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.207.193/26
+            - 10.41.207.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.194/26
@@ -1595,7 +1595,7 @@ tenants:
           tags: ["339"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.116.129/26
+            - 10.41.116.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.116.130/26
@@ -1617,7 +1617,7 @@ tenants:
           tags: ["340"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.116.193/26
+            - 10.41.116.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.116.194/26
@@ -1639,7 +1639,7 @@ tenants:
           tags: ["341"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.117.1/26
+            - 10.41.117.1
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.2/26
@@ -1661,7 +1661,7 @@ tenants:
           tags: ["342"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.117.65/26
+            - 10.41.117.65
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.66/26
@@ -1683,7 +1683,7 @@ tenants:
           tags: ["343"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.117.129/26
+            - 10.41.117.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.130/26
@@ -1705,7 +1705,7 @@ tenants:
           tags: ["344"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.41.117.193/26
+            - 10.41.117.193
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.194/26
@@ -1727,7 +1727,7 @@ tenants:
           tags: ["1001"]
           enabled: true
           ip_virtual_router_addresses:
-            - 192.168.100.1/24
+            - 192.168.100.1
           nodes:
             - node: C160064-037B300A
               ip_address: 192.168.100.2/24
@@ -1748,7 +1748,7 @@ tenants:
           tags: ["1000"]
           enabled: true
           ip_virtual_router_addresses:
-            - 10.155.243.129/27
+            - 10.155.243.129
           nodes:
             - node: C160064-037B300A
               ip_address: 10.155.243.130/27
