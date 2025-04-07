@@ -1744,7 +1744,7 @@ tenants:
                 source_address: 172.16.16.16
                 version: 3
         - id: 1000
-          name: 'CV-Cluster'
+          name: 'CVA_Mgmt'
           tags: ["1000"]
           enabled: true
           ip_virtual_router_addresses:
