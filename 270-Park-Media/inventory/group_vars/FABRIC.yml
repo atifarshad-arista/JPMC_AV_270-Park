@@ -68,11 +68,6 @@ logging:
 mcs_client:
   shutdown: false
 
-bgp_peer_groups:
-  ipv4_underlay_peers:
-    name: P2P-IPv4-eBGP-PEERS
-    password: tAFzZuVu4+b6rGq1btvPBg==
-
 p2p_uplinks_mtu: 1500
 
 default_interfaces:
@@ -215,6 +210,29 @@ ip_http_client_source_interfaces:
   - name: Management 1
     vrf: MGMT
 
+# BGP Global settings
+bgp_peer_groups:
+  ipv4_underlay_peers:
+    name: P2P-IPv4-eBGP-PEERS
+    password: tAFzZuVu4+b6rGq1btvPBg==
+bgp_default_ipv4_unicast: False
+#bgp_ecmp: 4
+bgp_distance:
+  external_routes: 20
+  internal_routes: 200
+  local_routes: 200
+bgp_graceful_restart:
+  enabled: True
+  restart_time: 300
+bgp_maximum_paths: 128
+bgp_update_wait_install: False
+
+custom_structured_configuration_router_bgp:
+  redistribute:
+    attached_host:
+      enabled: False
+
+
 # Enable pim sparse mode on L3 uplinks
 underlay_multicast: False
 
@@ -317,7 +335,7 @@ core_interfaces:
 
     #+++++++ Border to Green Spines p2p L3 Links
     - ip: [ 100.83.93.17/31, 100.83.93.16/31 ]
-      nodes: [ C160064-037B380A, C160064-037B300A  ]
+      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP1  ]
       interfaces: [ Ethernet31/1, Ethernet3/30/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -325,7 +343,7 @@ core_interfaces:
       as: [ "65214", "65212.37300" ]
 
     - ip: [ 100.83.93.19/31, 100.83.93.18/31 ]
-      nodes: [ C160064-037B380A, C160064-037B301A ]
+      nodes: [ C160064-037B380A, C160064-037B301A_CSW-SP2 ]
       interfaces: [ Ethernet32/1, Ethernet3/30/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -333,7 +351,7 @@ core_interfaces:
       as: [ "65214", "65212.37300" ]
 
     - ip: [ 100.83.93.21/31, 100.83.93.20/31 ]
-      nodes: [ C160064-037B381A, C160064-037B300A  ]
+      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP1  ]
       interfaces: [ Ethernet31/1, Ethernet4/30/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -341,7 +359,7 @@ core_interfaces:
       as: [ "65214", "65212.37300" ]
 
     - ip: [ 100.83.93.23/31, 100.83.93.22/31 ]
-      nodes: [ C160064-037B381A, C160064-037B301A ]
+      nodes: [ C160064-037B381A, C160064-037B301A_CSW-SP2 ]
       interfaces: [ Ethernet32/1, Ethernet4/30/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
@@ -350,37 +368,36 @@ core_interfaces:
 
     #+++++ PTP to Green Spines p2p L3 Links
     - ip: [ 100.83.93.25/31, 100.83.93.24/31 ]
-      nodes: [ C160064-037B370A, C160064-037B300A  ]
+      nodes: [ C160064-037B370A, C160064-037B300A_CSW-SP1 ]
       interfaces: [ Ethernet51/1, Ethernet3/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.37370", "65212.37300" ]
+      as: [ "65213.37370", "65212.37300" ]
 
     - ip: [ 100.83.93.27/31, 100.83.93.26/31 ]
-      nodes: [ C160064-037B370A, C160064-037B301A ]
+      nodes: [ C160064-037B370A, C160064-037B301A_CSW-SP2 ]
       interfaces: [ Ethernet52/1, Ethernet3/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.37370", "65212.37300" ]
+      as: [ "65213.37370", "65212.37300" ]
 
     - ip: [ 100.83.93.29/31, 100.83.93.28/31 ]
-      nodes: [ C160064-037B371A, C160064-037B300A  ]
+      nodes: [ C160064-037B371A, C160064-037B300A_CSW-SP1  ]
       interfaces: [ Ethernet51/1, Ethernet4/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.37370", "65212.37300" ]
+      as: [ "65213.37370", "65212.37300" ]
 
     - ip: [ 100.83.93.31/31, 100.83.93.30/31 ]
-      nodes: [ C160064-037B371A, C160064-037B301A ]
+      nodes: [ C160064-037B371A, C160064-037B301A_CSW-SP2 ]
       interfaces: [ Ethernet52/1, Ethernet4/31/1 ]
       include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65003.37370", "65212.37300" ]
-
+      as: [ "65213.37370", "65212.37300" ]
 
 
 eos_validate_state_validation_mode_loose: true
