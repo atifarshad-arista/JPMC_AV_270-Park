@@ -1060,7 +1060,7 @@ l2leaf:
           mgmt_gateway: 10.166.80.1
           uplink_interfaces: [Ethernet53/1, Ethernet54/1]
           uplink_switches: [C160064-037B300A, C160064-037B301A]
-          uplink_switch_interfaces: [Ethernet8/11/1, Ethernet8/11/1]
+          uplink_switch_interfaces: [Ethernet8/24/1, Ethernet8/24/1]
           uplink_port_channel_id: 10
           uplink_switch_port_channel_id: 56
           ptp:
