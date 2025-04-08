@@ -15,14 +15,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.240.2/24
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.93.240.3/24
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -37,14 +37,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.48.2/21
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.48.3/21
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -59,14 +59,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.46.2/23
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.46.3/23
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -81,14 +81,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.68.2/22
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.68.3/22
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -103,14 +103,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.80.2/24
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.80.3/24
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -125,14 +125,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.112.2/24
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.112.3/24
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -147,14 +147,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.113.2/24
-              igmp_snooping_enabled: false
+              ##igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.113.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -169,14 +169,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.92.2/22
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.92.3/22
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -191,14 +191,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.130.44.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.130.44.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -213,14 +213,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.56.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.56.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -235,14 +235,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.150.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.150.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -257,14 +257,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.22.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.22.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -279,14 +279,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.23.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.23.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -301,14 +301,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.76.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.76.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -323,14 +323,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.77.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.77.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -345,14 +345,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.112.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.112.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -367,14 +367,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.113.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.113.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -389,14 +389,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.232.2/22
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.93.232.3/22
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -411,14 +411,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.151.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.151.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -433,14 +433,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.174.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.174.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -455,14 +455,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.243.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.93.243.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -477,14 +477,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.175.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.175.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -499,14 +499,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.146.188.2/23
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.146.188.3/23
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -521,14 +521,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.66.2/23
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.66.3/23
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -543,14 +543,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.99.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.99.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -565,14 +565,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.57.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.57.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -587,14 +587,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.93.242.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.93.242.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -609,14 +609,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.81.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.81.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -631,14 +631,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.90.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.90.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -653,14 +653,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.169.91.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.169.91.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -675,14 +675,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.192.98.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.192.98.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -697,14 +697,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.116.2/25
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.116.3/25
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -719,14 +719,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.130.40.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.130.40.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -741,14 +741,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.130.41.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.130.41.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -763,14 +763,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.56.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.56.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -785,14 +785,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.57.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.57.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -807,14 +807,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.224.2/23
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.224.3/23
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -829,14 +829,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.230.2/23
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.230.3/23
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -851,14 +851,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.52.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.52.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -873,14 +873,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.53.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.53.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -895,14 +895,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.2/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.120.3/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -917,14 +917,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.66/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.120.67/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -939,14 +939,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.120.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -961,14 +961,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.120.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.120.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -983,14 +983,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.2/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.121.3/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1005,14 +1005,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.66/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.121.67/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1027,14 +1027,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.121.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1049,14 +1049,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.121.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.121.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1071,14 +1071,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.2/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.202.3/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1093,14 +1093,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.66/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.202.67/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1115,14 +1115,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.202.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1137,14 +1137,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.202.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.202.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1159,14 +1159,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.2/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.203.3/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1181,14 +1181,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.66/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.203.67/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1203,14 +1203,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.203.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1225,14 +1225,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.203.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.203.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1247,14 +1247,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.2/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.206.3/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1269,14 +1269,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.66/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.206.67/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1291,14 +1291,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.206.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1313,14 +1313,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.206.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.206.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1335,14 +1335,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.2/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.207.3/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1357,14 +1357,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.66/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.207.67/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1379,14 +1379,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.2/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.216.3/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1401,14 +1401,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.66/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.216.67/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1423,14 +1423,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.216.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1445,14 +1445,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.216.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.216.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1467,14 +1467,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.2/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.217.3/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1489,14 +1489,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.66/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.217.67/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1511,14 +1511,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.217.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1533,14 +1533,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.217.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.217.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1555,14 +1555,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.207.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1577,14 +1577,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.207.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.207.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1599,14 +1599,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.116.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.116.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1621,14 +1621,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.116.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.116.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1643,14 +1643,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.2/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.117.3/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1665,14 +1665,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.66/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.117.67/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1687,14 +1687,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.130/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.117.131/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1709,14 +1709,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.41.117.194/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.41.117.195/26
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1731,14 +1731,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 192.168.100.2/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 192.168.100.3/24
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
@@ -1752,14 +1752,14 @@ tenants:
           nodes:
             - node: C160064-037B300A
               ip_address: 10.155.243.130/27
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16
                 version: 3
             - node: C160064-037B301A
               ip_address: 10.155.243.131/27
-              igmp_snooping_enabled: false
+              #igmp_snooping_enabled: false
               igmp_snooping_querier:
                 enabled: false
                 source_address: 172.16.16.16

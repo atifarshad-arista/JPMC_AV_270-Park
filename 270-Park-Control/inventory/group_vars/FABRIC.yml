@@ -152,6 +152,7 @@ default_interfaces:
     downlink_interfaces:
       - Ethernet1-48
 
+# BGP Settings
 bgp_peer_groups:
   ipv4_underlay_peers:
     name: P2P-IPv4-eBGP-PEERS
@@ -160,7 +161,6 @@ bgp_peer_groups:
     name: MLAG-iBGP-PEER
     password: Y1DORNO9hXlHDGry5BzExg==
 bgp_default_ipv4_unicast: False
-#bgp_ecmp: 4
 bgp_distance:
   external_routes: 20
   internal_routes: 200
@@ -169,9 +169,15 @@ bgp_graceful_restart:
   enabled: True
   restart_time: 300
 bgp_maximum_paths: 128
+bgp_ecmp: 600
 bgp_update_wait_install: False
 
 custom_structured_configuration_router_bgp:
+  as_notation: asdot
+  bgp_defaults:
+  # Literal bgp commands <str>
+    - timers bgp 5 15
+    - neighbor default send-community
   redistribute:
     attached_host:
       enabled: False
