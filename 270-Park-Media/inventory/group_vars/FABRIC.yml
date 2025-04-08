@@ -215,7 +215,7 @@ standard_access_lists:
       - sequence: 10
         # Action as string.
         # Example: "deny ip any any"
-        action: permit host 172.20.111.100
+        action: permit any
 
 ip_http_client_source_interfaces:
     # Interface Name.

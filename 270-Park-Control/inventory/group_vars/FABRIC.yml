@@ -100,6 +100,17 @@ management_ssh:
       # VRF Name.
       vrf: MGMT
 
+standard_access_lists:
+    # Access-list Name.
+  - name: MGMT-SSH-ACL
+    counters_per_entry: False
+    sequence_numbers: # required
+        # Sequence ID.
+      - sequence: 10
+        # Action as string.
+        # Example: "deny ip any any"
+        action: permit any
+
 trunk_groups:
   # Trunk Group used for MLAG VLAN (Typically VLAN 4094). name: default="MLAG">
   mlag:
