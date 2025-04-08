@@ -228,7 +228,6 @@ bgp_peer_groups:
     name: P2P-IPv4-eBGP-PEERS
     password: tAFzZuVu4+b6rGq1btvPBg==
 bgp_default_ipv4_unicast: False
-#bgp_ecmp: 4
 bgp_distance:
   external_routes: 20
   internal_routes: 200
@@ -237,9 +236,15 @@ bgp_graceful_restart:
   enabled: True
   restart_time: 300
 bgp_maximum_paths: 128
+bgp_ecmp: 600
 bgp_update_wait_install: False
 
 custom_structured_configuration_router_bgp:
+  as_notation: asdot
+  bgp_defaults:
+  # Literal bgp commands <str>
+    - timers bgp 5 15
+    - neighbor default send-community
   redistribute:
     attached_host:
       enabled: False

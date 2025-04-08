@@ -12,17 +12,6 @@ ptp_leaf:
     filter:
       tenants: [ ptp ]
     bgp_as: "65213.37370"
-    bgp_defaults:
-    # Literal bgp commands <str>
-      - bgp asn notation asdot
-      - timers bgp 5 15
-      - neighbor default send-community
-      #- maximum-paths 128
-      #- no bgp default ipv4-unicast
-      # - distance bgp 20 200 200
-      # - graceful-restart restart-time 300
-      # - graceful-restart
-      #- no redistribute attached-host
     ptp:
       priority1: 10
       #priority2: 103

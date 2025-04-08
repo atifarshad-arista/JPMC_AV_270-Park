@@ -6,17 +6,6 @@ media_spine:
     platform: 7808R3
     loopback_ipv4_pool: 169.27.195.0/25
     bgp_as: "65211.37200"
-    bgp_defaults:
-    # Literal bgp commands <str>
-      - bgp asn notation asdot
-      - timers bgp 5 15
-      - neighbor default send-community
-      #- maximum-paths 128
-      #- no bgp default ipv4-unicast
-      # - distance bgp 20 200 200
-      # - graceful-restart restart-time 300
-      # - graceful-restart
-      #- no redistribute attached-host
     filter:
       tenants: [ blue ]
     ptp:
