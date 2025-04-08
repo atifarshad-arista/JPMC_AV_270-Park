@@ -185,7 +185,7 @@ l3spine:
     spanning_tree_priority: 4096
     loopback_ipv4_pool: 169.27.195.0/25
     mlag_peer_ipv4_pool: 172.16.0.0/30
-    mlag_peer_l3_ipv4_pool: 100.83.94.0/23
+    mlag_peer_l3_ipv4_pool: 100.83.94.68/31
     virtual_router_mac_address: 00:1c:73:00:dc:01
     mlag_interfaces: [ Ethernet3/32/1, Ethernet4/32/1, Ethernet5/32/1, Ethernet6/32/1, Ethernet7/32/1, Ethernet8/32/1, Ethernet9/32/1, Ethernet10/32/1 ]
     mlag_domain_id: CTL_SPINES_MLAG
