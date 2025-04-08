@@ -11,6 +11,18 @@ border_leaf:
     spanning_tree_mode: mstp
     filter:
       tenants: [ border ]
+    bgp_as: "65214"
+    bgp_defaults:
+    # Literal bgp commands <str>
+      - bgp asn notation asdot
+      - timers bgp 5 15
+      - neighbor default send-community
+      #- maximum-paths 128
+      #- no bgp default ipv4-unicast
+      # - distance bgp 20 200 200
+      # - graceful-restart restart-time 300
+      # - graceful-restart
+      #- no redistribute attached-host
     ptp:
       priority1: 30
       priority2: 101
@@ -28,7 +40,6 @@ border_leaf:
     - name: C160064-037B380A
       id: 5
       loopback_ipv4_address: 169.27.195.70
-      bgp_as: "65214"
       mgmt_interface: Management1
       mgmt_ip: 10.176.143.138/27
       mgmt_gateway: 10.176.143.129
@@ -45,7 +56,6 @@ border_leaf:
     - name: C160064-037B381A
       id: 6
       loopback_ipv4_address: 169.27.195.71
-      bgp_as: "65214"
       mgmt_interface: Management1
       mgmt_ip: 10.176.143.167/27
       mgmt_gateway: 10.176.143.161
