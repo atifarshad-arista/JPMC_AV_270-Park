@@ -775,6 +775,8 @@
 
 | Node | Node Interface | Node IP Address | Peer Node | Peer Interface | Peer IP Address |
 | ---- | -------------- | --------------- | --------- | -------------- | --------------- |
+| C160064-037B300A | Ethernet8/24/1 | 100.83.94.34/31 | C160064-037B348A | Ethernet53/1 | None |
+| C160064-037B301A | Ethernet8/24/1 | 100.83.94.50/31 | C160064-037B348A | Ethernet54/1 | None |
 
 ### Loopback Interfaces (BGP EVPN Peering)
 

@@ -39,7 +39,7 @@ mgmt_interface: Management1
 #   - 8.8.8.8
 
 # NTP Servers IP or DNS name, first NTP server will be preferred, and sourced from Management VRF
-ntp_settings:
+# ntp_settings:
   # server_vrf: use_mgmt_interface_vrf
   # servers:
   #   - name: time.google.com

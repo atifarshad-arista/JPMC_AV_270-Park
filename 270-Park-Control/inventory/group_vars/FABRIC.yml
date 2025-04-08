@@ -3367,60 +3367,134 @@ underlay_routing_protocol: ebgp
 #### WAN/Core Edge Links ####
 core_interfaces:
   p2p_links:
-    - ip: [ 100.83.94.164/31, 100.83.94.165/31 ]
-      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW1 ]
-      interfaces: [ Ethernet3/40/1, Ethernet1/31 ]
-      include_in_underlay_protocol: true
       # If the AS is different than the AS number configured for the node,
       # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65212.37300", "65214" ]
-    - ip: [ 100.83.94.166/31, 100.83.94.167/31 ]
-      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW1 ]
-      interfaces: [ Ethernet3/40/1, Ethernet1/32 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65212.37300", "65214" ]
-    - ip: [ 100.83.94.168/31, 100.83.94.169/31 ]
-      nodes: [ C160064-037B300A, C160064-037B381A_AVBLSW2 ]
-      interfaces: [ Ethernet4/40/1, Ethernet1/31 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65212.37300", "65214" ]
-    - ip: [ 100.83.94.170/31, 100.83.94.171/31 ]
-      nodes: [ C160064-037B301A, C160064-037B381A_AVBLSW2 ]
-      interfaces: [ Ethernet4/40/1, Ethernet1/32 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65212.37300", "65214" ]
-    - ip: [ 100.83.94.156/31, 100.83.94.157/31 ]
+
+#++++++++++++++++ Green Spines to PTP Leafs ++++++++++++++++
+    #+++++ 4x Green Spine1 to PTP Leafs++++
+    - ip: [ 100.83.94.60/31, 100.83.94.61/31 ]
       nodes: [ C160064-037B300A, C160064-037B370A_PDSW1 ]
-      interfaces: [ Ethernet3/41/1, Ethernet51 ]
+      interfaces: [ Ethernet3/31/1, Ethernet51/1 ]
       include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65213.37370" ]
-    - ip: [ 100.83.94.158/31, 100.83.94.159/31 ]
-      nodes: [ C160064-037B301A, C160064-037B370A_PDSW1 ]
-      interfaces: [ Ethernet3/41/1, Ethernet52 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65212.37300", "65213.37370" ]
-    - ip: [ 100.83.94.160/31, 100.83.94.161/31 ]
+
+    - ip: [ 100.83.94.62/31, 100.83.94.63/31 ]
       nodes: [ C160064-037B300A, C160064-037B371A_PDSW2 ]
-      interfaces: [ Ethernet4/42/1, Ethernet51 ]
+      interfaces: [ Ethernet4/31/1, Ethernet51/1 ]
       include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65213.37370" ]
-    - ip: [ 100.83.94.162/31, 100.83.94.163/31 ]
+
+    #+++++ 4x Green Spine2 to PTP Leafs++++
+    - ip: [ 100.83.94.60/31, 100.83.94.61/31 ]
+      nodes: [ C160064-037B301A, C160064-037B370A_PDSW1 ]
+      interfaces: [ Ethernet3/31/1, Ethernet52/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65213.37370" ]
+
+    - ip: [ 100.83.94.62/31, 100.83.94.63/31 ]
       nodes: [ C160064-037B301A, C160064-037B371A_PDSW2 ]
-      interfaces: [ Ethernet4/42/1, Ethernet52 ]
+      interfaces: [ Ethernet4/31/1, Ethernet52/1 ]
       include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65212.37300", "65213.37370" ]
+
+#++++++++++++++++ 4x Green Spines to Border Leafs ++++++++++++++++
+    #+++++ 4x Green Spine1 to Border Leaf1++++
+    - ip: [ 100.83.94.28/31, 100.83.94.29/31 ]
+      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW1 ]
+      interfaces: [ Ethernet5/24/1, Ethernet1/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.30/31, 100.83.94.31/31 ]
+      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW1 ]
+      interfaces: [ Ethernet6/24/1, Ethernet2/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.32/31, 100.83.94.33/31 ]
+      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW1 ]
+      interfaces: [ Ethernet7/24/1, Ethernet3/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.34/31, 100.83.94.35/31 ]
+      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW1 ]
+      interfaces: [ Ethernet8/24/1, Ethernet4/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    #+++++ 4x Green Spine1 to Border Leaf2++++
+    - ip: [ 100.83.94.36/31, 100.83.94.37/31 ]
+      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW2 ]
+      interfaces: [ Ethernet5/25/1, Ethernet1/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.38/31, 100.83.94.39/31 ]
+      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW2 ]
+      interfaces: [ Ethernet6/25/1, Ethernet2/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.40/31, 100.83.94.41/31 ]
+      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW2 ]
+      interfaces: [ Ethernet7/25/1, Ethernet3/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.42/31, 100.83.94.43/31 ]
+      nodes: [ C160064-037B300A, C160064-037B380A_AVBLSW2 ]
+      interfaces: [ Ethernet8/25/1, Ethernet4/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    #+++++ 4x Green Spine2 to Border Leaf1++++
+    - ip: [ 100.83.94.44/31, 100.83.94.45/31 ]
+      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW1 ]
+      interfaces: [ Ethernet5/24/1, Ethernet5/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.46/31, 100.83.94.47/31 ]
+      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW1 ]
+      interfaces: [ Ethernet6/24/1, Ethernet6/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.48/31, 100.83.94.49/31 ]
+      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW1 ]
+      interfaces: [ Ethernet7/24/1, Ethernet7/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.50/31, 100.83.94.51/31 ]
+      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW1 ]
+      interfaces: [ Ethernet8/24/1, Ethernet8/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    #+++++ 4x Green Spine2 to Border Leaf2++++
+    - ip: [ 100.83.94.52/31, 100.83.94.53/31 ]
+      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW2 ]
+      interfaces: [ Ethernet5/25/1, Ethernet5/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.54/31, 100.83.94.55/31 ]
+      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW2 ]
+      interfaces: [ Ethernet6/25/1, Ethernet6/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.56/31, 100.83.94.57/31 ]
+      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW2 ]
+      interfaces: [ Ethernet7/25/1, Ethernet7/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
+
+    - ip: [ 100.83.94.58/31, 100.83.94.59/31 ]
+      nodes: [ C160064-037B301A, C160064-037B380A_AVBLSW2 ]
+      interfaces: [ Ethernet8/25/1, Ethernet8/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65212.37300", "65214" ]
 
