@@ -1,5 +1,17 @@
 fabric_name: FABRIC
 
+eos_validate_state_validation_mode_loose: true
+root_dir: '{{ inventory_dir }}'
+eos_validate_state_name: 'reports'
+eos_validate_state_dir: '{{ root_dir }}/{{ eos_validate_state_name }}'
+eos_validate_state_md_report_path: '{{ eos_validate_state_dir }}/{{ fabric_name }}-state.md'
+eos_validate_state_csv_report_path: '{{ eos_validate_state_dir }}/{{ fabric_name }}-state.csv'
+validate_state_markdown_flavor: "default"
+accepted_xcvr_manufacturers: "{{ validation_role.xcvr_own_manufacturers | arista.avd.default(['Arastra, Inc.', 'Arista Networks']) }}"
+accepted_pwr_supply_states: "{{ validation_role.pwr_supply_states | arista.avd.default(['ok']) }}"
+accepted_fan_states: "{{ validation_role.fan_states | arista.avd.default(['ok']) }}"
+validation_report_md: "{{ validation_role.validation_report_md | arista.avd.default(true) }}"
+
 node_type_keys:
   - key: ptp_leaf
     type: ptp_leaf
@@ -254,8 +266,8 @@ mgmt_destination_networks:
   - 0.0.0.0/0
 
 
-name_servers:
-  - 192.168.1.1
+# name_servers:
+#   - 192.168.1.1
 
 
 # ntp:
@@ -266,21 +278,21 @@ name_servers:
 #     - name: 0.pool.ntp.org
 #       vrf: MGMT
 
-ntp:
-  servers:
-    # IP or hostname e.g., 2.2.2.55, 2001:db8::55, ie.pool.ntp.org.
-    - name: 172.16.131.2
-      burst: False
-      iburst: True
-      preferred: False
-      # VRF name.
-      vrf: MGMT
-    - name: 172.16.131.3
-      burst: False
-      iburst: True
-      preferred: True
-      # VRF name.
-      vrf: MGMT
+# ntp:
+#   servers:
+#     # IP or hostname e.g., 2.2.2.55, 2001:db8::55, ie.pool.ntp.org.
+#     - name: 172.16.131.2
+#       burst: False
+#       iburst: True
+#       preferred: False
+#       # VRF name.
+#       vrf: MGMT
+#     - name: 172.16.131.3
+#       burst: False
+#       iburst: True
+#       preferred: True
+#       # VRF name.
+#       vrf: MGMT
 roles:
     # Role name.
   - name: network-user
@@ -305,109 +317,170 @@ roles:
 
 core_interfaces:
   p2p_links:
+      # If the AS is different than the AS number configured for the node,
+      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
 
-    #++++++ Border Leaf to Border Leaf Switch L3 Interlinks without Port-Channel
-    - ip: [ 100.83.93.8/31, 100.83.93.9/31 ]
-      nodes: [ C160064-037B380A, C160064-037B381A ]
-      include_in_underlay_protocol: true
-      interfaces: [ Ethernet35/1, Ethernet35/1 ]
-      as: [ "65214", "65214" ]
-
-    - ip: [ 100.83.93.10/31, 100.83.93.11/31 ]
-      nodes: [ C160064-037B380A, C160064-037B381A ]
-      include_in_underlay_protocol: true
-      interfaces: [ Ethernet36/1, Ethernet36/1 ]
-      as: [ "65214", "65214" ]
-
-    #+++++++++ PTP Switch L3 Interlinks without Port-Channel
-    - ip: [ 100.83.93.12/31, 100.83.93.13/31 ]
+#+++++++++ 2x PTP Switch L3 links ++++++++++++++++
+    - ip: [ 100.83.93.1/31, 100.83.93.0/31 ]
       nodes: [ C160064-037B370A, C160064-037B371A ]
       include_in_underlay_protocol: true
-      interfaces: [ Ethernet53/1, Ethernet53/1 ]
+      interfaces: [ Ethernet55/1, Ethernet55/1 ]
       as: [ "65213.37370", "65213.37370" ]
 
-    - ip: [ 100.83.93.14/31, 100.83.93.15/31 ]
+    - ip: [ 100.83.93.3/31, 100.83.93.2/31 ]
       nodes: [ C160064-037B370A, C160064-037B371A ]
       include_in_underlay_protocol: true
-      interfaces: [ Ethernet54/1, Ethernet54/1 ]
+      interfaces: [ Ethernet56/1, Ethernet56/1 ]
       as: [ "65213.37370", "65213.37370" ]
 
-
-    #+++++++ Border to Green Spines p2p L3 Links
-    - ip: [ 100.83.93.17/31, 100.83.93.16/31 ]
-      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP1  ]
-      interfaces: [ Ethernet31/1, Ethernet3/30/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65214", "65212.37300" ]
-
-    - ip: [ 100.83.93.19/31, 100.83.93.18/31 ]
-      nodes: [ C160064-037B380A, C160064-037B301A_CSW-SP2 ]
-      interfaces: [ Ethernet32/1, Ethernet3/30/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65214", "65212.37300" ]
-
-    - ip: [ 100.83.93.21/31, 100.83.93.20/31 ]
-      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP1  ]
-      interfaces: [ Ethernet31/1, Ethernet4/30/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65214", "65212.37300" ]
-
-    - ip: [ 100.83.93.23/31, 100.83.93.22/31 ]
-      nodes: [ C160064-037B381A, C160064-037B301A_CSW-SP2 ]
-      interfaces: [ Ethernet32/1, Ethernet4/30/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65214", "65212.37300" ]
-
-    #+++++ PTP to Green Spines p2p L3 Links
-    - ip: [ 100.83.93.25/31, 100.83.93.24/31 ]
+#+++++++++++ PTP to Green Spines p2p L3 Links++++++++++++++++++
+    - ip: [ 100.83.93.61/31, 100.83.93.60/31 ]
       nodes: [ C160064-037B370A, C160064-037B300A_CSW-SP1 ]
       interfaces: [ Ethernet51/1, Ethernet3/31/1 ]
       include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65213.37370", "65212.37300" ]
 
-    - ip: [ 100.83.93.27/31, 100.83.93.26/31 ]
-      nodes: [ C160064-037B370A, C160064-037B301A_CSW-SP2 ]
-      interfaces: [ Ethernet52/1, Ethernet3/31/1 ]
-      include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
-      as: [ "65213.37370", "65212.37300" ]
-
-    - ip: [ 100.83.93.29/31, 100.83.93.28/31 ]
+    - ip: [ 100.83.93.63/31, 100.83.93.62/31 ]
       nodes: [ C160064-037B371A, C160064-037B300A_CSW-SP1  ]
       interfaces: [ Ethernet51/1, Ethernet4/31/1 ]
       include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65213.37370", "65212.37300" ]
 
-    - ip: [ 100.83.93.31/31, 100.83.93.30/31 ]
+    - ip: [ 100.83.93.65/31, 100.83.93.64/31 ]
+      nodes: [ C160064-037B370A, C160064-037B301A_CSW-SP2 ]
+      interfaces: [ Ethernet52/1, Ethernet3/31/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65213.37370", "65212.37300" ]
+
+    - ip: [ 100.83.93.67/31, 100.83.93.66/31 ]
       nodes: [ C160064-037B371A, C160064-037B301A_CSW-SP2 ]
       interfaces: [ Ethernet52/1, Ethernet4/31/1 ]
       include_in_underlay_protocol: true
-      # If the AS is different than the AS number configured for the node,
-      # the local-as will be replaced on this BGP peering (neighbor <ip> local-as <as> no-prepend replace-as).
       as: [ "65213.37370", "65212.37300" ]
 
+#++++++++++ 4x Border Leaf to Border Leaf  L3 links
+    - ip: [ 100.83.93.13/31, 100.83.93.12/31 ]
+      nodes: [ C160064-037B380A, C160064-037B381A ]
+      include_in_underlay_protocol: true
+      interfaces: [ Ethernet27/1, Ethernet27/1 ]
+      as: [ "65214", "65214" ]
 
-eos_validate_state_validation_mode_loose: true
-root_dir: '{{ inventory_dir }}'
-eos_validate_state_name: 'reports'
-eos_validate_state_dir: '{{ root_dir }}/{{ eos_validate_state_name }}'
-eos_validate_state_md_report_path: '{{ eos_validate_state_dir }}/{{ fabric_name }}-state.md'
-eos_validate_state_csv_report_path: '{{ eos_validate_state_dir }}/{{ fabric_name }}-state.csv'
-validate_state_markdown_flavor: "default"
-accepted_xcvr_manufacturers: "{{ validation_role.xcvr_own_manufacturers | arista.avd.default(['Arastra, Inc.', 'Arista Networks']) }}"
-accepted_pwr_supply_states: "{{ validation_role.pwr_supply_states | arista.avd.default(['ok']) }}"
-accepted_fan_states: "{{ validation_role.fan_states | arista.avd.default(['ok']) }}"
-validation_report_md: "{{ validation_role.validation_report_md | arista.avd.default(true) }}"
+    - ip: [ 100.83.93.15/31, 100.83.93.14/31 ]
+      nodes: [ C160064-037B380A, C160064-037B381A ]
+      include_in_underlay_protocol: true
+      interfaces: [ Ethernet28/1, Ethernet28/1 ]
+      as: [ "65214", "65214" ]
+
+    - ip: [ 100.83.93.17/31, 100.83.93.16/31 ]
+      nodes: [ C160064-037B380A, C160064-037B381A ]
+      include_in_underlay_protocol: true
+      interfaces: [ Ethernet29/1, Ethernet29/1 ]
+      as: [ "65214", "65214" ]
+
+    - ip: [ 100.83.93.19/31, 100.83.93.18/31 ]
+      nodes: [ C160064-037B380A, C160064-037B381A ]
+      include_in_underlay_protocol: true
+      interfaces: [ Ethernet30/1, Ethernet30/1 ]
+      as: [ "65214", "65214" ]
+
+#+++++++++++++++++++++++= BL to Green Spines +++++++++++++++++++++++++++++
+    #+++++++ 4x Border Leaf1 to Green Spine1 p2p L3 Links
+    - ip: [ 100.83.93.29/31, 100.83.93.28/31 ]
+      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP1  ]
+      interfaces: [ Ethernet1/1, Ethernet5/24/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.31/31, 100.83.93.30/31 ]
+      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP1  ]
+      interfaces: [ Ethernet2/1, Ethernet6/24/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.33/31, 100.83.93.32/31 ]
+      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP1  ]
+      interfaces: [ Ethernet3/1, Ethernet7/24/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.35/31, 100.83.93.34/31 ]
+      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP1  ]
+      interfaces: [ Ethernet4/1, Ethernet8/24/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    #+++++++ 4x Border Leaf2 to Green Spine1 p2p L3 Links
+    - ip: [ 100.83.93.37/31, 100.83.93.36/31 ]
+      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP1  ]
+      interfaces: [ Ethernet1/1, Ethernet5/25/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.39/31, 100.83.93.38/31 ]
+      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP1  ]
+      interfaces: [ Ethernet2/1, Ethernet6/25/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.41/31, 100.83.93.40/31 ]
+      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP1  ]
+      interfaces: [ Ethernet3/1, Ethernet7/25/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.43/31, 100.83.93.42/31 ]
+      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP1  ]
+      interfaces: [ Ethernet4/1, Ethernet8/25/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    #+++++++ 4x Border Leaf1 to Green Spine2 p2p L3 Links
+    - ip: [ 100.83.93.45/31, 100.83.93.44/31 ]
+      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP2  ]
+      interfaces: [ Ethernet5/1, Ethernet5/24/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.47/31, 100.83.93.46/31 ]
+      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP2  ]
+      interfaces: [ Ethernet6/1, Ethernet6/24/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.49/31, 100.83.93.48/31 ]
+      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP2  ]
+      interfaces: [ Ethernet7/1, Ethernet7/24/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.51/31, 100.83.93.50/31 ]
+      nodes: [ C160064-037B380A, C160064-037B300A_CSW-SP2  ]
+      interfaces: [ Ethernet8/1, Ethernet8/24/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    #+++++++ 4x Border Leaf2 to Green Spine2 p2p L3 Links
+    - ip: [ 100.83.93.53/31, 100.83.93.52/31 ]
+      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP2  ]
+      interfaces: [ Ethernet5/1, Ethernet5/25/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.55/31, 100.83.93.54/31 ]
+      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP2  ]
+      interfaces: [ Ethernet6/1, Ethernet6/25/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.57/31, 100.83.93.56/31 ]
+      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP2  ]
+      interfaces: [ Ethernet7/1, Ethernet7/25/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
+    - ip: [ 100.83.93.59/31, 100.83.93.58/31 ]
+      nodes: [ C160064-037B381A, C160064-037B300A_CSW-SP2  ]
+      interfaces: [ Ethernet8/1, Ethernet8/25/1 ]
+      include_in_underlay_protocol: true
+      as: [ "65214", "65212.37300" ]
+
