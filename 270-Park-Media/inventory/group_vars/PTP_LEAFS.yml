@@ -27,7 +27,7 @@ ptp_leaf:
 
   nodes:
     - name: C160064-037B370A
-      id: 3
+      id: 2
       loopback_ipv4_address: 169.27.195.72
       mgmt_interface: Management1
       mgmt_ip: 10.176.143.137/27
@@ -35,8 +35,8 @@ ptp_leaf:
       filter:
         tags: [ C160064-037B370A ]
       uplink_switches: [ 'C160064-037B100A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet33/1, Ethernet34/1 ]
-      uplink_switch_interfaces: [ Ethernet9/12/1, Ethernet9/13/1 ]
+      uplink_interfaces: [ Ethernet49/1, Ethernet50/1 ]
+      uplink_switch_interfaces: [ Ethernet3/32/1, Ethernet3/32/1 ]
       # uplink_switch_interfaces:
       #   - Ethernet49-56/1
       #   - Ethernet1-48
@@ -44,7 +44,7 @@ ptp_leaf:
         priority2: 101
 
     - name: C160064-037B371A
-      id: 4
+      id: 3
       loopback_ipv4_address: 169.27.195.73
       mgmt_interface: Management1
       mgmt_ip: 10.176.143.166/27
@@ -52,8 +52,8 @@ ptp_leaf:
       filter:
         tags: [ C160064-037B371A ]
       uplink_switches: [ 'C160064-037B100A', 'C160064-037B200A' ]
-      uplink_interfaces: [ Ethernet33/1, Ethernet34/1 ]
-      uplink_switch_interfaces: [ Ethernet9/13/1, Ethernet9/14/1 ]
+      uplink_interfaces: [ Ethernet49/1, Ethernet50/1 ]
+      uplink_switch_interfaces: [ Ethernet4/32/1, Ethernet4/32/1 ]
       # uplink_switch_interfaces:
       #   - Ethernet49-56/1
       #   - Ethernet1-48

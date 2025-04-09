@@ -27,7 +27,7 @@ border_leaf:
 
   nodes:
     - name: C160064-037B380A
-      id: 5
+      id: 6
       loopback_ipv4_address: 169.27.195.70
       mgmt_interface: Management1
       mgmt_ip: 10.176.143.138/27
@@ -36,14 +36,15 @@ border_leaf:
         tags: [ C160064-037B380A ]
       uplink_switches: [ 'C160064-037B100A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet33/1, Ethernet34/1 ]
-      uplink_switch_interfaces: [ Ethernet8/10/1, Ethernet8/11/1 ]
+      uplink_switch_interfaces: [ Ethernet6/25/1, Ethernet6/25/1 ]
+      #uplink_ipv4_pool:
        # uplink_switch_interfaces:
       #   - Ethernet1-31/1-4
       #   - Ethernet33-36/1-7
 
 
     - name: C160064-037B381A
-      id: 6
+      id: 7
       loopback_ipv4_address: 169.27.195.71
       mgmt_interface: Management1
       mgmt_ip: 10.176.143.167/27
@@ -52,7 +53,7 @@ border_leaf:
         tags: [ C160064-037B381A ]
       uplink_switches: [ 'C160064-037B100A', 'C160064-037B200A' ]
       uplink_interfaces: [ Ethernet33/1, Ethernet34/1 ]
-      uplink_switch_interfaces: [ Ethernet8/12/1, Ethernet8/13/1 ]
+      uplink_switch_interfaces: [ Ethernet7/25/1, Ethernet7/25/1 ]
       # uplink_switch_interfaces:
       #   - Ethernet1-31/1-4
       #   - Ethernet33-36/1-7
