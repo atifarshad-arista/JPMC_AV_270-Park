@@ -65,11 +65,43 @@ port_profiles:
 network_ports:
   # Static muuticast for Red/Blue spines all interfaces except uplinks to PTP & BL
   - switches:
-      - C160064-037B100A
-      #- C160064-037B200A
-      # - red-leaf.*
+    # All 7280SR3 Media leafs ports 1-48 and 49-56/1
+    - C160064-004B101A
+    # - C160064-006B101A
+    # - C160064-008B101A
+    # - C160064-010B101A
+    # - C160064-013B101A
+    # - C160064-014B101A
+    # - C160064-014B102A
+    # - C160064-015B103A
+    # - C160064-015B102A
+    # - C160064-015B101A
+    # - C160064-017B101A
+    # - C160064-037B106A
+    # - C160064-037B105A
+    # - C160064-046B101A
+    # - C160064-051B101A
+    # - C160064-056B101A
+    # - C160064-004B201A
+    # - C160064-006B201A
+    # - C160064-008B201A
+    # - C160064-010B201A
+    # - C160064-013B201A
+    # - C160064-014B201A
+    # - C160064-014B202A
+    # - C160064-015B203A
+    # - C160064-015B202A
+    # - C160064-015B201A
+    # - C160064-017B201A
+    # - C160064-037B206A
+    # - C160064-037B205A
+    # - C160064-046B201A
+    # - C160064-051B201A
+    # - C160064-056B201A
     switch_ports:
-      - Ethernet44
+      - Ethernet1-48
+      - Ethernet49-56/1
+
       # - Ethernet3-4/1-31/1
       # - Ethernet3-4/32-36/1
       # - Ethernet5/1-36/1
