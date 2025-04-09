@@ -45,7 +45,6 @@ port_profiles:
       multicast:
         ipv4:
           static: True
-
   - profile: BLUE_212
     mode: access
     enabled: false
