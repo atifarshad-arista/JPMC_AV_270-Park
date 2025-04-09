@@ -116,6 +116,8 @@ default_interfaces:
       - 7280CR3
     uplink_interfaces:
       - Ethernet1-36/1-4
+    downlink_interfaces:
+      - Ethernet1-36/1-4
 
 daemon_terminattr:
   cvaddrs:
