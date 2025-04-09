@@ -1,6 +1,8 @@
 ---
 type: media_spine
 
+switchport_default:
+  mode: "routed"
 media_spine:
   defaults:
     platform: 7808R3

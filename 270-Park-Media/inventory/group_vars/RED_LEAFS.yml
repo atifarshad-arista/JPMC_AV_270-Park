@@ -1,6 +1,10 @@
 ---
 type: media_leaf
-
+switchport_default:
+  mode: "routed"
+  
+switchport_default:
+  mode: "routed"
 media_leaf:
   defaults:
     platform:
