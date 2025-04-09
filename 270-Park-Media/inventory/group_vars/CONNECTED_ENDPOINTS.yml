@@ -63,12 +63,18 @@ port_profiles:
 # All switch_ports ranges are expanded into individual port configurations
 # Switches are matched with regex matching the full hostname.
 network_ports:
-  # Generic Port Settings
+  # Static muuticast for Red/Blue spines all interfaces except uplinks to PTP & BL
   - switches:
-      - C160064-.*
+      - C160064-037B100A
+      #- C160064-037B200A
       # - red-leaf.*
     switch_ports:
-      - Ethernet1-48
+      - Ethernet44
+      # - Ethernet3-4/1-31/1
+      # - Ethernet3-4/32-36/1
+      # - Ethernet5/1-36/1
+      # - Ethernet6-7/1-24/1
+      # - Ethernet6-7/26-36/1
     profile: STATIC_MULTICAST
 
   # Generic Port Settings
