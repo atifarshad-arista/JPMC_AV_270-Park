@@ -1,7 +1,19 @@
 ---
 type: media_spine
+
 switchport_default:
   mode: "routed"
+
+management_cvx:
+  shutdown: false
+  server_hosts:
+  # IP or hostname.
+    - 10.155.243.141
+    - 10.155.243.142
+    - 10.155.243.143
+  # Interface name.
+  source_interface: Loopback0
+
 media_spine:
   defaults:
     platform: 7808R3
@@ -22,8 +34,6 @@ media_spine:
         missing_message:
                 sequence_ids:
                   enabled: False
-
-
   nodes:
     - name: C160064-037B100A
       id: 1
@@ -31,13 +41,366 @@ media_spine:
       mgmt_interface: Management1/1
       mgmt_ip: 10.176.143.139/27
       mgmt_gateway: 10.176.143.129
-
-management_cvx:
-  shutdown: false
-  server_hosts:
-  # IP or hostname.
-    - 10.155.243.141
-    - 10.155.243.142
-    - 10.155.243.143
-  # Interface name.
-  source_interface: Loopback0
+      # List all Media spines to media leaf fabric p2p interfaces to enable static multicast
+      structured_config:
+        ethernet_interfaces:
+          - name: Ethernet6/23/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/23/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/21/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/22/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/24/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/21/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/22/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/20/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/20/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/32/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/33/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/32/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/33/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/19/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/19/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/33/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/33/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/34/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/34/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/18/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/18/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/33/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/33/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/33/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/34/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/17/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/17/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/34/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/34/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/33/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/34/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/16/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/16/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/35/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/35/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/35/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/35/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/35/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/35/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/35/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/35/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/35/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/35/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/36/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/35/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/36/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/35/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/36/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/14/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/15/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/14/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/15/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/36/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/36/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/1/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/2/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/3/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/4/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/5/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/6/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/7/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/8/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/9/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/1/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/2/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/3/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/4/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/5/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/6/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/7/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/8/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/9/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/31/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/32/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/32/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/32/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/32/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/33/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/36/2
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/36/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/12/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/12/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet6/11/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/11/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet7/24/1
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/36/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/36/3
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet3/36/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet4/36/4
+            multicast:
+              ipv4:
+                static: true
+          - name: Ethernet5/36/4
+            multicast:
+              ipv4:
+                static: true
