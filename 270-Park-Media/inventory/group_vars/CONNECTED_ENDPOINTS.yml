@@ -6,6 +6,8 @@ port_profiles:
   # To intoduce multicast ipv4 static
   - profile: STATIC_MULTICAST
     structured_config:
+      switchport:
+          enabled: false
       multicast:
         ipv4:
           static: True
@@ -66,37 +68,37 @@ network_ports:
   - switches:
     # All 7280SR3 Media leafs ports 1-48 and 49-56/1
     - C160064-004B101A
-    # - C160064-006B101A
-    # - C160064-008B101A
-    # - C160064-010B101A
-    # - C160064-013B101A
-    # - C160064-014B101A
-    # - C160064-014B102A
-    # - C160064-015B103A
-    # - C160064-015B102A
-    # - C160064-015B101A
-    # - C160064-017B101A
-    # - C160064-037B106A
-    # - C160064-037B105A
-    # - C160064-046B101A
-    # - C160064-051B101A
-    # - C160064-056B101A
-    # - C160064-004B201A
-    # - C160064-006B201A
-    # - C160064-008B201A
-    # - C160064-010B201A
-    # - C160064-013B201A
-    # - C160064-014B201A
-    # - C160064-014B202A
-    # - C160064-015B203A
-    # - C160064-015B202A
-    # - C160064-015B201A
-    # - C160064-017B201A
-    # - C160064-037B206A
-    # - C160064-037B205A
-    # - C160064-046B201A
-    # - C160064-051B201A
-    # - C160064-056B201A
+    - C160064-006B101A
+    - C160064-008B101A
+    - C160064-010B101A
+    - C160064-013B101A
+    - C160064-014B101A
+    - C160064-014B102A
+    - C160064-015B103A
+    - C160064-015B102A
+    - C160064-015B101A
+    - C160064-017B101A
+    - C160064-037B106A
+    - C160064-037B105A
+    - C160064-046B101A
+    - C160064-051B101A
+    - C160064-056B101A
+    - C160064-004B201A
+    - C160064-006B201A
+    - C160064-008B201A
+    - C160064-010B201A
+    - C160064-013B201A
+    - C160064-014B201A
+    - C160064-014B202A
+    - C160064-015B203A
+    - C160064-015B202A
+    - C160064-015B201A
+    - C160064-017B201A
+    - C160064-037B206A
+    - C160064-037B205A
+    - C160064-046B201A
+    - C160064-051B201A
+    - C160064-056B201A
     switch_ports:
       - Ethernet1-48
       - Ethernet49-56/1
@@ -108,79 +110,127 @@ network_ports:
       # - Ethernet6-7/26-36/1
     profile: STATIC_MULTICAST
 
-  # Generic Port Settings
   - switches:
-      - red-leaf1
+    # All 7289R3A Media leafs ports 2-10/1-16/1
+    - C160064-001B101A
+    - C160064-002B101A
+    - C160064-003B101A
+    - C160064-005B101A
+    - C160064-007B101A
+    - C160064-009B101A
+    - C160064-013B102A
+    - C160064-016B101A
+    - C160064-016B102A
+    - C160064-037B101A
+    - C160064-037B102A
+    - C160064-037B103A
+    - C160064-037B104A
+    - C160064-050B101A
+    - C160064-051B102A
+    - C160064-001B201A
+    - C160064-002B201A
+    - C160064-003B201A
+    - C160064-005B201A
+    - C160064-007B201A
+    - C160064-009B201A
+    - C160064-013B202A
+    - C160064-016B201A
+    - C160064-016B202A
+    - C160064-037B201A
+    - C160064-037B202A
+    - C160064-037B203A
+    - C160064-037B204A
+    - C160064-050B201A
+    - C160064-051B202A
     switch_ports:
-      - Ethernet3-48
-    profile: RED_111
-    description: RED_VLAN111
+      - Ethernet2-3/1-4/1
+      - Ethernet4-10/1-16/1
+    profile: STATIC_MULTICAST
 
   - switches:
-      - red-leaf2
+    # All Media Spines
+    - C160064-037B100A
+    - C160064-037B200A
     switch_ports:
-      - Ethernet3-48
-    profile: RED_112
-    description: RED_VLAN112
+      - Ethernet.*
+      # - Ethernet2-3/1-4/1
+      # - Ethernet4-10/1-16/1
+    profile: STATIC_MULTICAST
 
-  - switches:
-      - blue-leaf1
-    switch_ports:
-      - Ethernet3-48
-    profile: BLUE_211
-    description: BLUE_VLAN211
 
-  - switches:
-      - blue-leaf2
-    switch_ports:
-      - Ethernet3-48
-    profile: BLUE_212
-    description: BLUE_VLAN212
+  # # Generic Port Settings
+  # - switches:
+  #     - red-leaf1
+  #   switch_ports:
+  #     - Ethernet3-48
+  #   profile: RED_111
+  #   description: RED_VLAN111
 
-  # media-PTP-1
-  - switches:
-      - media-PTP-1
-    switch_ports:
-      - Ethernet6-48
-    enabled: false
-    description: Routed Endpoints
-    speed: forced 1000full
-    # structured_config:
-    #   type: routed
+  # - switches:
+  #     - red-leaf2
+  #   switch_ports:
+  #     - Ethernet3-48
+  #   profile: RED_112
+  #   description: RED_VLAN112
 
-  - switches:
-      - media-PTP-1
-    switch_ports:
-      - Ethernet5
-    enabled: true
-    description: PTP Grandmaster 1
-    speed: forced 1000full
-    mode: access
-    vlans: 131
-    ptp:
-      enabled: true
-      endpoint_role: bmca
+  # - switches:
+  #     - blue-leaf1
+  #   switch_ports:
+  #     - Ethernet3-48
+  #   profile: BLUE_211
+  #   description: BLUE_VLAN211
 
-  # media-PTP-2
-  - switches:
-      - media-PTP-2
-    switch_ports:
-      - Ethernet6-48
-    enabled: false
-    description: Routed Endpoints
-    speed: forced 1000full
-    # structured_config:
-    #   type: routed
+  # - switches:
+  #     - blue-leaf2
+  #   switch_ports:
+  #     - Ethernet3-48
+  #   profile: BLUE_212
+  #   description: BLUE_VLAN212
 
-  - switches:
-      - media-PTP-2
-    switch_ports:
-      - Ethernet5
-    enabled: true
-    description: PTP Grandmaster 2
-    speed: forced 1000full
-    mode: access
-    vlans: 132
-    ptp:
-      enabled: true
-      endpoint_role: bmca
+  # # media-PTP-1
+  # - switches:
+  #     - media-PTP-1
+  #   switch_ports:
+  #     - Ethernet6-48
+  #   enabled: false
+  #   description: Routed Endpoints
+  #   speed: forced 1000full
+  #   # structured_config:
+  #   #   type: routed
+
+  # - switches:
+  #     - media-PTP-1
+  #   switch_ports:
+  #     - Ethernet5
+  #   enabled: true
+  #   description: PTP Grandmaster 1
+  #   speed: forced 1000full
+  #   mode: access
+  #   vlans: 131
+  #   ptp:
+  #     enabled: true
+  #     endpoint_role: bmca
+
+  # # media-PTP-2
+  # - switches:
+  #     - media-PTP-2
+  #   switch_ports:
+  #     - Ethernet6-48
+  #   enabled: false
+  #   description: Routed Endpoints
+  #   speed: forced 1000full
+  #   # structured_config:
+  #   #   type: routed
+
+  # - switches:
+  #     - media-PTP-2
+  #   switch_ports:
+  #     - Ethernet5
+  #   enabled: true
+  #   description: PTP Grandmaster 2
+  #   speed: forced 1000full
+  #   mode: access
+  #   vlans: 132
+  #   ptp:
+  #     enabled: true
+  #     endpoint_role: bmca
