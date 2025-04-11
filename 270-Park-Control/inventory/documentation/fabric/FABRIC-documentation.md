@@ -18,6 +18,7 @@
 | POD | Type | Node | Management IP | Platform | Provisioned in CloudVision | Serial Number |
 | --- | ---- | ---- | ------------- | -------- | -------------------------- | ------------- |
 | FABRIC | l2leaf | C160064-001B301A | 10.176.142.82/28 | 720XP | Provisioned | NA |
+| FABRIC | l2leaf | C160064-001B302A | 10.176.142.85/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-002B301A | 10.176.136.115/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-002B302A | 10.176.136.131/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-002B303A | 10.176.136.116/28 | 720XP | Provisioned | NA |
@@ -52,6 +53,7 @@
 | FABRIC | l2leaf | C160064-014B303A | 10.176.142.147/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-014B304A | 10.176.142.162/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-014B305A | 10.176.142.163/28 | 720XP | Provisioned | NA |
+| FABRIC | l2leaf | C160064-014B306A | 10.176.142.166/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-015B301A | 10.176.138.36/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-015B302A | 10.176.138.37/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-015B303A | 10.176.142.178/28 | 720XP | Provisioned | NA |
@@ -163,6 +165,7 @@
 | FABRIC | l2leaf | C160064-037B361A | 10.166.80.51/27 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-037B362A | 10.166.80.42/27 | 720XP | Provisioned | HBG241605JJ |
 | FABRIC | l2leaf | C160064-037B369A | 10.176.140.229/28 | 720XP | Provisioned | NA |
+| FABRIC | l2leaf | C160064-037B372A | 10.176.143.176/27 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-040B301A | 10.176.141.20/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-041B301A | 10.176.141.36/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-042B301A | 10.176.141.52/28 | 720XP | Provisioned | NA |
@@ -175,6 +178,8 @@
 | FABRIC | l2leaf | C160064-046B302A | 10.176.141.117/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-046B303A | 10.176.141.118/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-047B301A | 10.176.141.132/28 | 720XP | Provisioned | NA |
+| FABRIC | l2leaf | C160064-047B302A | 10.176.141.133/28 | 720XP | Provisioned | NA |
+| FABRIC | l2leaf | C160064-047B303A | 10.176.141.134/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-048B301A | 10.176.143.2/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-048B302A | 10.176.143.3/28 | 720XP | Provisioned | NA |
 | FABRIC | l2leaf | C160064-048B303A | 10.176.143.18/28 | 720XP | Provisioned | NA |
@@ -208,6 +213,7 @@
 | POD | Type | Node | Management IP | Inband Interface |
 | --- | ---- | ---- | ------------- | ---------------- |
 | FABRIC | l2leaf | C160064-001B301A | 10.93.240.71/24 | Vlan200 |
+| FABRIC | l2leaf | C160064-001B302A | 10.93.240.193/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-002B301A | 10.93.240.72/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-002B302A | 10.93.240.73/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-002B303A | 10.93.240.74/24 | Vlan200 |
@@ -242,6 +248,7 @@
 | FABRIC | l2leaf | C160064-014B303A | 10.93.240.103/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-014B304A | 10.93.240.104/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-014B305A | 10.93.240.105/24 | Vlan200 |
+| FABRIC | l2leaf | C160064-014B306A | 10.93.240.194/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-015B301A | 10.93.240.106/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-015B302A | 10.93.240.107/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-015B303A | 10.93.240.108/24 | Vlan200 |
@@ -351,6 +358,7 @@
 | FABRIC | l2leaf | C160064-037B361A | 10.93.240.70/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-037B362A | 10.93.240.63/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-037B369A | 10.93.240.154/24 | Vlan200 |
+| FABRIC | l2leaf | C160064-037B372A | 10.93.240.192/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-040B301A | 10.93.240.155/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-041B301A | 10.93.240.156/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-042B301A | 10.93.240.157/24 | Vlan200 |
@@ -363,6 +371,8 @@
 | FABRIC | l2leaf | C160064-046B302A | 10.93.240.164/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-046B303A | 10.93.240.165/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-047B301A | 10.93.240.166/24 | Vlan200 |
+| FABRIC | l2leaf | C160064-047B302A | 10.93.240.195/24 | Vlan200 |
+| FABRIC | l2leaf | C160064-047B303A | 10.93.240.196/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-048B301A | 10.93.240.167/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-048B302A | 10.93.240.168/24 | Vlan200 |
 | FABRIC | l2leaf | C160064-048B303A | 10.93.240.169/24 | Vlan200 |
@@ -395,6 +405,8 @@
 | ---- | ---- | -------------- | --------- | ----------| -------------- |
 | l2leaf | C160064-001B301A | Ethernet53/1 | l3spine | C160064-037B300A | Ethernet9/23/1 |
 | l2leaf | C160064-001B301A | Ethernet54/1 | l3spine | C160064-037B301A | Ethernet9/23/1 |
+| l2leaf | C160064-001B302A | Ethernet53/1 | l3spine | C160064-037B300A | Ethernet3/24/1 |
+| l2leaf | C160064-001B302A | Ethernet54/1 | l3spine | C160064-037B301A | Ethernet3/24/1 |
 | l2leaf | C160064-002B301A | Ethernet53/1 | l3spine | C160064-037B300A | Ethernet8/23/1 |
 | l2leaf | C160064-002B301A | Ethernet54/1 | l3spine | C160064-037B301A | Ethernet8/23/1 |
 | l2leaf | C160064-002B302A | Ethernet53/1 | l3spine | C160064-037B300A | Ethernet7/23/1 |
@@ -463,6 +475,8 @@
 | l2leaf | C160064-014B304A | Ethernet54/1 | l3spine | C160064-037B301A | Ethernet7/19/1 |
 | l2leaf | C160064-014B305A | Ethernet53/1 | l3spine | C160064-037B300A | Ethernet8/19/1 |
 | l2leaf | C160064-014B305A | Ethernet54/1 | l3spine | C160064-037B301A | Ethernet8/19/1 |
+| l2leaf | C160064-014B306A | Ethernet53/1 | l3spine | C160064-037B300A | Ethernet4/24/1 |
+| l2leaf | C160064-014B306A | Ethernet54/1 | l3spine | C160064-037B301A | Ethernet4/24/1 |
 | l2leaf | C160064-015B301A | Ethernet53/1 | l3spine | C160064-037B300A | Ethernet5/19/1 |
 | l2leaf | C160064-015B301A | Ethernet54/1 | l3spine | C160064-037B301A | Ethernet5/19/1 |
 | l2leaf | C160064-015B302A | Ethernet53/1 | l3spine | C160064-037B300A | Ethernet6/19/1 |
@@ -588,6 +602,7 @@
 | l3spine | C160064-037B300A | Ethernet4/13/1 | l2leaf | C160064-041B301A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet4/32/1 | mlag_peer | C160064-037B301A | Ethernet4/32/1 |
 | l3spine | C160064-037B300A | Ethernet5/1/1 | l2leaf | C160064-037B309A | Ethernet53/1 |
+| l3spine | C160064-037B300A | Ethernet5/2/1 | l2leaf | C160064-037B372A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet5/3/1 | l2leaf | C160064-037B320A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet5/4/1 | l2leaf | C160064-037B337A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet5/5/1 | l2leaf | C160064-037B345A | Ethernet53/1 |
@@ -623,6 +638,7 @@
 | l3spine | C160064-037B300A | Ethernet7/8/1 | l2leaf | C160064-056B302A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet7/9/1 | l2leaf | C160064-050B305A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet7/10/1 | l2leaf | C160064-049B303A | Ethernet53/1 |
+| l3spine | C160064-037B300A | Ethernet7/11/1 | l2leaf | C160064-047B302A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet7/12/1 | l2leaf | C160064-045B302A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet7/32/1 | mlag_peer | C160064-037B301A | Ethernet7/32/1 |
 | l3spine | C160064-037B300A | Ethernet8/1/1 | l2leaf | C160064-037B306A | Ethernet53/1 |
@@ -635,6 +651,7 @@
 | l3spine | C160064-037B300A | Ethernet8/8/1 | l2leaf | C160064-051B305A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet8/9/1 | l2leaf | C160064-050B306A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet8/10/1 | l2leaf | C160064-049B304A | Ethernet53/1 |
+| l3spine | C160064-037B300A | Ethernet8/11/1 | l2leaf | C160064-047B303A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet8/12/1 | l2leaf | C160064-045B303A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet8/24/1 | l2leaf | C160064-037B348A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet8/32/1 | mlag_peer | C160064-037B301A | Ethernet8/32/1 |
@@ -692,6 +709,7 @@
 | l3spine | C160064-037B301A | Ethernet4/12/1 | l2leaf | C160064-046B303A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet4/13/1 | l2leaf | C160064-041B301A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet5/1/1 | l2leaf | C160064-037B309A | Ethernet54/1 |
+| l3spine | C160064-037B301A | Ethernet5/2/1 | l2leaf | C160064-037B372A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet5/3/1 | l2leaf | C160064-037B320A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet5/4/1 | l2leaf | C160064-037B337A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet5/5/1 | l2leaf | C160064-037B345A | Ethernet54/1 |
@@ -725,6 +743,7 @@
 | l3spine | C160064-037B301A | Ethernet7/8/1 | l2leaf | C160064-056B302A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet7/9/1 | l2leaf | C160064-050B305A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet7/10/1 | l2leaf | C160064-049B303A | Ethernet54/1 |
+| l3spine | C160064-037B301A | Ethernet7/11/1 | l2leaf | C160064-047B302A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet7/12/1 | l2leaf | C160064-045B302A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet8/1/1 | l2leaf | C160064-037B306A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet8/2/1 | l2leaf | C160064-037B314A | Ethernet54/1 |
@@ -736,6 +755,7 @@
 | l3spine | C160064-037B301A | Ethernet8/8/1 | l2leaf | C160064-051B305A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet8/9/1 | l2leaf | C160064-050B306A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet8/10/1 | l2leaf | C160064-049B304A | Ethernet54/1 |
+| l3spine | C160064-037B301A | Ethernet8/11/1 | l2leaf | C160064-047B303A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet8/12/1 | l2leaf | C160064-045B303A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet8/24/1 | l2leaf | C160064-037B348A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet9/1/1 | l2leaf | C160064-037B307A | Ethernet54/1 |

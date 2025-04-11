@@ -751,6 +751,31 @@ DC1:
               description: green-leaf181
               ansible_host: 10.176.142.20
               serial_number: NA
+
+# +++++++++  New Green Leafs added 10ARP2025
+            C160064-037B372A:
+              description: green-leaf182 (new10Apr2025)
+              ansible_host: 10.176.143.176
+              serial_number: NA
+            C160064-001B302A:
+              description: green-leaf183 (new10Apr2025)
+              ansible_host: 10.176.142.85
+              serial_number: NA
+            C160064-014B306A:
+              description: green-leaf184 (new10Apr2025)
+              ansible_host: 10.176.142.166
+              serial_number: NA
+            C160064-047B302A:
+              description: green-leaf185 (new10Apr2025)
+              ansible_host: 10.176.141.133
+              serial_number: NA
+            C160064-047B303A:
+              description: green-leaf186 (new10Apr2025)
+              ansible_host: 10.176.141.134
+              serial_number: NA
+
+
+
     DC1_NETWORK_SERVICES:
       children:
         DC1_LEAFS:
