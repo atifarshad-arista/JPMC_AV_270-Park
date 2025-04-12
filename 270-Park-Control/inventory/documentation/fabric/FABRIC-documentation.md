@@ -653,7 +653,7 @@
 | l3spine | C160064-037B300A | Ethernet8/10/1 | l2leaf | C160064-049B304A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet8/11/1 | l2leaf | C160064-047B303A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet8/12/1 | l2leaf | C160064-045B303A | Ethernet53/1 |
-| l3spine | C160064-037B300A | Ethernet8/24/1 | l2leaf | C160064-037B348A | Ethernet53/1 |
+| l3spine | C160064-037B300A | Ethernet8/26/1 | l2leaf | C160064-037B348A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet8/32/1 | mlag_peer | C160064-037B301A | Ethernet8/32/1 |
 | l3spine | C160064-037B300A | Ethernet9/1/1 | l2leaf | C160064-037B307A | Ethernet53/1 |
 | l3spine | C160064-037B300A | Ethernet9/2/1 | l2leaf | C160064-037B315A | Ethernet53/1 |
@@ -757,7 +757,7 @@
 | l3spine | C160064-037B301A | Ethernet8/10/1 | l2leaf | C160064-049B304A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet8/11/1 | l2leaf | C160064-047B303A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet8/12/1 | l2leaf | C160064-045B303A | Ethernet54/1 |
-| l3spine | C160064-037B301A | Ethernet8/24/1 | l2leaf | C160064-037B348A | Ethernet54/1 |
+| l3spine | C160064-037B301A | Ethernet8/26/1 | l2leaf | C160064-037B348A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet9/1/1 | l2leaf | C160064-037B307A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet9/2/1 | l2leaf | C160064-037B315A | Ethernet54/1 |
 | l3spine | C160064-037B301A | Ethernet9/3/1 | l2leaf | C160064-037B325A | Ethernet54/1 |
@@ -795,8 +795,6 @@
 
 | Node | Node Interface | Node IP Address | Peer Node | Peer Interface | Peer IP Address |
 | ---- | -------------- | --------------- | --------- | -------------- | --------------- |
-| C160064-037B300A | Ethernet8/24/1 | 100.83.94.34/31 | C160064-037B348A | Ethernet53/1 | None |
-| C160064-037B301A | Ethernet8/24/1 | 100.83.94.50/31 | C160064-037B348A | Ethernet54/1 | None |
 
 ### Loopback Interfaces (BGP EVPN Peering)
 
