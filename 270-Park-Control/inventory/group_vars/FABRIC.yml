@@ -3497,13 +3497,13 @@ core_interfaces:
       as: [ "65212.37300", "65213.37370" ]
 
     #+++++ 4x Green Spine2 to PTP Leafs++++
-    - ip: [ 100.83.94.60/31, 100.83.94.61/31 ]
+    - ip: [ 100.83.94.64/31, 100.83.94.65/31 ]
       nodes: [ C160064-037B301A, C160064-037B370A_PDSW1 ]
       interfaces: [ Ethernet3/31/1, Ethernet52/1 ]
       include_in_underlay_protocol: true
       as: [ "65212.37300", "65213.37370" ]
 
-    - ip: [ 100.83.94.62/31, 100.83.94.63/31 ]
+    - ip: [ 100.83.94.66/31, 100.83.94.67/31 ]
       nodes: [ C160064-037B301A, C160064-037B371A_PDSW2 ]
       interfaces: [ Ethernet4/31/1, Ethernet52/1 ]
       include_in_underlay_protocol: true
