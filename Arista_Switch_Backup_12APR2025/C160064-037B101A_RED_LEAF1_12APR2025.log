@@ -1,0 +1,1433 @@
+﻿﻿C160064-037B101A(s1)#
+C160064-037B101A(s1)#sh ver
+Arista 7289-F
+Hardware version: 11.00
+Serial number: JPA2423A0HM
+Hardware MAC address: 606b.5bc2.5ff4
+System MAC address: 606b.5bc2.5ff4
+
+Software image version: 4.31.5M
+Architecture: x86_64
+Internal build version: 4.31.5M-38783521.4315M
+Internal build ID: 5e011820-9e64-438a-890f-5626fe5d62a6
+Image format version: 3.0
+Image optimization: Default
+
+Uptime: 20 hours and 12 minutes
+Total memory: 65682224 kB
+Free memory: 59710664 kB
+
+C160064-037B101A(s1)#
+C160064-037B101A(s1)#sh module 
+Module      Ports Card Type                 Model      Serial No.
+----------- ----- ------------------------- ---------- -----------
+1           2     Supervisor 7289           7289-SUP-D JPA2421A66T
+2           24    4 port 400GbE QSFPDD LC   7368-4D    JPA2422ADUJ
+3           24    4 port 400GbE QSFPDD LC   7368-4D    JPA2422ADVL
+4           32    16 port 100GbE QSFP100 LC 7358-16C   JPA2427A038
+5           32    16 port 100GbE QSFP100 LC 7358-16C   JPA2427A03U
+7           16    16 port 25GbE SFP28 LC    7368-16S   JPA2422ACC7
+8           16    16 port 25GbE SFP28 LC    7368-16S   JPA2422ACD7
+9           16    16 port 25GbE SFP28 LC    7368-16S   JPA2422ACCR
+10          16    16 port 25GbE SFP28 LC    7368-16S   JPA2422ACCD
+Switchcard1 0     7289R3A-SC Switch Card    7289R3A-SC JPA2422A5L3
+
+Module      MAC addresses (count)                      Hw    Sw
+----------- ------------------------------------------ ----- -------
+1           fc:59:c0:ff:e1:a4 - fc:59:c0:ff:e1:a8 (5)  11.00 4.31.5M
+2           b4:92:fe:72:87:40 - b4:92:fe:72:87:5f (32) 11.08
+3           b4:92:fe:72:85:e0 - b4:92:fe:72:85:ff (32) 11.08
+4           68:bf:6c:9b:dd:d0 - 68:bf:6c:9b:dd:ff (48) 13.01
+5           68:bf:6c:9b:ed:30 - 68:bf:6c:9b:ed:5f (48) 13.01
+7           e4:78:76:fc:7c:82 - e4:78:76:fc:7c:91 (16) 12.01
+8           e4:78:76:fc:7f:d2 - e4:78:76:fc:7f:e1 (16) 12.01
+9           e4:78:76:fc:7d:d2 - e4:78:76:fc:7d:e1 (16) 12.01
+10          e4:78:76:fc:7c:a2 - e4:78:76:fc:7c:b1 (16) 12.01
+Switchcard1                                            11.01
+
+Module      Status Uptime   Power off reason
+----------- ------ -------- ----------------
+1           Active 20:12:17 N/A
+2           Ok     20:11:29 N/A
+3           Ok     20:11:24 N/A
+4           Ok     20:11:29 N/A
+5           Ok     20:11:27 N/A
+7           Ok     20:11:24 N/A
+8           Ok     20:11:31 N/A
+9           Ok     20:11:27 N/A
+10          Ok     20:11:28 N/A
+Switchcard1 Ok     20:11:40 N/A
+C160064-037B101A(s1)#
+C160064-037B101A(s1)#
+C160064-037B101A(s1)#sh inventory 
+System information
+  Model                    Description                                         
+  ------------------------ ----------------------------------------------------
+  7289                     7289 Chassis                                        
+
+  HW Version  Serial Number  Mfg Date   Epoch
+  ----------- -------------- ---------- -----
+  11.00       JPA2423A0HM    2024-06-06 01.00
+
+System has 11 card slots
+  Module        Model          HW Version   Serial Number   Mfg Date      Epoch
+  ------------- -------------- ------------ --------------- ------------- -----
+  Supervisor1   7289-SUP-D     11.00        JPA2421A66T     2024-05-31    01.00
+  Linecard2     7368-4D        11.08        JPA2422ADUJ     2024-06-07    01.00
+  Linecard3     7368-4D        11.08        JPA2422ADVL     2024-06-07    01.00
+  Linecard4     7358-16C       13.01        JPA2427A038     2024-07-03    01.00
+  Linecard5     7358-16C       13.01        JPA2427A03U     2024-07-03    01.00
+  Linecard6     Not Inserted                                                   
+  Linecard7     7368-16S       12.01        JPA2422ACC7     2024-06-05    01.00
+  Linecard8     7368-16S       12.01        JPA2422ACD7     2024-06-05    01.00
+  Linecard9     7368-16S       12.01        JPA2422ACCR     2024-06-05    01.00
+  Linecard10    7368-16S       12.01        JPA2422ACCD     2024-06-05    01.00
+  Switchcard1   7289R3A-SC     11.01        JPA2422A5L3     2024-06-02    01.00
+
+System has 4 power supply slots
+  Slot Model            Serial Number   
+  ---- ---------------- ----------------
+  1    PWR-1900AC-F     DDYT38M3M85     
+  2    PWR-1900AC-F     DDYT38M3M7V     
+  3    PWR-1900AC-F     DDYT38M3M8E     
+  4    PWR-1900AC-F     DDYT38M3M9T     
+
+System has 5 fan modules
+  Module  Number of Fans  Model            Serial Number   
+  ------- --------------- ---------------- ----------------
+  1       1               FAN-7012M-RED    N/A             
+  2       1               FAN-7012M-RED    N/A             
+  3       1               FAN-7012M-RED    N/A             
+  4       1               FAN-7012M-RED    N/A             
+  5       1               FAN-7012M-RED    N/A             
+
+System has 178 ports
+  Type               Count
+  ------------------ ----
+  Management         2   
+  Switched           160 
+  SwitchedBootstrap  16  
+
+System has 1 management transceiver slot
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  1/2  Not Present                                            
+
+System has 104 switched transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  2/1  Arista Networks  QDD-400G-FR4     XKT243302885     41  
+  2/2  Arista Networks  QDD-400G-FR4     XKT243302884     41  
+  2/3  Arista Networks  QDD-400G-FR4     XKT243302883     41  
+  2/4  Arista Networks  QDD-400G-FR4     XKT243302882     41  
+  3/1  Arista Networks  QDD-400G-FR4     XKT243302881     41  
+  3/2  Arista Networks  QDD-400G-FR4     XKT243302873     41  
+  3/3  Arista Networks  QDD-400G-FR4     XKT243302872     41  
+  3/4  Arista Networks  QDD-400G-FR4     XKT243302871     41  
+  4/1  Arista Networks  QSFP-100G-FR     XMH242903458     21  
+  4/2  Arista Networks  QSFP-100G-FR     XMH242903470     21  
+  4/3  Arista Networks  QSFP-100G-FR     XMH242903808     21  
+  4/4  Arista Networks  QSFP-100G-FR     XMH242903430     21  
+  4/5  Arista Networks  QSFP-100G-FR     XMH242903417     21  
+  4/6  Arista Networks  QSFP-100G-FR     XMH242903419     21  
+  4/7  Arista Networks  QSFP-100G-FR     XMH242901755     21  
+  4/8  Arista Networks  QSFP-100G-FR     XMH242901770     21  
+  4/9  Not Present                                            
+  4/10 Arista Networks  QSFP-100G-FR     XMH242902790     21  
+  4/11 Not Present                                            
+  4/12 Not Present                                            
+  4/13 Not Present                                            
+  4/14 Not Present                                            
+  4/15 Not Present                                            
+  4/16 Arista Networks  QSFP-100G-FR     XMH242901380     21  
+  5/1  Arista Networks  QSFP-100G-FR     XMH242902962     21  
+  5/2  Arista Networks  QSFP-100G-FR     XMH242902890     21  
+  5/3  Arista Networks  QSFP-100G-FR     XMH242902438     21  
+  5/4  Arista Networks  QSFP-100G-FR     XMH242903701     21  
+  5/5  Arista Networks  QSFP-100G-FR     XMH242902439     21  
+  5/6  Arista Networks  QSFP-100G-FR     XMH242902449     21  
+  5/7  Arista Networks  QSFP-100G-FR     XMH242901903     21  
+  5/8  Arista Networks  QSFP-100G-FR     XMH242903803     21  
+  5/9  Not Present                                            
+  5/10 Arista Networks  QSFP-100G-FR     XMH242902649     21  
+  5/11 Not Present                                            
+  5/12 Not Present                                            
+  5/13 Not Present                                            
+  5/14 Not Present                                            
+  5/15 Not Present                                            
+  5/16 Arista Networks  QSFP-100G-FR     XMH242901762     21  
+  7/1  Arista Networks  SFP-25G-MR-LR    XYL243202986     21  
+  7/2  Arista Networks  SFP-25G-MR-LR    XYL243203548     21  
+  7/3  Arista Networks  SFP-25G-MR-LR    XYL243203697     21  
+  7/4  Arista Networks  SFP-25G-MR-LR    XYL243203553     21  
+  7/5  Arista Networks  SFP-25G-MR-LR    XYL243202952     21  
+  7/6  Arista Networks  SFP-25G-MR-LR    XYL243203707     21  
+  7/7  Arista Networks  SFP-25G-MR-LR    XYL243202989     21  
+  7/8  Arista Networks  SFP-25G-MR-LR    XYL243203749     21  
+  7/9  Arista Networks  SFP-25G-MR-LR    XYL243203422     21  
+  7/10 Arista Networks  SFP-25G-MR-LR    XYL243202964     21  
+  7/11 Arista Networks  SFP-25G-MR-LR    XYL243202941     21  
+  7/12 Arista Networks  SFP-25G-MR-LR    XYL243203764     21  
+  7/13 Arista Networks  SFP-25G-MR-LR    XYL243202968     21  
+  7/14 Arista Networks  SFP-25G-MR-LR    XYL243203374     21  
+  7/15 Arista Networks  SFP-25G-MR-LR    XYL243203430     21  
+  7/16 Arista Networks  SFP-25G-MR-LR    XYL243203632     21  
+  8/1  Arista Networks  SFP-25G-MR-LR    XYL243202982     21  
+  8/2  Arista Networks  SFP-25G-MR-LR    XYL243202954     21  
+  8/3  Arista Networks  SFP-25G-MR-LR    XYL243203758     21  
+  8/4  Arista Networks  SFP-25G-MR-LR    XYL243203694     21  
+  8/5  Arista Networks  SFP-25G-MR-LR    XYL243203812     21  
+  8/6  Arista Networks  SFP-25G-MR-LR    XYL243203483     21  
+  8/7  Arista Networks  SFP-25G-MR-LR    XYL243203281     21  
+  8/8  Arista Networks  SFP-25G-MR-LR    XYL243203381     21  
+  8/9  Arista Networks  SFP-25G-MR-LR    XYL243203269     21  
+  8/10 Arista Networks  SFP-25G-MR-LR    XYL243202967     21  
+  8/11 Arista Networks  SFP-25G-MR-LR    XYL243203096     21  
+  8/12 Arista Networks  SFP-25G-MR-LR    XYL243203434     21  
+  8/13 Arista Networks  SFP-25G-MR-LR    XYL243203276     21  
+  8/14 Arista Networks  SFP-25G-MR-LR    XYL243203756     21  
+  8/15 Arista Networks  SFP-25G-MR-LR    XYL243203415     21  
+  8/16 Arista Networks  SFP-25G-MR-LR    XYL243203271     21  
+  9/1  Arista Networks  SFP-25G-MR-LR    XYL242902459     21  
+  9/2  Arista Networks  SFP-25G-MR-LR    XYL242902425     21  
+  9/3  Arista Networks  SFP-25G-MR-LR    XYL242903217     21  
+  9/4  Arista Networks  SFP-25G-MR-LR    XYL242902403     21  
+  9/5  Arista Networks  SFP-25G-MR-LR    XYL242902405     21  
+  9/6  Arista Networks  SFP-25G-MR-LR    XYL243203534     21  
+  9/7  Arista Networks  SFP-25G-MR-LR    XYL242102008     21  
+  9/8  Arista Networks  SFP-25G-MR-LR    XYL242102002     21  
+  9/9  Arista Networks  SFP-25G-MR-LR    XYL243202948     21  
+  9/10 Arista Networks  SFP-25G-MR-LR    XYL243203476     21  
+  9/11 Arista Networks  SFP-25G-MR-LR    XYL243203703     21  
+  9/12 Not Present                                            
+  9/13 Not Present                                            
+  9/14 Not Present                                            
+  9/15 Not Present                                            
+  9/16 Not Present                                            
+  10/1 Arista Networks  SFP-25G-MR-LR    XYL243203713     21  
+  10/2 Arista Networks  SFP-25G-MR-LR    XYL243203709     21  
+  10/3 Arista Networks  SFP-25G-MR-LR    XYL243203627     21  
+  10/4 Arista Networks  SFP-25G-MR-LR    XYL243203131     21  
+  10/5 Not Present                                            
+  10/6 Not Present                                            
+  10/7 Not Present                                            
+  10/8 Not Present                                            
+  10/9 Not Present                                            
+  10/10 Not Present                                            
+  10/11 Not Present                                            
+  10/12 Not Present                                            
+  10/13 Not Present                                            
+  10/14 Not Present                                            
+  10/15 Not Present                                            
+  10/16 Not Present                                            
+
+System has 1 storage device
+Supervisor 1: 
+  Mount      Type Model            Serial Number Rev      Size (GB)
+  ---------- ---- ---------------- ------------- -------- ---------
+  /mnt/flash SSD  VSFDM4CC240G-V11 58205-0534    0710-000 240      
+
+C160064-037B101A(s1)#
+C160064-037B101A(s1)#sh ip int brief
+                                                                        Address
+Interface         IP Address           Status    Protocol         MTU   Owner  
+----------------- -------------------- --------- ------------- -------- -------
+Ethernet2/1/1     100.83.94.1/31       down      down            1500          
+Ethernet2/2/1     100.83.94.3/31       down      down            1500          
+Ethernet2/3/1     100.83.94.5/31       down      down            1500          
+Ethernet2/4/1     100.83.94.7/31       down      down            1500          
+Ethernet3/1/1     100.83.94.9/31       down      down            1500          
+Ethernet3/2/1     100.83.94.11/31      down      down            1500          
+Ethernet3/3/1     unassigned           down      down            1500          
+Ethernet3/4/1     unassigned           down      down            1500          
+Ethernet4/1/1     unassigned           down      down            1500          
+Ethernet4/2/1     unassigned           down      down            1500          
+Ethernet4/3/1     unassigned           down      down            1500          
+Ethernet4/4/1     unassigned           down      down            1500          
+Ethernet4/5/1     unassigned           down      down            1500          
+Ethernet4/6/1     unassigned           down      down            1500          
+Ethernet4/7/1     unassigned           down      down            1500          
+Ethernet4/8/1     unassigned           down      down            1500          
+Ethernet4/9/1     unassigned           down      notpresent      1500          
+Ethernet4/10/1    unassigned           down      down            1500          
+Ethernet4/11/1    unassigned           down      notpresent      1500          
+Ethernet4/12/1    unassigned           down      notpresent      1500          
+Ethernet4/13/1    unassigned           down      notpresent      1500          
+Ethernet4/14/1    unassigned           down      notpresent      1500          
+Ethernet4/15/1    unassigned           down      notpresent      1500          
+Ethernet4/16/1    unassigned           down      down            1500          
+Ethernet5/1/1     unassigned           down      down            1500          
+Ethernet5/2/1     unassigned           down      down            1500          
+Ethernet5/3/1     unassigned           down      down            1500          
+Ethernet5/4/1     unassigned           down      down            1500          
+Ethernet5/5/1     unassigned           down      down            1500          
+Ethernet5/6/1     unassigned           down      down            1500          
+Ethernet5/7/1     unassigned           down      down            1500          
+Ethernet5/8/1     unassigned           down      down            1500          
+Ethernet5/9/1     unassigned           down      notpresent      1500          
+Ethernet5/10/1    unassigned           down      down            1500          
+Ethernet5/11/1    unassigned           down      notpresent      1500          
+Ethernet5/12/1    unassigned           down      notpresent      1500          
+Ethernet5/13/1    unassigned           down      notpresent      1500          
+Ethernet5/14/1    unassigned           down      notpresent      1500          
+Ethernet5/15/1    unassigned           down      notpresent      1500          
+Ethernet5/16/1    unassigned           down      down            1500          
+Ethernet7/1       unassigned           down      down            1500          
+Ethernet7/2       unassigned           down      down            1500          
+Ethernet7/3       unassigned           down      down            1500          
+Ethernet7/4       unassigned           up        up              1500          
+Ethernet7/5       unassigned           up        up              1500          
+Ethernet7/6       unassigned           up        up              1500          
+Ethernet7/7       unassigned           up        up              1500          
+Ethernet7/8       unassigned           up        up              1500          
+Ethernet7/9       unassigned           up        up              1500          
+Ethernet7/10      unassigned           up        up              1500          
+Ethernet7/11      unassigned           up        up              1500          
+Ethernet7/12      unassigned           up        up              1500          
+Ethernet7/13      unassigned           up        up              1500          
+Ethernet7/14      unassigned           up        up              1500          
+Ethernet7/15      unassigned           up        up              1500          
+Ethernet7/16      unassigned           up        up              1500          
+Ethernet8/1       unassigned           up        up              1500          
+Ethernet8/2       unassigned           up        up              1500          
+Ethernet8/3       unassigned           up        up              1500          
+Ethernet8/4       unassigned           down      down            1500          
+Ethernet8/5       unassigned           down      down            1500          
+Ethernet8/6       unassigned           down      down            1500          
+Ethernet8/7       unassigned           down      down            1500          
+Ethernet8/8       unassigned           down      down            1500          
+Ethernet8/9       unassigned           down      down            1500          
+Ethernet8/10      unassigned           down      down            1500          
+Ethernet8/11      unassigned           down      down            1500          
+Ethernet8/12      unassigned           down      down            1500          
+Ethernet8/13      unassigned           down      down            1500          
+Ethernet8/14      unassigned           down      down            1500          
+Ethernet8/15      unassigned           down      down            1500          
+Ethernet8/16      unassigned           down      down            1500          
+Ethernet9/1       unassigned           down      down            1500          
+Ethernet9/2       unassigned           down      down            1500          
+Ethernet9/3       unassigned           down      down            1500          
+Ethernet9/4       unassigned           down      down            1500          
+Ethernet9/5       unassigned           down      down            1500          
+Ethernet9/6       unassigned           down      down            1500          
+Ethernet9/7       unassigned           down      down            1500          
+Ethernet9/8       unassigned           down      down            1500          
+Ethernet9/9       unassigned           down      down            1500          
+Ethernet9/10      unassigned           down      down            1500          
+Ethernet9/11      unassigned           down      down            1500          
+Ethernet9/12      unassigned           down      notpresent      1500          
+Ethernet9/13      unassigned           down      notpresent      1500          
+Ethernet9/14      unassigned           down      notpresent      1500          
+Ethernet9/15      unassigned           down      notpresent      1500          
+Ethernet9/16      unassigned           down      notpresent      1500          
+Ethernet10/1      unassigned           down      down            1500          
+Ethernet10/2      unassigned           down      down            1500          
+Ethernet10/3      unassigned           down      down            1500          
+Ethernet10/4      unassigned           down      down            1500          
+Ethernet10/5      unassigned           down      notpresent      1500          
+Ethernet10/6      unassigned           down      notpresent      1500          
+Ethernet10/7      unassigned           down      notpresent      1500          
+Ethernet10/8      unassigned           down      notpresent      1500          
+Ethernet10/9      unassigned           down      notpresent      1500          
+Ethernet10/10     unassigned           down      notpresent      1500          
+Ethernet10/11     unassigned           down      notpresent      1500          
+Ethernet10/12     unassigned           down      notpresent      1500          
+Ethernet10/13     unassigned           down      notpresent      1500          
+Ethernet10/14     unassigned           down      notpresent      1500          
+Ethernet10/15     unassigned           down      notpresent      1500          
+Ethernet10/16     unassigned           down      notpresent      1500          
+Loopback0         169.27.195.1/32      up        up             65535          
+Management1/1     10.176.143.141/27    up        up              1500          
+Management1/2     unassigned           down      down            1500          
+
+C160064-037B101A(s1)#
+C160064-037B101A(s1)#
+C160064-037B101A(s1)#sh run
+! Command: show running-config
+! device: C160064-037B101A (7289, EOS-4.31.5M)
+!
+! boot system flash:/EOS64-4.31.5M.swi
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$eucN5ngreuExDgwS$xnD7T8jO..GBDX0DUlp.hn.W7yW94xTjSanqgaQGBzPIhDAsyAl9N4oScHvOMvf07uVBFI4mKMxwdVEUVKgY/.
+username avnetuser privilege 0 role network-user secret sha512 $6$l7sHbz6mxuq6peq0$FQjHbRIfcZrdI1Cw7Qs4HhUbFbzmUa.dTleGY95TgzEJgNvHh/TlhzCClknEk634p5nQHn/RFBEjebebU4jxd.
+username providius privilege 7 role network-operator secret sha512 $6$BQgcQzmXutC8.k0U$w5Ly4dFtFe9KUYOc6XmPSnm0cW3F/uL90jfA1EkfH16TI4n5PcSWNk7byu1LSUR8i8ha0dWFrMHkX9b76Ih6X1
+username testlab privilege 15 role network-admin secret sha512 $6$emh7YIY16uJLWXGR$rpNN3L9JAe6K2eynKi6lcoSUQFm7Uxa6gCRwEOA8FO7adXHv31Xd4PFwybBe3icIsxGHZjQvjEKocceIiMXIc/
+username thelabeng privilege 15 role network-admin secret sha512 $6$/D8cGV410nyAUOxm$TvYHuvz9sK3.EWQeT6EiNHVclEa3EOjgYZ6022WCekli1LVLzUHql27CnUV6/NlHL0Mn9qtj8yRL6w58hFSHS0
+!
+daemon TerminAttr
+   exec /usr/bin/TerminAttr -cvaddr=192.168.1.12:9910 -cvauth=token,/tmp/token -cvvrf=MGMT -disableaaa -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs
+   no shutdown
+!
+switchport default mode routed
+!
+vlan internal order ascending range 1006 1199
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+logging monitor notifications
+!
+mcs client
+   no shutdown
+!
+hostname C160064-037B101A
+!
+ptp domain 100
+ptp mode boundary
+ptp priority1 30
+ptp priority2 102
+ptp source ip 169.27.195.1
+ptp ttl 8
+ptp monitor threshold offset-from-master 500
+ptp monitor threshold mean-path-delay 2500
+!
+snmp-server local-interface Loopback0
+snmp-server community gt1m3rg3r ro
+snmp-server host 202.40.72.61 version 2c gt1m3rg3r
+snmp-server host 202.40.73.61 version 2c gt1m3rg3r
+!
+hardware speed-group4 serdes 10g
+!
+spanning-tree mode mstp
+spanning-tree mst 0 priority 4096
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+clock timezone America/New_York
+!
+vrf instance MGMT
+!
+management api http-commands
+   no shutdown
+   !
+   vrf MGMT
+      no shutdown
+!
+management cvx
+   no shutdown
+   server host 10.155.243.143
+   server host 10.155.243.142
+   server host 10.155.243.141
+   source-interface Loopback0
+!
+management api gnmi
+   transport grpc NRVT
+      port 5909
+      vrf MGMT
+   provider eos-native
+!
+management api models
+   provider macsec
+   !
+   provider smash
+      path bridging
+      path ptp
+      path routing
+!
+aaa authorization exec default local
+!
+interface Ethernet2/1/1
+   description P2P_C160064-037B100A_Ethernet6/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.94.1/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet2/1/2
+   no switchport
+!
+interface Ethernet2/1/3
+   no switchport
+!
+interface Ethernet2/1/4
+   no switchport
+!
+interface Ethernet2/1/5
+   no switchport
+!
+interface Ethernet2/1/7
+   no switchport
+!
+interface Ethernet2/2/1
+   description P2P_C160064-037B100A_Ethernet7/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.94.3/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet2/2/2
+   no switchport
+!
+interface Ethernet2/2/3
+   no switchport
+!
+interface Ethernet2/2/4
+   no switchport
+!
+interface Ethernet2/2/5
+   no switchport
+!
+interface Ethernet2/2/7
+   no switchport
+!
+interface Ethernet2/3/1
+   description P2P_C160064-037B100A_Ethernet6/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.94.5/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet2/3/2
+   no switchport
+!
+interface Ethernet2/3/3
+   no switchport
+!
+interface Ethernet2/3/4
+   no switchport
+!
+interface Ethernet2/3/5
+   no switchport
+!
+interface Ethernet2/3/7
+   no switchport
+!
+interface Ethernet2/4/1
+   description P2P_C160064-037B100A_Ethernet7/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.94.7/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet2/4/2
+   no switchport
+!
+interface Ethernet2/4/3
+   no switchport
+!
+interface Ethernet2/4/4
+   no switchport
+!
+interface Ethernet2/4/5
+   no switchport
+!
+interface Ethernet2/4/7
+   no switchport
+!
+interface Ethernet3/1/1
+   description P2P_C160064-037B100A_Ethernet6/3/1
+   mtu 1500
+   no switchport
+   ip address 100.83.94.9/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/1/2
+   no switchport
+!
+interface Ethernet3/1/3
+   no switchport
+!
+interface Ethernet3/1/4
+   no switchport
+!
+interface Ethernet3/1/5
+   no switchport
+!
+interface Ethernet3/1/7
+   no switchport
+!
+interface Ethernet3/2/1
+   description P2P_C160064-037B100A_Ethernet7/3/1
+   mtu 1500
+   no switchport
+   ip address 100.83.94.11/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/2/2
+   no switchport
+!
+interface Ethernet3/2/3
+   no switchport
+!
+interface Ethernet3/2/4
+   no switchport
+!
+interface Ethernet3/2/5
+   no switchport
+!
+interface Ethernet3/2/7
+   no switchport
+!
+interface Ethernet3/3/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet3/3/2
+   no switchport
+!
+interface Ethernet3/3/3
+   no switchport
+!
+interface Ethernet3/3/4
+   no switchport
+!
+interface Ethernet3/3/5
+   no switchport
+!
+interface Ethernet3/3/7
+   no switchport
+!
+interface Ethernet3/4/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet3/4/2
+   no switchport
+!
+interface Ethernet3/4/3
+   no switchport
+!
+interface Ethernet3/4/4
+   no switchport
+!
+interface Ethernet3/4/5
+   no switchport
+!
+interface Ethernet3/4/7
+   no switchport
+!
+interface Ethernet4/1/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/1/3
+   no switchport
+!
+interface Ethernet4/2/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/2/2
+   no switchport
+!
+interface Ethernet4/2/3
+   no switchport
+!
+interface Ethernet4/2/4
+   no switchport
+!
+interface Ethernet4/3/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/4/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/5/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/5/3
+   no switchport
+!
+interface Ethernet4/6/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/6/2
+   no switchport
+!
+interface Ethernet4/6/3
+   no switchport
+!
+interface Ethernet4/6/4
+   no switchport
+!
+interface Ethernet4/7/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/8/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/9/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/9/3
+   no switchport
+!
+interface Ethernet4/10/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/10/2
+   no switchport
+!
+interface Ethernet4/10/3
+   no switchport
+!
+interface Ethernet4/10/4
+   no switchport
+!
+interface Ethernet4/11/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/12/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/13/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/13/3
+   no switchport
+!
+interface Ethernet4/14/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/14/2
+   no switchport
+!
+interface Ethernet4/14/3
+   no switchport
+!
+interface Ethernet4/14/4
+   no switchport
+!
+interface Ethernet4/15/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet4/16/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/1/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/1/3
+   no switchport
+!
+interface Ethernet5/2/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/2/2
+   no switchport
+!
+interface Ethernet5/2/3
+   no switchport
+!
+interface Ethernet5/2/4
+   no switchport
+!
+interface Ethernet5/3/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/4/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/5/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/5/3
+   no switchport
+!
+interface Ethernet5/6/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/6/2
+   no switchport
+!
+interface Ethernet5/6/3
+   no switchport
+!
+interface Ethernet5/6/4
+   no switchport
+!
+interface Ethernet5/7/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/8/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/9/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/9/3
+   no switchport
+!
+interface Ethernet5/10/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/10/2
+   no switchport
+!
+interface Ethernet5/10/3
+   no switchport
+!
+interface Ethernet5/10/4
+   no switchport
+!
+interface Ethernet5/11/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/12/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/13/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/13/3
+   no switchport
+!
+interface Ethernet5/14/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/14/2
+   no switchport
+!
+interface Ethernet5/14/3
+   no switchport
+!
+interface Ethernet5/14/4
+   no switchport
+!
+interface Ethernet5/15/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet5/16/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/1/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/2/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/3/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/4/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/5/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/6/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/7/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/8/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/9/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/10/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/11/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/12/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/13/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/14/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/15/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet6/16/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/1
+   no switchport
+!
+interface Ethernet7/1/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/2
+   no switchport
+!
+interface Ethernet7/2/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/3
+   no switchport
+!
+interface Ethernet7/3/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/4
+   no switchport
+!
+interface Ethernet7/4/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/5
+   no switchport
+!
+interface Ethernet7/5/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/6
+   no switchport
+!
+interface Ethernet7/6/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/7
+   no switchport
+!
+interface Ethernet7/7/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/8
+   no switchport
+!
+interface Ethernet7/8/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/9
+   no switchport
+!
+interface Ethernet7/9/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/10
+   no switchport
+!
+interface Ethernet7/10/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/11
+   no switchport
+!
+interface Ethernet7/11/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/12
+   no switchport
+!
+interface Ethernet7/12/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/13
+   no switchport
+!
+interface Ethernet7/13/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/14
+   no switchport
+!
+interface Ethernet7/14/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/15
+   no switchport
+!
+interface Ethernet7/15/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet7/16
+   no switchport
+!
+interface Ethernet7/16/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/1
+   no switchport
+!
+interface Ethernet8/1/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/2
+   no switchport
+!
+interface Ethernet8/2/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/3
+   no switchport
+!
+interface Ethernet8/3/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/4
+   no switchport
+!
+interface Ethernet8/4/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/5
+   no switchport
+!
+interface Ethernet8/5/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/6
+   no switchport
+!
+interface Ethernet8/6/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/7
+   no switchport
+!
+interface Ethernet8/7/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/8
+   no switchport
+!
+interface Ethernet8/8/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/9
+   no switchport
+!
+interface Ethernet8/9/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/10
+   no switchport
+!
+interface Ethernet8/10/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/11
+   no switchport
+!
+interface Ethernet8/11/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/12
+   no switchport
+!
+interface Ethernet8/12/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/13
+   no switchport
+!
+interface Ethernet8/13/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/14
+   no switchport
+!
+interface Ethernet8/14/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/15
+   no switchport
+!
+interface Ethernet8/15/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet8/16
+   no switchport
+!
+interface Ethernet8/16/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/1
+   no switchport
+!
+interface Ethernet9/1/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/2
+   no switchport
+!
+interface Ethernet9/2/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/3
+   no switchport
+!
+interface Ethernet9/3/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/4
+   no switchport
+!
+interface Ethernet9/4/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/5
+   no switchport
+!
+interface Ethernet9/5/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/6
+   no switchport
+!
+interface Ethernet9/6/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/7
+   no switchport
+!
+interface Ethernet9/7/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/8
+   no switchport
+!
+interface Ethernet9/8/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/9
+   no switchport
+!
+interface Ethernet9/9/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/10
+   no switchport
+!
+interface Ethernet9/10/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/11
+   no switchport
+!
+interface Ethernet9/11/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/12
+   no switchport
+!
+interface Ethernet9/12/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/13
+   no switchport
+!
+interface Ethernet9/13/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/14
+   no switchport
+!
+interface Ethernet9/14/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/15
+   no switchport
+!
+interface Ethernet9/15/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet9/16
+   no switchport
+!
+interface Ethernet9/16/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/1
+   no switchport
+!
+interface Ethernet10/1/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/2
+   no switchport
+!
+interface Ethernet10/2/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/3
+   no switchport
+!
+interface Ethernet10/3/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/4
+   no switchport
+!
+interface Ethernet10/4/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/5
+   no switchport
+!
+interface Ethernet10/5/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/6
+   no switchport
+!
+interface Ethernet10/6/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/7
+   no switchport
+!
+interface Ethernet10/7/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/8
+   no switchport
+!
+interface Ethernet10/8/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/9
+   no switchport
+!
+interface Ethernet10/9/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/10
+   no switchport
+!
+interface Ethernet10/10/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/11
+   no switchport
+!
+interface Ethernet10/11/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/12
+   no switchport
+!
+interface Ethernet10/12/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/13
+   no switchport
+!
+interface Ethernet10/13/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/14
+   no switchport
+!
+interface Ethernet10/14/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/15
+   no switchport
+!
+interface Ethernet10/15/1
+   no switchport
+   multicast ipv4 static
+!
+interface Ethernet10/16
+   no switchport
+!
+interface Ethernet10/16/1
+   no switchport
+   multicast ipv4 static
+!
+interface Loopback0
+   description ROUTER_ID
+   ip address 169.27.195.1/32
+!
+interface Management1/1
+   description OOB_MANAGEMENT
+   vrf MGMT
+   ip address 10.176.143.141/27
+!
+interface Management1/2
+!
+ip access-list standard MGMT-SSH-ACL
+   10 permit any
+!
+ip routing
+no ip routing vrf MGMT
+!
+ip route vrf MGMT 0.0.0.0/0 10.176.143.129
+!
+ip http client local-interface Management1 vrf MGMT
+!
+role network-user
+   10 deny mode exec command enable|configure|bash|python-shell|\|
+   20 permit mode exec command .*
+!
+router bgp 65210.37101
+   bgp asn notation asdot
+   router-id 169.27.195.1
+   no bgp default ipv4-unicast
+   timers bgp 5 15
+   distance bgp 20 200 200
+   graceful-restart restart-time 300
+   graceful-restart
+   maximum-paths 128 ecmp 600
+   neighbor default send-community
+   neighbor P2P-IPv4-eBGP-PEERS peer group
+   neighbor P2P-IPv4-eBGP-PEERS password 7 tAFzZuVu4+b6rGq1btvPBg==
+   neighbor P2P-IPv4-eBGP-PEERS send-community
+   neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 100.83.94.0 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.0 remote-as 65210.37100
+   neighbor 100.83.94.0 description C160064-037B100A_Ethernet6/1/1
+   neighbor 100.83.94.2 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.2 remote-as 65210.37100
+   neighbor 100.83.94.2 description C160064-037B100A_Ethernet7/1/1
+   neighbor 100.83.94.4 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.4 remote-as 65210.37100
+   neighbor 100.83.94.4 description C160064-037B100A_Ethernet6/2/1
+   neighbor 100.83.94.6 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.6 remote-as 65210.37100
+   neighbor 100.83.94.6 description C160064-037B100A_Ethernet7/2/1
+   neighbor 100.83.94.8 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.8 remote-as 65210.37100
+   neighbor 100.83.94.8 description C160064-037B100A_Ethernet6/3/1
+   neighbor 100.83.94.10 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.10 remote-as 65210.37100
+   neighbor 100.83.94.10 description C160064-037B100A_Ethernet7/3/1
+   redistribute connected
+   !
+   address-family ipv4
+      neighbor P2P-IPv4-eBGP-PEERS activate
+!
+router multicast
+   ipv4
+      routing
+!
+management ssh
+   ip access-group MGMT-SSH-ACL vrf MGMT in
+!
+end

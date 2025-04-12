@@ -1,0 +1,3518 @@
+﻿﻿C160064-037B301A(s1)#
+C160064-037B301A(s1)#sh ver
+Arista DCS-7308-F
+Hardware version: 11.00
+Serial number: HNN22326366
+Hardware MAC address: 7483.efff.bea6
+System MAC address: 7483.efff.bea6
+
+Software image version: 4.31.5M
+Architecture: x86_64
+Internal build version: 4.31.5M-38783521.4315M
+Internal build ID: 5e011820-9e64-438a-890f-5626fe5d62a6
+Image format version: 3.0
+Image optimization: Strata-4GB
+
+Uptime: 14 hours and 41 minutes
+Total memory: 32736336 kB
+Free memory: 22965184 kB
+
+C160064-037B301A(s1)#
+C160064-037B301A(s1)#sh module 
+Module  Ports Card Type                 Model         Serial No.
+------- ----- ------------------------- ------------- -----------
+1       3     7300-SUP2-D Supervisor    7300-SUP2-D   SGD241000HH
+2       2     Standby supervisor        7300-SUP2-D   SGD24330337
+3       128   32 port 100GbE QSFP100 LC 7300X3-32C-LC SGD24070G5P
+4       128   32 port 100GbE QSFP100 LC 7300X3-32C-LC SGD24070G65
+5       128   32 port 100GbE QSFP100 LC 7300X3-32C-LC SGD24130CE6
+6       128   32 port 100GbE QSFP100 LC 7300X3-32C-LC SGD24070G55
+7       128   32 port 100GbE QSFP100 LC 7300X3-32C-LC SGD24070G58
+8       128   32 port 100GbE QSFP100 LC 7300X3-32C-LC SGD240900S2
+9       128   32 port 100GbE QSFP100 LC 7300X3-32C-LC SGD24130CEC
+10      128   32 port 100GbE QSFP100 LC 7300X3-32C-LC SGD24070G62
+Fabric1 0     7308X3 Fabric Module      7308X3-FM     SGD24100CAV
+Fabric2 0     7308X3 Fabric Module      7308X3-FM     SGD24110CJL
+Fabric3 0     7308X3 Fabric Module      7308X3-FM     SGD2415007D
+Fabric4 0     7308X3 Fabric Module      7308X3-FM     SGD24100CB2
+
+Module  MAC addresses (count)                       Hw    Sw
+------- ------------------------------------------- ----- -------
+1       fc:bd:67:b8:0f:03 - fc:bd:67:b8:0f:04 (2)   12.10 4.31.5M
+2       fc:bd:67:b8:0e:bd - fc:bd:67:b8:0e:be (2)   12.10
+3       a4:3f:68:e4:24:50 - a4:3f:68:e4:24:cf (128) 13.01
+4       a4:3f:68:e4:3a:50 - a4:3f:68:e4:3a:cf (128) 13.01
+5       a4:3f:68:e4:7d:d0 - a4:3f:68:e4:7e:4f (128) 13.01
+6       a4:3f:68:e4:34:d0 - a4:3f:68:e4:35:4f (128) 13.01
+7       a4:3f:68:e4:75:50 - a4:3f:68:e4:75:cf (128) 13.01
+8       a4:3f:68:e4:92:d0 - a4:3f:68:e4:93:4f (128) 13.01
+9       a4:3f:68:e4:82:d0 - a4:3f:68:e4:83:4f (128) 13.01
+10      a4:3f:68:e4:79:50 - a4:3f:68:e4:79:cf (128) 13.01
+Fabric1                                             12.11
+Fabric2                                             12.11
+Fabric3                                             12.11
+Fabric4                                             12.11
+
+Module  Status  Uptime   Power off reason
+------- ------- -------- ----------------
+1       Active  14:40:18 N/A
+2       Standby 14:40:18 N/A
+3       Ok      14:39:43 N/A
+4       Ok      14:39:55 N/A
+5       Ok      14:39:47 N/A
+6       Ok      14:39:43 N/A
+7       Ok      14:39:40 N/A
+8       Ok      14:39:47 N/A
+9       Ok      14:39:43 N/A
+10      Ok      14:39:53 N/A
+Fabric1 Ok      14:39:39 N/A
+Fabric2 Ok      14:39:43 N/A
+Fabric3 Ok      14:39:37 N/A
+Fabric4 Ok      14:39:39 N/A
+C160064-037B301A(s1)#
+C160064-037B301A(s1)#
+C160064-037B301A(s1)#sh inventory 
+System information
+  Model                    Description                                         
+  ------------------------ ----------------------------------------------------
+  DCS-7308                 DCS-7308X-MID Midplane                              
+
+  HW Version  Serial Number  Mfg Date   Epoch
+  ----------- -------------- ---------- -----
+  11.00       HNN22326366    2024-09-10 01.00
+
+System has 14 card slots
+  Module        Model           HW Version   Serial Number   Mfg Date     Epoch
+  ------------- --------------- ------------ --------------- ------------ -----
+  Supervisor1   7300-SUP2-D     12.10        SGD241000HH     2024-09-03   01.00
+  Supervisor2   7300-SUP2-D     12.10        SGD24330337     2024-08-29   01.00
+  Linecard3     7300X3-32C-LC   13.01        SGD24070G5P     2024-04-18   01.00
+  Linecard4     7300X3-32C-LC   13.01        SGD24070G65     2024-04-17   01.00
+  Linecard5     7300X3-32C-LC   13.01        SGD24130CE6     2024-04-13   01.00
+  Linecard6     7300X3-32C-LC   13.01        SGD24070G55     2024-04-17   01.00
+  Linecard7     7300X3-32C-LC   13.01        SGD24070G58     2024-04-12   01.00
+  Linecard8     7300X3-32C-LC   13.01        SGD240900S2     2024-04-13   01.00
+  Linecard9     7300X3-32C-LC   13.01        SGD24130CEC     2024-04-15   01.00
+  Linecard10    7300X3-32C-LC   13.01        SGD24070G62     2024-04-13   01.00
+  Fabric1       7308X3-FM       12.11        SGD24100CAV     2024-04-16   01.00
+  Fabric2       7308X3-FM       12.11        SGD24110CJL     2024-04-05   01.00
+  Fabric3       7308X3-FM       12.11        SGD2415007D     2024-04-16   01.00
+  Fabric4       7308X3-FM       12.11        SGD24100CB2     2024-04-16   01.00
+
+System has 6 power supply slots
+  Slot Model            Serial Number   
+  ---- ---------------- ----------------
+  1    Not Inserted                     
+  2    Not Inserted                     
+  3    PWR-3KT-AC-BLUE  L3035X00HMBCP   
+  4    PWR-3KT-AC-BLUE  L3035X00HPBCP   
+  5    PWR-3KT-AC-BLUE  L3035X00KYBCP   
+  6    PWR-3KT-AC-BLUE  L3035X00ETBCP   
+
+System has 16 fan modules
+  Module  Number of Fans  Model            Serial Number   
+  ------- --------------- ---------------- ----------------
+  1       1               FAN-7002H-F      N/A             
+  2       1               FAN-7002H-F      N/A             
+  3       1               FAN-7002H-F      N/A             
+  4       1               FAN-7002H-F      N/A             
+  5       1               FAN-7002H-F      N/A             
+  6       1               FAN-7002H-F      N/A             
+  7       1               FAN-7002H-F      N/A             
+  8       1               FAN-7002H-F      N/A             
+  9       1               FAN-7002H-F      N/A             
+  10      1               FAN-7002H-F      N/A             
+  11      1               FAN-7002H-F      N/A             
+  12      1               FAN-7002H-F      N/A             
+  13      1               FAN-7002H-F      N/A             
+  14      1               FAN-7002H-F      N/A             
+  15      1               FAN-7002H-F      N/A             
+  16      1               FAN-7002H-F      N/A             
+
+System has 1028 ports
+  Type               Count
+  ------------------ ----
+  Management         4   
+  Switched           1008
+  SwitchedBootstrap  16  
+
+System has 1 management transceiver slot
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  1/2  Not Present                                            
+
+System has 256 switched transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  3/1  Arista Networks  QSFP-100G-FR     XMH242300193     21  
+  3/2  Arista Networks  QSFP-100G-FR     XMH242300196     21  
+  3/3  Arista Networks  QSFP-100G-FR     XMH242300189     21  
+  3/4  Arista Networks  QSFP-100G-FR     XMH242300185     21  
+  3/5  Arista Networks  QSFP-100G-FR     XMH242300194     21  
+  3/6  Arista Networks  QSFP-100G-FR     XMH241800705     21  
+  3/7  Arista Networks  QSFP-100G-FR     XMH241800718     21  
+  3/8  Arista Networks  QSFP-100G-FR     XMH241800710     21  
+  3/9  Arista Networks  QSFP-100G-FR     XMH241800709     21  
+  3/10 Arista Networks  QSFP-100G-FR     XMH241800708     21  
+  3/11 Arista Networks  QSFP-100G-FR     XMH242300181     21  
+  3/12 Arista Networks  QSFP-100G-FR     XMH242300198     21  
+  3/13 Arista Networks  QSFP-100G-FR     XMH242300190     21  
+  3/14 Arista Networks  QSFP-100G-FR     XMH241800635     21  
+  3/15 Arista Networks  QSFP-100G-FR     XMH241800621     21  
+  3/16 Arista Networks  QSFP-100G-FR     XMH242300210     21  
+  3/17 Arista Networks  QSFP-100G-FR     XMH242300203     21  
+  3/18 Arista Networks  QSFP-100G-FR     XMH242300213     21  
+  3/19 Arista Networks  QSFP-100G-FR     XMH242300209     21  
+  3/20 Arista Networks  QSFP-100G-FR     XMH242300215     21  
+  3/21 Arista Networks  QSFP-100G-FR     XMH242300306     21  
+  3/22 Arista Networks  QSFP-100G-FR     XMH242300317     21  
+  3/23 Arista Networks  QSFP-100G-FR     XMH242300314     21  
+  3/24 Arista Networks  QSFP-100G-FR     XMH242300304     21  
+  3/25 Arista Networks  QSFP-100G-FR     XMH242300212     21  
+  3/26 Arista Networks  QSFP-100G-FR     XMH241801020     21  
+  3/27 Arista Networks  QSFP-100G-FR     XMH241801004     21  
+  3/28 Arista Networks  QSFP-100G-FR     XMH241801006     21  
+  3/29 Arista Networks  QSFP-100G-FR     XMH241801001     21  
+  3/30 Arista Networks  QSFP-100G-FR     XMH241801009     21  
+  3/31 Arista Networks  QSFP-100G-FR     XMH242300307     21  
+  3/32 Arista Networks  QSFP-100G-FR     XMH242300318     21  
+  4/1  Arista Networks  QSFP-100G-FR     XMH241702577     21  
+  4/2  Arista Networks  QSFP-100G-FR     XMH241702568     21  
+  4/3  Arista Networks  QSFP-100G-FR     XMH241702576     21  
+  4/4  Arista Networks  QSFP-100G-FR     XMH241702579     21  
+  4/5  Arista Networks  QSFP-100G-FR     XMH241702573     21  
+  4/6  Arista Networks  QSFP-100G-FR     XMH241702538     21  
+  4/7  Arista Networks  QSFP-100G-FR     XMH241702531     21  
+  4/8  Arista Networks  QSFP-100G-FR     XMH241702536     21  
+  4/9  Arista Networks  QSFP-100G-FR     XMH241702527     21  
+  4/10 Arista Networks  QSFP-100G-FR     XMH241702540     21  
+  4/11 Arista Networks  QSFP-100G-FR     XMH241702661     21  
+  4/12 Arista Networks  QSFP-100G-FR     XMH241702656     21  
+  4/13 Arista Networks  QSFP-100G-FR     XMH241702658     21  
+  4/14 Arista Networks  QSFP-100G-FR     XMH241702651     21  
+  4/15 Arista Networks  QSFP-100G-FR     XMH241702868     21  
+  4/16 Arista Networks  QSFP-100G-FR     XMH242300274     21  
+  4/17 Arista Networks  QSFP-100G-FR     XMH242300267     21  
+  4/18 Arista Networks  QSFP-100G-FR     XMH242300266     21  
+  4/19 Arista Networks  QSFP-100G-FR     XMH242300265     21  
+  4/20 Arista Networks  QSFP-100G-FR     XMH242300280     21  
+  4/21 Arista Networks  QSFP-100G-FR     XMH241800090     21  
+  4/22 Arista Networks  QSFP-100G-FR     XMH241800084     21  
+  4/23 Arista Networks  QSFP-100G-FR     XMH241800350     21  
+  4/24 Arista Networks  QSFP-100G-FR     XMH241800352     21  
+  4/25 Arista Networks  QSFP-100G-FR     XMH241800354     21  
+  4/26 Arista Networks  QSFP-100G-FR     XMH241800633     21  
+  4/27 Arista Networks  QSFP-100G-FR     XMH241800626     21  
+  4/28 Arista Networks  QSFP-100G-FR     XMH241800639     21  
+  4/29 Arista Networks  QSFP-100G-FR     XMH241800627     21  
+  4/30 Arista Networks  QSFP-100G-FR     XMH241800628     21  
+  4/31 Arista Networks  QSFP-100G-FR     XMH242300309     21  
+  4/32 Arista Networks  QSFP-100G-FR     XMH242300313     21  
+  5/1  Arista Networks  QSFP-100G-FR     XMH242300268     21  
+  5/2  Arista Networks  QSFP-100G-FR     XMH242300263     21  
+  5/3  Arista Networks  QSFP-100G-FR     XMH242300270     21  
+  5/4  Arista Networks  QSFP-100G-FR     XMH242300277     21  
+  5/5  Arista Networks  QSFP-100G-FR     XMH242300279     21  
+  5/6  Arista Networks  QSFP-100G-FR     XMH241801212     21  
+  5/7  Arista Networks  QSFP-100G-FR     XMH241801211     21  
+  5/8  Arista Networks  QSFP-100G-FR     XMH241801203     21  
+  5/9  Arista Networks  QSFP-100G-FR     XMH241800739     21  
+  5/10 Arista Networks  QSFP-100G-FR     XMH241800735     21  
+  5/11 Arista Networks  QSFP-100G-FR     XMH241800175     21  
+  5/12 Arista Networks  QSFP-100G-FR     XMH241800165     21  
+  5/13 Arista Networks  QSFP-100G-FR     XMH241800162     21  
+  5/14 Arista Networks  QSFP-100G-FR     XMH241800179     21  
+  5/15 Arista Networks  QSFP-100G-FR     XMH241800169     21  
+  5/16 Arista Networks  QSFP-100G-FR     XMH241801168     21  
+  5/17 Arista Networks  QSFP-100G-FR     XMH241801162     21  
+  5/18 Arista Networks  QSFP-100G-FR     XMH241801176     21  
+  5/19 Arista Networks  QSFP-100G-FR     XMH241801161     21  
+  5/20 Arista Networks  QSFP-100G-FR     XMH241801166     21  
+  5/21 Arista Networks  QSFP-100G-FR     XMH241800711     21  
+  5/22 Arista Networks  QSFP-100G-FR     XMH241800703     21  
+  5/23 Arista Networks  QSFP-100G-FR     XMH241800704     21  
+  5/24 Arista Networks  QSFP-100G-FR     XMH241800701     21  
+  5/25 Arista Networks  QSFP-100G-FR     XMH241800707     21  
+  5/26 Arista Networks  QSFP-100G-FR     XMH241800304     21  
+  5/27 Arista Networks  QSFP-100G-FR     XMH241800312     21  
+  5/28 Arista Networks  QSFP-100G-FR     XMH241800314     21  
+  5/29 Arista Networks  QSFP-100G-FR     XMH241800311     21  
+  5/30 Arista Networks  QSFP-100G-FR     XMH241800320     21  
+  5/31 Arista Networks  QSFP-100G-FR     XMH242901901     21  
+  5/32 Arista Networks  QSFP-100G-FR     XTG242801876     21  
+  6/1  Arista Networks  QSFP-100G-FR     XMH241100855     21  
+  6/2  Arista Networks  QSFP-100G-FR     XMH241100848     21  
+  6/3  Arista Networks  QSFP-100G-FR     XMH241100858     21  
+  6/4  Arista Networks  QSFP-100G-FR     XMH241100853     21  
+  6/5  Arista Networks  QSFP-100G-FR     XMH241101276     21  
+  6/6  Arista Networks  QSFP-100G-FR     XMH241200250     21  
+  6/7  Arista Networks  QSFP-100G-FR     XMH241200241     21  
+  6/8  Arista Networks  QSFP-100G-FR     XMH241200257     21  
+  6/9  Arista Networks  QSFP-100G-FR     XMH241200251     21  
+  6/10 Arista Networks  QSFP-100G-FR     XMH241101040     21  
+  6/11 Arista Networks  QSFP-100G-FR     XMH241101167     21  
+  6/12 Arista Networks  QSFP-100G-FR     XMH241101035     21  
+  6/13 Arista Networks  QSFP-100G-FR     XMH241101029     21  
+  6/14 Arista Networks  QSFP-100G-FR     XMH241101524     21  
+  6/15 Not Present                                            
+  6/16 Arista Networks  QSFP-100G-FR     XMH241101528     21  
+  6/17 Arista Networks  QSFP-100G-FR     XMH241101525     21  
+  6/18 Arista Networks  QSFP-100G-FR     XMH241101534     21  
+  6/19 Arista Networks  QSFP-100G-FR     XMH241200255     21  
+  6/20 Arista Networks  QSFP-100G-FR     XMH241200276     21  
+  6/21 Arista Networks  QSFP-100G-FR     XMH241200273     21  
+  6/22 Arista Networks  QSFP-100G-FR     XMH241200280     21  
+  6/23 Arista Networks  QSFP-100G-FR     XMH241200274     21  
+  6/24 Arista Networks  QSFP-100G-FR     XMH241101156     21  
+  6/25 Arista Networks  QSFP-100G-FR     XMH241100802     21  
+  6/26 Arista Networks  QSFP-100G-FR     XMH241101350     21  
+  6/27 Arista Networks  QSFP-100G-FR     XMH241101351     21  
+  6/28 Arista Networks  QSFP-100G-FR     XMH241101352     21  
+  6/29 Arista Networks  QSFP-100G-FR     XMH241100984     21  
+  6/30 Arista Networks  QSFP-100G-FR     XMH241100989     21  
+  6/31 Arista Networks  QSFP-100G-FR     XMH241100993     21  
+  6/32 Arista Networks  QSFP-100G-FR     XMH241101023     21  
+  7/1  Arista Networks  QSFP-100G-FR     XMH241800180     21  
+  7/2  Arista Networks  QSFP-100G-FR     XMH241800171     21  
+  7/3  Arista Networks  QSFP-100G-FR     XMH241800161     21  
+  7/4  Arista Networks  QSFP-100G-FR     XMH241800176     21  
+  7/5  Arista Networks  QSFP-100G-FR     XMH241800173     21  
+  7/6  Arista Networks  QSFP-100G-FR     XMH241100850     21  
+  7/7  Arista Networks  QSFP-100G-FR     XMH241100845     21  
+  7/8  Arista Networks  QSFP-100G-FR     XMH241100854     21  
+  7/9  Arista Networks  QSFP-100G-FR     XMH241100859     21  
+  7/10 Arista Networks  QSFP-100G-FR     XMH241100849     21  
+  7/11 Arista Networks  QSFP-100G-FR     XMH241101278     21  
+  7/12 Arista Networks  QSFP-100G-FR     XMH241101269     21  
+  7/13 Arista Networks  QSFP-100G-FR     XMH241101263     21  
+  7/14 Arista Networks  QSFP-100G-FR     XMH241101275     21  
+  7/15 Arista Networks  QSFP-100G-FR     XMH241101262     21  
+  7/16 Arista Networks  QSFP-100G-FR     XMH241101359     21  
+  7/17 Arista Networks  QSFP-100G-FR     XMH241101346     21  
+  7/18 Arista Networks  QSFP-100G-FR     XMH241100997     21  
+  7/19 Arista Networks  QSFP-100G-FR     XMH241100990     21  
+  7/20 Arista Networks  QSFP-100G-FR     XMH241100808     21  
+  7/21 Arista Networks  QSFP-100G-FR     XMH241100814     21  
+  7/22 Arista Networks  QSFP-100G-FR     XMH241100811     21  
+  7/23 Arista Networks  QSFP-100G-FR     XMH241100804     21  
+  7/24 Arista Networks  QSFP-100G-FR     XMH241101012     21  
+  7/25 Arista Networks  QSFP-100G-FR     XMH241101513     21  
+  7/26 Arista Networks  QSFP-100G-FR     XMH241101036     21  
+  7/27 Arista Networks  QSFP-100G-FR     XMH241101006     21  
+  7/28 Arista Networks  QSFP-100G-FR     XMH241100981     21  
+  7/29 Arista Networks  QSFP-100G-FR     XMH241101000     21  
+  7/30 Arista Networks  QSFP-100G-FR     XMH241100999     21  
+  7/31 Arista Networks  QSFP-100G-FR     XMH241100985     21  
+  7/32 Arista Networks  QSFP-100G-FR     XMH241200246     21  
+  8/1  Arista Networks  QSFP-100G-FR     XMH241601457     21  
+  8/2  Arista Networks  QSFP-100G-FR     XMH241601453     21  
+  8/3  Arista Networks  QSFP-100G-FR     XMH241601451     21  
+  8/4  Arista Networks  QSFP-100G-FR     XMH241601781     21  
+  8/5  Arista Networks  QSFP-100G-FR     XMH241601788     21  
+  8/6  Arista Networks  QSFP-100G-FR     XMH241600457     21  
+  8/7  Arista Networks  QSFP-100G-FR     XMH241600446     21  
+  8/8  Arista Networks  QSFP-100G-FR     XMH241600448     21  
+  8/9  Arista Networks  QSFP-100G-FR     XMH241600441     21  
+  8/10 Arista Networks  QSFP-100G-FR     XMH241600570     21  
+  8/11 Arista Networks  QSFP-100G-FR     XMH241600564     21  
+  8/12 Arista Networks  QSFP-100G-FR     XMH241600572     21  
+  8/13 Arista Networks  QSFP-100G-FR     XMH241600565     21  
+  8/14 Arista Networks  QSFP-100G-FR     XMH241600561     21  
+  8/15 Arista Networks  QSFP-100G-FR     XMH241600559     21  
+  8/16 Arista Networks  QSFP-100G-FR     XMH241600313     21  
+  8/17 Arista Networks  QSFP-100G-FR     XMH241600309     21  
+  8/18 Arista Networks  QSFP-100G-FR     XMH241600447     21  
+  8/19 Arista Networks  QSFP-100G-FR     XMH241600300     21  
+  8/20 Arista Networks  QSFP-100G-FR     XMH241600444     21  
+  8/21 Arista Networks  QSFP-100G-FR     XMH242902464     21  
+  8/22 Arista Networks  QSFP-100G-FR     XMH242902468     21  
+  8/23 Arista Networks  QSFP-100G-FR     XMH242902454     21  
+  8/24 Arista Networks  QSFP-100G-FR     XMH242902453     21  
+  8/25 Arista Networks  QSFP-100G-FR     XMH242902467     21  
+  8/26 Arista Networks  QSFP-100G-FR     XMH242903688     21  
+  8/27 Arista Networks  QSFP-100G-FR     XMH242903690     21  
+  8/28 Arista Networks  QSFP-100G-FR     XMH242903672     21  
+  8/29 Arista Networks  QSFP-100G-FR     XMH242901475     21  
+  8/30 Arista Networks  QSFP-100G-FR     XMH242901489     21  
+  8/31 Arista Networks  QSFP-100G-FR     XMH242901519     21  
+  8/32 Arista Networks  QSFP-100G-FR     XMH242703916     21  
+  9/1  Arista Networks  QSFP-100G-FR     XMH242901527     21  
+  9/2  Arista Networks  QSFP-100G-FR     XMH242901524     21  
+  9/3  Arista Networks  QSFP-100G-FR     XMH242901516     21  
+  9/4  Arista Networks  QSFP-100G-FR     XMH242902653     21  
+  9/5  Arista Networks  QSFP-100G-FR     XMH241101266     21  
+  9/6  Arista Networks  QSFP-100G-FR     XMH241101265     21  
+  9/7  Arista Networks  QSFP-100G-FR     XMH241101270     21  
+  9/8  Arista Networks  QSFP-100G-FR     XMH241100983     21  
+  9/9  Arista Networks  QSFP-100G-FR     XMH241100810     21  
+  9/10 Arista Networks  QSFP-100G-FR     XMH241101273     21  
+  9/11 Arista Networks  QSFP-100G-FR     XMH241101274     21  
+  9/12 Arista Networks  QSFP-100G-FR     XMH241100805     21  
+  9/13 Arista Networks  QSFP-100G-FR     XMH241101348     21  
+  9/14 Arista Networks  QSFP-100G-FR     XMH241101009     21  
+  9/15 Arista Networks  QSFP-100G-FR     XMH241100986     21  
+  9/16 Arista Networks  QSFP-100G-FR     XMH242300305     21  
+  9/17 Arista Networks  QSFP-100G-FR     XTG242900244     21  
+  9/18 Arista Networks  QSFP-100G-FR     XMH242901301     21  
+  9/19 Arista Networks  QSFP-100G-FR     XMH242901304     21  
+  9/20 Arista Networks  QSFP-100G-FR     XMH242901296     21  
+  9/21 Arista Networks  QSFP-100G-FR     XMH242901293     21  
+  9/22 Arista Networks  QSFP-100G-FR     XMH242901295     21  
+  9/23 Arista Networks  QSFP-100G-FR     XTG242800770     21  
+  9/24 Arista Networks  QSFP-100G-FR     XTG242800769     21  
+  9/25 Arista Networks  QSFP-100G-FR     XTG242800768     21  
+  9/26 Arista Networks  QSFP-100G-FR     XTG242800767     21  
+  9/27 Arista Networks  QSFP-100G-FR     XTG242800766     21  
+  9/28 Arista Networks  QSFP-100G-FR     XTG242800650     21  
+  9/29 Arista Networks  QSFP-100G-FR     XTG242800649     21  
+  9/30 Arista Networks  QSFP-100G-FR     XTG242800648     21  
+  9/31 Arista Networks  QSFP-100G-FR     XTG242800647     21  
+  9/32 Arista Networks  QSFP-100G-FR     XMH242701979     21  
+  10/1 Not Present                                            
+  10/2 Not Present                                            
+  10/3 Not Present                                            
+  10/4 Not Present                                            
+  10/5 Not Present                                            
+  10/6 Not Present                                            
+  10/7 Not Present                                            
+  10/8 Not Present                                            
+  10/9 Not Present                                            
+  10/10 Not Present                                            
+  10/11 Not Present                                            
+  10/12 Not Present                                            
+  10/13 Not Present                                            
+  10/14 Not Present                                            
+  10/15 Not Present                                            
+  10/16 Not Present                                            
+  10/17 Not Present                                            
+  10/18 Not Present                                            
+  10/19 Not Present                                            
+  10/20 Not Present                                            
+  10/21 Not Present                                            
+  10/22 Not Present                                            
+  10/23 Not Present                                            
+  10/24 Not Present                                            
+  10/25 Not Present                                            
+  10/26 Not Present                                            
+  10/27 Not Present                                            
+  10/28 Not Present                                            
+  10/29 Not Present                                            
+  10/30 Not Present                                            
+  10/31 Not Present                                            
+  10/32 Not Present                                            
+
+System has 1 storage device
+Supervisor 1: 
+  Mount      Type Model            Serial Number Rev      Size (GB)
+  ---------- ---- ---------------- ------------- -------- ---------
+  /mnt/flash SSD  VSFDM4CC240G-V11 58473-0304    0710-000 240      
+
+C160064-037B301A(s1)#
+C160064-037B301A(s1)#sh ip int brief
+                                                                        Address
+Interface        IP Address          Status   Protocol            MTU   Owner  
+---------------- ------------------- -------- ---------------- -------- -------
+Ethernet3/31/1   100.83.94.64/31     down     down               9214          
+Ethernet4/31/1   100.83.94.66/31     down     down               9214          
+Ethernet5/24/1   100.83.94.44/31     down     down               9214          
+Ethernet5/25/1   100.83.94.52/31     down     down               9214          
+Ethernet6/24/1   100.83.94.46/31     down     down               9214          
+Ethernet6/25/1   100.83.94.54/31     down     down               9214          
+Ethernet7/24/1   100.83.94.48/31     down     down               9214          
+Ethernet7/25/1   100.83.94.56/31     down     down               9214          
+Ethernet8/24/1   100.83.94.50/31     down     down               9214          
+Ethernet8/25/1   100.83.94.58/31     down     down               9214          
+Loopback0        169.27.195.2/32     up       up                65535          
+Management0      10.176.143.165/27   up       up                 1500          
+Management1/1    unassigned          up       up                 1500          
+Management1/2    unassigned          down     down               1500          
+Management2/1    unassigned          up       up                 1500          
+Management2/2    unassigned          down     down               1500          
+Vlan100          10.169.48.3/21      down     lowerlayerdown     1500          
+Vlan101          10.169.46.3/23      down     lowerlayerdown     1500          
+Vlan102          10.169.68.3/22      down     lowerlayerdown     1500          
+Vlan103          10.169.80.3/24      down     lowerlayerdown     1500          
+Vlan104          10.169.112.3/24     down     lowerlayerdown     1500          
+Vlan105          10.169.113.3/24     down     lowerlayerdown     1500          
+Vlan106          10.169.92.3/22      down     lowerlayerdown     1500          
+Vlan107          10.130.44.3/24      down     lowerlayerdown     1500          
+Vlan108          10.169.56.3/24      down     lowerlayerdown     1500          
+Vlan121          10.192.150.3/24     down     lowerlayerdown     1500          
+Vlan131          10.41.22.3/24       down     lowerlayerdown     1500          
+Vlan132          10.41.23.3/24       down     lowerlayerdown     1500          
+Vlan141          10.41.76.3/24       down     lowerlayerdown     1500          
+Vlan142          10.41.77.3/24       down     lowerlayerdown     1500          
+Vlan143          10.41.112.3/24      down     lowerlayerdown     1500          
+Vlan144          10.41.113.3/24      down     lowerlayerdown     1500          
+Vlan161          10.93.232.3/22      down     lowerlayerdown     1500          
+Vlan162          10.192.151.3/24     down     lowerlayerdown     1500          
+Vlan163          10.192.174.3/24     down     lowerlayerdown     1500          
+Vlan164          10.93.243.3/24      down     lowerlayerdown     1500          
+Vlan181          10.192.175.3/24     down     lowerlayerdown     1500          
+Vlan200          10.93.240.3/24      down     lowerlayerdown     1500          
+Vlan201          10.146.188.3/23     down     lowerlayerdown     1500          
+Vlan202          10.169.66.3/23      down     lowerlayerdown     1500          
+Vlan203          10.192.99.3/24      down     lowerlayerdown     1500          
+Vlan204          10.169.57.3/24      down     lowerlayerdown     1500          
+Vlan205          10.93.242.3/24      down     lowerlayerdown     1500          
+Vlan241          10.169.81.3/24      down     lowerlayerdown     1500          
+Vlan242          10.169.90.3/24      down     lowerlayerdown     1500          
+Vlan243          10.169.91.3/24      down     lowerlayerdown     1500          
+Vlan244          10.192.98.3/24      down     lowerlayerdown     1500          
+Vlan245          10.41.116.3/25      down     lowerlayerdown     1500          
+Vlan261          10.130.40.3/24      down     lowerlayerdown     1500          
+Vlan262          10.130.41.3/24      down     lowerlayerdown     1500          
+Vlan301          10.41.56.3/24       down     lowerlayerdown     1500          
+Vlan302          10.41.57.3/24       down     lowerlayerdown     1500          
+Vlan303          10.41.224.3/23      down     lowerlayerdown     1500          
+Vlan304          10.41.230.3/23      down     lowerlayerdown     1500          
+Vlan305          10.41.52.3/24       down     lowerlayerdown     1500          
+Vlan306          10.41.53.3/24       down     lowerlayerdown     1500          
+Vlan307          10.41.120.3/26      down     lowerlayerdown     1500          
+Vlan308          10.41.120.67/26     down     lowerlayerdown     1500          
+Vlan309          10.41.120.131/26    down     lowerlayerdown     1500          
+Vlan310          10.41.120.195/26    down     lowerlayerdown     1500          
+Vlan311          10.41.121.3/26      down     lowerlayerdown     1500          
+Vlan312          10.41.121.67/26     down     lowerlayerdown     1500          
+Vlan313          10.41.121.131/26    down     lowerlayerdown     1500          
+Vlan314          10.41.121.195/26    down     lowerlayerdown     1500          
+Vlan315          10.41.202.3/26      down     lowerlayerdown     1500          
+Vlan316          10.41.202.67/26     down     lowerlayerdown     1500          
+Vlan317          10.41.202.131/26    down     lowerlayerdown     1500          
+Vlan318          10.41.202.195/26    down     lowerlayerdown     1500          
+Vlan319          10.41.203.3/26      down     lowerlayerdown     1500          
+Vlan320          10.41.203.67/26     down     lowerlayerdown     1500          
+Vlan321          10.41.203.131/26    down     lowerlayerdown     1500          
+Vlan322          10.41.203.195/26    down     lowerlayerdown     1500          
+Vlan323          10.41.206.3/26      down     lowerlayerdown     1500          
+Vlan324          10.41.206.67/26     down     lowerlayerdown     1500          
+Vlan325          10.41.206.131/26    down     lowerlayerdown     1500          
+Vlan326          10.41.206.195/26    down     lowerlayerdown     1500          
+Vlan327          10.41.207.3/26      down     lowerlayerdown     1500          
+Vlan328          10.41.207.67/26     down     lowerlayerdown     1500          
+Vlan329          10.41.216.3/26      down     lowerlayerdown     1500          
+Vlan330          10.41.216.67/26     down     lowerlayerdown     1500          
+Vlan331          10.41.216.131/26    down     lowerlayerdown     1500          
+Vlan332          10.41.216.195/26    down     lowerlayerdown     1500          
+Vlan333          10.41.217.3/26      down     lowerlayerdown     1500          
+Vlan334          10.41.217.67/26     down     lowerlayerdown     1500          
+Vlan335          10.41.217.131/26    down     lowerlayerdown     1500          
+Vlan336          10.41.217.195/26    down     lowerlayerdown     1500          
+Vlan337          10.41.207.131/26    down     lowerlayerdown     1500          
+Vlan338          10.41.207.195/26    down     lowerlayerdown     1500          
+Vlan339          10.41.116.131/26    down     lowerlayerdown     1500          
+Vlan340          10.41.116.195/26    down     lowerlayerdown     1500          
+Vlan341          10.41.117.3/26      down     lowerlayerdown     1500          
+Vlan342          10.41.117.67/26     down     lowerlayerdown     1500          
+Vlan343          10.41.117.131/26    down     lowerlayerdown     1500          
+Vlan344          10.41.117.195/26    down     lowerlayerdown     1500          
+Vlan1000         10.155.243.131/27   down     lowerlayerdown     1500          
+Vlan1001         192.168.100.3/24    down     lowerlayerdown     1500          
+Vlan4093         100.83.94.69/31     down     lowerlayerdown     9214          
+Vlan4094         172.16.0.1/31       up       up                 9214          
+
+C160064-037B301A(s1)#
+C160064-037B301A(s1)#sh run
+! Command: show running-config
+! device: C160064-037B301A (DCS-7308, EOS-4.31.5M)
+!
+! boot system flash:/EOS64-4.31.5M.swi
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$eucN5ngreuExDgwS$xnD7T8jO..GBDX0DUlp.hn.W7yW94xTjSanqgaQGBzPIhDAsyAl9N4oScHvOMvf07uVBFI4mKMxwdVEUVKgY/.
+username avnetuser privilege 0 role network-user secret sha512 $6$l7sHbz6mxuq6peq0$FQjHbRIfcZrdI1Cw7Qs4HhUbFbzmUa.dTleGY95TgzEJgNvHh/TlhzCClknEk634p5nQHn/RFBEjebebU4jxd.
+username providius privilege 7 role network-operator secret sha512 $6$BQgcQzmXutC8.k0U$w5Ly4dFtFe9KUYOc6XmPSnm0cW3F/uL90jfA1EkfH16TI4n5PcSWNk7byu1LSUR8i8ha0dWFrMHkX9b76Ih6X1
+username testlab privilege 15 role network-admin secret sha512 $6$emh7YIY16uJLWXGR$rpNN3L9JAe6K2eynKi6lcoSUQFm7Uxa6gCRwEOA8FO7adXHv31Xd4PFwybBe3icIsxGHZjQvjEKocceIiMXIc/
+username thelabeng privilege 15 role network-admin secret sha512 $6$/D8cGV410nyAUOxm$TvYHuvz9sK3.EWQeT6EiNHVclEa3EOjgYZ6022WCekli1LVLzUHql27CnUV6/NlHL0Mn9qtj8yRL6w58hFSHS0
+!
+vlan internal order ascending range 1006 1199
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+logging monitor notifications
+!
+hostname C160064-037B301A
+!
+ptp domain 100
+ptp mode boundary
+ptp priority1 20
+ptp priority2 104
+ptp source ip 169.27.195.69
+ptp ttl 8
+ptp monitor threshold offset-from-master 500
+ptp monitor threshold mean-path-delay 2500
+!
+snmp-server local-interface Loopback0
+snmp-server community gt1m3rg3r ro
+snmp-server host 202.40.72.61 version 2c gt1m3rg3r
+snmp-server host 202.40.73.61 version 2c gt1m3rg3r
+!
+hardware speed-group4 serdes 10g
+!
+spanning-tree mode mstp
+no spanning-tree vlan-id 4093-4094
+spanning-tree mst 0 priority 4096
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+clock timezone America/New_York
+!
+vlan 100
+   name General-AV-Device-Control
+!
+vlan 101
+   name Cerebrum-Out-of-Band
+!
+vlan 102
+   name NMOS-Devices
+!
+vlan 103
+   name Cerebrum-Panels
+!
+vlan 104
+   name Ross-A
+!
+vlan 105
+   name Ross-B
+!
+vlan 106
+   name Misc-37-&-AVTR
+!
+vlan 107
+   name PTZ/Cam-Ctl/Video
+!
+vlan 108
+   name Shure-Wireless-Control
+!
+vlan 121
+   name NDI
+!
+vlan 131
+   name IPMX-A
+!
+vlan 132
+   name IPMX-B
+!
+vlan 141
+   name Barco-3
+!
+vlan 142
+   name Barco-5
+!
+vlan 143
+   name Barco-7
+!
+vlan 144
+   name Barco-9
+!
+vlan 161
+   name KVM
+!
+vlan 162
+   name MegaPixel
+!
+vlan 163
+   name 7th-Sense
+!
+vlan 164
+   name Lighting
+!
+vlan 181
+   name Canvas-Control
+!
+vlan 200
+   name INBAND_MGMT
+!
+vlan 201
+   name NPL-TBD
+!
+vlan 202
+   name DC-Mgt-A/IPMI/iLO/iDRAC
+!
+vlan 203
+   name DC-Mgt-B
+!
+vlan 204
+   name DAS-C&C
+!
+vlan 205
+   name DMF
+!
+vlan 241
+   name Gfx-(tbd)
+!
+vlan 242
+   name Edit-(tbd)
+!
+vlan 243
+   name MAM-(tbd)
+!
+vlan 244
+   name Storage
+!
+vlan 245
+   name Art-Server-10G
+!
+vlan 261
+   name AES67/ICM-A
+!
+vlan 262
+   name AES67/ICM-B
+!
+vlan 301
+   name 37CER-Dante/QLAN-A-W/L-Mics-Zoom
+!
+vlan 302
+   name 37CER-Dante/QLAN-B-W/L-Mics-Zoom
+!
+vlan 303
+   name BGM-Dante/QLAN-A
+!
+vlan 304
+   name BGM-Dante/QLAN-B
+!
+vlan 305
+   name G-Lobby-Dante/QLAN-A
+!
+vlan 306
+   name G-Lobby-Dante/QLAN-B
+!
+vlan 307
+   name 13-AV-Rack-Rm-Dante/QLAN-A
+!
+vlan 308
+   name 13-AV-Rack-Rm-Dante/QLAN-B
+!
+vlan 309
+   name 14-East-AV-Rack-Rm-Dante/QLAN-A
+!
+vlan 310
+   name 14-East-AV-Rack-Rm-Dante/QLAN-B
+!
+vlan 311
+   name 15-Balcony-Dante/QLAN-A
+!
+vlan 312
+   name 15-Balcony-Dante/QLAN-B
+!
+vlan 313
+   name 15-Lg-Flex-Dante/QLAN-A
+!
+vlan 314
+   name 15-Lg-Flex-Dante/QLAN-B
+!
+vlan 315
+   name 15-MPR-Dante/QLAN-A
+!
+vlan 316
+   name 15-MPR-Dante/QLAN-B
+!
+vlan 317
+   name 16-Lg-MPR-Dante/QLAN-A
+!
+vlan 318
+   name 16-Lg-MPR-Dante/QLAN-B
+!
+vlan 319
+   name 16-Med-Flex-1-Dante/QLAN-A
+!
+vlan 320
+   name 16-Med-Flex-1-Dante/QLAN-B
+!
+vlan 321
+   name 16-Med-Flex-2-Dante/QLAN-A
+!
+vlan 322
+   name 16-Med-Flex-2-Dante/QLAN-B
+!
+vlan 323
+   name 16-Med-MPR-Dante/QLAN-A
+!
+vlan 324
+   name 16-Med-MPR-Dante/QLAN-B
+!
+vlan 325
+   name 16-Balcony-Dante/QLAN-A
+!
+vlan 326
+   name 16-Balcony-Dante/QLAN-B
+!
+vlan 327
+   name 17-Lge-Flex-MPR-Dante/QLAN-A
+!
+vlan 328
+   name 17-Lge-Flex-MPR-Dante/QLAN-B
+!
+vlan 329
+   name 47-OC-Dante/QLAN-A
+!
+vlan 330
+   name 47-OC-Dante/QLAN-B
+!
+vlan 331
+   name 48-Reception-Dante/QLAN-A
+!
+vlan 332
+   name 48-Reception-Dante/QLAN-B
+!
+vlan 333
+   name 49-Reception-Dante/QLAN-A
+!
+vlan 334
+   name 49-Reception-Dante/QLAN-B
+!
+vlan 335
+   name 50-Boardroom-Dante/QLAN-A
+!
+vlan 336
+   name 50-Boardroom-Dante/QLAN-B
+!
+vlan 337
+   name 50-Med-MPR-Dante/QLAN-A
+!
+vlan 338
+   name 50-Med-MPR-Dante/QLAN-B
+!
+vlan 339
+   name 50-Reception-Dante/QLAN-A
+!
+vlan 340
+   name 50-Reception-Dante/QLAN-B
+!
+vlan 341
+   name 51-Lg-MPR-Dante/QLAN-A
+!
+vlan 342
+   name 51-Lg-MPR-Dante/QLAN-B
+!
+vlan 343
+   name 56-TOH-Dante/QLAN-A
+!
+vlan 344
+   name 56-TOH-Dante/QLAN-B
+!
+vlan 1000
+   name CVA_Mgmt
+!
+vlan 1001
+   name Dynamic-Parking
+!
+vlan 4093
+   name MLAG_L3
+   trunk group MLAG
+!
+vlan 4094
+   name MLAG
+   trunk group MLAG
+!
+vrf instance MGMT
+!
+management api http-commands
+   no shutdown
+   !
+   vrf MGMT
+      no shutdown
+!
+management api gnmi
+   transport grpc NRVT
+      port 5909
+      vrf MGMT
+   provider eos-native
+!
+management api models
+   provider macsec
+   !
+   provider smash
+      path bridging
+      path ptp
+      path routing
+!
+aaa authorization serial-console
+aaa authorization exec default local
+aaa authorization commands all default local
+!
+interface Port-Channel11
+   description L2_C160064-037B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 11
+!
+interface Port-Channel12
+   description L2_C160064-037B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 12
+!
+interface Port-Channel13
+   description L2_C160064-037B309A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 13
+!
+interface Port-Channel14
+   description L2_C160064-037B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 14
+!
+interface Port-Channel15
+   description L2_C160064-037B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 15
+!
+interface Port-Channel16
+   description L2_C160064-037B306A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 16
+!
+interface Port-Channel17
+   description L2_C160064-037B307A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 17
+!
+interface Port-Channel18
+   description L2_C160064-037B308A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 18
+!
+interface Port-Channel19
+   description L2_C160064-037B310A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 19
+!
+interface Port-Channel20
+   description L2_C160064-037B311A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 20
+!
+interface Port-Channel21
+   description L2_C160064-037B312A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 21
+!
+interface Port-Channel22
+   description L2_C160064-037B313A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 22
+!
+interface Port-Channel23
+   description L2_C160064-037B314A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 23
+!
+interface Port-Channel24
+   description L2_C160064-037B315A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 24
+!
+interface Port-Channel25
+   description L2_C160064-037B316A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 25
+!
+interface Port-Channel26
+   description L2_C160064-037B317A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 26
+!
+interface Port-Channel27
+   description L2_C160064-037B318A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 27
+!
+interface Port-Channel28
+   description L2_C160064-037B319A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 28
+!
+interface Port-Channel29
+   description L2_C160064-037B320A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 29
+!
+interface Port-Channel30
+   description L2_C160064-037B321A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 30
+!
+interface Port-Channel31
+   description L2_C160064-037B323A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 31
+!
+interface Port-Channel32
+   description L2_C160064-037B324A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 32
+!
+interface Port-Channel33
+   description L2_C160064-037B325A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 33
+!
+interface Port-Channel34
+   description L2_C160064-037B326A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 34
+!
+interface Port-Channel35
+   description L2_C160064-037B327A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 35
+!
+interface Port-Channel36
+   description L2_C160064-037B328A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 36
+!
+interface Port-Channel37
+   description L2_C160064-037B329A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 37
+!
+interface Port-Channel38
+   description L2_C160064-037B330A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 38
+!
+interface Port-Channel39
+   description L2_C160064-037B331A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 39
+!
+interface Port-Channel40
+   description L2_C160064-037B332A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 40
+!
+interface Port-Channel41
+   description L2_C160064-037B333A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 41
+!
+interface Port-Channel42
+   description L2_C160064-037B334A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 42
+!
+interface Port-Channel43
+   description L2_C160064-037B335A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 43
+!
+interface Port-Channel44
+   description L2_C160064-037B336A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 44
+!
+interface Port-Channel45
+   description L2_C160064-037B337A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 45
+!
+interface Port-Channel46
+   description L2_C160064-037B338A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 46
+!
+interface Port-Channel47
+   description L2_C160064-037B339A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 47
+!
+interface Port-Channel48
+   description L2_C160064-037B340A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 48
+!
+interface Port-Channel49
+   description L2_C160064-037B341A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 49
+!
+interface Port-Channel50
+   description L2_C160064-037B342A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 50
+!
+interface Port-Channel51
+   description L2_C160064-037B343A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 51
+!
+interface Port-Channel52
+   description L2_C160064-037B344A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 52
+!
+interface Port-Channel53
+   description L2_C160064-037B345A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 53
+!
+interface Port-Channel54
+   description L2_C160064-037B346A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 54
+!
+interface Port-Channel55
+   description L2_C160064-037B347A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 55
+!
+interface Port-Channel56
+   description L2_C160064-037B348A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 56
+!
+interface Port-Channel57
+   description L2_C160064-037B349A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 57
+!
+interface Port-Channel58
+   description L2_C160064-037B350A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 58
+!
+interface Port-Channel59
+   description L2_C160064-037B351A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 59
+!
+interface Port-Channel60
+   description L2_C160064-037B352A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 60
+!
+interface Port-Channel61
+   description L2_C160064-037B353A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 61
+!
+interface Port-Channel62
+   description L2_C160064-037B354A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 62
+!
+interface Port-Channel63
+   description L2_C160064-037B362A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 63
+!
+interface Port-Channel64
+   description L2_C160064-037B355A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 64
+!
+interface Port-Channel65
+   description L2_C160064-037B356A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 65
+!
+interface Port-Channel66
+   description L2_C160064-037B357A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 66
+!
+interface Port-Channel67
+   description L2_C160064-037B358A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 67
+!
+interface Port-Channel68
+   description L2_C160064-037B359A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 68
+!
+interface Port-Channel69
+   description L2_C160064-037B360A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 69
+!
+interface Port-Channel70
+   description L2_C160064-037B361A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 70
+!
+interface Port-Channel71
+   description L2_C160064-001B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 71
+!
+interface Port-Channel72
+   description L2_C160064-002B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 72
+!
+interface Port-Channel73
+   description L2_C160064-002B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 73
+!
+interface Port-Channel74
+   description L2_C160064-002B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 74
+!
+interface Port-Channel75
+   description L2_C160064-002B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 75
+!
+interface Port-Channel76
+   description L2_C160064-002B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 76
+!
+interface Port-Channel77
+   description L2_C160064-002B306A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 77
+!
+interface Port-Channel78
+   description L2_C160064-002B307A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 78
+!
+interface Port-Channel79
+   description L2_C160064-002B308A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 79
+!
+interface Port-Channel80
+   description L2_C160064-003B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 80
+!
+interface Port-Channel81
+   description L2_C160064-003B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 81
+!
+interface Port-Channel82
+   description L2_C160064-004B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 82
+!
+interface Port-Channel83
+   description L2_C160064-004B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 83
+!
+interface Port-Channel84
+   description L2_C160064-005B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 84
+!
+interface Port-Channel85
+   description L2_C160064-005B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 85
+!
+interface Port-Channel86
+   description L2_C160064-006B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 86
+!
+interface Port-Channel87
+   description L2_C160064-006B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 87
+!
+interface Port-Channel88
+   description L2_C160064-007B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 88
+!
+interface Port-Channel89
+   description L2_C160064-007B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 89
+!
+interface Port-Channel90
+   description L2_C160064-008B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 90
+!
+interface Port-Channel91
+   description L2_C160064-008B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 91
+!
+interface Port-Channel92
+   description L2_C160064-009B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 92
+!
+interface Port-Channel93
+   description L2_C160064-009B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 93
+!
+interface Port-Channel94
+   description L2_C160064-010B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 94
+!
+interface Port-Channel95
+   description L2_C160064-010B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 95
+!
+interface Port-Channel96
+   description L2_C160064-013B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 96
+!
+interface Port-Channel97
+   description L2_C160064-013B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 97
+!
+interface Port-Channel98
+   description L2_C160064-013B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 98
+!
+interface Port-Channel99
+   description L2_C160064-013B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 99
+!
+interface Port-Channel100
+   description L2_C160064-013B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 100
+!
+interface Port-Channel101
+   description L2_C160064-014B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 101
+!
+interface Port-Channel102
+   description L2_C160064-014B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 102
+!
+interface Port-Channel103
+   description L2_C160064-014B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 103
+!
+interface Port-Channel104
+   description L2_C160064-014B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 104
+!
+interface Port-Channel105
+   description L2_C160064-014B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 105
+!
+interface Port-Channel106
+   description L2_C160064-015B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 106
+!
+interface Port-Channel107
+   description L2_C160064-015B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 107
+!
+interface Port-Channel108
+   description L2_C160064-015B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 108
+!
+interface Port-Channel109
+   description L2_C160064-015B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 109
+!
+interface Port-Channel110
+   description L2_C160064-015B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 110
+!
+interface Port-Channel111
+   description L2_C160064-015B306A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 111
+!
+interface Port-Channel112
+   description L2_C160064-015B307A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 112
+!
+interface Port-Channel113
+   description L2_C160064-015B308A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 113
+!
+interface Port-Channel114
+   description L2_C160064-015B309A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 114
+!
+interface Port-Channel115
+   description L2_C160064-015B310A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 115
+!
+interface Port-Channel116
+   description L2_C160064-015B311A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 116
+!
+interface Port-Channel117
+   description L2_C160064-015B313A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 117
+!
+interface Port-Channel118
+   description L2_C160064-015B314A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 118
+!
+interface Port-Channel119
+   description L2_C160064-016B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 119
+!
+interface Port-Channel120
+   description L2_C160064-016B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 120
+!
+interface Port-Channel121
+   description L2_C160064-016B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 121
+!
+interface Port-Channel122
+   description L2_C160064-016B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 122
+!
+interface Port-Channel123
+   description L2_C160064-016B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 123
+!
+interface Port-Channel124
+   description L2_C160064-016B306A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 124
+!
+interface Port-Channel125
+   description L2_C160064-016B307A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 125
+!
+interface Port-Channel126
+   description L2_C160064-016B308A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 126
+!
+interface Port-Channel127
+   description L2_C160064-016B309A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 127
+!
+interface Port-Channel128
+   description L2_C160064-016B310A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 128
+!
+interface Port-Channel129
+   description L2_C160064-016B311A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 129
+!
+interface Port-Channel130
+   description L2_C160064-016B312A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 130
+!
+interface Port-Channel131
+   description L2_C160064-017B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 131
+!
+interface Port-Channel132
+   description L2_C160064-017B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 132
+!
+interface Port-Channel133
+   description L2_C160064-017B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 133
+!
+interface Port-Channel134
+   description L2_C160064-017B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 134
+!
+interface Port-Channel135
+   description L2_C160064-017B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 135
+!
+interface Port-Channel136
+   description L2_C160064-017B306A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 136
+!
+interface Port-Channel137
+   description L2_C160064-017B307A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 137
+!
+interface Port-Channel138
+   description L2_C160064-020B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 138
+!
+interface Port-Channel139
+   description L2_C160064-021B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 139
+!
+interface Port-Channel140
+   description L2_C160064-022B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 140
+!
+interface Port-Channel141
+   description L2_C160064-023B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 141
+!
+interface Port-Channel142
+   description L2_C160064-024B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 142
+!
+interface Port-Channel143
+   description L2_C160064-025B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 143
+!
+interface Port-Channel144
+   description L2_C160064-026B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 144
+!
+interface Port-Channel145
+   description L2_C160064-027B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 145
+!
+interface Port-Channel146
+   description L2_C160064-028B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 146
+!
+interface Port-Channel147
+   description L2_C160064-030B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 147
+!
+interface Port-Channel148
+   description L2_C160064-031B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 148
+!
+interface Port-Channel149
+   description L2_C160064-032B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 149
+!
+interface Port-Channel150
+   description L2_C160064-033B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 150
+!
+interface Port-Channel151
+   description L2_C160064-034B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 151
+!
+interface Port-Channel152
+   description L2_C160064-035B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 152
+!
+interface Port-Channel153
+   description L2_C160064-036B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 153
+!
+interface Port-Channel154
+   description L2_C160064-037B369A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 154
+!
+interface Port-Channel155
+   description L2_C160064-040B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 155
+!
+interface Port-Channel156
+   description L2_C160064-041B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 156
+!
+interface Port-Channel157
+   description L2_C160064-042B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 157
+!
+interface Port-Channel158
+   description L2_C160064-043B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 158
+!
+interface Port-Channel159
+   description L2_C160064-044B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 159
+!
+interface Port-Channel160
+   description L2_C160064-045B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 160
+!
+interface Port-Channel161
+   description L2_C160064-045B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 161
+!
+interface Port-Channel162
+   description L2_C160064-045B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 162
+!
+interface Port-Channel163
+   description L2_C160064-046B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 163
+!
+interface Port-Channel164
+   description L2_C160064-046B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 164
+!
+interface Port-Channel165
+   description L2_C160064-046B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 165
+!
+interface Port-Channel166
+   description L2_C160064-047B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 166
+!
+interface Port-Channel167
+   description L2_C160064-048B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 167
+!
+interface Port-Channel168
+   description L2_C160064-048B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 168
+!
+interface Port-Channel169
+   description L2_C160064-048B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 169
+!
+interface Port-Channel170
+   description L2_C160064-048B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 170
+!
+interface Port-Channel171
+   description L2_C160064-049B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 171
+!
+interface Port-Channel172
+   description L2_C160064-049B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 172
+!
+interface Port-Channel173
+   description L2_C160064-049B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 173
+!
+interface Port-Channel174
+   description L2_C160064-049B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 174
+!
+interface Port-Channel175
+   description L2_C160064-049B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 175
+!
+interface Port-Channel176
+   description L2_C160064-049B306A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 176
+!
+interface Port-Channel177
+   description L2_C160064-050B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 177
+!
+interface Port-Channel178
+   description L2_C160064-050B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 178
+!
+interface Port-Channel179
+   description L2_C160064-050B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 179
+!
+interface Port-Channel180
+   description L2_C160064-050B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 180
+!
+interface Port-Channel181
+   description L2_C160064-050B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 181
+!
+interface Port-Channel182
+   description L2_C160064-050B306A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 182
+!
+interface Port-Channel183
+   description L2_C160064-050B307A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 183
+!
+interface Port-Channel184
+   description L2_C160064-051B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 184
+!
+interface Port-Channel185
+   description L2_C160064-051B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 185
+!
+interface Port-Channel186
+   description L2_C160064-051B304A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 186
+!
+interface Port-Channel187
+   description L2_C160064-051B305A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 187
+!
+interface Port-Channel188
+   description L2_C160064-051B306A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 188
+!
+interface Port-Channel189
+   description L2_C160064-051B307A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 189
+!
+interface Port-Channel190
+   description L2_C160064-056B301A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 190
+!
+interface Port-Channel191
+   description L2_C160064-056B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 191
+!
+interface Port-Channel192
+   description L2_C160064-037B372A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 192
+!
+interface Port-Channel193
+   description L2_C160064-001B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 193
+!
+interface Port-Channel194
+   description L2_C160064-014B306A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 194
+!
+interface Port-Channel195
+   description L2_C160064-047B302A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 195
+!
+interface Port-Channel196
+   description L2_C160064-047B303A_Port-Channel10
+   switchport trunk allowed vlan 100-108,121,131-132,141-144,161-164,181,200-205,241-245,261-262,301-344,1001
+   switchport mode trunk
+   mlag 196
+!
+interface Port-Channel1000
+   description MLAG_C160064-037B300A_Port-Channel1000
+   switchport mode trunk
+   switchport trunk group MLAG
+!
+interface Ethernet3/1/1
+   description L2_C160064-037B302A_Ethernet54/1
+   channel-group 11 mode active
+!
+interface Ethernet3/2/1
+   description L2_C160064-037B310A_Ethernet54/1
+   channel-group 19 mode active
+!
+interface Ethernet3/3/1
+   description L2_C160064-037B318A_Ethernet54/1
+   channel-group 27 mode active
+!
+interface Ethernet3/4/1
+   description L2_C160064-037B335A_Ethernet54/1
+   channel-group 43 mode active
+!
+interface Ethernet3/5/1
+   description L2_C160064-037B343A_Ethernet54/1
+   channel-group 51 mode active
+!
+interface Ethernet3/6/1
+   description L2_C160064-037B329A_Ethernet54/1
+   channel-group 37 mode active
+!
+interface Ethernet3/7/1
+   description L2_C160064-037B352A_Ethernet54/1
+   channel-group 60 mode active
+!
+interface Ethernet3/8/1
+   description L2_C160064-037B359A_Ethernet54/1
+   channel-group 68 mode active
+!
+interface Ethernet3/9/1
+   description L2_C160064-051B304A_Ethernet54/1
+   channel-group 186 mode active
+!
+interface Ethernet3/10/1
+   description L2_C160064-050B302A_Ethernet54/1
+   channel-group 178 mode active
+!
+interface Ethernet3/11/1
+   description L2_C160064-048B303A_Ethernet54/1
+   channel-group 169 mode active
+!
+interface Ethernet3/12/1
+   description L2_C160064-046B302A_Ethernet54/1
+   channel-group 164 mode active
+!
+interface Ethernet3/13/1
+   description L2_C160064-042B301A_Ethernet54/1
+   channel-group 157 mode active
+!
+interface Ethernet3/14/1
+   description L2_C160064-032B301A_Ethernet54/1
+   channel-group 149 mode active
+!
+interface Ethernet3/15/1
+   description L2_C160064-023B301A_Ethernet54/1
+   channel-group 141 mode active
+!
+interface Ethernet3/16/1
+   description L2_C160064-017B305A_Ethernet54/1
+   channel-group 135 mode active
+!
+interface Ethernet3/17/1
+   description L2_C160064-016B303A_Ethernet54/1
+   channel-group 121 mode active
+!
+interface Ethernet3/18/1
+   description L2_C160064-015B314A_Ethernet54/1
+   channel-group 118 mode active
+!
+interface Ethernet3/19/1
+   description L2_C160064-015B310A_Ethernet54/1
+   channel-group 115 mode active
+!
+interface Ethernet3/20/1
+   description L2_C160064-014B301A_Ethernet54/1
+   channel-group 101 mode active
+!
+interface Ethernet3/21/1
+   description L2_C160064-009B301A_Ethernet54/1
+   channel-group 92 mode active
+!
+interface Ethernet3/22/1
+   description L2_C160064-005B301A_Ethernet54/1
+   channel-group 84 mode active
+!
+interface Ethernet3/23/1
+   description L2_C160064-002B307A_Ethernet54/1
+   channel-group 78 mode active
+!
+interface Ethernet3/24/1
+   description L2_C160064-001B302A_Ethernet54/1
+   channel-group 193 mode active
+!
+interface Ethernet3/25/1
+!
+interface Ethernet3/26/1
+!
+interface Ethernet3/27/1
+!
+interface Ethernet3/28/1
+!
+interface Ethernet3/29/1
+!
+interface Ethernet3/30/1
+!
+interface Ethernet3/31/1
+   description P2P_C160064-037B370A_PDSW1_Ethernet52/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.64/31
+!
+interface Ethernet3/32/1
+   description MLAG_C160064-037B300A_Ethernet3/32/1
+   channel-group 1000 mode active
+!
+interface Ethernet4/1/1
+   description L2_C160064-037B303A_Ethernet54/1
+   channel-group 12 mode active
+!
+interface Ethernet4/2/1
+   description L2_C160064-037B311A_Ethernet54/1
+   channel-group 20 mode active
+!
+interface Ethernet4/3/1
+   description L2_C160064-037B319A_Ethernet54/1
+   channel-group 28 mode active
+!
+interface Ethernet4/4/1
+   description L2_C160064-037B336A_Ethernet54/1
+   channel-group 44 mode active
+!
+interface Ethernet4/5/1
+   description L2_C160064-037B344A_Ethernet54/1
+   channel-group 52 mode active
+!
+interface Ethernet4/6/1
+   description L2_C160064-037B330A_Ethernet54/1
+   channel-group 38 mode active
+!
+interface Ethernet4/7/1
+   description L2_C160064-037B353A_Ethernet54/1
+   channel-group 61 mode active
+!
+interface Ethernet4/8/1
+   description L2_C160064-037B360A_Ethernet54/1
+   channel-group 69 mode active
+!
+interface Ethernet4/9/1
+   description L2_C160064-051B301A_Ethernet54/1
+   channel-group 184 mode active
+!
+interface Ethernet4/10/1
+   description L2_C160064-050B303A_Ethernet54/1
+   channel-group 179 mode active
+!
+interface Ethernet4/11/1
+   description L2_C160064-048B304A_Ethernet54/1
+   channel-group 170 mode active
+!
+interface Ethernet4/12/1
+   description L2_C160064-046B303A_Ethernet54/1
+   channel-group 165 mode active
+!
+interface Ethernet4/13/1
+   description L2_C160064-041B301A_Ethernet54/1
+   channel-group 156 mode active
+!
+interface Ethernet4/14/1
+   description L2_C160064-031B301A_Ethernet54/1
+   channel-group 148 mode active
+!
+interface Ethernet4/15/1
+   description L2_C160064-022B301A_Ethernet54/1
+   channel-group 140 mode active
+!
+interface Ethernet4/16/1
+   description L2_C160064-017B306A_Ethernet54/1
+   channel-group 136 mode active
+!
+interface Ethernet4/17/1
+   description L2_C160064-016B304A_Ethernet54/1
+   channel-group 122 mode active
+!
+interface Ethernet4/18/1
+   description L2_C160064-015B303A_Ethernet54/1
+   channel-group 108 mode active
+!
+interface Ethernet4/19/1
+   description L2_C160064-015B311A_Ethernet54/1
+   channel-group 116 mode active
+!
+interface Ethernet4/20/1
+   description L2_C160064-013B303A_Ethernet54/1
+   channel-group 98 mode active
+!
+interface Ethernet4/21/1
+   description L2_C160064-009B302A_Ethernet54/1
+   channel-group 93 mode active
+!
+interface Ethernet4/22/1
+   description L2_C160064-005B302A_Ethernet54/1
+   channel-group 85 mode active
+!
+interface Ethernet4/23/1
+   description L2_C160064-002B308A_Ethernet54/1
+   channel-group 79 mode active
+!
+interface Ethernet4/24/1
+   description L2_C160064-014B306A_Ethernet54/1
+   channel-group 194 mode active
+!
+interface Ethernet4/25/1
+!
+interface Ethernet4/26/1
+!
+interface Ethernet4/27/1
+!
+interface Ethernet4/28/1
+!
+interface Ethernet4/29/1
+!
+interface Ethernet4/30/1
+!
+interface Ethernet4/31/1
+   description P2P_C160064-037B371A_PDSW2_Ethernet52/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.66/31
+!
+interface Ethernet4/32/1
+   description MLAG_C160064-037B300A_Ethernet4/32/1
+   channel-group 1000 mode active
+!
+interface Ethernet5/1/1
+   description L2_C160064-037B309A_Ethernet54/1
+   channel-group 13 mode active
+!
+interface Ethernet5/2/1
+   description L2_C160064-037B372A_Ethernet54/1
+   channel-group 192 mode active
+!
+interface Ethernet5/3/1
+   description L2_C160064-037B320A_Ethernet54/1
+   channel-group 29 mode active
+!
+interface Ethernet5/4/1
+   description L2_C160064-037B337A_Ethernet54/1
+   channel-group 45 mode active
+!
+interface Ethernet5/5/1
+   description L2_C160064-037B345A_Ethernet54/1
+   channel-group 53 mode active
+!
+interface Ethernet5/6/1
+   description L2_C160064-037B331A_Ethernet54/1
+   channel-group 39 mode active
+!
+interface Ethernet5/7/1
+   description L2_C160064-037B354A_Ethernet54/1
+   channel-group 62 mode active
+!
+interface Ethernet5/8/1
+   description L2_C160064-037B361A_Ethernet54/1
+   channel-group 70 mode active
+!
+interface Ethernet5/9/1
+   description L2_C160064-051B302A_Ethernet54/1
+   channel-group 185 mode active
+!
+interface Ethernet5/10/1
+   description L2_C160064-049B305A_Ethernet54/1
+   channel-group 175 mode active
+!
+interface Ethernet5/11/1
+   description L2_C160064-048B301A_Ethernet54/1
+   channel-group 167 mode active
+!
+interface Ethernet5/12/1
+!
+interface Ethernet5/13/1
+   description L2_C160064-040B301A_Ethernet54/1
+   channel-group 155 mode active
+!
+interface Ethernet5/14/1
+   description L2_C160064-030B301A_Ethernet54/1
+   channel-group 147 mode active
+!
+interface Ethernet5/15/1
+   description L2_C160064-021B301A_Ethernet54/1
+   channel-group 139 mode active
+!
+interface Ethernet5/16/1
+   description L2_C160064-017B307A_Ethernet54/1
+   channel-group 137 mode active
+!
+interface Ethernet5/17/1
+   description L2_C160064-016B305A_Ethernet54/1
+   channel-group 123 mode active
+!
+interface Ethernet5/18/1
+   description L2_C160064-015B304A_Ethernet54/1
+   channel-group 109 mode active
+!
+interface Ethernet5/19/1
+   description L2_C160064-015B301A_Ethernet54/1
+   channel-group 106 mode active
+!
+interface Ethernet5/20/1
+   description L2_C160064-013B304A_Ethernet54/1
+   channel-group 99 mode active
+!
+interface Ethernet5/21/1
+   description L2_C160064-008B301A_Ethernet54/1
+   channel-group 90 mode active
+!
+interface Ethernet5/22/1
+   description L2_C160064-004B301A_Ethernet54/1
+   channel-group 82 mode active
+!
+interface Ethernet5/23/1
+   description L2_C160064-002B304A_Ethernet54/1
+   channel-group 75 mode active
+!
+interface Ethernet5/24/1
+   description P2P_C160064-037B380A_AVBLSW1_Ethernet5/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.44/31
+!
+interface Ethernet5/25/1
+   description P2P_C160064-037B380A_AVBLSW2_Ethernet5/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.52/31
+!
+interface Ethernet5/26/1
+!
+interface Ethernet5/27/1
+!
+interface Ethernet5/28/1
+!
+interface Ethernet5/29/1
+!
+interface Ethernet5/30/1
+!
+interface Ethernet5/31/1
+!
+interface Ethernet5/32/1
+   description MLAG_C160064-037B300A_Ethernet5/32/1
+   channel-group 1000 mode active
+!
+interface Ethernet6/1/1
+   description L2_C160064-037B304A_Ethernet54/1
+   channel-group 14 mode active
+!
+interface Ethernet6/2/1
+   description L2_C160064-037B312A_Ethernet54/1
+   channel-group 21 mode active
+!
+interface Ethernet6/3/1
+   description L2_C160064-037B321A_Ethernet54/1
+   channel-group 30 mode active
+!
+interface Ethernet6/4/1
+   description L2_C160064-037B338A_Ethernet54/1
+   channel-group 46 mode active
+!
+interface Ethernet6/5/1
+   description L2_C160064-037B346A_Ethernet54/1
+   channel-group 54 mode active
+!
+interface Ethernet6/6/1
+   description L2_C160064-037B332A_Ethernet54/1
+   channel-group 40 mode active
+!
+interface Ethernet6/7/1
+   description L2_C160064-037B362A_Ethernet54/1
+   channel-group 63 mode active
+!
+interface Ethernet6/8/1
+   description L2_C160064-056B301A_Ethernet54/1
+   channel-group 190 mode active
+!
+interface Ethernet6/9/1
+   description L2_C160064-050B304A_Ethernet54/1
+   channel-group 180 mode active
+!
+interface Ethernet6/10/1
+   description L2_C160064-049B306A_Ethernet54/1
+   channel-group 176 mode active
+!
+interface Ethernet6/11/1
+   description L2_C160064-048B302A_Ethernet54/1
+   channel-group 168 mode active
+!
+interface Ethernet6/12/1
+   description L2_C160064-045B301A_Ethernet54/1
+   channel-group 160 mode active
+!
+interface Ethernet6/13/1
+   description L2_C160064-037B369A_Ethernet54/1
+   channel-group 154 mode active
+!
+interface Ethernet6/14/1
+   description L2_C160064-028B301A_Ethernet54/1
+   channel-group 146 mode active
+!
+interface Ethernet6/15/1
+   description L2_C160064-020B301A_Ethernet54/1
+   channel-group 138 mode active
+!
+interface Ethernet6/16/1
+   description L2_C160064-016B308A_Ethernet54/1
+   channel-group 126 mode active
+!
+interface Ethernet6/17/1
+   description L2_C160064-016B306A_Ethernet54/1
+   channel-group 124 mode active
+!
+interface Ethernet6/18/1
+   description L2_C160064-015B305A_Ethernet54/1
+   channel-group 110 mode active
+!
+interface Ethernet6/19/1
+   description L2_C160064-015B302A_Ethernet54/1
+   channel-group 107 mode active
+!
+interface Ethernet6/20/1
+   description L2_C160064-013B305A_Ethernet54/1
+   channel-group 100 mode active
+!
+interface Ethernet6/21/1
+   description L2_C160064-008B302A_Ethernet54/1
+   channel-group 91 mode active
+!
+interface Ethernet6/22/1
+   description L2_C160064-004B302A_Ethernet54/1
+   channel-group 83 mode active
+!
+interface Ethernet6/23/1
+   description L2_C160064-002B303A_Ethernet54/1
+   channel-group 74 mode active
+!
+interface Ethernet6/24/1
+   description P2P_C160064-037B380A_AVBLSW1_Ethernet6/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.46/31
+!
+interface Ethernet6/25/1
+   description P2P_C160064-037B380A_AVBLSW2_Ethernet6/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.54/31
+!
+interface Ethernet6/26/1
+!
+interface Ethernet6/27/1
+!
+interface Ethernet6/28/1
+!
+interface Ethernet6/29/1
+!
+interface Ethernet6/30/1
+!
+interface Ethernet6/31/1
+!
+interface Ethernet6/32/1
+   description MLAG_C160064-037B300A_Ethernet6/32/1
+   channel-group 1000 mode active
+!
+interface Ethernet7/1/1
+   description L2_C160064-037B305A_Ethernet54/1
+   channel-group 15 mode active
+!
+interface Ethernet7/2/1
+   description L2_C160064-037B313A_Ethernet54/1
+   channel-group 22 mode active
+!
+interface Ethernet7/3/1
+   description L2_C160064-037B323A_Ethernet54/1
+   channel-group 31 mode active
+!
+interface Ethernet7/4/1
+   description L2_C160064-037B339A_Ethernet54/1
+   channel-group 47 mode active
+!
+interface Ethernet7/5/1
+   description L2_C160064-037B347A_Ethernet54/1
+   channel-group 55 mode active
+!
+interface Ethernet7/6/1
+   description L2_C160064-037B333A_Ethernet54/1
+   channel-group 41 mode active
+!
+interface Ethernet7/7/1
+   description L2_C160064-037B355A_Ethernet54/1
+   channel-group 64 mode active
+!
+interface Ethernet7/8/1
+   description L2_C160064-056B302A_Ethernet54/1
+   channel-group 191 mode active
+!
+interface Ethernet7/9/1
+   description L2_C160064-050B305A_Ethernet54/1
+   channel-group 181 mode active
+!
+interface Ethernet7/10/1
+   description L2_C160064-049B303A_Ethernet54/1
+   channel-group 173 mode active
+!
+interface Ethernet7/11/1
+   description L2_C160064-047B302A_Ethernet54/1
+   channel-group 195 mode active
+!
+interface Ethernet7/12/1
+   description L2_C160064-045B302A_Ethernet54/1
+   channel-group 161 mode active
+!
+interface Ethernet7/13/1
+   description L2_C160064-036B301A_Ethernet54/1
+   channel-group 153 mode active
+!
+interface Ethernet7/14/1
+   description L2_C160064-027B301A_Ethernet54/1
+   channel-group 145 mode active
+!
+interface Ethernet7/15/1
+   description L2_C160064-017B301A_Ethernet54/1
+   channel-group 131 mode active
+!
+interface Ethernet7/16/1
+   description L2_C160064-016B309A_Ethernet54/1
+   channel-group 127 mode active
+!
+interface Ethernet7/17/1
+   description L2_C160064-016B307A_Ethernet54/1
+   channel-group 125 mode active
+!
+interface Ethernet7/18/1
+   description L2_C160064-015B306A_Ethernet54/1
+   channel-group 111 mode active
+!
+interface Ethernet7/19/1
+   description L2_C160064-014B304A_Ethernet54/1
+   channel-group 104 mode active
+!
+interface Ethernet7/20/1
+   description L2_C160064-013B301A_Ethernet54/1
+   channel-group 96 mode active
+!
+interface Ethernet7/21/1
+   description L2_C160064-007B301A_Ethernet54/1
+   channel-group 88 mode active
+!
+interface Ethernet7/22/1
+   description L2_C160064-003B301A_Ethernet54/1
+   channel-group 80 mode active
+!
+interface Ethernet7/23/1
+   description L2_C160064-002B302A_Ethernet54/1
+   channel-group 73 mode active
+!
+interface Ethernet7/24/1
+   description P2P_C160064-037B380A_AVBLSW1_Ethernet7/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.48/31
+!
+interface Ethernet7/25/1
+   description P2P_C160064-037B380A_AVBLSW2_Ethernet7/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.56/31
+!
+interface Ethernet7/26/1
+!
+interface Ethernet7/27/1
+!
+interface Ethernet7/28/1
+!
+interface Ethernet7/29/1
+!
+interface Ethernet7/30/1
+!
+interface Ethernet7/31/1
+!
+interface Ethernet7/32/1
+   description MLAG_C160064-037B300A_Ethernet7/32/1
+   channel-group 1000 mode active
+!
+interface Ethernet8/1/1
+   description L2_C160064-037B306A_Ethernet54/1
+   channel-group 16 mode active
+!
+interface Ethernet8/2/1
+   description L2_C160064-037B314A_Ethernet54/1
+   channel-group 23 mode active
+!
+interface Ethernet8/3/1
+   description L2_C160064-037B324A_Ethernet54/1
+   channel-group 32 mode active
+!
+interface Ethernet8/4/1
+   description L2_C160064-037B340A_Ethernet54/1
+   channel-group 48 mode active
+!
+interface Ethernet8/5/1
+   description L2_C160064-037B326A_Ethernet54/1
+   channel-group 34 mode active
+!
+interface Ethernet8/6/1
+   description L2_C160064-037B349A_Ethernet54/1
+   channel-group 57 mode active
+!
+interface Ethernet8/7/1
+   description L2_C160064-037B356A_Ethernet54/1
+   channel-group 65 mode active
+!
+interface Ethernet8/8/1
+   description L2_C160064-051B305A_Ethernet54/1
+   channel-group 187 mode active
+!
+interface Ethernet8/9/1
+   description L2_C160064-050B306A_Ethernet54/1
+   channel-group 182 mode active
+!
+interface Ethernet8/10/1
+   description L2_C160064-049B304A_Ethernet54/1
+   channel-group 174 mode active
+!
+interface Ethernet8/11/1
+   description L2_C160064-047B303A_Ethernet54/1
+   channel-group 196 mode active
+!
+interface Ethernet8/12/1
+   description L2_C160064-045B303A_Ethernet54/1
+   channel-group 162 mode active
+!
+interface Ethernet8/13/1
+   description L2_C160064-035B301A_Ethernet54/1
+   channel-group 152 mode active
+!
+interface Ethernet8/14/1
+   description L2_C160064-026B301A_Ethernet54/1
+   channel-group 144 mode active
+!
+interface Ethernet8/15/1
+   description L2_C160064-017B302A_Ethernet54/1
+   channel-group 132 mode active
+!
+interface Ethernet8/16/1
+   description L2_C160064-016B310A_Ethernet54/1
+   channel-group 128 mode active
+!
+interface Ethernet8/17/1
+   description L2_C160064-016B301A_Ethernet54/1
+   channel-group 119 mode active
+!
+interface Ethernet8/18/1
+   description L2_C160064-015B307A_Ethernet54/1
+   channel-group 112 mode active
+!
+interface Ethernet8/19/1
+   description L2_C160064-014B305A_Ethernet54/1
+   channel-group 105 mode active
+!
+interface Ethernet8/20/1
+   description L2_C160064-013B302A_Ethernet54/1
+   channel-group 97 mode active
+!
+interface Ethernet8/21/1
+   description L2_C160064-007B302A_Ethernet54/1
+   channel-group 89 mode active
+!
+interface Ethernet8/22/1
+   description L2_C160064-003B302A_Ethernet54/1
+   channel-group 81 mode active
+!
+interface Ethernet8/23/1
+   description L2_C160064-002B301A_Ethernet54/1
+   channel-group 72 mode active
+!
+interface Ethernet8/24/1
+   description P2P_C160064-037B380A_AVBLSW1_Ethernet8/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.50/31
+!
+interface Ethernet8/25/1
+   description P2P_C160064-037B380A_AVBLSW2_Ethernet8/1
+   mtu 9214
+   no switchport
+   ip address 100.83.94.58/31
+!
+interface Ethernet8/26/1
+   description L2_C160064-037B348A_Ethernet54/1
+   channel-group 56 mode active
+!
+interface Ethernet8/27/1
+!
+interface Ethernet8/28/1
+!
+interface Ethernet8/29/1
+!
+interface Ethernet8/30/1
+!
+interface Ethernet8/31/1
+!
+interface Ethernet8/32/1
+   description MLAG_C160064-037B300A_Ethernet8/32/1
+   channel-group 1000 mode active
+!
+interface Ethernet9/1/1
+   description L2_C160064-037B307A_Ethernet54/1
+   channel-group 17 mode active
+!
+interface Ethernet9/2/1
+   description L2_C160064-037B315A_Ethernet54/1
+   channel-group 24 mode active
+!
+interface Ethernet9/3/1
+   description L2_C160064-037B325A_Ethernet54/1
+   channel-group 33 mode active
+!
+interface Ethernet9/4/1
+   description L2_C160064-037B341A_Ethernet54/1
+   channel-group 49 mode active
+!
+interface Ethernet9/5/1
+   description L2_C160064-037B327A_Ethernet54/1
+   channel-group 35 mode active
+!
+interface Ethernet9/6/1
+   description L2_C160064-037B350A_Ethernet54/1
+   channel-group 58 mode active
+!
+interface Ethernet9/7/1
+   description L2_C160064-037B357A_Ethernet54/1
+   channel-group 66 mode active
+!
+interface Ethernet9/8/1
+   description L2_C160064-051B306A_Ethernet54/1
+   channel-group 188 mode active
+!
+interface Ethernet9/9/1
+   description L2_C160064-050B307A_Ethernet54/1
+   channel-group 183 mode active
+!
+interface Ethernet9/10/1
+   description L2_C160064-049B301A_Ethernet54/1
+   channel-group 171 mode active
+!
+interface Ethernet9/11/1
+   description L2_C160064-047B301A_Ethernet54/1
+   channel-group 166 mode active
+!
+interface Ethernet9/12/1
+   description L2_C160064-044B301A_Ethernet54/1
+   channel-group 159 mode active
+!
+interface Ethernet9/13/1
+   description L2_C160064-034B301A_Ethernet54/1
+   channel-group 151 mode active
+!
+interface Ethernet9/14/1
+   description L2_C160064-025B301A_Ethernet54/1
+   channel-group 143 mode active
+!
+interface Ethernet9/15/1
+   description L2_C160064-017B303A_Ethernet54/1
+   channel-group 133 mode active
+!
+interface Ethernet9/16/1
+   description L2_C160064-016B311A_Ethernet54/1
+   channel-group 129 mode active
+!
+interface Ethernet9/17/1
+   description L2_C160064-016B302A_Ethernet54/1
+   channel-group 120 mode active
+!
+interface Ethernet9/18/1
+   description L2_C160064-015B308A_Ethernet54/1
+   channel-group 113 mode active
+!
+interface Ethernet9/19/1
+   description L2_C160064-014B302A_Ethernet54/1
+   channel-group 102 mode active
+!
+interface Ethernet9/20/1
+   description L2_C160064-010B301A_Ethernet54/1
+   channel-group 94 mode active
+!
+interface Ethernet9/21/1
+   description L2_C160064-006B301A_Ethernet54/1
+   channel-group 86 mode active
+!
+interface Ethernet9/22/1
+   description L2_C160064-002B305A_Ethernet54/1
+   channel-group 76 mode active
+!
+interface Ethernet9/23/1
+   description L2_C160064-001B301A_Ethernet54/1
+   channel-group 71 mode active
+!
+interface Ethernet9/24/1
+!
+interface Ethernet9/25/1
+!
+interface Ethernet9/26/1
+!
+interface Ethernet9/27/1
+!
+interface Ethernet9/28/1
+!
+interface Ethernet9/29/1
+!
+interface Ethernet9/30/1
+!
+interface Ethernet9/31/1
+!
+interface Ethernet9/32/1
+   description MLAG_C160064-037B300A_Ethernet9/32/1
+   channel-group 1000 mode active
+!
+interface Ethernet10/1/1
+   description L2_C160064-037B308A_Ethernet54/1
+   channel-group 18 mode active
+!
+interface Ethernet10/2/1
+   description L2_C160064-037B316A_Ethernet54/1
+   channel-group 25 mode active
+!
+interface Ethernet10/3/1
+   description L2_C160064-037B334A_Ethernet54/1
+   channel-group 42 mode active
+!
+interface Ethernet10/4/1
+   description L2_C160064-037B342A_Ethernet54/1
+   channel-group 50 mode active
+!
+interface Ethernet10/5/1
+   description L2_C160064-037B328A_Ethernet54/1
+   channel-group 36 mode active
+!
+interface Ethernet10/6/1
+   description L2_C160064-037B351A_Ethernet54/1
+   channel-group 59 mode active
+!
+interface Ethernet10/7/1
+   description L2_C160064-037B358A_Ethernet54/1
+   channel-group 67 mode active
+!
+interface Ethernet10/8/1
+   description L2_C160064-051B307A_Ethernet54/1
+   channel-group 189 mode active
+!
+interface Ethernet10/9/1
+   description L2_C160064-050B301A_Ethernet54/1
+   channel-group 177 mode active
+!
+interface Ethernet10/10/1
+   description L2_C160064-049B302A_Ethernet54/1
+   channel-group 172 mode active
+!
+interface Ethernet10/11/1
+   description L2_C160064-046B301A_Ethernet54/1
+   channel-group 163 mode active
+!
+interface Ethernet10/12/1
+   description L2_C160064-043B301A_Ethernet54/1
+   channel-group 158 mode active
+!
+interface Ethernet10/13/1
+   description L2_C160064-033B301A_Ethernet54/1
+   channel-group 150 mode active
+!
+interface Ethernet10/14/1
+   description L2_C160064-024B301A_Ethernet54/1
+   channel-group 142 mode active
+!
+interface Ethernet10/15/1
+   description L2_C160064-017B304A_Ethernet54/1
+   channel-group 134 mode active
+!
+interface Ethernet10/16/1
+   description L2_C160064-016B312A_Ethernet54/1
+   channel-group 130 mode active
+!
+interface Ethernet10/17/1
+   description L2_C160064-015B313A_Ethernet54/1
+   channel-group 117 mode active
+!
+interface Ethernet10/18/1
+   description L2_C160064-015B309A_Ethernet54/1
+   channel-group 114 mode active
+!
+interface Ethernet10/19/1
+   description L2_C160064-014B303A_Ethernet54/1
+   channel-group 103 mode active
+!
+interface Ethernet10/20/1
+   description L2_C160064-010B302A_Ethernet54/1
+   channel-group 95 mode active
+!
+interface Ethernet10/21/1
+   description L2_C160064-006B302A_Ethernet54/1
+   channel-group 87 mode active
+!
+interface Ethernet10/22/1
+   description L2_C160064-002B306A_Ethernet54/1
+   channel-group 77 mode active
+!
+interface Ethernet10/23/1
+   description L2_C160064-037B317A_Ethernet54/1
+   channel-group 26 mode active
+!
+interface Ethernet10/24/1
+!
+interface Ethernet10/25/1
+!
+interface Ethernet10/26/1
+!
+interface Ethernet10/27/1
+!
+interface Ethernet10/28/1
+!
+interface Ethernet10/29/1
+!
+interface Ethernet10/30/1
+!
+interface Ethernet10/31/1
+!
+interface Ethernet10/32/1
+   description MLAG_C160064-037B300A_Ethernet10/32/1
+   channel-group 1000 mode active
+!
+interface Loopback0
+   description ROUTER_ID
+   ip address 169.27.195.2/32
+!
+interface Management0
+   description OOB_MANAGEMENT
+   vrf MGMT
+   ip address 10.176.143.165/27
+!
+interface Management1/1
+!
+interface Management1/2
+!
+interface Management2/1
+!
+interface Management2/2
+!
+interface Vlan100
+   description General-AV-Device-Control
+   ip address 10.169.48.3/21
+   ip virtual-router address 10.169.48.1
+!
+interface Vlan101
+   description Cerebrum-Out-of-Band
+   ip address 10.169.46.3/23
+   ip virtual-router address 10.169.46.1
+!
+interface Vlan102
+   description NMOS-Devices
+   ip address 10.169.68.3/22
+   ip virtual-router address 10.169.68.1
+!
+interface Vlan103
+   description Cerebrum-Panels
+   ip address 10.169.80.3/24
+   ip virtual-router address 10.169.80.1
+!
+interface Vlan104
+   description Ross-A
+   ip address 10.169.112.3/24
+   ip virtual-router address 10.169.112.1
+!
+interface Vlan105
+   description Ross-B
+   ip address 10.169.113.3/24
+   ip virtual-router address 10.169.113.1
+!
+interface Vlan106
+   description Misc-37-&-AVTR
+   ip address 10.169.92.3/22
+   ip virtual-router address 10.169.92.1
+!
+interface Vlan107
+   description PTZ/Cam-Ctl/Video
+   ip address 10.130.44.3/24
+   ip virtual-router address 10.130.44.1
+!
+interface Vlan108
+   description Shure-Wireless-Control
+   ip address 10.169.56.3/24
+   ip virtual-router address 10.169.56.1
+!
+interface Vlan121
+   description NDI
+   ip address 10.192.150.3/24
+   ip virtual-router address 10.192.150.1
+!
+interface Vlan131
+   description IPMX-A
+   ip address 10.41.22.3/24
+   ip virtual-router address 10.41.22.1
+!
+interface Vlan132
+   description IPMX-B
+   ip address 10.41.23.3/24
+   ip virtual-router address 10.41.23.1
+!
+interface Vlan141
+   description Barco-3
+   ip address 10.41.76.3/24
+   ip virtual-router address 10.41.76.1
+!
+interface Vlan142
+   description Barco-5
+   ip address 10.41.77.3/24
+   ip virtual-router address 10.41.77.1
+!
+interface Vlan143
+   description Barco-7
+   ip address 10.41.112.3/24
+   ip virtual-router address 10.41.112.1
+!
+interface Vlan144
+   description Barco-9
+   ip address 10.41.113.3/24
+   ip virtual-router address 10.41.113.1
+!
+interface Vlan161
+   description KVM
+   ip address 10.93.232.3/22
+   ip virtual-router address 10.93.232.1
+!
+interface Vlan162
+   description MegaPixel
+   ip address 10.192.151.3/24
+   ip virtual-router address 10.192.151.1
+!
+interface Vlan163
+   description 7th-Sense
+   ip address 10.192.174.3/24
+   ip virtual-router address 10.192.174.1
+!
+interface Vlan164
+   description Lighting
+   ip address 10.93.243.3/24
+   ip virtual-router address 10.93.243.1
+!
+interface Vlan181
+   description Canvas-Control
+   ip address 10.192.175.3/24
+   ip virtual-router address 10.192.175.1
+!
+interface Vlan200
+   description Inband Management
+   mtu 1500
+   ip address 10.93.240.3/24
+   ip attached-host route export 19
+   ip virtual-router address 10.93.240.1
+!
+interface Vlan201
+   description NPL-TBD
+   ip address 10.146.188.3/23
+   ip virtual-router address 10.146.188.1
+!
+interface Vlan202
+   description DC-Mgt-A/IPMI/iLO/iDRAC
+   ip address 10.169.66.3/23
+   ip virtual-router address 10.169.66.1
+!
+interface Vlan203
+   description DC-Mgt-B
+   ip address 10.192.99.3/24
+   ip virtual-router address 10.192.99.1
+!
+interface Vlan204
+   description DAS-C&C
+   ip address 10.169.57.3/24
+   ip virtual-router address 10.169.57.1
+!
+interface Vlan205
+   description DMF
+   ip address 10.93.242.3/24
+   ip virtual-router address 10.93.242.1
+!
+interface Vlan241
+   description Gfx-(tbd)
+   ip address 10.169.81.3/24
+   ip virtual-router address 10.169.81.1
+!
+interface Vlan242
+   description Edit-(tbd)
+   ip address 10.169.90.3/24
+   ip virtual-router address 10.169.90.1
+!
+interface Vlan243
+   description MAM-(tbd)
+   ip address 10.169.91.3/24
+   ip virtual-router address 10.169.91.1
+!
+interface Vlan244
+   description Storage
+   ip address 10.192.98.3/24
+   ip virtual-router address 10.192.98.1
+!
+interface Vlan245
+   description Art-Server-10G
+   ip address 10.41.116.3/25
+   ip virtual-router address 10.41.116.1
+!
+interface Vlan261
+   description AES67/ICM-A
+   ip address 10.130.40.3/24
+   ip virtual-router address 10.130.40.1
+!
+interface Vlan262
+   description AES67/ICM-B
+   ip address 10.130.41.3/24
+   ip virtual-router address 10.130.41.1
+!
+interface Vlan301
+   description 37CER-Dante/QLAN-A-W/L-Mics-Zoom
+   ip address 10.41.56.3/24
+   ip virtual-router address 10.41.56.1
+!
+interface Vlan302
+   description 37CER-Dante/QLAN-B-W/L-Mics-Zoom
+   ip address 10.41.57.3/24
+   ip virtual-router address 10.41.57.1
+!
+interface Vlan303
+   description BGM-Dante/QLAN-A
+   ip address 10.41.224.3/23
+   ip virtual-router address 10.41.224.1
+!
+interface Vlan304
+   description BGM-Dante/QLAN-B
+   ip address 10.41.230.3/23
+   ip virtual-router address 10.41.230.1
+!
+interface Vlan305
+   description G-Lobby-Dante/QLAN-A
+   ip address 10.41.52.3/24
+   ip virtual-router address 10.41.52.1
+!
+interface Vlan306
+   description G-Lobby-Dante/QLAN-B
+   ip address 10.41.53.3/24
+   ip virtual-router address 10.41.53.1
+!
+interface Vlan307
+   description 13-AV-Rack-Rm-Dante/QLAN-A
+   ip address 10.41.120.3/26
+   ip virtual-router address 10.41.120.1
+!
+interface Vlan308
+   description 13-AV-Rack-Rm-Dante/QLAN-B
+   ip address 10.41.120.67/26
+   ip virtual-router address 10.41.120.65
+!
+interface Vlan309
+   description 14-East-AV-Rack-Rm-Dante/QLAN-A
+   ip address 10.41.120.131/26
+   ip virtual-router address 10.41.120.129
+!
+interface Vlan310
+   description 14-East-AV-Rack-Rm-Dante/QLAN-B
+   ip address 10.41.120.195/26
+   ip virtual-router address 10.41.120.193
+!
+interface Vlan311
+   description 15-Balcony-Dante/QLAN-A
+   ip address 10.41.121.3/26
+   ip virtual-router address 10.41.121.1
+!
+interface Vlan312
+   description 15-Balcony-Dante/QLAN-B
+   ip address 10.41.121.67/26
+   ip virtual-router address 10.41.121.65
+!
+interface Vlan313
+   description 15-Lg-Flex-Dante/QLAN-A
+   ip address 10.41.121.131/26
+   ip virtual-router address 10.41.121.129
+!
+interface Vlan314
+   description 15-Lg-Flex-Dante/QLAN-B
+   ip address 10.41.121.195/26
+   ip virtual-router address 10.41.121.193
+!
+interface Vlan315
+   description 15-MPR-Dante/QLAN-A
+   ip address 10.41.202.3/26
+   ip virtual-router address 10.41.202.1
+!
+interface Vlan316
+   description 15-MPR-Dante/QLAN-B
+   ip address 10.41.202.67/26
+   ip virtual-router address 10.41.202.65
+!
+interface Vlan317
+   description 16-Lg-MPR-Dante/QLAN-A
+   ip address 10.41.202.131/26
+   ip virtual-router address 10.41.202.129
+!
+interface Vlan318
+   description 16-Lg-MPR-Dante/QLAN-B
+   ip address 10.41.202.195/26
+   ip virtual-router address 10.41.202.193
+!
+interface Vlan319
+   description 16-Med-Flex-1-Dante/QLAN-A
+   ip address 10.41.203.3/26
+   ip virtual-router address 10.41.203.1
+!
+interface Vlan320
+   description 16-Med-Flex-1-Dante/QLAN-B
+   ip address 10.41.203.67/26
+   ip virtual-router address 10.41.203.65
+!
+interface Vlan321
+   description 16-Med-Flex-2-Dante/QLAN-A
+   ip address 10.41.203.131/26
+   ip virtual-router address 10.41.203.129
+!
+interface Vlan322
+   description 16-Med-Flex-2-Dante/QLAN-B
+   ip address 10.41.203.195/26
+   ip virtual-router address 10.41.203.193
+!
+interface Vlan323
+   description 16-Med-MPR-Dante/QLAN-A
+   ip address 10.41.206.3/26
+   ip virtual-router address 10.41.206.1
+!
+interface Vlan324
+   description 16-Med-MPR-Dante/QLAN-B
+   ip address 10.41.206.67/26
+   ip virtual-router address 10.41.206.65
+!
+interface Vlan325
+   description 16-Balcony-Dante/QLAN-A
+   ip address 10.41.206.131/26
+   ip virtual-router address 10.41.206.129
+!
+interface Vlan326
+   description 16-Balcony-Dante/QLAN-B
+   ip address 10.41.206.195/26
+   ip virtual-router address 10.41.206.193
+!
+interface Vlan327
+   description 17-Lge-Flex-MPR-Dante/QLAN-A
+   ip address 10.41.207.3/26
+   ip virtual-router address 10.41.207.1
+!
+interface Vlan328
+   description 17-Lge-Flex-MPR-Dante/QLAN-B
+   ip address 10.41.207.67/26
+   ip virtual-router address 10.41.207.65
+!
+interface Vlan329
+   description 47-OC-Dante/QLAN-A
+   ip address 10.41.216.3/26
+   ip virtual-router address 10.41.216.1
+!
+interface Vlan330
+   description 47-OC-Dante/QLAN-B
+   ip address 10.41.216.67/26
+   ip virtual-router address 10.41.216.65
+!
+interface Vlan331
+   description 48-Reception-Dante/QLAN-A
+   ip address 10.41.216.131/26
+   ip virtual-router address 10.41.216.129
+!
+interface Vlan332
+   description 48-Reception-Dante/QLAN-B
+   ip address 10.41.216.195/26
+   ip virtual-router address 10.41.216.193
+!
+interface Vlan333
+   description 49-Reception-Dante/QLAN-A
+   ip address 10.41.217.3/26
+   ip virtual-router address 10.41.217.1
+!
+interface Vlan334
+   description 49-Reception-Dante/QLAN-B
+   ip address 10.41.217.67/26
+   ip virtual-router address 10.41.217.65
+!
+interface Vlan335
+   description 50-Boardroom-Dante/QLAN-A
+   ip address 10.41.217.131/26
+   ip virtual-router address 10.41.217.129
+!
+interface Vlan336
+   description 50-Boardroom-Dante/QLAN-B
+   ip address 10.41.217.195/26
+   ip virtual-router address 10.41.217.193
+!
+interface Vlan337
+   description 50-Med-MPR-Dante/QLAN-A
+   ip address 10.41.207.131/26
+   ip virtual-router address 10.41.207.129
+!
+interface Vlan338
+   description 50-Med-MPR-Dante/QLAN-B
+   ip address 10.41.207.195/26
+   ip virtual-router address 10.41.207.193
+!
+interface Vlan339
+   description 50-Reception-Dante/QLAN-A
+   ip address 10.41.116.131/26
+   ip virtual-router address 10.41.116.129
+!
+interface Vlan340
+   description 50-Reception-Dante/QLAN-B
+   ip address 10.41.116.195/26
+   ip virtual-router address 10.41.116.193
+!
+interface Vlan341
+   description 51-Lg-MPR-Dante/QLAN-A
+   ip address 10.41.117.3/26
+   ip virtual-router address 10.41.117.1
+!
+interface Vlan342
+   description 51-Lg-MPR-Dante/QLAN-B
+   ip address 10.41.117.67/26
+   ip virtual-router address 10.41.117.65
+!
+interface Vlan343
+   description 56-TOH-Dante/QLAN-A
+   ip address 10.41.117.131/26
+   ip virtual-router address 10.41.117.129
+!
+interface Vlan344
+   description 56-TOH-Dante/QLAN-B
+   ip address 10.41.117.195/26
+   ip virtual-router address 10.41.117.193
+!
+interface Vlan1000
+   description CVA_Mgmt
+   ip address 10.155.243.131/27
+   ip virtual-router address 10.155.243.129
+!
+interface Vlan1001
+   description Dynamic-Parking
+   ip address 192.168.100.3/24
+   ip virtual-router address 192.168.100.1
+!
+interface Vlan4093
+   description MLAG_L3
+   mtu 9214
+   ip address 100.83.94.69/31
+!
+interface Vlan4094
+   description MLAG
+   mtu 9214
+   no autostate
+   ip address 172.16.0.1/31
+!
+ip virtual-router mac-address 00:1c:73:00:dc:01
+!
+ip access-list DENY-INTER-VLAN-TRAFFIC
+   10 permit ip any 172.16.131.0/24
+   20 deny ip any any
+!
+ip access-list INTER-VLAN-TRAFFIC-BLOCK
+   10 permit ip any 172.16.131.0/24
+   20 deny ip any any
+!
+ip access-list IP-NAT-INSIDE-ACL-1
+   10 permit ip host 172.16.131.91 any
+   20 permit ip host 172.16.131.92 any
+   30 permit ip host 172.16.131.93 any
+   40 permit ip host 172.16.131.98 any
+   50 permit ip host 172.16.131.99 any
+!
+ip access-list standard MGMT-SSH-ACL
+   10 permit any
+!
+ip routing
+no ip routing vrf MGMT
+!
+mlag configuration
+   domain-id CTL_SPINES_MLAG
+   local-interface Vlan4094
+   peer-address 172.16.0.0
+   peer-link Port-Channel1000
+   reload-delay mlag 300
+   reload-delay non-mlag 330
+!
+ip route vrf MGMT 0.0.0.0/0 10.176.143.161
+!
+role network-user
+   10 deny mode exec command enable|configure|bash|python-shell|\|
+   20 permit mode exec command .*
+!
+route-map RM-MLAG-PEER-IN permit 10
+   description Make routes learned over MLAG Peer-link less preferred on spines to ensure optimal routing
+   set origin incomplete
+!
+router bgp 65212.37300
+   bgp asn notation asdot
+   router-id 169.27.195.2
+   no bgp default ipv4-unicast
+   timers bgp 5 15
+   distance bgp 20 200 200
+   graceful-restart restart-time 300
+   graceful-restart
+   maximum-paths 128 ecmp 600
+   neighbor default send-community
+   neighbor MLAG-iBGP-PEER peer group
+   neighbor MLAG-iBGP-PEER remote-as 65212.37300
+   neighbor MLAG-iBGP-PEER next-hop-self
+   neighbor MLAG-iBGP-PEER description C160064-037B300A
+   neighbor MLAG-iBGP-PEER route-map RM-MLAG-PEER-IN in
+   neighbor MLAG-iBGP-PEER password 7 Y1DORNO9hXlHDGry5BzExg==
+   neighbor MLAG-iBGP-PEER send-community
+   neighbor MLAG-iBGP-PEER maximum-routes 12000
+   neighbor P2P-IPv4-eBGP-PEERS peer group
+   neighbor P2P-IPv4-eBGP-PEERS password 7 tAFzZuVu4+b6rGq1btvPBg==
+   neighbor P2P-IPv4-eBGP-PEERS send-community
+   neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 100.83.94.45 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.45 remote-as 65214
+   neighbor 100.83.94.45 description C160064-037B380A_AVBLSW1
+   neighbor 100.83.94.47 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.47 remote-as 65214
+   neighbor 100.83.94.47 description C160064-037B380A_AVBLSW1
+   neighbor 100.83.94.49 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.49 remote-as 65214
+   neighbor 100.83.94.49 description C160064-037B380A_AVBLSW1
+   neighbor 100.83.94.51 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.51 remote-as 65214
+   neighbor 100.83.94.51 description C160064-037B380A_AVBLSW1
+   neighbor 100.83.94.53 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.53 remote-as 65214
+   neighbor 100.83.94.53 description C160064-037B380A_AVBLSW2
+   neighbor 100.83.94.55 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.55 remote-as 65214
+   neighbor 100.83.94.55 description C160064-037B380A_AVBLSW2
+   neighbor 100.83.94.57 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.57 remote-as 65214
+   neighbor 100.83.94.57 description C160064-037B380A_AVBLSW2
+   neighbor 100.83.94.59 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.59 remote-as 65214
+   neighbor 100.83.94.59 description C160064-037B380A_AVBLSW2
+   neighbor 100.83.94.65 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.65 remote-as 65213.37370
+   neighbor 100.83.94.65 description C160064-037B370A_PDSW1
+   neighbor 100.83.94.67 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.94.67 remote-as 65213.37370
+   neighbor 100.83.94.67 description C160064-037B371A_PDSW2
+   neighbor 100.83.94.68 peer group MLAG-iBGP-PEER
+   neighbor 100.83.94.68 description C160064-037B300A_Vlan4093
+   redistribute connected
+   !
+   address-family ipv4
+      neighbor MLAG-iBGP-PEER activate
+      neighbor P2P-IPv4-eBGP-PEERS activate
+!
+management ssh
+   ip access-group MGMT-SSH-ACL vrf MGMT in
+!
+end
+C160064-037B301A(s1)#show mlag 
+MLAG Configuration:              
+domain-id                          :     CTL_SPINES_MLAG
+local-interface                    :            Vlan4094
+peer-address                       :          172.16.0.0
+peer-link                          :    Port-Channel1000
+hb-peer-address                    :             0.0.0.0
+peer-config                        :                   
+                                                       
+MLAG Status:                     
+state                              :            Inactive
+negotiation status                 :          Connecting
+peer-link status                   :      Lowerlayerdown
+local-int status                   :                  Up
+system-id                          :   00:00:00:00:00:00
+dual-primary detection             :            Disabled
+dual-primary interface errdisabled :               False
+                                                       
+MLAG Ports:                      
+Disabled                           :                 186
+Configured                         :                   0
+Inactive                           :                   0
+Active-partial                     :                   0
+Active-full                        :                   0
+
+C160064-037B301A(s1)#
+C160064-037B301A(s1)#
+C160064-037B301A(s1)#show mlag detail 
+MLAG Configuration:              
+domain-id                          :     CTL_SPINES_MLAG
+local-interface                    :            Vlan4094
+peer-address                       :          172.16.0.0
+peer-link                          :    Port-Channel1000
+hb-peer-address                    :             0.0.0.0
+peer-config                        :                   
+                                                       
+MLAG Status:                     
+state                              :            Inactive
+negotiation status                 :          Connecting
+peer-link status                   :      Lowerlayerdown
+local-int status                   :                  Up
+system-id                          :   00:00:00:00:00:00
+dual-primary detection             :            Disabled
+dual-primary interface errdisabled :               False
+                                                       
+MLAG Ports:                      
+Disabled                           :                 186
+Configured                         :                   0
+Inactive                           :                   0
+Active-partial                     :                   0
+Active-full                        :                   0
+
+MLAG Detailed Status:
+State                           :            inactive
+Peer State                      :             unknown
+State changes                   :                   1
+Last state change time          :        14:42:49 ago
+Hardware ready                  :                True
+Failover                        :               False
+Failover Cause(s)               :             Unknown
+Last failover change time       :               never
+Secondary from failover         :               False
+Peer MAC address                :   00:00:00:00:00:00
+Peer MAC routing supported      :                True
+Reload delay                    :         300 seconds
+Non-MLAG reload delay           :         330 seconds
+Ports errdisabled               :               False
+Lacp standby                    :               False
+Configured heartbeat interval   :             4000 ms
+Effective heartbeat interval    :             4000 ms
+Heartbeat timeout               :            60000 ms
+Last heartbeat timeout          :               never
+Heartbeat timeouts since reboot :                   0
+UDP heartbeat alive             :               False
+Heartbeats sent/received        :             13233/1
+Peer monotonic clock offset     :             unknown
+Agent should be running         :                True
+P2p mount state changes         :                   0
+Fast MAC redirection enabled    :                True
+Interface activation interlock  :        unconfigured
+
+C160064-037B301A(s1)#
+C160064-037B301A(s1)#
+C160064-037B301A(s1)#

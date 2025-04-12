@@ -1,0 +1,4960 @@
+﻿﻿C160064-037B200A(s1)#
+C160064-037B200A(s1)#sh ver
+Arista DCS-7808-CH
+Hardware version: 12.10
+Serial number: HNN23076028
+Hardware MAC address: e8ae.c5ff.f7e8
+System MAC address: e8ae.c5ff.f7e8
+
+Software image version: 4.31.5M
+Architecture: x86_64
+Internal build version: 4.31.5M-38783521.4315M
+Internal build ID: 5e011820-9e64-438a-890f-5626fe5d62a6
+Image format version: 3.0
+Image optimization: Default
+
+Uptime: 16 hours and 37 minutes
+Total memory: 65684540 kB
+Free memory: 54383320 kB
+
+C160064-037B200A(s1)#
+C160064-037B200A(s1)#sh module 
+Module  Ports Card Type                Model          Serial No.
+------- ----- ------------------------ -------------- -----------
+1       3     DCS-7800-SUP Supervisor  DCS-7800-SUP1A FGN243209UU
+2       2     Standby supervisor       DCS-7800-SUP1A FGN243209S7
+3       216   36-port QSFPDD Linecard  7800R3A-36D-LC FGN24260MJ7
+4       216   36-port QSFPDD Linecard  7800R3A-36D-LC FGN24260MK1
+5       216   36-port QSFPDD Linecard  7800R3A-36D-LC FGN24260MR7
+6       216   36-port QSFPDD Linecard  7800R3A-36D-LC FGN24260AE3
+7       216   36-port QSFPDD Linecard  7800R3A-36D-LC FGN24260MHN
+Fabric1 0     DCS-7808R3 Fabric Module 7808R3-FM      SGD242602BV
+Fabric2 0     DCS-7808R3 Fabric Module 7808R3-FM      SGD242602C5
+Fabric3 0     DCS-7808R3 Fabric Module 7808R3-FM      SGD242602BW
+Fabric4 0     DCS-7808R3 Fabric Module 7808R3-FM      FGN2426018W
+Fabric5 0     DCS-7808R3 Fabric Module 7808R3-FM      FGN2426019Q
+Fabric6 0     DCS-7808R3 Fabric Module 7808R3-FM      FGN2426019N
+
+Module  MAC addresses (count)                       Hw    Sw
+------- ------------------------------------------- ----- -------
+1       9c:69:ed:d0:10:5b - 9c:69:ed:d0:10:5c (2)   12.10 4.31.5M
+2       9c:69:ed:d0:10:33 - 9c:69:ed:d0:10:34 (2)   12.10
+3       68:bf:6c:fe:98:da - 68:bf:6c:fe:99:f9 (288) 13.12
+4       68:bf:6c:fe:b2:ff - 68:bf:6c:fe:b4:1e (288) 13.12
+5       68:bf:6c:fe:72:34 - 68:bf:6c:fe:73:53 (288) 13.12
+6       68:bf:6c:fd:f1:c1 - 68:bf:6c:fd:f2:e0 (288) 13.12
+7       68:bf:6c:fe:9d:66 - 68:bf:6c:fe:9e:85 (288) 13.12
+Fabric1                                             11.40
+Fabric2                                             11.40
+Fabric3                                             11.40
+Fabric4                                             11.40
+Fabric5                                             11.40
+Fabric6                                             11.40
+
+Module  Status  Uptime   Power off reason
+------- ------- -------- ----------------
+1       Active  16:36:38 N/A
+2       Standby 16:36:38 N/A
+3       Ok      16:35:58 N/A
+4       Ok      16:35:50 N/A
+5       Ok      16:35:55 N/A
+6       Ok      16:35:49 N/A
+7       Ok      16:35:46 N/A
+Fabric1 Ok      16:35:47 N/A
+Fabric2 Ok      16:35:46 N/A
+Fabric3 Ok      16:35:58 N/A
+Fabric4 Ok      16:35:55 N/A
+Fabric5 Ok      16:35:47 N/A
+Fabric6 Ok      16:35:50 N/A
+C160064-037B200A(s1)#
+C160064-037B200A(s1)#
+C160064-037B200A(s1)#sh inventory 
+System information
+  Model                   
+  ------------------------
+  DCS-7808-CH             
+
+  Description                                                                                            
+  -------------------------------------------------------------------------------------------------------
+  Switch Chassis. 2 Supervisor slots, 8 Linecard slots, 6 Fabric Module slots, with AC or DC Power Supply
+
+  HW Version  Serial Number  Mfg Date   Epoch
+  ----------- -------------- ---------- -----
+  12.10       HNN23076028    2023-02-15 01.00
+
+System has 16 card slots
+  Module       Model            HW Version   Serial Number   Mfg Date     Epoch
+  ------------ ---------------- ------------ --------------- ------------ -----
+  Supervisor1  DCS-7800-SUP1A   12.10        FGN243209UU     2024-08-09   01.00
+  Supervisor2  DCS-7800-SUP1A   12.10        FGN243209S7     2024-08-09   01.00
+  Linecard3    7800R3A-36D-LC   13.12        FGN24260MJ7     2024-07-01   01.00
+  Linecard4    7800R3A-36D-LC   13.12        FGN24260MK1     2024-07-01   01.00
+  Linecard5    7800R3A-36D-LC   13.12        FGN24260MR7     2024-06-30   01.00
+  Linecard6    7800R3A-36D-LC   13.12        FGN24260AE3     2024-06-30   01.00
+  Linecard7    7800R3A-36D-LC   13.12        FGN24260MHN     2024-07-01   01.00
+  Linecard8    Not Inserted                                                    
+  Linecard9    Not Inserted                                                    
+  Linecard10   Not Inserted                                                    
+  Fabric1      7808R3-FM        11.40        SGD242602BV     2024-07-04   01.00
+  Fabric2      7808R3-FM        11.40        SGD242602C5     2024-07-04   01.00
+  Fabric3      7808R3-FM        11.40        SGD242602BW     2024-07-04   01.00
+  Fabric4      7808R3-FM        11.40        FGN2426018W     2024-06-25   01.00
+  Fabric5      7808R3-FM        11.40        FGN2426019Q     2024-06-25   01.00
+  Fabric6      7808R3-FM        11.40        FGN2426019N     2024-06-25   01.00
+
+System has 12 power supply slots
+  Slot Model               Serial Number   
+  ---- ------------------- ----------------
+  1    Not Inserted                        
+  2    Not Inserted                        
+  3    PWR-D1-3041-AC-BLUE THAG1234300M4   
+  4    PWR-D1-3041-AC-BLUE THAG12344013E   
+  5    PWR-D1-3041-AC-BLUE THAG12344013C   
+  6    PWR-D1-3041-AC-BLUE THAG12344013B   
+  7    Not Inserted                        
+  8    Not Inserted                        
+  9    PWR-D1-3041-AC-BLUE THAG1234300M6   
+  10   PWR-D1-3041-AC-BLUE THAG12344013A   
+  11   PWR-D1-3041-AC-BLUE THAG1234401KK   
+  12   PWR-D1-3041-AC-BLUE THAG123440139   
+
+System has 6 fan modules
+  Module  Number of Fans  Model            Serial Number   
+  ------- --------------- ---------------- ----------------
+  1       8               7808R3-FM        SGD242602BV     
+  2       8               7808R3-FM        SGD242602C5     
+  3       8               7808R3-FM        SGD242602BW     
+  4       8               7808R3-FM        FGN2426018W     
+  5       8               7808R3-FM        FGN2426019Q     
+  6       8               7808R3-FM        FGN2426019N     
+
+System has 1084 ports
+  Type               Count
+  ------------------ ----
+  Management         4   
+  Switched           1070
+  SwitchedBootstrap  10  
+
+System has 1 management transceiver slot
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  1/2  Arista Networks  SFP-25G-MR-LR    XYL242901948     21  
+
+System has 180 switched transceiver slots
+  Port Manufacturer     Model            Serial Number    Rev 
+  ---- ---------------- ---------------- ---------------- ----
+  3/1  Arista Networks  QDD-400G-XDR4    XKT242402480     41  
+  3/2  Arista Networks  QDD-400G-XDR4    XKT242402479     41  
+  3/3  Arista Networks  QDD-400G-XDR4    XKT242402478     41  
+  3/4  Arista Networks  QDD-400G-XDR4    XKT242402477     41  
+  3/5  Arista Networks  QDD-400G-XDR4    XKT242402476     41  
+  3/6  Arista Networks  QDD-400G-XDR4    XKT242402485     41  
+  3/7  Arista Networks  QDD-400G-XDR4    XKT242402484     41  
+  3/8  Arista Networks  QDD-400G-XDR4    XKT242402483     41  
+  3/9  Arista Networks  QDD-400G-XDR4    XKT242402482     41  
+  3/10 Arista Networks  QDD-400G-XDR4    XKT242402481     41  
+  3/11 Arista Networks  QDD-400G-XDR4    XKT242601105     41  
+  3/12 Arista Networks  QDD-400G-XDR4    XKT242601104     41  
+  3/13 Arista Networks  QDD-400G-XDR4    XKT242601103     41  
+  3/14 Arista Networks  QDD-400G-XDR4    XKT242601102     41  
+  3/15 Arista Networks  QDD-400G-XDR4    XKT242601101     41  
+  3/16 Arista Networks  QDD-400G-XDR4    XKT242601125     41  
+  3/17 Arista Networks  QDD-400G-XDR4    XKT242601124     41  
+  3/18 Arista Networks  QDD-400G-XDR4    XKT242601123     41  
+  3/19 Arista Networks  QDD-400G-XDR4    XKT242601122     41  
+  3/20 Arista Networks  QDD-400G-XDR4    XKT242601121     41  
+  3/21 Arista Networks  QDD-400G-XDR4    XKT242403650     41  
+  3/22 Arista Networks  QDD-400G-XDR4    XKT242403649     41  
+  3/23 Arista Networks  QDD-400G-XDR4    XKT242403648     41  
+  3/24 Arista Networks  QDD-400G-XDR4    XKT242403347     41  
+  3/25 Arista Networks  QDD-400G-XDR4    XKT242403346     41  
+  3/26 Arista Networks  QDD-400G-XDR4    XKT242403660     41  
+  3/27 Arista Networks  QDD-400G-XDR4    XKT242403659     41  
+  3/28 Arista Networks  QDD-400G-XDR4    XKT242403658     41  
+  3/29 Arista Networks  QDD-400G-XDR4    XKT242403657     41  
+  3/30 Arista Networks  QDD-400G-XDR4    XKT242403656     41  
+  3/31 Arista Networks  QDD-400G-XDR4    XKT242601107     41  
+  3/32 Arista Networks  QDD-400G-XDR4    XKT242601106     41  
+  3/33 Arista Networks  QDD-400G-XDR4    XKT242601110     41  
+  3/34 Arista Networks  QDD-400G-XDR4    XKT242601109     41  
+  3/35 Arista Networks  QDD-400G-XDR4    XKT242601108     41  
+  3/36 Arista Networks  QDD-400G-XDR4    XKT242404321     41  
+  4/1  Arista Networks  QDD-400G-XDR4    XKT242403665     41  
+  4/2  Arista Networks  QDD-400G-XDR4    XKT242403664     41  
+  4/3  Arista Networks  QDD-400G-XDR4    XKT242403663     41  
+  4/4  Arista Networks  QDD-400G-XDR4    XKT242403662     41  
+  4/5  Arista Networks  QDD-400G-XDR4    XKT242403661     41  
+  4/6  Arista Networks  QDD-400G-XDR4    XKT242403355     41  
+  4/7  Arista Networks  QDD-400G-XDR4    XKT242403354     41  
+  4/8  Arista Networks  QDD-400G-XDR4    XKT242403353     41  
+  4/9  Arista Networks  QDD-400G-XDR4    XKT242403352     41  
+  4/10 Arista Networks  QDD-400G-XDR4    XKT242403351     41  
+  4/11 Arista Networks  QDD-400G-XDR4    XKT242403365     41  
+  4/12 Arista Networks  QDD-400G-XDR4    XKT242403364     41  
+  4/13 Arista Networks  QDD-400G-XDR4    XKT242403363     41  
+  4/14 Arista Networks  QDD-400G-XDR4    XKT242403362     41  
+  4/15 Arista Networks  QDD-400G-XDR4    XKT242403361     41  
+  4/16 Arista Networks  QDD-400G-XDR4    XKT242403360     41  
+  4/17 Arista Networks  QDD-400G-XDR4    XKT242403359     41  
+  4/18 Arista Networks  QDD-400G-XDR4    XKT242403358     41  
+  4/19 Arista Networks  QDD-400G-XDR4    XKT242403357     41  
+  4/20 Arista Networks  QDD-400G-XDR4    XKT242403356     41  
+  4/21 Arista Networks  QDD-400G-XDR4    XKT242403675     41  
+  4/22 Arista Networks  QDD-400G-XDR4    XKT242403674     41  
+  4/23 Arista Networks  QDD-400G-XDR4    XKT242403673     41  
+  4/24 Arista Networks  QDD-400G-XDR4    XKT242403672     41  
+  4/25 Arista Networks  QDD-400G-XDR4    XKT242403671     41  
+  4/26 Arista Networks  QDD-400G-XDR4    XKT242403670     41  
+  4/27 Arista Networks  QDD-400G-XDR4    XKT242403669     41  
+  4/28 Arista Networks  QDD-400G-XDR4    XKT242403668     41  
+  4/29 Arista Networks  QDD-400G-XDR4    XKT242403667     41  
+  4/30 Arista Networks  QDD-400G-XDR4    XKT242403666     41  
+  4/31 Arista Networks  QDD-400G-XDR4    XKT242404325     41  
+  4/32 Arista Networks  QDD-400G-XDR4    XKT242404324     41  
+  4/33 Arista Networks  QDD-400G-XDR4    XKT242404323     41  
+  4/34 Arista Networks  QDD-400G-XDR4    XKT242404322     41  
+  4/35 Arista Networks  QDD-400G-XDR4    XKT242403655     41  
+  4/36 Arista Networks  QDD-400G-XDR4    XKT242403654     41  
+  5/1  Arista Networks  QDD-400G-XDR4    XKT242601100     41  
+  5/2  Arista Networks  QDD-400G-XDR4    XKT242601099     41  
+  5/3  Arista Networks  QDD-400G-XDR4    XKT242601098     41  
+  5/4  Arista Networks  QDD-400G-XDR4    XKT242601097     41  
+  5/5  Arista Networks  QDD-400G-XDR4    XKT242601096     41  
+  5/6  Arista Networks  QDD-400G-XDR4    XKT242404360     41  
+  5/7  Arista Networks  QDD-400G-XDR4    XKT242404359     41  
+  5/8  Arista Networks  QDD-400G-XDR4    XKT242404358     41  
+  5/9  Arista Networks  QDD-400G-XDR4    XKT242404357     41  
+  5/10 Arista Networks  QDD-400G-XDR4    XKT242404356     41  
+  5/11 Arista Networks  QDD-400G-XDR4    XKT242404349     41  
+  5/12 Arista Networks  QDD-400G-XDR4    XKT242404225     41  
+  5/13 Arista Networks  QDD-400G-XDR4    XKT242404224     41  
+  5/14 Arista Networks  QDD-400G-XDR4    XKT242404223     41  
+  5/15 Arista Networks  QDD-400G-XDR4    XKT242404222     41  
+  5/16 Arista Networks  QDD-400G-XDR4    XKT242404221     41  
+  5/17 Arista Networks  QDD-400G-XDR4    XKT242404084     41  
+  5/18 Arista Networks  QDD-400G-XDR4    XKT242404083     41  
+  5/19 Arista Networks  QDD-400G-XDR4    XKT242404082     41  
+  5/20 Arista Networks  QDD-400G-XDR4    XKT242404081     41  
+  5/21 Arista Networks  QDD-400G-XDR4    XKT242403207     41  
+  5/22 Arista Networks  QDD-400G-XDR4    XKT242402500     41  
+  5/23 Arista Networks  QDD-400G-XDR4    XKT242402499     41  
+  5/24 Arista Networks  QDD-400G-XDR4    XKT242402498     41  
+  5/25 Arista Networks  QDD-400G-XDR4    XKT242402497     41  
+  5/26 Arista Networks  QDD-400G-XDR4    XKT242601120     41  
+  5/27 Arista Networks  QDD-400G-XDR4    XKT242601119     41  
+  5/28 Arista Networks  QDD-400G-XDR4    XKT242601118     41  
+  5/29 Arista Networks  QDD-400G-XDR4    XKT242601117     41  
+  5/30 Arista Networks  QDD-400G-XDR4    XKT242403340     41  
+  5/31 Arista Networks  QDD-400G-XDR4    XKT242403339     41  
+  5/32 Arista Networks  QDD-400G-XDR4    XKT242403338     41  
+  5/33 Arista Networks  QDD-400G-XDR4    XKT242403337     41  
+  5/34 Arista Networks  QDD-400G-XDR4    XKT242403336     41  
+  5/35 Arista Networks  QDD-400G-XDR4    XKT242402496     41  
+  5/36 Arista Networks  QDD-400G-XDR4    XKT242404085     41  
+  6/1  Arista Networks  QDD-400G-FR4     XKT243402645     41  
+  6/2  Arista Networks  QDD-400G-FR4     XKT243402644     41  
+  6/3  Arista Networks  QDD-400G-FR4     XKT243402643     41  
+  6/4  Arista Networks  QDD-400G-FR4     XKT243402642     41  
+  6/5  Arista Networks  QDD-400G-FR4     XKT243402641     41  
+  6/6  Arista Networks  QDD-400G-FR4     XKT243402625     41  
+  6/7  Arista Networks  QDD-400G-FR4     XKT243402624     41  
+  6/8  Arista Networks  QDD-400G-FR4     XKT243402623     41  
+  6/9  Arista Networks  QDD-400G-FR4     XKT243402622     41  
+  6/10 Arista Networks  QDD-400G-FR4     XKT243402621     41  
+  6/11 Arista Networks  QDD-400G-FR4     XKT243302870     41  
+  6/12 Arista Networks  QDD-400G-FR4     XKT243306685     41  
+  6/13 Arista Networks  QDD-400G-FR4     XKT243306684     41  
+  6/14 Arista Networks  QDD-400G-FR4     XKT243306683     41  
+  6/15 Arista Networks  QDD-400G-FR4     XKT243306682     41  
+  6/16 Arista Networks  QDD-400G-FR4     XKT243306681     41  
+  6/17 Arista Networks  QDD-400G-FR4     XKT243200567     41  
+  6/18 Arista Networks  QDD-400G-FR4     XKT243200565     41  
+  6/19 Arista Networks  QDD-400G-FR4     XKT243200564     41  
+  6/20 Arista Networks  QDD-400G-FR4     XKT243200563     41  
+  6/21 Arista Networks  QDD-400G-FR4     XKT243200562     41  
+  6/22 Arista Networks  QDD-400G-FR4     XKT243306639     41  
+  6/23 Arista Networks  QDD-400G-FR4     XKT243306638     41  
+  6/24 Arista Networks  QDD-400G-FR4     XKT243306637     41  
+  6/25 Arista Networks  QDD-400G-FR4     XKT243306636     41  
+  6/26 Arista Networks  QDD-400G-FR4     XKT243302869     41  
+  6/27 Arista Networks  QDD-400G-FR4     XKT243302868     41  
+  6/28 Arista Networks  QDD-400G-FR4     XKT243302867     41  
+  6/29 Arista Networks  QDD-400G-FR4     XKT243302866     41  
+  6/30 Arista Networks  QDD-400G-FR4     XKT243302785     41  
+  6/31 Arista Networks  QDD-400G-FR4     XKT243302784     41  
+  6/32 Arista Networks  QDD-400G-FR4     XKT243302783     41  
+  6/33 Arista Networks  QDD-400G-FR4     XKT243302782     41  
+  6/34 Arista Networks  QDD-400G-FR4     XKT243302781     41  
+  6/35 Arista Networks  QDD-400G-FR4     XKT243302737     41  
+  6/36 Arista Networks  QDD-400G-FR4     XKT243302736     41  
+  7/1  Arista Networks  QDD-400G-FR4     XKT243302790     41  
+  7/2  Arista Networks  QDD-400G-FR4     XKT243302789     41  
+  7/3  Arista Networks  QDD-400G-FR4     XKT243302788     41  
+  7/4  Arista Networks  QDD-400G-FR4     XKT243302787     41  
+  7/5  Arista Networks  QDD-400G-FR4     XKT243302786     41  
+  7/6  Arista Networks  QDD-400G-FR4     XKT243302880     41  
+  7/7  Arista Networks  QDD-400G-FR4     XKT243302879     41  
+  7/8  Arista Networks  QDD-400G-FR4     XKT243302878     41  
+  7/9  Arista Networks  QDD-400G-FR4     XKT243302877     41  
+  7/10 Arista Networks  QDD-400G-FR4     XKT243302876     41  
+  7/11 Arista Networks  QDD-400G-FR4     XKT243306725     41  
+  7/12 Arista Networks  QDD-400G-FR4     XKT243302744     41  
+  7/13 Arista Networks  QDD-400G-FR4     XKT243302743     41  
+  7/14 Arista Networks  QDD-400G-FR4     XKT243302742     41  
+  7/15 Arista Networks  QDD-400G-FR4     XKT243302741     41  
+  7/16 Arista Networks  QDD-400G-FR4     XKT243306630     41  
+  7/17 Arista Networks  QDD-400G-FR4     XKT243306629     41  
+  7/18 Arista Networks  QDD-400G-FR4     XKT243306628     41  
+  7/19 Arista Networks  QDD-400G-FR4     XKT243306627     41  
+  7/20 Arista Networks  QDD-400G-FR4     XKT243306626     41  
+  7/21 Arista Networks  QDD-400G-FR4     XKT243302750     41  
+  7/22 Arista Networks  QDD-400G-FR4     XKT243302749     41  
+  7/23 Arista Networks  QDD-400G-FR4     XKT243302748     41  
+  7/24 Arista Networks  QDD-400G-FR4     XKT243302747     41  
+  7/25 Arista Networks  QDD-400G-FR4     XKT243302746     41  
+  7/26 Arista Networks  QDD-400G-FR4     XKT243306724     41  
+  7/27 Arista Networks  QDD-400G-FR4     XKT243306723     41  
+  7/28 Arista Networks  QDD-400G-FR4     XKT243306722     41  
+  7/29 Arista Networks  QDD-400G-FR4     XKT243306721     41  
+  7/30 Arista Networks  QDD-400G-FR4     XKT243306720     41  
+  7/31 Arista Networks  QDD-400G-FR4     XKT243306719     41  
+  7/32 Arista Networks  QDD-400G-FR4     XKT243306718     41  
+  7/33 Not Present                                            
+  7/34 Arista Networks  QDD-400G-FR4     XKT243306716     41  
+  7/35 Arista Networks  QDD-400G-FR4     XKT243302739     41  
+  7/36 Arista Networks  QDD-400G-FR4     XKT243302738     41  
+
+System has 1 storage device
+Supervisor 1: 
+  Mount      Type Model                    Serial Number Rev      Size (GB)
+  ---------- ---- ------------------------ ------------- -------- ---------
+  /mnt/flash SSD  StorFly VSFBM8CC256G-ARI 64121-0706    0202-000 256      
+
+C160064-037B200A(s1)#sh ip int brief
+                                                                        Address
+Interface         IP Address           Status    Protocol         MTU   Owner  
+----------------- -------------------- --------- ------------- -------- -------
+Ethernet3/1/1     unassigned           down      down            1500          
+Ethernet3/2/1     unassigned           down      down            1500          
+Ethernet3/3/1     unassigned           down      down            1500          
+Ethernet3/4/1     unassigned           down      down            1500          
+Ethernet3/5/1     unassigned           down      down            1500          
+Ethernet3/6/1     unassigned           down      down            1500          
+Ethernet3/7/1     unassigned           down      down            1500          
+Ethernet3/8/1     unassigned           down      down            1500          
+Ethernet3/9/1     unassigned           down      down            1500          
+Ethernet3/10/1    unassigned           down      down            1500          
+Ethernet3/11/1    unassigned           down      down            1500          
+Ethernet3/12/1    unassigned           down      down            1500          
+Ethernet3/13/1    unassigned           down      down            1500          
+Ethernet3/14/1    unassigned           down      down            1500          
+Ethernet3/15/1    unassigned           down      down            1500          
+Ethernet3/16/1    unassigned           down      down            1500          
+Ethernet3/17/1    unassigned           down      down            1500          
+Ethernet3/18/1    unassigned           down      down            1500          
+Ethernet3/19/1    unassigned           down      down            1500          
+Ethernet3/20/1    unassigned           down      down            1500          
+Ethernet3/21/1    unassigned           down      down            1500          
+Ethernet3/22/1    unassigned           down      down            1500          
+Ethernet3/23/1    unassigned           down      down            1500          
+Ethernet3/24/1    unassigned           down      down            1500          
+Ethernet3/25/1    unassigned           down      down            1500          
+Ethernet3/26/1    unassigned           down      down            1500          
+Ethernet3/27/1    unassigned           down      down            1500          
+Ethernet3/28/1    unassigned           down      down            1500          
+Ethernet3/29/1    unassigned           down      down            1500          
+Ethernet3/30/1    unassigned           down      down            1500          
+Ethernet3/31/1    unassigned           down      down            1500          
+Ethernet3/32/1    100.83.93.6/31       down      down            1500          
+Ethernet3/33/1    100.83.88.144/31     down      down            1500          
+Ethernet3/34/1    unassigned           down      down            1500          
+Ethernet3/35/1    100.83.89.34/31      down      down            1500          
+Ethernet3/36/1    100.83.89.64/31      down      down            1500          
+Ethernet4/1/1     unassigned           down      down            1500          
+Ethernet4/2/1     unassigned           down      down            1500          
+Ethernet4/3/1     unassigned           down      down            1500          
+Ethernet4/4/1     unassigned           down      down            1500          
+Ethernet4/5/1     unassigned           down      down            1500          
+Ethernet4/6/1     unassigned           down      down            1500          
+Ethernet4/7/1     unassigned           down      down            1500          
+Ethernet4/8/1     unassigned           down      down            1500          
+Ethernet4/9/1     unassigned           down      down            1500          
+Ethernet4/10/1    unassigned           down      down            1500          
+Ethernet4/11/1    unassigned           down      down            1500          
+Ethernet4/12/1    unassigned           down      down            1500          
+Ethernet4/13/1    unassigned           down      down            1500          
+Ethernet4/14/1    unassigned           down      down            1500          
+Ethernet4/15/1    unassigned           down      down            1500          
+Ethernet4/16/1    unassigned           down      down            1500          
+Ethernet4/17/1    unassigned           down      down            1500          
+Ethernet4/18/1    unassigned           down      down            1500          
+Ethernet4/19/1    unassigned           down      down            1500          
+Ethernet4/20/1    unassigned           down      down            1500          
+Ethernet4/21/1    unassigned           down      down            1500          
+Ethernet4/22/1    unassigned           down      down            1500          
+Ethernet4/23/1    unassigned           down      down            1500          
+Ethernet4/24/1    unassigned           down      down            1500          
+Ethernet4/25/1    unassigned           down      down            1500          
+Ethernet4/26/1    unassigned           down      down            1500          
+Ethernet4/27/1    unassigned           down      down            1500          
+Ethernet4/28/1    unassigned           down      down            1500          
+Ethernet4/29/1    unassigned           down      down            1500          
+Ethernet4/30/1    unassigned           down      down            1500          
+Ethernet4/31/1    unassigned           down      down            1500          
+Ethernet4/32/1    100.83.93.10/31      down      down            1500          
+Ethernet4/33/1    100.83.88.180/31     down      down            1500          
+Ethernet4/34/1    unassigned           down      down            1500          
+Ethernet4/35/1    100.83.89.0/31       down      down            1500          
+Ethernet4/36/1    100.83.89.66/31      down      down            1500          
+Ethernet5/1/1     unassigned           down      down            1500          
+Ethernet5/2/1     unassigned           down      down            1500          
+Ethernet5/3/1     unassigned           down      down            1500          
+Ethernet5/4/1     unassigned           down      down            1500          
+Ethernet5/5/1     unassigned           down      down            1500          
+Ethernet5/6/1     unassigned           down      down            1500          
+Ethernet5/7/1     unassigned           down      down            1500          
+Ethernet5/8/1     unassigned           down      down            1500          
+Ethernet5/9/1     unassigned           down      down            1500          
+Ethernet5/10/1    unassigned           down      down            1500          
+Ethernet5/11/1    unassigned           down      down            1500          
+Ethernet5/12/1    unassigned           down      down            1500          
+Ethernet5/13/1    unassigned           down      down            1500          
+Ethernet5/14/1    unassigned           down      down            1500          
+Ethernet5/15/1    unassigned           down      down            1500          
+Ethernet5/16/1    unassigned           down      down            1500          
+Ethernet5/17/1    unassigned           down      down            1500          
+Ethernet5/18/1    unassigned           down      down            1500          
+Ethernet5/19/1    unassigned           down      down            1500          
+Ethernet5/20/1    unassigned           down      down            1500          
+Ethernet5/21/1    unassigned           down      down            1500          
+Ethernet5/22/1    unassigned           down      down            1500          
+Ethernet5/23/1    unassigned           down      down            1500          
+Ethernet5/24/1    unassigned           down      down            1500          
+Ethernet5/25/1    unassigned           down      down            1500          
+Ethernet5/26/1    unassigned           down      down            1500          
+Ethernet5/27/1    unassigned           down      down            1500          
+Ethernet5/28/1    unassigned           down      down            1500          
+Ethernet5/29/1    unassigned           down      down            1500          
+Ethernet5/30/1    unassigned           down      down            1500          
+Ethernet5/31/1    unassigned           down      down            1500          
+Ethernet5/32/1    unassigned           down      down            1500          
+Ethernet5/33/1    unassigned           down      down            1500          
+Ethernet5/34/1    100.83.88.182/31     down      down            1500          
+Ethernet5/35/1    100.83.89.2/31       down      down            1500          
+Ethernet5/36/1    100.83.89.80/31      down      down            1500          
+Ethernet6/1/1     100.83.88.0/31       down      down            1500          
+Ethernet6/2/1     100.83.88.4/31       down      down            1500          
+Ethernet6/3/1     100.83.88.8/31       down      down            1500          
+Ethernet6/4/1     100.83.88.16/31      down      down            1500          
+Ethernet6/5/1     100.83.88.20/31      down      down            1500          
+Ethernet6/6/1     100.83.88.24/31      down      down            1500          
+Ethernet6/7/1     100.83.88.48/31      down      down            1500          
+Ethernet6/8/1     100.83.88.52/31      down      down            1500          
+Ethernet6/9/1     100.83.88.82/31      down      down            1500          
+Ethernet6/10/1    unassigned           down      down            1500          
+Ethernet6/11/1    100.83.89.224/31     down      down            1500          
+Ethernet6/12/1    100.83.89.192/31     down      down            1500          
+Ethernet6/13/1    unassigned           down      down            1500          
+Ethernet6/14/1    100.83.89.128/31     down      down            1500          
+Ethernet6/15/1    100.83.89.112/31     down      down            1500          
+Ethernet6/16/1    100.83.89.16/31      down      down            1500          
+Ethernet6/17/1    100.83.88.224/31     down      down            1500          
+Ethernet6/18/1    100.83.88.192/31     down      down            1500          
+Ethernet6/19/1    100.83.88.160/31     down      down            1500          
+Ethernet6/20/1    100.83.88.128/31     down      down            1500          
+Ethernet6/21/1    100.83.88.112/31     down      down            1500          
+Ethernet6/22/1    100.83.88.116/31     down      down            1500          
+Ethernet6/23/1    100.83.88.96/31      down      down            1500          
+Ethernet6/24/1    100.83.88.120/31     down      down            1500          
+Ethernet6/25/1    100.83.93.22/31      down      down            1500          
+Ethernet6/26/1    unassigned           down      down            1500          
+Ethernet6/27/1    unassigned           down      down            1500          
+Ethernet6/28/1    100.83.89.176/31     down      down            1500          
+Ethernet6/29/1    unassigned           down      down            1500          
+Ethernet6/30/1    unassigned           down      down            1500          
+Ethernet6/31/1    unassigned           down      down            1500          
+Ethernet6/32/1    unassigned           down      down            1500          
+Ethernet6/33/1    unassigned           down      down            1500          
+Ethernet6/34/1    unassigned           down      down            1500          
+Ethernet6/35/1    unassigned           down      down            1500          
+Ethernet6/36/1    unassigned           down      down            1500          
+Ethernet7/1/1     100.83.88.2/31       down      down            1500          
+Ethernet7/2/1     100.83.88.6/31       down      down            1500          
+Ethernet7/3/1     100.83.88.10/31      down      down            1500          
+Ethernet7/4/1     100.83.88.18/31      down      down            1500          
+Ethernet7/5/1     100.83.88.22/31      down      down            1500          
+Ethernet7/6/1     100.83.88.26/31      down      down            1500          
+Ethernet7/7/1     100.83.88.50/31      down      down            1500          
+Ethernet7/8/1     100.83.88.80/31      down      down            1500          
+Ethernet7/9/1     100.83.88.84/31      down      down            1500          
+Ethernet7/10/1    unassigned           down      down            1500          
+Ethernet7/11/1    100.83.89.226/31     down      down            1500          
+Ethernet7/12/1    100.83.89.194/31     down      down            1500          
+Ethernet7/13/1    unassigned           down      down            1500          
+Ethernet7/14/1    100.83.89.130/31     down      down            1500          
+Ethernet7/15/1    100.83.89.114/31     down      down            1500          
+Ethernet7/16/1    100.83.89.18/31      down      down            1500          
+Ethernet7/17/1    100.83.88.226/31     down      down            1500          
+Ethernet7/18/1    100.83.88.194/31     down      down            1500          
+Ethernet7/19/1    100.83.88.162/31     down      down            1500          
+Ethernet7/20/1    100.83.88.130/31     down      down            1500          
+Ethernet7/21/1    100.83.88.114/31     down      down            1500          
+Ethernet7/22/1    100.83.88.118/31     down      down            1500          
+Ethernet7/23/1    100.83.88.98/31      down      down            1500          
+Ethernet7/24/1    100.83.89.228/31     down      down            1500          
+Ethernet7/25/1    100.83.93.26/31      down      down            1500          
+Ethernet7/26/1    unassigned           down      down            1500          
+Ethernet7/27/1    unassigned           down      down            1500          
+Ethernet7/28/1    100.83.89.178/31     down      down            1500          
+Ethernet7/29/1    unassigned           down      down            1500          
+Ethernet7/30/1    unassigned           down      down            1500          
+Ethernet7/31/1    unassigned           down      down            1500          
+Ethernet7/32/1    unassigned           down      down            1500          
+Ethernet7/33/1    unassigned           down      notpresent      1500          
+Ethernet7/34/1    unassigned           down      down            1500          
+Ethernet7/35/1    unassigned           down      down            1500          
+Ethernet7/36/1    unassigned           down      down            1500          
+Loopback0         169.27.195.33/32     up        up             65535          
+Management1/1     10.176.143.168/27    up        up              1500          
+Management1/2     unassigned           down      down            1500          
+Management2/1     unassigned           up        up              1500          
+Management2/2     unassigned           down      down            1500          
+
+C160064-037B200A(s1)#
+C160064-037B200A(s1)#
+C160064-037B200A(s1)#
+C160064-037B200A(s1)#
+C160064-037B200A(s1)#sh run
+! Command: show running-config
+! device: C160064-037B200A (DCS-7808-CH, EOS-4.31.5M)
+!
+! boot system flash:/EOS64-4.31.5M.swi
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$eucN5ngreuExDgwS$xnD7T8jO..GBDX0DUlp.hn.W7yW94xTjSanqgaQGBzPIhDAsyAl9N4oScHvOMvf07uVBFI4mKMxwdVEUVKgY/.
+username avnetuser privilege 0 role network-user secret sha512 $6$l7sHbz6mxuq6peq0$FQjHbRIfcZrdI1Cw7Qs4HhUbFbzmUa.dTleGY95TgzEJgNvHh/TlhzCClknEk634p5nQHn/RFBEjebebU4jxd.
+username providius privilege 7 role network-operator secret sha512 $6$BQgcQzmXutC8.k0U$w5Ly4dFtFe9KUYOc6XmPSnm0cW3F/uL90jfA1EkfH16TI4n5PcSWNk7byu1LSUR8i8ha0dWFrMHkX9b76Ih6X1
+username testlab privilege 15 role network-admin secret sha512 $6$emh7YIY16uJLWXGR$rpNN3L9JAe6K2eynKi6lcoSUQFm7Uxa6gCRwEOA8FO7adXHv31Xd4PFwybBe3icIsxGHZjQvjEKocceIiMXIc/
+username thelabeng privilege 15 role network-admin secret sha512 $6$/D8cGV410nyAUOxm$TvYHuvz9sK3.EWQeT6EiNHVclEa3EOjgYZ6022WCekli1LVLzUHql27CnUV6/NlHL0Mn9qtj8yRL6w58hFSHS0
+!
+daemon TerminAttr
+   exec /usr/bin/TerminAttr -cvaddr=192.168.1.12:9910 -cvauth=token,/tmp/token -cvvrf=MGMT -disableaaa -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -taillogs
+   no shutdown
+!
+switchport default mode routed
+!
+vlan internal order ascending range 1006 1199
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+logging monitor notifications
+!
+mcs client
+   no shutdown
+!
+hostname C160064-037B200A
+!
+ptp domain 100
+ptp mode boundary
+ptp priority1 20
+ptp priority2 102
+ptp source ip 169.27.195.33
+ptp ttl 8
+ptp monitor threshold offset-from-master 500
+ptp monitor threshold mean-path-delay 2500
+!
+snmp-server local-interface Loopback0
+snmp-server community gt1m3rg3r ro
+snmp-server host 202.40.72.61 version 2c gt1m3rg3r
+snmp-server host 202.40.73.61 version 2c gt1m3rg3r
+!
+hardware speed-group4 serdes 10g
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+clock timezone America/New_York
+!
+vrf instance MGMT
+!
+management api http-commands
+   no shutdown
+   !
+   vrf MGMT
+      no shutdown
+!
+management cvx
+   no shutdown
+   server host 10.155.243.151
+   server host 10.155.243.153
+   server host 10.155.243.152
+   source-interface Loopback0
+!
+management api gnmi
+   transport grpc NRVT
+      port 5909
+      vrf MGMT
+   provider eos-native
+!
+management api models
+   provider macsec
+   !
+   provider smash
+      path bridging
+      path ptp
+      path routing
+!
+aaa authorization exec default local
+!
+interface Ethernet3/1/1
+   no switchport
+!
+interface Ethernet3/1/2
+   no switchport
+!
+interface Ethernet3/1/3
+   no switchport
+!
+interface Ethernet3/1/4
+   no switchport
+!
+interface Ethernet3/1/5
+   no switchport
+!
+interface Ethernet3/1/7
+   no switchport
+!
+interface Ethernet3/2/1
+   no switchport
+!
+interface Ethernet3/2/2
+   no switchport
+!
+interface Ethernet3/2/3
+   no switchport
+!
+interface Ethernet3/2/4
+   no switchport
+!
+interface Ethernet3/2/5
+   no switchport
+!
+interface Ethernet3/2/7
+   no switchport
+!
+interface Ethernet3/3/1
+   no switchport
+!
+interface Ethernet3/3/2
+   no switchport
+!
+interface Ethernet3/3/3
+   no switchport
+!
+interface Ethernet3/3/4
+   no switchport
+!
+interface Ethernet3/3/5
+   no switchport
+!
+interface Ethernet3/3/7
+   no switchport
+!
+interface Ethernet3/4/1
+   no switchport
+!
+interface Ethernet3/4/2
+   no switchport
+!
+interface Ethernet3/4/3
+   no switchport
+!
+interface Ethernet3/4/4
+   no switchport
+!
+interface Ethernet3/4/5
+   no switchport
+!
+interface Ethernet3/4/7
+   no switchport
+!
+interface Ethernet3/5/1
+   no switchport
+!
+interface Ethernet3/5/2
+   no switchport
+!
+interface Ethernet3/5/3
+   no switchport
+!
+interface Ethernet3/5/4
+   no switchport
+!
+interface Ethernet3/5/5
+   no switchport
+!
+interface Ethernet3/5/7
+   no switchport
+!
+interface Ethernet3/6/1
+   no switchport
+!
+interface Ethernet3/6/2
+   no switchport
+!
+interface Ethernet3/6/3
+   no switchport
+!
+interface Ethernet3/6/4
+   no switchport
+!
+interface Ethernet3/6/5
+   no switchport
+!
+interface Ethernet3/6/7
+   no switchport
+!
+interface Ethernet3/7/1
+   no switchport
+!
+interface Ethernet3/7/2
+   no switchport
+!
+interface Ethernet3/7/3
+   no switchport
+!
+interface Ethernet3/7/4
+   no switchport
+!
+interface Ethernet3/7/5
+   no switchport
+!
+interface Ethernet3/7/7
+   no switchport
+!
+interface Ethernet3/8/1
+   no switchport
+!
+interface Ethernet3/8/2
+   no switchport
+!
+interface Ethernet3/8/3
+   no switchport
+!
+interface Ethernet3/8/4
+   no switchport
+!
+interface Ethernet3/8/5
+   no switchport
+!
+interface Ethernet3/8/7
+   no switchport
+!
+interface Ethernet3/9/1
+   no switchport
+!
+interface Ethernet3/9/2
+   no switchport
+!
+interface Ethernet3/9/3
+   no switchport
+!
+interface Ethernet3/9/4
+   no switchport
+!
+interface Ethernet3/9/5
+   no switchport
+!
+interface Ethernet3/9/7
+   no switchport
+!
+interface Ethernet3/10/1
+   no switchport
+!
+interface Ethernet3/10/2
+   no switchport
+!
+interface Ethernet3/10/3
+   no switchport
+!
+interface Ethernet3/10/4
+   no switchport
+!
+interface Ethernet3/10/5
+   no switchport
+!
+interface Ethernet3/10/7
+   no switchport
+!
+interface Ethernet3/11/1
+   no switchport
+!
+interface Ethernet3/11/2
+   no switchport
+!
+interface Ethernet3/11/3
+   no switchport
+!
+interface Ethernet3/11/4
+   no switchport
+!
+interface Ethernet3/11/5
+   no switchport
+!
+interface Ethernet3/11/7
+   no switchport
+!
+interface Ethernet3/12/1
+   no switchport
+!
+interface Ethernet3/12/2
+   no switchport
+!
+interface Ethernet3/12/3
+   no switchport
+!
+interface Ethernet3/12/4
+   no switchport
+!
+interface Ethernet3/12/5
+   no switchport
+!
+interface Ethernet3/12/7
+   no switchport
+!
+interface Ethernet3/13/1
+   no switchport
+!
+interface Ethernet3/13/2
+   no switchport
+!
+interface Ethernet3/13/3
+   no switchport
+!
+interface Ethernet3/13/4
+   no switchport
+!
+interface Ethernet3/13/5
+   no switchport
+!
+interface Ethernet3/13/7
+   no switchport
+!
+interface Ethernet3/14/1
+   no switchport
+!
+interface Ethernet3/14/2
+   no switchport
+!
+interface Ethernet3/14/3
+   no switchport
+!
+interface Ethernet3/14/4
+   no switchport
+!
+interface Ethernet3/14/5
+   no switchport
+!
+interface Ethernet3/14/7
+   no switchport
+!
+interface Ethernet3/15/1
+   no switchport
+!
+interface Ethernet3/15/2
+   no switchport
+!
+interface Ethernet3/15/3
+   no switchport
+!
+interface Ethernet3/15/4
+   no switchport
+!
+interface Ethernet3/15/5
+   no switchport
+!
+interface Ethernet3/15/7
+   no switchport
+!
+interface Ethernet3/16/1
+   no switchport
+!
+interface Ethernet3/16/2
+   no switchport
+!
+interface Ethernet3/16/3
+   no switchport
+!
+interface Ethernet3/16/4
+   no switchport
+!
+interface Ethernet3/16/5
+   no switchport
+!
+interface Ethernet3/16/7
+   no switchport
+!
+interface Ethernet3/17/1
+   no switchport
+!
+interface Ethernet3/17/2
+   no switchport
+!
+interface Ethernet3/17/3
+   no switchport
+!
+interface Ethernet3/17/4
+   no switchport
+!
+interface Ethernet3/17/5
+   no switchport
+!
+interface Ethernet3/17/7
+   no switchport
+!
+interface Ethernet3/18/1
+   no switchport
+!
+interface Ethernet3/18/2
+   no switchport
+!
+interface Ethernet3/18/3
+   no switchport
+!
+interface Ethernet3/18/4
+   no switchport
+!
+interface Ethernet3/18/5
+   no switchport
+!
+interface Ethernet3/18/7
+   no switchport
+!
+interface Ethernet3/19/1
+   no switchport
+!
+interface Ethernet3/19/2
+   no switchport
+!
+interface Ethernet3/19/3
+   no switchport
+!
+interface Ethernet3/19/4
+   no switchport
+!
+interface Ethernet3/19/5
+   no switchport
+!
+interface Ethernet3/19/7
+   no switchport
+!
+interface Ethernet3/20/1
+   no switchport
+!
+interface Ethernet3/20/2
+   no switchport
+!
+interface Ethernet3/20/3
+   no switchport
+!
+interface Ethernet3/20/4
+   no switchport
+!
+interface Ethernet3/20/5
+   no switchport
+!
+interface Ethernet3/20/7
+   no switchport
+!
+interface Ethernet3/21/1
+   no switchport
+!
+interface Ethernet3/21/2
+   no switchport
+!
+interface Ethernet3/21/3
+   no switchport
+!
+interface Ethernet3/21/4
+   no switchport
+!
+interface Ethernet3/21/5
+   no switchport
+!
+interface Ethernet3/21/7
+   no switchport
+!
+interface Ethernet3/22/1
+   no switchport
+!
+interface Ethernet3/22/2
+   no switchport
+!
+interface Ethernet3/22/3
+   no switchport
+!
+interface Ethernet3/22/4
+   no switchport
+!
+interface Ethernet3/22/5
+   no switchport
+!
+interface Ethernet3/22/7
+   no switchport
+!
+interface Ethernet3/23/1
+   no switchport
+!
+interface Ethernet3/23/2
+   no switchport
+!
+interface Ethernet3/23/3
+   no switchport
+!
+interface Ethernet3/23/4
+   no switchport
+!
+interface Ethernet3/23/5
+   no switchport
+!
+interface Ethernet3/23/7
+   no switchport
+!
+interface Ethernet3/24/1
+   no switchport
+!
+interface Ethernet3/24/2
+   no switchport
+!
+interface Ethernet3/24/3
+   no switchport
+!
+interface Ethernet3/24/4
+   no switchport
+!
+interface Ethernet3/24/5
+   no switchport
+!
+interface Ethernet3/24/7
+   no switchport
+!
+interface Ethernet3/25/1
+   no switchport
+!
+interface Ethernet3/25/2
+   no switchport
+!
+interface Ethernet3/25/3
+   no switchport
+!
+interface Ethernet3/25/4
+   no switchport
+!
+interface Ethernet3/25/5
+   no switchport
+!
+interface Ethernet3/25/7
+   no switchport
+!
+interface Ethernet3/26/1
+   no switchport
+!
+interface Ethernet3/26/2
+   no switchport
+!
+interface Ethernet3/26/3
+   no switchport
+!
+interface Ethernet3/26/4
+   no switchport
+!
+interface Ethernet3/26/5
+   no switchport
+!
+interface Ethernet3/26/7
+   no switchport
+!
+interface Ethernet3/27/1
+   no switchport
+!
+interface Ethernet3/27/2
+   no switchport
+!
+interface Ethernet3/27/3
+   no switchport
+!
+interface Ethernet3/27/4
+   no switchport
+!
+interface Ethernet3/27/5
+   no switchport
+!
+interface Ethernet3/27/7
+   no switchport
+!
+interface Ethernet3/28/1
+   no switchport
+!
+interface Ethernet3/28/2
+   no switchport
+!
+interface Ethernet3/28/3
+   no switchport
+!
+interface Ethernet3/28/4
+   no switchport
+!
+interface Ethernet3/28/5
+   no switchport
+!
+interface Ethernet3/28/7
+   no switchport
+!
+interface Ethernet3/29/1
+   no switchport
+!
+interface Ethernet3/29/2
+   no switchport
+!
+interface Ethernet3/29/3
+   no switchport
+!
+interface Ethernet3/29/4
+   no switchport
+!
+interface Ethernet3/29/5
+   no switchport
+!
+interface Ethernet3/29/7
+   no switchport
+!
+interface Ethernet3/30/1
+   no switchport
+!
+interface Ethernet3/30/2
+   no switchport
+!
+interface Ethernet3/30/3
+   no switchport
+!
+interface Ethernet3/30/4
+   no switchport
+!
+interface Ethernet3/30/5
+   no switchport
+!
+interface Ethernet3/30/7
+   no switchport
+!
+interface Ethernet3/31/1
+   no switchport
+!
+interface Ethernet3/31/2
+   no switchport
+!
+interface Ethernet3/31/3
+   no switchport
+!
+interface Ethernet3/31/4
+   description P2P_C160064-037B206A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.70/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/31/5
+   no switchport
+!
+interface Ethernet3/31/7
+   no switchport
+!
+interface Ethernet3/32/1
+   description P2P_C160064-037B370A_Ethernet50/1
+   mtu 1500
+   no switchport
+   ip address 100.83.93.6/31
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/32/2
+   description P2P_C160064-037B205A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.32/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/32/3
+   description P2P_C160064-037B206A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.66/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/32/4
+   description P2P_C160064-004B201A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.150/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/32/5
+   no switchport
+!
+interface Ethernet3/32/7
+   no switchport
+!
+interface Ethernet3/33/1
+   description P2P_C160064-004B201A_Ethernet53/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.144/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/33/2
+   description P2P_C160064-006B201A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.178/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/33/3
+   description P2P_C160064-008B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.212/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/33/4
+   no switchport
+!
+interface Ethernet3/33/5
+   no switchport
+!
+interface Ethernet3/33/7
+   no switchport
+!
+interface Ethernet3/34/1
+   no switchport
+!
+interface Ethernet3/34/2
+   no switchport
+!
+interface Ethernet3/34/3
+   description P2P_C160064-010B201A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.246/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/34/4
+   description P2P_C160064-010B201A_Ethernet53/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.240/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/34/5
+   no switchport
+!
+interface Ethernet3/34/7
+   no switchport
+!
+interface Ethernet3/35/1
+   description P2P_C160064-014B201A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.34/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/35/2
+   description P2P_C160064-014B202A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.52/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/35/3
+   description P2P_C160064-015B203A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.98/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/35/4
+   description P2P_C160064-015B202A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.82/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/35/5
+   no switchport
+!
+interface Ethernet3/35/7
+   no switchport
+!
+interface Ethernet3/36/1
+   description P2P_C160064-015B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.64/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/36/2
+   description P2P_C160064-046B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.162/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/36/3
+   description P2P_C160064-051B201A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.208/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/36/4
+   description P2P_C160064-056B201A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.240/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet3/36/5
+   no switchport
+!
+interface Ethernet3/36/7
+   no switchport
+!
+interface Ethernet4/1/1
+   no switchport
+!
+interface Ethernet4/1/2
+   no switchport
+!
+interface Ethernet4/1/3
+   no switchport
+!
+interface Ethernet4/1/4
+   no switchport
+!
+interface Ethernet4/1/5
+   no switchport
+!
+interface Ethernet4/1/7
+   no switchport
+!
+interface Ethernet4/2/1
+   no switchport
+!
+interface Ethernet4/2/2
+   no switchport
+!
+interface Ethernet4/2/3
+   no switchport
+!
+interface Ethernet4/2/4
+   no switchport
+!
+interface Ethernet4/2/5
+   no switchport
+!
+interface Ethernet4/2/7
+   no switchport
+!
+interface Ethernet4/3/1
+   no switchport
+!
+interface Ethernet4/3/2
+   no switchport
+!
+interface Ethernet4/3/3
+   no switchport
+!
+interface Ethernet4/3/4
+   no switchport
+!
+interface Ethernet4/3/5
+   no switchport
+!
+interface Ethernet4/3/7
+   no switchport
+!
+interface Ethernet4/4/1
+   no switchport
+!
+interface Ethernet4/4/2
+   no switchport
+!
+interface Ethernet4/4/3
+   no switchport
+!
+interface Ethernet4/4/4
+   no switchport
+!
+interface Ethernet4/4/5
+   no switchport
+!
+interface Ethernet4/4/7
+   no switchport
+!
+interface Ethernet4/5/1
+   no switchport
+!
+interface Ethernet4/5/2
+   no switchport
+!
+interface Ethernet4/5/3
+   no switchport
+!
+interface Ethernet4/5/4
+   no switchport
+!
+interface Ethernet4/5/5
+   no switchport
+!
+interface Ethernet4/5/7
+   no switchport
+!
+interface Ethernet4/6/1
+   no switchport
+!
+interface Ethernet4/6/2
+   no switchport
+!
+interface Ethernet4/6/3
+   no switchport
+!
+interface Ethernet4/6/4
+   no switchport
+!
+interface Ethernet4/6/5
+   no switchport
+!
+interface Ethernet4/6/7
+   no switchport
+!
+interface Ethernet4/7/1
+   no switchport
+!
+interface Ethernet4/7/2
+   no switchport
+!
+interface Ethernet4/7/3
+   no switchport
+!
+interface Ethernet4/7/4
+   no switchport
+!
+interface Ethernet4/7/5
+   no switchport
+!
+interface Ethernet4/7/7
+   no switchport
+!
+interface Ethernet4/8/1
+   no switchport
+!
+interface Ethernet4/8/2
+   no switchport
+!
+interface Ethernet4/8/3
+   no switchport
+!
+interface Ethernet4/8/4
+   no switchport
+!
+interface Ethernet4/8/5
+   no switchport
+!
+interface Ethernet4/8/7
+   no switchport
+!
+interface Ethernet4/9/1
+   no switchport
+!
+interface Ethernet4/9/2
+   no switchport
+!
+interface Ethernet4/9/3
+   no switchport
+!
+interface Ethernet4/9/4
+   no switchport
+!
+interface Ethernet4/9/5
+   no switchport
+!
+interface Ethernet4/9/7
+   no switchport
+!
+interface Ethernet4/10/1
+   no switchport
+!
+interface Ethernet4/10/2
+   no switchport
+!
+interface Ethernet4/10/3
+   no switchport
+!
+interface Ethernet4/10/4
+   no switchport
+!
+interface Ethernet4/10/5
+   no switchport
+!
+interface Ethernet4/10/7
+   no switchport
+!
+interface Ethernet4/11/1
+   no switchport
+!
+interface Ethernet4/11/2
+   no switchport
+!
+interface Ethernet4/11/3
+   no switchport
+!
+interface Ethernet4/11/4
+   no switchport
+!
+interface Ethernet4/11/5
+   no switchport
+!
+interface Ethernet4/11/7
+   no switchport
+!
+interface Ethernet4/12/1
+   no switchport
+!
+interface Ethernet4/12/2
+   no switchport
+!
+interface Ethernet4/12/3
+   no switchport
+!
+interface Ethernet4/12/4
+   no switchport
+!
+interface Ethernet4/12/5
+   no switchport
+!
+interface Ethernet4/12/7
+   no switchport
+!
+interface Ethernet4/13/1
+   no switchport
+!
+interface Ethernet4/13/2
+   no switchport
+!
+interface Ethernet4/13/3
+   no switchport
+!
+interface Ethernet4/13/4
+   no switchport
+!
+interface Ethernet4/13/5
+   no switchport
+!
+interface Ethernet4/13/7
+   no switchport
+!
+interface Ethernet4/14/1
+   no switchport
+!
+interface Ethernet4/14/2
+   no switchport
+!
+interface Ethernet4/14/3
+   no switchport
+!
+interface Ethernet4/14/4
+   no switchport
+!
+interface Ethernet4/14/5
+   no switchport
+!
+interface Ethernet4/14/7
+   no switchport
+!
+interface Ethernet4/15/1
+   no switchport
+!
+interface Ethernet4/15/2
+   no switchport
+!
+interface Ethernet4/15/3
+   no switchport
+!
+interface Ethernet4/15/4
+   no switchport
+!
+interface Ethernet4/15/5
+   no switchport
+!
+interface Ethernet4/15/7
+   no switchport
+!
+interface Ethernet4/16/1
+   no switchport
+!
+interface Ethernet4/16/2
+   no switchport
+!
+interface Ethernet4/16/3
+   no switchport
+!
+interface Ethernet4/16/4
+   no switchport
+!
+interface Ethernet4/16/5
+   no switchport
+!
+interface Ethernet4/16/7
+   no switchport
+!
+interface Ethernet4/17/1
+   no switchport
+!
+interface Ethernet4/17/2
+   no switchport
+!
+interface Ethernet4/17/3
+   no switchport
+!
+interface Ethernet4/17/4
+   no switchport
+!
+interface Ethernet4/17/5
+   no switchport
+!
+interface Ethernet4/17/7
+   no switchport
+!
+interface Ethernet4/18/1
+   no switchport
+!
+interface Ethernet4/18/2
+   no switchport
+!
+interface Ethernet4/18/3
+   no switchport
+!
+interface Ethernet4/18/4
+   no switchport
+!
+interface Ethernet4/18/5
+   no switchport
+!
+interface Ethernet4/18/7
+   no switchport
+!
+interface Ethernet4/19/1
+   no switchport
+!
+interface Ethernet4/19/2
+   no switchport
+!
+interface Ethernet4/19/3
+   no switchport
+!
+interface Ethernet4/19/4
+   no switchport
+!
+interface Ethernet4/19/5
+   no switchport
+!
+interface Ethernet4/19/7
+   no switchport
+!
+interface Ethernet4/20/1
+   no switchport
+!
+interface Ethernet4/20/2
+   no switchport
+!
+interface Ethernet4/20/3
+   no switchport
+!
+interface Ethernet4/20/4
+   no switchport
+!
+interface Ethernet4/20/5
+   no switchport
+!
+interface Ethernet4/20/7
+   no switchport
+!
+interface Ethernet4/21/1
+   no switchport
+!
+interface Ethernet4/21/2
+   no switchport
+!
+interface Ethernet4/21/3
+   no switchport
+!
+interface Ethernet4/21/4
+   no switchport
+!
+interface Ethernet4/21/5
+   no switchport
+!
+interface Ethernet4/21/7
+   no switchport
+!
+interface Ethernet4/22/1
+   no switchport
+!
+interface Ethernet4/22/2
+   no switchport
+!
+interface Ethernet4/22/3
+   no switchport
+!
+interface Ethernet4/22/4
+   no switchport
+!
+interface Ethernet4/22/5
+   no switchport
+!
+interface Ethernet4/22/7
+   no switchport
+!
+interface Ethernet4/23/1
+   no switchport
+!
+interface Ethernet4/23/2
+   no switchport
+!
+interface Ethernet4/23/3
+   no switchport
+!
+interface Ethernet4/23/4
+   no switchport
+!
+interface Ethernet4/23/5
+   no switchport
+!
+interface Ethernet4/23/7
+   no switchport
+!
+interface Ethernet4/24/1
+   no switchport
+!
+interface Ethernet4/24/2
+   no switchport
+!
+interface Ethernet4/24/3
+   no switchport
+!
+interface Ethernet4/24/4
+   no switchport
+!
+interface Ethernet4/24/5
+   no switchport
+!
+interface Ethernet4/24/7
+   no switchport
+!
+interface Ethernet4/25/1
+   no switchport
+!
+interface Ethernet4/25/2
+   no switchport
+!
+interface Ethernet4/25/3
+   no switchport
+!
+interface Ethernet4/25/4
+   no switchport
+!
+interface Ethernet4/25/5
+   no switchport
+!
+interface Ethernet4/25/7
+   no switchport
+!
+interface Ethernet4/26/1
+   no switchport
+!
+interface Ethernet4/26/2
+   no switchport
+!
+interface Ethernet4/26/3
+   no switchport
+!
+interface Ethernet4/26/4
+   no switchport
+!
+interface Ethernet4/26/5
+   no switchport
+!
+interface Ethernet4/26/7
+   no switchport
+!
+interface Ethernet4/27/1
+   no switchport
+!
+interface Ethernet4/27/2
+   no switchport
+!
+interface Ethernet4/27/3
+   no switchport
+!
+interface Ethernet4/27/4
+   no switchport
+!
+interface Ethernet4/27/5
+   no switchport
+!
+interface Ethernet4/27/7
+   no switchport
+!
+interface Ethernet4/28/1
+   no switchport
+!
+interface Ethernet4/28/2
+   no switchport
+!
+interface Ethernet4/28/3
+   no switchport
+!
+interface Ethernet4/28/4
+   no switchport
+!
+interface Ethernet4/28/5
+   no switchport
+!
+interface Ethernet4/28/7
+   no switchport
+!
+interface Ethernet4/29/1
+   no switchport
+!
+interface Ethernet4/29/2
+   no switchport
+!
+interface Ethernet4/29/3
+   no switchport
+!
+interface Ethernet4/29/4
+   no switchport
+!
+interface Ethernet4/29/5
+   no switchport
+!
+interface Ethernet4/29/7
+   no switchport
+!
+interface Ethernet4/30/1
+   no switchport
+!
+interface Ethernet4/30/2
+   no switchport
+!
+interface Ethernet4/30/3
+   no switchport
+!
+interface Ethernet4/30/4
+   no switchport
+!
+interface Ethernet4/30/5
+   no switchport
+!
+interface Ethernet4/30/7
+   no switchport
+!
+interface Ethernet4/31/1
+   no switchport
+!
+interface Ethernet4/31/2
+   no switchport
+!
+interface Ethernet4/31/3
+   no switchport
+!
+interface Ethernet4/31/4
+   no switchport
+!
+interface Ethernet4/31/5
+   no switchport
+!
+interface Ethernet4/31/7
+   no switchport
+!
+interface Ethernet4/32/1
+   description P2P_C160064-037B371A_Ethernet50/1
+   mtu 1500
+   no switchport
+   ip address 100.83.93.10/31
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/32/2
+   description P2P_C160064-037B205A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.34/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/32/3
+   description P2P_C160064-037B206A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.68/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/32/4
+   description P2P_C160064-004B201A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.146/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/32/5
+   no switchport
+!
+interface Ethernet4/32/7
+   no switchport
+!
+interface Ethernet4/33/1
+   description P2P_C160064-006B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.180/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/33/2
+   description P2P_C160064-008B201A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.214/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/33/3
+   description P2P_C160064-008B201A_Ethernet53/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.208/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/33/4
+   description P2P_C160064-010B201A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.242/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/33/5
+   no switchport
+!
+interface Ethernet4/33/7
+   no switchport
+!
+interface Ethernet4/34/1
+   no switchport
+!
+interface Ethernet4/34/2
+   no switchport
+!
+interface Ethernet4/34/3
+   no switchport
+!
+interface Ethernet4/34/4
+   no switchport
+!
+interface Ethernet4/34/5
+   no switchport
+!
+interface Ethernet4/34/7
+   no switchport
+!
+interface Ethernet4/35/1
+   description P2P_C160064-013B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.0/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/35/2
+   description P2P_C160064-014B202A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.54/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/35/3
+   description P2P_C160064-014B202A_Ethernet53/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.48/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/35/4
+   description P2P_C160064-015B202A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.84/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/35/5
+   no switchport
+!
+interface Ethernet4/35/7
+   no switchport
+!
+interface Ethernet4/36/1
+   description P2P_C160064-015B201A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.66/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/36/2
+   description P2P_C160064-017B201A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.144/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/36/3
+   description P2P_C160064-051B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.210/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/36/4
+   description P2P_C160064-056B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.242/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet4/36/5
+   no switchport
+!
+interface Ethernet4/36/7
+   no switchport
+!
+interface Ethernet5/1/1
+   no switchport
+!
+interface Ethernet5/1/2
+   no switchport
+!
+interface Ethernet5/1/3
+   no switchport
+!
+interface Ethernet5/1/4
+   no switchport
+!
+interface Ethernet5/1/5
+   no switchport
+!
+interface Ethernet5/1/7
+   no switchport
+!
+interface Ethernet5/2/1
+   no switchport
+!
+interface Ethernet5/2/2
+   no switchport
+!
+interface Ethernet5/2/3
+   no switchport
+!
+interface Ethernet5/2/4
+   no switchport
+!
+interface Ethernet5/2/5
+   no switchport
+!
+interface Ethernet5/2/7
+   no switchport
+!
+interface Ethernet5/3/1
+   no switchport
+!
+interface Ethernet5/3/2
+   no switchport
+!
+interface Ethernet5/3/3
+   no switchport
+!
+interface Ethernet5/3/4
+   no switchport
+!
+interface Ethernet5/3/5
+   no switchport
+!
+interface Ethernet5/3/7
+   no switchport
+!
+interface Ethernet5/4/1
+   no switchport
+!
+interface Ethernet5/4/2
+   no switchport
+!
+interface Ethernet5/4/3
+   no switchport
+!
+interface Ethernet5/4/4
+   no switchport
+!
+interface Ethernet5/4/5
+   no switchport
+!
+interface Ethernet5/4/7
+   no switchport
+!
+interface Ethernet5/5/1
+   no switchport
+!
+interface Ethernet5/5/2
+   no switchport
+!
+interface Ethernet5/5/3
+   no switchport
+!
+interface Ethernet5/5/4
+   no switchport
+!
+interface Ethernet5/5/5
+   no switchport
+!
+interface Ethernet5/5/7
+   no switchport
+!
+interface Ethernet5/6/1
+   no switchport
+!
+interface Ethernet5/6/2
+   no switchport
+!
+interface Ethernet5/6/3
+   no switchport
+!
+interface Ethernet5/6/4
+   no switchport
+!
+interface Ethernet5/6/5
+   no switchport
+!
+interface Ethernet5/6/7
+   no switchport
+!
+interface Ethernet5/7/1
+   no switchport
+!
+interface Ethernet5/7/2
+   no switchport
+!
+interface Ethernet5/7/3
+   no switchport
+!
+interface Ethernet5/7/4
+   no switchport
+!
+interface Ethernet5/7/5
+   no switchport
+!
+interface Ethernet5/7/7
+   no switchport
+!
+interface Ethernet5/8/1
+   no switchport
+!
+interface Ethernet5/8/2
+   no switchport
+!
+interface Ethernet5/8/3
+   no switchport
+!
+interface Ethernet5/8/4
+   no switchport
+!
+interface Ethernet5/8/5
+   no switchport
+!
+interface Ethernet5/8/7
+   no switchport
+!
+interface Ethernet5/9/1
+   no switchport
+!
+interface Ethernet5/9/2
+   no switchport
+!
+interface Ethernet5/9/3
+   no switchport
+!
+interface Ethernet5/9/4
+   no switchport
+!
+interface Ethernet5/9/5
+   no switchport
+!
+interface Ethernet5/9/7
+   no switchport
+!
+interface Ethernet5/10/1
+   no switchport
+!
+interface Ethernet5/10/2
+   no switchport
+!
+interface Ethernet5/10/3
+   no switchport
+!
+interface Ethernet5/10/4
+   no switchport
+!
+interface Ethernet5/10/5
+   no switchport
+!
+interface Ethernet5/10/7
+   no switchport
+!
+interface Ethernet5/11/1
+   no switchport
+!
+interface Ethernet5/11/2
+   no switchport
+!
+interface Ethernet5/11/3
+   no switchport
+!
+interface Ethernet5/11/4
+   no switchport
+!
+interface Ethernet5/11/5
+   no switchport
+!
+interface Ethernet5/11/7
+   no switchport
+!
+interface Ethernet5/12/1
+   no switchport
+!
+interface Ethernet5/12/2
+   no switchport
+!
+interface Ethernet5/12/3
+   no switchport
+!
+interface Ethernet5/12/4
+   no switchport
+!
+interface Ethernet5/12/5
+   no switchport
+!
+interface Ethernet5/12/7
+   no switchport
+!
+interface Ethernet5/13/1
+   no switchport
+!
+interface Ethernet5/13/2
+   no switchport
+!
+interface Ethernet5/13/3
+   no switchport
+!
+interface Ethernet5/13/4
+   no switchport
+!
+interface Ethernet5/13/5
+   no switchport
+!
+interface Ethernet5/13/7
+   no switchport
+!
+interface Ethernet5/14/1
+   no switchport
+!
+interface Ethernet5/14/2
+   no switchport
+!
+interface Ethernet5/14/3
+   no switchport
+!
+interface Ethernet5/14/4
+   no switchport
+!
+interface Ethernet5/14/5
+   no switchport
+!
+interface Ethernet5/14/7
+   no switchport
+!
+interface Ethernet5/15/1
+   no switchport
+!
+interface Ethernet5/15/2
+   no switchport
+!
+interface Ethernet5/15/3
+   no switchport
+!
+interface Ethernet5/15/4
+   no switchport
+!
+interface Ethernet5/15/5
+   no switchport
+!
+interface Ethernet5/15/7
+   no switchport
+!
+interface Ethernet5/16/1
+   no switchport
+!
+interface Ethernet5/16/2
+   no switchport
+!
+interface Ethernet5/16/3
+   no switchport
+!
+interface Ethernet5/16/4
+   no switchport
+!
+interface Ethernet5/16/5
+   no switchport
+!
+interface Ethernet5/16/7
+   no switchport
+!
+interface Ethernet5/17/1
+   no switchport
+!
+interface Ethernet5/17/2
+   no switchport
+!
+interface Ethernet5/17/3
+   no switchport
+!
+interface Ethernet5/17/4
+   no switchport
+!
+interface Ethernet5/17/5
+   no switchport
+!
+interface Ethernet5/17/7
+   no switchport
+!
+interface Ethernet5/18/1
+   no switchport
+!
+interface Ethernet5/18/2
+   no switchport
+!
+interface Ethernet5/18/3
+   no switchport
+!
+interface Ethernet5/18/4
+   no switchport
+!
+interface Ethernet5/18/5
+   no switchport
+!
+interface Ethernet5/18/7
+   no switchport
+!
+interface Ethernet5/19/1
+   no switchport
+!
+interface Ethernet5/19/2
+   no switchport
+!
+interface Ethernet5/19/3
+   no switchport
+!
+interface Ethernet5/19/4
+   no switchport
+!
+interface Ethernet5/19/5
+   no switchport
+!
+interface Ethernet5/19/7
+   no switchport
+!
+interface Ethernet5/20/1
+   no switchport
+!
+interface Ethernet5/20/2
+   no switchport
+!
+interface Ethernet5/20/3
+   no switchport
+!
+interface Ethernet5/20/4
+   no switchport
+!
+interface Ethernet5/20/5
+   no switchport
+!
+interface Ethernet5/20/7
+   no switchport
+!
+interface Ethernet5/21/1
+   no switchport
+!
+interface Ethernet5/21/2
+   no switchport
+!
+interface Ethernet5/21/3
+   no switchport
+!
+interface Ethernet5/21/4
+   no switchport
+!
+interface Ethernet5/21/5
+   no switchport
+!
+interface Ethernet5/21/7
+   no switchport
+!
+interface Ethernet5/22/1
+   no switchport
+!
+interface Ethernet5/22/2
+   no switchport
+!
+interface Ethernet5/22/3
+   no switchport
+!
+interface Ethernet5/22/4
+   no switchport
+!
+interface Ethernet5/22/5
+   no switchport
+!
+interface Ethernet5/22/7
+   no switchport
+!
+interface Ethernet5/23/1
+   no switchport
+!
+interface Ethernet5/23/2
+   no switchport
+!
+interface Ethernet5/23/3
+   no switchport
+!
+interface Ethernet5/23/4
+   no switchport
+!
+interface Ethernet5/23/5
+   no switchport
+!
+interface Ethernet5/23/7
+   no switchport
+!
+interface Ethernet5/24/1
+   no switchport
+!
+interface Ethernet5/24/2
+   no switchport
+!
+interface Ethernet5/24/3
+   no switchport
+!
+interface Ethernet5/24/4
+   no switchport
+!
+interface Ethernet5/24/5
+   no switchport
+!
+interface Ethernet5/24/7
+   no switchport
+!
+interface Ethernet5/25/1
+   no switchport
+!
+interface Ethernet5/25/2
+   no switchport
+!
+interface Ethernet5/25/3
+   no switchport
+!
+interface Ethernet5/25/4
+   no switchport
+!
+interface Ethernet5/25/5
+   no switchport
+!
+interface Ethernet5/25/7
+   no switchport
+!
+interface Ethernet5/26/1
+   no switchport
+!
+interface Ethernet5/26/2
+   no switchport
+!
+interface Ethernet5/26/3
+   no switchport
+!
+interface Ethernet5/26/4
+   no switchport
+!
+interface Ethernet5/26/5
+   no switchport
+!
+interface Ethernet5/26/7
+   no switchport
+!
+interface Ethernet5/27/1
+   no switchport
+!
+interface Ethernet5/27/2
+   no switchport
+!
+interface Ethernet5/27/3
+   no switchport
+!
+interface Ethernet5/27/4
+   no switchport
+!
+interface Ethernet5/27/5
+   no switchport
+!
+interface Ethernet5/27/7
+   no switchport
+!
+interface Ethernet5/28/1
+   no switchport
+!
+interface Ethernet5/28/2
+   no switchport
+!
+interface Ethernet5/28/3
+   no switchport
+!
+interface Ethernet5/28/4
+   no switchport
+!
+interface Ethernet5/28/5
+   no switchport
+!
+interface Ethernet5/28/7
+   no switchport
+!
+interface Ethernet5/29/1
+   no switchport
+!
+interface Ethernet5/29/2
+   no switchport
+!
+interface Ethernet5/29/3
+   no switchport
+!
+interface Ethernet5/29/4
+   no switchport
+!
+interface Ethernet5/29/5
+   no switchport
+!
+interface Ethernet5/29/7
+   no switchport
+!
+interface Ethernet5/30/1
+   no switchport
+!
+interface Ethernet5/30/2
+   no switchport
+!
+interface Ethernet5/30/3
+   no switchport
+!
+interface Ethernet5/30/4
+   no switchport
+!
+interface Ethernet5/30/5
+   no switchport
+!
+interface Ethernet5/30/7
+   no switchport
+!
+interface Ethernet5/31/1
+   no switchport
+!
+interface Ethernet5/31/2
+   no switchport
+!
+interface Ethernet5/31/3
+   no switchport
+!
+interface Ethernet5/31/4
+   no switchport
+!
+interface Ethernet5/31/5
+   no switchport
+!
+interface Ethernet5/31/7
+   no switchport
+!
+interface Ethernet5/32/1
+   no switchport
+!
+interface Ethernet5/32/2
+   no switchport
+!
+interface Ethernet5/32/3
+   no switchport
+!
+interface Ethernet5/32/4
+   no switchport
+!
+interface Ethernet5/32/5
+   no switchport
+!
+interface Ethernet5/32/7
+   no switchport
+!
+interface Ethernet5/33/1
+   no switchport
+!
+interface Ethernet5/33/2
+   no switchport
+!
+interface Ethernet5/33/3
+   description P2P_C160064-037B206A_Ethernet53/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.64/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/33/4
+   description P2P_C160064-004B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.148/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/33/5
+   no switchport
+!
+interface Ethernet5/33/7
+   no switchport
+!
+interface Ethernet5/34/1
+   description P2P_C160064-006B201A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.182/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/34/2
+   description P2P_C160064-006B201A_Ethernet53/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.176/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/34/3
+   description P2P_C160064-008B201A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.210/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/34/4
+   description P2P_C160064-010B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.244/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/34/5
+   no switchport
+!
+interface Ethernet5/34/7
+   no switchport
+!
+interface Ethernet5/35/1
+   description P2P_C160064-013B201A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.2/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/35/2
+   description P2P_C160064-014B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.32/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/35/3
+   description P2P_C160064-014B202A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.50/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/35/4
+   description P2P_C160064-015B203A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.96/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/35/5
+   no switchport
+!
+interface Ethernet5/35/7
+   no switchport
+!
+interface Ethernet5/36/1
+   description P2P_C160064-015B202A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.80/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/36/2
+   description P2P_C160064-017B201A_Ethernet55/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.146/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/36/3
+   description P2P_C160064-046B201A_Ethernet54/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.160/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/36/4
+   description P2P_C160064-056B201A_Ethernet56/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.244/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet5/36/5
+   no switchport
+!
+interface Ethernet5/36/7
+   no switchport
+!
+interface Ethernet6/1/1
+   description P2P_C160064-037B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.0/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/1/2
+   no switchport
+!
+interface Ethernet6/1/3
+   no switchport
+!
+interface Ethernet6/1/4
+   no switchport
+!
+interface Ethernet6/1/5
+   no switchport
+!
+interface Ethernet6/1/7
+   no switchport
+!
+interface Ethernet6/2/1
+   description P2P_C160064-037B201A_Ethernet2/3/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.4/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/2/2
+   no switchport
+!
+interface Ethernet6/2/3
+   no switchport
+!
+interface Ethernet6/2/4
+   no switchport
+!
+interface Ethernet6/2/5
+   no switchport
+!
+interface Ethernet6/2/7
+   no switchport
+!
+interface Ethernet6/3/1
+   description P2P_C160064-037B201A_Ethernet3/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.8/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/3/2
+   no switchport
+!
+interface Ethernet6/3/3
+   no switchport
+!
+interface Ethernet6/3/4
+   no switchport
+!
+interface Ethernet6/3/5
+   no switchport
+!
+interface Ethernet6/3/7
+   no switchport
+!
+interface Ethernet6/4/1
+   description P2P_C160064-037B202A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.16/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/4/2
+   no switchport
+!
+interface Ethernet6/4/3
+   no switchport
+!
+interface Ethernet6/4/4
+   no switchport
+!
+interface Ethernet6/4/5
+   no switchport
+!
+interface Ethernet6/4/7
+   no switchport
+!
+interface Ethernet6/5/1
+   description P2P_C160064-037B202A_Ethernet2/3/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.20/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/5/2
+   no switchport
+!
+interface Ethernet6/5/3
+   no switchport
+!
+interface Ethernet6/5/4
+   no switchport
+!
+interface Ethernet6/5/5
+   no switchport
+!
+interface Ethernet6/5/7
+   no switchport
+!
+interface Ethernet6/6/1
+   description P2P_C160064-037B202A_Ethernet3/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.24/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/6/2
+   no switchport
+!
+interface Ethernet6/6/3
+   no switchport
+!
+interface Ethernet6/6/4
+   no switchport
+!
+interface Ethernet6/6/5
+   no switchport
+!
+interface Ethernet6/6/7
+   no switchport
+!
+interface Ethernet6/7/1
+   description P2P_C160064-037B203A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.48/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/7/2
+   no switchport
+!
+interface Ethernet6/7/3
+   no switchport
+!
+interface Ethernet6/7/4
+   no switchport
+!
+interface Ethernet6/7/5
+   no switchport
+!
+interface Ethernet6/7/7
+   no switchport
+!
+interface Ethernet6/8/1
+   description P2P_C160064-037B203A_Ethernet2/3/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.52/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/8/2
+   no switchport
+!
+interface Ethernet6/8/3
+   no switchport
+!
+interface Ethernet6/8/4
+   no switchport
+!
+interface Ethernet6/8/5
+   no switchport
+!
+interface Ethernet6/8/7
+   no switchport
+!
+interface Ethernet6/9/1
+   description P2P_C160064-037B204A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.82/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/9/2
+   no switchport
+!
+interface Ethernet6/9/3
+   no switchport
+!
+interface Ethernet6/9/4
+   no switchport
+!
+interface Ethernet6/9/5
+   no switchport
+!
+interface Ethernet6/9/7
+   no switchport
+!
+interface Ethernet6/10/1
+   no switchport
+!
+interface Ethernet6/10/2
+   no switchport
+!
+interface Ethernet6/10/3
+   no switchport
+!
+interface Ethernet6/10/4
+   no switchport
+!
+interface Ethernet6/10/5
+   no switchport
+!
+interface Ethernet6/10/7
+   no switchport
+!
+interface Ethernet6/11/1
+   description P2P_C160064-051B202A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.224/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/11/2
+   no switchport
+!
+interface Ethernet6/11/3
+   no switchport
+!
+interface Ethernet6/11/4
+   no switchport
+!
+interface Ethernet6/11/5
+   no switchport
+!
+interface Ethernet6/11/7
+   no switchport
+!
+interface Ethernet6/12/1
+   description P2P_C160064-050B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.192/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/12/2
+   no switchport
+!
+interface Ethernet6/12/3
+   no switchport
+!
+interface Ethernet6/12/4
+   no switchport
+!
+interface Ethernet6/12/5
+   no switchport
+!
+interface Ethernet6/12/7
+   no switchport
+!
+interface Ethernet6/13/1
+   no switchport
+!
+interface Ethernet6/13/2
+   no switchport
+!
+interface Ethernet6/13/3
+   no switchport
+!
+interface Ethernet6/13/4
+   no switchport
+!
+interface Ethernet6/13/5
+   no switchport
+!
+interface Ethernet6/13/7
+   no switchport
+!
+interface Ethernet6/14/1
+   description P2P_C160064-016B202A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.128/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/14/2
+   no switchport
+!
+interface Ethernet6/14/3
+   no switchport
+!
+interface Ethernet6/14/4
+   no switchport
+!
+interface Ethernet6/14/5
+   no switchport
+!
+interface Ethernet6/14/7
+   no switchport
+!
+interface Ethernet6/15/1
+   description P2P_C160064-016B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.112/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/15/2
+   no switchport
+!
+interface Ethernet6/15/3
+   no switchport
+!
+interface Ethernet6/15/4
+   no switchport
+!
+interface Ethernet6/15/5
+   no switchport
+!
+interface Ethernet6/15/7
+   no switchport
+!
+interface Ethernet6/16/1
+   description P2P_C160064-013B202A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.16/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/16/2
+   no switchport
+!
+interface Ethernet6/16/3
+   no switchport
+!
+interface Ethernet6/16/4
+   no switchport
+!
+interface Ethernet6/16/5
+   no switchport
+!
+interface Ethernet6/16/7
+   no switchport
+!
+interface Ethernet6/17/1
+   description P2P_C160064-009B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.224/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/17/2
+   no switchport
+!
+interface Ethernet6/17/3
+   no switchport
+!
+interface Ethernet6/17/4
+   no switchport
+!
+interface Ethernet6/17/5
+   no switchport
+!
+interface Ethernet6/17/7
+   no switchport
+!
+interface Ethernet6/18/1
+   description P2P_C160064-007B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.192/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/18/2
+   no switchport
+!
+interface Ethernet6/18/3
+   no switchport
+!
+interface Ethernet6/18/4
+   no switchport
+!
+interface Ethernet6/18/5
+   no switchport
+!
+interface Ethernet6/18/7
+   no switchport
+!
+interface Ethernet6/19/1
+   description P2P_C160064-005B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.160/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/19/2
+   no switchport
+!
+interface Ethernet6/19/3
+   no switchport
+!
+interface Ethernet6/19/4
+   no switchport
+!
+interface Ethernet6/19/5
+   no switchport
+!
+interface Ethernet6/19/7
+   no switchport
+!
+interface Ethernet6/20/1
+   description P2P_C160064-003B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.128/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/20/2
+   no switchport
+!
+interface Ethernet6/20/3
+   no switchport
+!
+interface Ethernet6/20/4
+   no switchport
+!
+interface Ethernet6/20/5
+   no switchport
+!
+interface Ethernet6/20/7
+   no switchport
+!
+interface Ethernet6/21/1
+   description P2P_C160064-002B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.112/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/21/2
+   no switchport
+!
+interface Ethernet6/21/3
+   no switchport
+!
+interface Ethernet6/21/4
+   no switchport
+!
+interface Ethernet6/21/5
+   no switchport
+!
+interface Ethernet6/21/7
+   no switchport
+!
+interface Ethernet6/22/1
+   description P2P_C160064-002B201A_Ethernet2/3/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.116/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/22/2
+   no switchport
+!
+interface Ethernet6/22/3
+   no switchport
+!
+interface Ethernet6/22/4
+   no switchport
+!
+interface Ethernet6/22/5
+   no switchport
+!
+interface Ethernet6/22/7
+   no switchport
+!
+interface Ethernet6/23/1
+   description P2P_C160064-001B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.96/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/23/2
+   no switchport
+!
+interface Ethernet6/23/3
+   no switchport
+!
+interface Ethernet6/23/4
+   no switchport
+!
+interface Ethernet6/23/5
+   no switchport
+!
+interface Ethernet6/23/7
+   no switchport
+!
+interface Ethernet6/24/1
+   description P2P_C160064-002B201A_Ethernet3/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.120/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/24/2
+   no switchport
+!
+interface Ethernet6/24/3
+   no switchport
+!
+interface Ethernet6/24/4
+   no switchport
+!
+interface Ethernet6/24/5
+   no switchport
+!
+interface Ethernet6/24/7
+   no switchport
+!
+interface Ethernet6/25/1
+   description P2P_C160064-037B380A_Ethernet34/1
+   mtu 1500
+   no switchport
+   ip address 100.83.93.22/31
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/25/2
+   no switchport
+!
+interface Ethernet6/25/3
+   no switchport
+!
+interface Ethernet6/25/4
+   no switchport
+!
+interface Ethernet6/25/5
+   no switchport
+!
+interface Ethernet6/25/7
+   no switchport
+!
+interface Ethernet6/26/1
+   no switchport
+!
+interface Ethernet6/26/2
+   no switchport
+!
+interface Ethernet6/26/3
+   no switchport
+!
+interface Ethernet6/26/4
+   no switchport
+!
+interface Ethernet6/26/5
+   no switchport
+!
+interface Ethernet6/26/7
+   no switchport
+!
+interface Ethernet6/27/1
+   no switchport
+!
+interface Ethernet6/27/2
+   no switchport
+!
+interface Ethernet6/27/3
+   no switchport
+!
+interface Ethernet6/27/4
+   no switchport
+!
+interface Ethernet6/27/5
+   no switchport
+!
+interface Ethernet6/27/7
+   no switchport
+!
+interface Ethernet6/28/1
+   description P2P_C160064-049B201A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.176/31
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet6/28/2
+   no switchport
+!
+interface Ethernet6/28/3
+   no switchport
+!
+interface Ethernet6/28/4
+   no switchport
+!
+interface Ethernet6/28/5
+   no switchport
+!
+interface Ethernet6/28/7
+   no switchport
+!
+interface Ethernet6/29/1
+   no switchport
+!
+interface Ethernet6/29/2
+   no switchport
+!
+interface Ethernet6/29/3
+   no switchport
+!
+interface Ethernet6/29/4
+   no switchport
+!
+interface Ethernet6/29/5
+   no switchport
+!
+interface Ethernet6/29/7
+   no switchport
+!
+interface Ethernet6/30/1
+   no switchport
+!
+interface Ethernet6/30/2
+   no switchport
+!
+interface Ethernet6/30/3
+   no switchport
+!
+interface Ethernet6/30/4
+   no switchport
+!
+interface Ethernet6/30/5
+   no switchport
+!
+interface Ethernet6/30/7
+   no switchport
+!
+interface Ethernet6/31/1
+   no switchport
+!
+interface Ethernet6/31/2
+   no switchport
+!
+interface Ethernet6/31/3
+   no switchport
+!
+interface Ethernet6/31/4
+   no switchport
+!
+interface Ethernet6/31/5
+   no switchport
+!
+interface Ethernet6/31/7
+   no switchport
+!
+interface Ethernet6/32/1
+   no switchport
+!
+interface Ethernet6/32/2
+   no switchport
+!
+interface Ethernet6/32/3
+   no switchport
+!
+interface Ethernet6/32/4
+   no switchport
+!
+interface Ethernet6/32/5
+   no switchport
+!
+interface Ethernet6/32/7
+   no switchport
+!
+interface Ethernet6/33/1
+   no switchport
+!
+interface Ethernet6/33/2
+   no switchport
+!
+interface Ethernet6/33/3
+   no switchport
+!
+interface Ethernet6/33/4
+   no switchport
+!
+interface Ethernet6/33/5
+   no switchport
+!
+interface Ethernet6/33/7
+   no switchport
+!
+interface Ethernet6/34/1
+   no switchport
+!
+interface Ethernet6/34/2
+   no switchport
+!
+interface Ethernet6/34/3
+   no switchport
+!
+interface Ethernet6/34/4
+   no switchport
+!
+interface Ethernet6/34/5
+   no switchport
+!
+interface Ethernet6/34/7
+   no switchport
+!
+interface Ethernet6/35/1
+   no switchport
+!
+interface Ethernet6/35/2
+   no switchport
+!
+interface Ethernet6/35/3
+   no switchport
+!
+interface Ethernet6/35/4
+   no switchport
+!
+interface Ethernet6/35/5
+   no switchport
+!
+interface Ethernet6/35/7
+   no switchport
+!
+interface Ethernet6/36/1
+   no switchport
+!
+interface Ethernet6/36/2
+   no switchport
+!
+interface Ethernet6/36/3
+   no switchport
+!
+interface Ethernet6/36/4
+   no switchport
+!
+interface Ethernet6/36/5
+   no switchport
+!
+interface Ethernet6/36/7
+   no switchport
+!
+interface Ethernet7/1/1
+   description P2P_C160064-037B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.2/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/1/2
+   no switchport
+!
+interface Ethernet7/1/3
+   no switchport
+!
+interface Ethernet7/1/4
+   no switchport
+!
+interface Ethernet7/1/5
+   no switchport
+!
+interface Ethernet7/1/7
+   no switchport
+!
+interface Ethernet7/2/1
+   description P2P_C160064-037B201A_Ethernet2/4/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.6/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/2/2
+   no switchport
+!
+interface Ethernet7/2/3
+   no switchport
+!
+interface Ethernet7/2/4
+   no switchport
+!
+interface Ethernet7/2/5
+   no switchport
+!
+interface Ethernet7/2/7
+   no switchport
+!
+interface Ethernet7/3/1
+   description P2P_C160064-037B201A_Ethernet3/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.10/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/3/2
+   no switchport
+!
+interface Ethernet7/3/3
+   no switchport
+!
+interface Ethernet7/3/4
+   no switchport
+!
+interface Ethernet7/3/5
+   no switchport
+!
+interface Ethernet7/3/7
+   no switchport
+!
+interface Ethernet7/4/1
+   description P2P_C160064-037B202A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.18/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/4/2
+   no switchport
+!
+interface Ethernet7/4/3
+   no switchport
+!
+interface Ethernet7/4/4
+   no switchport
+!
+interface Ethernet7/4/5
+   no switchport
+!
+interface Ethernet7/4/7
+   no switchport
+!
+interface Ethernet7/5/1
+   description P2P_C160064-037B202A_Ethernet2/4/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.22/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/5/2
+   no switchport
+!
+interface Ethernet7/5/3
+   no switchport
+!
+interface Ethernet7/5/4
+   no switchport
+!
+interface Ethernet7/5/5
+   no switchport
+!
+interface Ethernet7/5/7
+   no switchport
+!
+interface Ethernet7/6/1
+   description P2P_C160064-037B202A_Ethernet3/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.26/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/6/2
+   no switchport
+!
+interface Ethernet7/6/3
+   no switchport
+!
+interface Ethernet7/6/4
+   no switchport
+!
+interface Ethernet7/6/5
+   no switchport
+!
+interface Ethernet7/6/7
+   no switchport
+!
+interface Ethernet7/7/1
+   description P2P_C160064-037B203A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.50/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/7/2
+   no switchport
+!
+interface Ethernet7/7/3
+   no switchport
+!
+interface Ethernet7/7/4
+   no switchport
+!
+interface Ethernet7/7/5
+   no switchport
+!
+interface Ethernet7/7/7
+   no switchport
+!
+interface Ethernet7/8/1
+   description P2P_C160064-037B204A_Ethernet2/1/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.80/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/8/2
+   no switchport
+!
+interface Ethernet7/8/3
+   no switchport
+!
+interface Ethernet7/8/4
+   no switchport
+!
+interface Ethernet7/8/5
+   no switchport
+!
+interface Ethernet7/8/7
+   no switchport
+!
+interface Ethernet7/9/1
+   description P2P_C160064-037B204A_Ethernet2/3/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.84/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/9/2
+   no switchport
+!
+interface Ethernet7/9/3
+   no switchport
+!
+interface Ethernet7/9/4
+   no switchport
+!
+interface Ethernet7/9/5
+   no switchport
+!
+interface Ethernet7/9/7
+   no switchport
+!
+interface Ethernet7/10/1
+   no switchport
+!
+interface Ethernet7/10/2
+   no switchport
+!
+interface Ethernet7/10/3
+   no switchport
+!
+interface Ethernet7/10/4
+   no switchport
+!
+interface Ethernet7/10/5
+   no switchport
+!
+interface Ethernet7/10/7
+   no switchport
+!
+interface Ethernet7/11/1
+   description P2P_C160064-051B202A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.226/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/11/2
+   no switchport
+!
+interface Ethernet7/11/3
+   no switchport
+!
+interface Ethernet7/11/4
+   no switchport
+!
+interface Ethernet7/11/5
+   no switchport
+!
+interface Ethernet7/11/7
+   no switchport
+!
+interface Ethernet7/12/1
+   description P2P_C160064-050B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.194/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/12/2
+   no switchport
+!
+interface Ethernet7/12/3
+   no switchport
+!
+interface Ethernet7/12/4
+   no switchport
+!
+interface Ethernet7/12/5
+   no switchport
+!
+interface Ethernet7/12/7
+   no switchport
+!
+interface Ethernet7/13/1
+   no switchport
+!
+interface Ethernet7/13/2
+   no switchport
+!
+interface Ethernet7/13/3
+   no switchport
+!
+interface Ethernet7/13/4
+   no switchport
+!
+interface Ethernet7/13/5
+   no switchport
+!
+interface Ethernet7/13/7
+   no switchport
+!
+interface Ethernet7/14/1
+   description P2P_C160064-016B202A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.130/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/14/2
+   no switchport
+!
+interface Ethernet7/14/3
+   no switchport
+!
+interface Ethernet7/14/4
+   no switchport
+!
+interface Ethernet7/14/5
+   no switchport
+!
+interface Ethernet7/14/7
+   no switchport
+!
+interface Ethernet7/15/1
+   description P2P_C160064-016B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.114/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/15/2
+   no switchport
+!
+interface Ethernet7/15/3
+   no switchport
+!
+interface Ethernet7/15/4
+   no switchport
+!
+interface Ethernet7/15/5
+   no switchport
+!
+interface Ethernet7/15/7
+   no switchport
+!
+interface Ethernet7/16/1
+   description P2P_C160064-013B202A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.18/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/16/2
+   no switchport
+!
+interface Ethernet7/16/3
+   no switchport
+!
+interface Ethernet7/16/4
+   no switchport
+!
+interface Ethernet7/16/5
+   no switchport
+!
+interface Ethernet7/16/7
+   no switchport
+!
+interface Ethernet7/17/1
+   description P2P_C160064-009B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.226/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/17/2
+   no switchport
+!
+interface Ethernet7/17/3
+   no switchport
+!
+interface Ethernet7/17/4
+   no switchport
+!
+interface Ethernet7/17/5
+   no switchport
+!
+interface Ethernet7/17/7
+   no switchport
+!
+interface Ethernet7/18/1
+   description P2P_C160064-007B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.194/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/18/2
+   no switchport
+!
+interface Ethernet7/18/3
+   no switchport
+!
+interface Ethernet7/18/4
+   no switchport
+!
+interface Ethernet7/18/5
+   no switchport
+!
+interface Ethernet7/18/7
+   no switchport
+!
+interface Ethernet7/19/1
+   description P2P_C160064-005B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.162/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/19/2
+   no switchport
+!
+interface Ethernet7/19/3
+   no switchport
+!
+interface Ethernet7/19/4
+   no switchport
+!
+interface Ethernet7/19/5
+   no switchport
+!
+interface Ethernet7/19/7
+   no switchport
+!
+interface Ethernet7/20/1
+   description P2P_C160064-003B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.130/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/20/2
+   no switchport
+!
+interface Ethernet7/20/3
+   no switchport
+!
+interface Ethernet7/20/4
+   no switchport
+!
+interface Ethernet7/20/5
+   no switchport
+!
+interface Ethernet7/20/7
+   no switchport
+!
+interface Ethernet7/21/1
+   description P2P_C160064-002B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.114/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/21/2
+   no switchport
+!
+interface Ethernet7/21/3
+   no switchport
+!
+interface Ethernet7/21/4
+   no switchport
+!
+interface Ethernet7/21/5
+   no switchport
+!
+interface Ethernet7/21/7
+   no switchport
+!
+interface Ethernet7/22/1
+   description P2P_C160064-002B201A_Ethernet2/4/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.118/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/22/2
+   no switchport
+!
+interface Ethernet7/22/3
+   no switchport
+!
+interface Ethernet7/22/4
+   no switchport
+!
+interface Ethernet7/22/5
+   no switchport
+!
+interface Ethernet7/22/7
+   no switchport
+!
+interface Ethernet7/23/1
+   description P2P_C160064-001B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.88.98/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/23/2
+   no switchport
+!
+interface Ethernet7/23/3
+   no switchport
+!
+interface Ethernet7/23/4
+   no switchport
+!
+interface Ethernet7/23/5
+   no switchport
+!
+interface Ethernet7/23/7
+   no switchport
+!
+interface Ethernet7/24/1
+   description P2P_C160064-051B202A_Ethernet2/3/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.228/31
+   multicast ipv4 static
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/24/2
+   no switchport
+!
+interface Ethernet7/24/3
+   no switchport
+!
+interface Ethernet7/24/4
+   no switchport
+!
+interface Ethernet7/24/5
+   no switchport
+!
+interface Ethernet7/24/7
+   no switchport
+!
+interface Ethernet7/25/1
+   description P2P_C160064-037B381A_Ethernet34/1
+   mtu 1500
+   no switchport
+   ip address 100.83.93.26/31
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/25/2
+   no switchport
+!
+interface Ethernet7/25/3
+   no switchport
+!
+interface Ethernet7/25/4
+   no switchport
+!
+interface Ethernet7/25/5
+   no switchport
+!
+interface Ethernet7/25/7
+   no switchport
+!
+interface Ethernet7/26/1
+   no switchport
+!
+interface Ethernet7/26/2
+   no switchport
+!
+interface Ethernet7/26/3
+   no switchport
+!
+interface Ethernet7/26/4
+   no switchport
+!
+interface Ethernet7/26/5
+   no switchport
+!
+interface Ethernet7/26/7
+   no switchport
+!
+interface Ethernet7/27/1
+   no switchport
+!
+interface Ethernet7/27/2
+   no switchport
+!
+interface Ethernet7/27/3
+   no switchport
+!
+interface Ethernet7/27/4
+   no switchport
+!
+interface Ethernet7/27/5
+   no switchport
+!
+interface Ethernet7/27/7
+   no switchport
+!
+interface Ethernet7/28/1
+   description P2P_C160064-049B201A_Ethernet2/2/1
+   mtu 1500
+   no switchport
+   ip address 100.83.89.178/31
+   ptp enable
+   ptp announce interval 0
+   ptp delay-req interval -3
+   ptp sync-message interval -3
+!
+interface Ethernet7/28/2
+   no switchport
+!
+interface Ethernet7/28/3
+   no switchport
+!
+interface Ethernet7/28/4
+   no switchport
+!
+interface Ethernet7/28/5
+   no switchport
+!
+interface Ethernet7/28/7
+   no switchport
+!
+interface Ethernet7/29/1
+   no switchport
+!
+interface Ethernet7/29/2
+   no switchport
+!
+interface Ethernet7/29/3
+   no switchport
+!
+interface Ethernet7/29/4
+   no switchport
+!
+interface Ethernet7/29/5
+   no switchport
+!
+interface Ethernet7/29/7
+   no switchport
+!
+interface Ethernet7/30/1
+   no switchport
+!
+interface Ethernet7/30/2
+   no switchport
+!
+interface Ethernet7/30/3
+   no switchport
+!
+interface Ethernet7/30/4
+   no switchport
+!
+interface Ethernet7/30/5
+   no switchport
+!
+interface Ethernet7/30/7
+   no switchport
+!
+interface Ethernet7/31/1
+   no switchport
+!
+interface Ethernet7/31/2
+   no switchport
+!
+interface Ethernet7/31/3
+   no switchport
+!
+interface Ethernet7/31/4
+   no switchport
+!
+interface Ethernet7/31/5
+   no switchport
+!
+interface Ethernet7/31/7
+   no switchport
+!
+interface Ethernet7/32/1
+   no switchport
+!
+interface Ethernet7/32/2
+   no switchport
+!
+interface Ethernet7/32/3
+   no switchport
+!
+interface Ethernet7/32/4
+   no switchport
+!
+interface Ethernet7/32/5
+   no switchport
+!
+interface Ethernet7/32/7
+   no switchport
+!
+interface Ethernet7/33/1
+   no switchport
+!
+interface Ethernet7/33/2
+   no switchport
+!
+interface Ethernet7/33/3
+   no switchport
+!
+interface Ethernet7/33/4
+   no switchport
+!
+interface Ethernet7/33/5
+   no switchport
+!
+interface Ethernet7/33/7
+   no switchport
+!
+interface Ethernet7/34/1
+   no switchport
+!
+interface Ethernet7/34/2
+   no switchport
+!
+interface Ethernet7/34/3
+   no switchport
+!
+interface Ethernet7/34/4
+   no switchport
+!
+interface Ethernet7/34/5
+   no switchport
+!
+interface Ethernet7/34/7
+   no switchport
+!
+interface Ethernet7/35/1
+   no switchport
+!
+interface Ethernet7/35/2
+   no switchport
+!
+interface Ethernet7/35/3
+   no switchport
+!
+interface Ethernet7/35/4
+   no switchport
+!
+interface Ethernet7/35/5
+   no switchport
+!
+interface Ethernet7/35/7
+   no switchport
+!
+interface Ethernet7/36/1
+   no switchport
+!
+interface Ethernet7/36/2
+   no switchport
+!
+interface Ethernet7/36/3
+   no switchport
+!
+interface Ethernet7/36/4
+   no switchport
+!
+interface Ethernet7/36/5
+   no switchport
+!
+interface Ethernet7/36/7
+   no switchport
+!
+interface Loopback0
+   description ROUTER_ID
+   ip address 169.27.195.33/32
+!
+interface Management1/1
+   description OOB_MANAGEMENT
+   vrf MGMT
+   ip address 10.176.143.168/27
+!
+interface Management1/2
+!
+interface Management2/1
+!
+interface Management2/2
+!
+ip access-list standard MGMT-SSH-ACL
+   10 permit any
+!
+ip routing
+no ip routing vrf MGMT
+!
+ip route vrf MGMT 0.0.0.0/0 10.176.143.161
+!
+ip http client local-interface Management1 vrf MGMT
+!
+role network-user
+   10 deny mode exec command enable|configure|bash|python-shell|\|
+   20 permit mode exec command .*
+!
+router bgp 65211.37200
+   bgp asn notation asdot
+   router-id 169.27.195.33
+   no bgp default ipv4-unicast
+   timers bgp 5 15
+   distance bgp 20 200 200
+   graceful-restart restart-time 300
+   graceful-restart
+   maximum-paths 128 ecmp 600
+   neighbor default send-community
+   neighbor P2P-IPv4-eBGP-PEERS peer group
+   neighbor P2P-IPv4-eBGP-PEERS password 7 tAFzZuVu4+b6rGq1btvPBg==
+   neighbor P2P-IPv4-eBGP-PEERS send-community
+   neighbor P2P-IPv4-eBGP-PEERS maximum-routes 12000
+   neighbor 100.83.88.1 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.1 remote-as 65211.37201
+   neighbor 100.83.88.1 description C160064-037B201A_Ethernet2/1/1
+   neighbor 100.83.88.3 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.3 remote-as 65211.37201
+   neighbor 100.83.88.3 description C160064-037B201A_Ethernet2/2/1
+   neighbor 100.83.88.5 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.5 remote-as 65211.37201
+   neighbor 100.83.88.5 description C160064-037B201A_Ethernet2/3/1
+   neighbor 100.83.88.7 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.7 remote-as 65211.37201
+   neighbor 100.83.88.7 description C160064-037B201A_Ethernet2/4/1
+   neighbor 100.83.88.9 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.9 remote-as 65211.37201
+   neighbor 100.83.88.9 description C160064-037B201A_Ethernet3/1/1
+   neighbor 100.83.88.11 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.11 remote-as 65211.37201
+   neighbor 100.83.88.11 description C160064-037B201A_Ethernet3/2/1
+   neighbor 100.83.88.17 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.17 remote-as 65211.37202
+   neighbor 100.83.88.17 description C160064-037B202A_Ethernet2/1/1
+   neighbor 100.83.88.19 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.19 remote-as 65211.37202
+   neighbor 100.83.88.19 description C160064-037B202A_Ethernet2/2/1
+   neighbor 100.83.88.21 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.21 remote-as 65211.37202
+   neighbor 100.83.88.21 description C160064-037B202A_Ethernet2/3/1
+   neighbor 100.83.88.23 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.23 remote-as 65211.37202
+   neighbor 100.83.88.23 description C160064-037B202A_Ethernet2/4/1
+   neighbor 100.83.88.25 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.25 remote-as 65211.37202
+   neighbor 100.83.88.25 description C160064-037B202A_Ethernet3/1/1
+   neighbor 100.83.88.27 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.27 remote-as 65211.37202
+   neighbor 100.83.88.27 description C160064-037B202A_Ethernet3/2/1
+   neighbor 100.83.88.33 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.33 remote-as 65211.37205
+   neighbor 100.83.88.33 description C160064-037B205A_Ethernet55/1
+   neighbor 100.83.88.35 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.35 remote-as 65211.37205
+   neighbor 100.83.88.35 description C160064-037B205A_Ethernet56/1
+   neighbor 100.83.88.49 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.49 remote-as 65211.37203
+   neighbor 100.83.88.49 description C160064-037B203A_Ethernet2/1/1
+   neighbor 100.83.88.51 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.51 remote-as 65211.37203
+   neighbor 100.83.88.51 description C160064-037B203A_Ethernet2/2/1
+   neighbor 100.83.88.53 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.53 remote-as 65211.37203
+   neighbor 100.83.88.53 description C160064-037B203A_Ethernet2/3/1
+   neighbor 100.83.88.65 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.65 remote-as 65211.37206
+   neighbor 100.83.88.65 description C160064-037B206A_Ethernet53/1
+   neighbor 100.83.88.67 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.67 remote-as 65211.37206
+   neighbor 100.83.88.67 description C160064-037B206A_Ethernet54/1
+   neighbor 100.83.88.69 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.69 remote-as 65211.37206
+   neighbor 100.83.88.69 description C160064-037B206A_Ethernet55/1
+   neighbor 100.83.88.71 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.71 remote-as 65211.37206
+   neighbor 100.83.88.71 description C160064-037B206A_Ethernet56/1
+   neighbor 100.83.88.81 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.81 remote-as 65211.37204
+   neighbor 100.83.88.81 description C160064-037B204A_Ethernet2/1/1
+   neighbor 100.83.88.83 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.83 remote-as 65211.37204
+   neighbor 100.83.88.83 description C160064-037B204A_Ethernet2/2/1
+   neighbor 100.83.88.85 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.85 remote-as 65211.37204
+   neighbor 100.83.88.85 description C160064-037B204A_Ethernet2/3/1
+   neighbor 100.83.88.97 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.97 remote-as 65211.1201
+   neighbor 100.83.88.97 description C160064-001B201A_Ethernet2/1/1
+   neighbor 100.83.88.99 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.99 remote-as 65211.1201
+   neighbor 100.83.88.99 description C160064-001B201A_Ethernet2/2/1
+   neighbor 100.83.88.113 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.113 remote-as 65211.2201
+   neighbor 100.83.88.113 description C160064-002B201A_Ethernet2/1/1
+   neighbor 100.83.88.115 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.115 remote-as 65211.2201
+   neighbor 100.83.88.115 description C160064-002B201A_Ethernet2/2/1
+   neighbor 100.83.88.117 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.117 remote-as 65211.2201
+   neighbor 100.83.88.117 description C160064-002B201A_Ethernet2/3/1
+   neighbor 100.83.88.119 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.119 remote-as 65211.2201
+   neighbor 100.83.88.119 description C160064-002B201A_Ethernet2/4/1
+   neighbor 100.83.88.121 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.121 remote-as 65211.2201
+   neighbor 100.83.88.121 description C160064-002B201A_Ethernet3/1/1
+   neighbor 100.83.88.129 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.129 remote-as 65211.3201
+   neighbor 100.83.88.129 description C160064-003B201A_Ethernet2/1/1
+   neighbor 100.83.88.131 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.131 remote-as 65211.3201
+   neighbor 100.83.88.131 description C160064-003B201A_Ethernet2/2/1
+   neighbor 100.83.88.145 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.145 remote-as 65211.4201
+   neighbor 100.83.88.145 description C160064-004B201A_Ethernet53/1
+   neighbor 100.83.88.147 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.147 remote-as 65211.4201
+   neighbor 100.83.88.147 description C160064-004B201A_Ethernet54/1
+   neighbor 100.83.88.149 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.149 remote-as 65211.4201
+   neighbor 100.83.88.149 description C160064-004B201A_Ethernet55/1
+   neighbor 100.83.88.151 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.151 remote-as 65211.4201
+   neighbor 100.83.88.151 description C160064-004B201A_Ethernet56/1
+   neighbor 100.83.88.161 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.161 remote-as 65211.5201
+   neighbor 100.83.88.161 description C160064-005B201A_Ethernet2/1/1
+   neighbor 100.83.88.163 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.163 remote-as 65211.5201
+   neighbor 100.83.88.163 description C160064-005B201A_Ethernet2/2/1
+   neighbor 100.83.88.177 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.177 remote-as 65211.6201
+   neighbor 100.83.88.177 description C160064-006B201A_Ethernet53/1
+   neighbor 100.83.88.179 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.179 remote-as 65211.6201
+   neighbor 100.83.88.179 description C160064-006B201A_Ethernet54/1
+   neighbor 100.83.88.181 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.181 remote-as 65211.6201
+   neighbor 100.83.88.181 description C160064-006B201A_Ethernet55/1
+   neighbor 100.83.88.183 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.183 remote-as 65211.6201
+   neighbor 100.83.88.183 description C160064-006B201A_Ethernet56/1
+   neighbor 100.83.88.193 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.193 remote-as 65211.7201
+   neighbor 100.83.88.193 description C160064-007B201A_Ethernet2/1/1
+   neighbor 100.83.88.195 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.195 remote-as 65211.7201
+   neighbor 100.83.88.195 description C160064-007B201A_Ethernet2/2/1
+   neighbor 100.83.88.209 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.209 remote-as 65211.8201
+   neighbor 100.83.88.209 description C160064-008B201A_Ethernet53/1
+   neighbor 100.83.88.211 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.211 remote-as 65211.8201
+   neighbor 100.83.88.211 description C160064-008B201A_Ethernet54/1
+   neighbor 100.83.88.213 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.213 remote-as 65211.8201
+   neighbor 100.83.88.213 description C160064-008B201A_Ethernet55/1
+   neighbor 100.83.88.215 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.215 remote-as 65211.8201
+   neighbor 100.83.88.215 description C160064-008B201A_Ethernet56/1
+   neighbor 100.83.88.225 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.225 remote-as 65211.9201
+   neighbor 100.83.88.225 description C160064-009B201A_Ethernet2/1/1
+   neighbor 100.83.88.227 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.227 remote-as 65211.9201
+   neighbor 100.83.88.227 description C160064-009B201A_Ethernet2/2/1
+   neighbor 100.83.88.241 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.241 remote-as 65211.10201
+   neighbor 100.83.88.241 description C160064-010B201A_Ethernet53/1
+   neighbor 100.83.88.243 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.243 remote-as 65211.10201
+   neighbor 100.83.88.243 description C160064-010B201A_Ethernet54/1
+   neighbor 100.83.88.245 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.245 remote-as 65211.10201
+   neighbor 100.83.88.245 description C160064-010B201A_Ethernet55/1
+   neighbor 100.83.88.247 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.88.247 remote-as 65211.10201
+   neighbor 100.83.88.247 description C160064-010B201A_Ethernet56/1
+   neighbor 100.83.89.1 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.1 remote-as 65211.13201
+   neighbor 100.83.89.1 description C160064-013B201A_Ethernet55/1
+   neighbor 100.83.89.3 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.3 remote-as 65211.13201
+   neighbor 100.83.89.3 description C160064-013B201A_Ethernet56/1
+   neighbor 100.83.89.17 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.17 remote-as 65211.13202
+   neighbor 100.83.89.17 description C160064-013B202A_Ethernet2/1/1
+   neighbor 100.83.89.19 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.19 remote-as 65211.13202
+   neighbor 100.83.89.19 description C160064-013B202A_Ethernet2/2/1
+   neighbor 100.83.89.33 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.33 remote-as 65211.14201
+   neighbor 100.83.89.33 description C160064-014B201A_Ethernet55/1
+   neighbor 100.83.89.35 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.35 remote-as 65211.14201
+   neighbor 100.83.89.35 description C160064-014B201A_Ethernet56/1
+   neighbor 100.83.89.49 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.49 remote-as 65211.14202
+   neighbor 100.83.89.49 description C160064-014B202A_Ethernet53/1
+   neighbor 100.83.89.51 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.51 remote-as 65211.14202
+   neighbor 100.83.89.51 description C160064-014B202A_Ethernet54/1
+   neighbor 100.83.89.53 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.53 remote-as 65211.14202
+   neighbor 100.83.89.53 description C160064-014B202A_Ethernet55/1
+   neighbor 100.83.89.55 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.55 remote-as 65211.14202
+   neighbor 100.83.89.55 description C160064-014B202A_Ethernet56/1
+   neighbor 100.83.89.65 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.65 remote-as 65211.15201
+   neighbor 100.83.89.65 description C160064-015B201A_Ethernet55/1
+   neighbor 100.83.89.67 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.67 remote-as 65211.15201
+   neighbor 100.83.89.67 description C160064-015B201A_Ethernet56/1
+   neighbor 100.83.89.81 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.81 remote-as 65211.15202
+   neighbor 100.83.89.81 description C160064-015B202A_Ethernet54/1
+   neighbor 100.83.89.83 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.83 remote-as 65211.15202
+   neighbor 100.83.89.83 description C160064-015B202A_Ethernet55/1
+   neighbor 100.83.89.85 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.85 remote-as 65211.15202
+   neighbor 100.83.89.85 description C160064-015B202A_Ethernet56/1
+   neighbor 100.83.89.97 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.97 remote-as 65211.15203
+   neighbor 100.83.89.97 description C160064-015B203A_Ethernet55/1
+   neighbor 100.83.89.99 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.99 remote-as 65211.15203
+   neighbor 100.83.89.99 description C160064-015B203A_Ethernet56/1
+   neighbor 100.83.89.113 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.113 remote-as 65211.16201
+   neighbor 100.83.89.113 description C160064-016B201A_Ethernet2/1/1
+   neighbor 100.83.89.115 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.115 remote-as 65211.16201
+   neighbor 100.83.89.115 description C160064-016B201A_Ethernet2/2/1
+   neighbor 100.83.89.129 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.129 remote-as 65211.16202
+   neighbor 100.83.89.129 description C160064-016B202A_Ethernet2/1/1
+   neighbor 100.83.89.131 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.131 remote-as 65211.16202
+   neighbor 100.83.89.131 description C160064-016B202A_Ethernet2/2/1
+   neighbor 100.83.89.145 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.145 remote-as 65211.17201
+   neighbor 100.83.89.145 description C160064-017B201A_Ethernet54/1
+   neighbor 100.83.89.147 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.147 remote-as 65211.17201
+   neighbor 100.83.89.147 description C160064-017B201A_Ethernet55/1
+   neighbor 100.83.89.161 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.161 remote-as 65211.46201
+   neighbor 100.83.89.161 description C160064-046B201A_Ethernet54/1
+   neighbor 100.83.89.163 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.163 remote-as 65211.46201
+   neighbor 100.83.89.163 description C160064-046B201A_Ethernet55/1
+   neighbor 100.83.89.177 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.177 remote-as 65211.49201
+   neighbor 100.83.89.177 description C160064-049B201A_Ethernet2/1/1
+   neighbor 100.83.89.179 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.179 remote-as 65211.49201
+   neighbor 100.83.89.179 description C160064-049B201A_Ethernet2/2/1
+   neighbor 100.83.89.193 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.193 remote-as 65211.50201
+   neighbor 100.83.89.193 description C160064-050B201A_Ethernet2/1/1
+   neighbor 100.83.89.195 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.195 remote-as 65211.50201
+   neighbor 100.83.89.195 description C160064-050B201A_Ethernet2/2/1
+   neighbor 100.83.89.209 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.209 remote-as 65211.51201
+   neighbor 100.83.89.209 description C160064-051B201A_Ethernet54/1
+   neighbor 100.83.89.211 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.211 remote-as 65211.51201
+   neighbor 100.83.89.211 description C160064-051B201A_Ethernet55/1
+   neighbor 100.83.89.225 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.225 remote-as 65211.51202
+   neighbor 100.83.89.225 description C160064-051B202A_Ethernet2/1/1
+   neighbor 100.83.89.227 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.227 remote-as 65211.51202
+   neighbor 100.83.89.227 description C160064-051B202A_Ethernet2/2/1
+   neighbor 100.83.89.229 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.229 remote-as 65211.51202
+   neighbor 100.83.89.229 description C160064-051B202A_Ethernet2/3/1
+   neighbor 100.83.89.241 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.241 remote-as 65211.56201
+   neighbor 100.83.89.241 description C160064-056B201A_Ethernet54/1
+   neighbor 100.83.89.243 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.243 remote-as 65211.56201
+   neighbor 100.83.89.243 description C160064-056B201A_Ethernet55/1
+   neighbor 100.83.89.245 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.89.245 remote-as 65211.56201
+   neighbor 100.83.89.245 description C160064-056B201A_Ethernet56/1
+   neighbor 100.83.93.7 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.93.7 remote-as 65213.37370
+   neighbor 100.83.93.7 description C160064-037B370A_Ethernet50/1
+   neighbor 100.83.93.11 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.93.11 remote-as 65213.37370
+   neighbor 100.83.93.11 description C160064-037B371A_Ethernet50/1
+   neighbor 100.83.93.23 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.93.23 remote-as 65214
+   neighbor 100.83.93.23 description C160064-037B380A_Ethernet34/1
+   neighbor 100.83.93.27 peer group P2P-IPv4-eBGP-PEERS
+   neighbor 100.83.93.27 remote-as 65214
+   neighbor 100.83.93.27 description C160064-037B381A_Ethernet34/1
+   redistribute connected
+   !
+   address-family ipv4
+      neighbor P2P-IPv4-eBGP-PEERS activate
+!
+router multicast
+   ipv4
+      routing
+!
+management ssh
+   ip access-group MGMT-SSH-ACL vrf MGMT in
+!
+end
