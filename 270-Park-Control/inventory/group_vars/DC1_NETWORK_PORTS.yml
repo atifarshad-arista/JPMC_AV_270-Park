@@ -32,7 +32,8 @@ port_profiles:
       reauthorization_request_limit: 3
 
 network_ports:
-
+#use connected endpoints structure instead of network_ports:
+connected_endpoints:
 # ---------------- IDF1 ----------------
 
   - switches:

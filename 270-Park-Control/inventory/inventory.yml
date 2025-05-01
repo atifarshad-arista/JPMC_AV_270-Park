@@ -773,7 +773,14 @@ DC1:
               description: green-leaf186 (new10Apr2025)
               ansible_host: 10.176.141.134
               serial_number: NA
-
+            C160064-003B303A:
+              description: green-leaf187 (new30Apr2025)
+              ansible_host: 10.176.136.156
+              serial_number: HBG24120B3W
+            C160064-005B303A:
+              description: green-leaf186 (new30Apr2025)
+              ansible_host: 10.176.136.220
+              serial_number: HBG2414035B
 
 
     DC1_NETWORK_SERVICES:
