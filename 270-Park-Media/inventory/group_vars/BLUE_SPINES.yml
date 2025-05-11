@@ -48,6 +48,8 @@ media_spine:
           - name: Ethernet6/23/1
             # error_correction_encoding:
             #   enabled: False
+            #   # fire_code: <bool>
+            #   # reed_solomon: <bool>
             multicast:
               ipv4:
                 static: true
