@@ -640,6 +640,41 @@ servers:
         #description: AMON_37A01_01_Port_CTL
         profile: vlan106
 
+  - name: SVR_37A04_04
+    adapters:
+      - switch_ports:
+          - Ethernet23
+        switches:
+          -  C160064-037B302A
+        endpoint_ports:
+          - "NIC3"
+        #description: SVR_37A04_04_Port_NIC3
+        profile: vlan1
+      - switch_ports:
+          - Ethernet43
+        switches:
+          -  C160064-037B302A
+        endpoint_ports:
+          - "NIC1"
+        #description: SVR_37A04_04_Port_NIC1
+        profile: vlan106
+      - switch_ports:
+          - Ethernet40
+        switches:
+          -  C160064-037B303A
+        endpoint_ports:
+          - "iDRAC"
+        #description: SVR_37A04_04_Port_iDRAC
+        profile: vlan202
+      - switch_ports:
+          - Ethernet44
+        switches:
+          -  C160064-037B304A
+        endpoint_ports:
+          - "NIC2"
+        #description: SVR_37A04_04_Port_NIC2
+        profile: vlan102
+
   - name: RTR_CP_37A01_01
     adapters:
       - switch_ports:
@@ -760,6 +795,14 @@ servers:
   - name: SVR_37A04_02
     adapters:
       - switch_ports:
+          - Ethernet31
+        switches:
+          -  C160064-037B302A
+        endpoint_ports:
+          - "NIC3"
+        #description: SVR_37A04_02_Port_NIC3
+        profile: vlan1
+      - switch_ports:
           - Ethernet41
         switches:
           -  C160064-037B302A
@@ -787,6 +830,14 @@ servers:
   - name: SVR_37A04_03
     adapters:
       - switch_ports:
+          - Ethernet33
+        switches:
+          -  C160064-037B302A
+        endpoint_ports:
+          - "NIC3"
+        #description: SVR_37A04_03_Port_NIC3
+        profile: vlan1
+      - switch_ports:
           - Ethernet42
         switches:
           -  C160064-037B302A
@@ -811,35 +862,16 @@ servers:
         #description: SVR_37A04_03_Port_NIC2
         profile: vlan102
 
-  - name: SVR_37A04_04
+  - name: SVR_37A04_05
     adapters:
       - switch_ports:
-          - Ethernet43
+          - Ethernet37
         switches:
           -  C160064-037B302A
         endpoint_ports:
-          - "NIC1"
-        #description: SVR_37A04_04_Port_NIC1
-        profile: vlan106
-      - switch_ports:
-          - Ethernet40
-        switches:
-          -  C160064-037B303A
-        endpoint_ports:
-          - "iDRAC"
-        #description: SVR_37A04_04_Port_iDRAC
-        profile: vlan202
-      - switch_ports:
-          - Ethernet44
-        switches:
-          -  C160064-037B304A
-        endpoint_ports:
-          - "NIC2"
-        #description: SVR_37A04_04_Port_NIC2
-        profile: vlan102
-
-  - name: SVR_37A04_05
-    adapters:
+          - "NIC3"
+        #description: SVR_37A04_05_Port_NIC3
+        profile: vlan1
       - switch_ports:
           - Ethernet44
         switches:
@@ -867,6 +899,14 @@ servers:
 
   - name: SVR_37A04_06
     adapters:
+      - switch_ports:
+          - Ethernet39
+        switches:
+          -  C160064-037B302A
+        endpoint_ports:
+          - "NIC3"
+        #description: SVR_37A04_06_Port_NIC3
+        profile: vlan1
       - switch_ports:
           - Ethernet45
         switches:
@@ -967,6 +1007,17 @@ servers:
         endpoint_ports:
           - "LINK"
         #description: CIM_37A02_05_Port_LINK
+        profile: vlan161
+
+  - name: KVMRX_37A02_01
+    adapters:
+      - switch_ports:
+          - Ethernet6
+        switches:
+          -  C160064-037B303A
+        endpoint_ports:
+          - "SFP_3"
+        #description: KVMRX_37A02_01_Port_SFP_3
         profile: vlan161
 
   - name: SVR_37A02_01
@@ -3419,6 +3470,14 @@ servers:
   - name: SVR_37B04_01
     adapters:
       - switch_ports:
+          - Ethernet31
+        switches:
+          -  C160064-037B310A
+        endpoint_ports:
+          - "NIC3"
+        #description: SVR_37B04_01_Port_NIC3
+        profile: vlan1
+      - switch_ports:
           - Ethernet41
         switches:
           -  C160064-037B310A
@@ -3445,6 +3504,14 @@ servers:
 
   - name: SVR_37B04_02
     adapters:
+      - switch_ports:
+          - Ethernet33
+        switches:
+          -  C160064-037B310A
+        endpoint_ports:
+          - "NIC3"
+        #description: SVR_37B04_02_Port_NIC3
+        profile: vlan1
       - switch_ports:
           - Ethernet42
         switches:
@@ -3473,6 +3540,14 @@ servers:
   - name: SVR_37B04_03
     adapters:
       - switch_ports:
+          - Ethernet35
+        switches:
+          -  C160064-037B310A
+        endpoint_ports:
+          - "NIC3"
+        #description: SVR_37B04_03_Port_NIC3
+        profile: vlan1
+      - switch_ports:
           - Ethernet43
         switches:
           -  C160064-037B310A
@@ -3496,6 +3571,41 @@ servers:
           - "NIC2"
         #description: SVR_37B04_03_Port_NIC2
         profile: vlan102
+
+  - name: SVR_37B04_04
+    adapters:
+      - switch_ports:
+          - Ethernet37
+        switches:
+          -  C160064-037B310A
+        endpoint_ports:
+          - "NIC3"
+        #description: SVR_37B04_04_Port_NIC3
+        profile: vlan1
+      - switch_ports:
+          - Ethernet22
+        switches:
+          -  C160064-037B372A
+        endpoint_ports:
+          - "NIC2"
+        #description: SVR_37B04_04_Port_NIC2
+        profile: vlan102
+      - switch_ports:
+          - Ethernet14
+        switches:
+          -  C160064-037B312A
+        endpoint_ports:
+          - "NIC1"
+        #description: SVR_37B04_04_Port_NIC1
+        profile: vlan106
+      - switch_ports:
+          - Ethernet29
+        switches:
+          -  C160064-037B312A
+        endpoint_ports:
+          - "iDRAC"
+        #description: SVR_37B04_04_Port_iDRAC
+        profile: vlan202
 
   - name: PDU_37B01_01
     adapters:
@@ -3572,6 +3682,17 @@ servers:
         endpoint_ports:
           - "LINK"
         #description: CIM_37B02_05_Port_LINK
+        profile: vlan161
+
+  - name: KVMRX_37B02_01
+    adapters:
+      - switch_ports:
+          - Ethernet6
+        switches:
+          -  C160064-037B311A
+        endpoint_ports:
+          - "SFP_3"
+        #description: KVMRX_37B02_01_Port_SFP_3
         profile: vlan161
 
   - name: SVR_37B02_01
@@ -3989,7 +4110,7 @@ servers:
         #description: SVR_37B02_09_03_Port_NIC1
         profile: vlan102
 
-  - name: SVR_37B02_10_03
+  - name: SVR_37B02_10_04
     adapters:
       - switch_ports:
           - Ethernet10
@@ -3997,7 +4118,7 @@ servers:
           -  C160064-037B372A
         endpoint_ports:
           - "NIC2"
-        #description: SVR_37B02_10_03_Port_NIC2
+        #description: SVR_37B02_10_04_Port_NIC2
         profile: vlan121
       - switch_ports:
           - Ethernet15
@@ -4005,7 +4126,7 @@ servers:
           -  C160064-037B372A
         endpoint_ports:
           - "NIC1"
-        #description: SVR_37B02_10_03_Port_NIC1
+        #description: SVR_37B02_10_04_Port_NIC1
         profile: vlan102
 
   - name: SVR_37B01_01
@@ -4061,33 +4182,6 @@ servers:
         endpoint_ports:
           - "iDRAC"
         #description: SVR_37B01_05_Port_iDRAC
-        profile: vlan202
-
-  - name: SVR_37B04_04
-    adapters:
-      - switch_ports:
-          - Ethernet22
-        switches:
-          -  C160064-037B372A
-        endpoint_ports:
-          - "NIC2"
-        #description: SVR_37B04_04_Port_NIC2
-        profile: vlan102
-      - switch_ports:
-          - Ethernet14
-        switches:
-          -  C160064-037B312A
-        endpoint_ports:
-          - "NIC1"
-        #description: SVR_37B04_04_Port_NIC1
-        profile: vlan106
-      - switch_ports:
-          - Ethernet29
-        switches:
-          -  C160064-037B312A
-        endpoint_ports:
-          - "iDRAC"
-        #description: SVR_37B04_04_Port_iDRAC
         profile: vlan202
 
   - name: KVMRX_37B01_01
@@ -5771,7 +5865,7 @@ servers:
         #description: SVR_37B11_08_02_Port_25G_2
         profile: vlan121
 
-  - name: RTR_37ACRA_353_01_16
+  - name: AIF_37ACRA_352_01_16
     adapters:
       - switch_ports:
           - Ethernet1
@@ -5779,7 +5873,7 @@ servers:
           -  C160064-037B318A
         endpoint_ports:
           - "PRI"
-        #description: RTR_37ACRA_353_01_16_Port_PRI
+        #description: AIF_37ACRA_352_01_16_Port_PRI
         profile: vlan301
       - switch_ports:
           - Ethernet1
@@ -5787,7 +5881,7 @@ servers:
           -  C160064-037B319A
         endpoint_ports:
           - "SEC"
-        #description: RTR_37ACRA_353_01_16_Port_SEC
+        #description: AIF_37ACRA_352_01_16_Port_SEC
         profile: vlan302
 
   - name: ICM_KP_37COR_532_01
@@ -5856,7 +5950,7 @@ servers:
         #description: RTR_CP_37MS1_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_37ACRA_353_01_13
+  - name: AIF_37ACRA_352_01_13
     adapters:
       - switch_ports:
           - Ethernet11
@@ -5864,7 +5958,7 @@ servers:
           -  C160064-037B318A
         endpoint_ports:
           - "ETH1"
-        #description: RTR_37ACRA_353_01_13_Port_ETH1
+        #description: AIF_37ACRA_352_01_13_Port_ETH1
         profile: vlan100
       - switch_ports:
           - Ethernet42
@@ -5872,7 +5966,7 @@ servers:
           -  C160064-037B319A
         endpoint_ports:
           - "ETH2"
-        #description: RTR_37ACRA_353_01_13_Port_ETH2
+        #description: AIF_37ACRA_352_01_13_Port_ETH2
         profile: vlan102
       - switch_ports:
           - Ethernet29
@@ -5880,7 +5974,7 @@ servers:
           -  C160064-037B320A
         endpoint_ports:
           - "ETH3"
-        #description: RTR_37ACRA_353_01_13_Port_ETH3
+        #description: AIF_37ACRA_352_01_13_Port_ETH3
         profile: vlan106
 
   - name: CIM_37COR_510_01
@@ -5894,7 +5988,7 @@ servers:
         #description: CIM_37COR_510_01_Port_LINK
         profile: vlan161
 
-  - name: CIM_37COR_560_01
+  - name: CIM_37COR_530_01
     adapters:
       - switch_ports:
           - Ethernet14
@@ -5902,7 +5996,7 @@ servers:
           -  C160064-037B318A
         endpoint_ports:
           - "LINK"
-        #description: CIM_37COR_560_01_Port_LINK
+        #description: CIM_37COR_530_01_Port_LINK
         profile: vlan161
 
   - name: KVMRX_37ACRA_352_01
@@ -5971,7 +6065,7 @@ servers:
         #description: KVMRX_37MS2_02_Port_SFP_3
         profile: vlan161
 
-  - name: CIM_37PCRA_301_01
+  - name: CIM_37PCRA_301_02
     adapters:
       - switch_ports:
           - Ethernet21
@@ -5979,7 +6073,7 @@ servers:
           -  C160064-037B318A
         endpoint_ports:
           - "LINK"
-        #description: CIM_37PCRA_301_01_Port_LINK
+        #description: CIM_37PCRA_301_02_Port_LINK
         profile: vlan161
 
   - name: USB_SW_37COR_512_01
@@ -6026,7 +6120,7 @@ servers:
         #description: AMON_37COR_512_01_Port_CTL
         profile: vlan106
 
-  - name: MV_DSP_37COR_511_01
+  - name: MON_37COR_511_01
     adapters:
       - switch_ports:
           - Ethernet29
@@ -6034,7 +6128,7 @@ servers:
           -  C160064-037B318A
         endpoint_ports:
           - "LAN"
-        #description: MV_DSP_37COR_511_01_Port_LAN
+        #description: MON_37COR_511_01_Port_LAN
         profile: vlan106
 
   - name: PC_37COR_561_02
@@ -6136,7 +6230,7 @@ servers:
         #description: USB_SW_37MS1_01_Port_LAN
         profile: vlan106
 
-  - name: MV_DSP_37Off1_01
+  - name: MON_37OFF1_01
     adapters:
       - switch_ports:
           - Ethernet39
@@ -6144,10 +6238,10 @@ servers:
           -  C160064-037B318A
         endpoint_ports:
           - "0"
-        #description: MV_DSP_37Off1_01_Port_0
+        #description: MON_37OFF1_01_Port_0
         profile: vlan106
 
-  - name: PC_37Off1_02
+  - name: PC_37OFF1_02
     adapters:
       - switch_ports:
           - Ethernet40
@@ -6155,10 +6249,10 @@ servers:
           -  C160064-037B318A
         endpoint_ports:
           - "LAN"
-        #description: PC_37Off1_02_Port_LAN
+        #description: PC_37OFF1_02_Port_LAN
         profile: vlan106
 
-  - name: AMON_37Off2_01
+  - name: AMON_37OFF2_01
     adapters:
       - switch_ports:
           - Ethernet41
@@ -6166,7 +6260,7 @@ servers:
           -  C160064-037B318A
         endpoint_ports:
           - "CTL"
-        #description: AMON_37Off2_01_Port_CTL
+        #description: AMON_37OFF2_01_Port_CTL
         profile: vlan106
 
   - name: MON_37PCRA_300_04
@@ -6397,7 +6491,7 @@ servers:
         #description: KVMRX_37COR_501_01_Port_SFP_3
         profile: vlan161
 
-  - name: KVMRX_37Off1_01
+  - name: KVMRX_37OFF1_01
     adapters:
       - switch_ports:
           - Ethernet19
@@ -6405,7 +6499,7 @@ servers:
           -  C160064-037B319A
         endpoint_ports:
           - "SFP_3"
-        #description: KVMRX_37Off1_01_Port_SFP_3
+        #description: KVMRX_37OFF1_01_Port_SFP_3
         profile: vlan161
 
   - name: CIM_37PCRA_303_01
@@ -6452,7 +6546,7 @@ servers:
         #description: USB_SW_37COR_514_01_Port_LAN
         profile: vlan106
 
-  - name: MV_DSP_37COR_513_01
+  - name: MON_37COR_513_01
     adapters:
       - switch_ports:
           - Ethernet26
@@ -6460,7 +6554,7 @@ servers:
           -  C160064-037B319A
         endpoint_ports:
           - "LAN"
-        #description: MV_DSP_37COR_513_01_Port_LAN
+        #description: MON_37COR_513_01_Port_LAN
         profile: vlan106
 
   - name: PC_37COR_561_03
@@ -6573,7 +6667,7 @@ servers:
         #description: USB_SW_37MS2_01_Port_LAN
         profile: vlan106
 
-  - name: MV_DSP_37Off1_02
+  - name: MON_37OFF1_02
     adapters:
       - switch_ports:
           - Ethernet37
@@ -6581,10 +6675,10 @@ servers:
           -  C160064-037B319A
         endpoint_ports:
           - "0"
-        #description: MV_DSP_37Off1_02_Port_0
+        #description: MON_37OFF1_02_Port_0
         profile: vlan106
 
-  - name: PC_37Off2_02
+  - name: PC_37OFF2_02
     adapters:
       - switch_ports:
           - Ethernet38
@@ -6592,7 +6686,7 @@ servers:
           -  C160064-037B319A
         endpoint_ports:
           - "LAN"
-        #description: PC_37Off2_02_Port_LAN
+        #description: PC_37OFF2_02_Port_LAN
         profile: vlan106
 
   - name: AMON_37PCRA_302_01
@@ -6617,7 +6711,7 @@ servers:
         #description: PC_37PCRA_307_02_Port_LAN
         profile: vlan106
 
-  - name: SWR_CP_37COR_560_01
+  - name: SWR_CP_37COR_530_01
     adapters:
       - switch_ports:
           - Ethernet44
@@ -6625,7 +6719,7 @@ servers:
           -  C160064-037B319A
         endpoint_ports:
           - "LAN"
-        #description: SWR_CP_37COR_560_01_Port_LAN
+        #description: SWR_CP_37COR_530_01_Port_LAN
         profile: vlan104
 
   - name: RCP_37COR_562_01
@@ -6650,7 +6744,7 @@ servers:
         #description: RCP_37COR_500_07_Port_LAN
         profile: vlan107
 
-  - name: RTR_37ACRA_353_01_17
+  - name: AIF_37ACRA_352_01_17
     adapters:
       - switch_ports:
           - Ethernet1
@@ -6658,7 +6752,7 @@ servers:
           -  C160064-037B320A
         endpoint_ports:
           - "PRI"
-        #description: RTR_37ACRA_353_01_17_Port_PRI
+        #description: AIF_37ACRA_352_01_17_Port_PRI
         profile: vlan301
       - switch_ports:
           - Ethernet1
@@ -6666,7 +6760,7 @@ servers:
           -  C160064-037B321A
         endpoint_ports:
           - "SEC"
-        #description: RTR_37ACRA_353_01_17_Port_SEC
+        #description: AIF_37ACRA_352_01_17_Port_SEC
         profile: vlan302
 
   - name: ICM_KP_37COR_562_01
@@ -6691,7 +6785,7 @@ servers:
         #description: ICM_KP_37COR_542_01_Port_ETH_1
         profile: vlan261
 
-  - name: ICM_KP_37Off1_01
+  - name: ICM_KP_37OFF1_01
     adapters:
       - switch_ports:
           - Ethernet6
@@ -6699,7 +6793,7 @@ servers:
           -  C160064-037B320A
         endpoint_ports:
           - "ETH_1"
-        #description: ICM_KP_37Off1_01_Port_ETH_1
+        #description: ICM_KP_37OFF1_01_Port_ETH_1
         profile: vlan261
 
   - name: RTR_CP_37COR_561_01
@@ -6724,7 +6818,7 @@ servers:
         #description: RTR_CP_37COR_541_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_CP_37Off1_01
+  - name: RTR_CP_37OFF1_01
     adapters:
       - switch_ports:
           - Ethernet9
@@ -6732,7 +6826,7 @@ servers:
           -  C160064-037B320A
         endpoint_ports:
           - "LAN"
-        #description: RTR_CP_37Off1_01_Port_LAN
+        #description: RTR_CP_37OFF1_01_Port_LAN
         profile: vlan103
 
   - name: MXR_37ACRA_351_01
@@ -6831,7 +6925,7 @@ servers:
         #description: KVMRX_37COR_501_02_Port_SFP_3
         profile: vlan161
 
-  - name: CIM_37Off1_02
+  - name: CIM_37OFF1_02
     adapters:
       - switch_ports:
           - Ethernet20
@@ -6839,7 +6933,7 @@ servers:
           -  C160064-037B320A
         endpoint_ports:
           - "LINK"
-        #description: CIM_37Off1_02_Port_LINK
+        #description: CIM_37OFF1_02_Port_LINK
         profile: vlan161
 
   - name: KVMRX_37PCRA_303_01
@@ -6908,7 +7002,7 @@ servers:
         #description: PC_37COR_564_01_Port_LAN
         profile: vlan106
 
-  - name: MV_DSP_37COR_561_01
+  - name: MON_37COR_561_01
     adapters:
       - switch_ports:
           - Ethernet28
@@ -6916,7 +7010,7 @@ servers:
           -  C160064-037B320A
         endpoint_ports:
           - "LAN"
-        #description: MV_DSP_37COR_561_01_Port_LAN
+        #description: MON_37COR_561_01_Port_LAN
         profile: vlan106
 
   - name: PC_37COR_521_02
@@ -6996,7 +7090,7 @@ servers:
         #description: PC_37COR_554_03_Port_LAN
         profile: vlan106
 
-  - name: MV_DSP_37Off2_01
+  - name: MON_37OFF2_01
     adapters:
       - switch_ports:
           - Ethernet37
@@ -7004,7 +7098,7 @@ servers:
           -  C160064-037B320A
         endpoint_ports:
           - "0"
-        #description: MV_DSP_37Off2_01_Port_0
+        #description: MON_37OFF2_01_Port_0
         profile: vlan106
 
   - name: USB_SW_37PCRA_302_01
@@ -7106,7 +7200,7 @@ servers:
         #description: ICM_KP_37COR_544_01_Port_ETH_1
         profile: vlan261
 
-  - name: ICM_KP_37Off2_01
+  - name: ICM_KP_37OFF2_01
     adapters:
       - switch_ports:
           - Ethernet6
@@ -7114,7 +7208,7 @@ servers:
           -  C160064-037B321A
         endpoint_ports:
           - "ETH_1"
-        #description: ICM_KP_37Off2_01_Port_ETH_1
+        #description: ICM_KP_37OFF2_01_Port_ETH_1
         profile: vlan261
 
   - name: RTR_CP_37COR_563_01
@@ -7139,7 +7233,7 @@ servers:
         #description: RTR_CP_37COR_543_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_CP_37Off2_01
+  - name: RTR_CP_37OFF2_01
     adapters:
       - switch_ports:
           - Ethernet9
@@ -7147,10 +7241,10 @@ servers:
           -  C160064-037B321A
         endpoint_ports:
           - "LAN"
-        #description: RTR_CP_37Off2_01_Port_LAN
+        #description: RTR_CP_37OFF2_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_37ACRA_353_01_14
+  - name: AIF_37ACRA_352_01_14
     adapters:
       - switch_ports:
           - Ethernet11
@@ -7158,7 +7252,7 @@ servers:
           -  C160064-037B321A
         endpoint_ports:
           - "Eth"
-        #description: RTR_37ACRA_353_01_14_Port_Eth
+        #description: AIF_37ACRA_352_01_14_Port_Eth
         profile: vlan100
 
   - name: CIM_37COR_511_01
@@ -7238,7 +7332,7 @@ servers:
         #description: CIM_37COR_501_01_Port_LINK
         profile: vlan161
 
-  - name: KVMRX_37Off2_01
+  - name: KVMRX_37OFF2_01
     adapters:
       - switch_ports:
           - Ethernet20
@@ -7246,7 +7340,7 @@ servers:
           -  C160064-037B321A
         endpoint_ports:
           - "SFP_3"
-        #description: KVMRX_37Off2_01_Port_SFP_3
+        #description: KVMRX_37OFF2_01_Port_SFP_3
         profile: vlan161
 
   - name: KVMRX_37PCRA_303_02
@@ -7315,7 +7409,7 @@ servers:
         #description: PC_37COR_564_02_Port_LAN
         profile: vlan106
 
-  - name: MV_DSP_37COR_563_01
+  - name: MON_37COR_563_01
     adapters:
       - switch_ports:
           - Ethernet28
@@ -7323,7 +7417,7 @@ servers:
           -  C160064-037B321A
         endpoint_ports:
           - "LAN"
-        #description: MV_DSP_37COR_563_01_Port_LAN
+        #description: MON_37COR_563_01_Port_LAN
         profile: vlan106
 
   - name: PC_37COR_521_03
@@ -7403,7 +7497,7 @@ servers:
         #description: PC_37COR_501_01_Port_LAN
         profile: vlan106
 
-  - name: MV_DSP_37Off2_02
+  - name: MON_37OFF2_02
     adapters:
       - switch_ports:
           - Ethernet36
@@ -7411,7 +7505,7 @@ servers:
           -  C160064-037B321A
         endpoint_ports:
           - "0"
-        #description: MV_DSP_37Off2_02_Port_0
+        #description: MON_37OFF2_02_Port_0
         profile: vlan106
 
   - name: PC_37PCRA_301_02
@@ -7480,7 +7574,7 @@ servers:
         #description: SWR_CP_37MS2_01_Port_LAN
         profile: vlan104
 
-  - name: RTR_37ACRA_353_01_18
+  - name: AIF_37ACRA_352_01_18
     adapters:
       - switch_ports:
           - Ethernet1
@@ -7488,16 +7582,8 @@ servers:
           -  C160064-037B323A
         endpoint_ports:
           - "PRI"
-        #description: RTR_37ACRA_353_01_18_Port_PRI
+        #description: AIF_37ACRA_352_01_18_Port_PRI
         profile: vlan301
-      - switch_ports:
-          - Ethernet1
-        switches:
-          -  C160064-037B324A
-        endpoint_ports:
-          - "SEC"
-        #description: RTR_37ACRA_353_01_18_Port_SEC
-        profile: vlan302
 
   - name: ICM_KP_37ACRA_352_01
     adapters:
@@ -7565,7 +7651,7 @@ servers:
         #description: RTR_CP_37PCRA_301_01_Port_LAN
         profile: vlan103
 
-  - name: KVMRX_37COR_514_04
+  - name: KVMRX_37COR_514_01
     adapters:
       - switch_ports:
           - Ethernet13
@@ -7573,7 +7659,7 @@ servers:
           -  C160064-037B323A
         endpoint_ports:
           - "SFP_3"
-        #description: KVMRX_37COR_514_04_Port_SFP_3
+        #description: KVMRX_37COR_514_01_Port_SFP_3
         profile: vlan161
 
   - name: KVMRX_37COR_564_01
@@ -7642,7 +7728,7 @@ servers:
         #description: KVMRX_37MS1_01_Port_SFP_3
         profile: vlan161
 
-  - name: CIM_37Off2_02
+  - name: CIM_37OFF2_02
     adapters:
       - switch_ports:
           - Ethernet20
@@ -7650,7 +7736,7 @@ servers:
           -  C160064-037B323A
         endpoint_ports:
           - "LINK"
-        #description: CIM_37Off2_02_Port_LINK
+        #description: CIM_37OFF2_02_Port_LINK
         profile: vlan161
 
   - name: CIM_37PCRA_305_01
@@ -7697,7 +7783,7 @@ servers:
         #description: MON_37ACRA_350_01_Port_LAN
         profile: vlan106
 
-  - name: USB_SW_37ACRA_351_01
+  - name: USB_SW_37ACRA_352_01
     adapters:
       - switch_ports:
           - Ethernet27
@@ -7705,7 +7791,7 @@ servers:
           -  C160064-037B323A
         endpoint_ports:
           - "LAN"
-        #description: USB_SW_37ACRA_351_01_Port_LAN
+        #description: USB_SW_37ACRA_352_01_Port_LAN
         profile: vlan106
 
   - name: AMON_37COR_522_01
@@ -7884,6 +7970,33 @@ servers:
         #description: SWR_CP_37PCRA_305_01_Port_LAN
         profile: vlan104
 
+  - name: AIF_37ACRB_452_01_18
+    adapters:
+      - switch_ports:
+          - Ethernet1
+        switches:
+          -  C160064-037B324A
+        endpoint_ports:
+          - "SEC"
+        #description: AIF_37ACRB_452_01_18_Port_SEC
+        profile: vlan302
+      - switch_ports:
+          - Ethernet1
+        switches:
+          -  C160064-037B330A
+        endpoint_ports:
+          - "PRI"
+        #description: AIF_37ACRB_452_01_18_Port_PRI
+        profile: vlan301
+      - switch_ports:
+          - Ethernet1
+        switches:
+          -  C160064-037B331A
+        endpoint_ports:
+          - "SEC"
+        #description: AIF_37ACRB_452_01_18_Port_SEC
+        profile: vlan302
+
   - name: ICM_KP_37COR_522_01
     adapters:
       - switch_ports:
@@ -7950,7 +8063,7 @@ servers:
         #description: RTR_CP_37PCRA_303_01_Port_LAN
         profile: vlan103
 
-  - name: KVMRX_37COR_514_05
+  - name: KVMRX_37COR_514_02
     adapters:
       - switch_ports:
           - Ethernet13
@@ -7958,7 +8071,7 @@ servers:
           -  C160064-037B324A
         endpoint_ports:
           - "SFP_3"
-        #description: KVMRX_37COR_514_05_Port_SFP_3
+        #description: KVMRX_37COR_514_02_Port_SFP_3
         profile: vlan161
 
   - name: KVMRX_37COR_564_02
@@ -8368,7 +8481,7 @@ servers:
         #description: RTR_CP_37PCRA_307_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_37ACRA_353_01_11
+  - name: AIF_37ACRA_352_01_11
     adapters:
       - switch_ports:
           - Ethernet11
@@ -8376,7 +8489,7 @@ servers:
           -  C160064-037B325A
         endpoint_ports:
           - "Eth"
-        #description: RTR_37ACRA_353_01_11_Port_Eth
+        #description: AIF_37ACRA_352_01_11_Port_Eth
         profile: vlan100
 
   - name: CIM_37COR_514_01
@@ -8599,7 +8712,7 @@ servers:
         #description: PC_37MS2_01_Port_ENET
         profile: vlan106
 
-  - name: AMON_37Off1_01
+  - name: AMON_37OFF1_01
     adapters:
       - switch_ports:
           - Ethernet35
@@ -8607,7 +8720,7 @@ servers:
           -  C160064-037B325A
         endpoint_ports:
           - "CTL"
-        #description: AMON_37Off1_01_Port_CTL
+        #description: AMON_37OFF1_01_Port_CTL
         profile: vlan106
 
   - name: MON_37PCRA_300_03
@@ -8676,7 +8789,7 @@ servers:
         #description: RCP_37COR_500_06_Port_LAN
         profile: vlan107
 
-  - name: RTR_37ACRB_453_01_16
+  - name: AIF_37ACRB_452_01_16
     adapters:
       - switch_ports:
           - Ethernet1
@@ -8684,7 +8797,7 @@ servers:
           -  C160064-037B326A
         endpoint_ports:
           - "PRI"
-        #description: RTR_37ACRB_453_01_16_Port_PRI
+        #description: AIF_37ACRB_452_01_16_Port_PRI
         profile: vlan301
       - switch_ports:
           - Ethernet1
@@ -8692,7 +8805,7 @@ servers:
           -  C160064-037B327A
         endpoint_ports:
           - "SEC"
-        #description: RTR_37ACRB_453_01_16_Port_SEC
+        #description: AIF_37ACRB_452_01_16_Port_SEC
         profile: vlan302
 
   - name: ICM_KP_37CR_2101_01
@@ -8717,7 +8830,7 @@ servers:
         #description: ICM_KP_37CR_1303_01_Port_ETH_1
         profile: vlan261
 
-  - name: ICM_KP_37PCRA_402_01
+  - name: ICM_KP_37PCRB_402_01
     adapters:
       - switch_ports:
           - Ethernet6
@@ -8725,7 +8838,7 @@ servers:
           -  C160064-037B326A
         endpoint_ports:
           - "ETH_1"
-        #description: ICM_KP_37PCRA_402_01_Port_ETH_1
+        #description: ICM_KP_37PCRB_402_01_Port_ETH_1
         profile: vlan261
 
   - name: RTR_CP_37CR_2101_01
@@ -8750,7 +8863,7 @@ servers:
         #description: RTR_CP_37CR_1302_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_CP_37PCRA_401_01
+  - name: RTR_CP_37PCRB_401_01
     adapters:
       - switch_ports:
           - Ethernet9
@@ -8758,10 +8871,10 @@ servers:
           -  C160064-037B326A
         endpoint_ports:
           - "LAN"
-        #description: RTR_CP_37PCRA_401_01_Port_LAN
+        #description: RTR_CP_37PCRB_401_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_37ACRB_453_01_13
+  - name: AIF_37ACRB_452_01_13
     adapters:
       - switch_ports:
           - Ethernet10
@@ -8769,7 +8882,7 @@ servers:
           -  C160064-037B326A
         endpoint_ports:
           - "ETH1"
-        #description: RTR_37ACRB_453_01_13_Port_ETH1
+        #description: AIF_37ACRB_452_01_13_Port_ETH1
         profile: vlan100
       - switch_ports:
           - Ethernet40
@@ -8777,7 +8890,7 @@ servers:
           -  C160064-037B327A
         endpoint_ports:
           - "ETH2"
-        #description: RTR_37ACRB_453_01_13_Port_ETH2
+        #description: AIF_37ACRB_452_01_13_Port_ETH2
         profile: vlan102
       - switch_ports:
           - Ethernet36
@@ -8785,7 +8898,7 @@ servers:
           -  C160064-037B328A
         endpoint_ports:
           - "ETH3"
-        #description: RTR_37ACRB_453_01_13_Port_ETH3
+        #description: AIF_37ACRB_452_01_13_Port_ETH3
         profile: vlan106
 
   - name: CIM_37CR_2101_01
@@ -8887,7 +9000,18 @@ servers:
         #description: PC_37CR_2101_01_Port_LAN
         profile: vlan106
 
-  - name: MON_37CR_2100_XX
+  - name: IFC_37CR_2100_01
+    adapters:
+      - switch_ports:
+          - Ethernet25
+        switches:
+          -  C160064-037B326A
+        endpoint_ports:
+          - "ETH(POE_IN)"
+        #description: IFC_37CR_2100_01_Port_ETH(POE_IN)
+        profile: vlan106
+
+  - name: MON_37CR_2100_03
     adapters:
       - switch_ports:
           - Ethernet26
@@ -8895,7 +9019,7 @@ servers:
           -  C160064-037B326A
         endpoint_ports:
           - "LAN"
-        #description: MON_37CR_2100_XX_Port_LAN
+        #description: MON_37CR_2100_03_Port_LAN
         profile: vlan106
 
   - name: AMON_37CR_2102_01
@@ -8997,7 +9121,7 @@ servers:
         #description: PC_37CR_1501_03_Port_LAN
         profile: vlan106
 
-  - name: MXR_37CR_1500_01
+  - name: IFC_37CR_1500_01
     adapters:
       - switch_ports:
           - Ethernet36
@@ -9005,7 +9129,7 @@ servers:
           -  C160064-037B326A
         endpoint_ports:
           - "ETH(POE_IN)"
-        #description: MXR_37CR_1500_01_Port_ETH(POE_IN)
+        #description: IFC_37CR_1500_01_Port_ETH(POE_IN)
         profile: vlan106
 
   - name: AMON_37CR_1503_01
@@ -9019,7 +9143,7 @@ servers:
         #description: AMON_37CR_1503_01_Port_CTL
         profile: vlan106
 
-  - name: MON_37PCRA_400_01
+  - name: MON_37PCRB_400_01
     adapters:
       - switch_ports:
           - Ethernet38
@@ -9027,7 +9151,7 @@ servers:
           -  C160064-037B326A
         endpoint_ports:
           - "LAN"
-        #description: MON_37PCRA_400_01_Port_LAN
+        #description: MON_37PCRB_400_01_Port_LAN
         profile: vlan106
 
   - name: USB_SW_37PCRB_402_01
@@ -9107,7 +9231,7 @@ servers:
         #description: ICM_KP_37CR_1306_01_Port_ETH_1
         profile: vlan261
 
-  - name: ICM_KP_37PCRA_404_01
+  - name: ICM_KP_37PCRB_404_01
     adapters:
       - switch_ports:
           - Ethernet6
@@ -9115,7 +9239,7 @@ servers:
           -  C160064-037B327A
         endpoint_ports:
           - "ETH_1"
-        #description: ICM_KP_37PCRA_404_01_Port_ETH_1
+        #description: ICM_KP_37PCRB_404_01_Port_ETH_1
         profile: vlan261
 
   - name: RTR_CP_37CR_2201_01
@@ -9140,7 +9264,7 @@ servers:
         #description: RTR_CP_37CR_1305_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_CP_37PCRA_403_01
+  - name: RTR_CP_37PCRB_403_01
     adapters:
       - switch_ports:
           - Ethernet9
@@ -9148,10 +9272,10 @@ servers:
           -  C160064-037B327A
         endpoint_ports:
           - "LAN"
-        #description: RTR_CP_37PCRA_403_01_Port_LAN
+        #description: RTR_CP_37PCRB_403_01_Port_LAN
         profile: vlan103
 
-  - name: MXR_37ACRB_453_01
+  - name: MXR_37ACRB_451_01
     adapters:
       - switch_ports:
           - Ethernet10
@@ -9159,7 +9283,7 @@ servers:
           -  C160064-037B327A
         endpoint_ports:
           - "Pri"
-        #description: MXR_37ACRB_453_01_Port_Pri
+        #description: MXR_37ACRB_451_01_Port_Pri
         profile: vlan100
       - switch_ports:
           - Ethernet10
@@ -9167,7 +9291,7 @@ servers:
           -  C160064-037B328A
         endpoint_ports:
           - "Sec"
-        #description: MXR_37ACRB_453_01_Port_Sec
+        #description: MXR_37ACRB_451_01_Port_Sec
         profile: vlan100
 
   - name: CIM_37CR_2100_01
@@ -9269,7 +9393,7 @@ servers:
         #description: PC_37CR_2101_02_Port_LAN
         profile: vlan106
 
-  - name: MXR_37CR_2200_01
+  - name: IFC_37CR_2200_01
     adapters:
       - switch_ports:
           - Ethernet25
@@ -9277,10 +9401,10 @@ servers:
           -  C160064-037B327A
         endpoint_ports:
           - "ETH(POE_IN)"
-        #description: MXR_37CR_2200_01_Port_ETH(POE_IN)
+        #description: IFC_37CR_2200_01_Port_ETH(POE_IN)
         profile: vlan106
 
-  - name: MON_37CR_2200_XX
+  - name: MON_37CR_2200_03
     adapters:
       - switch_ports:
           - Ethernet26
@@ -9288,7 +9412,7 @@ servers:
           -  C160064-037B327A
         endpoint_ports:
           - "LAN"
-        #description: MON_37CR_2200_XX_Port_LAN
+        #description: MON_37CR_2200_03_Port_LAN
         profile: vlan106
 
   - name: AMON_37CR_2202_01
@@ -9390,7 +9514,7 @@ servers:
         #description: PC_37CR_1507_01_Port_LAN
         profile: vlan106
 
-  - name: MON_37PCRA_400_02
+  - name: MON_37PCRB_400_02
     adapters:
       - switch_ports:
           - Ethernet36
@@ -9398,7 +9522,7 @@ servers:
           -  C160064-037B327A
         endpoint_ports:
           - "LAN"
-        #description: MON_37PCRA_400_02_Port_LAN
+        #description: MON_37PCRB_400_02_Port_LAN
         profile: vlan106
 
   - name: AMON_37PCRB__402_01
@@ -9467,7 +9591,7 @@ servers:
         #description: SWR_CP_37PCRB_405_01_Port_LAN
         profile: vlan104
 
-  - name: RTR_37ACRB_453_01_17
+  - name: AIF_37ACRB_452_01_17
     adapters:
       - switch_ports:
           - Ethernet1
@@ -9475,7 +9599,7 @@ servers:
           -  C160064-037B328A
         endpoint_ports:
           - "PRI"
-        #description: RTR_37ACRB_453_01_17_Port_PRI
+        #description: AIF_37ACRB_452_01_17_Port_PRI
         profile: vlan301
       - switch_ports:
           - Ethernet1
@@ -9483,7 +9607,7 @@ servers:
           -  C160064-037B329A
         endpoint_ports:
           - "SEC"
-        #description: RTR_37ACRB_453_01_17_Port_SEC
+        #description: AIF_37ACRB_452_01_17_Port_SEC
         profile: vlan302
 
   - name: ICM_KP_37CR_2302_01
@@ -9508,7 +9632,7 @@ servers:
         #description: ICM_KP_37CR_1403_01_Port_ETH_1
         profile: vlan261
 
-  - name: ICM_KP_37PCRA_406_01
+  - name: ICM_KP_37PCRB_406_01
     adapters:
       - switch_ports:
           - Ethernet6
@@ -9516,7 +9640,7 @@ servers:
           -  C160064-037B328A
         endpoint_ports:
           - "ETH_1"
-        #description: ICM_KP_37PCRA_406_01_Port_ETH_1
+        #description: ICM_KP_37PCRB_406_01_Port_ETH_1
         profile: vlan261
 
   - name: RTR_CP_37CR_2301_01
@@ -9541,7 +9665,7 @@ servers:
         #description: RTR_CP_37CR_1402_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_CP_37PCRA_405_01
+  - name: RTR_CP_37PCRB_405_01
     adapters:
       - switch_ports:
           - Ethernet9
@@ -9549,7 +9673,7 @@ servers:
           -  C160064-037B328A
         endpoint_ports:
           - "LAN"
-        #description: RTR_CP_37PCRA_405_01_Port_LAN
+        #description: RTR_CP_37PCRB_405_01_Port_LAN
         profile: vlan103
 
   - name: KVMRX_37CR_2101_01
@@ -9662,7 +9786,7 @@ servers:
         #description: PC_37CR_2101_03_Port_LAN
         profile: vlan106
 
-  - name: MXR_37CR_2300_01
+  - name: IFC_37CR_2300_01
     adapters:
       - switch_ports:
           - Ethernet25
@@ -9670,10 +9794,10 @@ servers:
           -  C160064-037B328A
         endpoint_ports:
           - "ETH(POE_IN)"
-        #description: MXR_37CR_2300_01_Port_ETH(POE_IN)
+        #description: IFC_37CR_2300_01_Port_ETH(POE_IN)
         profile: vlan106
 
-  - name: MON_37CR_2300_XX
+  - name: MON_37CR_2300_03
     adapters:
       - switch_ports:
           - Ethernet26
@@ -9681,7 +9805,7 @@ servers:
           -  C160064-037B328A
         endpoint_ports:
           - "LAN"
-        #description: MON_37CR_2300_XX_Port_LAN
+        #description: MON_37CR_2300_03_Port_LAN
         profile: vlan106
 
   - name: AMON_37CR_2302_01
@@ -9783,7 +9907,7 @@ servers:
         #description: PC_37CR_1507_02_Port_LAN
         profile: vlan106
 
-  - name: MON_37PCRA_400_03
+  - name: MON_37PCRB_400_03
     adapters:
       - switch_ports:
           - Ethernet37
@@ -9791,7 +9915,7 @@ servers:
           -  C160064-037B328A
         endpoint_ports:
           - "LAN"
-        #description: MON_37PCRA_400_03_Port_LAN
+        #description: MON_37PCRB_400_03_Port_LAN
         profile: vlan106
 
   - name: PC_37PCRB_401_03
@@ -9882,7 +10006,7 @@ servers:
         #description: ICM_KP_37CR_1406_01_Port_ETH_1
         profile: vlan261
 
-  - name: ICM_KP_37PCRA_408_01
+  - name: ICM_KP_37PCRB_408_01
     adapters:
       - switch_ports:
           - Ethernet6
@@ -9890,7 +10014,7 @@ servers:
           -  C160064-037B329A
         endpoint_ports:
           - "ETH_1"
-        #description: ICM_KP_37PCRA_408_01_Port_ETH_1
+        #description: ICM_KP_37PCRB_408_01_Port_ETH_1
         profile: vlan261
 
   - name: RTR_CP_37CR_1102_01
@@ -9915,7 +10039,7 @@ servers:
         #description: RTR_CP_37CR_1405_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_CP_37PCRA_407_01
+  - name: RTR_CP_37PCRB_407_01
     adapters:
       - switch_ports:
           - Ethernet9
@@ -9923,10 +10047,10 @@ servers:
           -  C160064-037B329A
         endpoint_ports:
           - "LAN"
-        #description: RTR_CP_37PCRA_407_01_Port_LAN
+        #description: RTR_CP_37PCRB_407_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_37ACRB_453_01_14
+  - name: AIF_37ACRB_452_01_14
     adapters:
       - switch_ports:
           - Ethernet10
@@ -9934,7 +10058,7 @@ servers:
           -  C160064-037B329A
         endpoint_ports:
           - "Eth"
-        #description: RTR_37ACRB_453_01_14_Port_Eth
+        #description: AIF_37ACRB_452_01_14_Port_Eth
         profile: vlan100
 
   - name: KVMRX_37CR_2101_02
@@ -10014,7 +10138,7 @@ servers:
         #description: KVMRX_37CR_1507_02_Port_SFP_3
         profile: vlan161
 
-  - name: CIM_37PCRB_401_01
+  - name: CIM_37PCRB_401_02
     adapters:
       - switch_ports:
           - Ethernet20
@@ -10022,7 +10146,7 @@ servers:
           -  C160064-037B329A
         endpoint_ports:
           - "LINK"
-        #description: CIM_37PCRB_401_01_Port_LINK
+        #description: CIM_37PCRB_401_02_Port_LINK
         profile: vlan161
 
   - name: CIM_37PCRB_407_01
@@ -10080,7 +10204,7 @@ servers:
         #description: PC_37CR_1101_02_Port_LAN
         profile: vlan106
 
-  - name: MXR_37CR_1100_01
+  - name: IFC_37CR_1100_01
     adapters:
       - switch_ports:
           - Ethernet28
@@ -10088,7 +10212,7 @@ servers:
           -  C160064-037B329A
         endpoint_ports:
           - "ETH(POE_IN)"
-        #description: MXR_37CR_1100_01_Port_ETH(POE_IN)
+        #description: IFC_37CR_1100_01_Port_ETH(POE_IN)
         profile: vlan106
 
   - name: AMON_37CR_1103_01
@@ -10168,7 +10292,7 @@ servers:
         #description: PC_37CR_1507_03_Port_LAN
         profile: vlan106
 
-  - name: MON_37PCRA_400_04
+  - name: MON_37PCRB_400_04
     adapters:
       - switch_ports:
           - Ethernet36
@@ -10176,7 +10300,7 @@ servers:
           -  C160064-037B329A
         endpoint_ports:
           - "LAN"
-        #description: MON_37PCRA_400_04_Port_LAN
+        #description: MON_37PCRB_400_04_Port_LAN
         profile: vlan106
 
   - name: PC_37PCRB_403_01
@@ -10233,25 +10357,6 @@ servers:
           - "LAN"
         #description: RCP_37CR_1100_01_Port_LAN
         profile: vlan107
-
-  - name: RTR_37ACRB_453_01_18
-    adapters:
-      - switch_ports:
-          - Ethernet1
-        switches:
-          -  C160064-037B330A
-        endpoint_ports:
-          - "PRI"
-        #description: RTR_37ACRB_453_01_18_Port_PRI
-        profile: vlan301
-      - switch_ports:
-          - Ethernet1
-        switches:
-          -  C160064-037B331A
-        endpoint_ports:
-          - "SEC"
-        #description: RTR_37ACRB_453_01_18_Port_SEC
-        profile: vlan302
 
   - name: ICM_KP_37CR_1106_01
     adapters:
@@ -10440,7 +10545,7 @@ servers:
         #description: USB_SW_37CR_1106_01_Port_LAN
         profile: vlan106
 
-  - name: MXR_37CR_1200_01
+  - name: IFC_37CR_1200_01
     adapters:
       - switch_ports:
           - Ethernet28
@@ -10448,7 +10553,7 @@ servers:
           -  C160064-037B330A
         endpoint_ports:
           - "ETH(POE_IN)"
-        #description: MXR_37CR_1200_01_Port_ETH(POE_IN)
+        #description: IFC_37CR_1200_01_Port_ETH(POE_IN)
         profile: vlan106
 
   - name: AMON_37CR_1203_01
@@ -10759,7 +10864,7 @@ servers:
         #description: PC_37CR_1207_02_Port_LAN
         profile: vlan106
 
-  - name: MXR_37CR_1300_01
+  - name: IFC_37CR_1300_01
     adapters:
       - switch_ports:
           - Ethernet29
@@ -10767,7 +10872,7 @@ servers:
           -  C160064-037B331A
         endpoint_ports:
           - "ETH(POE_IN)"
-        #description: MXR_37CR_1300_01_Port_ETH(POE_IN)
+        #description: IFC_37CR_1300_01_Port_ETH(POE_IN)
         profile: vlan106
 
   - name: AMON_37CR_1303_01
@@ -10902,7 +11007,7 @@ servers:
         #description: RTR_CP_37CR_1205_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_CP_37ACRA_452_01
+  - name: RTR_CP_37ACRB_452_01
     adapters:
       - switch_ports:
           - Ethernet8
@@ -10910,10 +11015,10 @@ servers:
           -  C160064-037B332A
         endpoint_ports:
           - "LAN"
-        #description: RTR_CP_37ACRA_452_01_Port_LAN
+        #description: RTR_CP_37ACRB_452_01_Port_LAN
         profile: vlan103
 
-  - name: RTR_37ACRB_453_01_11
+  - name: AIF_37ACRB_452_01_11
     adapters:
       - switch_ports:
           - Ethernet10
@@ -10921,7 +11026,7 @@ servers:
           -  C160064-037B332A
         endpoint_ports:
           - "Eth"
-        #description: RTR_37ACRB_453_01_11_Port_Eth
+        #description: AIF_37ACRB_452_01_11_Port_Eth
         profile: vlan100
 
   - name: KVMRX_37CR_2201_01
@@ -11111,7 +11216,7 @@ servers:
         #description: PC_37CR_1401_01_Port_LAN
         profile: vlan106
 
-  - name: MXR_37CR_1400_01
+  - name: IFC_37CR_1400_01
     adapters:
       - switch_ports:
           - Ethernet30
@@ -11119,7 +11224,7 @@ servers:
           -  C160064-037B332A
         endpoint_ports:
           - "ETH(POE_IN)"
-        #description: MXR_37CR_1400_01_Port_ETH(POE_IN)
+        #description: IFC_37CR_1400_01_Port_ETH(POE_IN)
         profile: vlan106
 
   - name: AMON_37CR_1403_01
@@ -13926,7 +14031,7 @@ servers:
         #description: SVR_37C11_02_02_Port_25G_2
         profile: vlan181
 
-  - name: KVMTX_37C09_01
+  - name: KVMTX_37C09_01R
     adapters:
       - switch_ports:
           - Ethernet1
@@ -13934,10 +14039,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_01_Port_SFP3
+        #description: KVMTX_37C09_01R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_02
+  - name: KVMTX_37C09_02R
     adapters:
       - switch_ports:
           - Ethernet2
@@ -13945,10 +14050,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_02_Port_SFP3
+        #description: KVMTX_37C09_02R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_03
+  - name: KVMTX_37C09_03R
     adapters:
       - switch_ports:
           - Ethernet3
@@ -13956,10 +14061,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_03_Port_SFP3
+        #description: KVMTX_37C09_03R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_04
+  - name: KVMTX_37C09_04R
     adapters:
       - switch_ports:
           - Ethernet4
@@ -13967,10 +14072,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_04_Port_SFP3
+        #description: KVMTX_37C09_04R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_05
+  - name: KVMTX_37C09_05R
     adapters:
       - switch_ports:
           - Ethernet5
@@ -13978,10 +14083,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_05_Port_SFP3
+        #description: KVMTX_37C09_05R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_06
+  - name: KVMTX_37C09_06R
     adapters:
       - switch_ports:
           - Ethernet6
@@ -13989,10 +14094,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_06_Port_SFP3
+        #description: KVMTX_37C09_06R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_07
+  - name: KVMTX_37C09_07R
     adapters:
       - switch_ports:
           - Ethernet7
@@ -14000,10 +14105,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_07_Port_SFP3
+        #description: KVMTX_37C09_07R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_08
+  - name: KVMTX_37C09_08R
     adapters:
       - switch_ports:
           - Ethernet8
@@ -14011,10 +14116,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_08_Port_SFP3
+        #description: KVMTX_37C09_08R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_09
+  - name: KVMTX_37C09_09R
     adapters:
       - switch_ports:
           - Ethernet9
@@ -14022,10 +14127,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_09_Port_SFP3
+        #description: KVMTX_37C09_09R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_10
+  - name: KVMTX_37C09_10R
     adapters:
       - switch_ports:
           - Ethernet10
@@ -14033,10 +14138,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_10_Port_SFP3
+        #description: KVMTX_37C09_10R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_11
+  - name: KVMTX_37C09_11R
     adapters:
       - switch_ports:
           - Ethernet11
@@ -14044,10 +14149,10 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_11_Port_SFP3
+        #description: KVMTX_37C09_11R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37C09_12
+  - name: KVMTX_37C09_12R
     adapters:
       - switch_ports:
           - Ethernet12
@@ -14055,7 +14160,7 @@ servers:
           -  C160064-037B345A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37C09_12_Port_SFP3
+        #description: KVMTX_37C09_12R_Port_SFP3
         profile: vlan161
 
   - name: CIM_37C11_01
@@ -15888,1057 +15993,6 @@ servers:
           - "ENET"
         #description: COMB_37D03_04_Port_ENET
         profile: vlan204
-
-  - name: TBD
-    adapters:
-      - switch_ports:
-          - Ethernet34
-        switches:
-          -  C160064-037B353A
-        endpoint_ports:
-          - "TBD"
-        #description: TBD_Port_TBD
-        profile: vlan1
-      - switch_ports:
-          - Ethernet35
-        switches:
-          -  C160064-037B353A
-        endpoint_ports:
-          - "TBD"
-        #description: TBD_Port_TBD
-        profile: vlan1
-      - switch_ports:
-          - Ethernet36
-        switches:
-          -  C160064-037B353A
-        endpoint_ports:
-          - "TBD"
-        #description: TBD_Port_TBD
-        profile: vlan1
-      - switch_ports:
-          - Ethernet37
-        switches:
-          -  C160064-037B353A
-        endpoint_ports:
-          - "TBD"
-        #description: TBD_Port_TBD
-        profile: vlan1
-      - switch_ports:
-          - Ethernet38
-        switches:
-          -  C160064-037B353A
-        endpoint_ports:
-          - "TBD"
-        #description: TBD_Port_TBD
-        profile: vlan1
-      - switch_ports:
-          - Ethernet39
-        switches:
-          -  C160064-037B353A
-        endpoint_ports:
-          - "TBD"
-        #description: TBD_Port_TBD
-        profile: vlan1
-      - switch_ports:
-          - Ethernet35
-        switches:
-          -  C160064-015B308A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan100
-      - switch_ports:
-          - Ethernet36
-        switches:
-          -  C160064-015B308A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan100
-      - switch_ports:
-          - Ethernet37
-        switches:
-          -  C160064-015B308A
-        endpoint_ports:
-          - "3"
-        #description: TBD_Port_3
-        profile: vlan100
-      - switch_ports:
-          - Ethernet38
-        switches:
-          -  C160064-015B308A
-        endpoint_ports:
-          - "4"
-        #description: TBD_Port_4
-        profile: vlan100
-      - switch_ports:
-          - Ethernet39
-        switches:
-          -  C160064-015B308A
-        endpoint_ports:
-          - "5"
-        #description: TBD_Port_5
-        profile: vlan100
-      - switch_ports:
-          - Ethernet40
-        switches:
-          -  C160064-015B308A
-        endpoint_ports:
-          - "6"
-        #description: TBD_Port_6
-        profile: vlan100
-      - switch_ports:
-          - Ethernet3
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet4
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan164
-      - switch_ports:
-          - Ethernet5
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "3"
-        #description: TBD_Port_3
-        profile: vlan164
-      - switch_ports:
-          - Ethernet6
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "4"
-        #description: TBD_Port_4
-        profile: vlan164
-      - switch_ports:
-          - Ethernet7
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "5"
-        #description: TBD_Port_5
-        profile: vlan164
-      - switch_ports:
-          - Ethernet8
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "6"
-        #description: TBD_Port_6
-        profile: vlan164
-      - switch_ports:
-          - Ethernet9
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "7"
-        #description: TBD_Port_7
-        profile: vlan164
-      - switch_ports:
-          - Ethernet10
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "8"
-        #description: TBD_Port_8
-        profile: vlan164
-      - switch_ports:
-          - Ethernet11
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "9"
-        #description: TBD_Port_9
-        profile: vlan164
-      - switch_ports:
-          - Ethernet12
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "10"
-        #description: TBD_Port_10
-        profile: vlan164
-      - switch_ports:
-          - Ethernet13
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "11"
-        #description: TBD_Port_11
-        profile: vlan164
-      - switch_ports:
-          - Ethernet14
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "12"
-        #description: TBD_Port_12
-        profile: vlan164
-      - switch_ports:
-          - Ethernet15
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "13"
-        #description: TBD_Port_13
-        profile: vlan164
-      - switch_ports:
-          - Ethernet16
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "14"
-        #description: TBD_Port_14
-        profile: vlan164
-      - switch_ports:
-          - Ethernet17
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "15"
-        #description: TBD_Port_15
-        profile: vlan164
-      - switch_ports:
-          - Ethernet18
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "16"
-        #description: TBD_Port_16
-        profile: vlan164
-      - switch_ports:
-          - Ethernet19
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "17"
-        #description: TBD_Port_17
-        profile: vlan164
-      - switch_ports:
-          - Ethernet20
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "18"
-        #description: TBD_Port_18
-        profile: vlan164
-      - switch_ports:
-          - Ethernet21
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "19"
-        #description: TBD_Port_19
-        profile: vlan164
-      - switch_ports:
-          - Ethernet22
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "20"
-        #description: TBD_Port_20
-        profile: vlan164
-      - switch_ports:
-          - Ethernet23
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "21"
-        #description: TBD_Port_21
-        profile: vlan164
-      - switch_ports:
-          - Ethernet24
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "22"
-        #description: TBD_Port_22
-        profile: vlan164
-      - switch_ports:
-          - Ethernet25
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "23"
-        #description: TBD_Port_23
-        profile: vlan164
-      - switch_ports:
-          - Ethernet26
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "24"
-        #description: TBD_Port_24
-        profile: vlan164
-      - switch_ports:
-          - Ethernet27
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "25"
-        #description: TBD_Port_25
-        profile: vlan164
-      - switch_ports:
-          - Ethernet28
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "26"
-        #description: TBD_Port_26
-        profile: vlan164
-      - switch_ports:
-          - Ethernet29
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "27"
-        #description: TBD_Port_27
-        profile: vlan164
-      - switch_ports:
-          - Ethernet30
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "28"
-        #description: TBD_Port_28
-        profile: vlan164
-      - switch_ports:
-          - Ethernet31
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "29"
-        #description: TBD_Port_29
-        profile: vlan164
-      - switch_ports:
-          - Ethernet32
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "30"
-        #description: TBD_Port_30
-        profile: vlan164
-      - switch_ports:
-          - Ethernet33
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "31"
-        #description: TBD_Port_31
-        profile: vlan164
-      - switch_ports:
-          - Ethernet34
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "32"
-        #description: TBD_Port_32
-        profile: vlan164
-      - switch_ports:
-          - Ethernet35
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "33"
-        #description: TBD_Port_33
-        profile: vlan164
-      - switch_ports:
-          - Ethernet36
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "34"
-        #description: TBD_Port_34
-        profile: vlan164
-      - switch_ports:
-          - Ethernet37
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "35"
-        #description: TBD_Port_35
-        profile: vlan164
-      - switch_ports:
-          - Ethernet38
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "36"
-        #description: TBD_Port_36
-        profile: vlan164
-      - switch_ports:
-          - Ethernet39
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet40
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet41
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet42
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet43
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet44
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan164
-      - switch_ports:
-          - Ethernet45
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet46
-        switches:
-          -  C160064-015B311A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet21
-        switches:
-          -  C160064-015B314A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan100
-      - switch_ports:
-          - Ethernet22
-        switches:
-          -  C160064-015B314A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan100
-      - switch_ports:
-          - Ethernet23
-        switches:
-          -  C160064-015B314A
-        endpoint_ports:
-          - "3"
-        #description: TBD_Port_3
-        profile: vlan100
-      - switch_ports:
-          - Ethernet24
-        switches:
-          -  C160064-015B314A
-        endpoint_ports:
-          - "4"
-        #description: TBD_Port_4
-        profile: vlan100
-      - switch_ports:
-          - Ethernet25
-        switches:
-          -  C160064-015B314A
-        endpoint_ports:
-          - "5"
-        #description: TBD_Port_5
-        profile: vlan100
-      - switch_ports:
-          - Ethernet26
-        switches:
-          -  C160064-015B314A
-        endpoint_ports:
-          - "6"
-        #description: TBD_Port_6
-        profile: vlan100
-      - switch_ports:
-          - Ethernet30
-        switches:
-          -  C160064-016B305A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan100
-      - switch_ports:
-          - Ethernet31
-        switches:
-          -  C160064-016B305A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan100
-      - switch_ports:
-          - Ethernet32
-        switches:
-          -  C160064-016B305A
-        endpoint_ports:
-          - "3"
-        #description: TBD_Port_3
-        profile: vlan100
-      - switch_ports:
-          - Ethernet33
-        switches:
-          -  C160064-016B305A
-        endpoint_ports:
-          - "4"
-        #description: TBD_Port_4
-        profile: vlan100
-      - switch_ports:
-          - Ethernet17
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet18
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan164
-      - switch_ports:
-          - Ethernet19
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "3"
-        #description: TBD_Port_3
-        profile: vlan164
-      - switch_ports:
-          - Ethernet20
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "4"
-        #description: TBD_Port_4
-        profile: vlan164
-      - switch_ports:
-          - Ethernet21
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "5"
-        #description: TBD_Port_5
-        profile: vlan164
-      - switch_ports:
-          - Ethernet22
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "6"
-        #description: TBD_Port_6
-        profile: vlan164
-      - switch_ports:
-          - Ethernet23
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "7"
-        #description: TBD_Port_7
-        profile: vlan164
-      - switch_ports:
-          - Ethernet24
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "8"
-        #description: TBD_Port_8
-        profile: vlan164
-      - switch_ports:
-          - Ethernet25
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "9"
-        #description: TBD_Port_9
-        profile: vlan164
-      - switch_ports:
-          - Ethernet26
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "10"
-        #description: TBD_Port_10
-        profile: vlan164
-      - switch_ports:
-          - Ethernet27
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "11"
-        #description: TBD_Port_11
-        profile: vlan164
-      - switch_ports:
-          - Ethernet28
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "12"
-        #description: TBD_Port_12
-        profile: vlan164
-      - switch_ports:
-          - Ethernet29
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "13"
-        #description: TBD_Port_13
-        profile: vlan164
-      - switch_ports:
-          - Ethernet30
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "14"
-        #description: TBD_Port_14
-        profile: vlan164
-      - switch_ports:
-          - Ethernet31
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "15"
-        #description: TBD_Port_15
-        profile: vlan164
-      - switch_ports:
-          - Ethernet32
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "16"
-        #description: TBD_Port_16
-        profile: vlan164
-      - switch_ports:
-          - Ethernet33
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "17"
-        #description: TBD_Port_17
-        profile: vlan164
-      - switch_ports:
-          - Ethernet34
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "18"
-        #description: TBD_Port_18
-        profile: vlan164
-      - switch_ports:
-          - Ethernet35
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet36
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet37
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet38
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet39
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet40
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan164
-      - switch_ports:
-          - Ethernet41
-        switches:
-          -  C160064-016B307A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan164
-      - switch_ports:
-          - Ethernet37
-        switches:
-          -  C160064-016B310A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan100
-      - switch_ports:
-          - Ethernet38
-        switches:
-          -  C160064-016B310A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan100
-      - switch_ports:
-          - Ethernet39
-        switches:
-          -  C160064-016B310A
-        endpoint_ports:
-          - "3"
-        #description: TBD_Port_3
-        profile: vlan100
-      - switch_ports:
-          - Ethernet40
-        switches:
-          -  C160064-016B310A
-        endpoint_ports:
-          - "4"
-        #description: TBD_Port_4
-        profile: vlan100
-      - switch_ports:
-          - Ethernet41
-        switches:
-          -  C160064-016B310A
-        endpoint_ports:
-          - "5"
-        #description: TBD_Port_5
-        profile: vlan100
-      - switch_ports:
-          - Ethernet42
-        switches:
-          -  C160064-016B310A
-        endpoint_ports:
-          - "6"
-        #description: TBD_Port_6
-        profile: vlan100
-      - switch_ports:
-          - Ethernet26
-        switches:
-          -  C160064-050B306A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan100
-      - switch_ports:
-          - Ethernet27
-        switches:
-          -  C160064-050B306A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan100
-      - switch_ports:
-          - Ethernet28
-        switches:
-          -  C160064-050B306A
-        endpoint_ports:
-          - "3"
-        #description: TBD_Port_3
-        profile: vlan100
-      - switch_ports:
-          - Ethernet29
-        switches:
-          -  C160064-050B306A
-        endpoint_ports:
-          - "4"
-        #description: TBD_Port_4
-        profile: vlan100
-      - switch_ports:
-          - Ethernet34
-        switches:
-          -  C160064-051B306A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan100
-      - switch_ports:
-          - Ethernet35
-        switches:
-          -  C160064-051B306A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan100
-      - switch_ports:
-          - Ethernet36
-        switches:
-          -  C160064-051B306A
-        endpoint_ports:
-          - "3"
-        #description: TBD_Port_3
-        profile: vlan100
-      - switch_ports:
-          - Ethernet37
-        switches:
-          -  C160064-051B306A
-        endpoint_ports:
-          - "4"
-        #description: TBD_Port_4
-        profile: vlan100
-      - switch_ports:
-          - Ethernet38
-        switches:
-          -  C160064-051B306A
-        endpoint_ports:
-          - "5"
-        #description: TBD_Port_5
-        profile: vlan100
-      - switch_ports:
-          - Ethernet39
-        switches:
-          -  C160064-051B306A
-        endpoint_ports:
-          - "6"
-        #description: TBD_Port_6
-        profile: vlan100
-      - switch_ports:
-          - Ethernet8
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet9
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan164
-      - switch_ports:
-          - Ethernet10
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "3"
-        #description: TBD_Port_3
-        profile: vlan164
-      - switch_ports:
-          - Ethernet11
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "4"
-        #description: TBD_Port_4
-        profile: vlan164
-      - switch_ports:
-          - Ethernet12
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "5"
-        #description: TBD_Port_5
-        profile: vlan164
-      - switch_ports:
-          - Ethernet13
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "6"
-        #description: TBD_Port_6
-        profile: vlan164
-      - switch_ports:
-          - Ethernet14
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "7"
-        #description: TBD_Port_7
-        profile: vlan164
-      - switch_ports:
-          - Ethernet15
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "8"
-        #description: TBD_Port_8
-        profile: vlan164
-      - switch_ports:
-          - Ethernet16
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "9"
-        #description: TBD_Port_9
-        profile: vlan164
-      - switch_ports:
-          - Ethernet17
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "10"
-        #description: TBD_Port_10
-        profile: vlan164
-      - switch_ports:
-          - Ethernet18
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "11"
-        #description: TBD_Port_11
-        profile: vlan164
-      - switch_ports:
-          - Ethernet19
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "12"
-        #description: TBD_Port_12
-        profile: vlan164
-      - switch_ports:
-          - Ethernet20
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "13"
-        #description: TBD_Port_13
-        profile: vlan164
-      - switch_ports:
-          - Ethernet21
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "14"
-        #description: TBD_Port_14
-        profile: vlan164
-      - switch_ports:
-          - Ethernet22
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "15"
-        #description: TBD_Port_15
-        profile: vlan164
-      - switch_ports:
-          - Ethernet23
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "16"
-        #description: TBD_Port_16
-        profile: vlan164
-      - switch_ports:
-          - Ethernet24
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "17"
-        #description: TBD_Port_17
-        profile: vlan164
-      - switch_ports:
-          - Ethernet25
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet26
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet27
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet28
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet29
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "1"
-        #description: TBD_Port_1
-        profile: vlan164
-      - switch_ports:
-          - Ethernet30
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan164
-      - switch_ports:
-          - Ethernet31
-        switches:
-          -  C160064-051B307A
-        endpoint_ports:
-          - "2"
-        #description: TBD_Port_2
-        profile: vlan164
 
   - name: FR_37D04_01
     adapters:
@@ -18812,7 +17866,7 @@ servers:
         #description: SVR_37D11_02_02_Port_25G_2
         profile: vlan181
 
-  - name: KVMTX_37D09_01
+  - name: KVMTX_37D09_01R
     adapters:
       - switch_ports:
           - Ethernet1
@@ -18820,10 +17874,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_01_Port_SFP3
+        #description: KVMTX_37D09_01R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_02
+  - name: KVMTX_37D09_02R
     adapters:
       - switch_ports:
           - Ethernet2
@@ -18831,10 +17885,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_02_Port_SFP3
+        #description: KVMTX_37D09_02R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_03
+  - name: KVMTX_37D09_03R
     adapters:
       - switch_ports:
           - Ethernet3
@@ -18842,10 +17896,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_03_Port_SFP3
+        #description: KVMTX_37D09_03R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_04
+  - name: KVMTX_37D09_04R
     adapters:
       - switch_ports:
           - Ethernet4
@@ -18853,10 +17907,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_04_Port_SFP3
+        #description: KVMTX_37D09_04R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_05
+  - name: KVMTX_37D09_05R
     adapters:
       - switch_ports:
           - Ethernet5
@@ -18864,10 +17918,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_05_Port_SFP3
+        #description: KVMTX_37D09_05R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_06
+  - name: KVMTX_37D09_06R
     adapters:
       - switch_ports:
           - Ethernet6
@@ -18875,10 +17929,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_06_Port_SFP3
+        #description: KVMTX_37D09_06R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_07
+  - name: KVMTX_37D09_07R
     adapters:
       - switch_ports:
           - Ethernet7
@@ -18886,10 +17940,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_07_Port_SFP3
+        #description: KVMTX_37D09_07R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_08
+  - name: KVMTX_37D09_08R
     adapters:
       - switch_ports:
           - Ethernet8
@@ -18897,10 +17951,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_08_Port_SFP3
+        #description: KVMTX_37D09_08R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_09
+  - name: KVMTX_37D09_09R
     adapters:
       - switch_ports:
           - Ethernet9
@@ -18908,10 +17962,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_09_Port_SFP3
+        #description: KVMTX_37D09_09R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_10
+  - name: KVMTX_37D09_10R
     adapters:
       - switch_ports:
           - Ethernet10
@@ -18919,10 +17973,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_10_Port_SFP3
+        #description: KVMTX_37D09_10R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_11
+  - name: KVMTX_37D09_11R
     adapters:
       - switch_ports:
           - Ethernet11
@@ -18930,10 +17984,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_11_Port_SFP3
+        #description: KVMTX_37D09_11R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_12
+  - name: KVMTX_37D09_12R
     adapters:
       - switch_ports:
           - Ethernet12
@@ -18941,10 +17995,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_12_Port_SFP3
+        #description: KVMTX_37D09_12R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_13
+  - name: KVMTX_37D09_13R
     adapters:
       - switch_ports:
           - Ethernet13
@@ -18952,10 +18006,10 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_13_Port_SFP3
+        #description: KVMTX_37D09_13R_Port_SFP3
         profile: vlan161
 
-  - name: KVMTX_37D09_14
+  - name: KVMTX_37D09_14R
     adapters:
       - switch_ports:
           - Ethernet14
@@ -18963,7 +18017,7 @@ servers:
           -  C160064-037B359A
         endpoint_ports:
           - "SFP3"
-        #description: KVMTX_37D09_14_Port_SFP3
+        #description: KVMTX_37D09_14R_Port_SFP3
         profile: vlan161
 
   - name: CIM_37D11_01
@@ -20463,25 +19517,6 @@ servers:
         endpoint_ports:
           - "Virt"
         #description: 02A_SPK09_Port_Virt
-        profile: vlan305
-
-  - name: 02A_GSW_A
-    adapters:
-      - switch_ports:
-          - Ethernet53/1
-        switches:
-          -  C160064-002B301A
-        endpoint_ports:
-          - "Virt"
-        #description: 02A_GSW_A_Port_Virt
-        profile: vlan305
-      - switch_ports:
-          - Ethernet54/1
-        switches:
-          -  C160064-002B301A
-        endpoint_ports:
-          - "RJ45"
-        #description: 02A_GSW_A_Port_RJ45
         profile: vlan305
 
   - name: GPLB_SPK91
@@ -22540,7 +21575,7 @@ servers:
         #description: PIXEL_Rack_02_01_Port_LAN
         profile: vlan163
 
-  - name: M.SVR_Rack_03_01
+  - name: M.SVR_03TRA_105_03_01
     adapters:
       - switch_ports:
           - Ethernet22
@@ -22548,7 +21583,7 @@ servers:
           -  C160064-003B301A
         endpoint_ports:
           - "RJ45"
-        #description: M.SVR_Rack_03_01_Port_RJ45
+        #description: M.SVR_03TRA_105_03_01_Port_RJ45
         profile: vlan163
 
   - name: PIXEL_Rack_03_01
@@ -22600,7 +21635,7 @@ servers:
         #description: M.SVR_Rack_02_09_Port_RJ45
         profile: vlan121
 
-  - name: M.SVR_Rack_03_09
+  - name: M.SVR_03TRA_105_03_09
     adapters:
       - switch_ports:
           - Ethernet26
@@ -22608,7 +21643,7 @@ servers:
           -  C160064-003B301A
         endpoint_ports:
           - "RJ45"
-        #description: M.SVR_Rack_03_09_Port_RJ45
+        #description: M.SVR_03TRA_105_03_09_Port_RJ45
         profile: vlan163
       - switch_ports:
           - Ethernet3
@@ -22616,7 +21651,7 @@ servers:
           -  C160064-003B303A
         endpoint_ports:
           - "RJ45"
-        #description: M.SVR_Rack_03_09_Port_RJ45
+        #description: M.SVR_03TRA_105_03_09_Port_RJ45
         profile: vlan121
 
   - name: BARCO_Rack_01_01
@@ -26281,7 +25316,7 @@ servers:
         #description: KVM_MON_Rack_10_01_Port_RJ45
         profile: vlan161
 
-  - name: KVM_MON_Rack_03_05
+  - name: KVM_MON_Rack_03_01
     adapters:
       - switch_ports:
           - Ethernet17
@@ -26289,7 +25324,7 @@ servers:
           -  C160064-007B301A
         endpoint_ports:
           - "RJ45"
-        #description: KVM_MON_Rack_03_05_Port_RJ45
+        #description: KVM_MON_Rack_03_01_Port_RJ45
         profile: vlan161
 
   - name: M.SVR_Rack_08_01
@@ -33883,13 +32918,16 @@ servers:
           - "2"
         #description: WAP_15DME_001_Port_2
         profile: vlan100
+
+  - name: WAP_15DME_002
+    adapters:
       - switch_ports:
           - Ethernet15
         switches:
           -  C160064-015B305A
         endpoint_ports:
           - "1"
-        #description: WAP_15DME_001_Port_1
+        #description: WAP_15DME_002_Port_1
         profile: vlan315
       - switch_ports:
           - Ethernet16
@@ -33897,15 +32935,18 @@ servers:
           -  C160064-015B305A
         endpoint_ports:
           - "2"
-        #description: WAP_15DME_001_Port_2
+        #description: WAP_15DME_002_Port_2
         profile: vlan100
+
+  - name: WAP_15DME_003
+    adapters:
       - switch_ports:
           - Ethernet17
         switches:
           -  C160064-015B305A
         endpoint_ports:
           - "1"
-        #description: WAP_15DME_001_Port_1
+        #description: WAP_15DME_003_Port_1
         profile: vlan315
       - switch_ports:
           - Ethernet18
@@ -33913,7 +32954,7 @@ servers:
           -  C160064-015B305A
         endpoint_ports:
           - "2"
-        #description: WAP_15DME_001_Port_2
+        #description: WAP_15DME_003_Port_2
         profile: vlan100
 
   - name: PLT_15DME_047
@@ -35323,6 +34364,57 @@ servers:
         #description: AMP_15DME_003_Port_2
         profile: vlan316
 
+  - name: TBD_C160064_015B308A
+    adapters:
+      - switch_ports:
+          - Ethernet35
+        switches:
+          -  C160064-015B308A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B308A_Port_1
+        profile: vlan100
+      - switch_ports:
+          - Ethernet36
+        switches:
+          -  C160064-015B308A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_015B308A_Port_2
+        profile: vlan100
+      - switch_ports:
+          - Ethernet37
+        switches:
+          -  C160064-015B308A
+        endpoint_ports:
+          - "3"
+        #description: TBD_C160064_015B308A_Port_3
+        profile: vlan100
+      - switch_ports:
+          - Ethernet38
+        switches:
+          -  C160064-015B308A
+        endpoint_ports:
+          - "4"
+        #description: TBD_C160064_015B308A_Port_4
+        profile: vlan100
+      - switch_ports:
+          - Ethernet39
+        switches:
+          -  C160064-015B308A
+        endpoint_ports:
+          - "5"
+        #description: TBD_C160064_015B308A_Port_5
+        profile: vlan100
+      - switch_ports:
+          - Ethernet40
+        switches:
+          -  C160064-015B308A
+        endpoint_ports:
+          - "6"
+        #description: TBD_C160064_015B308A_Port_6
+        profile: vlan100
+
   - name: DSP_15LFD_004
     adapters:
       - switch_ports:
@@ -36011,6 +35103,361 @@ servers:
         #description: COM_15DME_010_Port_1
         profile: vlan164
 
+  - name: TBD_C160064_015B311A
+    adapters:
+      - switch_ports:
+          - Ethernet3
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B311A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet4
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_015B311A_Port_2
+        profile: vlan164
+      - switch_ports:
+          - Ethernet5
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "3"
+        #description: TBD_C160064_015B311A_Port_3
+        profile: vlan164
+      - switch_ports:
+          - Ethernet6
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "4"
+        #description: TBD_C160064_015B311A_Port_4
+        profile: vlan164
+      - switch_ports:
+          - Ethernet7
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "5"
+        #description: TBD_C160064_015B311A_Port_5
+        profile: vlan164
+      - switch_ports:
+          - Ethernet8
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "6"
+        #description: TBD_C160064_015B311A_Port_6
+        profile: vlan164
+      - switch_ports:
+          - Ethernet9
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "7"
+        #description: TBD_C160064_015B311A_Port_7
+        profile: vlan164
+      - switch_ports:
+          - Ethernet10
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "8"
+        #description: TBD_C160064_015B311A_Port_8
+        profile: vlan164
+      - switch_ports:
+          - Ethernet11
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "9"
+        #description: TBD_C160064_015B311A_Port_9
+        profile: vlan164
+      - switch_ports:
+          - Ethernet12
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "10"
+        #description: TBD_C160064_015B311A_Port_10
+        profile: vlan164
+      - switch_ports:
+          - Ethernet13
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "11"
+        #description: TBD_C160064_015B311A_Port_11
+        profile: vlan164
+      - switch_ports:
+          - Ethernet14
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "12"
+        #description: TBD_C160064_015B311A_Port_12
+        profile: vlan164
+      - switch_ports:
+          - Ethernet15
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "13"
+        #description: TBD_C160064_015B311A_Port_13
+        profile: vlan164
+      - switch_ports:
+          - Ethernet16
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "14"
+        #description: TBD_C160064_015B311A_Port_14
+        profile: vlan164
+      - switch_ports:
+          - Ethernet17
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "15"
+        #description: TBD_C160064_015B311A_Port_15
+        profile: vlan164
+      - switch_ports:
+          - Ethernet18
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "16"
+        #description: TBD_C160064_015B311A_Port_16
+        profile: vlan164
+      - switch_ports:
+          - Ethernet19
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "17"
+        #description: TBD_C160064_015B311A_Port_17
+        profile: vlan164
+      - switch_ports:
+          - Ethernet20
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "18"
+        #description: TBD_C160064_015B311A_Port_18
+        profile: vlan164
+      - switch_ports:
+          - Ethernet21
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "19"
+        #description: TBD_C160064_015B311A_Port_19
+        profile: vlan164
+      - switch_ports:
+          - Ethernet22
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "20"
+        #description: TBD_C160064_015B311A_Port_20
+        profile: vlan164
+      - switch_ports:
+          - Ethernet23
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "21"
+        #description: TBD_C160064_015B311A_Port_21
+        profile: vlan164
+      - switch_ports:
+          - Ethernet24
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "22"
+        #description: TBD_C160064_015B311A_Port_22
+        profile: vlan164
+      - switch_ports:
+          - Ethernet25
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "23"
+        #description: TBD_C160064_015B311A_Port_23
+        profile: vlan164
+      - switch_ports:
+          - Ethernet26
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "24"
+        #description: TBD_C160064_015B311A_Port_24
+        profile: vlan164
+      - switch_ports:
+          - Ethernet27
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "25"
+        #description: TBD_C160064_015B311A_Port_25
+        profile: vlan164
+      - switch_ports:
+          - Ethernet28
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "26"
+        #description: TBD_C160064_015B311A_Port_26
+        profile: vlan164
+      - switch_ports:
+          - Ethernet29
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "27"
+        #description: TBD_C160064_015B311A_Port_27
+        profile: vlan164
+      - switch_ports:
+          - Ethernet30
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "28"
+        #description: TBD_C160064_015B311A_Port_28
+        profile: vlan164
+      - switch_ports:
+          - Ethernet31
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "29"
+        #description: TBD_C160064_015B311A_Port_29
+        profile: vlan164
+      - switch_ports:
+          - Ethernet32
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "30"
+        #description: TBD_C160064_015B311A_Port_30
+        profile: vlan164
+      - switch_ports:
+          - Ethernet33
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "31"
+        #description: TBD_C160064_015B311A_Port_31
+        profile: vlan164
+      - switch_ports:
+          - Ethernet34
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "32"
+        #description: TBD_C160064_015B311A_Port_32
+        profile: vlan164
+      - switch_ports:
+          - Ethernet35
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "33"
+        #description: TBD_C160064_015B311A_Port_33
+        profile: vlan164
+      - switch_ports:
+          - Ethernet36
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "34"
+        #description: TBD_C160064_015B311A_Port_34
+        profile: vlan164
+      - switch_ports:
+          - Ethernet37
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "35"
+        #description: TBD_C160064_015B311A_Port_35
+        profile: vlan164
+      - switch_ports:
+          - Ethernet38
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "36"
+        #description: TBD_C160064_015B311A_Port_36
+        profile: vlan164
+      - switch_ports:
+          - Ethernet39
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B311A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet40
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B311A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet41
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B311A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet42
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B311A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet43
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B311A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet44
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_015B311A_Port_2
+        profile: vlan164
+      - switch_ports:
+          - Ethernet45
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B311A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet46
+        switches:
+          -  C160064-015B311A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B311A_Port_1
+        profile: vlan164
+
   - name: PLT_15PRG_001
     adapters:
       - switch_ports:
@@ -36444,6 +35891,92 @@ servers:
           - "2"
         #description: AMP_15BGH_002_Port_2
         profile: vlan304
+
+  - name: Ceiling_0
+    adapters:
+      - switch_ports:
+          - Ethernet44
+        switches:
+          -  C160064-015B313A
+        endpoint_ports:
+          - "RJ45"
+        #description: Ceiling_0_Port_RJ45
+        profile: vlan303
+      - switch_ports:
+          - Ethernet45
+        switches:
+          -  C160064-015B313A
+        endpoint_ports:
+          - "RJ45"
+        #description: Ceiling_0_Port_RJ45
+        profile: vlan303
+      - switch_ports:
+          - Ethernet17
+        switches:
+          -  C160064-016B310A
+        endpoint_ports:
+          - "RJ45"
+        #description: Ceiling_0_Port_RJ45
+        profile: vlan303
+      - switch_ports:
+          - Ethernet18
+        switches:
+          -  C160064-016B310A
+        endpoint_ports:
+          - "RJ45"
+        #description: Ceiling_0_Port_RJ45
+        profile: vlan303
+
+  - name: TBD_C160064_015B314A
+    adapters:
+      - switch_ports:
+          - Ethernet21
+        switches:
+          -  C160064-015B314A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_015B314A_Port_1
+        profile: vlan100
+      - switch_ports:
+          - Ethernet22
+        switches:
+          -  C160064-015B314A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_015B314A_Port_2
+        profile: vlan100
+      - switch_ports:
+          - Ethernet23
+        switches:
+          -  C160064-015B314A
+        endpoint_ports:
+          - "3"
+        #description: TBD_C160064_015B314A_Port_3
+        profile: vlan100
+      - switch_ports:
+          - Ethernet24
+        switches:
+          -  C160064-015B314A
+        endpoint_ports:
+          - "4"
+        #description: TBD_C160064_015B314A_Port_4
+        profile: vlan100
+      - switch_ports:
+          - Ethernet25
+        switches:
+          -  C160064-015B314A
+        endpoint_ports:
+          - "5"
+        #description: TBD_C160064_015B314A_Port_5
+        profile: vlan100
+      - switch_ports:
+          - Ethernet26
+        switches:
+          -  C160064-015B314A
+        endpoint_ports:
+          - "6"
+        #description: TBD_C160064_015B314A_Port_6
+        profile: vlan100
 
   - name: PDU_15TRD_001W
     adapters:
@@ -37646,6 +37179,41 @@ servers:
         #description: AMP_16MMN_001_Port_2
         profile: vlan324
 
+  - name: TBD_C160064_016B305A
+    adapters:
+      - switch_ports:
+          - Ethernet30
+        switches:
+          -  C160064-016B305A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_016B305A_Port_1
+        profile: vlan100
+      - switch_ports:
+          - Ethernet31
+        switches:
+          -  C160064-016B305A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_016B305A_Port_2
+        profile: vlan100
+      - switch_ports:
+          - Ethernet32
+        switches:
+          -  C160064-016B305A
+        endpoint_ports:
+          - "3"
+        #description: TBD_C160064_016B305A_Port_3
+        profile: vlan100
+      - switch_ports:
+          - Ethernet33
+        switches:
+          -  C160064-016B305A
+        endpoint_ports:
+          - "4"
+        #description: TBD_C160064_016B305A_Port_4
+        profile: vlan100
+
   - name: CTRL_16TRC_001
     adapters:
       - switch_ports:
@@ -38260,7 +37828,210 @@ servers:
         #description: AMP_16PRR_001_Port_2
         profile: vlan326
 
-  - name: COM_16LMP_001
+  - name: TBD_C160064_016B307A
+    adapters:
+      - switch_ports:
+          - Ethernet17
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_016B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet18
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_016B307A_Port_2
+        profile: vlan164
+      - switch_ports:
+          - Ethernet19
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "3"
+        #description: TBD_C160064_016B307A_Port_3
+        profile: vlan164
+      - switch_ports:
+          - Ethernet20
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "4"
+        #description: TBD_C160064_016B307A_Port_4
+        profile: vlan164
+      - switch_ports:
+          - Ethernet21
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "5"
+        #description: TBD_C160064_016B307A_Port_5
+        profile: vlan164
+      - switch_ports:
+          - Ethernet22
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "6"
+        #description: TBD_C160064_016B307A_Port_6
+        profile: vlan164
+      - switch_ports:
+          - Ethernet23
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "7"
+        #description: TBD_C160064_016B307A_Port_7
+        profile: vlan164
+      - switch_ports:
+          - Ethernet24
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "8"
+        #description: TBD_C160064_016B307A_Port_8
+        profile: vlan164
+      - switch_ports:
+          - Ethernet25
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "9"
+        #description: TBD_C160064_016B307A_Port_9
+        profile: vlan164
+      - switch_ports:
+          - Ethernet26
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "10"
+        #description: TBD_C160064_016B307A_Port_10
+        profile: vlan164
+      - switch_ports:
+          - Ethernet27
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "11"
+        #description: TBD_C160064_016B307A_Port_11
+        profile: vlan164
+      - switch_ports:
+          - Ethernet28
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "12"
+        #description: TBD_C160064_016B307A_Port_12
+        profile: vlan164
+      - switch_ports:
+          - Ethernet29
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "13"
+        #description: TBD_C160064_016B307A_Port_13
+        profile: vlan164
+      - switch_ports:
+          - Ethernet30
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "14"
+        #description: TBD_C160064_016B307A_Port_14
+        profile: vlan164
+      - switch_ports:
+          - Ethernet31
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "15"
+        #description: TBD_C160064_016B307A_Port_15
+        profile: vlan164
+      - switch_ports:
+          - Ethernet32
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "16"
+        #description: TBD_C160064_016B307A_Port_16
+        profile: vlan164
+      - switch_ports:
+          - Ethernet33
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "17"
+        #description: TBD_C160064_016B307A_Port_17
+        profile: vlan164
+      - switch_ports:
+          - Ethernet34
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "18"
+        #description: TBD_C160064_016B307A_Port_18
+        profile: vlan164
+      - switch_ports:
+          - Ethernet35
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_016B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet36
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_016B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet37
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_016B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet38
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_016B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet39
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_016B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet40
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_016B307A_Port_2
+        profile: vlan164
+      - switch_ports:
+          - Ethernet41
+        switches:
+          -  C160064-016B307A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_016B307A_Port_2
+        profile: vlan164
+
+  - name: WLX_16MLP_02
     adapters:
       - switch_ports:
           - Ethernet42
@@ -38268,10 +38039,10 @@ servers:
           -  C160064-016B307A
         endpoint_ports:
           - "1"
-        #description: COM_16LMP_001_Port_1
+        #description: WLX_16MLP_02_Port_1
         profile: vlan164
 
-  - name: COM_16LMP_002
+  - name: WLX_16MLP_03
     adapters:
       - switch_ports:
           - Ethernet43
@@ -38279,7 +38050,7 @@ servers:
           -  C160064-016B307A
         endpoint_ports:
           - "1"
-        #description: COM_16LMP_002_Port_1
+        #description: WLX_16MLP_03_Port_1
         profile: vlan164
 
   - name: KVM_16LPM_001
@@ -38304,7 +38075,7 @@ servers:
         #description: KVM_16LPM_002_Port_LINK
         profile: vlan161
 
-  - name: PLT_MFM_001
+  - name: PLT_16MFM_001
     adapters:
       - switch_ports:
           - Ethernet1
@@ -38312,7 +38083,7 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "1"
-        #description: PLT_MFM_001_Port_1
+        #description: PLT_16MFM_001_Port_1
         profile: vlan100
       - switch_ports:
           - Ethernet2
@@ -38320,10 +38091,10 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "2"
-        #description: PLT_MFM_001_Port_2
+        #description: PLT_16MFM_001_Port_2
         profile: vlan100
 
-  - name: PLT_MFM_002
+  - name: PLT_16MFM_002
     adapters:
       - switch_ports:
           - Ethernet3
@@ -38331,7 +38102,7 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "1"
-        #description: PLT_MFM_002_Port_1
+        #description: PLT_16MFM_002_Port_1
         profile: vlan100
       - switch_ports:
           - Ethernet4
@@ -38339,10 +38110,10 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "2"
-        #description: PLT_MFM_002_Port_2
+        #description: PLT_16MFM_002_Port_2
         profile: vlan100
 
-  - name: PLT_MFM_003
+  - name: PLT_16MFM_003
     adapters:
       - switch_ports:
           - Ethernet5
@@ -38350,7 +38121,7 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "1"
-        #description: PLT_MFM_003_Port_1
+        #description: PLT_16MFM_003_Port_1
         profile: vlan100
       - switch_ports:
           - Ethernet6
@@ -38358,10 +38129,10 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "2"
-        #description: PLT_MFM_003_Port_2
+        #description: PLT_16MFM_003_Port_2
         profile: vlan100
 
-  - name: PLT_MFM_004
+  - name: PLT_16MFM_004
     adapters:
       - switch_ports:
           - Ethernet7
@@ -38369,10 +38140,10 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "2"
-        #description: PLT_MFM_004_Port_2
+        #description: PLT_16MFM_004_Port_2
         profile: vlan100
 
-  - name: PLT_MFM_005
+  - name: PLT_16MFM_005
     adapters:
       - switch_ports:
           - Ethernet8
@@ -38380,10 +38151,10 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "2"
-        #description: PLT_MFM_005_Port_2
+        #description: PLT_16MFM_005_Port_2
         profile: vlan100
 
-  - name: PLT_MFM_006
+  - name: PLT_16MFM_006
     adapters:
       - switch_ports:
           - Ethernet9
@@ -38391,10 +38162,10 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "1"
-        #description: PLT_MFM_006_Port_1
+        #description: PLT_16MFM_006_Port_1
         profile: vlan100
 
-  - name: PLT_MFM_007
+  - name: PLT_16MFM_007
     adapters:
       - switch_ports:
           - Ethernet10
@@ -38402,7 +38173,7 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "1"
-        #description: PLT_MFM_007_Port_1
+        #description: PLT_16MFM_007_Port_1
         profile: vlan100
 
   - name: CAM_16MFM_001
@@ -38776,7 +38547,7 @@ servers:
         #description: WAP_16LMP_001_Port_2
         profile: vlan100
 
-  - name: COM_16LMP_003
+  - name: WLX_16MLP_01
     adapters:
       - switch_ports:
           - Ethernet44
@@ -38784,7 +38555,7 @@ servers:
           -  C160064-016B308A
         endpoint_ports:
           - "1"
-        #description: COM_16LMP_003_Port_1
+        #description: WLX_16MLP_01_Port_1
         profile: vlan100
 
   - name: TIM_16LPM_001
@@ -39425,25 +39196,6 @@ servers:
         #description: SLD_16LPM_002_Port_1
         profile: vlan100
 
-  - name: Ceiling_0
-    adapters:
-      - switch_ports:
-          - Ethernet17
-        switches:
-          -  C160064-016B310A
-        endpoint_ports:
-          - "RJ45"
-        #description: Ceiling_0_Port_RJ45
-        profile: vlan303
-      - switch_ports:
-          - Ethernet18
-        switches:
-          -  C160064-016B310A
-        endpoint_ports:
-          - "RJ45"
-        #description: Ceiling_0_Port_RJ45
-        profile: vlan303
-
   - name: DSP_16LMP_003
     adapters:
       - switch_ports:
@@ -39774,6 +39526,57 @@ servers:
           - "1"
         #description: PDU_16TRD_103W_Port_1
         profile: vlan202
+
+  - name: TBD_C160064_016B310A
+    adapters:
+      - switch_ports:
+          - Ethernet37
+        switches:
+          -  C160064-016B310A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_016B310A_Port_1
+        profile: vlan100
+      - switch_ports:
+          - Ethernet38
+        switches:
+          -  C160064-016B310A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_016B310A_Port_2
+        profile: vlan100
+      - switch_ports:
+          - Ethernet39
+        switches:
+          -  C160064-016B310A
+        endpoint_ports:
+          - "3"
+        #description: TBD_C160064_016B310A_Port_3
+        profile: vlan100
+      - switch_ports:
+          - Ethernet40
+        switches:
+          -  C160064-016B310A
+        endpoint_ports:
+          - "4"
+        #description: TBD_C160064_016B310A_Port_4
+        profile: vlan100
+      - switch_ports:
+          - Ethernet41
+        switches:
+          -  C160064-016B310A
+        endpoint_ports:
+          - "5"
+        #description: TBD_C160064_016B310A_Port_5
+        profile: vlan100
+      - switch_ports:
+          - Ethernet42
+        switches:
+          -  C160064-016B310A
+        endpoint_ports:
+          - "6"
+        #description: TBD_C160064_016B310A_Port_6
+        profile: vlan100
 
   - name: VENC_16MFM_001
     adapters:
@@ -44203,6 +44006,41 @@ servers:
         #description: COM_50MMN_002_Port_1
         profile: vlan164
 
+  - name: TBD_C160064_050B306A
+    adapters:
+      - switch_ports:
+          - Ethernet26
+        switches:
+          -  C160064-050B306A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_050B306A_Port_1
+        profile: vlan100
+      - switch_ports:
+          - Ethernet27
+        switches:
+          -  C160064-050B306A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_050B306A_Port_2
+        profile: vlan100
+      - switch_ports:
+          - Ethernet28
+        switches:
+          -  C160064-050B306A
+        endpoint_ports:
+          - "3"
+        #description: TBD_C160064_050B306A_Port_3
+        profile: vlan100
+      - switch_ports:
+          - Ethernet29
+        switches:
+          -  C160064-050B306A
+        endpoint_ports:
+          - "4"
+        #description: TBD_C160064_050B306A_Port_4
+        profile: vlan100
+
   - name: WLX_50TRC_001
     adapters:
       - switch_ports:
@@ -44863,7 +44701,7 @@ servers:
         #description: KVM_51TRB_001_Port_1
         profile: vlan161
 
-  - name: PDU51TRB_201
+  - name: PDU_51TRB_201
     adapters:
       - switch_ports:
           - Ethernet45
@@ -44871,7 +44709,7 @@ servers:
           -  C160064-051B302A
         endpoint_ports:
           - "1"
-        #description: PDU51TRB_201_Port_1
+        #description: PDU_51TRB_201_Port_1
         profile: vlan202
 
   - name: PLT_51LMF_001
@@ -45921,6 +45759,57 @@ servers:
         #description: KVM_51LMF_002_Port_1
         profile: vlan161
 
+  - name: TBD_C160064_051B306A
+    adapters:
+      - switch_ports:
+          - Ethernet34
+        switches:
+          -  C160064-051B306A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_051B306A_Port_1
+        profile: vlan100
+      - switch_ports:
+          - Ethernet35
+        switches:
+          -  C160064-051B306A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_051B306A_Port_2
+        profile: vlan100
+      - switch_ports:
+          - Ethernet36
+        switches:
+          -  C160064-051B306A
+        endpoint_ports:
+          - "3"
+        #description: TBD_C160064_051B306A_Port_3
+        profile: vlan100
+      - switch_ports:
+          - Ethernet37
+        switches:
+          -  C160064-051B306A
+        endpoint_ports:
+          - "4"
+        #description: TBD_C160064_051B306A_Port_4
+        profile: vlan100
+      - switch_ports:
+          - Ethernet38
+        switches:
+          -  C160064-051B306A
+        endpoint_ports:
+          - "5"
+        #description: TBD_C160064_051B306A_Port_5
+        profile: vlan100
+      - switch_ports:
+          - Ethernet39
+        switches:
+          -  C160064-051B306A
+        endpoint_ports:
+          - "6"
+        #description: TBD_C160064_051B306A_Port_6
+        profile: vlan100
+
   - name: LED_51LMF_001
     adapters:
       - switch_ports:
@@ -45998,6 +45887,201 @@ servers:
         #description: COM_51LMF_001_Port_1
         profile: vlan164
 
+  - name: TBD_C160064_051B307A
+    adapters:
+      - switch_ports:
+          - Ethernet8
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_051B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet9
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_051B307A_Port_2
+        profile: vlan164
+      - switch_ports:
+          - Ethernet10
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "3"
+        #description: TBD_C160064_051B307A_Port_3
+        profile: vlan164
+      - switch_ports:
+          - Ethernet11
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "4"
+        #description: TBD_C160064_051B307A_Port_4
+        profile: vlan164
+      - switch_ports:
+          - Ethernet12
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "5"
+        #description: TBD_C160064_051B307A_Port_5
+        profile: vlan164
+      - switch_ports:
+          - Ethernet13
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "6"
+        #description: TBD_C160064_051B307A_Port_6
+        profile: vlan164
+      - switch_ports:
+          - Ethernet14
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "7"
+        #description: TBD_C160064_051B307A_Port_7
+        profile: vlan164
+      - switch_ports:
+          - Ethernet15
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "8"
+        #description: TBD_C160064_051B307A_Port_8
+        profile: vlan164
+      - switch_ports:
+          - Ethernet16
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "9"
+        #description: TBD_C160064_051B307A_Port_9
+        profile: vlan164
+      - switch_ports:
+          - Ethernet17
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "10"
+        #description: TBD_C160064_051B307A_Port_10
+        profile: vlan164
+      - switch_ports:
+          - Ethernet18
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "11"
+        #description: TBD_C160064_051B307A_Port_11
+        profile: vlan164
+      - switch_ports:
+          - Ethernet19
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "12"
+        #description: TBD_C160064_051B307A_Port_12
+        profile: vlan164
+      - switch_ports:
+          - Ethernet20
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "13"
+        #description: TBD_C160064_051B307A_Port_13
+        profile: vlan164
+      - switch_ports:
+          - Ethernet21
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "14"
+        #description: TBD_C160064_051B307A_Port_14
+        profile: vlan164
+      - switch_ports:
+          - Ethernet22
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "15"
+        #description: TBD_C160064_051B307A_Port_15
+        profile: vlan164
+      - switch_ports:
+          - Ethernet23
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "16"
+        #description: TBD_C160064_051B307A_Port_16
+        profile: vlan164
+      - switch_ports:
+          - Ethernet24
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "17"
+        #description: TBD_C160064_051B307A_Port_17
+        profile: vlan164
+      - switch_ports:
+          - Ethernet25
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_051B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet26
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_051B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet27
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_051B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet28
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_051B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet29
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "1"
+        #description: TBD_C160064_051B307A_Port_1
+        profile: vlan164
+      - switch_ports:
+          - Ethernet30
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_051B307A_Port_2
+        profile: vlan164
+      - switch_ports:
+          - Ethernet31
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "2"
+        #description: TBD_C160064_051B307A_Port_2
+        profile: vlan164
+
   - name: ICOM_50TRC_011
     adapters:
       - switch_ports:
@@ -46030,3 +46114,14 @@ servers:
           - "1"
         #description: PDU_51TRC_201_Port_1
         profile: vlan202
+
+  - name: CTRL_51TRC_001
+    adapters:
+      - switch_ports:
+          - Ethernet37
+        switches:
+          -  C160064-051B307A
+        endpoint_ports:
+          - "1"
+        #description: CTRL_51TRC_001_Port_1
+        profile: vlan103
