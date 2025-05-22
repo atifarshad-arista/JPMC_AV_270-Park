@@ -7278,6 +7278,7 @@ media_leaf,C160064-051B202A,Ethernet4/1,server,LED_51LMF_004_MEGAPIXEL_HELIOS,2,
 media_leaf,C160064-051B202A,Ethernet4/1/1,network_port,,,True
 media_leaf,C160064-051B202A,Ethernet4/2,server,LED_51LMF_005_MEGAPIXEL_HELIOS,2,True
 media_leaf,C160064-051B202A,Ethernet4/2/1,network_port,,,True
+media_leaf,C160064-051B202A,Ethernet4/3,server,LED_51LMF_006_MEGAPIXEL_HELIOS,2,True
 media_leaf,C160064-051B202A,Ethernet4/3/1,network_port,,,True
 media_leaf,C160064-051B202A,Ethernet4/4/1,network_port,,,True
 media_leaf,C160064-051B202A,Ethernet4/5/1,network_port,,,True

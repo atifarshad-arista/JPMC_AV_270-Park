@@ -30977,3 +30977,16 @@ servers:
         profile: STATIC_MULTICAST
         structured_config:
           ip_address: 10.160.209.213/30
+
+  - name: LED_51LMF_006_MEGAPIXEL_HELIOS
+    adapters:
+      - switch_ports:
+          - Ethernet4/3
+        switches:
+          -  C160064-051B202A
+        endpoint_ports:
+          - "2"
+        #description: LED_51LMF_006_MEGAPIXEL_HELIOS_Port_2
+        profile: STATIC_MULTICAST
+        structured_config:
+          ip_address: 10.160.209.217/30
