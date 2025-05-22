@@ -317,6 +317,8 @@ all:
         BORDER_LEAFS:
     CONNECTED_ENDPOINTS:
       children:
+        RED_SPINES:
+        BLUE_SPINES:
         RED_LEAFS:
         BLUE_LEAFS:
         PTP_LEAFS:
