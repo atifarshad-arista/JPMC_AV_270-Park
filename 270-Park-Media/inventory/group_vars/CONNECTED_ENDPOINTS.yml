@@ -11,18 +11,18 @@ port_profiles:
       multicast:
         ipv4:
           static: True
-  - profile: RED_111
-    mode: access
-    enabled: false
-    vlans: "111"
-    spanning_tree_portfast: edge
-    spanning_tree_bpdufilter: enabled
-    ptp:
-      enabled: true
-    structured_config:
-      multicast:
-        ipv4:
-          static: True
+  # - profile: RED_111
+  #   mode: access
+  #   enabled: false
+  #   vlans: "111"
+  #   spanning_tree_portfast: edge
+  #   spanning_tree_bpdufilter: enabled
+  #   ptp:
+  #     enabled: true
+  #   structured_config:
+  #     multicast:
+  #       ipv4:
+  #         static: True
 
 
 # Network Ports
