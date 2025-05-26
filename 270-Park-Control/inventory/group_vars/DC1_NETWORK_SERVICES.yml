@@ -1721,28 +1721,6 @@ tenants:
               #   enabled: false
               #   source_address: 172.16.16.16
               #   version: 3
-
-        - id: 1001
-          name: 'Dynamic-Parking'
-          tags: ["1001"]
-          enabled: true
-          ip_virtual_router_addresses:
-            - 192.168.100.1
-          nodes:
-            - node: C160064-037B300A
-              ip_address: 192.168.100.2/24
-              #igmp_snooping_enabled: false
-              # igmp_snooping_querier:
-              #   enabled: false
-              #   source_address: 172.16.16.16
-              #   version: 3
-            - node: C160064-037B301A
-              ip_address: 192.168.100.3/24
-              #igmp_snooping_enabled: false
-              # igmp_snooping_querier:
-              #   enabled: false
-              #   source_address: 172.16.16.16
-              #   version: 3
         - id: 1000
           name: 'CVA_Mgmt'
           tags: ["1000"]
@@ -1759,6 +1737,48 @@ tenants:
               #   version: 3
             - node: C160064-037B301A
               ip_address: 10.155.243.131/27
+              #igmp_snooping_enabled: false
+              # igmp_snooping_querier:
+              #   enabled: false
+              #   source_address: 172.16.16.16
+              #   version: 3
+        - id: 1001
+          name: 'Dynamic-Parking-Red'
+          tags: ["1001"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 192.168.101.1
+          nodes:
+            - node: C160064-037B300A
+              ip_address: 192.168.101.2/24
+              #igmp_snooping_enabled: false
+              # igmp_snooping_querier:
+              #   enabled: false
+              #   source_address: 172.16.16.16
+              #   version: 3
+            - node: C160064-037B301A
+              ip_address: 192.168.101.3/24
+              #igmp_snooping_enabled: false
+              # igmp_snooping_querier:
+              #   enabled: false
+              #   source_address: 172.16.16.16
+              #   version: 3
+        - id: 1002
+          name: 'Dynamic-Parking-Blue'
+          tags: ["1002"]
+          enabled: true
+          ip_virtual_router_addresses:
+            - 192.168.102.1
+          nodes:
+            - node: C160064-037B300A
+              ip_address: 192.168.102.2/24
+              #igmp_snooping_enabled: false
+              # igmp_snooping_querier:
+              #   enabled: false
+              #   source_address: 172.16.16.16
+              #   version: 3
+            - node: C160064-037B301A
+              ip_address: 192.168.102.3/24
               #igmp_snooping_enabled: false
               # igmp_snooping_querier:
               #   enabled: false
