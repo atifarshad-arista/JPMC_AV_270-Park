@@ -27,6 +27,12 @@ media_leaf:
         missing_message:
                 sequence_ids:
                   enabled: False
+    structured_config:
+      vlans:
+        - id: 1001
+          name: Dynamic-Parking-Red
+          state: "active"
+
   nodes:
     - name: C160064-037B101A
       platform: 7289R3A
